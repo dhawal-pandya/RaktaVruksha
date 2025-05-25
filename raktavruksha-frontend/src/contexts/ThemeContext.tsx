@@ -1,4 +1,4 @@
-
+// src/contexts/ThemeContext.tsx
 import React, { createContext, useContext, useState, type ReactNode, useEffect } from 'react';
 
 type Theme = '☀️' | '🌙';
@@ -16,21 +16,27 @@ interface ThemeProviderProps {
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(() => {
-    // Get theme from local storage or default to '☀️'
     const storedTheme = localStorage.getItem('theme');
-    return storedTheme === '🌙' ? '🌙' : '☀️';
+    const initialTheme = storedTheme === '🌙' ? '🌙' : '☀️';
+    console.log('ThemeProvider: Initializing theme to', initialTheme, '(from localStorage:', storedTheme, ')');
+    return initialTheme;
   });
 
   useEffect(() => {
-    // Apply theme class to the body
+    console.log('ThemeProvider useEffect: Applying theme to body and storing in localStorage. Current theme:', theme);
     document.body.className = theme;
-    // Store theme preference in local storage
     localStorage.setItem('theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(prevTheme => (prevTheme === '☀️' ? '🌙' : '☀️'));
+    setTheme(prevTheme => {
+      const newTheme = prevTheme === '☀️' ? '🌙' : '☀️';
+      console.log('ThemeProvider: Toggling theme from', prevTheme, 'to', newTheme);
+      return newTheme;
+    });
   };
+
+  console.log('ThemeProvider rendered/re-rendered.');
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

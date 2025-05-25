@@ -78,7 +78,7 @@
       "last_name": "Pandya",
       "alive": false,
       "gender": "female",
-      "parents": [],
+      "parents": ["Natwarlal", "Savitaben"],
       "spouses": ["Indukumar"],
       "children": ["Ajaykumar"],
       "birth_family_id": "familyVyas",
@@ -90,7 +90,7 @@
       "last_name": "Shah",
       "alive": true,
       "gender": "male",
-      "parents": ["Kirit", "o"],
+      "parents": ["Kirit", "Geetaben"],
       "spouses": ["Hitarthi"],
       "children": ["Kiaan"],
       "birth_family_id": "familyShah",
@@ -143,6 +143,78 @@
       "children": [],
       "birth_family_id": "familyPatel",
       "current_family_id": "familyPatel"
+    },
+    {
+      "id": "Harendrabhai",
+      "first_name": "Harendrabhai",
+      "last_name": "Patel",
+      "alive": true,
+      "gender": "male",
+      "parents": ["Dahyabhai","Jiviben"],
+      "spouses": ["Nayanaben"],
+      "children": ["Jitesh"],
+      "birth_family_id": "familyPatel",
+      "current_family_id": "familyPatel"
+    },
+    {
+      "id": "Nayana",
+      "first_name": "Nayana",
+      "last_name": "Patel",
+      "alive": true,
+      "gender": "female",
+      "parents": ["Jagubhai", "Laxmiben"],
+      "spouses": ["Harendrabhai"],
+      "children": ["Jitesh"],
+      "birth_family_id": "familyPatel2",
+      "current_family_id": "familyPatel"
+    },
+    {
+      "id": "Kirit",
+      "first_name": "Kirit",
+      "last_name": "Shah",
+      "alive": true,
+      "gender": "male",
+      "parents": ["p","q"],
+      "spouses": ["Geetaben"],
+      "children": ["Heman"],
+      "birth_family_id": "familyShah",
+      "current_family_id": "familyShah"
+    },
+    {
+      "id": "Geetaben",
+      "first_name": "Geetaben",
+      "last_name": "Shah",
+      "alive": true,
+      "gender": "female",
+      "parents": ["r","s"],
+      "spouses": ["Kirit"],
+      "children": ["Heman"],
+      "birth_family_id": "familyp",
+      "current_family_id": "familyShah"
+    },
+    {
+      "id": "Premshankar",
+      "first_name": "Premshankar",
+      "last_name": "Thakar",
+      "alive": false,
+      "gender": "male",
+      "parents": ["Hargovindas", "Monghiba"],
+      "spouses": ["Jyotsna"],
+      "children": ["Harsha"],
+      "birth_family_id": "familyThakar",
+      "current_family_id": "familyThakar"
+    },
+    {
+      "id": "Jyotsna",
+      "first_name": "Jyotsna",
+      "last_name": "Thakar",
+      "alive": false,
+      "gender": "female",
+      "parents": ["Damodardas","Shrikantaba"],
+      "spouses": ["Premshankar"],
+      "children": ["Harsha"],
+      "birth_family_id": "familyJani",
+      "current_family_id": "familyThakar"
     }
   ]
 }

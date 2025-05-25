@@ -27,6 +27,9 @@ export const getFamilyColors = (people: Person[]): { [key: string]: string } => 
  * @returns A Map where keys are person IDs and values are their calculated generation numbers.
  */
 const calculateGenerations = (allPeople: Person[], primePersonId: string | null = null): Map<string, number> => {
+  console.log('calculateGenerations called. People count:', allPeople.length);
+  console.log('Prime Person ID:', primePersonId);
+
   const generationMap = new Map<string, number>();
   const peopleMap = new Map<string, Person>();
   allPeople.forEach(p => peopleMap.set(p.id, p));
@@ -142,15 +145,22 @@ const calculateGenerations = (allPeople: Person[], primePersonId: string | null 
     }
   });
 
+
+  console.log('Final generationMap after calculation:', generationMap); // Check if values are numbers and make sense
+  console.log('Normalized generationMap:', normalizedGenerationMap);
+
   return normalizedGenerationMap;
 };
 
 
 export const buildGraphData = (allPeople: Person[], primePersonId: string | null = null): { nodes: GraphNode[]; links: GraphLink[] } => {
+  console.log('buildGraphData called. People count:', allPeople.length);
+  
   const peopleMap = new Map<string, Person>();
   allPeople.forEach(p => peopleMap.set(p.id, p));
 
   const generationMap = calculateGenerations(allPeople, primePersonId);
+  console.log('Generation map from calculateGenerations:', generationMap);
 
   const nodes: GraphNode[] = [];
   const links: GraphLink[] = [];
@@ -171,6 +181,8 @@ export const buildGraphData = (allPeople: Person[], primePersonId: string | null
     };
     nodes.push(personNode);
   });
+  console.log('Nodes array after initial population (person nodes):', nodes); // Check this
+
 
   const getOrCreateMarriageNode = (parentIds: string[]): MarriageNode => {
     const sortedParentIds = [...parentIds].sort();
@@ -244,6 +256,9 @@ export const buildGraphData = (allPeople: Person[], primePersonId: string | null
       }
     }
   });
+
+  console.log('Final nodes array from buildGraphData:', nodes);
+  console.log('Final links array from buildGraphData:', links);
 
   return { nodes, links };
 };

@@ -1,8 +1,6 @@
-// src/components/FamilyTree.tsx
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import * as d3 from 'd3';
 import type { Person, FamilyTreeNode, MarriageNode, GraphNode, GraphLink } from '../types';
-import { useParams, useNavigate } from 'react-router-dom';
 import { buildGraphData, getFamilyColors } from '../utils/treeUtils';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -27,8 +25,6 @@ const COLLISION_PADDING = 10; // Padding around nodes for collision detection
 const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const gRef = useRef<SVGGElement | null>(null);
-  const { id: personIdFromUrl } = useParams<{ id: string }>();
-  const navigate = useNavigate();
   const { theme } = useTheme();
 
   const [svgDimensions, setSvgDimensions] = useState({ width: 0, height: 0 });
@@ -36,7 +32,6 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
   const simulationRef = useRef<d3.ForceSimulation<GraphNode, GraphLink> | null>(null);
   const colorMap = getFamilyColors(people);
 
-  const [focusedNodeId, setFocusedNodeId] = useState<string | null>(null);
 
   useEffect(() => {
     if (svgRef.current?.parentElement) {
@@ -53,50 +48,6 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
     }
   }, []);
 
-  useEffect(() => {
-    setFocusedNodeId(personIdFromUrl || null);
-  }, [personIdFromUrl]);
-
-
-  const centerAndZoomOnNode = useCallback((nodeId: string, currentNodes: GraphNode[], currentSvg: d3.Selection<SVGSVGElement, unknown, null, undefined>, currentG: d3.Selection<SVGGElement, unknown, null, undefined>) => {
-    const targetNode = currentNodes.find(n => n.id === nodeId) as d3.SimulationNodeDatum | undefined;
-
-    if (targetNode && zoomRef.current) {
-      if (simulationRef.current) {
-        simulationRef.current.stop();
-        currentNodes.forEach(n => {
-            (n as d3.SimulationNodeDatum).fx = null;
-            (n as d3.SimulationNodeDatum).fy = null;
-        });
-
-        targetNode.fx = svgDimensions.width / 2;
-        targetNode.fy = svgDimensions.height / 2;
-
-        simulationRef.current.alpha(1).alphaTarget(0.01).restart();
-      }
-
-      const currentTransform = d3.zoomTransform(currentSvg.node()!);
-      const newX = svgDimensions.width / 2 - targetNode.x! * currentTransform.k;
-      const newY = svgDimensions.height / 2 - targetNode.y! * currentTransform.k;
-
-      currentSvg.transition().duration(750)
-        .call(zoomRef.current.transform, d3.zoomIdentity.translate(newX, newY).scale(currentTransform.k));
-
-    } else if (!targetNode) {
-        console.warn(`Node with ID ${nodeId} not found for centering.`);
-        if (zoomRef.current) {
-            currentSvg.transition().duration(750).call(zoomRef.current.transform, d3.zoomIdentity);
-        }
-        if (simulationRef.current) {
-            simulationRef.current.nodes().forEach(n => {
-                (n as d3.SimulationNodeDatum).fx = null;
-                (n as d3.SimulationNodeDatum).fy = null;
-            });
-            simulationRef.current.alpha(1).alphaTarget(0.01).restart();
-        }
-    }
-  }, [svgDimensions, people]);
-
   const renderGraph = useCallback(() => {
     if (!svgRef.current || !gRef.current || svgDimensions.width === 0 || svgDimensions.height === 0 || people.length === 0) {
       console.log("Waiting for SVG dimensions or people data...", svgDimensions, people.length);
@@ -111,9 +62,9 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
     const width = svgDimensions.width;
     const height = svgDimensions.height;
 
-    const effectivePrimePersonId = focusedNodeId || personIdFromUrl || people.find(p => (p.parents?.length === 0 || !p.parents) && (p.children && p.children.length > 0))?.id || people[0]?.id;
 
-    const { nodes, links } = buildGraphData(people, effectivePrimePersonId);
+    // Call buildGraphData without a prime person ID, which will default to an initial setup
+    const { nodes, links } = buildGraphData(people, null); // Pass null or undefined for primePersonId
 
     if (nodes.length === 0) {
       console.warn("No nodes to render.");
@@ -146,9 +97,8 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
       .force('link', d3.forceLink(links)
           .id((d: any) => d.id)
           .distance(d => {
-              // Longer distance for parent-marriage and marriage-child to ensure space
               if (d.type === 'parent-marriage' || d.type === 'marriage-child') {
-                  return LINK_DISTANCE * 0.1; // Reduce slightly to keep them closer to marriage node
+                  return LINK_DISTANCE * 0.1;
               }
               return LINK_DISTANCE;
           }))
@@ -158,20 +108,19 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
         const node = d as GraphNode;
         const nodeGen = node.generation !== undefined ? node.generation : 0;
         let yPos = startY + (nodeGen - minGen) * GENERATION_GAP;
-        // Adjust Y for marriage nodes to ensure they are below spouses
         if (node.type === 'marriage') {
             yPos += MARRIAGE_NODE_Y_OFFSET;
         }
         return yPos;
-      }).strength(0.8)) // Very strong Y-force to ensure generational layering
+      }).strength(0.8))
       .force('collide', d3.forceCollide<GraphNode>(d => {
         if ((d as any).type === 'marriage') {
           return NODE_MARRIAGE_SIZE / 2 + COLLISION_PADDING;
         }
         return Math.max(NODE_PERSON_WIDTH, NODE_PERSON_HEIGHT) / 2 + COLLISION_PADDING;
       }).iterations(2))
-      .alphaDecay(0.02) // Less means more time to settle
-      .velocityDecay(0.3); // Less means more wobbly
+      .alphaDecay(0.02)
+      .velocityDecay(0.3);
 
 
     // Pre-set initial positions for nodes based on generation for more deterministic layout
@@ -185,47 +134,36 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
       (node as d3.SimulationNodeDatum).x = width / 2 + (Math.random() - 0.5) * 50;
     });
 
-    const initialTargetNode = nodes.find(n => n.id === effectivePrimePersonId) as d3.SimulationNodeDatum | undefined;
-    if (initialTargetNode) {
-        initialTargetNode.fx = width / 2;
-        initialTargetNode.fy = height / 2;
-
-        if (zoomRef.current) {
-            const initialTransform = d3.zoomIdentity.translate(
-                -((initialTargetNode.x || 0) - width / 2),
-                -((initialTargetNode.y || 0) - height / 2)
-            );
-            svg.call(zoomRef.current.transform, initialTransform);
+    // Initial zoom to fit content - ALWAYS fit, no specific prime person
+    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+    nodes.forEach(node => {
+        const sx = (node as d3.SimulationNodeDatum).x || 0;
+        const sy = (node as d3.SimulationNodeDatum).y || 0;
+        let nodeWidth = NODE_PERSON_WIDTH;
+        let nodeHeight = NODE_PERSON_HEIGHT;
+        if ((node as any).type === 'marriage') {
+            nodeWidth = NODE_MARRIAGE_SIZE;
+            nodeHeight = NODE_MARRIAGE_SIZE;
         }
-    } else {
-        let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
-        nodes.forEach(node => {
-            const sx = (node as d3.SimulationNodeDatum).x || 0;
-            const sy = (node as d3.SimulationNodeDatum).y || 0;
-            let nodeWidth = NODE_PERSON_WIDTH;
-            let nodeHeight = NODE_PERSON_HEIGHT;
-            if ((node as any).type === 'marriage') {
-                nodeWidth = NODE_MARRIAGE_SIZE;
-                nodeHeight = NODE_MARRIAGE_SIZE;
-            }
-            minX = Math.min(minX, sx - nodeWidth / 2);
-            maxX = Math.max(maxX, sx + nodeWidth / 2);
-            minY = Math.min(minY, sy - nodeHeight / 2);
-            maxY = Math.max(maxY, sy + nodeHeight / 2);
-        });
+        minX = Math.min(minX, sx - nodeWidth / 2);
+        maxX = Math.max(maxX, sx + nodeWidth / 2);
+        minY = Math.min(minY, sy - nodeHeight / 2);
+        maxY = Math.max(maxY, sy + nodeHeight / 2);
+    });
 
-        const contentWidth = maxX - minX;
-        const contentHeight = maxY - minY;
+    const contentWidth = maxX - minX;
+    const contentHeight = maxY - minY;
 
-        const scale = Math.min(width / contentWidth, height / contentHeight, 1) * 0.8;
+    // Calculate scale to fit content, with a small padding (e.g., 80% of available space)
+    const scale = Math.min(width / contentWidth, height / contentHeight, 1) * 0.8;
 
-        const initialX = (width - contentWidth * scale) / 2 - minX * scale;
-        const initialY = (height - contentHeight * scale) / 2 - minY * scale;
+    // Calculate translation to center the content
+    const initialX = (width - contentWidth * scale) / 2 - minX * scale;
+    const initialY = (height - contentHeight * scale) / 2 - minY * scale;
 
-        if (zoomRef.current) {
-            const initialTransform = d3.zoomIdentity.translate(initialX, initialY).scale(scale);
-            svg.call(zoomRef.current.transform, initialTransform);
-        }
+    if (zoomRef.current) {
+        const initialTransform = d3.zoomIdentity.translate(initialX, initialY).scale(scale);
+        svg.call(zoomRef.current.transform, initialTransform);
     }
 
 
@@ -279,11 +217,6 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
             return colorMap[personData.birth_family_id] || 'var(--person-node-border-fallback)';
           })
           .style('stroke-width', 3)
-          .on('click', (event, clickedD) => {
-            event.stopPropagation();
-            setFocusedNodeId(clickedD.id);
-            navigate(`/person/${clickedD.id}`);
-          });
 
         // First Name
         nodeG.append('text')
@@ -340,60 +273,38 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
       event.subject.fx = null;
       event.subject.fy = null;
 
-      if (focusedNodeId === event.subject.id) {
-          setFocusedNodeId(null);
-          navigate('/');
-      }
     }
 
-  }, [people, navigate, personIdFromUrl, svgDimensions, colorMap, theme, focusedNodeId]);
+  }, [people, svgDimensions, colorMap, theme]); // REMOVE navigate, personIdFromUrl, focusedNodeId from dependencies
 
   useEffect(() => {
     renderGraph();
   }, [renderGraph]);
 
-  useEffect(() => {
-    if (focusedNodeId && svgRef.current && gRef.current && simulationRef.current && people.length > 0) {
-      const currentNodes = simulationRef.current.nodes() as GraphNode[];
-      const svg = d3.select(svgRef.current);
-      const g = d3.select(gRef.current);
-      centerAndZoomOnNode(focusedNodeId, currentNodes, svg, g);
-    } else if (focusedNodeId === null && svgRef.current && zoomRef.current) {
-        const svg = d3.select(svgRef.current);
-        svg.transition().duration(750).call(zoomRef.current.transform, d3.zoomIdentity);
-        if (simulationRef.current) {
-            simulationRef.current.nodes().forEach(node => {
-              (node as d3.SimulationNodeDatum).fx = null;
-              (node as d3.SimulationNodeDatum).fy = null;
-            });
-            simulationRef.current.alpha(1).alphaTarget(0.01).restart();
-        }
-    }
-  }, [focusedNodeId, svgDimensions, people, centerAndZoomOnNode]);
-
   const resetView = useCallback(() => {
     if (svgRef.current && zoomRef.current) {
       const svg = d3.select(svgRef.current);
+      // Reset zoom to identity (original scale and position)
       svg.transition().duration(750).call(zoomRef.current.transform, d3.zoomIdentity);
       if (simulationRef.current) {
+        // Stop simulation and release fixed positions to let it settle naturally
         simulationRef.current.stop();
         simulationRef.current.nodes().forEach(node => {
           (node as d3.SimulationNodeDatum).fx = null;
           (node as d3.SimulationNodeDatum).fy = null;
         });
+        // Restart simulation briefly to let it re-settle (alphaTarget 0 means it will stop once settled)
         simulationRef.current.alpha(1).alphaTarget(0.01).restart();
       }
-      setFocusedNodeId(null);
-      navigate('/');
     }
-  }, [navigate]);
+  }, []); 
 
 
   return (
     <div className="family-tree-container">
-      <div className="tree-controls">
+      {/* <div className="tree-controls">
         <button onClick={resetView} className="control-button">Full View</button>
-      </div>
+      </div> */}
       <svg
         ref={svgRef}
         width={svgDimensions.width}

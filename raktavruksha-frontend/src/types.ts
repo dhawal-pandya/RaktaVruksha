@@ -38,3 +38,7 @@ export interface GraphLink {
   target: string | GraphNode;
   type: 'parent-child' | 'spouse-spouse' | 'marriage-child' | 'parent-marriage';
 }
+
+export interface FamilyData {
+  people: Person[];
+}
