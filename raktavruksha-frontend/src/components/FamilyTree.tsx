@@ -14,8 +14,8 @@ const NODE_PERSON_HEIGHT = 60;
 const NODE_MARRIAGE_SIZE = 15;
 
 const LINK_DISTANCE = 100; // Longer links
-const CHARGE_STRENGTH = -1500; // More repulsion to spread nodes out
-const GENERATION_GAP = 300; // Increased vertical gap between generations
+const CHARGE_STRENGTH = -1200; // More repulsion to spread nodes out
+const GENERATION_GAP = 900; // Increased vertical gap between generations
 
 // Adjusted to push marriage nodes down relative to spouses
 const MARRIAGE_NODE_Y_OFFSET = NODE_PERSON_HEIGHT / 2 + NODE_MARRIAGE_SIZE / 2 + 50; // Offset below person nodes

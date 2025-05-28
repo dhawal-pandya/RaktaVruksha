@@ -14,7 +14,7 @@ const AppContent: React.FC<{ peopleData: Person[] }> = ({ peopleData }) => {
       <header className="app-header">
         <h1>Raktavruksha</h1>
         <button onClick={toggleTheme} className="theme-toggle-button">
-          {theme === '☀️' ? '🌙' : '🌙'}
+          {theme === '☀️' ? '🌙' : '☀️'}
         </button>
       </header>
       <FamilyTree people={peopleData} />
