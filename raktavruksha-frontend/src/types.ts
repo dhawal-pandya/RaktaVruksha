@@ -39,6 +39,12 @@ export interface GraphLink {
   type: 'parent-child' | 'spouse-spouse' | 'marriage-child' | 'parent-marriage';
 }
 
+export interface FamilyEntry {
+  color: string;
+}
+
 export interface FamilyData {
+  families?: { [familyId: string]: FamilyEntry };
+  nextUnknownId?: number;
   people: Person[];
 }

@@ -1,0 +1,37 @@
+{
+  "name": "raktavruksha",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "migrate": "tsx scripts/migrate-v1.ts",
+    "clean": "tsx scripts/clean-data.ts",
+    "stress": "tsx scripts/generate-stress-data.ts"
+  },
+  "dependencies": {
+    "d3-force-3d": "^3.0.5",
+    "nanoid": "^5.0.9",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-force-graph-2d": "^1.29.1",
+    "react-force-graph-3d": "^1.29.0",
+    "three": "^0.185.1",
+    "three-spritetext": "^1.9.0",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@types/three": "^0.185.1",
+    "@vitejs/plugin-react": "^4.4.1",
+    "tsx": "^4.19.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.1.0"
+  }
+}

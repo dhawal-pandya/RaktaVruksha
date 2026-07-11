@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import React, { useRef, useEffect, useState, useCallback, useLayoutEffect, useMemo } from 'react';
 import * as d3 from 'd3';
 import type { Person, FamilyTreeNode, MarriageNode, GraphNode, GraphLink } from '../types';
 import { buildGraphData, getFamilyColors } from '../utils/treeUtils';
@@ -6,23 +6,22 @@ import { useTheme } from '../contexts/ThemeContext';
 
 interface FamilyTreeProps {
   people: Person[];
+  onPersonClick: (person: Person) => void;
+  familyColors: { [familyId: string]: string };
 }
 
-// UI Constants
+// UI Constants - Adjusted CHARGE_STRENGTH
 const NODE_PERSON_WIDTH = 150;
 const NODE_PERSON_HEIGHT = 60;
 const NODE_MARRIAGE_SIZE = 15;
+const LINK_DISTANCE = 100;
+const CHARGE_STRENGTH = -900;
+const GENERATION_GAP = 420;
+const MARRIAGE_NODE_Y_OFFSET = NODE_PERSON_HEIGHT / 2 + NODE_MARRIAGE_SIZE / 2 + 50;
+const COLLISION_PADDING = 30;
+const SIBLING_SPACING = NODE_PERSON_WIDTH + 80; // horizontal gap between nodes in the same generation
 
-const LINK_DISTANCE = 100; // Longer links
-const CHARGE_STRENGTH = -1500; // More repulsion to spread nodes out
-const GENERATION_GAP = 300; // Increased vertical gap between generations
-
-// Adjusted to push marriage nodes down relative to spouses
-const MARRIAGE_NODE_Y_OFFSET = NODE_PERSON_HEIGHT / 2 + NODE_MARRIAGE_SIZE / 2 + 50; // Offset below person nodes
-
-const COLLISION_PADDING = 10; // Padding around nodes for collision detection
-
-const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
+const FamilyTree: React.FC<FamilyTreeProps> = ({ people, onPersonClick, familyColors }) => {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const gRef = useRef<SVGGElement | null>(null);
   const { theme } = useTheme();
@@ -30,11 +29,13 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
   const [svgDimensions, setSvgDimensions] = useState({ width: 0, height: 0 });
   const zoomRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown> | null>(null);
   const simulationRef = useRef<d3.ForceSimulation<GraphNode, GraphLink> | null>(null);
-  const colorMap = getFamilyColors(people);
 
+  const colorMap = useMemo(() => getFamilyColors(people, familyColors), [people, familyColors]);
 
-  useEffect(() => {
-    if (svgRef.current?.parentElement) {
+  // Use useLayoutEffect for dimension calculation to ensure it runs before browser paint
+  useLayoutEffect(() => {
+    const parentElement = svgRef.current?.parentElement;
+    if (parentElement) {
       const observer = new ResizeObserver(entries => {
         for (let entry of entries) {
           setSvgDimensions({
@@ -43,34 +44,42 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
           });
         }
       });
-      observer.observe(svgRef.current.parentElement);
+      observer.observe(parentElement);
+      // Set initial dimensions immediately
+      setSvgDimensions({
+        width: parentElement.offsetWidth,
+        height: parentElement.offsetHeight
+      });
       return () => observer.disconnect();
     }
   }, []);
 
   const renderGraph = useCallback(() => {
+    // Crucial check: only proceed if we have valid dimensions and people data
     if (!svgRef.current || !gRef.current || svgDimensions.width === 0 || svgDimensions.height === 0 || people.length === 0) {
-      console.log("Waiting for SVG dimensions or people data...", svgDimensions, people.length);
+      console.log("FamilyTree: Not rendering. Missing SVG dimensions or people data.");
+      if (gRef.current) d3.select(gRef.current).selectAll('*').remove(); // Clear any existing graph
+      if (simulationRef.current) simulationRef.current.stop(); // Stop any running simulation
       return;
     }
 
     const svg = d3.select(svgRef.current);
     const g = d3.select(gRef.current);
 
-    g.selectAll('*').remove();
+    g.selectAll('*').remove(); // Clear all previous graph elements
 
     const width = svgDimensions.width;
     const height = svgDimensions.height;
 
-
-    // Call buildGraphData without a prime person ID, which will default to an initial setup
-    const { nodes, links } = buildGraphData(people, null); // Pass null or undefined for primePersonId
+    // Build graph data from the filtered people
+    const { nodes, links } = buildGraphData(people, null);
 
     if (nodes.length === 0) {
-      console.warn("No nodes to render.");
+      console.warn("FamilyTree: No nodes generated from filtered people data. Skipping rendering.");
       return;
     }
 
+    // Initialize zoom behavior if it doesn't exist
     if (!zoomRef.current) {
       zoomRef.current = d3.zoom<SVGSVGElement, unknown>()
         .scaleExtent([0.1, 4])
@@ -78,32 +87,39 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
           g.attr('transform', event.transform.toString());
         });
       svg.call(zoomRef.current);
+    } else {
+      // Reset zoom to identity to prevent issues with previous transformations on new render
+      // svg.call(zoomRef.current.transform, d3.zoomIdentity); // This can be aggressive if not desired on every render
+      // Instead, we'll apply a fit zoom at the end of simulation.
     }
 
+
     const visibleGenerations = nodes.map(d => d.generation).filter(g => g !== undefined && g !== null) as number[];
+    // Handle case where only 1 generation or isolated nodes exist
     const minGen = visibleGenerations.length > 0 ? Math.min(...visibleGenerations) : 0;
     const maxGen = visibleGenerations.length > 0 ? Math.max(...visibleGenerations) : 0;
-    const numGenerations = maxGen - minGen + 1;
+    const numGenerations = Math.max(1, maxGen - minGen + 1); // Ensure at least 1 generation for calculation
 
+    // Calculate initial Y-position for the top generation to center the graph vertically
     const startY = (height - (numGenerations * GENERATION_GAP)) / 2;
 
 
-    // Initialize Force Simulation
+    // Stop any existing simulation before creating a new one
     if (simulationRef.current) {
-        simulationRef.current.stop();
+      simulationRef.current.stop();
     }
 
+    // Initialize or re-initialize Force Simulation
     simulationRef.current = d3.forceSimulation(nodes as d3.SimulationNodeDatum[])
       .force('link', d3.forceLink(links)
           .id((d: any) => d.id)
           .distance(d => {
-              if (d.type === 'parent-marriage' || d.type === 'marriage-child') {
-                  return LINK_DISTANCE * 0.1;
-              }
+              if (d.type === 'parent-marriage' || d.type === 'marriage-child') return LINK_DISTANCE * 0.1;
               return LINK_DISTANCE;
           }))
       .force('charge', d3.forceManyBody().strength(CHARGE_STRENGTH))
-      .force('center', d3.forceCenter(width / 2, height / 2))
+      // Weak horizontal centering — prevents drift without fighting the sibling spread
+      .force('centerX', d3.forceX(width / 2).strength(0.03))
       .force('y', d3.forceY(d => {
         const node = d as GraphNode;
         const nodeGen = node.generation !== undefined ? node.generation : 0;
@@ -112,7 +128,7 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
             yPos += MARRIAGE_NODE_Y_OFFSET;
         }
         return yPos;
-      }).strength(0.8))
+      }).strength(0.92)) // High strength keeps every generation locked to its row
       .force('collide', d3.forceCollide<GraphNode>(d => {
         if ((d as any).type === 'marriage') {
           return NODE_MARRIAGE_SIZE / 2 + COLLISION_PADDING;
@@ -120,51 +136,32 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
         return Math.max(NODE_PERSON_WIDTH, NODE_PERSON_HEIGHT) / 2 + COLLISION_PADDING;
       }).iterations(2))
       .alphaDecay(0.02)
-      .velocityDecay(0.3);
+      .velocityDecay(0.4);
 
 
-    // Pre-set initial positions for nodes based on generation for more deterministic layout
+    // Pre-assign X positions by distributing nodes evenly within each generation row.
+    // This gives siblings a correct starting spread so the simulation doesn't have to
+    // discover it from scratch (which often produces poor local minima).
+    const nodesByGen = new Map<number, typeof nodes>();
     nodes.forEach(node => {
-      const nodeGen = (node as GraphNode).generation !== undefined ? (node as GraphNode).generation! : 0;
-      let yPos = startY + (nodeGen - minGen) * GENERATION_GAP;
-      if ((node as any).type === 'marriage') {
-          yPos += MARRIAGE_NODE_Y_OFFSET;
-      }
+      const gen = (node as any).generation ?? 0;
+      if (!nodesByGen.has(gen)) nodesByGen.set(gen, []);
+      nodesByGen.get(gen)!.push(node);
+    });
+
+    nodes.forEach(node => {
+      const gen = (node as any).generation ?? 0;
+      const genNodes = nodesByGen.get(gen)!;
+      const idx = genNodes.indexOf(node);
+      const totalInGen = genNodes.length;
+
+      let yPos = startY + (gen - minGen) * GENERATION_GAP;
+      if ((node as any).type === 'marriage') yPos += MARRIAGE_NODE_Y_OFFSET;
+
       (node as d3.SimulationNodeDatum).y = yPos;
-      (node as d3.SimulationNodeDatum).x = width / 2 + (Math.random() - 0.5) * 50;
+      (node as d3.SimulationNodeDatum).x =
+        width / 2 - ((totalInGen - 1) * SIBLING_SPACING) / 2 + idx * SIBLING_SPACING;
     });
-
-    // Initial zoom to fit content - ALWAYS fit, no specific prime person
-    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
-    nodes.forEach(node => {
-        const sx = (node as d3.SimulationNodeDatum).x || 0;
-        const sy = (node as d3.SimulationNodeDatum).y || 0;
-        let nodeWidth = NODE_PERSON_WIDTH;
-        let nodeHeight = NODE_PERSON_HEIGHT;
-        if ((node as any).type === 'marriage') {
-            nodeWidth = NODE_MARRIAGE_SIZE;
-            nodeHeight = NODE_MARRIAGE_SIZE;
-        }
-        minX = Math.min(minX, sx - nodeWidth / 2);
-        maxX = Math.max(maxX, sx + nodeWidth / 2);
-        minY = Math.min(minY, sy - nodeHeight / 2);
-        maxY = Math.max(maxY, sy + nodeHeight / 2);
-    });
-
-    const contentWidth = maxX - minX;
-    const contentHeight = maxY - minY;
-
-    // Calculate scale to fit content, with a small padding (e.g., 80% of available space)
-    const scale = Math.min(width / contentWidth, height / contentHeight, 1) * 0.8;
-
-    // Calculate translation to center the content
-    const initialX = (width - contentWidth * scale) / 2 - minX * scale;
-    const initialY = (height - contentHeight * scale) / 2 - minY * scale;
-
-    if (zoomRef.current) {
-        const initialTransform = d3.zoomIdentity.translate(initialX, initialY).scale(scale);
-        svg.call(zoomRef.current.transform, initialTransform);
-    }
 
 
     // Create Links
@@ -205,6 +202,22 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
           .attr('stroke', 'var(--marriage-node-stroke)');
       } else {
         const personData = d as FamilyTreeNode;
+
+        // Click and hover on the whole card group (rect + text), not just the rect.
+        // Use `d` from the enclosing node.each closure — avoids D3's `unknown` datum typing.
+        nodeG
+          .style('cursor', 'pointer')
+          .on('click', (event: MouseEvent) => {
+            event.stopPropagation();
+            onPersonClick(d as Person);
+          })
+          .on('mouseover', function() {
+            d3.select(this).select('rect').style('filter', 'brightness(0.88)');
+          })
+          .on('mouseout', function() {
+            d3.select(this).select('rect').style('filter', 'none');
+          });
+
         nodeG.append('rect')
           .attr('width', NODE_PERSON_WIDTH)
           .attr('height', NODE_PERSON_HEIGHT)
@@ -213,12 +226,9 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
           .attr('x', -NODE_PERSON_WIDTH / 2)
           .attr('y', -NODE_PERSON_HEIGHT / 2)
           .style('fill', 'var(--person-node-fill)')
-          .style('stroke', (nodeD: any) => {
-            return colorMap[personData.birth_family_id] || 'var(--person-node-border-fallback)';
-          })
-          .style('stroke-width', 3)
+          .style('stroke', () => colorMap[personData.birth_family_id] || 'var(--person-node-border-fallback)')
+          .style('stroke-width', 3);
 
-        // First Name
         nodeG.append('text')
           .attr('class', 'first-name-text')
           .attr('text-anchor', 'middle')
@@ -230,9 +240,9 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
           .style('fill', 'var(--text-color)')
           .style('stroke', 'none')
           .style('stroke-width', 0)
-          .style('user-select', 'none');
+          .style('user-select', 'none')
+          .style('pointer-events', 'none');
 
-        // Last Name
         nodeG.append('text')
           .attr('class', 'last-name-text')
           .attr('text-anchor', 'middle')
@@ -243,10 +253,58 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
           .style('fill', 'var(--text-color)')
           .style('stroke', 'none')
           .style('stroke-width', 0)
-          .style('user-select', 'none');
+          .style('user-select', 'none')
+          .style('pointer-events', 'none');
       }
     });
 
+    // Function to calculate and apply initial zoom to fit content
+    const applyFitZoom = () => {
+        let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+
+        // Iterate over current node positions (which should be more stable now)
+        nodes.forEach(node => {
+            const sx = (node as d3.SimulationNodeDatum).x || 0;
+            const sy = (node as d3.SimulationNodeDatum).y || 0;
+            let nodeWidth = NODE_PERSON_WIDTH;
+            let nodeHeight = NODE_PERSON_HEIGHT;
+            if ((node as any).type === 'marriage') {
+                nodeWidth = NODE_MARRIAGE_SIZE;
+                nodeHeight = NODE_MARRIAGE_SIZE;
+            }
+            minX = Math.min(minX, sx - nodeWidth / 2);
+            maxX = Math.max(maxX, sx + nodeWidth / 2);
+            minY = Math.min(minY, sy - nodeHeight / 2);
+            maxY = Math.max(maxY, sy + nodeHeight / 2);
+        });
+
+        // Add safe checks for content dimensions in case nodes are completely collapsed
+        if (maxX === -Infinity || minX === Infinity || maxY === -Infinity || minY === Infinity || nodes.length === 0) {
+            console.warn("Cannot calculate fit zoom: Invalid bounds or no nodes after simulation.");
+            return;
+        }
+
+        const contentWidth = maxX - minX;
+        const contentHeight = maxY - minY;
+
+        const paddingFactor = 1.1; // 10% padding
+        const scaleX = width / (contentWidth * paddingFactor);
+        const scaleY = height / (contentHeight * paddingFactor);
+        // Choose the smaller scale to fit both dimensions, but never zoom in beyond 1x (initial size)
+        const scale = Math.min(scaleX, scaleY, 1);
+
+        const translateX = (width / 2) - ((minX + maxX) / 2) * scale;
+        const translateY = (height / 2) - ((minY + maxY) / 2) * scale;
+
+        if (zoomRef.current) {
+            const initialTransform = d3.zoomIdentity.translate(translateX, translateY).scale(scale);
+            // Apply zoom with a smooth transition
+            svg.transition().duration(750).call(zoomRef.current.transform, initialTransform);
+        }
+    };
+
+
+    // Attach tick and end handlers for simulation
     simulationRef.current.on('tick', () => {
       link
         .attr('x1', d => (d.source as d3.SimulationNodeDatum).x!)
@@ -257,6 +315,17 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
       node.attr('transform', d => `translate(${(d as d3.SimulationNodeDatum).x!},${(d as d3.SimulationNodeDatum).y!})`);
     });
 
+    // Apply zoom ONLY AFTER the simulation has mostly settled
+    simulationRef.current.on('end', () => {
+        console.log("Simulation ended, applying fit zoom.");
+        applyFitZoom();
+    });
+
+    // Start the simulation
+    simulationRef.current.alpha(1).restart();
+
+
+    // Drag handlers
     function dragstarted(event: d3.D3DragEvent<SVGGElement, GraphNode, d3.SubjectPosition>) {
       if (!event.active) simulationRef.current!.alphaTarget(0.3).restart();
       event.subject.fx = event.subject.x;
@@ -272,39 +341,20 @@ const FamilyTree: React.FC<FamilyTreeProps> = ({ people }) => {
       if (!event.active) simulationRef.current!.alphaTarget(0);
       event.subject.fx = null;
       event.subject.fy = null;
-
     }
 
-  }, [people, svgDimensions, colorMap, theme]); // REMOVE navigate, personIdFromUrl, focusedNodeId from dependencies
+  }, [people, svgDimensions, colorMap, familyColors, theme, onPersonClick]);
 
+  // This useEffect will re-run `renderGraph` whenever its dependencies (especially `people` which is the filtered data) change.
   useEffect(() => {
     renderGraph();
-  }, [renderGraph]);
+  }, [renderGraph]); // `renderGraph` is a useCallback, so this only runs when its own dependencies change.
 
-  const resetView = useCallback(() => {
-    if (svgRef.current && zoomRef.current) {
-      const svg = d3.select(svgRef.current);
-      // Reset zoom to identity (original scale and position)
-      svg.transition().duration(750).call(zoomRef.current.transform, d3.zoomIdentity);
-      if (simulationRef.current) {
-        // Stop simulation and release fixed positions to let it settle naturally
-        simulationRef.current.stop();
-        simulationRef.current.nodes().forEach(node => {
-          (node as d3.SimulationNodeDatum).fx = null;
-          (node as d3.SimulationNodeDatum).fy = null;
-        });
-        // Restart simulation briefly to let it re-settle (alphaTarget 0 means it will stop once settled)
-        simulationRef.current.alpha(1).alphaTarget(0.01).restart();
-      }
-    }
-  }, []); 
 
+  // Removed the resetView function and the "Full View" button as per request.
 
   return (
     <div className="family-tree-container">
-      {/* <div className="tree-controls">
-        <button onClick={resetView} className="control-button">Full View</button>
-      </div> */}
       <svg
         ref={svgRef}
         width={svgDimensions.width}
