@@ -16,6 +16,8 @@ export default function TopBar() {
   const fitView = useStore(s => s.fitView);
   const viewMode = useStore(s => s.viewMode);
   const toggleViewMode = useStore(s => s.toggleViewMode);
+  const editUnlocked = useStore(s => s.editUnlocked);
+  const lockEditing = useStore(s => s.lockEditing);
 
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -46,9 +48,6 @@ export default function TopBar() {
         <button className="btn" onClick={fitView} title="Fit the whole tree in view">
           ⌂ Fit
         </button>
-        <button className="btn" onClick={() => openForm('standalone')} title="Add a standalone person">
-          + Add
-        </button>
         <button
           className={`btn ${relationActive ? 'btn-active' : ''}`}
           onClick={toggleRelationMode}
@@ -56,21 +55,33 @@ export default function TopBar() {
         >
           Relation
         </button>
-        <button className="btn" onClick={() => fileRef.current?.click()} title="Merge a relative's file into yours">
-          Import
-        </button>
-        <button className="btn" onClick={exportDownload} title="Download a copy to share">
-          Export
-        </button>
-        <button className={`btn btn-primary ${dirty ? 'btn-dirty' : ''}`} onClick={() => void saveToFile()} title="Save as the default data file">
-          Save{dirty && <span className="dirty-dot" />}
-        </button>
-        {isDraft && (
-          <button className="btn btn-subtle" onClick={requestReset} title="Discard the draft and reload the saved file">
-            Reset
-          </button>
+
+        {/* Editing tools — only shown once unlocked with the edit key. */}
+        {editUnlocked && (
+          <>
+            <button className="btn" onClick={() => openForm('standalone')} title="Add a standalone person">
+              + Add
+            </button>
+            <button className="btn" onClick={() => fileRef.current?.click()} title="Merge a relative's file into yours">
+              Import
+            </button>
+            <button className="btn" onClick={exportDownload} title="Download a copy to share">
+              Export
+            </button>
+            <button className={`btn btn-primary ${dirty ? 'btn-dirty' : ''}`} onClick={() => void saveToFile()} title="Save as the default data file">
+              Save{dirty && <span className="dirty-dot" />}
+            </button>
+            {isDraft && (
+              <button className="btn btn-subtle" onClick={requestReset} title="Discard the draft and reload the saved file">
+                Reset
+              </button>
+            )}
+            <button className="btn btn-subtle" onClick={lockEditing} title="Hide editing tools">
+              Lock
+            </button>
+            <input ref={fileRef} type="file" accept=".json,application/json" hidden onChange={e => void onFile(e)} />
+          </>
         )}
-        <input ref={fileRef} type="file" accept=".json,application/json" hidden onChange={e => void onFile(e)} />
       </nav>
     </header>
   );

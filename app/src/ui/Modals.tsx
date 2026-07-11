@@ -104,6 +104,40 @@ export function ConfirmResetModal() {
   );
 }
 
+export function ConfirmDeleteModal() {
+  const dataset = useStore(s => s.dataset);
+  const targetId = useStore(s => s.confirmDelete);
+  const cancel = useStore(s => s.cancelDelete);
+  const confirm = useStore(s => s.confirmDeleteNow);
+  if (!targetId || !dataset) return null;
+  const person = dataset.people.get(targetId);
+  const name = person ? [person.firstName, person.lastName].filter(Boolean).join(' ') : targetId;
+  const childCount = (dataset.childrenOf.get(targetId) ?? []).length;
+  return (
+    <div className="modal-backdrop" onMouseDown={e => e.target === e.currentTarget && cancel()}>
+      <div className="modal panel">
+        <header className="detail-head">
+          <h2 className="detail-name">Delete {name}?</h2>
+        </header>
+        <p>
+          {name} will be removed from the tree and from every marriage and parent link.
+          {childCount > 0 && (
+            <>
+              {' '}
+              Their {childCount} child{childCount > 1 ? 'ren' : ''} stay, but lose {name} as a parent.
+            </>
+          )}{' '}
+          This can't be undone (but you haven't Saved yet — a reload restores the file).
+        </p>
+        <footer className="modal-actions">
+          <button className="btn btn-subtle" onClick={cancel}>Cancel</button>
+          <button className="btn btn-danger" onClick={confirm}>Delete</button>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
 export function Toast() {
   const toast = useStore(s => s.toast);
   const clear = useStore(s => s.clearToast);

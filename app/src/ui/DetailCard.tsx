@@ -13,6 +13,8 @@ export default function DetailCard() {
   const clearFocus = useStore(s => s.clearFocus);
   const setLens = useStore(s => s.setLens);
   const openForm = useStore(s => s.openForm);
+  const requestDelete = useStore(s => s.requestDelete);
+  const editUnlocked = useStore(s => s.editUnlocked);
   const lensFamilyId = useStore(s => s.lensFamilyId);
 
   if (!dataset || !focusId || relationActive) return null;
@@ -93,6 +95,9 @@ export default function DetailCard() {
                   'children · other parent unknown'
                 )}
               </h3>
+              {partner && u.children.length + adopted.length > 0 && (
+                <div className="children-label">Children</div>
+              )}
               {u.children.length + adopted.length === 0 && <span className="muted">no children</span>}
               {u.children.map(c => (
                 <PersonLink key={c} id={c} />
@@ -107,20 +112,25 @@ export default function DetailCard() {
         {person.notes && <p className="detail-notes">{person.notes}</p>}
       </div>
 
-      <footer className="detail-grow">
-        <button className="btn" onClick={() => openForm('spouse', focusId)}>
-          + Spouse
-        </button>
-        <button className="btn" onClick={() => openForm('child', focusId)}>
-          + Child
-        </button>
-        <button className="btn" onClick={() => openForm('parent', focusId)}>
-          + Parent
-        </button>
-        <button className="btn btn-subtle" onClick={() => openForm('edit', focusId)}>
-          Edit
-        </button>
-      </footer>
+      {editUnlocked && (
+        <footer className="detail-grow">
+          <button className="btn" onClick={() => openForm('spouse', focusId)}>
+            + Spouse
+          </button>
+          <button className="btn" onClick={() => openForm('child', focusId)}>
+            + Child
+          </button>
+          <button className="btn" onClick={() => openForm('parent', focusId)}>
+            + Parent
+          </button>
+          <button className="btn btn-subtle" onClick={() => openForm('edit', focusId)}>
+            Edit
+          </button>
+          <button className="btn btn-subtle btn-delete" onClick={() => requestDelete(focusId)}>
+            Delete
+          </button>
+        </footer>
+      )}
     </section>
   );
 }

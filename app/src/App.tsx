@@ -6,7 +6,14 @@ import Legend from './ui/Legend';
 import DetailCard from './ui/DetailCard';
 import RelationPanel from './ui/RelationPanel';
 import PersonForm from './ui/PersonForm';
-import { ConfirmResetModal, Hint, ImportErrorModal, MergeReportModal, Toast } from './ui/Modals';
+import {
+  ConfirmDeleteModal,
+  ConfirmResetModal,
+  Hint,
+  ImportErrorModal,
+  MergeReportModal,
+  Toast,
+} from './ui/Modals';
 import { useStore } from './state/store';
 
 export default function App() {
@@ -62,6 +69,7 @@ export default function App() {
       <MergeReportModal />
       <ImportErrorModal />
       <ConfirmResetModal />
+      <ConfirmDeleteModal />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { buildDataset } from '../dataset';
-import { growChild, growParent, growSpouse } from '../mutate';
+import { deletePerson, growChild, growParent, growSpouse } from '../mutate';
 import { validateData } from '../validate';
 import { fixture } from './fixture';
 
@@ -102,5 +102,58 @@ describe('grow flows', () => {
         parent: fields(),
       }),
     ).toThrow(/already has two/);
+  });
+
+  it('adds a spouse and completes a single-parent union with existing children', () => {
+    // SoloMum has a 1-partner union u_solo → OutKid. Marry her to a new husband and
+    // mark OutKid as his child too: the solo union should be completed in place.
+    const raw = fixture();
+    const before = raw.unions.length;
+    const { raw: next, personId, unionId } = growSpouse(raw, {
+      anchorId: 'SoloMum',
+      existingId: null,
+      spouse: fields({ gender: 'male', birthFamilyId: 'famC' }),
+      status: 'married',
+      familyId: 'famC',
+      childIds: ['OutKid'],
+    });
+    expect(validateData(next).errors).toEqual([]);
+    expect(unionId).toBe('u_solo'); // completed in place, not duplicated
+    expect(next.unions.length).toBe(before); // no new union created
+    const u = next.unions.find(u => u.id === 'u_solo')!;
+    expect(u.partners).toEqual(['SoloMum', personId]);
+    expect(u.children).toContain('OutKid');
+    // OutKid now has two biological parents
+    const ds = buildDataset(next);
+    expect(ds.parentsOf.get('OutKid')!.map(p => p.id).sort()).toEqual(['SoloMum', personId].sort());
+  });
+});
+
+describe('deletePerson', () => {
+  it('removes the person and every reference to them', () => {
+    const raw = fixture();
+    const next = deletePerson(raw, 'Ex');
+    expect(validateData(next).errors).toEqual([]);
+    expect(next.people.some(p => p.id === 'Ex')).toBe(false);
+    // u_dad_ex kept (still has child HalfSis) but Ex removed as a partner
+    const u = next.unions.find(u => u.id === 'u_dad_ex')!;
+    expect(u.partners).toEqual(['Dad']);
+    expect(u.children).toContain('HalfSis');
+  });
+
+  it('drops a union left with a lone partner and no children', () => {
+    // Marry Dau to a new husband (childless 2-partner union), then delete him.
+    const grown = growSpouse(fixture(), {
+      anchorId: 'Dau',
+      existingId: null,
+      spouse: fields({ gender: 'male', birthFamilyId: 'famC' }),
+      status: 'married',
+      familyId: 'famC',
+    });
+    const husbandUnions = grown.raw.unions.length;
+    const next = deletePerson(grown.raw, grown.personId);
+    expect(validateData(next).errors).toEqual([]);
+    expect(next.people.some(p => p.id === grown.personId)).toBe(false);
+    expect(next.unions.length).toBe(husbandUnions - 1); // childless union removed
   });
 });

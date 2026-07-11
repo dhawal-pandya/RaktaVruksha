@@ -157,6 +157,34 @@ export const growChild = (
   return { raw: next, personId: added.personId };
 };
 
+/** Move a child from whatever biological union it's in into `unionId`, deleting a
+ *  now-empty single-parent union it leaves behind. No-op if already there. */
+export const moveChildToUnion = (
+  raw: FamilyDataV2,
+  childId: string,
+  unionId: string,
+): FamilyDataV2 => {
+  const from = raw.unions.find(u => u.children.includes(childId));
+  if (from && from.id === unionId) return raw;
+  let unions = raw.unions.map(u => {
+    if (from && u.id === from.id) return { ...u, children: u.children.filter(c => c !== childId), updatedAt: now() };
+    if (u.id === unionId) return { ...u, children: [...u.children, childId], updatedAt: now() };
+    return u;
+  });
+  // Drop a childless single-parent union that the child just vacated.
+  unions = unions.filter(
+    u =>
+      !(
+        from &&
+        u.id === from.id &&
+        u.partners.length < 2 &&
+        u.children.length === 0 &&
+        (u.adoptedChildren?.length ?? 0) === 0
+      ),
+  );
+  return { ...raw, unions };
+};
+
 export interface GrowSpouseInput {
   anchorId: string;
   /** Existing person to marry, or null to create from `spouse`. */
@@ -164,6 +192,8 @@ export interface GrowSpouseInput {
   spouse?: PersonFields;
   status: UnionStatus;
   familyId: string | null;
+  /** Existing children of the anchor to also assign to this marriage. */
+  childIds?: string[];
 }
 
 export const growSpouse = (
@@ -177,17 +207,63 @@ export const growSpouse = (
     next = added.raw;
     spouseId = added.personId;
   }
+  const childIds = input.childIds ?? [];
+
   const existing = findUnionByPartners(next, [input.anchorId, spouseId]);
+  let unionId: string;
   if (existing) {
     next = updateUnion(next, existing.id, { status: input.status, familyId: input.familyId });
-    return { raw: next, personId: spouseId, unionId: existing.id };
+    unionId = existing.id;
+  } else {
+    // If the anchor already has a single-parent union holding (some of) the chosen
+    // children, complete it in place instead of making a duplicate marriage.
+    const solo = childIds.length
+      ? next.unions.find(
+          u =>
+            u.partners.length === 1 &&
+            u.partners[0] === input.anchorId &&
+            childIds.some(c => u.children.includes(c)),
+        )
+      : undefined;
+    if (solo) {
+      next = updateUnion(next, solo.id, {
+        partners: [input.anchorId, spouseId],
+        status: input.status,
+        familyId: input.familyId,
+      });
+      unionId = solo.id;
+    } else {
+      const created = createUnion(next, {
+        partners: [input.anchorId, spouseId],
+        familyId: input.familyId,
+        status: input.status,
+      });
+      next = created.raw;
+      unionId = created.unionId;
+    }
   }
-  const created = createUnion(next, {
-    partners: [input.anchorId, spouseId],
-    familyId: input.familyId,
-    status: input.status,
-  });
-  return { raw: created.raw, personId: spouseId, unionId: created.unionId };
+
+  for (const childId of childIds) next = moveChildToUnion(next, childId, unionId);
+  return { raw: next, personId: spouseId, unionId };
+};
+
+/** Remove a person entirely: pull them out of every union (as partner, child, or
+ *  adopted child) and drop any union left with no partners, or a lone partner and
+ *  no children. Never leaves dangling references. */
+export const deletePerson = (raw: FamilyDataV2, personId: string): FamilyDataV2 => {
+  const unions = raw.unions
+    .map(u => ({
+      ...u,
+      partners: u.partners.filter(p => p !== personId),
+      children: u.children.filter(c => c !== personId),
+      adoptedChildren: (u.adoptedChildren ?? []).filter(c => c !== personId),
+    }))
+    .filter(
+      u =>
+        u.partners.length > 0 &&
+        !(u.partners.length < 2 && u.children.length === 0 && (u.adoptedChildren?.length ?? 0) === 0),
+    );
+  return { ...raw, people: raw.people.filter(p => p.id !== personId), unions };
 };
 
 export interface GrowParentInput {
