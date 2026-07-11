@@ -411,15 +411,6 @@
       "updatedAt": "2026-07-11T10:02:09.122Z"
     },
     {
-      "id": "Samratba",
-      "firstName": "Samratba",
-      "lastName": "Pandya",
-      "gender": "female",
-      "alive": false,
-      "birthFamilyId": null,
-      "updatedAt": "2026-07-11T10:02:09.122Z"
-    },
-    {
       "id": "Haribhai",
       "firstName": "Haribhai",
       "lastName": "Pandya",
@@ -638,8 +629,8 @@
       "updatedAt": "2026-07-11T10:02:09.122Z"
     },
     {
-      "id": "u_makhanji_samratba",
-      "partners": ["Makhanji", "Samratba"],
+      "id": "u_makhanji",
+      "partners": ["Makhanji"],
       "children": ["Chabilram"],
       "adoptedChildren": [],
       "familyId": "familyPandya",

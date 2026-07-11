@@ -84,16 +84,43 @@ The model distinguishes, without collapsing them into each other:
 | Divorce + remarriage | multiple unions per person, each with its own `familyId`, `status`, `order` |
 | Orphans / unknown lineage | no parent union; `birthFamilyId: null` |
 
-### Editing & sharing workflow
+### Presentable vs. editable (the hidden edit key)
 
-Every edit autosaves to an **IndexedDB draft** (survives reloads; "Reset" discards it).
+By default the app is **read-only** — visitors can navigate, search, lens, and trace
+relations, but see no Add / Import / Export / Save / Edit / Delete affordances. This is
+what you share.
 
-- **Save** — writes the full JSON back to `app/public/family-data.json` via the File
-  System Access API (pick the file once; one-click saves after). That file *is* the
-  default data on next load. Non-Chromium browsers get a download instead.
+Editing unlocks with a **secret key** in the URL: append `?edit=durga` (change the
+key in `app/src/state/store.ts`, `EDIT_KEY`). The unlock persists locally, so you only
+pass it once per browser; a **Lock** button re-hides everything. The key never appears in
+the plain link you share, so the public site stays presentation-only.
+
+Once unlocked:
+
+- **On-graph editing** — from a focused person: **+ Spouse** (and you can tick their
+  existing single-parent children so the new spouse becomes the co-parent — no duplicate
+  marriage), **+ Child**, **+ Parent**, **Edit**, and **Delete** (removes the person and
+  cleans up every link; childless leftover unions are dropped).
+- Every edit autosaves to an **IndexedDB draft** (survives reloads; "Reset" discards it).
+- **On `npm run dev` (local), edits write straight through to
+  `app/public/family-data.json`** — a debounced autosave after every change, plus
+  **Save** for an immediate flush. No export/pick-a-file step: just edit, then commit the
+  updated JSON. (A dev-only Vite endpoint does the write; the page doesn't reload.)
+- On the **deployed** site there's no such endpoint, so **Save** falls back to the File
+  System Access API (pick the file once) or a plain download.
 - **Export** — downloads a copy to send to relatives.
 - **Import** — additively merges a relative's file: new ids are added, known ids update
   only if newer, nothing is ever deleted; a merge report shows exactly what changed.
+
+### Deploy (GitHub Pages)
+
+```bash
+cd app && npm run deploy      # builds and force-pushes app/dist/ to the gh-pages branch
+```
+
+`scripts/deploy-gh-pages.sh` publishes only the built artifact (never source history).
+The site serves under the repo subpath (Vite `base: './'`). Share the plain URL; use
+`…/?edit=durga` yourself to edit, then Export → commit the JSON → redeploy.
 
 ## Architecture
 

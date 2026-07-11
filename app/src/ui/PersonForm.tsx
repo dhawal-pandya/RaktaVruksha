@@ -35,6 +35,7 @@ export default function PersonForm() {
   const [status, setStatus] = useState<UnionStatus>('married');
   const [unionFamily, setUnionFamily] = useState<string>(UNKNOWN);
   const [unionStatuses, setUnionStatuses] = useState<Record<string, UnionStatus>>({});
+  const [attachChildIds, setAttachChildIds] = useState<string[]>([]);
 
   const anchor = form?.anchorId ? dataset?.people.get(form.anchorId) : null;
 
@@ -69,7 +70,18 @@ export default function PersonForm() {
     setExistingQuery('');
     setStatus('married');
     setUnionFamily(a ? displayFamilyOf(dataset, a.id) ?? UNKNOWN : UNKNOWN);
+    setAttachChildIds([]);
   }, [form, dataset]);
+
+  // For +Spouse: the anchor's children who currently have no second parent
+  // (they sit in a single-parent union). These can be assigned to this marriage.
+  const soloChildren = useMemo(() => {
+    if (!dataset || form?.mode !== 'spouse' || !form.anchorId) return [];
+    return (dataset.unionsOf.get(form.anchorId) ?? [])
+      .map(uid => dataset.unions.get(uid)!)
+      .filter(u => u.partners.length === 1)
+      .flatMap(u => u.children);
+  }, [dataset, form]);
 
   // Existing-person picker: matches "Name — id" datalist entries.
   const peopleOptions = useMemo(() => {
@@ -120,6 +132,7 @@ export default function PersonForm() {
         unionId,
         status: st,
       })),
+      childIds: attachChildIds,
     };
     submitForm(payload);
   };
@@ -257,29 +270,58 @@ export default function PersonForm() {
         )}
 
         {form.mode === 'spouse' && (
-          <div className="field-row">
-            <label className="field">
-              <span>Status</span>
-              <select value={status} onChange={e => setStatus(e.target.value as UnionStatus)}>
-                {STATUS_OPTIONS.map(o => (
-                  <option key={o.value} value={o.value}>
-                    {o.label}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label className="field">
-              <span>Children born into</span>
-              <select value={unionFamily} onChange={e => setUnionFamily(e.target.value)}>
-                <option value={UNKNOWN}>unknown</option>
-                {families.map(([id, f]) => (
-                  <option key={id} value={id}>
-                    {f.name}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
+          <>
+            <div className="field-row">
+              <label className="field">
+                <span>Status</span>
+                <select value={status} onChange={e => setStatus(e.target.value as UnionStatus)}>
+                  {STATUS_OPTIONS.map(o => (
+                    <option key={o.value} value={o.value}>
+                      {o.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="field">
+                <span>Children born into</span>
+                <select value={unionFamily} onChange={e => setUnionFamily(e.target.value)}>
+                  <option value={UNKNOWN}>unknown</option>
+                  {families.map(([id, f]) => (
+                    <option key={id} value={id}>
+                      {f.name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+            {soloChildren.length > 0 && (
+              <div className="detail-section">
+                <h3>Also a parent of</h3>
+                <span className="muted">
+                  {anchor ? personName(anchor) : 'their'} existing children with no second parent —
+                  tick any that belong to this marriage too.
+                </span>
+                {soloChildren.map(cid => {
+                  const c = dataset.people.get(cid);
+                  if (!c) return null;
+                  return (
+                    <label key={cid} className="field field-check">
+                      <input
+                        type="checkbox"
+                        checked={attachChildIds.includes(cid)}
+                        onChange={e =>
+                          setAttachChildIds(prev =>
+                            e.target.checked ? [...prev, cid] : prev.filter(x => x !== cid),
+                          )
+                        }
+                      />
+                      <span>{personName(c)}</span>
+                    </label>
+                  );
+                })}
+              </div>
+            )}
+          </>
         )}
 
         {form.mode === 'edit' && Object.keys(unionStatuses).length > 0 && (

@@ -368,6 +368,22 @@ textarea:focus {
   color: var(--text-dim);
   font-size: var(--fs-sm);
 }
+.children-label {
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-faint);
+  font-weight: 600;
+  margin: 4px 0 2px;
+}
+.btn-delete {
+  color: var(--danger);
+  margin-left: auto;
+}
+.btn-delete:hover {
+  background: rgba(208, 96, 96, 0.14);
+  color: var(--danger);
+}
 .detail-grow {
   display: flex;
   flex-wrap: wrap;
