@@ -142,6 +142,7 @@ export const parseFamilyData = (
       families[id] = {
         name: String(f.name ?? id.replace(/^family/, '')),
         color: String(f.color ?? '#8a93a6'),
+        ...(f.note ? { note: String(f.note) } : {}),
       };
     }
   }

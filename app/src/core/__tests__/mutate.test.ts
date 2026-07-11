@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { buildDataset } from '../dataset';
-import { deletePerson, growChild, growParent, growSpouse } from '../mutate';
+import { deletePerson, growChild, growParent, growSpouse, moveChildInUnion } from '../mutate';
 import { validateData } from '../validate';
 import { fixture } from './fixture';
 
@@ -126,6 +126,17 @@ describe('grow flows', () => {
     // OutKid now has two biological parents
     const ds = buildDataset(next);
     expect(ds.parentsOf.get('OutKid')!.map(p => p.id).sort()).toEqual(['SoloMum', personId].sort());
+  });
+});
+
+describe('moveChildInUnion (birth order)', () => {
+  it('swaps a child with its neighbour, clamping at the ends', () => {
+    const raw = fixture(); // u_dad_mom children: ['Son', 'Dau']
+    const down = moveChildInUnion(raw, 'u_dad_mom', 'Son', 1);
+    expect(down.unions.find(u => u.id === 'u_dad_mom')!.children).toEqual(['Dau', 'Son']);
+    // moving the first child earlier is a no-op
+    const up = moveChildInUnion(raw, 'u_dad_mom', 'Son', -1);
+    expect(up.unions.find(u => u.id === 'u_dad_mom')!.children).toEqual(['Son', 'Dau']);
   });
 });
 

@@ -14,6 +14,7 @@ export default function DetailCard() {
   const setLens = useStore(s => s.setLens);
   const openForm = useStore(s => s.openForm);
   const requestDelete = useStore(s => s.requestDelete);
+  const reorderChild = useStore(s => s.reorderChild);
   const editUnlocked = useStore(s => s.editUnlocked);
   const lensFamilyId = useStore(s => s.lensFamilyId);
 
@@ -58,6 +59,11 @@ export default function DetailCard() {
               >
                 <span className="fam-dot" style={{ background: fam(a.familyId)?.color }} />
                 {fam(a.familyId)?.name ?? a.familyId}
+                {dataset.familyLabels.get(a.familyId)?.distinguisher && (
+                  <span className="chip-branch">
+                    {dataset.familyLabels.get(a.familyId)!.distinguisher}
+                  </span>
+                )}
                 <em className="tag">
                   {a.kind === 'birth' ? 'born' : a.kind === 'adopted-into' ? 'adopted in' : statusWord(a.status ?? 'married')}
                 </em>
@@ -96,12 +102,38 @@ export default function DetailCard() {
                 )}
               </h3>
               {partner && u.children.length + adopted.length > 0 && (
-                <div className="children-label">Children</div>
+                <div className="children-label">
+                  Children{u.children.length > 1 && editUnlocked ? ' · oldest first' : ''}
+                </div>
               )}
               {u.children.length + adopted.length === 0 && <span className="muted">no children</span>}
-              {u.children.map(c => (
-                <PersonLink key={c} id={c} />
-              ))}
+              {u.children.map((c, i) =>
+                editUnlocked && u.children.length > 1 ? (
+                  <span className="child-row" key={c}>
+                    <PersonLink id={c} />
+                    <span className="reorder">
+                      <button
+                        className="reorder-btn"
+                        disabled={i === 0}
+                        title="Move earlier (older)"
+                        onClick={() => reorderChild(uid, c, -1)}
+                      >
+                        ↑
+                      </button>
+                      <button
+                        className="reorder-btn"
+                        disabled={i === u.children.length - 1}
+                        title="Move later (younger)"
+                        onClick={() => reorderChild(uid, c, 1)}
+                      >
+                        ↓
+                      </button>
+                    </span>
+                  </span>
+                ) : (
+                  <PersonLink key={c} id={c} />
+                ),
+              )}
               {adopted.map(c => (
                 <PersonLink key={c} id={c} suffix="adopted" />
               ))}

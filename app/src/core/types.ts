@@ -1,6 +1,6 @@
-export type Gender = 'male' | 'female';
-export type UnionStatus = 'married' | 'divorced' | 'partners' | 'unknown';
-export type ParentTag = 'biological' | 'adoptive';
+export type Gender = "male" | "female";
+export type UnionStatus = "married" | "divorced" | "partners" | "unknown";
+export type ParentTag = "biological" | "adoptive";
 
 export interface PersonRecord {
   id: string;
@@ -32,6 +32,15 @@ export interface UnionRecord {
 export interface FamilyRecord {
   name: string;
   color: string;
+  /** Optional human distinguisher for lineages that share a name — e.g. a place
+   *  or branch ("Surat branch"). Ids are always unique; names may repeat. */
+  note?: string;
+}
+
+/** Display name for a family, with a distinguisher when the name isn't unique. */
+export interface FamilyLabel {
+  name: string;
+  distinguisher?: string;
 }
 
 export interface FamilyDataV2 {
@@ -43,7 +52,7 @@ export interface FamilyDataV2 {
 
 export interface FamilyAffiliation {
   familyId: string;
-  kind: 'birth' | 'adopted-into' | 'married-into';
+  kind: "birth" | "adopted-into" | "married-into";
   status?: UnionStatus;
   unionId?: string;
 }
@@ -73,13 +82,15 @@ export interface Dataset {
   childUnionOf: Map<string, { biological?: string; adoptive?: string }>;
   familiesOf: Map<string, FamilyAffiliation[]>;
   membersOfFamily: Map<string, Set<string>>;
+  /** Per-family display label; adds a distinguisher when a name is shared. */
+  familyLabels: Map<string, FamilyLabel>;
   generations: Map<string, number>;
   componentOf: Map<string, number>;
 }
 
 export interface PersonNode {
   id: string;
-  kind: 'person';
+  kind: "person";
   personId: string;
   label: string;
   color: string;
@@ -90,7 +101,7 @@ export interface PersonNode {
 
 export interface UnionNode {
   id: string;
-  kind: 'union';
+  kind: "union";
   unionId: string;
   gen: number;
   status: UnionStatus;
@@ -102,7 +113,7 @@ export type GraphNode = PersonNode | UnionNode;
 export interface GraphLink {
   source: string;
   target: string;
-  kind: 'partner' | 'child';
+  kind: "partner" | "child";
   tag?: ParentTag;
   status?: UnionStatus;
 }
@@ -121,7 +132,7 @@ export interface Vec3 {
 export interface KinStep {
   from: string;
   to: string;
-  dir: 'up' | 'down' | 'side';
+  dir: "up" | "down" | "side";
   tag?: ParentTag;
   status?: UnionStatus;
 }
@@ -134,5 +145,18 @@ export interface MergeReport {
   familiesAdded: string[];
 }
 
-export const personName = (p: { firstName: string; lastName: string }): string =>
-  [p.firstName, p.lastName].filter(Boolean).join(' ');
+export const personName = (p: {
+  firstName: string;
+  lastName: string;
+}): string => [p.firstName, p.lastName].filter(Boolean).join(" ");
+
+/** "Pandya" normally; "Pandya · of Kevalji" when the name is shared by another lineage. */
+export const formatFamilyLabel = (
+  label: FamilyLabel | undefined,
+  fallback = "",
+): string => {
+  if (!label) return fallback;
+  return label.distinguisher
+    ? `${label.name} · ${label.distinguisher}`
+    : label.name;
+};

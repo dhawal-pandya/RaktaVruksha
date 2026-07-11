@@ -24,13 +24,11 @@ const PATH = resolve(here, '../public/family-data.json');
 
 const data: FamilyDataV2 = JSON.parse(readFileSync(PATH, 'utf8'));
 
-const isPlaceholder = (familyId: string): boolean => /\d$/.test(familyId);
+// v1 placeholders end in a bare digit (familyShah2, familyPandyaU1). The readable-id
+// scheme's "_N" disambiguators (familyPandya_1) are legitimate lineages, not placeholders.
+const isPlaceholder = (familyId: string): boolean =>
+  /\d$/.test(familyId) && !/_\d+$/.test(familyId);
 const placeholders = Object.keys(data.families).filter(isPlaceholder);
-
-if (placeholders.length === 0) {
-  console.log('No placeholder families found — data already clean.');
-  process.exit(0);
-}
 
 const now = new Date().toISOString();
 const changes: string[] = [];
@@ -52,6 +50,25 @@ for (const fid of placeholders) {
     }
   }
   delete data.families[fid];
+}
+
+// Reconcile union.familyId with its children: if every biological child agrees on a
+// birth family that differs from the union's, trust the children (the user set each
+// child's family explicitly) and fix the union. This repairs son-in-law marriages
+// where the union kept the wrong family.
+const familyName = (fid: string | null) => (fid ? data.families[fid]?.name ?? fid : 'unknown');
+for (const u of data.unions) {
+  if (u.children.length === 0) continue;
+  const childFamilies = new Set(
+    u.children.map(cid => data.people.find(p => p.id === cid)?.birthFamilyId ?? null),
+  );
+  if (childFamilies.size !== 1) continue; // children disagree — leave it for a human
+  const target = [...childFamilies][0];
+  if (target !== u.familyId) {
+    changes.push(`union ${u.id}: familyId ${familyName(u.familyId)} → ${familyName(target)} (from children)`);
+    u.familyId = target;
+    u.updatedAt = now;
+  }
 }
 
 data.meta.exportedAt = now;

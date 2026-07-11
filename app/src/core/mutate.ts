@@ -22,10 +22,12 @@ export const addFamily = (
   raw: FamilyDataV2,
   name: string,
   color: string,
+  note?: string,
 ): { raw: FamilyDataV2; familyId: string } => {
   const familyId = newFamilyId(raw, name);
+  const record = note?.trim() ? { name, color, note: note.trim() } : { name, color };
   return {
-    raw: { ...raw, families: { ...raw.families, [familyId]: { name, color } } },
+    raw: { ...raw, families: { ...raw.families, [familyId]: record } },
     familyId,
   };
 };
@@ -34,7 +36,7 @@ export const addPerson = (
   raw: FamilyDataV2,
   fields: PersonFields,
 ): { raw: FamilyDataV2; personId: string } => {
-  const personId = newPersonId(raw);
+  const personId = newPersonId(raw, fields.firstName);
   const person: PersonRecord = { id: personId, ...fields, updatedAt: now() };
   return { raw: { ...raw, people: [...raw.people, person] }, personId };
 };
@@ -62,7 +64,7 @@ export const createUnion = (
   raw: FamilyDataV2,
   init: { partners: string[]; familyId: string | null; status: UnionStatus },
 ): { raw: FamilyDataV2; unionId: string } => {
-  const unionId = newUnionId(raw);
+  const unionId = newUnionId(raw, init.partners);
   const maxOrder = Math.max(
     0,
     ...raw.unions
@@ -106,6 +108,26 @@ export const addChildToUnion = (
       return { ...u, children: [...u.children, childId], updatedAt: now() };
     }
     return { ...u, adoptedChildren: [...(u.adoptedChildren ?? []), childId], updatedAt: now() };
+  }),
+});
+
+/** Move a biological child one slot earlier (-1) or later (+1) within its union's
+ *  children array — the array order is the birth order shown on the graph. */
+export const moveChildInUnion = (
+  raw: FamilyDataV2,
+  unionId: string,
+  childId: string,
+  dir: -1 | 1,
+): FamilyDataV2 => ({
+  ...raw,
+  unions: raw.unions.map(u => {
+    if (u.id !== unionId) return u;
+    const idx = u.children.indexOf(childId);
+    const j = idx + dir;
+    if (idx < 0 || j < 0 || j >= u.children.length) return u;
+    const children = [...u.children];
+    [children[idx], children[j]] = [children[j], children[idx]];
+    return { ...u, children, updatedAt: now() };
   }),
 });
 

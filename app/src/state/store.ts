@@ -22,6 +22,7 @@ import {
   growChild,
   growParent,
   growSpouse,
+  moveChildInUnion,
   addPerson,
   updatePerson,
   updateUnion,
@@ -75,7 +76,7 @@ export type FormMode = "standalone" | "child" | "spouse" | "parent" | "edit";
 
 export interface FormPayload {
   fields: PersonFields;
-  newFamily: { name: string; color: string } | null;
+  newFamily: { name: string; color: string; note?: string } | null;
   unionId?: string | null;
   adopted?: boolean;
   existingId?: string | null;
@@ -150,6 +151,7 @@ interface AppState {
   requestDelete: (id: string) => void;
   cancelDelete: () => void;
   confirmDeleteNow: () => void;
+  reorderChild: (unionId: string, childId: string, dir: -1 | 1) => void;
   lockEditing: () => void;
 
   importText: (text: string) => void;
@@ -462,13 +464,16 @@ export const useStore = create<AppState>((set, get) => {
       try {
         let raw = s.raw;
         let fields = payload.fields;
+        let createdFamilyId: string | null = null;
         if (payload.newFamily) {
           const r = addFamily(
             raw,
             payload.newFamily.name,
             payload.newFamily.color,
+            payload.newFamily.note,
           );
           raw = r.raw;
+          createdFamilyId = r.familyId;
           fields = { ...fields, birthFamilyId: r.familyId };
         }
         let newPersonId: string | null = null;
@@ -492,12 +497,21 @@ export const useStore = create<AppState>((set, get) => {
             break;
           }
           case "spouse": {
+            // "__spouse__" means the children take the spouse's own family — resolve
+            // it to the newly created family, or the existing spouse's birth family.
+            let unionFamilyId = payload.unionFamilyId ?? null;
+            if (unionFamilyId === "__spouse__") {
+              const existingSpouse = payload.existingId
+                ? s.dataset?.people.get(payload.existingId)?.birthFamilyId ?? null
+                : null;
+              unionFamilyId = createdFamilyId ?? fields.birthFamilyId ?? existingSpouse;
+            }
             const r = growSpouse(raw, {
               anchorId: anchor!,
               existingId: payload.existingId ?? null,
               spouse: fields,
               status: payload.status ?? "married",
-              familyId: payload.unionFamilyId ?? null,
+              familyId: unionFamilyId,
               childIds: payload.childIds ?? [],
             });
             raw = r.raw;
@@ -626,6 +640,13 @@ export const useStore = create<AppState>((set, get) => {
 
     requestDelete: (id) => set({ confirmDelete: id }),
     cancelDelete: () => set({ confirmDelete: null }),
+
+    reorderChild: (unionId, childId, dir) => {
+      const s = get();
+      if (!s.raw) return;
+      commit(moveChildInUnion(s.raw, unionId, childId, dir));
+    },
+
     confirmDeleteNow: () => {
       const s = get();
       if (!s.raw || !s.confirmDelete) return;

@@ -63,13 +63,21 @@ export const computeLayout2d = (graph: Graph): Map<string, { x: number; y: numbe
   const rel = buildRelations(graph);
   const minGen = Math.min(...persons.map(p => p.gen));
 
+  // Birth order: a child's index within its parent's children list (which the graph
+  // preserves from union.children). Used to lay siblings out left-to-right by birth.
+  const birthIndex = new Map<string, number>();
+  for (const kids of rel.children.values()) {
+    kids.forEach((c, i) => {
+      if (!birthIndex.has(c)) birthIndex.set(c, i);
+    });
+  }
+  const byBirth = (a: string, b: string) =>
+    (birthIndex.get(a) ?? 0) - (birthIndex.get(b) ?? 0) || a.localeCompare(b);
+
   const layerGens = [...new Set(persons.map(p => p.gen))].sort((a, b) => a - b);
   const order = new Map<number, string[]>();
   for (const g of layerGens) {
-    order.set(
-      g,
-      persons.filter(p => p.gen === g).map(p => p.id).sort(),
-    );
+    order.set(g, persons.filter(p => p.gen === g).map(p => p.id).sort(byBirth));
   }
 
   const indexIn = (arr: string[]) => new Map(arr.map((id, i) => [id, i]));
@@ -88,7 +96,8 @@ export const computeLayout2d = (graph: Graph): Map<string, { x: number; y: numbe
         const vals = ns.map(n => prevIdx.get(n)).filter((v): v is number => v !== undefined);
         bary.set(id, vals.length ? mean(vals) : selfIdx);
       });
-      arr.sort((a, b) => bary.get(a)! - bary.get(b)! || 0);
+      // Ties (same barycenter → same parents) keep birth order.
+      arr.sort((a, b) => bary.get(a)! - bary.get(b)! || byBirth(a, b));
     }
   }
 
