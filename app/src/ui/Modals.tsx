@@ -1,0 +1,132 @@
+import { useEffect } from 'react';
+import { useStore } from '../state/store';
+
+export function MergeReportModal() {
+  const report = useStore(s => s.mergeReport);
+  const close = useStore(s => s.closeMergeReport);
+  if (!report) return null;
+  const nothing =
+    report.peopleAdded.length + report.peopleUpdated.length + report.unionsAdded + report.unionsUpdated + report.familiesAdded.length === 0;
+  return (
+    <div className="modal-backdrop" onMouseDown={e => e.target === e.currentTarget && close()}>
+      <div className="modal panel">
+        <header className="detail-head">
+          <h2 className="detail-name">Merge report</h2>
+          <button className="btn btn-icon" onClick={close} aria-label="Close">×</button>
+        </header>
+        {nothing ? (
+          <p className="muted">Nothing new — your data already contains everything in that file.</p>
+        ) : (
+          <div className="detail-body">
+            {report.familiesAdded.length > 0 && (
+              <div className="detail-section">
+                <h3>{report.familiesAdded.length} families added</h3>
+                <p>{report.familiesAdded.join(', ')}</p>
+              </div>
+            )}
+            {report.peopleAdded.length > 0 && (
+              <div className="detail-section">
+                <h3>{report.peopleAdded.length} people added</h3>
+                <p>{report.peopleAdded.join(', ')}</p>
+              </div>
+            )}
+            {report.peopleUpdated.length > 0 && (
+              <div className="detail-section">
+                <h3>{report.peopleUpdated.length} people updated</h3>
+                <p>{report.peopleUpdated.join(', ')}</p>
+              </div>
+            )}
+            {(report.unionsAdded > 0 || report.unionsUpdated > 0) && (
+              <div className="detail-section">
+                <h3>Unions</h3>
+                <p>
+                  {report.unionsAdded} added, {report.unionsUpdated} updated
+                </p>
+              </div>
+            )}
+            <p className="muted">Nothing was deleted — merges only add and update.</p>
+          </div>
+        )}
+        <footer className="modal-actions">
+          <button className="btn btn-primary" onClick={close}>Done</button>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
+export function ImportErrorModal() {
+  const errors = useStore(s => s.importErrors);
+  const close = useStore(s => s.closeImportErrors);
+  if (!errors) return null;
+  return (
+    <div className="modal-backdrop" onMouseDown={e => e.target === e.currentTarget && close()}>
+      <div className="modal panel">
+        <header className="detail-head">
+          <h2 className="detail-name">Couldn't import that file</h2>
+          <button className="btn btn-icon" onClick={close} aria-label="Close">×</button>
+        </header>
+        <ul className="error-list">
+          {errors.slice(0, 8).map((e, i) => (
+            <li key={i}>{e}</li>
+          ))}
+        </ul>
+        <p className="muted">Your data was not changed.</p>
+        <footer className="modal-actions">
+          <button className="btn btn-primary" onClick={close}>OK</button>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
+export function ConfirmResetModal() {
+  const open = useStore(s => s.confirmReset);
+  const cancel = useStore(s => s.cancelReset);
+  const confirm = useStore(s => s.confirmResetNow);
+  if (!open) return null;
+  return (
+    <div className="modal-backdrop" onMouseDown={e => e.target === e.currentTarget && cancel()}>
+      <div className="modal panel">
+        <header className="detail-head">
+          <h2 className="detail-name">Discard draft?</h2>
+        </header>
+        <p>
+          This throws away every unsaved change and reloads the bundled data file. If you want to
+          keep your edits, Save (or Export) first.
+        </p>
+        <footer className="modal-actions">
+          <button className="btn btn-subtle" onClick={cancel}>Keep my draft</button>
+          <button className="btn btn-danger" onClick={() => void confirm()}>Discard draft</button>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
+export function Toast() {
+  const toast = useStore(s => s.toast);
+  const clear = useStore(s => s.clearToast);
+  useEffect(() => {
+    if (!toast) return;
+    const t = setTimeout(clear, 4200);
+    return () => clearTimeout(t);
+  }, [toast, clear]);
+  if (!toast) return null;
+  return <div className="toast panel">{toast}</div>;
+}
+
+export function Hint() {
+  const dismissed = useStore(s => s.hintDismissed);
+  const dismiss = useStore(s => s.dismissHint);
+  if (dismissed) return null;
+  return (
+    <div className="hint panel">
+      <span>
+        click a person to focus · double-click to isolate their web · scroll to zoom · esc to step
+        back
+      </span>
+      <button className="btn btn-icon" onClick={dismiss} aria-label="Dismiss hint">×</button>
+    </div>
+  );
+}

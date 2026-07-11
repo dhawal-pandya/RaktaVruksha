@@ -1,0 +1,40 @@
+:root {
+  /* canvas */
+  --bg: #0a0e1a;
+  --bg-raised: rgba(15, 21, 38, 0.78);
+  --bg-input: rgba(9, 13, 24, 0.85);
+
+  /* text */
+  --text: #dbe2f0;
+  --text-dim: #8a93a6;
+  --text-faint: #5b6478;
+
+  /* lines & accents */
+  --border: rgba(148, 163, 190, 0.14);
+  --border-strong: rgba(148, 163, 190, 0.32);
+  --accent: #c9a86a; /* marriage gold */
+  --accent-text: #0a0e1a;
+  --danger: #d06060;
+
+  /* shape */
+  --radius: 12px;
+  --radius-sm: 8px;
+  --blur: 14px;
+
+  /* type */
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fs-sm: 12px;
+  --fs-base: 13.5px;
+  --fs-lg: 16px;
+  --fs-xl: 19px;
+
+  /* spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+
+  /* touch */
+  --touch: 44px;
+}
