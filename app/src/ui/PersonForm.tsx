@@ -1,11 +1,13 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { Gender, UnionStatus } from '../core/types';
-import { personName } from '../core/types';
+import { formatFamilyLabel, personName } from '../core/types';
 import { displayFamilyOf } from '../core/dataset';
 import { useStore, type FormPayload } from '../state/store';
 
 const NEW_FAMILY = '__new__';
 const UNKNOWN = '';
+// +Spouse: the marriage's children take the spouse's family (e.g. a son-in-law's).
+const SAME_AS_SPOUSE = '__spouse__';
 
 const STATUS_OPTIONS: { value: UnionStatus; label: string }[] = [
   { value: 'married', label: 'married' },
@@ -29,11 +31,13 @@ export default function PersonForm() {
   const [familyChoice, setFamilyChoice] = useState<string>(UNKNOWN);
   const [newFamName, setNewFamName] = useState('');
   const [newFamColor, setNewFamColor] = useState('#e07b56');
+  const [newFamNote, setNewFamNote] = useState('');
   const [unionChoice, setUnionChoice] = useState<string>('__newunion__');
   const [adopted, setAdopted] = useState(false);
   const [existingQuery, setExistingQuery] = useState('');
   const [status, setStatus] = useState<UnionStatus>('married');
   const [unionFamily, setUnionFamily] = useState<string>(UNKNOWN);
+  const [unionFamilyTouched, setUnionFamilyTouched] = useState(false);
   const [unionStatuses, setUnionStatuses] = useState<Record<string, UnionStatus>>({});
   const [attachChildIds, setAttachChildIds] = useState<string[]>([]);
 
@@ -70,7 +74,10 @@ export default function PersonForm() {
     setExistingQuery('');
     setStatus('married');
     setUnionFamily(a ? displayFamilyOf(dataset, a.id) ?? UNKNOWN : UNKNOWN);
+    setUnionFamilyTouched(false);
     setAttachChildIds([]);
+    setNewFamName('');
+    setNewFamNote('');
   }, [form, dataset]);
 
   // For +Spouse: the anchor's children who currently have no second parent
@@ -94,6 +101,28 @@ export default function PersonForm() {
     const hit = peopleOptions.find(o => o.label === existingQuery);
     return hit?.id ?? null;
   }, [existingQuery, peopleOptions]);
+
+  // In a marriage, children take the FATHER's family. Default the union's family to
+  // the male partner's: the spouse's when adding a son-in-law (so his — often
+  // brand-new — family flows to the kids), else the anchor's. The user can override.
+  const spouseGender: Gender =
+    (existingId ? dataset?.people.get(existingId)?.gender : gender) ?? gender;
+  const anchorFamily = anchor && dataset ? displayFamilyOf(dataset, anchor.id) ?? UNKNOWN : UNKNOWN;
+  const defaultUnionFamily =
+    form?.mode === 'spouse' && spouseGender === 'male' ? SAME_AS_SPOUSE : anchorFamily;
+  useEffect(() => {
+    if (form?.mode === 'spouse' && !unionFamilyTouched) setUnionFamily(defaultUnionFamily);
+  }, [defaultUnionFamily, form, unionFamilyTouched]);
+
+  // Human name for the spouse's family, to label the "same as spouse" option.
+  const existingSpousePerson = existingId ? dataset?.people.get(existingId) : undefined;
+  const existingSpouseName = existingSpousePerson?.firstName ?? '';
+  const spouseFamilyName = (() => {
+    if (familyChoice === NEW_FAMILY) return newFamName.trim() || 'new family';
+    if (familyChoice !== UNKNOWN) return dataset?.raw.families[familyChoice]?.name ?? '';
+    const fam = existingSpousePerson?.birthFamilyId;
+    return fam ? dataset?.raw.families[fam]?.name ?? '' : '';
+  })();
 
   if (!form || !dataset) return null;
 
@@ -121,7 +150,11 @@ export default function PersonForm() {
       },
       newFamily:
         familyChoice === NEW_FAMILY && newFamName.trim()
-          ? { name: newFamName.trim(), color: newFamColor }
+          ? {
+              name: newFamName.trim(),
+              color: newFamColor,
+              ...(newFamNote.trim() ? { note: newFamNote.trim() } : {}),
+            }
           : null,
       unionId: unionChoice === '__newunion__' ? null : unionChoice,
       adopted,
@@ -155,7 +188,7 @@ export default function PersonForm() {
         <option value={UNKNOWN}>unknown lineage</option>
         {families.map(([id, f]) => (
           <option key={id} value={id}>
-            {f.name}
+            {formatFamilyLabel(dataset.familyLabels.get(id), f.name)}
           </option>
         ))}
         <option value={NEW_FAMILY}>➕ new family…</option>
@@ -165,6 +198,14 @@ export default function PersonForm() {
       )}
     </label>
   );
+
+  // A different family already uses this exact name → the new one gets its own id.
+  const duplicateName =
+    familyChoice === NEW_FAMILY &&
+    newFamName.trim() &&
+    Object.values(dataset.raw.families).some(
+      f => f.name.trim().toLowerCase() === newFamName.trim().toLowerCase(),
+    );
 
   return (
     <div className="modal-backdrop" onMouseDown={e => e.target === e.currentTarget && closeForm()}>
@@ -251,16 +292,32 @@ export default function PersonForm() {
             </div>
             {familySelect}
             {familyChoice === NEW_FAMILY && (
-              <div className="field-row">
+              <>
+                <div className="field-row">
+                  <label className="field">
+                    <span>New family name</span>
+                    <input value={newFamName} onChange={e => setNewFamName(e.target.value)} required />
+                  </label>
+                  <label className="field">
+                    <span>Color</span>
+                    <input type="color" value={newFamColor} onChange={e => setNewFamColor(e.target.value)} />
+                  </label>
+                </div>
                 <label className="field">
-                  <span>New family name</span>
-                  <input value={newFamName} onChange={e => setNewFamName(e.target.value)} required />
+                  <span>Branch / place {duplicateName ? '(recommended)' : '(optional)'}</span>
+                  <input
+                    value={newFamNote}
+                    onChange={e => setNewFamNote(e.target.value)}
+                    placeholder="e.g. Surat branch — distinguishes same-named lineages"
+                  />
                 </label>
-                <label className="field">
-                  <span>Color</span>
-                  <input type="color" value={newFamColor} onChange={e => setNewFamColor(e.target.value)} />
-                </label>
-              </div>
+                {duplicateName && (
+                  <p className="muted">
+                    Another lineage is already named "{newFamName.trim()}". This creates a
+                    separate family with its own id — add a branch/place so they're tellable apart.
+                  </p>
+                )}
+              </>
             )}
             <label className="field">
               <span>Notes</span>
@@ -283,17 +340,31 @@ export default function PersonForm() {
                 </select>
               </label>
               <label className="field">
-                <span>Children born into</span>
-                <select value={unionFamily} onChange={e => setUnionFamily(e.target.value)}>
+                <span>Children take the family</span>
+                <select
+                  value={unionFamily}
+                  onChange={e => {
+                    setUnionFamilyTouched(true);
+                    setUnionFamily(e.target.value);
+                  }}
+                >
+                  <option value={SAME_AS_SPOUSE}>
+                    {firstName.trim() || existingSpouseName || 'the spouse'}'s family
+                    {spouseFamilyName ? ` (${spouseFamilyName})` : ''}
+                  </option>
                   <option value={UNKNOWN}>unknown</option>
                   {families.map(([id, f]) => (
                     <option key={id} value={id}>
-                      {f.name}
+                      {formatFamilyLabel(dataset.familyLabels.get(id), f.name)}
                     </option>
                   ))}
                 </select>
               </label>
             </div>
+            <span className="muted">
+              Whose family the children are born into — usually the father's. For a
+              son-in-law, pick his family (create it as his birth family above).
+            </span>
             {soloChildren.length > 0 && (
               <div className="detail-section">
                 <h3>Also a parent of</h3>

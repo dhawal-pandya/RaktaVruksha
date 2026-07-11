@@ -23,6 +23,7 @@ npm test           # core-layer unit tests (vitest)
 npm run build      # typecheck + production build
 npm run migrate    # regenerate public/family-data.json from the legacy v1 file
 npm run clean      # collapse "unknown lineage" placeholder families to null
+npm run rename-ids # rewrite nanoid ids to readable ones (First_1, u_a_b, familyX_1)
 npm run stress     # generate a ~1,700-person synthetic dataset
                    #   → view at http://localhost:5173/?data=stress
 ```
@@ -97,10 +98,18 @@ the plain link you share, so the public site stays presentation-only.
 
 Once unlocked:
 
-- **On-graph editing** — from a focused person: **+ Spouse** (and you can tick their
-  existing single-parent children so the new spouse becomes the co-parent — no duplicate
-  marriage), **+ Child**, **+ Parent**, **Edit**, and **Delete** (removes the person and
-  cleans up every link; childless leftover unions are dropped).
+- **On-graph editing** — from a focused person: **+ Spouse** (tick their existing
+  single-parent children to make the new spouse the co-parent — no duplicate marriage;
+  and choose whose family the children take, so a **son-in-law's family** — even a
+  brand-new one created inline — flows to the kids), **+ Child**, **+ Parent**, **Edit**,
+  and **Delete** (removes the person and cleans up every link; childless leftover unions
+  are dropped). **Reorder children** by birth order with the ↑↓ arrows — the graph lays
+  siblings oldest-to-youngest.
+- **Ids stay readable** — new people are `Firstname` (then `Firstname_1` on collision),
+  unions `u_<partners>`, families `family<Name>` / `family<Name>_1`.
+- **Same-named lineages** — family ids are always unique, so two "Pandya" families
+  coexist; the UI disambiguates them by an optional branch/place note, else by their
+  eldest ancestor ("Pandya · Kevalji" vs "Pandya · Jayantilal").
 - Every edit autosaves to an **IndexedDB draft** (survives reloads; "Reset" discards it).
 - **On `npm run dev` (local), edits write straight through to
   `app/public/family-data.json`** — a debounced autosave after every change, plus

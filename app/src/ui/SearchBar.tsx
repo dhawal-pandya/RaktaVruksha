@@ -25,15 +25,16 @@ export default function SearchBar() {
     const out: Result[] = [];
     for (const [id, fam] of Object.entries(dataset.raw.families)) {
       if (fam.name.toLowerCase().includes(q)) {
+        const dist = dataset.familyLabels.get(id)?.distinguisher;
         out.push({
           kind: 'family',
           id,
-          label: fam.name,
+          label: dist ? `${fam.name} · ${dist}` : fam.name,
           sub: `family · ${dataset.membersOfFamily.get(id)?.size ?? 0} people`,
           color: fam.color,
         });
       }
-      if (out.length >= 3) break;
+      if (out.length >= 4) break;
     }
     for (const p of dataset.raw.people) {
       const name = personName(p).toLowerCase();

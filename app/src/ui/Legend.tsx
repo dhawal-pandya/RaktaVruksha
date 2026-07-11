@@ -13,6 +13,7 @@ export default function Legend() {
   const families = Object.entries(dataset.raw.families).sort((a, b) =>
     a[1].name.localeCompare(b[1].name),
   );
+  const label = (id: string) => dataset.familyLabels.get(id);
   // In 2D the legend picks the single family shown; in 3D it toggles the lens.
   const activeId = viewMode === '2d' ? family2d : lensFamilyId;
 
@@ -36,6 +37,9 @@ export default function Legend() {
           >
             <span className="fam-dot" style={{ background: fam.color }} />
             <span>{fam.name}</span>
+            {label(id)?.distinguisher && (
+              <span className="legend-branch">{label(id)!.distinguisher}</span>
+            )}
           </button>
         ))}
       </div>

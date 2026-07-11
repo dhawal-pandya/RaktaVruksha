@@ -285,6 +285,18 @@ textarea:focus {
   color: var(--accent);
   font-weight: 600;
 }
+.legend-branch {
+  margin-left: auto;
+  padding-left: var(--sp-2);
+  font-size: var(--fs-sm);
+  color: var(--text-faint);
+  font-style: italic;
+}
+.chip-branch {
+  font-size: var(--fs-sm);
+  color: var(--text-dim);
+  font-style: italic;
+}
 
 /* ---------- detail card / relation panel ---------- */
 .detail-card,
@@ -375,6 +387,31 @@ textarea:focus {
   color: var(--text-faint);
   font-weight: 600;
   margin: 4px 0 2px;
+}
+.child-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.reorder {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 0.7;
+  margin-right: 4px;
+}
+.reorder-btn {
+  color: var(--text-dim);
+  font-size: 10px;
+  padding: 0 3px;
+  border-radius: 3px;
+}
+.reorder-btn:hover:not(:disabled) {
+  color: var(--text);
+  background: rgba(148, 163, 190, 0.14);
+}
+.reorder-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
 }
 .btn-delete {
   color: var(--danger);

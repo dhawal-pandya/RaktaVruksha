@@ -88,3 +88,24 @@ describe('buildDataset derived relations', () => {
     expect(displayFamilyOf(ds, 'Hermit')).toBe(null);
   });
 });
+
+describe('family labels (same-name lineages)', () => {
+  it('leaves uniquely-named families without a distinguisher', () => {
+    const labels = buildDataset(fixture()).familyLabels;
+    expect(labels.get('famA')).toEqual({ name: 'A' });
+  });
+
+  it('distinguishes two families sharing a name — by note, else by eldest ancestor', () => {
+    const raw = fixture();
+    raw.families.famA.name = 'Pandya';
+    raw.families.famB.name = 'Pandya'; // now two "Pandya" lineages
+    raw.families.famB.note = 'Surat branch';
+    const labels = buildDataset(raw).familyLabels;
+    // famB has an explicit note
+    expect(labels.get('famB')).toEqual({ name: 'Pandya', distinguisher: 'Surat branch' });
+    // famA has none → eldest ancestor born into it (GpaA is gen 0 in famA)
+    expect(labels.get('famA')).toEqual({ name: 'Pandya', distinguisher: 'GpaA' });
+    // famC still unique
+    expect(labels.get('famC')).toEqual({ name: 'C' });
+  });
+});

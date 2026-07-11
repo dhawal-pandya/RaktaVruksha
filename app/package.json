@@ -10,6 +10,7 @@
     "test": "vitest run",
     "migrate": "tsx scripts/migrate-v1.ts",
     "clean": "tsx scripts/clean-data.ts",
+    "rename-ids": "tsx scripts/rename-ids.ts",
     "stress": "tsx scripts/generate-stress-data.ts",
     "deploy": "bash ../scripts/deploy-gh-pages.sh"
   },
