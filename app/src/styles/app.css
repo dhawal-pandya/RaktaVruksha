@@ -396,13 +396,10 @@ textarea:focus {
 .child-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: var(--sp-2);
 }
 .child-row .person-link {
-  flex: 1;
   margin: 0;
-  text-align: left;
 }
 .reorder {
   display: inline-flex;

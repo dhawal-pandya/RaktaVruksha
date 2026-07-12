@@ -31,18 +31,14 @@ import {
 } from "../core/mutate";
 import type { FamilyRecord } from "../core/types";
 
-// Secret that unlocks editing via ?edit=<key>. Public visitors (plain URL) get a
-// read-only, navigation-only app; unlock persists locally once used.
+// Secret that unlocks editing via ?edit=<key>. Edit tools are gated purely on
+// this URL param each load — never persisted — so the app defaults to a plain
+// viewing platform for anyone without the link.
 const EDIT_KEY = "durga";
 const computeEditUnlocked = (): boolean => {
   if (typeof window === "undefined") return false;
   try {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("edit") === EDIT_KEY) {
-      localStorage.setItem("rv-edit", "1");
-      return true;
-    }
-    return localStorage.getItem("rv-edit") === "1";
+    return new URLSearchParams(window.location.search).get("edit") === EDIT_KEY;
   } catch {
     return false;
   }
@@ -184,6 +180,18 @@ const cam = (req: CameraRequestInput): CameraRequest => ({
   seq: ++cameraSeq,
 });
 
+// The family currently on screen is mirrored into this URL param (via
+// replaceState, so it never grows browser history) so copying the address bar
+// shares the same family with whoever opens the link.
+const FAMILY_PARAM = "family";
+const syncFamilyParam = (familyId: string | null) => {
+  if (typeof window === "undefined") return;
+  const url = new URL(window.location.href);
+  if (familyId) url.searchParams.set(FAMILY_PARAM, familyId);
+  else url.searchParams.delete(FAMILY_PARAM);
+  window.history.replaceState(null, "", url);
+};
+
 const deriveAll = (raw: FamilyDataV2) => {
   const dataset = buildDataset(raw);
   const graph = buildGraph(dataset);
@@ -289,13 +297,23 @@ export const useStore = create<AppState>((set, get) => {
           raw = parsed.raw;
         }
         const derived = deriveAll(raw);
+        const requestedFamily = params.get(FAMILY_PARAM);
+        const sharedFamily =
+          requestedFamily && derived.dataset.raw.families[requestedFamily]
+            ? requestedFamily
+            : null;
+        const is3d = get().viewMode === "3d";
         set({
           ...derived,
           phase: "ready",
           isDraft,
           dirty: isDraft,
-          family2d: largestFamily(derived.dataset),
-          cameraRequest: cam({ kind: "fit" }),
+          family2d: sharedFamily ?? largestFamily(derived.dataset),
+          lensFamilyId: is3d ? sharedFamily : null,
+          cameraRequest:
+            sharedFamily && is3d
+              ? cam({ kind: "family", id: sharedFamily })
+              : cam({ kind: "fit" }),
           toast:
             DEV && get().editUnlocked
               ? "Local edit mode: changes autosave to family-data.json"
@@ -673,11 +691,6 @@ export const useStore = create<AppState>((set, get) => {
     },
 
     lockEditing: () => {
-      try {
-        localStorage.removeItem("rv-edit");
-      } catch {
-        /* ignore */
-      }
       set({ editUnlocked: false, form: null, confirmDelete: null });
     },
 
@@ -687,4 +700,16 @@ export const useStore = create<AppState>((set, get) => {
     },
     clearToast: () => set({ toast: null }),
   };
+});
+
+// Keep the URL's family param mirroring whatever family is on screen — in 2D
+// that's family2d, in 3D the lens (null lens means "everyone", so no param).
+useStore.subscribe((state, prev) => {
+  if (
+    state.family2d !== prev.family2d ||
+    state.lensFamilyId !== prev.lensFamilyId ||
+    state.viewMode !== prev.viewMode
+  ) {
+    syncFamilyParam(state.viewMode === "2d" ? state.family2d : state.lensFamilyId);
+  }
 });
