@@ -97,6 +97,7 @@ export interface PersonNode {
   gen: number;
   familyId: string | null;
   alive: boolean;
+  gender: Gender;
 }
 
 export interface UnionNode {

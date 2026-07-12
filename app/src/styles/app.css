@@ -572,6 +572,35 @@ input[type='color'] {
   height: 36px;
 }
 
+/* family editor */
+.family-editor {
+  gap: var(--sp-1);
+}
+.family-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.family-row input[type='color'] {
+  width: 38px;
+  height: 30px;
+  flex: none;
+}
+.fam-name-input {
+  width: 120px;
+  flex: none;
+}
+.fam-note-input {
+  flex: 1;
+  min-width: 0;
+}
+.fam-count {
+  width: 28px;
+  text-align: right;
+  font-size: var(--fs-sm);
+  flex: none;
+}
+
 /* ---------- boot ---------- */
 .boot-screen {
   height: 100%;

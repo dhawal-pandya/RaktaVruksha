@@ -56,7 +56,7 @@ export default function Scene2D() {
     if (!graph || !dataset || !activeFamily) return { nodes: [] as FG2Node[], links: [] as FG2Link[] };
     const view = familyView(dataset, activeFamily);
     const sub = subgraphForFamily(graph, view);
-    const pos = computeLayout2d(sub);
+    const pos = computeLayout2d(sub, view.external);
     const map = new Map<string, FG2Node>();
     const nodes: FG2Node[] = sub.nodes.map(n => {
       const p = pos.get(n.id) ?? { x: 0, y: 0 };

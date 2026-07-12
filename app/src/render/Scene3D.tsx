@@ -298,7 +298,9 @@ export default function Scene3D() {
     });
     const mesh = new THREE.Mesh(personGeometry, mat);
     const sprite = new SpriteText(node.label, 7, '#e6ebf5');
-    sprite.position.set(0, -14.5, 0); // below the sphere, never on it
+    // Split couple labels: men's names above the sphere, women's below, so a
+    // married pair sitting side by side never prints its names over each other.
+    sprite.position.set(0, node.gender === 'male' ? 14.5 : -14.5, 0);
     sprite.material.depthWrite = false;
     sprite.fontFace = 'Inter, system-ui, sans-serif';
     sprite.backgroundColor = 'rgba(10, 14, 26, 0.55)';

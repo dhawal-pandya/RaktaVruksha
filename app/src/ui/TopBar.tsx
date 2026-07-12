@@ -18,6 +18,7 @@ export default function TopBar() {
   const toggleViewMode = useStore(s => s.toggleViewMode);
   const editUnlocked = useStore(s => s.editUnlocked);
   const lockEditing = useStore(s => s.lockEditing);
+  const openFamilyEditor = useStore(s => s.openFamilyEditor);
 
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -61,6 +62,9 @@ export default function TopBar() {
           <>
             <button className="btn" onClick={() => openForm('standalone')} title="Add a standalone person">
               + Add
+            </button>
+            <button className="btn" onClick={openFamilyEditor} title="Edit family names, colors, branches">
+              Families
             </button>
             <button className="btn" onClick={() => fileRef.current?.click()} title="Merge a relative's file into yours">
               Import
