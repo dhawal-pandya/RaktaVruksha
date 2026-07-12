@@ -15,7 +15,7 @@ export function MergeReportModal() {
           <button className="btn btn-icon" onClick={close} aria-label="Close">×</button>
         </header>
         {nothing ? (
-          <p className="muted">Nothing new — your data already contains everything in that file.</p>
+          <p className="muted">Nothing new: your data already contains everything in that file.</p>
         ) : (
           <div className="detail-body">
             {report.familiesAdded.length > 0 && (
@@ -44,7 +44,7 @@ export function MergeReportModal() {
                 </p>
               </div>
             )}
-            <p className="muted">Nothing was deleted — merges only add and update.</p>
+            <p className="muted">Nothing was deleted: merges only add and update.</p>
           </div>
         )}
         <footer className="modal-actions">
@@ -127,7 +127,7 @@ export function ConfirmDeleteModal() {
               Their {childCount} child{childCount > 1 ? 'ren' : ''} stay, but lose {name} as a parent.
             </>
           )}{' '}
-          This can't be undone (but you haven't Saved yet — a reload restores the file).
+          This can't be undone (but you haven't Saved yet: a reload restores the file).
         </p>
         <footer className="modal-actions">
           <button className="btn btn-subtle" onClick={cancel}>Cancel</button>

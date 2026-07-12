@@ -1,23 +1,23 @@
-import type { Dataset, Graph } from './types';
-import { unionNodeId } from './graph';
-import { displayFamilyOf } from './dataset';
+import type { Dataset, Graph } from "./types";
+import { unionNodeId } from "./graph";
+import { displayFamilyOf } from "./dataset";
 
 export interface FamilyView {
   /** Node ids (persons + union nodes) to render for this family. */
   nodeIds: Set<string>;
-  /** Persons shown but not part of this family — spouses who married in/out elsewhere. */
+  /** Persons shown but not part of this family: spouses who married in/out elsewhere. */
   external: Set<string>;
 }
 
 /**
  * The subgraph to show when viewing a single family in 2D:
  *  - everyone born, married, or adopted into the family (its members);
- *  - the spouse of any member whose marriage points outside the family — so a
+ *  - the spouse of any member whose marriage points outside the family: so a
  *    daughter (or son) who married away still shows, with their partner as an
  *    external leaf you can click to jump to that family;
  *  - the union nodes joining any two visible people.
  * Children that belong to another family (an out-married couple's kids) are not
- * pulled in — they live in that other family's view.
+ * pulled in: they live in that other family's view.
  */
 export const familyView = (dataset: Dataset, familyId: string): FamilyView => {
   const members = dataset.membersOfFamily.get(familyId) ?? new Set<string>();
@@ -39,7 +39,7 @@ export const familyView = (dataset: Dataset, familyId: string): FamilyView => {
 
   const nodeIds = new Set<string>(persons);
   for (const u of dataset.raw.unions) {
-    if (u.partners.length === 2 && u.partners.every(p => persons.has(p))) {
+    if (u.partners.length === 2 && u.partners.every((p) => persons.has(p))) {
       nodeIds.add(unionNodeId(u.id));
     }
   }
@@ -48,16 +48,19 @@ export const familyView = (dataset: Dataset, familyId: string): FamilyView => {
 
 /** Restrict a full graph to the nodes/links a family view shows. */
 export const subgraphForFamily = (graph: Graph, view: FamilyView): Graph => {
-  const nodes = graph.nodes.filter(n => view.nodeIds.has(n.id));
+  const nodes = graph.nodes.filter((n) => view.nodeIds.has(n.id));
   const links = graph.links.filter(
-    l => view.nodeIds.has(l.source) && view.nodeIds.has(l.target),
+    (l) => view.nodeIds.has(l.source) && view.nodeIds.has(l.target),
   );
   return { nodes, links };
 };
 
 /** The family whose tree a person sits in for the 2D view: their lineage if
  *  known, else the family they married into. */
-export const primaryFamilyOf = (dataset: Dataset, personId: string): string | null => {
+export const primaryFamilyOf = (
+  dataset: Dataset,
+  personId: string,
+): string | null => {
   const lineage = displayFamilyOf(dataset, personId);
   if (lineage) return lineage;
   return dataset.familiesOf.get(personId)?.[0]?.familyId ?? null;

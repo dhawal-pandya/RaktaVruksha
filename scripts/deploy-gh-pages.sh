@@ -4,7 +4,7 @@
 # force-pushed, so gh-pages holds only the artifact, never source history.
 #
 # The published site is the PUBLIC, read-only family tree. To edit it, open the
-# deployed URL with ?edit=<key> appended (see README) — that unlock never ships
+# deployed URL with ?edit=<key> appended (see README): that unlock never ships
 # in the link you share.
 set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"

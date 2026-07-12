@@ -5,8 +5,8 @@ import type {
   PersonRecord,
   UnionRecord,
   UnionStatus,
-} from './types';
-import { newFamilyId, newPersonId, newUnionId } from './ids';
+} from "./types";
+import { newFamilyId, newPersonId, newUnionId } from "./ids";
 
 /** Edit a family's name / color / note (an empty note is dropped). */
 export const updateFamily = (
@@ -17,7 +17,7 @@ export const updateFamily = (
   const cur = raw.families[familyId];
   if (!cur) return raw;
   const next: FamilyRecord = { ...cur, ...patch };
-  if ('note' in patch && !patch.note?.trim()) delete next.note;
+  if ("note" in patch && !patch.note?.trim()) delete next.note;
   return { ...raw, families: { ...raw.families, [familyId]: next } };
 };
 
@@ -39,7 +39,9 @@ export const addFamily = (
   note?: string,
 ): { raw: FamilyDataV2; familyId: string } => {
   const familyId = newFamilyId(raw, name);
-  const record = note?.trim() ? { name, color, note: note.trim() } : { name, color };
+  const record = note?.trim()
+    ? { name, color, note: note.trim() }
+    : { name, color };
   return {
     raw: { ...raw, families: { ...raw.families, [familyId]: record } },
     familyId,
@@ -61,7 +63,7 @@ export const updatePerson = (
   patch: Partial<PersonFields>,
 ): FamilyDataV2 => ({
   ...raw,
-  people: raw.people.map(p =>
+  people: raw.people.map((p) =>
     p.id === personId ? { ...p, ...patch, updatedAt: now() } : p,
   ),
 });
@@ -70,8 +72,8 @@ export const findUnionByPartners = (
   raw: FamilyDataV2,
   partnerIds: string[],
 ): UnionRecord | undefined => {
-  const key = [...partnerIds].sort().join('|');
-  return raw.unions.find(u => [...u.partners].sort().join('|') === key);
+  const key = [...partnerIds].sort().join("|");
+  return raw.unions.find((u) => [...u.partners].sort().join("|") === key);
 };
 
 export const createUnion = (
@@ -82,8 +84,8 @@ export const createUnion = (
   const maxOrder = Math.max(
     0,
     ...raw.unions
-      .filter(u => u.partners.some(p => init.partners.includes(p)))
-      .map(u => u.order ?? 0),
+      .filter((u) => u.partners.some((p) => init.partners.includes(p)))
+      .map((u) => u.order ?? 0),
   );
   const union: UnionRecord = {
     id: unionId,
@@ -101,10 +103,10 @@ export const createUnion = (
 export const updateUnion = (
   raw: FamilyDataV2,
   unionId: string,
-  patch: Partial<Omit<UnionRecord, 'id'>>,
+  patch: Partial<Omit<UnionRecord, "id">>,
 ): FamilyDataV2 => ({
   ...raw,
-  unions: raw.unions.map(u =>
+  unions: raw.unions.map((u) =>
     u.id === unionId ? { ...u, ...patch, updatedAt: now() } : u,
   ),
 });
@@ -113,20 +115,24 @@ export const addChildToUnion = (
   raw: FamilyDataV2,
   unionId: string,
   childId: string,
-  tag: 'biological' | 'adoptive',
+  tag: "biological" | "adoptive",
 ): FamilyDataV2 => ({
   ...raw,
-  unions: raw.unions.map(u => {
+  unions: raw.unions.map((u) => {
     if (u.id !== unionId) return u;
-    if (tag === 'biological') {
+    if (tag === "biological") {
       return { ...u, children: [...u.children, childId], updatedAt: now() };
     }
-    return { ...u, adoptedChildren: [...(u.adoptedChildren ?? []), childId], updatedAt: now() };
+    return {
+      ...u,
+      adoptedChildren: [...(u.adoptedChildren ?? []), childId],
+      updatedAt: now(),
+    };
   }),
 });
 
 /** Move a biological child one slot earlier (-1) or later (+1) within its union's
- *  children array — the array order is the birth order shown on the graph. */
+ *  children array: the array order is the birth order shown on the graph. */
 export const moveChildInUnion = (
   raw: FamilyDataV2,
   unionId: string,
@@ -134,7 +140,7 @@ export const moveChildInUnion = (
   dir: -1 | 1,
 ): FamilyDataV2 => ({
   ...raw,
-  unions: raw.unions.map(u => {
+  unions: raw.unions.map((u) => {
     if (u.id !== unionId) return u;
     const idx = u.children.indexOf(childId);
     const j = idx + dir;
@@ -151,8 +157,10 @@ export const addPartnerToUnion = (
   partnerId: string,
 ): FamilyDataV2 => ({
   ...raw,
-  unions: raw.unions.map(u =>
-    u.id === unionId ? { ...u, partners: [...u.partners, partnerId], updatedAt: now() } : u,
+  unions: raw.unions.map((u) =>
+    u.id === unionId
+      ? { ...u, partners: [...u.partners, partnerId], updatedAt: now() }
+      : u,
   ),
 });
 
@@ -175,21 +183,28 @@ export const growChild = (
   let next = raw;
   let unionId = input.unionId;
   if (!unionId) {
-    const parent = next.people.find(p => p.id === input.parentId);
+    const parent = next.people.find((p) => p.id === input.parentId);
     const created = createUnion(next, {
       partners: [input.parentId],
-      familyId: input.adopted ? parent?.birthFamilyId ?? null : input.child.birthFamilyId,
-      status: 'unknown',
+      familyId: input.adopted
+        ? (parent?.birthFamilyId ?? null)
+        : input.child.birthFamilyId,
+      status: "unknown",
     });
     next = created.raw;
     unionId = created.unionId;
   }
-  const union = next.unions.find(u => u.id === unionId)!;
+  const union = next.unions.find((u) => u.id === unionId)!;
   const fields = input.adopted
     ? input.child
     : { ...input.child, birthFamilyId: union.familyId };
   const added = addPerson(next, fields);
-  next = addChildToUnion(added.raw, unionId, added.personId, input.adopted ? 'adoptive' : 'biological');
+  next = addChildToUnion(
+    added.raw,
+    unionId,
+    added.personId,
+    input.adopted ? "adoptive" : "biological",
+  );
   return { raw: next, personId: added.personId };
 };
 
@@ -200,16 +215,22 @@ export const moveChildToUnion = (
   childId: string,
   unionId: string,
 ): FamilyDataV2 => {
-  const from = raw.unions.find(u => u.children.includes(childId));
+  const from = raw.unions.find((u) => u.children.includes(childId));
   if (from && from.id === unionId) return raw;
-  let unions = raw.unions.map(u => {
-    if (from && u.id === from.id) return { ...u, children: u.children.filter(c => c !== childId), updatedAt: now() };
-    if (u.id === unionId) return { ...u, children: [...u.children, childId], updatedAt: now() };
+  let unions = raw.unions.map((u) => {
+    if (from && u.id === from.id)
+      return {
+        ...u,
+        children: u.children.filter((c) => c !== childId),
+        updatedAt: now(),
+      };
+    if (u.id === unionId)
+      return { ...u, children: [...u.children, childId], updatedAt: now() };
     return u;
   });
   // Drop a childless single-parent union that the child just vacated.
   unions = unions.filter(
-    u =>
+    (u) =>
       !(
         from &&
         u.id === from.id &&
@@ -248,17 +269,20 @@ export const growSpouse = (
   const existing = findUnionByPartners(next, [input.anchorId, spouseId]);
   let unionId: string;
   if (existing) {
-    next = updateUnion(next, existing.id, { status: input.status, familyId: input.familyId });
+    next = updateUnion(next, existing.id, {
+      status: input.status,
+      familyId: input.familyId,
+    });
     unionId = existing.id;
   } else {
     // If the anchor already has a single-parent union holding (some of) the chosen
     // children, complete it in place instead of making a duplicate marriage.
     const solo = childIds.length
       ? next.unions.find(
-          u =>
+          (u) =>
             u.partners.length === 1 &&
             u.partners[0] === input.anchorId &&
-            childIds.some(c => u.children.includes(c)),
+            childIds.some((c) => u.children.includes(c)),
         )
       : undefined;
     if (solo) {
@@ -279,27 +303,39 @@ export const growSpouse = (
     }
   }
 
-  for (const childId of childIds) next = moveChildToUnion(next, childId, unionId);
+  for (const childId of childIds)
+    next = moveChildToUnion(next, childId, unionId);
   return { raw: next, personId: spouseId, unionId };
 };
 
 /** Remove a person entirely: pull them out of every union (as partner, child, or
  *  adopted child) and drop any union left with no partners, or a lone partner and
  *  no children. Never leaves dangling references. */
-export const deletePerson = (raw: FamilyDataV2, personId: string): FamilyDataV2 => {
+export const deletePerson = (
+  raw: FamilyDataV2,
+  personId: string,
+): FamilyDataV2 => {
   const unions = raw.unions
-    .map(u => ({
+    .map((u) => ({
       ...u,
-      partners: u.partners.filter(p => p !== personId),
-      children: u.children.filter(c => c !== personId),
-      adoptedChildren: (u.adoptedChildren ?? []).filter(c => c !== personId),
+      partners: u.partners.filter((p) => p !== personId),
+      children: u.children.filter((c) => c !== personId),
+      adoptedChildren: (u.adoptedChildren ?? []).filter((c) => c !== personId),
     }))
     .filter(
-      u =>
+      (u) =>
         u.partners.length > 0 &&
-        !(u.partners.length < 2 && u.children.length === 0 && (u.adoptedChildren?.length ?? 0) === 0),
+        !(
+          u.partners.length < 2 &&
+          u.children.length === 0 &&
+          (u.adoptedChildren?.length ?? 0) === 0
+        ),
     );
-  return { ...raw, people: raw.people.filter(p => p.id !== personId), unions };
+  return {
+    ...raw,
+    people: raw.people.filter((p) => p.id !== personId),
+    unions,
+  };
 };
 
 export interface GrowParentInput {
@@ -321,30 +357,35 @@ export const growParent = (
     next = added.raw;
     parentId = added.personId;
   }
-  const tag = input.adoptive ? 'adoptive' : 'biological';
-  const child = next.people.find(p => p.id === input.childId)!;
+  const tag = input.adoptive ? "adoptive" : "biological";
+  const child = next.people.find((p) => p.id === input.childId)!;
 
   // Attach to the child's existing parent union when it has room for a second partner.
-  const holding = next.unions.find(u =>
-    (tag === 'biological' ? u.children : u.adoptedChildren ?? []).includes(input.childId),
+  const holding = next.unions.find((u) =>
+    (tag === "biological" ? u.children : (u.adoptedChildren ?? [])).includes(
+      input.childId,
+    ),
   );
   if (holding) {
     if (holding.partners.length >= 2) {
-      throw new Error(
-        `${child.firstName} already has two ${tag} parents`,
-      );
+      throw new Error(`${child.firstName} already has two ${tag} parents`);
     }
     if (holding.partners.includes(parentId)) {
-      throw new Error('that person is already a parent here');
+      throw new Error("that person is already a parent here");
     }
-    return { raw: addPartnerToUnion(next, holding.id, parentId), personId: parentId };
+    return {
+      raw: addPartnerToUnion(next, holding.id, parentId),
+      personId: parentId,
+    };
   }
 
-  const parentRec = next.people.find(p => p.id === parentId);
+  const parentRec = next.people.find((p) => p.id === parentId);
   const created = createUnion(next, {
     partners: [parentId],
-    familyId: input.adoptive ? parentRec?.birthFamilyId ?? null : child.birthFamilyId,
-    status: 'unknown',
+    familyId: input.adoptive
+      ? (parentRec?.birthFamilyId ?? null)
+      : child.birthFamilyId,
+    status: "unknown",
   });
   next = addChildToUnion(created.raw, created.unionId, input.childId, tag);
   return { raw: next, personId: parentId };

@@ -32,7 +32,7 @@ export interface UnionRecord {
 export interface FamilyRecord {
   name: string;
   color: string;
-  /** Optional human distinguisher for lineages that share a name — e.g. a place
+  /** Optional human distinguisher for lineages that share a name: e.g. a place
    *  or branch ("Surat branch"). Ids are always unique; names may repeat. */
   note?: string;
 }
@@ -68,7 +68,7 @@ export interface SpouseRef {
   status: UnionStatus;
 }
 
-/** Fully indexed dataset — everything the app derives from the raw file, built in one pass. */
+/** Fully indexed dataset: everything the app derives from the raw file, built in one pass. */
 export interface Dataset {
   raw: FamilyDataV2;
   people: Map<string, PersonRecord>;

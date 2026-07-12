@@ -137,7 +137,7 @@ export const buildDataset = (raw: FamilyDataV2): Dataset => {
  * A display label per family. Family ids are always unique but names may repeat
  * (two distinct "Pandya" lineages). When a name is shared, we add a distinguisher:
  * the family's own `note` if set, otherwise "of <eldest ancestor>" derived from the
- * oldest member born into it — so same-named families are always tellable apart.
+ * oldest member born into it: so same-named families are always tellable apart.
  */
 const computeFamilyLabels = (
   raw: FamilyDataV2,

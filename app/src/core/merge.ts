@@ -1,5 +1,5 @@
-import type { FamilyDataV2, MergeReport } from './types';
-import { personName } from './types';
+import type { FamilyDataV2, MergeReport } from "./types";
+import { personName } from "./types";
 
 /**
  * Additive merge of an incoming file into the local dataset.
@@ -24,7 +24,7 @@ export const mergeData = (
       families[id] = fam;
       report.familiesAdded.push(fam.name);
     }
-    // Known family: keep local name/color — the owner's palette wins.
+    // Known family: keep local name/color: the owner's palette wins.
   }
 
   const people = [...local.people];

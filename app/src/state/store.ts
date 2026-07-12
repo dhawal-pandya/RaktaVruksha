@@ -192,7 +192,7 @@ const deriveAll = (raw: FamilyDataV2) => {
 };
 
 // On the local dev server, edits can be written straight to public/family-data.json
-// via the dev-only /__save-data endpoint (see vite.config.ts) — no export needed.
+// via the dev-only /__save-data endpoint (see vite.config.ts): no export needed.
 // In production this route doesn't exist, so callers fall back to download/export.
 const DEV = import.meta.env.DEV;
 const postDataFile = async (text: string): Promise<boolean> => {
@@ -298,7 +298,7 @@ export const useStore = create<AppState>((set, get) => {
           cameraRequest: cam({ kind: "fit" }),
           toast:
             DEV && get().editUnlocked
-              ? "Local edit mode — changes autosave to family-data.json"
+              ? "Local edit mode: changes autosave to family-data.json"
               : null,
         });
       } catch (e) {
@@ -365,7 +365,7 @@ export const useStore = create<AppState>((set, get) => {
       const s = get();
       // In 2D (one family at a time), clicking anyone navigates to their birth
       // family (their lineage). Someone shown as a married-in/out spouse in the
-      // current family takes you to the family they were born into — and the
+      // current family takes you to the family they were born into: and the
       // person they married is in turn shown there, so you hop across families.
       if (s.viewMode === "2d" && s.dataset) {
         const fam = primaryFamilyOf(s.dataset, id);
@@ -504,14 +504,16 @@ export const useStore = create<AppState>((set, get) => {
             break;
           }
           case "spouse": {
-            // "__spouse__" means the children take the spouse's own family — resolve
+            // "__spouse__" means the children take the spouse's own family: resolve
             // it to the newly created family, or the existing spouse's birth family.
             let unionFamilyId = payload.unionFamilyId ?? null;
             if (unionFamilyId === "__spouse__") {
               const existingSpouse = payload.existingId
-                ? s.dataset?.people.get(payload.existingId)?.birthFamilyId ?? null
+                ? (s.dataset?.people.get(payload.existingId)?.birthFamilyId ??
+                  null)
                 : null;
-              unionFamilyId = createdFamilyId ?? fields.birthFamilyId ?? existingSpouse;
+              unionFamilyId =
+                createdFamilyId ?? fields.birthFamilyId ?? existingSpouse;
             }
             const r = growSpouse(raw, {
               anchorId: anchor!,
@@ -606,7 +608,7 @@ export const useStore = create<AppState>((set, get) => {
         downloadFile("family-data.json", text);
         set({
           dirty: false,
-          toast: "Downloaded — drop it into app/public/ to make it the default",
+          toast: "Downloaded: drop it into app/public/ to make it the default",
         });
         return;
       }
@@ -618,7 +620,7 @@ export const useStore = create<AppState>((set, get) => {
         set({ dirty: false, toast: `Saved to ${handle.name}` });
       } else {
         downloadFile("family-data.json", text);
-        set({ dirty: false, toast: "File write failed — downloaded instead" });
+        set({ dirty: false, toast: "File write failed: downloaded instead" });
       }
     },
 

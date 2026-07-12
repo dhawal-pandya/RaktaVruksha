@@ -62,7 +62,7 @@ const linkBaseColor = (l: FGLink): string =>
     : LINK_COLORS[l.tag ?? 'biological'];
 
 // Supported by 3d-force-graph at runtime but absent from the react wrapper's prop
-// types — divorced marriages dash, adoptive child links dot.
+// types: divorced marriages dash, adoptive child links dot.
 const linkDashProp: Record<string, unknown> = {
   linkLineDash: (l: FGLink) =>
     l.kind === 'partner' && l.status === 'divorced'
@@ -136,7 +136,7 @@ export default function Scene3D() {
     }
   }, [data, labelDistance]);
 
-  // Batched material update — opacity and glow only, never geometry.
+  // Batched material update: opacity and glow only, never geometry.
   useEffect(() => {
     if (!visuals) return;
     for (const node of data.nodes) {
@@ -151,7 +151,7 @@ export default function Scene3D() {
   }, [visuals, data, updateLabelVisibility]);
 
   // Control model: the generational (vertical) axis is fixed. Left-drag pans the
-  // view "normally"; Ctrl/Cmd-drag (or right-drag) spins the graph — and because
+  // view "normally"; Ctrl/Cmd-drag (or right-drag) spins the graph: and because
   // the polar angle is locked, that spin is azimuth-only, a twirl around vertical.
   // Touch: one finger pans, two fingers pinch-zoom + twirl. Scroll zooms.
   useEffect(() => {
@@ -213,7 +213,7 @@ export default function Scene3D() {
 
   // Fly the camera to frame a set of points: look at their centroid from the
   // current direction. (The library's zoomToFit keeps the sight line, which
-  // strands tall graphs low in the frame — this centers them properly.)
+  // strands tall graphs low in the frame: this centers them properly.)
   const flyToPoints = useCallback((points: Vec3[], ms = 900) => {
     const fg = fgRef.current;
     if (!fg || points.length === 0) return;
@@ -232,7 +232,7 @@ export default function Scene3D() {
     fg.cameraPosition(framedCameraPos(fg.camera().position, c, dist), c, ms);
   }, []);
 
-  // Camera choreography — consume requests from the store.
+  // Camera choreography: consume requests from the store.
   useEffect(() => {
     const fg = fgRef.current;
     if (!fg || !cameraRequest || !layout || !dataset) return;

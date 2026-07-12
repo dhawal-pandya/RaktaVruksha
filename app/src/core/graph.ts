@@ -1,14 +1,14 @@
-import type { Dataset, Graph, GraphLink, GraphNode } from './types';
-import { personName } from './types';
-import { displayFamilyOf } from './dataset';
-import { personColor } from './colors';
+import type { Dataset, Graph, GraphLink, GraphNode } from "./types";
+import { personName } from "./types";
+import { displayFamilyOf } from "./dataset";
+import { personColor } from "./colors";
 
 export const unionNodeId = (unionId: string): string => `un:${unionId}`;
 
 /**
  * Dataset → renderable graph. Person nodes for every person; a union node for every
  * 2-partner union (the marriage bridge); 1-partner unions collapse to direct
- * parent→child links. Pure structure — no positions, no three.js.
+ * parent→child links. Pure structure: no positions, no three.js.
  */
 export const buildGraph = (ds: Dataset): Graph => {
   const nodes: GraphNode[] = [];
@@ -16,10 +16,10 @@ export const buildGraph = (ds: Dataset): Graph => {
 
   for (const p of ds.raw.people) {
     const famId = displayFamilyOf(ds, p.id);
-    const famColor = famId ? ds.raw.families[famId]?.color ?? null : null;
+    const famColor = famId ? (ds.raw.families[famId]?.color ?? null) : null;
     nodes.push({
       id: p.id,
-      kind: 'person',
+      kind: "person",
       personId: p.id,
       label: personName(p),
       color: personColor(famColor, p.alive),
@@ -31,36 +31,65 @@ export const buildGraph = (ds: Dataset): Graph => {
   }
 
   for (const u of ds.raw.unions) {
-    const partners = u.partners.filter(id => ds.people.has(id));
-    const bioKids = u.children.filter(id => ds.people.has(id));
-    const adoptedKids = (u.adoptedChildren ?? []).filter(id => ds.people.has(id));
+    const partners = u.partners.filter((id) => ds.people.has(id));
+    const bioKids = u.children.filter((id) => ds.people.has(id));
+    const adoptedKids = (u.adoptedChildren ?? []).filter((id) =>
+      ds.people.has(id),
+    );
 
     if (partners.length === 2) {
-      const gen = Math.max(...partners.map(id => ds.generations.get(id) ?? 0));
+      const gen = Math.max(
+        ...partners.map((id) => ds.generations.get(id) ?? 0),
+      );
       const unId = unionNodeId(u.id);
       nodes.push({
         id: unId,
-        kind: 'union',
+        kind: "union",
         unionId: u.id,
         gen,
         status: u.status,
         familyId: u.familyId ?? displayFamilyOf(ds, partners[0]),
       });
       for (const pid of partners) {
-        links.push({ source: pid, target: unId, kind: 'partner', status: u.status });
+        links.push({
+          source: pid,
+          target: unId,
+          kind: "partner",
+          status: u.status,
+        });
       }
       for (const kid of bioKids) {
-        links.push({ source: unId, target: kid, kind: 'child', tag: 'biological' });
+        links.push({
+          source: unId,
+          target: kid,
+          kind: "child",
+          tag: "biological",
+        });
       }
       for (const kid of adoptedKids) {
-        links.push({ source: unId, target: kid, kind: 'child', tag: 'adoptive' });
+        links.push({
+          source: unId,
+          target: kid,
+          kind: "child",
+          tag: "adoptive",
+        });
       }
     } else if (partners.length === 1) {
       for (const kid of bioKids) {
-        links.push({ source: partners[0], target: kid, kind: 'child', tag: 'biological' });
+        links.push({
+          source: partners[0],
+          target: kid,
+          kind: "child",
+          tag: "biological",
+        });
       }
       for (const kid of adoptedKids) {
-        links.push({ source: partners[0], target: kid, kind: 'child', tag: 'adoptive' });
+        links.push({
+          source: partners[0],
+          target: kid,
+          kind: "child",
+          tag: "adoptive",
+        });
       }
     }
   }

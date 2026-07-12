@@ -91,11 +91,11 @@ export default function PersonForm() {
       .flatMap(u => u.children);
   }, [dataset, form]);
 
-  // Existing-person picker: matches "Name — id" datalist entries.
+  // Existing-person picker: matches "Name: id" datalist entries.
   const peopleOptions = useMemo(() => {
     if (!dataset) return [];
     return dataset.raw.people
-      .map(p => ({ id: p.id, label: `${personName(p)} — ${p.id}` }))
+      .map(p => ({ id: p.id, label: `${personName(p)}: ${p.id}` }))
       .sort((a, b) => a.label.localeCompare(b.label));
   }, [dataset]);
   const existingId = useMemo(() => {
@@ -104,8 +104,8 @@ export default function PersonForm() {
   }, [existingQuery, peopleOptions]);
 
   // In a marriage, children take the FATHER's family. Default the union's family to
-  // the male partner's: the spouse's when adding a son-in-law (so his — often
-  // brand-new — family flows to the kids), else the anchor's. The user can override.
+  // the male partner's: the spouse's when adding a son-in-law (so his: often
+  // brand-new: family flows to the kids), else the anchor's. The user can override.
   const spouseGender: Gender =
     (existingId ? dataset?.people.get(existingId)?.gender : gender) ?? gender;
   const anchorFamily = anchor && dataset ? displayFamilyOf(dataset, anchor.id) ?? UNKNOWN : UNKNOWN;
@@ -320,13 +320,13 @@ export default function PersonForm() {
                   <input
                     value={newFamNote}
                     onChange={e => setNewFamNote(e.target.value)}
-                    placeholder="e.g. Surat branch — distinguishes same-named lineages"
+                    placeholder="e.g. Surat branch: distinguishes same-named lineages"
                   />
                 </label>
                 {duplicateName && (
                   <p className="muted">
                     Another lineage is already named "{newFamName.trim()}". This creates a
-                    separate family with its own id — add a branch/place so they're tellable apart.
+                    separate family with its own id: add a branch/place so they're tellable apart.
                   </p>
                 )}
               </>
@@ -374,7 +374,7 @@ export default function PersonForm() {
               </label>
             </div>
             <span className="muted">
-              Whose family the children are born into — usually the father's. For a
+              Whose family the children are born into: usually the father's. For a
               son-in-law, pick his family (create it as his birth family above).
             </span>
             {soloChildren.length > 0 && (

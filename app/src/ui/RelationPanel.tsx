@@ -36,7 +36,7 @@ export default function RelationPanel() {
 
       {relation.noRelation && (
         <p className="relation-result muted">
-          No known relation — these two live in disconnected parts of the tree.
+          No known relation: these two live in disconnected parts of the tree.
         </p>
       )}
 
@@ -47,7 +47,7 @@ export default function RelationPanel() {
         </p>
       )}
       {!relation.name && relation.steps && relation.steps.length > 0 && (
-        <p className="relation-result muted">No simple name for this one — here's the path:</p>
+        <p className="relation-result muted">No simple name for this one: here's the path:</p>
       )}
 
       {relation.chain && relation.chain.length > 1 && (

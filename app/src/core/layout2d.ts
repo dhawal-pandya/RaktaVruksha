@@ -1,4 +1,4 @@
-import type { Graph } from './types';
+import type { Graph } from "./types";
 
 export const GEN_GAP_2D = 130;
 const SLOT = 48; // horizontal spacing unit between nodes in a generation
@@ -20,7 +20,7 @@ interface OwnedUnion {
 /**
  * Deterministic tidy-tree layout for one family's subgraph (Reingold–Tilford style).
  * Each subtree is allotted an exclusive horizontal band, so sibling branches never
- * interleave — a parent's children always sit together beneath them. The tree grows
+ * interleave: a parent's children always sit together beneath them. The tree grows
  * as wide as it needs to; Y is the generation. Same graph in → same positions out.
  *
  * `externalIds` are people shown only because they married a member (their own line
@@ -31,12 +31,12 @@ export const computeLayout2d = (
   graph: Graph,
   externalIds: Set<string> = new Set(),
 ): Map<string, { x: number; y: number }> => {
-  const persons = graph.nodes.filter(n => n.kind === 'person');
+  const persons = graph.nodes.filter((n) => n.kind === "person");
   const out = new Map<string, { x: number; y: number }>();
   if (persons.length === 0) return out;
 
-  const genOf = new Map(persons.map(p => [p.id, p.gen]));
-  const minGen = Math.min(...persons.map(p => p.gen));
+  const genOf = new Map(persons.map((p) => [p.id, p.gen]));
+  const minGen = Math.min(...persons.map((p) => p.gen));
   const isPerson = (id: string) => genOf.has(id);
 
   // --- parse the subgraph into descent relations ---------------------------
@@ -46,15 +46,17 @@ export const computeLayout2d = (
   const unionGen = new Map<string, number>();
   const parentsInView = new Map<string, string[]>();
 
-  for (const n of graph.nodes) if (n.kind === 'union') unionGen.set(n.id, n.gen);
+  for (const n of graph.nodes)
+    if (n.kind === "union") unionGen.set(n.id, n.gen);
   for (const l of graph.links) {
-    if (l.kind === 'partner') mapPush(unionPartners, l.target, l.source);
+    if (l.kind === "partner") mapPush(unionPartners, l.target, l.source);
   }
   for (const l of graph.links) {
-    if (l.kind !== 'child') continue;
+    if (l.kind !== "child") continue;
     if (unionPartners.has(l.source)) {
       mapPush(unionChildren, l.source, l.target);
-      for (const par of unionPartners.get(l.source)!) mapPush(parentsInView, l.target, par);
+      for (const par of unionPartners.get(l.source)!)
+        mapPush(parentsInView, l.target, par);
     } else {
       mapPush(soloChildren, l.source, l.target);
       mapPush(parentsInView, l.target, l.source);
@@ -68,8 +70,10 @@ export const computeLayout2d = (
     const ps = unionPartners.get(uid)!.filter(isPerson);
     if (ps.length === 1) return { owner: ps[0], spouse: null };
     const [a, b] = ps;
-    const score = (p: string) => (externalIds.has(p) ? 0 : 2) + (hasParent(p) ? 1 : 0);
-    const owner = score(a) > score(b) ? a : score(b) > score(a) ? b : a < b ? a : b;
+    const score = (p: string) =>
+      (externalIds.has(p) ? 0 : 2) + (hasParent(p) ? 1 : 0);
+    const owner =
+      score(a) > score(b) ? a : score(b) > score(a) ? b : a < b ? a : b;
     return { owner, spouse: owner === a ? b : a };
   };
 
@@ -86,14 +90,21 @@ export const computeLayout2d = (
   }
   for (const [person, kids] of soloChildren) {
     if (isPerson(person)) {
-      mapPush2(owned, person, { unionId: null, spouseId: null, children: kids.filter(isPerson) });
+      mapPush2(owned, person, {
+        unionId: null,
+        spouseId: null,
+        children: kids.filter(isPerson),
+      });
     }
   }
   // Stable order of a person's unions (remarriage etc.).
-  for (const list of owned.values()) list.sort((a, b) => (a.unionId ?? '').localeCompare(b.unionId ?? ''));
+  for (const list of owned.values())
+    list.sort((a, b) => (a.unionId ?? "").localeCompare(b.unionId ?? ""));
 
-  const coupleSlots = (id: string) => 1 + (owned.get(id) ?? []).filter(o => o.spouseId).length;
-  const kidsOf = (id: string) => (owned.get(id) ?? []).flatMap(o => o.children);
+  const coupleSlots = (id: string) =>
+    1 + (owned.get(id) ?? []).filter((o) => o.spouseId).length;
+  const kidsOf = (id: string) =>
+    (owned.get(id) ?? []).flatMap((o) => o.children);
 
   // --- first walk: measure each subtree's width in slots -------------------
   const width = new Map<string, number>();
@@ -166,10 +177,12 @@ export const computeLayout2d = (
     for (const o of list) {
       if (!o.unionId) continue;
       if (o.children.length) {
-        const cx = o.children.map(c => anchor.get(c) ?? 0);
+        const cx = o.children.map((c) => anchor.get(c) ?? 0);
         unionSlot.set(o.unionId, (Math.min(...cx) + Math.max(...cx)) / 2);
       } else {
-        const sp = o.spouseId ? xSlot.get(o.spouseId) ?? xSlot.get(id)! : xSlot.get(id)!;
+        const sp = o.spouseId
+          ? (xSlot.get(o.spouseId) ?? xSlot.get(id)!)
+          : xSlot.get(id)!;
         unionSlot.set(o.unionId, (xSlot.get(id)! + sp) / 2);
       }
     }
@@ -177,9 +190,9 @@ export const computeLayout2d = (
 
   // Roots: members with no parents in view that aren't just someone's spouse.
   const roots = persons
-    .map(p => p.id)
-    .filter(id => !hasParent(id) && !spouseSet.has(id))
-    .sort((a, b) => (genOf.get(a)! - genOf.get(b)!) || a.localeCompare(b));
+    .map((p) => p.id)
+    .filter((id) => !hasParent(id) && !spouseSet.has(id))
+    .sort((a, b) => genOf.get(a)! - genOf.get(b)! || a.localeCompare(b));
 
   let cursor = 0;
   for (const r of roots) {
@@ -200,11 +213,17 @@ export const computeLayout2d = (
   const xs = [...xSlot.values()];
   const shift = (Math.min(...xs) + Math.max(...xs)) / 2;
   for (const p of persons) {
-    out.set(p.id, { x: (xSlot.get(p.id)! - shift) * SLOT, y: (p.gen - minGen) * GEN_GAP_2D });
+    out.set(p.id, {
+      x: (xSlot.get(p.id)! - shift) * SLOT,
+      y: (p.gen - minGen) * GEN_GAP_2D,
+    });
   }
   for (const [uid, slot] of unionSlot) {
     const gen = unionGen.get(uid) ?? minGen;
-    out.set(uid, { x: (slot - shift) * SLOT, y: (gen - minGen) * GEN_GAP_2D + UNION_DROP });
+    out.set(uid, {
+      x: (slot - shift) * SLOT,
+      y: (gen - minGen) * GEN_GAP_2D + UNION_DROP,
+    });
   }
   return out;
 };

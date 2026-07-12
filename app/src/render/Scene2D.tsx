@@ -51,7 +51,7 @@ export default function Scene2D() {
   );
 
   // Build the single-family subgraph and its deterministic tree layout. Positions
-  // are fixed (fx/fy) — no live force sim — so the tree is stable and overlap-free.
+  // are fixed (fx/fy): no live force sim: so the tree is stable and overlap-free.
   const data = useMemo(() => {
     if (!graph || !dataset || !activeFamily) return { nodes: [] as FG2Node[], links: [] as FG2Link[] };
     const view = familyView(dataset, activeFamily);
@@ -225,7 +225,7 @@ export default function Scene2D() {
     [],
   );
 
-  // Camera choreography — consumes the shared request stream.
+  // Camera choreography: consumes the shared request stream.
   useEffect(() => {
     const fg = fgRef.current;
     if (!fg || !cameraRequest) return;

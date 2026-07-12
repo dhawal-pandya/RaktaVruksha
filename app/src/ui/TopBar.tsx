@@ -57,7 +57,7 @@ export default function TopBar() {
           Relation
         </button>
 
-        {/* Editing tools — only shown once unlocked with the edit key. */}
+        {/* Editing tools: only shown once unlocked with the edit key. */}
         {editUnlocked && (
           <>
             <button className="btn" onClick={() => openForm('standalone')} title="Add a standalone person">

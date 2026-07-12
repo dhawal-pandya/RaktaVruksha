@@ -7,17 +7,20 @@ export const mixHex = (a: string, b: string, t: number): string => {
     const vb = (pb >> shift) & 0xff;
     return Math.round(va + (vb - va) * t);
   };
-  const to2 = (v: number) => v.toString(16).padStart(2, '0');
+  const to2 = (v: number) => v.toString(16).padStart(2, "0");
   return `#${to2(ch(16))}${to2(ch(8))}${to2(ch(0))}`;
 };
 
-export const UNKNOWN_FAMILY_COLOR = '#8a93a6';
-export const BACKGROUND_COLOR = '#0a0e1a';
+export const UNKNOWN_FAMILY_COLOR = "#8a93a6";
+export const BACKGROUND_COLOR = "#0a0e1a";
 
 /** Node tint for a person: family color, desaturated toward gray when deceased. */
-export const personColor = (familyColor: string | null, alive: boolean): string => {
+export const personColor = (
+  familyColor: string | null,
+  alive: boolean,
+): string => {
   const base = familyColor ?? UNKNOWN_FAMILY_COLOR;
-  return alive ? base : mixHex(base, '#69707f', 0.55);
+  return alive ? base : mixHex(base, "#69707f", 0.55);
 };
 
 /** Dim a color toward the canvas background (used for de-emphasized links). */
@@ -34,7 +37,7 @@ const hexToHue = (hex: string): number | null => {
   const max = Math.max(r, g, b);
   const min = Math.min(r, g, b);
   const d = max - min;
-  if (d === 0) return null; // gray — no hue
+  if (d === 0) return null; // gray: no hue
   let h: number;
   if (max === r) h = ((g - b) / d) % 6;
   else if (max === g) h = (b - r) / d + 2;
@@ -48,15 +51,25 @@ const hslToHex = (h: number, s: number, l: number): string => {
   const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
   const m = l - c / 2;
   const [r, g, b] = (
-    h < 60 ? [c, x, 0] : h < 120 ? [x, c, 0] : h < 180 ? [0, c, x] : h < 240 ? [0, x, c] : h < 300 ? [x, 0, c] : [c, 0, x]
-  ).map(v => Math.round((v + m) * 255));
-  return `#${[r, g, b].map(v => v.toString(16).padStart(2, '0')).join('')}`;
+    h < 60
+      ? [c, x, 0]
+      : h < 120
+        ? [x, c, 0]
+        : h < 180
+          ? [0, c, x]
+          : h < 240
+            ? [0, x, c]
+            : h < 300
+              ? [x, 0, c]
+              : [c, 0, x]
+  ).map((v) => Math.round((v + m) * 255));
+  return `#${[r, g, b].map((v) => v.toString(16).padStart(2, "0")).join("")}`;
 };
 
 /**
  * A vivid family color whose hue sits as far as possible from the ones already in
  * use, so a new (or same-named) family is visually distinct without hand-picking.
- * Deterministic tie-breaks aren't needed — a little randomness is fine here.
+ * Deterministic tie-breaks aren't needed: a little randomness is fine here.
  */
 export const randomFamilyColor = (existing: string[]): string => {
   const used = existing.map(hexToHue).filter((h): h is number => h !== null);
@@ -64,7 +77,11 @@ export const randomFamilyColor = (existing: string[]): string => {
   let bestGap = -1;
   for (let i = 0; i < 24; i++) {
     const h = Math.random() * 360;
-    const gap = used.length ? Math.min(...used.map(u => Math.min(Math.abs(h - u), 360 - Math.abs(h - u)))) : 360;
+    const gap = used.length
+      ? Math.min(
+          ...used.map((u) => Math.min(Math.abs(h - u), 360 - Math.abs(h - u))),
+        )
+      : 360;
     if (gap > bestGap) {
       bestGap = gap;
       best = h;
