@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import type { Gender, UnionStatus } from '../core/types';
 import { formatFamilyLabel, personName } from '../core/types';
 import { displayFamilyOf } from '../core/dataset';
+import { randomFamilyColor } from '../core/colors';
 import { useStore, type FormPayload } from '../state/store';
 
 const NEW_FAMILY = '__new__';
@@ -184,7 +185,18 @@ export default function PersonForm() {
   const familySelect = (
     <label className="field">
       <span>Birth family</span>
-      <select value={familyChoice} onChange={e => setFamilyChoice(e.target.value)} disabled={childFamilyLocked}>
+      <select
+        value={familyChoice}
+        onChange={e => {
+          const v = e.target.value;
+          setFamilyChoice(v);
+          // Seed a distinct color so a new family doesn't clash with the others.
+          if (v === NEW_FAMILY) {
+            setNewFamColor(randomFamilyColor(Object.values(dataset.raw.families).map(f => f.color)));
+          }
+        }}
+        disabled={childFamilyLocked}
+      >
         <option value={UNKNOWN}>unknown lineage</option>
         {families.map(([id, f]) => (
           <option key={id} value={id}>

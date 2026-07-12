@@ -1,11 +1,25 @@
 import type {
   FamilyDataV2,
+  FamilyRecord,
   Gender,
   PersonRecord,
   UnionRecord,
   UnionStatus,
 } from './types';
 import { newFamilyId, newPersonId, newUnionId } from './ids';
+
+/** Edit a family's name / color / note (an empty note is dropped). */
+export const updateFamily = (
+  raw: FamilyDataV2,
+  familyId: string,
+  patch: Partial<FamilyRecord>,
+): FamilyDataV2 => {
+  const cur = raw.families[familyId];
+  if (!cur) return raw;
+  const next: FamilyRecord = { ...cur, ...patch };
+  if ('note' in patch && !patch.note?.trim()) delete next.note;
+  return { ...raw, families: { ...raw.families, [familyId]: next } };
+};
 
 const now = () => new Date().toISOString();
 

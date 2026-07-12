@@ -6,6 +6,7 @@ import Legend from './ui/Legend';
 import DetailCard from './ui/DetailCard';
 import RelationPanel from './ui/RelationPanel';
 import PersonForm from './ui/PersonForm';
+import FamilyEditor from './ui/FamilyEditor';
 import {
   ConfirmDeleteModal,
   ConfirmResetModal,
@@ -66,6 +67,7 @@ export default function App() {
       <Hint />
       <Toast />
       <PersonForm />
+      <FamilyEditor />
       <MergeReportModal />
       <ImportErrorModal />
       <ConfirmResetModal />

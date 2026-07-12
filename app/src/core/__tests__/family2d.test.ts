@@ -81,4 +81,10 @@ describe('computeLayout2d', () => {
     const xs = gen2.map(n => pos.get(n.id)!.x).sort((a, b) => a - b);
     for (let i = 1; i < xs.length; i++) expect(xs[i] - xs[i - 1]).toBeGreaterThan(1);
   });
+
+  it('lays a union\'s children left-to-right in birth order (eldest left)', () => {
+    // u_dad_mom children are ['Son', 'Dau'] — Son should sit left of Dau.
+    const pos = computeLayout2d(sub);
+    expect(pos.get('Son')!.x).toBeLessThan(pos.get('Dau')!.x);
+  });
 });

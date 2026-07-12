@@ -24,10 +24,12 @@ import {
   growSpouse,
   moveChildInUnion,
   addPerson,
+  updateFamily,
   updatePerson,
   updateUnion,
   type PersonFields,
 } from "../core/mutate";
+import type { FamilyRecord } from "../core/types";
 
 // Secret that unlocks editing via ?edit=<key>. Public visitors (plain URL) get a
 // read-only, navigation-only app; unlock persists locally once used.
@@ -128,6 +130,7 @@ interface AppState {
   importErrors: string[] | null;
   confirmReset: boolean;
   confirmDelete: string | null;
+  familyEditorOpen: boolean;
   hintDismissed: boolean;
   toast: string | null;
 
@@ -152,6 +155,9 @@ interface AppState {
   cancelDelete: () => void;
   confirmDeleteNow: () => void;
   reorderChild: (unionId: string, childId: string, dir: -1 | 1) => void;
+  openFamilyEditor: () => void;
+  closeFamilyEditor: () => void;
+  updateFamilyRecord: (familyId: string, patch: Partial<FamilyRecord>) => void;
   lockEditing: () => void;
 
   importText: (text: string) => void;
@@ -241,6 +247,7 @@ export const useStore = create<AppState>((set, get) => {
     canFileSave: typeof window !== "undefined" && supportsFileSave(),
     editUnlocked: computeEditUnlocked(),
     confirmDelete: null,
+    familyEditorOpen: false,
     form: null,
     formError: null,
     mergeReport: null,
@@ -645,6 +652,14 @@ export const useStore = create<AppState>((set, get) => {
       const s = get();
       if (!s.raw) return;
       commit(moveChildInUnion(s.raw, unionId, childId, dir));
+    },
+
+    openFamilyEditor: () => set({ familyEditorOpen: true }),
+    closeFamilyEditor: () => set({ familyEditorOpen: false }),
+    updateFamilyRecord: (familyId, patch) => {
+      const s = get();
+      if (!s.raw) return;
+      commit(updateFamily(s.raw, familyId, patch));
     },
 
     confirmDeleteNow: () => {

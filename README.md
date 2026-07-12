@@ -21,8 +21,7 @@ Other scripts (from `app/`):
 ```bash
 npm test           # core-layer unit tests (vitest)
 npm run build      # typecheck + production build
-npm run migrate    # regenerate public/family-data.json from the legacy v1 file
-npm run clean      # collapse "unknown lineage" placeholder families to null
+npm run clean      # collapse "unknown lineage" placeholders to null; reconcile union families
 npm run rename-ids # rewrite nanoid ids to readable ones (First_1, u_a_b, familyX_1)
 npm run stress     # generate a ~1,700-person synthetic dataset
                    #   → view at http://localhost:5173/?data=stress
@@ -151,8 +150,9 @@ never reshuffles under you.
 
 ## Repo layout
 
-- `app/` — the application (v2).
-- `raktavruksha-frontend/` — **legacy v1** (React + D3 SVG). Kept only until v2 is
-  verified by its owner; it has uncommitted local changes, so it was not deleted
-  automatically. Delete it once you're satisfied: `rm -rf raktavruksha-frontend`.
+- `app/` — the application (v2). The only code that runs.
 - `MASTER_PROMPT.md` — the full v2 specification this rebuild was executed from.
+
+The legacy v1 (`raktavruksha-frontend/`, React + D3 SVG) and the unused Go/Neo4j
+backend were removed once v2 was verified; their data was migrated into
+`app/public/family-data.json`.

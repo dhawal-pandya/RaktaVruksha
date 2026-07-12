@@ -26,6 +26,7 @@ export const buildGraph = (ds: Dataset): Graph => {
       gen: ds.generations.get(p.id) ?? 0,
       familyId: famId,
       alive: p.alive,
+      gender: p.gender,
     });
   }
 
