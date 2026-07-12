@@ -43,7 +43,10 @@ export default function RelationPanel() {
       {relation.name && relation.aId && relation.bId && (
         <p className="relation-result">
           <strong>{name(relation.bId)}</strong> is <strong>{name(relation.aId)}</strong>'s{' '}
-          <strong className="relation-name">{relation.name}</strong>
+          <strong className="relation-name">{relation.local ?? relation.name}</strong>
+          {relation.local && (
+            <span className="relation-en muted"> · {relation.name}</span>
+          )}
         </p>
       )}
       {!relation.name && relation.steps && relation.steps.length > 0 && (

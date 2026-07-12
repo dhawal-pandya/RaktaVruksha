@@ -20,7 +20,7 @@ const UNION_Y_OFFSET = -LAYER_GAP * 0.4;
 // snap drags cross-family spouses toward each other while a strong pull yanks them
 // toward opposite family centers, stranding couples in the gaps. So those are left
 // at their original, well-behaved values; charge is the knob to tune.
-const CHARGE_STRENGTH = -300; // repulsion between orbs — more than before (was -70)
+const CHARGE_STRENGTH = -200; // repulsion between orbs — more than before (was -70)
 const CHARGE_DISTANCE_MAX = 360; // how far that repulsion reaches (was 320)
 const FAMILY_PULL = 0.05; // pull toward family center (left as-is: raising it flings couples)
 const FAMILY_RING = { scale: 26, base: 60 }; // spacing between family cluster centers

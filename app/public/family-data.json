@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 2,
-    "exportedAt": "2026-07-12T20:06:49.000Z"
+    "exportedAt": "2026-07-12T20:26:55.378Z"
   },
   "families": {
     "familyPandya": {
@@ -163,6 +163,14 @@
     "familyVyas_3": {
       "name": "Vyas",
       "color": "#5ab3d8"
+    },
+    "familyPandya_10": {
+      "name": "Pandya",
+      "color": "#d8b65a"
+    },
+    "familyRami": {
+      "name": "Rami",
+      "color": "#c25ad8"
     }
   },
   "people": [
@@ -2946,6 +2954,114 @@
       "alive": true,
       "birthFamilyId": "familyPandya",
       "updatedAt": "2026-07-12T20:05:36.965Z"
+    },
+    {
+      "id": "Laljibhai_1",
+      "firstName": "Laljibhai",
+      "lastName": "Vyas",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyVyas",
+      "updatedAt": "2026-07-12T20:18:25.742Z"
+    },
+    {
+      "id": "Sumanlal",
+      "firstName": "Sumanlal",
+      "lastName": "Vyas",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyVyas",
+      "updatedAt": "2026-07-12T20:18:52.756Z"
+    },
+    {
+      "id": "Indiraben",
+      "firstName": "Indiraben",
+      "lastName": "Vyas",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-12T20:19:04.423Z"
+    },
+    {
+      "id": "Geetaben_1",
+      "firstName": "Geetaben",
+      "lastName": "Pandya",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyVyas",
+      "updatedAt": "2026-07-12T20:19:23.473Z"
+    },
+    {
+      "id": "Kalpanaben",
+      "firstName": "Kalpanaben",
+      "lastName": "Vyas",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyVyas",
+      "updatedAt": "2026-07-12T20:19:55.139Z"
+    },
+    {
+      "id": "Nehaben",
+      "firstName": "Nehaben",
+      "lastName": "Pandya",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyPandya_6",
+      "updatedAt": "2026-07-12T20:20:27.640Z"
+    },
+    {
+      "id": "Avniben",
+      "firstName": "Avniben",
+      "lastName": "Pandya",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyPandya_6",
+      "updatedAt": "2026-07-12T20:20:42.389Z"
+    },
+    {
+      "id": "Boski",
+      "firstName": "Boski",
+      "lastName": "Pandya",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyPandya_6",
+      "updatedAt": "2026-07-12T20:20:51.722Z"
+    },
+    {
+      "id": "Hiteshkumar",
+      "firstName": "Hiteshkumar",
+      "lastName": "Pandya",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPandya_10",
+      "updatedAt": "2026-07-12T20:21:18.253Z"
+    },
+    {
+      "id": "Bharatkumar",
+      "firstName": "Bharatkumar",
+      "lastName": "Rami",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRami",
+      "updatedAt": "2026-07-12T20:21:49.371Z"
+    },
+    {
+      "id": "Maitri",
+      "firstName": "Maitri",
+      "lastName": "Rami",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyRami",
+      "updatedAt": "2026-07-12T20:22:04.989Z"
+    },
+    {
+      "id": "Gopal",
+      "firstName": "Gopal",
+      "lastName": "Vyas",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyVyas",
+      "updatedAt": "2026-07-12T20:26:54.222Z"
     }
   ],
   "unions": [
@@ -3254,12 +3370,14 @@
         "Savitaben"
       ],
       "children": [
-        "Hansaben"
+        "Hansaben",
+        "Sumanlal",
+        "Gopal"
       ],
       "adoptedChildren": [],
       "familyId": "familyVyas",
       "status": "married",
-      "updatedAt": "2026-07-11T10:02:09.122Z"
+      "updatedAt": "2026-07-12T20:26:54.222Z"
     },
     {
       "id": "u_snehal",
@@ -4696,6 +4814,81 @@
       "status": "married",
       "order": 1,
       "updatedAt": "2026-07-12T20:05:22.164Z"
+    },
+    {
+      "id": "u_laljibhai1",
+      "partners": [
+        "Laljibhai_1"
+      ],
+      "children": [
+        "Natwarlal"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyVyas",
+      "status": "unknown",
+      "order": 1,
+      "updatedAt": "2026-07-12T20:18:25.743Z"
+    },
+    {
+      "id": "u_sumanlal_indiraben",
+      "partners": [
+        "Sumanlal",
+        "Indiraben"
+      ],
+      "children": [
+        "Geetaben_1",
+        "Kalpanaben"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyVyas",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-12T20:19:55.139Z"
+    },
+    {
+      "id": "u_geetaben1_rajendrakumar",
+      "partners": [
+        "Geetaben_1",
+        "Rajendrakumar"
+      ],
+      "children": [
+        "Nehaben",
+        "Avniben",
+        "Boski"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPandya_6",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-12T20:20:51.722Z"
+    },
+    {
+      "id": "u_nehaben_hiteshkumar",
+      "partners": [
+        "Nehaben",
+        "Hiteshkumar"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyPandya_10",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-12T20:21:18.253Z"
+    },
+    {
+      "id": "u_boski_bharatkumar",
+      "partners": [
+        "Boski",
+        "Bharatkumar"
+      ],
+      "children": [
+        "Maitri"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyRami",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-12T20:22:04.989Z"
     }
   ]
 }

@@ -67,6 +67,8 @@ export interface RelationState {
   bId: string | null;
   steps: KinStep[] | null;
   name: string | null;
+  /** Sanskrit (Gujarati) term for the relation, when we have one. */
+  local: string | null;
   chain: { personId: string; label: string }[] | null;
   noRelation: boolean;
 }
@@ -92,6 +94,7 @@ const emptyRelation: RelationState = {
   bId: null,
   steps: null,
   name: null,
+  local: null,
   chain: null,
   noRelation: false,
 };
@@ -348,18 +351,20 @@ export const useStore = create<AppState>((set, get) => {
                 bId: id,
                 steps: null,
                 name: null,
+                local: null,
                 chain: null,
                 noRelation: true,
               },
             });
           } else {
-            const { name, chain } = nameRelation(s.dataset, r.aId, steps);
+            const { name, local, chain } = nameRelation(s.dataset, r.aId, steps);
             set({
               relation: {
                 ...r,
                 bId: id,
                 steps,
                 name,
+                local,
                 chain,
                 noRelation: false,
               },

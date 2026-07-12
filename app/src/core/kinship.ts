@@ -69,15 +69,116 @@ const siblingKind = (ds: Dataset, a: string, b: string, steps: KinStep[]): strin
   return 'half-';
 };
 
+// --- Sanskrit (Gujarati) kinship terms -------------------------------------
+// Transliterated to Latin script. `localRelation` returns "sanskrit (gujarati)"
+// for the relations we have confidently verified (see research notes), and null
+// otherwise so the caller falls back to the plain-English name. The Sanskrit/
+// Gujarati systems encode distinctions English lacks — paternal vs maternal
+// (dada vs nana, kaka vs mama), son's-side vs daughter's-side grandchildren
+// (pautra vs dauhitra), brother's vs sister's nephews (bhatrijo vs bhanej) —
+// and the engine already has the data to make them.
+const sg = (sanskrit: string, gujarati: string): string => `${sanskrit} (${gujarati})`;
+const isMale = (ds: Dataset, id: string): boolean =>
+  ds.people.get(id)?.gender !== 'female';
+
+const localRelation = (ds: Dataset, a: string, steps: KinStep[]): string | null => {
+  if (steps.length === 0) return null;
+  const dirs = steps.map(s => s.dir.charAt(0)).join('');
+  const b = steps[steps.length - 1].to;
+  const bMale = isMale(ds, b);
+  const anyAdoptive = steps.some(s => s.tag === 'adoptive');
+  const preS = (n: number) => 'pra-'.repeat(n); // Sanskrit "great-" prefix
+  const preG = (n: number) => 'par-'.repeat(n); // Gujarati "great-" prefix
+  // The first hop's parent decides the paternal/maternal side.
+  const paternal = isMale(ds, steps[0].to);
+
+  // Ancestors: father → grandparent → great-grandparent, keeping the side at every depth.
+  if (/^u+$/.test(dirs) && dirs.length >= 2) {
+    const g = dirs.length - 2;
+    const san = (paternal ? (bMale ? 'pitamaha' : 'pitamahi') : bMale ? 'matamaha' : 'matamahi');
+    const guj = (paternal ? (bMale ? 'dada' : 'dadi') : bMale ? 'nana' : 'nani');
+    return (anyAdoptive ? 'adoptive ' : '') + sg(preS(g) + san, preG(g) + guj);
+  }
+  // Descendants: at grandchild depth, split son's line (pautra) vs daughter's line
+  // (dauhitra); deeper generations use the generic pra-/par- pautra chain.
+  if (/^d+$/.test(dirs) && dirs.length >= 2) {
+    const g = dirs.length - 2;
+    const pre = anyAdoptive ? 'adopted ' : '';
+    if (g === 0) {
+      const viaSon = isMale(ds, steps[0].to);
+      const san = viaSon ? (bMale ? 'pautra' : 'pautri') : bMale ? 'dauhitra' : 'dauhitri';
+      const guj = viaSon ? (bMale ? 'pautra' : 'pautri') : bMale ? 'dohitro' : 'dohitri';
+      return pre + sg(san, guj);
+    }
+    const tail = bMale ? 'pautra' : 'pautri';
+    return pre + sg(preS(g) + tail, preG(g) + tail);
+  }
+
+  switch (dirs) {
+    case 'u':
+      return (anyAdoptive ? 'adoptive ' : '') + sg(bMale ? 'pita' : 'mata', bMale ? 'bapa' : 'ma');
+    case 'd':
+      return (anyAdoptive ? 'adopted ' : '') + sg(bMale ? 'putra' : 'putri', bMale ? 'dikro' : 'dikri');
+    case 'ud': {
+      const kind = siblingKind(ds, a, b, steps); // '', 'half-', or 'adoptive '
+      // Full siblings share a union whose children are stored eldest-first, so their
+      // positions give elder (agraja) vs younger (anuja) — B relative to A.
+      if (kind === '') {
+        const u = ds.childUnionOf.get(a)?.biological;
+        const kids = u ? ds.unions.get(u)?.children ?? [] : [];
+        const ia = kids.indexOf(a);
+        const ib = kids.indexOf(b);
+        if (ia >= 0 && ib >= 0) {
+          return ib < ia
+            ? sg(bMale ? 'agraj' : 'agraja', bMale ? 'moto bhai' : 'moti ben')
+            : sg(bMale ? 'anuj' : 'anuja', bMale ? 'nano bhai' : 'nani ben');
+        }
+      }
+      return kind + sg(bMale ? 'bhrata' : 'bhagini', bMale ? 'bhai' : 'ben');
+    }
+    case 's': {
+      const st = steps[0].status;
+      if (st === 'partners') return sg('sathi', 'sathi');
+      const base = sg(bMale ? 'pati' : 'patni', bMale ? 'dhani' : 'bairi');
+      return st === 'divorced' ? `ex-${base}` : base;
+    }
+    case 'uud':
+      return paternal
+        ? bMale ? sg('pitrivya', 'kaka') : sg('pitrusvasa', 'foi')
+        : bMale ? sg('matula', 'mama') : sg('matrusvasa', 'masi');
+    case 'udd': {
+      const viaBrother = isMale(ds, steps[1].to);
+      return viaBrother
+        ? bMale ? sg('bhratrija', 'bhatrijo') : sg('bhratriji', 'bhatriji')
+        : bMale ? sg('bhagineya', 'bhanej') : sg('bhagineyi', 'bhaneji');
+    }
+    case 'uudd':
+      return paternal
+        ? bMale ? sg('pitrivya-putra', 'pitarai bhai') : sg('pitrivya-putri', 'pitarai ben')
+        : bMale ? sg('matula-putra', 'mameri bhai') : sg('matula-putri', 'mameri ben');
+    case 'su':
+      return sg(bMale ? 'shvashura' : 'shvashru', bMale ? 'sasro' : 'sasu');
+    case 'ds':
+      return sg(bMale ? 'jamata' : 'snusha', bMale ? 'jamai' : 'vahu');
+    case 'uds':
+    case 'sud':
+      return bMale ? sg('shyala', 'salo') : sg('shyali', 'sali');
+    default:
+      return null; // step-relations, uncle-by-marriage, unnamed paths → English fallback
+  }
+};
+
 /**
  * Name the relationship of B relative to A ("B is A's ___") for common patterns,
- * with a readable hop chain as universal fallback.
+ * with a readable hop chain as universal fallback. `local` carries the Sanskrit
+ * (Gujarati) term when we have one, else null.
  */
 export const nameRelation = (
   ds: Dataset,
   a: string,
   steps: KinStep[],
-): { name: string | null; chain: { personId: string; label: string }[] } => {
+): { name: string | null; local: string | null; chain: { personId: string; label: string }[] } => {
+  const local = localRelation(ds, a, steps);
   const chain: { personId: string; label: string }[] = [
     { personId: a, label: personName(ds.people.get(a)!) },
   ];
@@ -110,11 +211,11 @@ export const nameRelation = (
   if (/^u+$/.test(dirs) && dirs.length >= 2) {
     const side = dirs.length === 2 ? `${viaSide()} ` : '';
     name = `${adoptPrefixUp}${side}${greats(dirs.length)}${g('grandfather', 'grandmother')}`;
-    return { name, chain };
+    return { name, local, chain };
   }
   if (/^d+$/.test(dirs) && dirs.length >= 2) {
     name = `${adoptPrefixDown}${greats(dirs.length)}grand${g('son', 'daughter')}`;
-    return { name, chain };
+    return { name, local, chain };
   }
   switch (dirs) {
     case '':
@@ -162,5 +263,5 @@ export const nameRelation = (
       break;
   }
 
-  return { name, chain };
+  return { name, local, chain };
 };

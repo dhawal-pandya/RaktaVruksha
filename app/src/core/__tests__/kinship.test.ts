@@ -64,6 +64,31 @@ describe('shortest kinship path + namer', () => {
     expect(relate('Son', 'Son')!.name).toBe('the same person');
   });
 
+  it('gives Sanskrit (Gujarati) terms with paternal/maternal distinctions', () => {
+    expect(relate('Son', 'Dad')!.local).toBe('pita (bapa)');
+    expect(relate('Dad', 'Son')!.local).toBe('putra (dikro)');
+    // paternal grandmother vs maternal grandfather — distinct words
+    expect(relate('Son', 'GmaA')!.local).toBe('pitamahi (dadi)');
+    expect(relate('Son', 'GpaB')!.local).toBe('matamaha (nana)');
+    // maternal uncle
+    expect(relate('Son', 'UncleB')!.local).toBe('matula (mama)');
+    // elder/younger from birth order (u_dad_mom children: Son then Dau)
+    expect(relate('Dau', 'Son')!.local).toBe('agraj (moto bhai)'); // Son is elder brother
+    expect(relate('Son', 'Dau')!.local).toBe('anuja (nani ben)'); // Dau is younger sister
+    // half-siblings live in different unions, so order can't rank them → generic
+    expect(relate('Son', 'HalfSis')!.local).toBe('half-bhagini (ben)');
+    // paternal aunt (father's sister)
+    expect(relate('LoveChild', 'HalfSis')!.local).toBe('pitrusvasa (foi)');
+    // spouse by status
+    expect(relate('Dad', 'Mom')!.local).toBe('patni (bairi)');
+    expect(relate('Dad', 'Ex')!.local).toBe('ex-patni (bairi)');
+    // in-law
+    expect(relate('Mom', 'GpaA')!.local).toBe('shvashura (sasro)');
+    // deep lineage uses the pra-/par- prefix
+    expect(relate('LoveChild', 'GpaA')!.local).toBe('pra-pitamaha (par-dada)');
+    expect(relate('GpaA', 'LoveChild')!.local).toBe('pra-pautri (par-pautri)');
+  });
+
   it('names ancestral chains at any depth', () => {
     expect(relate('LoveChild', 'GpaA')!.name).toBe('great-grandfather');
     expect(relate('GpaA', 'LoveChild')!.name).toBe('great-granddaughter');
