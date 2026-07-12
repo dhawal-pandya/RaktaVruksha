@@ -28,10 +28,13 @@ const personGeometry = new THREE.SphereGeometry(6, 20, 20);
 const unionGeometry = new THREE.SphereGeometry(2.6, 12, 12);
 const UNION_COLOR = '#4a5468';
 
-// The camera is locked to this polar angle (measured from +Y). Rotation can only
-// change azimuth, so the world twirls around the vertical axis and never tumbles.
-// A shade above the equator gives a gentle, fixed 3/4 elevation.
-const FIXED_POLAR = Math.PI * 0.42;
+// The camera's polar angle (measured from +Y) is confined to a narrow band, so a
+// left-drag mostly twirls the world around the vertical axis (azimuth) but also
+// lets you tip the elevation a little between two limits — never tumbling past
+// either. POLAR_LEVEL (π/2) is dead-level/head-on; POLAR_TILTED looks gently down
+// (the classic 3/4 elevation). Node framing lands at head-on.
+const POLAR_LEVEL = Math.PI * 0.5;
+const POLAR_TILTED = Math.PI * 0.42;
 
 // Default orbit anchor: whole-tree views pivot around this person, so the spin
 // axis passes through him rather than the graph centroid. Focusing a person or
@@ -39,14 +42,14 @@ const FIXED_POLAR = Math.PI * 0.42;
 // back to the centroid.
 const ANCHOR_PERSON_ID = 'Dhawal';
 
-/** Camera position that frames `target` at `dist`, at the locked elevation,
- *  preserving the current horizontal heading (azimuth). */
+/** Camera position that frames `target` at `dist` head-on (level), preserving the
+ *  current horizontal heading (azimuth). From here a drag can tip up to POLAR_TILTED. */
 const framedCameraPos = (cam: Vec3, target: Vec3, dist: number): Vec3 => {
   const azim = Math.atan2(cam.z - target.z, cam.x - target.x);
-  const sinP = Math.sin(FIXED_POLAR);
+  const sinP = Math.sin(POLAR_LEVEL);
   return {
     x: target.x + dist * sinP * Math.cos(azim),
-    y: target.y + dist * Math.cos(FIXED_POLAR),
+    y: target.y + dist * Math.cos(POLAR_LEVEL),
     z: target.z + dist * sinP * Math.sin(azim),
   };
 };
@@ -160,18 +163,18 @@ export default function Scene3D() {
     updateLabelVisibility();
   }, [visuals, data, updateLabelVisibility]);
 
-  // Control model: the generational (vertical) axis is fixed. Left-drag spins
-  // the graph, and because the polar angle is locked that spin is azimuth-only —
-  // a twirl around the zenith with elders staying up top. Ctrl/Cmd-drag (or
-  // right-drag) pans. Touch: one finger twirls, two fingers pinch-zoom + pan.
-  // Scroll zooms.
+  // Control model: the generational (vertical) axis stays upright. Left-drag spins
+  // the graph around the zenith (azimuth) with elders staying up top, and can also
+  // tip the elevation within a narrow band — from head-on (π/2) up to the classic
+  // 3/4 look-down (POLAR_TILTED), never further. Ctrl/Cmd-drag (or right-drag) pans.
+  // Touch: one finger twirls, two fingers pinch-zoom + pan. Scroll zooms.
   useEffect(() => {
     const fg = fgRef.current;
     if (!fg) return;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const controls = fg.controls() as any;
-    controls.minPolarAngle = FIXED_POLAR;
-    controls.maxPolarAngle = FIXED_POLAR;
+    controls.minPolarAngle = POLAR_TILTED;
+    controls.maxPolarAngle = POLAR_LEVEL;
     controls.enablePan = true;
     controls.enableRotate = true;
     controls.enableZoom = true;
