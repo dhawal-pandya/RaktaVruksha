@@ -388,16 +388,27 @@ textarea:focus {
   font-weight: 600;
   margin: 4px 0 2px;
 }
-.child-row {
-  display: inline-flex;
-  align-items: center;
+.children-list {
+  display: flex;
+  flex-direction: column;
   gap: 2px;
+}
+.child-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+.child-row .person-link {
+  flex: 1;
+  margin: 0;
+  text-align: left;
 }
 .reorder {
   display: inline-flex;
   flex-direction: column;
   line-height: 0.7;
-  margin-right: 4px;
+  flex: none;
 }
 .reorder-btn {
   color: var(--text-dim);

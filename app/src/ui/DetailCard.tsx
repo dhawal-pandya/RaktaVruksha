@@ -103,40 +103,44 @@ export default function DetailCard() {
               </h3>
               {partner && u.children.length + adopted.length > 0 && (
                 <div className="children-label">
-                  Children{u.children.length > 1 && editUnlocked ? ' · oldest first' : ''}
+                  Children{u.children.length > 1 && editUnlocked ? ' · oldest at top' : ''}
                 </div>
               )}
               {u.children.length + adopted.length === 0 && <span className="muted">no children</span>}
-              {u.children.map((c, i) =>
-                editUnlocked && u.children.length > 1 ? (
-                  <span className="child-row" key={c}>
-                    <PersonLink id={c} />
-                    <span className="reorder">
-                      <button
-                        className="reorder-btn"
-                        disabled={i === 0}
-                        title="Move earlier (older)"
-                        onClick={() => reorderChild(uid, c, -1)}
-                      >
-                        ↑
-                      </button>
-                      <button
-                        className="reorder-btn"
-                        disabled={i === u.children.length - 1}
-                        title="Move later (younger)"
-                        onClick={() => reorderChild(uid, c, 1)}
-                      >
-                        ↓
-                      </button>
-                    </span>
-                  </span>
-                ) : (
-                  <PersonLink key={c} id={c} />
-                ),
+              {u.children.length + adopted.length > 0 && (
+                <div className="children-list">
+                  {u.children.map((c, i) => (
+                    <div className="child-row" key={c}>
+                      <PersonLink id={c} />
+                      {editUnlocked && u.children.length > 1 && (
+                        <span className="reorder">
+                          <button
+                            className="reorder-btn"
+                            disabled={i === 0}
+                            title="Move up (older)"
+                            onClick={() => reorderChild(uid, c, -1)}
+                          >
+                            ↑
+                          </button>
+                          <button
+                            className="reorder-btn"
+                            disabled={i === u.children.length - 1}
+                            title="Move down (younger)"
+                            onClick={() => reorderChild(uid, c, 1)}
+                          >
+                            ↓
+                          </button>
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                  {adopted.map(c => (
+                    <div className="child-row" key={c}>
+                      <PersonLink id={c} suffix="adopted" />
+                    </div>
+                  ))}
+                </div>
               )}
-              {adopted.map(c => (
-                <PersonLink key={c} id={c} suffix="adopted" />
-              ))}
             </div>
           );
         })}

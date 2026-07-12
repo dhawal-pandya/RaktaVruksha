@@ -33,6 +33,12 @@ const UNION_COLOR = '#4a5468';
 // A shade above the equator gives a gentle, fixed 3/4 elevation.
 const FIXED_POLAR = Math.PI * 0.42;
 
+// Default orbit anchor: whole-tree views pivot around this person, so the spin
+// axis passes through him rather than the graph centroid. Focusing a person or
+// family still re-pivots there; absent from the data (stress set), views fall
+// back to the centroid.
+const ANCHOR_PERSON_ID = 'Dhawal';
+
 /** Camera position that frames `target` at `dist`, at the locked elevation,
  *  preserving the current horizontal heading (azimuth). */
 const framedCameraPos = (cam: Vec3, target: Vec3, dist: number): Vec3 => {
@@ -150,10 +156,11 @@ export default function Scene3D() {
     updateLabelVisibility();
   }, [visuals, data, updateLabelVisibility]);
 
-  // Control model: the generational (vertical) axis is fixed. Left-drag pans the
-  // view "normally"; Ctrl/Cmd-drag (or right-drag) spins the graph: and because
-  // the polar angle is locked, that spin is azimuth-only, a twirl around vertical.
-  // Touch: one finger pans, two fingers pinch-zoom + twirl. Scroll zooms.
+  // Control model: the generational (vertical) axis is fixed. Left-drag spins
+  // the graph, and because the polar angle is locked that spin is azimuth-only —
+  // a twirl around the zenith with elders staying up top. Ctrl/Cmd-drag (or
+  // right-drag) pans. Touch: one finger twirls, two fingers pinch-zoom + pan.
+  // Scroll zooms.
   useEffect(() => {
     const fg = fgRef.current;
     if (!fg) return;
@@ -166,13 +173,13 @@ export default function Scene3D() {
     controls.enableZoom = true;
     controls.screenSpacePanning = true;
     controls.mouseButtons = {
-      LEFT: THREE.MOUSE.PAN,
+      LEFT: THREE.MOUSE.ROTATE,
       MIDDLE: THREE.MOUSE.DOLLY,
-      RIGHT: THREE.MOUSE.ROTATE,
+      RIGHT: THREE.MOUSE.PAN,
     };
-    controls.touches = { ONE: THREE.TOUCH.PAN, TWO: THREE.TOUCH.DOLLY_ROTATE };
+    controls.touches = { ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_PAN };
 
-    // Decide pan-vs-spin per drag from the modifier held at pointer-down. Attach
+    // Decide spin-vs-pan per drag from the modifier held at pointer-down. Attach
     // to an ancestor in the capture phase so it runs before OrbitControls reads
     // mouseButtons on the canvas itself.
     const canvas = fg.renderer().domElement as HTMLCanvasElement;
@@ -180,7 +187,7 @@ export default function Scene3D() {
     const onPointerDown = (e: Event) => {
       const pe = e as PointerEvent;
       controls.mouseButtons.LEFT =
-        pe.ctrlKey || pe.metaKey ? THREE.MOUSE.ROTATE : THREE.MOUSE.PAN;
+        pe.ctrlKey || pe.metaKey ? THREE.MOUSE.PAN : THREE.MOUSE.ROTATE;
     };
     host.addEventListener('pointerdown', onPointerDown, true);
     return () => host.removeEventListener('pointerdown', onPointerDown, true);
@@ -211,19 +218,23 @@ export default function Scene3D() {
     };
   }, [data, updateLabelVisibility]);
 
-  // Fly the camera to frame a set of points: look at their centroid from the
-  // current direction. (The library's zoomToFit keeps the sight line, which
-  // strands tall graphs low in the frame: this centers them properly.)
-  const flyToPoints = useCallback((points: Vec3[], ms = 900) => {
+  // Fly the camera to frame a set of points: look at `anchor` (the future spin
+  // pivot) or their centroid, from the current direction. (The library's
+  // zoomToFit keeps the sight line, which strands tall graphs low in the frame:
+  // this centers them properly.)
+  const flyToPoints = useCallback((points: Vec3[], ms = 900, anchor?: Vec3) => {
     const fg = fgRef.current;
     if (!fg || points.length === 0) return;
-    const c = points.reduce(
-      (acc, p) => ({ x: acc.x + p.x, y: acc.y + p.y, z: acc.z + p.z }),
-      { x: 0, y: 0, z: 0 },
-    );
-    c.x /= points.length;
-    c.y /= points.length;
-    c.z /= points.length;
+    const c = anchor
+      ? { ...anchor }
+      : points.reduce(
+          (acc, p) => ({
+            x: acc.x + p.x / points.length,
+            y: acc.y + p.y / points.length,
+            z: acc.z + p.z / points.length,
+          }),
+          { x: 0, y: 0, z: 0 },
+        );
     const radius = Math.max(
       60,
       ...points.map(p => Math.hypot(p.x - c.x, p.y - c.y, p.z - c.z)),
@@ -268,7 +279,7 @@ export default function Scene3D() {
             .filter((p): p is Vec3 => !!p);
           flyToPoints(pts);
         } else {
-          flyToPoints([...layout.values()]);
+          flyToPoints([...layout.values()], 900, layout.get(ANCHOR_PERSON_ID));
         }
         break;
       }
@@ -393,7 +404,7 @@ export default function Scene3D() {
           // re-fit once the engine has placed everything.
           if (!didInitialFitRef.current) {
             didInitialFitRef.current = true;
-            if (layout) flyToPoints([...layout.values()], 700);
+            if (layout) flyToPoints([...layout.values()], 700, layout.get(ANCHOR_PERSON_ID));
             updateLabelVisibility();
           }
         }}
