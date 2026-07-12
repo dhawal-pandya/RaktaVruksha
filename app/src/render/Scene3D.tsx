@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef } from 'react';
 import ForceGraph3D, { type ForceGraphMethods } from 'react-force-graph-3d';
 import * as THREE from 'three';
 import SpriteText from 'three-spritetext';
-import type { GraphLink, GraphNode, Vec3 } from '../core/types';
+import type { Gender, GraphLink, GraphNode, Vec3 } from '../core/types';
 import { personName } from '../core/types';
 import { BACKGROUND_COLOR, dimToward } from '../core/colors';
 import { useStore } from '../state/store';
@@ -54,13 +54,17 @@ const framedCameraPos = (cam: Vec3, target: Vec3, dist: number): Vec3 => {
 const endpointId = (e: string | FGNode): string => (typeof e === 'string' ? e : e.id);
 
 const LINK_COLORS: Record<string, string> = {
-  married: '#c9a86a',
+  married: '#ffffff',
   partners: '#b58fc4',
   divorced: '#7a6a4d',
   unknown: '#93855f',
   biological: '#55617a',
   adoptive: '#7f95b5',
 };
+
+// The union→child line is colored by the child's gender: cool blue for a son,
+// rose for a daughter.
+const GENDER_LINK: Record<Gender, string> = { male: '#5b9bd5', female: '#d86fa4' };
 
 const linkBaseColor = (l: FGLink): string =>
   l.kind === 'partner'
@@ -342,18 +346,27 @@ export default function Scene3D() {
 
   // New function identity whenever visuals change → react-force-graph re-applies
   // link colors in place (no geometry rebuild).
+  const genderById = useMemo(() => {
+    const m = new Map<string, Gender>();
+    for (const n of data.nodes) if (n.kind === 'person') m.set(n.id, n.gender);
+    return m;
+  }, [data]);
+
   const linkColor = useMemo(() => {
     const vis = visuals;
     return (l: FGLink): string => {
       const a = endpointId(l.source);
       const b = endpointId(l.target);
       if (vis?.pathSet && vis.pathSet.has(a) && vis.pathSet.has(b)) return '#ffd27d';
-      const base = linkBaseColor(l);
+      // Child links carry the child's gender (target is always the child); partner
+      // and other links keep their status/tag color.
+      const childGender = l.kind === 'child' ? genderById.get(b) : undefined;
+      const base = childGender ? GENDER_LINK[childGender] : linkBaseColor(l);
       if (!vis) return base;
       const op = Math.min(vis.nodeOpacity.get(a) ?? 1, vis.nodeOpacity.get(b) ?? 1);
       return dimToward(base, 1 - Math.min(1, op + 0.08));
     };
-  }, [visuals]);
+  }, [visuals, genderById]);
 
   const linkWidth = useMemo(() => {
     const vis = visuals;

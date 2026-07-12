@@ -15,9 +15,9 @@ const NODE_R = 6;
 const UNION_R = 2.8;
 const UNION_COLOR = '#4a5468';
 const PATH_COLOR = '#ffd27d';
-// Faint gender hairline on a person node: cool for male, warm for female. Kept
-// low-alpha and thin so it reads as a whisper, never competing with family color.
-const GENDER_STROKE: Record<Gender, string> = { male: '#7aa2c8', female: '#c98fa8' };
+// The union→child line is colored by the child's gender: cool blue for a son,
+// rose for a daughter.
+const GENDER_LINK: Record<Gender, string> = { male: '#5b9bd5', female: '#d86fa4' };
 
 // Name sits above the node for men, below for women — matching the 3D view, so a
 // married pair side by side never prints its two names over each other.
@@ -28,7 +28,7 @@ const labelTop = (node: FG2Node, fontSize: number): number => {
 };
 
 const LINK_COLORS: Record<string, string> = {
-  married: '#c9a86a',
+  married: '#ffffff',
   partners: '#b58fc4',
   divorced: '#7a6a4d',
   unknown: '#93855f',
@@ -143,16 +143,6 @@ export default function Scene2D() {
           ? mixHex(node.color, BACKGROUND_COLOR, 0.35)
           : node.color;
       ctx.fill();
-      if (node.kind === 'person') {
-        // Whisper-thin gender edge, drawn under the ext/glow rings that may replace it.
-        ctx.globalAlpha = op * 0.55;
-        ctx.lineWidth = 0.75 / globalScale;
-        ctx.strokeStyle = GENDER_STROKE[node.gender];
-        ctx.beginPath();
-        ctx.arc(x, y, r, 0, 2 * Math.PI);
-        ctx.stroke();
-        ctx.globalAlpha = op;
-      }
       if (node.ext && !isUnion) {
         // Dashed ring marks a spouse who belongs to another family (married away).
         ctx.setLineDash([2, 2]);
@@ -218,9 +208,14 @@ export default function Scene2D() {
       const a = endpointId(l.source);
       const b = endpointId(l.target);
       if (vis?.pathSet && vis.pathSet.has(a) && vis.pathSet.has(b)) return PATH_COLOR;
-      const base = linkBaseColor(l);
       const na = nodeById.current.get(a);
       const nb = nodeById.current.get(b);
+      // Child links carry the child's gender (target is always the child); partner
+      // and other links keep their status/tag color.
+      const base =
+        l.kind === 'child' && nb?.kind === 'person'
+          ? GENDER_LINK[nb.gender]
+          : linkBaseColor(l);
       const faded = na?.ext || nb?.ext;
       return faded ? dimToward(base, 0.4) : base;
     };
