@@ -1,6 +1,14 @@
 import { describe, expect, it } from 'vitest';
 import { buildDataset } from '../dataset';
-import { deletePerson, growChild, growParent, growSpouse, moveChildInUnion } from '../mutate';
+import {
+  deletePerson,
+  growChild,
+  growParent,
+  growSpouse,
+  mergePerson,
+  mergeBlockReason,
+  moveChildInUnion,
+} from '../mutate';
 import { validateData } from '../validate';
 import { fixture } from './fixture';
 
@@ -54,6 +62,49 @@ describe('grow flows', () => {
     const union = next.unions.find(u => u.id === 'u_love')!;
     expect(union.adoptedChildren).toContain(personId);
     expect(union.children).not.toContain(personId);
+  });
+
+  it('attaches an existing person as a biological child without overwriting their family', () => {
+    const raw = fixture();
+    const { raw: next, personId } = growChild(raw, {
+      parentId: 'Dad',
+      unionId: 'u_dad_mom',
+      adopted: false,
+      existingId: 'Hermit',
+    });
+    expect(personId).toBe('Hermit');
+    expect(validateData(next).errors).toEqual([]);
+    expect(next.unions.find(u => u.id === 'u_dad_mom')!.children).toContain('Hermit');
+    // The existing person's record is left untouched (not reborn into the union's family).
+    expect(next.people.find(p => p.id === 'Hermit')!.birthFamilyId).toBeNull();
+  });
+
+  it('attaches an existing person as an adopted child', () => {
+    const raw = fixture();
+    const { raw: next } = growChild(raw, {
+      parentId: 'Son',
+      unionId: 'u_love',
+      adopted: true,
+      existingId: 'Hermit',
+    });
+    expect(validateData(next).errors).toEqual([]);
+    const u = next.unions.find(u => u.id === 'u_love')!;
+    expect(u.adoptedChildren).toContain('Hermit');
+    expect(u.children).not.toContain('Hermit');
+  });
+
+  it('refuses to attach a person who is already a biological child elsewhere', () => {
+    const raw = fixture();
+    expect(() =>
+      growChild(raw, { parentId: 'Son', unionId: 'u_love', adopted: false, existingId: 'Dau' }),
+    ).toThrow(/already a biological child/);
+  });
+
+  it('refuses to make a person their own child', () => {
+    const raw = fixture();
+    expect(() =>
+      growChild(raw, { parentId: 'Dad', unionId: null, adopted: false, existingId: 'Dad' }),
+    ).toThrow(/own child/);
   });
 
   it('grows a spouse as a new union with status and family', () => {
@@ -126,6 +177,68 @@ describe('grow flows', () => {
     // OutKid now has two biological parents
     const ds = buildDataset(next);
     expect(ds.parentsOf.get('OutKid')!.map(p => p.id).sort()).toEqual(['SoloMum', personId].sort());
+  });
+});
+
+describe('mergePerson (same-person reconciliation)', () => {
+  it('fuses a duplicate empty marriage back into the real one (the Shantaben case)', () => {
+    // Dad ⚭ Mom (Son, Dau). A duplicate "Mom2" was married to Dad in an empty union —
+    // exactly the artifact that delete+reconnect leaves behind. Merging Mom2 into Mom
+    // must collapse the two marriages into one, keeping the children.
+    const raw = fixture();
+    raw.people.push({
+      id: 'Mom2', firstName: 'Mom', lastName: 'B', gender: 'female',
+      alive: true, birthFamilyId: 'famB', updatedAt: '2026-01-02T00:00:00.000Z',
+    });
+    raw.unions.push({
+      id: 'u_dad_mom2', partners: ['Dad', 'Mom2'], children: [], adoptedChildren: [],
+      familyId: 'famA', status: 'married', updatedAt: '2026-01-02T00:00:00.000Z',
+    });
+
+    const next = mergePerson(raw, 'Mom', 'Mom2');
+    expect(validateData(next).errors).toEqual([]);
+    const marriages = next.unions.filter(
+      u => u.partners.length === 2 && u.partners.includes('Dad') && u.partners.includes('Mom'),
+    );
+    expect(marriages.length).toBe(1); // fused, not two
+    expect(marriages[0].children.slice().sort()).toEqual(['Dau', 'Son']);
+    expect(next.people.some(p => p.id === 'Mom2')).toBe(false);
+    // Children still resolve to both real parents.
+    const ds = buildDataset(next);
+    for (const k of ['Son', 'Dau'])
+      expect(ds.parentsOf.get(k)!.map(p => p.id).sort()).toEqual(['Dad', 'Mom']);
+  });
+
+  it('folds an absorbed stub’s marriage and children onto the kept person', () => {
+    // SoloMum has a 1-partner union → OutKid (+adopted AdoptedKid). Merge her into
+    // Hermit (no relations, unknown lineage): Hermit inherits the union and children,
+    // and picks up her family only because his own was blank.
+    const next = mergePerson(fixture(), 'Hermit', 'SoloMum');
+    expect(validateData(next).errors).toEqual([]);
+    expect(next.people.some(p => p.id === 'SoloMum')).toBe(false);
+    expect(next.people.find(p => p.id === 'Hermit')!.birthFamilyId).toBe('famC'); // blank filled
+    const ds = buildDataset(next);
+    expect(ds.childrenOf.get('Hermit')!.map(c => c.id)).toContain('OutKid');
+  });
+
+  it('blocks when both people already have (different) biological parents', () => {
+    // Son is a bio child of u_dad_mom; HalfSis of u_dad_ex — merging would give one
+    // person two sets of biological parents, which validate.ts forbids.
+    expect(mergeBlockReason(fixture(), 'Son', 'HalfSis')).toMatch(/biological/);
+    expect(() => mergePerson(fixture(), 'Son', 'HalfSis')).toThrow(/biological/);
+  });
+
+  it('refuses to merge a person with themselves', () => {
+    expect(mergeBlockReason(fixture(), 'Dad', 'Dad')).toMatch(/two different/);
+    expect(() => mergePerson(fixture(), 'Dad', 'Dad')).toThrow(/two different/);
+  });
+
+  it('just deletes the record when the absorbed person has no relations', () => {
+    const next = mergePerson(fixture(), 'Ex', 'Hermit');
+    expect(validateData(next).errors).toEqual([]);
+    expect(next.people.some(p => p.id === 'Hermit')).toBe(false);
+    // Ex is untouched relationally.
+    expect(next.unions.find(u => u.id === 'u_dad_ex')!.partners).toEqual(['Dad', 'Ex']);
   });
 });
 

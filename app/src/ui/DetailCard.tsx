@@ -14,6 +14,7 @@ export default function DetailCard() {
   const setLens = useStore(s => s.setLens);
   const openForm = useStore(s => s.openForm);
   const requestDelete = useStore(s => s.requestDelete);
+  const openMerge = useStore(s => s.openMerge);
   const reorderChild = useStore(s => s.reorderChild);
   const editUnlocked = useStore(s => s.editUnlocked);
   const lensFamilyId = useStore(s => s.lensFamilyId);
@@ -161,6 +162,13 @@ export default function DetailCard() {
           </button>
           <button className="btn btn-subtle" onClick={() => openForm('edit', focusId)}>
             Edit
+          </button>
+          <button
+            className="btn btn-subtle"
+            title="Fold a duplicate record of this person into this one"
+            onClick={() => openMerge(focusId)}
+          >
+            Merge duplicate
           </button>
           <button className="btn btn-subtle btn-delete" onClick={() => requestDelete(focusId)}>
             Delete

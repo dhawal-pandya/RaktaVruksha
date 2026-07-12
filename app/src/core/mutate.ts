@@ -173,7 +173,9 @@ export interface GrowChildInput {
   /** Existing union of the parent to attach to, or null to create a 1-partner union. */
   unionId: string | null;
   adopted: boolean;
-  child: PersonFields;
+  /** Existing person to attach as the child, or null to create from `child`. */
+  existingId?: string | null;
+  child?: PersonFields;
 }
 
 export const growChild = (
@@ -182,30 +184,64 @@ export const growChild = (
 ): { raw: FamilyDataV2; personId: string } => {
   let next = raw;
   let unionId = input.unionId;
+  const tag = input.adopted ? "adoptive" : "biological";
+
+  // Attaching an existing person: guard against the states validate.ts rejects
+  // (a person can't be a biological/adopted child of two unions) before mutating.
+  const existingId = input.existingId ?? null;
+  if (existingId) {
+    if (existingId === input.parentId) {
+      throw new Error("a person can't be their own child");
+    }
+    const held = next.unions.find((u) =>
+      (tag === "biological" ? u.children : (u.adoptedChildren ?? [])).includes(
+        existingId,
+      ),
+    );
+    if (held) {
+      const who =
+        next.people.find((p) => p.id === existingId)?.firstName ?? "that person";
+      throw new Error(`${who} is already a ${tag} child of another union`);
+    }
+  }
+  // The existing person's own birth family, used to seed a new union so their
+  // record and the union agree (we never overwrite an existing person's family).
+  const existingFamily = existingId
+    ? (next.people.find((p) => p.id === existingId)?.birthFamilyId ?? null)
+    : null;
+
   if (!unionId) {
     const parent = next.people.find((p) => p.id === input.parentId);
     const created = createUnion(next, {
       partners: [input.parentId],
       familyId: input.adopted
         ? (parent?.birthFamilyId ?? null)
-        : input.child.birthFamilyId,
+        : existingId
+          ? existingFamily
+          : input.child!.birthFamilyId,
       status: "unknown",
     });
     next = created.raw;
     unionId = created.unionId;
   }
   const union = next.unions.find((u) => u.id === unionId)!;
-  const fields = input.adopted
-    ? input.child
-    : { ...input.child, birthFamilyId: union.familyId };
-  const added = addPerson(next, fields);
-  next = addChildToUnion(
-    added.raw,
-    unionId,
-    added.personId,
-    input.adopted ? "adoptive" : "biological",
-  );
-  return { raw: next, personId: added.personId };
+
+  let childId = existingId;
+  if (!childId) {
+    // A new biological child is born into the union's family; an adopted one keeps
+    // whatever family the form gave. Existing people are attached as-is (above).
+    const fields = input.adopted
+      ? input.child!
+      : { ...input.child!, birthFamilyId: union.familyId };
+    const added = addPerson(next, fields);
+    next = added.raw;
+    childId = added.personId;
+  } else if (union.partners.includes(childId)) {
+    throw new Error("that person is a partner of this union");
+  }
+
+  next = addChildToUnion(next, unionId, childId, tag);
+  return { raw: next, personId: childId };
 };
 
 /** Move a child from whatever biological union it's in into `unionId`, deleting a
@@ -336,6 +372,124 @@ export const deletePerson = (
     people: raw.people.filter((p) => p.id !== personId),
     unions,
   };
+};
+
+/**
+ * Why a directional merge of `absorbId` into `keepId` can't proceed, or null if it
+ * can. Blocks the one conflict validate.ts would reject: a person can be a
+ * biological (or adoptive) child of only ONE union, so if both people already have
+ * their own recorded parents, we can't silently pick a winner.
+ */
+export const mergeBlockReason = (
+  raw: FamilyDataV2,
+  keepId: string,
+  absorbId: string,
+): string | null => {
+  if (keepId === absorbId) return "pick two different people";
+  const keep = raw.people.find((p) => p.id === keepId);
+  const absorb = raw.people.find((p) => p.id === absorbId);
+  if (!keep || !absorb) return "one of those people no longer exists";
+
+  const clashOn = (
+    childrenKey: "children" | "adoptedChildren",
+    label: string,
+  ): string | null => {
+    const uOf = (id: string) =>
+      raw.unions.find((u) => (u[childrenKey] ?? []).includes(id));
+    const a = uOf(keepId);
+    const b = uOf(absorbId);
+    return a && b && a.id !== b.id
+      ? `${keep.firstName} and ${absorb.firstName} each already have ${label} parents. ` +
+          `Detach one set first, then merge.`
+      : null;
+  };
+  return clashOn("children", "biological") ?? clashOn("adoptedChildren", "adoptive");
+};
+
+/**
+ * Fold `absorbId` into `keepId`: the two ids were the same human. Every reference to
+ * the absorbed person becomes the kept person, unions that end up with the same
+ * partners fuse (pooling their children), and the absorbed record is removed. The
+ * kept person's own fields win; only blank fields are filled from the absorbed one.
+ */
+export const mergePerson = (
+  raw: FamilyDataV2,
+  keepId: string,
+  absorbId: string,
+): FamilyDataV2 => {
+  const blocked = mergeBlockReason(raw, keepId, absorbId);
+  if (blocked) throw new Error(blocked);
+  const keep = raw.people.find((p) => p.id === keepId)!;
+  const absorb = raw.people.find((p) => p.id === absorbId)!;
+
+  const swap = (arr: string[]) => arr.map((x) => (x === absorbId ? keepId : x));
+  const dedupe = (arr: string[]) => arr.filter((x, i) => arr.indexOf(x) === i);
+
+  // 1. Rewrite absorb → keep everywhere, then normalize each union in isolation:
+  //    a self-pair (both partners now keep) collapses to one; a person can't be
+  //    their own child; duplicate/overlapping child entries are removed.
+  let unions: UnionRecord[] = raw.unions.map((u) => {
+    const partners = dedupe(swap(u.partners));
+    const children = dedupe(swap(u.children)).filter((c) => !partners.includes(c));
+    const adoptedChildren = dedupe(swap(u.adoptedChildren ?? [])).filter(
+      (c) => !partners.includes(c) && !children.includes(c),
+    );
+    return { ...u, partners, children, adoptedChildren };
+  });
+
+  // 2. Fuse unions that now share the same partner set, pooling their children.
+  const byKey = new Map<string, UnionRecord>();
+  const keyOrder: string[] = [];
+  for (const u of unions) {
+    const key = [...u.partners].sort().join("|");
+    const prev = byKey.get(key);
+    if (!prev) {
+      byKey.set(key, u);
+      keyOrder.push(key);
+      continue;
+    }
+    const children = dedupe([...prev.children, ...u.children]);
+    const adoptedChildren = dedupe([
+      ...(prev.adoptedChildren ?? []),
+      ...(u.adoptedChildren ?? []),
+    ]).filter((c) => !children.includes(c));
+    byKey.set(key, {
+      ...prev,
+      children,
+      adoptedChildren,
+      // A concrete status/family beats a placeholder one.
+      status: prev.status !== "unknown" ? prev.status : u.status,
+      familyId: prev.familyId ?? u.familyId,
+      updatedAt: now(),
+    });
+  }
+  unions = keyOrder.map((k) => byKey.get(k)!);
+
+  // 3. Drop unions left with no partners, or a lone partner and nothing else.
+  unions = unions.filter(
+    (u) =>
+      u.partners.length > 0 &&
+      !(
+        u.partners.length < 2 &&
+        u.children.length === 0 &&
+        (u.adoptedChildren?.length ?? 0) === 0
+      ),
+  );
+
+  // 4. Merge the two person records: kept fields win; fill only blanks from absorbed.
+  const notes = [keep.notes, absorb.notes].filter(Boolean).join("\n").trim();
+  const mergedKeep: PersonRecord = {
+    ...keep,
+    lastName: keep.lastName || absorb.lastName,
+    birthFamilyId: keep.birthFamilyId ?? absorb.birthFamilyId,
+    ...(notes ? { notes } : {}),
+    updatedAt: now(),
+  };
+  const people = raw.people
+    .filter((p) => p.id !== absorbId)
+    .map((p) => (p.id === keepId ? mergedKeep : p));
+
+  return { ...raw, people, unions };
 };
 
 export interface GrowParentInput {

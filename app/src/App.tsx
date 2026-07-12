@@ -12,6 +12,7 @@ import {
   ConfirmResetModal,
   Hint,
   ImportErrorModal,
+  MergePersonModal,
   MergeReportModal,
   Toast,
 } from './ui/Modals';
@@ -68,6 +69,7 @@ export default function App() {
       <Toast />
       <PersonForm />
       <FamilyEditor />
+      <MergePersonModal />
       <MergeReportModal />
       <ImportErrorModal />
       <ConfirmResetModal />

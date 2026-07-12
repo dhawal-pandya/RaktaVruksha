@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 2,
-    "exportedAt": "2026-07-12T14:31:02.051Z"
+    "exportedAt": "2026-07-12T19:19:58.521Z"
   },
   "families": {
     "familyPandya": {
@@ -135,6 +135,10 @@
     "familyChaurasia": {
       "name": "Chaurasia",
       "color": "#5ad8a5"
+    },
+    "familyJoshi_1": {
+      "name": "Joshi",
+      "color": "#9e5ad8"
     }
   },
   "people": [
@@ -829,16 +833,7 @@
       "gender": "male",
       "alive": false,
       "birthFamilyId": "familyPandya",
-      "updatedAt": "2026-07-11T20:23:26.692Z"
-    },
-    {
-      "id": "Shantaben",
-      "firstName": "Shantaben",
-      "lastName": "Pandya",
-      "gender": "female",
-      "alive": false,
-      "birthFamilyId": null,
-      "updatedAt": "2026-07-11T20:23:50.375Z"
+      "updatedAt": "2026-07-12T18:47:25.451Z"
     },
     {
       "id": "Kirit_1",
@@ -2207,6 +2202,294 @@
       "alive": true,
       "birthFamilyId": null,
       "updatedAt": "2026-07-12T14:28:26.269Z"
+    },
+    {
+      "id": "Laxminath",
+      "firstName": "Laxminath",
+      "lastName": "Pathak",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:32:36.213Z"
+    },
+    {
+      "id": "Jadavben_1",
+      "firstName": "Jadavben",
+      "lastName": "Pathak",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-12T18:32:19.165Z"
+    },
+    {
+      "id": "Ratinath",
+      "firstName": "Ratinath",
+      "lastName": "Pathak",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:33:07.547Z"
+    },
+    {
+      "id": "Jethiben",
+      "firstName": "Jethiben",
+      "lastName": "Pathak",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:33:25.381Z"
+    },
+    {
+      "id": "Jadavben_2",
+      "firstName": "Jadavben",
+      "lastName": "Pathak",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:33:37.547Z"
+    },
+    {
+      "id": "Ramannath",
+      "firstName": "Ramannath",
+      "lastName": "Pathak",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:33:49.814Z"
+    },
+    {
+      "id": "Bholanath",
+      "firstName": "Bholanath",
+      "lastName": "Pathak",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:34:06.614Z"
+    },
+    {
+      "id": "Bhalanath",
+      "firstName": "Bhalanath",
+      "lastName": "Pathak",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:34:17.165Z"
+    },
+    {
+      "id": "Natwarlal_2",
+      "firstName": "Natwarlal",
+      "lastName": "Pathak",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:35:15.415Z"
+    },
+    {
+      "id": "Madhuben",
+      "firstName": "Madhuben",
+      "lastName": "Pathak",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-12T18:35:27.515Z"
+    },
+    {
+      "id": "Arun",
+      "firstName": "Arun",
+      "lastName": "Pathak",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:35:45.798Z"
+    },
+    {
+      "id": "Taraben",
+      "firstName": "Taraben",
+      "lastName": "Pathak",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-12T18:36:09.750Z"
+    },
+    {
+      "id": "Jasodaben",
+      "firstName": "Jasodaben",
+      "lastName": "Pathak",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:36:42.932Z"
+    },
+    {
+      "id": "Rupal",
+      "firstName": "Rupal",
+      "lastName": "Pathak",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:36:54.032Z"
+    },
+    {
+      "id": "Dharmendra_1",
+      "firstName": "Dharmendra",
+      "lastName": "Pathak",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:40:57.001Z"
+    },
+    {
+      "id": "Trupti",
+      "firstName": "Trupti",
+      "lastName": "Pathak",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-12T18:41:08.335Z"
+    },
+    {
+      "id": "Savitaben_1",
+      "firstName": "Savitaben",
+      "lastName": "Pathak",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:42:18.118Z"
+    },
+    {
+      "id": "Narayan",
+      "firstName": "Narayan",
+      "lastName": "Joshi",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyJoshi_1",
+      "updatedAt": "2026-07-12T18:42:42.036Z"
+    },
+    {
+      "id": "Niranjan_1",
+      "firstName": "Niranjan",
+      "lastName": "Joshi",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyJoshi_1",
+      "updatedAt": "2026-07-12T18:43:18.235Z"
+    },
+    {
+      "id": "Kumudben",
+      "firstName": "Kumudben",
+      "lastName": "Joshi",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-12T18:43:28.869Z"
+    },
+    {
+      "id": "Pradeep",
+      "firstName": "Pradeep",
+      "lastName": "Joshi",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyJoshi_1",
+      "updatedAt": "2026-07-12T18:43:42.469Z"
+    },
+    {
+      "id": "Rasiklal",
+      "firstName": "Rasiklal",
+      "lastName": "Pathak",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:44:06.019Z"
+    },
+    {
+      "id": "Chandramaniben",
+      "firstName": "Chandramaniben",
+      "lastName": "Pathak",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-12T18:44:20.970Z"
+    },
+    {
+      "id": "Kanubhai",
+      "firstName": "Kanubhai",
+      "lastName": "Pathak",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:45:04.508Z"
+    },
+    {
+      "id": "Kantaben_1",
+      "firstName": "Kantaben",
+      "lastName": "Pathak",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-12T18:45:20.063Z"
+    },
+    {
+      "id": "Shantaben_1",
+      "firstName": "Shantaben",
+      "lastName": "Pandya",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-12T18:45:55.633Z"
+    },
+    {
+      "id": "Hemant",
+      "firstName": "Hemant",
+      "lastName": "Pandya",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPandya",
+      "updatedAt": "2026-07-12T19:18:29.729Z"
+    },
+    {
+      "id": "Dipti_1",
+      "firstName": "Dipti",
+      "lastName": "Pandya",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyPandya",
+      "updatedAt": "2026-07-12T19:18:42.358Z"
+    },
+    {
+      "id": "Sameer",
+      "firstName": "Sameer",
+      "lastName": "Pandya",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPandya",
+      "updatedAt": "2026-07-12T19:18:51.822Z"
+    },
+    {
+      "id": "Hema",
+      "firstName": "Hema",
+      "lastName": "Pandya",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyPandya",
+      "updatedAt": "2026-07-12T19:19:01.240Z"
+    },
+    {
+      "id": "Surendrabhai",
+      "firstName": "Surendrabhai",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-12T19:19:29.861Z"
+    },
+    {
+      "id": "Mandaben",
+      "firstName": "Mandaben",
+      "lastName": "Pandya",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-12T19:19:57.474Z"
     }
   ],
   "unions": [
@@ -2654,7 +2937,7 @@
       "id": "u_kantilal_shantaben",
       "partners": [
         "Kantilal",
-        "Shantaben"
+        "Shantaben_1"
       ],
       "children": [
         "Kirit_1",
@@ -2666,7 +2949,7 @@
       "familyId": "familyPandya",
       "status": "married",
       "order": 1,
-      "updatedAt": "2026-07-11T20:25:10.155Z"
+      "updatedAt": "2026-07-12T19:04:30.198Z"
     },
     {
       "id": "u_vidyaben_thakorlal",
@@ -3455,6 +3738,215 @@
       "status": "married",
       "order": 1,
       "updatedAt": "2026-07-12T14:28:26.270Z"
+    },
+    {
+      "id": "u_laxminath",
+      "partners": [
+        "Laxminath",
+        "Jadavben_1"
+      ],
+      "children": [
+        "Kamalalaxmi",
+        "Savitaben_1",
+        "Rasiklal",
+        "Kanubhai",
+        "Shantaben_1"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPathak",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-12T18:45:55.633Z"
+    },
+    {
+      "id": "u_ratinath",
+      "partners": [
+        "Ratinath"
+      ],
+      "children": [
+        "Jethiben",
+        "Jadavben_2",
+        "Ramannath",
+        "Bholanath",
+        "Bhalanath",
+        "Laxminath"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPathak",
+      "status": "unknown",
+      "order": 1,
+      "updatedAt": "2026-07-12T18:41:46.850Z"
+    },
+    {
+      "id": "u_bhalanath",
+      "partners": [
+        "Bhalanath"
+      ],
+      "children": [
+        "Natwarlal_2"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPathak",
+      "status": "unknown",
+      "order": 1,
+      "updatedAt": "2026-07-12T18:35:15.415Z"
+    },
+    {
+      "id": "u_natwarlal2_madhuben",
+      "partners": [
+        "Natwarlal_2",
+        "Madhuben"
+      ],
+      "children": [
+        "Arun",
+        "Jasodaben"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPathak",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-12T18:36:42.932Z"
+    },
+    {
+      "id": "u_arun_taraben",
+      "partners": [
+        "Arun",
+        "Taraben"
+      ],
+      "children": [
+        "Dharmendra_1"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPathak",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-12T18:40:57.003Z"
+    },
+    {
+      "id": "u_jasodaben",
+      "partners": [
+        "Jasodaben"
+      ],
+      "children": [
+        "Rupal"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPathak",
+      "status": "unknown",
+      "order": 1,
+      "updatedAt": "2026-07-12T18:36:54.032Z"
+    },
+    {
+      "id": "u_dharmendra1_trupti",
+      "partners": [
+        "Dharmendra_1",
+        "Trupti"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyPathak",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-12T18:41:08.335Z"
+    },
+    {
+      "id": "u_savitaben1_narayan",
+      "partners": [
+        "Savitaben_1",
+        "Narayan"
+      ],
+      "children": [
+        "Niranjan_1"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyJoshi_1",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-12T18:43:18.235Z"
+    },
+    {
+      "id": "u_niranjan1_kumudben",
+      "partners": [
+        "Niranjan_1",
+        "Kumudben"
+      ],
+      "children": [
+        "Pradeep"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyJoshi_1",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-12T18:43:42.469Z"
+    },
+    {
+      "id": "u_rasiklal_chandramaniben",
+      "partners": [
+        "Rasiklal",
+        "Chandramaniben"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyPathak",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-12T18:44:20.970Z"
+    },
+    {
+      "id": "u_kanubhai_kantaben1",
+      "partners": [
+        "Kanubhai",
+        "Kantaben_1"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyPathak",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-12T18:45:20.064Z"
+    },
+    {
+      "id": "u_kirit1",
+      "partners": [
+        "Kirit_1"
+      ],
+      "children": [
+        "Hemant",
+        "Dipti_1",
+        "Sameer",
+        "Hema"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPandya",
+      "status": "unknown",
+      "order": 1,
+      "updatedAt": "2026-07-12T19:19:01.240Z"
+    },
+    {
+      "id": "u_ushaben_surendrabhai",
+      "partners": [
+        "Ushaben",
+        "Surendrabhai"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-12T19:19:29.861Z"
+    },
+    {
+      "id": "u_gopaldilip_mandaben",
+      "partners": [
+        "GopalDilip",
+        "Mandaben"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyPandya",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-12T19:19:57.474Z"
     }
   ]
 }

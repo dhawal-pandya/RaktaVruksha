@@ -1,5 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useStore } from '../state/store';
+import { personName } from '../core/types';
+import { mergeBlockReason } from '../core/mutate';
 
 export function MergeReportModal() {
   const report = useStore(s => s.mergeReport);
@@ -132,6 +134,124 @@ export function ConfirmDeleteModal() {
         <footer className="modal-actions">
           <button className="btn btn-subtle" onClick={cancel}>Cancel</button>
           <button className="btn btn-danger" onClick={confirm}>Delete</button>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
+export function MergePersonModal() {
+  const dataset = useStore(s => s.dataset);
+  const raw = useStore(s => s.raw);
+  const keepId = useStore(s => s.mergeKeepId);
+  const cancel = useStore(s => s.cancelMerge);
+  const confirm = useStore(s => s.confirmMerge);
+  const [query, setQuery] = useState('');
+
+  // Reset the picker each time the dialog opens for a different person.
+  useEffect(() => {
+    setQuery('');
+  }, [keepId]);
+
+  const options = useMemo(() => {
+    if (!dataset || !keepId) return [];
+    return dataset.raw.people
+      .filter(p => p.id !== keepId)
+      .map(p => ({ id: p.id, label: `${personName(p)}: ${p.id}` }))
+      .sort((a, b) => a.label.localeCompare(b.label));
+  }, [dataset, keepId]);
+
+  const absorbId = useMemo(
+    () => options.find(o => o.label === query)?.id ?? null,
+    [options, query],
+  );
+
+  if (!keepId || !dataset || !raw) return null;
+  const keep = dataset.people.get(keepId);
+  if (!keep) return null;
+
+  const absorb = absorbId ? dataset.people.get(absorbId) : null;
+  const blocked = absorbId ? mergeBlockReason(raw, keepId, absorbId) : null;
+
+  // What currently hangs off the absorbed person and will move onto the kept one.
+  const spouses = absorbId ? (dataset.spousesOf.get(absorbId) ?? []) : [];
+  const children = absorbId ? (dataset.childrenOf.get(absorbId) ?? []) : [];
+  const parents = absorbId ? (dataset.parentsOf.get(absorbId) ?? []) : [];
+  const nameOf = (id: string) => {
+    const p = dataset.people.get(id);
+    return p ? personName(p) : id;
+  };
+
+  return (
+    <div className="modal-backdrop" onMouseDown={e => e.target === e.currentTarget && cancel()}>
+      <div className="modal panel">
+        <header className="detail-head">
+          <h2 className="detail-name">Merge someone into {personName(keep)}</h2>
+          <button className="btn btn-icon" onClick={cancel} aria-label="Close">×</button>
+        </header>
+
+        <p className="muted">
+          Use this when the same person was entered twice. The person you pick is
+          absorbed into <strong>{personName(keep)}</strong> — their marriages, children and
+          parents move over, and the duplicate record is deleted.
+        </p>
+
+        <label className="field">
+          <span>Duplicate to absorb</span>
+          <input
+            list="rv-merge-people"
+            placeholder="type the duplicate person's name…"
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+            autoFocus
+          />
+          <datalist id="rv-merge-people">
+            {options.map(o => (
+              <option key={o.id} value={o.label} />
+            ))}
+          </datalist>
+        </label>
+
+        {absorb && blocked && <p className="form-error">{blocked}</p>}
+
+        {absorb && !blocked && (
+          <div className="detail-section">
+            <h3>Moving onto {personName(keep)}</h3>
+            {spouses.length + children.length + parents.length === 0 ? (
+              <span className="muted">
+                {personName(absorb)} has no relations to move — the record is just removed.
+              </span>
+            ) : (
+              <>
+                {spouses.length > 0 && (
+                  <div className="children-label">
+                    Marriage{spouses.length > 1 ? 's' : ''}: {spouses.map(s => nameOf(s.id)).join(', ')}
+                  </div>
+                )}
+                {children.length > 0 && (
+                  <div className="children-label">
+                    {children.length} child{children.length > 1 ? 'ren' : ''}: {children.map(c => nameOf(c.id)).join(', ')}
+                  </div>
+                )}
+                {parents.length > 0 && (
+                  <div className="children-label">
+                    Parent{parents.length > 1 ? 's' : ''}: {parents.map(p => nameOf(p.id)).join(', ')}
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        )}
+
+        <footer className="modal-actions">
+          <button className="btn btn-subtle" onClick={cancel}>Cancel</button>
+          <button
+            className="btn btn-danger"
+            disabled={!absorbId || !!blocked}
+            onClick={() => absorbId && confirm(absorbId)}
+          >
+            Merge & delete duplicate
+          </button>
         </footer>
       </div>
     </div>

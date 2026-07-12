@@ -132,7 +132,8 @@ export default function PersonForm() {
   );
   const anchorUnions = form.anchorId ? dataset.unionsOf.get(form.anchorId) ?? [] : [];
   const creatingNew = !existingId;
-  const needsPersonFields = form.mode !== 'spouse' && form.mode !== 'parent' ? true : creatingNew;
+  const picksExisting = form.mode === 'spouse' || form.mode === 'parent' || form.mode === 'child';
+  const needsPersonFields = picksExisting ? creatingNew : true;
   const chosenUnion = unionChoice !== '__newunion__' ? dataset.unions.get(unionChoice) : null;
   const childFamilyLocked = form.mode === 'child' && !adopted && !!chosenUnion;
 
@@ -229,9 +230,9 @@ export default function PersonForm() {
           </button>
         </header>
 
-        {(form.mode === 'spouse' || form.mode === 'parent') && (
+        {picksExisting && (
           <label className="field">
-            <span>{form.mode === 'spouse' ? 'Spouse' : 'Parent'}</span>
+            <span>{form.mode === 'spouse' ? 'Spouse' : form.mode === 'parent' ? 'Parent' : 'Child'}</span>
             <input
               list="rv-people"
               placeholder="type to pick an existing person, or leave empty to create new"

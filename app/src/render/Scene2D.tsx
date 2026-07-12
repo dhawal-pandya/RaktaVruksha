@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef } from 'react';
 import ForceGraph2D, { type ForceGraphMethods } from 'react-force-graph-2d';
-import type { GraphLink, GraphNode } from '../core/types';
+import type { Gender, GraphLink, GraphNode } from '../core/types';
 import { BACKGROUND_COLOR, dimToward, mixHex } from '../core/colors';
 import { computeLayout2d } from '../core/layout2d';
 import { familyView, largestFamily, subgraphForFamily } from '../core/family2d';
@@ -15,6 +15,17 @@ const NODE_R = 6;
 const UNION_R = 2.8;
 const UNION_COLOR = '#4a5468';
 const PATH_COLOR = '#ffd27d';
+// Faint gender hairline on a person node: cool for male, warm for female. Kept
+// low-alpha and thin so it reads as a whisper, never competing with family color.
+const GENDER_STROKE: Record<Gender, string> = { male: '#7aa2c8', female: '#c98fa8' };
+
+// Name sits above the node for men, below for women — matching the 3D view, so a
+// married pair side by side never prints its two names over each other.
+const labelTop = (node: FG2Node, fontSize: number): number => {
+  const yy = node.y ?? 0;
+  const above = node.kind === 'person' && node.gender === 'male';
+  return above ? yy - NODE_R - 2 - fontSize : yy + NODE_R + 2;
+};
 
 const LINK_COLORS: Record<string, string> = {
   married: '#c9a86a',
@@ -97,7 +108,7 @@ export default function Scene2D() {
       if (!text) return;
       const w = ctx.measureText(text).width;
       const cx = node.x ?? 0;
-      const top = (node.y ?? 0) + NODE_R + 2;
+      const top = labelTop(node, fontSize);
       const pad = 2 / globalScale;
       const box: LabelBox = { x0: cx - w / 2 - pad, y0: top - pad, x1: cx + w / 2 + pad, y1: top + fontSize + pad };
       if (!force && boxesOverlap(box, labelBoxes.current)) return;
@@ -132,6 +143,16 @@ export default function Scene2D() {
           ? mixHex(node.color, BACKGROUND_COLOR, 0.35)
           : node.color;
       ctx.fill();
+      if (node.kind === 'person') {
+        // Whisper-thin gender edge, drawn under the ext/glow rings that may replace it.
+        ctx.globalAlpha = op * 0.55;
+        ctx.lineWidth = 0.75 / globalScale;
+        ctx.strokeStyle = GENDER_STROKE[node.gender];
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.globalAlpha = op;
+      }
       if (node.ext && !isUnion) {
         // Dashed ring marks a spouse who belongs to another family (married away).
         ctx.setLineDash([2, 2]);
@@ -173,7 +194,7 @@ export default function Scene2D() {
       if (!node || node.kind !== 'person') continue;
       const w = ctx.measureText(node.short ?? '').width;
       const cx = node.x ?? 0;
-      const top = (node.y ?? 0) + NODE_R + 2;
+      const top = labelTop(node, fontSize);
       const pad = 2 / globalScale;
       labelBoxes.current.push({ x0: cx - w / 2 - pad, y0: top - pad, x1: cx + w / 2 + pad, y1: top + fontSize + pad });
     }

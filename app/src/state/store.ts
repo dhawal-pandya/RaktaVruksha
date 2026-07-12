@@ -22,6 +22,7 @@ import {
   growChild,
   growParent,
   growSpouse,
+  mergePerson,
   moveChildInUnion,
   addPerson,
   updateFamily,
@@ -126,6 +127,8 @@ interface AppState {
   importErrors: string[] | null;
   confirmReset: boolean;
   confirmDelete: string | null;
+  /** Person kept when a "same person" merge dialog is open; the other is absorbed. */
+  mergeKeepId: string | null;
   familyEditorOpen: boolean;
   hintDismissed: boolean;
   toast: string | null;
@@ -150,6 +153,9 @@ interface AppState {
   requestDelete: (id: string) => void;
   cancelDelete: () => void;
   confirmDeleteNow: () => void;
+  openMerge: (keepId: string) => void;
+  cancelMerge: () => void;
+  confirmMerge: (absorbId: string) => void;
   reorderChild: (unionId: string, childId: string, dir: -1 | 1) => void;
   openFamilyEditor: () => void;
   closeFamilyEditor: () => void;
@@ -255,6 +261,7 @@ export const useStore = create<AppState>((set, get) => {
     canFileSave: typeof window !== "undefined" && supportsFileSave(),
     editUnlocked: computeEditUnlocked(),
     confirmDelete: null,
+    mergeKeepId: null,
     familyEditorOpen: false,
     form: null,
     formError: null,
@@ -515,6 +522,7 @@ export const useStore = create<AppState>((set, get) => {
               parentId: anchor!,
               unionId: payload.unionId ?? null,
               adopted: payload.adopted ?? false,
+              existingId: payload.existingId ?? null,
               child: fields,
             });
             raw = r.raw;
@@ -690,8 +698,28 @@ export const useStore = create<AppState>((set, get) => {
       set({ confirmDelete: null, focusId: null, form: null });
     },
 
+    openMerge: (keepId) => set({ mergeKeepId: keepId }),
+    cancelMerge: () => set({ mergeKeepId: null }),
+    confirmMerge: (absorbId) => {
+      const s = get();
+      if (!s.raw || !s.mergeKeepId) return;
+      try {
+        const next = mergePerson(s.raw, s.mergeKeepId, absorbId);
+        const { errors } = validateData(next);
+        if (errors.length) throw new Error(errors[0]);
+        commit(next);
+        set({
+          mergeKeepId: null,
+          focusId: s.mergeKeepId,
+          cameraRequest: cam({ kind: "person", id: s.mergeKeepId }),
+        });
+      } catch (e) {
+        set({ mergeKeepId: null, toast: `Merge failed: ${(e as Error).message}` });
+      }
+    },
+
     lockEditing: () => {
-      set({ editUnlocked: false, form: null, confirmDelete: null });
+      set({ editUnlocked: false, form: null, confirmDelete: null, mergeKeepId: null });
     },
 
     dismissHint: () => {
