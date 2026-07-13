@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 2,
-    "exportedAt": "2026-07-12T20:26:55.378Z"
+    "exportedAt": "2026-07-13T13:10:57.960Z"
   },
   "families": {
     "familyPandya": {
@@ -171,6 +171,34 @@
     "familyRami": {
       "name": "Rami",
       "color": "#c25ad8"
+    },
+    "familySiloo": {
+      "name": "Siloo",
+      "color": "#5a5cd8"
+    },
+    "familyPandit": {
+      "name": "Pandit",
+      "color": "#d85a93"
+    },
+    "familyJoshi_2": {
+      "name": "Joshi",
+      "color": "#c4d85a"
+    },
+    "familyPatel_1": {
+      "name": "Patel",
+      "color": "#5ad864"
+    },
+    "familyPandya_11": {
+      "name": "Pandya",
+      "color": "#5a98d8"
+    },
+    "familyVyas_4": {
+      "name": "Vyas",
+      "color": "#5a78d8"
+    },
+    "familyPathak_1": {
+      "name": "Pathak",
+      "color": "#d85a78"
     }
   },
   "people": [
@@ -369,8 +397,8 @@
       "lastName": "Vyas",
       "gender": "female",
       "alive": false,
-      "birthFamilyId": null,
-      "updatedAt": "2026-07-11T10:02:09.122Z"
+      "birthFamilyId": "familyPandit",
+      "updatedAt": "2026-07-13T12:28:24.621Z"
     },
     {
       "id": "Vijay",
@@ -1431,8 +1459,8 @@
       "lastName": "Pandya",
       "gender": "female",
       "alive": true,
-      "birthFamilyId": null,
-      "updatedAt": "2026-07-12T10:36:28.013Z"
+      "birthFamilyId": "familyPandit",
+      "updatedAt": "2026-07-13T13:08:58.343Z"
     },
     {
       "id": "Vikesh",
@@ -2615,12 +2643,12 @@
     },
     {
       "id": "Sulochana",
-      "firstName": "Sulochana",
+      "firstName": "Kanak",
       "lastName": "Pandya",
       "gender": "female",
-      "alive": true,
+      "alive": false,
       "birthFamilyId": null,
-      "updatedAt": "2026-07-12T19:48:59.681Z"
+      "updatedAt": "2026-07-13T12:12:58.604Z"
     },
     {
       "id": "Parimal",
@@ -3062,6 +3090,420 @@
       "alive": false,
       "birthFamilyId": "familyVyas",
       "updatedAt": "2026-07-12T20:26:54.222Z"
+    },
+    {
+      "id": "Kiran_2",
+      "firstName": "Kiran",
+      "lastName": "Pandya",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-13T12:13:06.520Z"
+    },
+    {
+      "id": "Parth_1",
+      "firstName": "Parth",
+      "lastName": "Pandya",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPandya_1",
+      "updatedAt": "2026-07-13T12:13:16.920Z"
+    },
+    {
+      "id": "Param",
+      "firstName": "Param",
+      "lastName": "Pandya",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPandya_1",
+      "updatedAt": "2026-07-13T12:13:26.036Z"
+    },
+    {
+      "id": "Dolly",
+      "firstName": "Dolly",
+      "lastName": "Pandya",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familySiloo",
+      "updatedAt": "2026-07-13T12:13:41.570Z"
+    },
+    {
+      "id": "Maneklal_1",
+      "firstName": "Maneklal",
+      "lastName": "Pandit",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPandit",
+      "updatedAt": "2026-07-13T12:56:22.175Z"
+    },
+    {
+      "id": "Lalitaben_1",
+      "firstName": "Lalitaben",
+      "lastName": "Pandit",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-13T12:56:33.474Z"
+    },
+    {
+      "id": "Jayantilal_2",
+      "firstName": "Jayantilal",
+      "lastName": "Pandit",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPandit",
+      "updatedAt": "2026-07-13T12:57:18.757Z"
+    },
+    {
+      "id": "Rasiklal_1",
+      "firstName": "Rasiklal",
+      "lastName": "Pandit",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPandit",
+      "updatedAt": "2026-07-13T12:57:27.824Z"
+    },
+    {
+      "id": "Jayprakash",
+      "firstName": "Jayprakash",
+      "lastName": "Pandit",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPandit",
+      "updatedAt": "2026-07-13T12:57:50.042Z"
+    },
+    {
+      "id": "Vijay_1",
+      "firstName": "Vijay",
+      "lastName": "Pandit",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPandit",
+      "updatedAt": "2026-07-13T12:57:57.974Z"
+    },
+    {
+      "id": "Ajay",
+      "firstName": "Ajay",
+      "lastName": "Pandit",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPandit",
+      "updatedAt": "2026-07-13T12:58:04.624Z"
+    },
+    {
+      "id": "Chaya_1",
+      "firstName": "Chaya",
+      "lastName": "Pandit",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyPandit",
+      "updatedAt": "2026-07-13T12:58:13.591Z"
+    },
+    {
+      "id": "Sushilaben",
+      "firstName": "Sushilaben",
+      "lastName": "Pandit",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": "familyPandit",
+      "updatedAt": "2026-07-13T13:00:10.941Z"
+    },
+    {
+      "id": "Krushnaprasad",
+      "firstName": "Krushnaprasad",
+      "lastName": "Joshi",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyJoshi_2",
+      "updatedAt": "2026-07-13T13:00:53.110Z"
+    },
+    {
+      "id": "Ashwin",
+      "firstName": "Ashwin",
+      "lastName": "Joshi",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyJoshi_2",
+      "updatedAt": "2026-07-13T13:01:06.509Z"
+    },
+    {
+      "id": "Sanjay",
+      "firstName": "Sanjay",
+      "lastName": "Joshi",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyJoshi_2",
+      "updatedAt": "2026-07-13T13:01:14.842Z"
+    },
+    {
+      "id": "Suvarna",
+      "firstName": "Suvarna",
+      "lastName": "Joshi",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyJoshi_2",
+      "updatedAt": "2026-07-13T13:01:24.392Z"
+    },
+    {
+      "id": "Aurupa",
+      "firstName": "Anurupa",
+      "lastName": "Joshi",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyJoshi_2",
+      "updatedAt": "2026-07-13T13:05:40.158Z"
+    },
+    {
+      "id": "Meenakshi",
+      "firstName": "Meenakshi",
+      "lastName": "Joshi",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-13T13:01:48.943Z"
+    },
+    {
+      "id": "Priteshkumar",
+      "firstName": "Priteshkumar",
+      "lastName": "Joshi",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyJoshi_2",
+      "updatedAt": "2026-07-13T13:02:00.841Z"
+    },
+    {
+      "id": "Hiteshkumar_1",
+      "firstName": "Hiteshkumar",
+      "lastName": "Joshi",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyJoshi_2",
+      "updatedAt": "2026-07-13T13:02:11.277Z"
+    },
+    {
+      "id": "Rupal_2",
+      "firstName": "Rupalben",
+      "lastName": "Joshi",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-13T13:03:12.460Z"
+    },
+    {
+      "id": "Umang",
+      "firstName": "Umang",
+      "lastName": "Joshi",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyJoshi_2",
+      "updatedAt": "2026-07-13T13:02:34.377Z"
+    },
+    {
+      "id": "Hiten",
+      "firstName": "Hiten",
+      "lastName": "Joshi",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyJoshi_2",
+      "updatedAt": "2026-07-13T13:02:45.543Z"
+    },
+    {
+      "id": "Aabhaben",
+      "firstName": "Aabhaben",
+      "lastName": "Joshi",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-13T13:02:55.427Z"
+    },
+    {
+      "id": "Prapti",
+      "firstName": "Prapti",
+      "lastName": "Joshi",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyJoshi_2",
+      "updatedAt": "2026-07-13T13:03:21.894Z"
+    },
+    {
+      "id": "Ritu",
+      "firstName": "Ritu",
+      "lastName": "Joshi",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyJoshi_2",
+      "updatedAt": "2026-07-13T13:03:30.344Z"
+    },
+    {
+      "id": "Anita",
+      "firstName": "Anita",
+      "lastName": "Joshi",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-13T13:03:42.128Z"
+    },
+    {
+      "id": "Nirali",
+      "firstName": "Nirali",
+      "lastName": "Joshi",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyJoshi_2",
+      "updatedAt": "2026-07-13T13:03:52.361Z"
+    },
+    {
+      "id": "Vivek",
+      "firstName": "Vivek",
+      "lastName": "Joshi",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyJoshi_2",
+      "updatedAt": "2026-07-13T13:04:02.560Z"
+    },
+    {
+      "id": "Nikhilkumar",
+      "firstName": "Nikhilkumar",
+      "lastName": "Patel",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPatel_1",
+      "updatedAt": "2026-07-13T13:04:23.662Z"
+    },
+    {
+      "id": "Tanisha",
+      "firstName": "Tanisha",
+      "lastName": "Patel",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyPatel_1",
+      "updatedAt": "2026-07-13T13:04:37.000Z"
+    },
+    {
+      "id": "Hetansh",
+      "firstName": "Hetansh",
+      "lastName": "Patel",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPatel_1",
+      "updatedAt": "2026-07-13T13:04:44.503Z"
+    },
+    {
+      "id": "Arpita",
+      "firstName": "Arpita",
+      "lastName": "Joshi",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-13T13:04:59.857Z"
+    },
+    {
+      "id": "Ashwinkumar_1",
+      "firstName": "Ashwinkumar",
+      "lastName": "Pandya",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPandya_11",
+      "updatedAt": "2026-07-13T13:05:31.860Z"
+    },
+    {
+      "id": "Ashokkumar",
+      "firstName": "Ashokkumar",
+      "lastName": "Vyas",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyVyas_4",
+      "updatedAt": "2026-07-13T13:05:59.578Z"
+    },
+    {
+      "id": "Venu",
+      "firstName": "Venu",
+      "lastName": "Vyas",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyVyas_4",
+      "updatedAt": "2026-07-13T13:06:11.259Z"
+    },
+    {
+      "id": "Anil",
+      "firstName": "Anil",
+      "lastName": "Pandit",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPandit",
+      "updatedAt": "2026-07-13T13:06:40.227Z"
+    },
+    {
+      "id": "Hasumati_1",
+      "firstName": "Hasumati",
+      "lastName": "Pandit",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-13T13:07:01.494Z"
+    },
+    {
+      "id": "Jaymin",
+      "firstName": "Jaymin",
+      "lastName": "Pandit",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPandit",
+      "updatedAt": "2026-07-13T13:07:22.944Z"
+    },
+    {
+      "id": "Nitaben",
+      "firstName": "Nitaben",
+      "lastName": "Pathak",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyPandit",
+      "updatedAt": "2026-07-13T13:07:40.644Z"
+    },
+    {
+      "id": "Rekha",
+      "firstName": "Rekha",
+      "lastName": "Pandit",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-13T13:09:19.895Z"
+    },
+    {
+      "id": "Ajay_1",
+      "firstName": "Ajay",
+      "lastName": "Pandit",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPandit",
+      "updatedAt": "2026-07-13T13:09:32.109Z"
+    },
+    {
+      "id": "Meena_1",
+      "firstName": "Meena",
+      "lastName": "Pandit",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-13T13:09:40.396Z"
+    },
+    {
+      "id": "Yogesh_2",
+      "firstName": "Yogesh",
+      "lastName": "Pathak",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPathak_1",
+      "updatedAt": "2026-07-13T13:09:53.429Z"
+    },
+    {
+      "id": "Viram",
+      "firstName": "Viram",
+      "lastName": "Pathak",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPathak_1",
+      "updatedAt": "2026-07-13T13:10:08.995Z"
     }
   ],
   "unions": [
@@ -3370,14 +3812,14 @@
         "Savitaben"
       ],
       "children": [
-        "Hansaben",
         "Sumanlal",
+        "Hansaben",
         "Gopal"
       ],
       "adoptedChildren": [],
       "familyId": "familyVyas",
       "status": "married",
-      "updatedAt": "2026-07-12T20:26:54.222Z"
+      "updatedAt": "2026-07-13T13:10:43.478Z"
     },
     {
       "id": "u_snehal",
@@ -3873,7 +4315,7 @@
       "familyId": "familyPandya",
       "status": "married",
       "order": 1,
-      "updatedAt": "2026-07-12T10:37:12.581Z"
+      "updatedAt": "2026-07-13T13:08:58.343Z"
     },
     {
       "id": "u_dakshaben_jawahar",
@@ -4596,7 +5038,7 @@
       "familyId": "familyPandya_1",
       "status": "married",
       "order": 1,
-      "updatedAt": "2026-07-12T19:49:09.376Z"
+      "updatedAt": "2026-07-13T12:12:58.604Z"
     },
     {
       "id": "u_niranjan_niranjana",
@@ -4889,6 +5331,270 @@
       "status": "married",
       "order": 1,
       "updatedAt": "2026-07-12T20:22:04.989Z"
+    },
+    {
+      "id": "u_parimal_kiran2",
+      "partners": [
+        "Parimal",
+        "Kiran_2"
+      ],
+      "children": [
+        "Parth_1",
+        "Param"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPandya_1",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T12:13:26.036Z"
+    },
+    {
+      "id": "u_parth1_dolly",
+      "partners": [
+        "Parth_1",
+        "Dolly"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyPandya_1",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T12:13:41.570Z"
+    },
+    {
+      "id": "u_maneklal1",
+      "partners": [
+        "Maneklal_1",
+        "Lalitaben_1"
+      ],
+      "children": [
+        "Savitaben",
+        "Sushilaben",
+        "Jayantilal_2",
+        "Rasiklal_1"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPandit",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T13:00:19.590Z"
+    },
+    {
+      "id": "u_jayantilal2",
+      "partners": [
+        "Jayantilal_2"
+      ],
+      "children": [
+        "Jayprakash",
+        "Vijay_1",
+        "Ajay",
+        "Chaya_1"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPandit",
+      "status": "unknown",
+      "order": 1,
+      "updatedAt": "2026-07-13T12:58:13.591Z"
+    },
+    {
+      "id": "u_sushilaben_krushnaprasad",
+      "partners": [
+        "Sushilaben",
+        "Krushnaprasad"
+      ],
+      "children": [
+        "Ashwin",
+        "Sanjay",
+        "Suvarna",
+        "Aurupa"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyJoshi_2",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T13:01:38.243Z"
+    },
+    {
+      "id": "u_ashwin_meenakshi",
+      "partners": [
+        "Ashwin",
+        "Meenakshi"
+      ],
+      "children": [
+        "Priteshkumar",
+        "Hiteshkumar_1"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyJoshi_2",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T13:02:11.277Z"
+    },
+    {
+      "id": "u_priteshkumar_rupal2",
+      "partners": [
+        "Priteshkumar",
+        "Rupal_2"
+      ],
+      "children": [
+        "Umang",
+        "Hiten"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyJoshi_2",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T13:03:12.460Z"
+    },
+    {
+      "id": "u_hiteshkumar1_aabhaben",
+      "partners": [
+        "Hiteshkumar_1",
+        "Aabhaben"
+      ],
+      "children": [
+        "Prapti",
+        "Ritu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyJoshi_2",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T13:03:30.344Z"
+    },
+    {
+      "id": "u_sanjay_anita",
+      "partners": [
+        "Sanjay",
+        "Anita"
+      ],
+      "children": [
+        "Nirali",
+        "Vivek"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyJoshi_2",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T13:04:02.560Z"
+    },
+    {
+      "id": "u_nirali_nikhilkumar",
+      "partners": [
+        "Nirali",
+        "Nikhilkumar"
+      ],
+      "children": [
+        "Tanisha",
+        "Hetansh"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPatel_1",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T13:04:44.503Z"
+    },
+    {
+      "id": "u_vivek_arpita",
+      "partners": [
+        "Vivek",
+        "Arpita"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyJoshi_2",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T13:04:59.857Z"
+    },
+    {
+      "id": "u_suvarna_ashwinkumar1",
+      "partners": [
+        "Suvarna",
+        "Ashwinkumar_1"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyPandya_11",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T13:05:31.860Z"
+    },
+    {
+      "id": "u_aurupa_ashokkumar",
+      "partners": [
+        "Aurupa",
+        "Ashokkumar"
+      ],
+      "children": [
+        "Venu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyVyas_4",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T13:06:11.259Z"
+    },
+    {
+      "id": "u_rasiklal1",
+      "partners": [
+        "Rasiklal_1",
+        "Hasumati_1"
+      ],
+      "children": [
+        "Anil",
+        "Jaymin",
+        "Nitaben",
+        "Raginiben"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPandit",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T13:07:52.760Z"
+    },
+    {
+      "id": "u_anil_rekha",
+      "partners": [
+        "Anil",
+        "Rekha"
+      ],
+      "children": [
+        "Ajay_1"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPandit",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T13:09:26.545Z"
+    },
+    {
+      "id": "u_jaymin_meena1",
+      "partners": [
+        "Jaymin",
+        "Meena_1"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyPandit",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T13:09:40.396Z"
+    },
+    {
+      "id": "u_nitaben_yogesh2",
+      "partners": [
+        "Nitaben",
+        "Yogesh_2"
+      ],
+      "children": [
+        "Viram"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPathak_1",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-13T13:10:08.995Z"
     }
   ]
 }

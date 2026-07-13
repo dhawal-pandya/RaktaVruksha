@@ -236,8 +236,13 @@ export const useStore = create<AppState>((set, get) => {
    *  local dev server, when unlocked) write through to family-data.json. */
   const commit = (raw: FamilyDataV2) => {
     set({ ...deriveAll(raw), isDraft: true, dirty: true });
-    void saveDraft(raw);
-    if (DEV && get().editUnlocked) scheduleDevWrite(raw);
+    // In dev, the debounced write-through to family-data.json IS the persistence;
+    // a parallel IndexedDB draft would just shadow the file on the next boot.
+    if (DEV) {
+      if (get().editUnlocked) scheduleDevWrite(raw);
+    } else {
+      void saveDraft(raw);
+    }
   };
 
   return {
@@ -283,7 +288,13 @@ export const useStore = create<AppState>((set, get) => {
       try {
         let raw: FamilyDataV2 | null = null;
         let isDraft = false;
-        if (dataSource === "default") {
+        // In local dev the file is the single source of truth: edits write through
+        // to public/family-data.json, so an IndexedDB draft would only shadow the
+        // file and go stale the moment it changes by any other route (a direct JSON
+        // edit, a script, git). Purge any leftover draft and always load the file.
+        if (DEV) {
+          void clearDraft().catch(() => undefined);
+        } else if (dataSource === "default") {
           const draft = await loadDraft().catch(() => undefined);
           if (draft && validateData(draft).errors.length === 0) {
             raw = draft;
