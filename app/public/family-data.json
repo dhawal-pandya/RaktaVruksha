@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 2,
-    "exportedAt": "2026-07-13T13:26:45.576Z"
+    "exportedAt": "2026-07-13T16:14:19.883Z"
   },
   "families": {
     "familyPandya": {
@@ -2382,12 +2382,12 @@
     },
     {
       "id": "Rupal",
-      "firstName": "Rupal",
+      "firstName": "Rupesh",
       "lastName": "Pathak",
       "gender": "male",
       "alive": false,
       "birthFamilyId": "familyPathak",
-      "updatedAt": "2026-07-12T18:36:54.032Z"
+      "updatedAt": "2026-07-13T16:14:18.546Z"
     },
     {
       "id": "Dharmendra_1",
