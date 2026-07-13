@@ -438,6 +438,9 @@ textarea:focus {
 }
 
 /* relation panel */
+.relation-search {
+  width: 100%;
+}
 .relation-slots {
   display: flex;
   align-items: center;
@@ -504,6 +507,42 @@ textarea:focus {
   transform: translateX(-50%);
   padding: var(--sp-3) var(--sp-4);
   z-index: 60;
+}
+
+/* ---------- footer ---------- */
+.app-footer {
+  position: fixed;
+  bottom: var(--sp-2);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  font-size: var(--fs-sm);
+  color: var(--text-faint);
+  pointer-events: none;
+  white-space: nowrap;
+  transition: color 140ms ease;
+}
+.app-footer.clickable {
+  pointer-events: auto;
+  cursor: pointer;
+}
+.app-footer.clickable:hover {
+  color: var(--text-dim);
+}
+.app-footer.clickable:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+.app-footer a {
+  color: var(--text-dim);
+  pointer-events: auto;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.app-footer a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 /* ---------- modals ---------- */

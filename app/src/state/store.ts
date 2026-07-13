@@ -140,6 +140,7 @@ interface AppState {
   toggleViewMode: () => void;
   clickPerson: (id: string) => void;
   focusPerson: (id: string) => void;
+  showPersonIn3D: (id: string) => void;
   fitView: () => void;
   clearFocus: () => void;
   setLens: (familyId: string | null) => void;
@@ -413,6 +414,21 @@ export const useStore = create<AppState>((set, get) => {
         if (fam && fam !== s.family2d) set({ family2d: fam });
       }
       set({ focusId: id, cameraRequest: cam({ kind: "person", id }) });
+    },
+
+    // Focus a person and make sure they are shown in the 3D view, switching from
+    // 2D if needed and framing the camera once the 3D scene has mounted.
+    showPersonIn3D: (id) => {
+      const s = get();
+      if (!s.dataset || !s.dataset.people.has(id)) return;
+      if (s.viewMode === "3d") {
+        set({ focusId: id, cameraRequest: cam({ kind: "person", id }) });
+        return;
+      }
+      localStorage.setItem("rv-view", "3d");
+      set({ viewMode: "3d", focusId: id });
+      // Wait for the 3D renderer to mount before framing the person.
+      setTimeout(() => set({ cameraRequest: cam({ kind: "person", id }) }), 500);
     },
 
     clearFocus: () => set({ focusId: null }),

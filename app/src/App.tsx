@@ -18,6 +18,43 @@ import {
 } from './ui/Modals';
 import { useStore } from './state/store';
 
+const AUTHOR_ID = 'Dhawal';
+
+function Footer() {
+  const canFocus = useStore(s => !!s.dataset?.people.has(AUTHOR_ID));
+  const showPersonIn3D = useStore(s => s.showPersonIn3D);
+  const focus = () => showPersonIn3D(AUTHOR_ID);
+  return (
+    <footer
+      className={`app-footer ${canFocus ? 'clickable' : ''}`}
+      onClick={canFocus ? focus : undefined}
+      onKeyDown={
+        canFocus
+          ? e => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                focus();
+              }
+            }
+          : undefined
+      }
+      role={canFocus ? 'button' : undefined}
+      tabIndex={canFocus ? 0 : undefined}
+      title={canFocus ? 'Find me on the tree' : undefined}
+    >
+      made with ❤ by{' '}
+      <a
+        href="https://dhawal-pandya.github.io/"
+        target="_blank"
+        rel="noreferrer noopener"
+        onClick={e => e.stopPropagation()}
+      >
+        Dhawal Pandya
+      </a>
+    </footer>
+  );
+}
+
 export default function App() {
   const phase = useStore(s => s.phase);
   const loadError = useStore(s => s.loadError);
@@ -74,6 +111,7 @@ export default function App() {
       <ImportErrorModal />
       <ConfirmResetModal />
       <ConfirmDeleteModal />
+      <Footer />
     </>
   );
 }
