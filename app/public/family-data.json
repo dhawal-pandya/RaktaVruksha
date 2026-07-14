@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 2,
-    "exportedAt": "2026-07-14T08:49:35.904Z"
+    "exportedAt": "2026-07-14T14:09:35.384Z"
   },
   "families": {
     "familyPandya": {
@@ -2396,15 +2396,6 @@
       "updatedAt": "2026-07-12T18:36:09.750Z"
     },
     {
-      "id": "Rupal",
-      "firstName": "Rupesh",
-      "lastName": "Pathak",
-      "gender": "male",
-      "alive": false,
-      "birthFamilyId": "familyPathak",
-      "updatedAt": "2026-07-14T07:12:05.922Z"
-    },
-    {
       "id": "Dharmendra_1",
       "firstName": "Dharmendra (Lalo)",
       "lastName": "Pathak",
@@ -3983,8 +3974,15 @@
   "unions": [
     {
       "id": "u_ajaykumar_harsha",
-      "partners": ["Ajaykumar", "Harsha"],
-      "children": ["Hitarthi", "Manali", "Dhawal"],
+      "partners": [
+        "Ajaykumar",
+        "Harsha"
+      ],
+      "children": [
+        "Hitarthi",
+        "Manali",
+        "Dhawal"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -3992,8 +3990,15 @@
     },
     {
       "id": "u_ambaprasad_kamalalaxmi",
-      "partners": ["Ambaprasad", "Kamalalaxmi"],
-      "children": ["Surulata", "Indukumar", "Arunaben"],
+      "partners": [
+        "Ambaprasad",
+        "Kamalalaxmi"
+      ],
+      "children": [
+        "Surulata",
+        "Indukumar",
+        "Arunaben"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4001,8 +4006,14 @@
     },
     {
       "id": "u_bhavin_riddhi",
-      "partners": ["Bhavin", "Riddhi"],
-      "children": ["Mahek", "Dhruv"],
+      "partners": [
+        "Bhavin",
+        "Riddhi"
+      ],
+      "children": [
+        "Mahek",
+        "Dhruv"
+      ],
       "adoptedChildren": [],
       "familyId": "familyBhatt",
       "status": "married",
@@ -4010,8 +4021,12 @@
     },
     {
       "id": "u_bhudharji",
-      "partners": ["Bhudharji"],
-      "children": ["Haribhai"],
+      "partners": [
+        "Bhudharji"
+      ],
+      "children": [
+        "Haribhai"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "unknown",
@@ -4019,8 +4034,17 @@
     },
     {
       "id": "u_chabilram_manchaba",
-      "partners": ["Chabilram", "Manchaba"],
-      "children": ["Manilal", "Maneklal", "Mangaldas", "Keshavlal", "Jadavben"],
+      "partners": [
+        "Chabilram",
+        "Manchaba"
+      ],
+      "children": [
+        "Manilal",
+        "Maneklal",
+        "Mangaldas",
+        "Keshavlal",
+        "Jadavben"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4028,8 +4052,17 @@
     },
     {
       "id": "u_chanchalba_manilal",
-      "partners": ["Chanchalba", "Manilal"],
-      "children": ["Ambaprasad", "Ramanlal", "Jasuben", "Kantilal", "Vidyaben"],
+      "partners": [
+        "Chanchalba",
+        "Manilal"
+      ],
+      "children": [
+        "Ambaprasad",
+        "Ramanlal",
+        "Jasuben",
+        "Kantilal",
+        "Vidyaben"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4037,8 +4070,12 @@
     },
     {
       "id": "u_dhanji",
-      "partners": ["Dhanji"],
-      "children": ["Bhudharji"],
+      "partners": [
+        "Dhanji"
+      ],
+      "children": [
+        "Bhudharji"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "unknown",
@@ -4046,8 +4083,15 @@
     },
     {
       "id": "u_dilip_smita",
-      "partners": ["Dilip", "Smita"],
-      "children": ["Snehal", "Hetal", "Bhavin"],
+      "partners": [
+        "Dilip",
+        "Smita"
+      ],
+      "children": [
+        "Snehal",
+        "Hetal",
+        "Bhavin"
+      ],
       "adoptedChildren": [],
       "familyId": "familyBhatt",
       "status": "married",
@@ -4055,8 +4099,14 @@
     },
     {
       "id": "u_geetaben_kirit",
-      "partners": ["Geetaben", "Kirit"],
-      "children": ["Heman", "Karan"],
+      "partners": [
+        "Geetaben",
+        "Kirit"
+      ],
+      "children": [
+        "Heman",
+        "Karan"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah",
       "status": "married",
@@ -4064,8 +4114,15 @@
     },
     {
       "id": "u_hansaben_indukumar",
-      "partners": ["Hansaben", "Indukumar"],
-      "children": ["Smita", "Ajaykumar", "Vijay"],
+      "partners": [
+        "Hansaben",
+        "Indukumar"
+      ],
+      "children": [
+        "Smita",
+        "Ajaykumar",
+        "Vijay"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4073,8 +4130,13 @@
     },
     {
       "id": "u_harendrabhai_nayana",
-      "partners": ["Harendrabhai", "Nayana"],
-      "children": ["Jitesh"],
+      "partners": [
+        "Harendrabhai",
+        "Nayana"
+      ],
+      "children": [
+        "Jitesh"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPatel",
       "status": "married",
@@ -4082,8 +4144,12 @@
     },
     {
       "id": "u_haribhai",
-      "partners": ["Haribhai"],
-      "children": ["Makhanji"],
+      "partners": [
+        "Haribhai"
+      ],
+      "children": [
+        "Makhanji"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "unknown",
@@ -4091,8 +4157,13 @@
     },
     {
       "id": "u_heman_hitarthi",
-      "partners": ["Heman", "Hitarthi"],
-      "children": ["Kiaan"],
+      "partners": [
+        "Heman",
+        "Hitarthi"
+      ],
+      "children": [
+        "Kiaan"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah",
       "status": "married",
@@ -4100,8 +4171,13 @@
     },
     {
       "id": "u_hetal_ravi",
-      "partners": ["Hetal", "Ravi"],
-      "children": ["Neev"],
+      "partners": [
+        "Hetal",
+        "Ravi"
+      ],
+      "children": [
+        "Neev"
+      ],
       "adoptedChildren": [],
       "familyId": "familyNayak",
       "status": "married",
@@ -4109,8 +4185,14 @@
     },
     {
       "id": "u_jitesh_manali",
-      "partners": ["Jitesh", "Manali"],
-      "children": ["Reyanshi", "Aditi"],
+      "partners": [
+        "Jitesh",
+        "Manali"
+      ],
+      "children": [
+        "Reyanshi",
+        "Aditi"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPatel",
       "status": "married",
@@ -4118,7 +4200,10 @@
     },
     {
       "id": "u_jyotsna_premshankar",
-      "partners": ["Jyotsna", "Premshankar"],
+      "partners": [
+        "Jyotsna",
+        "Premshankar"
+      ],
       "children": [
         "Jayshree",
         "Harsha",
@@ -4134,8 +4219,17 @@
     },
     {
       "id": "u_kantaben_mohanlal",
-      "partners": ["Kantaben", "Mohanlal"],
-      "children": ["Jyotsna_1", "Kirit", "Anil_1", "Kaushik", "Ila"],
+      "partners": [
+        "Kantaben",
+        "Mohanlal"
+      ],
+      "children": [
+        "Jyotsna_1",
+        "Kirit",
+        "Anil_1",
+        "Kaushik",
+        "Ila"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah",
       "status": "married",
@@ -4143,8 +4237,12 @@
     },
     {
       "id": "u_kevalji",
-      "partners": ["Kevalji"],
-      "children": ["Dhanji"],
+      "partners": [
+        "Kevalji"
+      ],
+      "children": [
+        "Dhanji"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "unknown",
@@ -4152,8 +4250,13 @@
     },
     {
       "id": "u_makhanji_samratba",
-      "partners": ["Makhanji", "Samratba"],
-      "children": ["Chabilram"],
+      "partners": [
+        "Makhanji",
+        "Samratba"
+      ],
+      "children": [
+        "Chabilram"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4161,7 +4264,10 @@
     },
     {
       "id": "u_meena_vijay",
-      "partners": ["Meena", "Vijay"],
+      "partners": [
+        "Meena",
+        "Vijay"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyPandya",
@@ -4170,8 +4276,15 @@
     },
     {
       "id": "u_natwarlal_savitaben",
-      "partners": ["Natwarlal", "Savitaben"],
-      "children": ["Sumanlal", "Hansaben", "Gopal"],
+      "partners": [
+        "Natwarlal",
+        "Savitaben"
+      ],
+      "children": [
+        "Sumanlal",
+        "Hansaben",
+        "Gopal"
+      ],
       "adoptedChildren": [],
       "familyId": "familyVyas",
       "status": "married",
@@ -4179,8 +4292,12 @@
     },
     {
       "id": "u_snehal",
-      "partners": ["Snehal"],
-      "children": ["Vipra"],
+      "partners": [
+        "Snehal"
+      ],
+      "children": [
+        "Vipra"
+      ],
       "adoptedChildren": [],
       "familyId": "familyTrivedi",
       "status": "unknown",
@@ -4188,8 +4305,16 @@
     },
     {
       "id": "u_surulata_harishkumar",
-      "partners": ["Surulata", "Harishkumar"],
-      "children": ["Nalin_1", "Krishnaben", "Sanat", "Bhavnaben"],
+      "partners": [
+        "Surulata",
+        "Harishkumar"
+      ],
+      "children": [
+        "Nalin_1",
+        "Krishnaben",
+        "Sanat",
+        "Bhavnaben"
+      ],
       "adoptedChildren": [],
       "familyId": "familyDixit",
       "status": "married",
@@ -4198,8 +4323,15 @@
     },
     {
       "id": "u_nalin_1_vilas_1",
-      "partners": ["Nalin_1", "Vilas_1"],
-      "children": ["Anup", "Viren", "Uday"],
+      "partners": [
+        "Nalin_1",
+        "Vilas_1"
+      ],
+      "children": [
+        "Anup",
+        "Viren",
+        "Uday"
+      ],
       "adoptedChildren": [],
       "familyId": "familyDixit",
       "status": "married",
@@ -4208,8 +4340,13 @@
     },
     {
       "id": "u_anup_falguni",
-      "partners": ["Anup", "Falguni"],
-      "children": ["Vidhi"],
+      "partners": [
+        "Anup",
+        "Falguni"
+      ],
+      "children": [
+        "Vidhi"
+      ],
       "adoptedChildren": [],
       "familyId": "familyDixit",
       "status": "married",
@@ -4218,8 +4355,13 @@
     },
     {
       "id": "u_uday_sejal_1",
-      "partners": ["Uday", "Sejal_1"],
-      "children": ["Reva"],
+      "partners": [
+        "Uday",
+        "Sejal_1"
+      ],
+      "children": [
+        "Reva"
+      ],
       "adoptedChildren": [],
       "familyId": "familyDixit",
       "status": "married",
@@ -4228,7 +4370,10 @@
     },
     {
       "id": "u_viren_toral",
-      "partners": ["Viren", "Toral"],
+      "partners": [
+        "Viren",
+        "Toral"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyDixit",
@@ -4238,8 +4383,16 @@
     },
     {
       "id": "u_ramanlal_indumatiben",
-      "partners": ["Ramanlal", "Indumatiben"],
-      "children": ["Praful", "Mahesh", "PankajGopal", "Dakshaben"],
+      "partners": [
+        "Ramanlal",
+        "Indumatiben"
+      ],
+      "children": [
+        "Praful",
+        "Mahesh",
+        "PankajGopal",
+        "Dakshaben"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4248,7 +4401,10 @@
     },
     {
       "id": "u_jasuben_jayantilal",
-      "partners": ["Jasuben", "Jayantilal"],
+      "partners": [
+        "Jasuben",
+        "Jayantilal"
+      ],
       "children": [
         "Bhanubhai",
         "Navinbhai",
@@ -4266,8 +4422,16 @@
     },
     {
       "id": "u_kantilal_shantaben",
-      "partners": ["Kantilal", "Shantaben_1"],
-      "children": ["Kirit_1", "Ushaben", "GopalDilip", "Pravinaben"],
+      "partners": [
+        "Kantilal",
+        "Shantaben_1"
+      ],
+      "children": [
+        "Kirit_1",
+        "Ushaben",
+        "GopalDilip",
+        "Pravinaben"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4276,7 +4440,10 @@
     },
     {
       "id": "u_vidyaben_thakorlal",
-      "partners": ["Vidyaben", "Thakorlal"],
+      "partners": [
+        "Vidyaben",
+        "Thakorlal"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": null,
@@ -4286,8 +4453,15 @@
     },
     {
       "id": "u_maneklal_surajben",
-      "partners": ["Maneklal", "Surajben"],
-      "children": ["Laljibhai", "Shantibhai", "Natwarlal_1"],
+      "partners": [
+        "Maneklal",
+        "Surajben"
+      ],
+      "children": [
+        "Laljibhai",
+        "Shantibhai",
+        "Natwarlal_1"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4296,8 +4470,13 @@
     },
     {
       "id": "u_laljibhai_sarojben",
-      "partners": ["Laljibhai", "Sarojben"],
-      "children": ["Kuldeep"],
+      "partners": [
+        "Laljibhai",
+        "Sarojben"
+      ],
+      "children": [
+        "Kuldeep"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4306,8 +4485,12 @@
     },
     {
       "id": "u_natwarlal_1",
-      "partners": ["Natwarlal_1"],
-      "children": ["Sarojben_1"],
+      "partners": [
+        "Natwarlal_1"
+      ],
+      "children": [
+        "Sarojben_1"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "unknown",
@@ -4316,8 +4499,14 @@
     },
     {
       "id": "u_kuldeep_harshaben",
-      "partners": ["Kuldeep", "Harshaben"],
-      "children": ["Smital", "Hiren"],
+      "partners": [
+        "Kuldeep",
+        "Harshaben"
+      ],
+      "children": [
+        "Smital",
+        "Hiren"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4326,8 +4515,16 @@
     },
     {
       "id": "u_keshavlal_laltitaben",
-      "partners": ["Keshavlal", "Laltitaben"],
-      "children": ["MadhukarBabukaka", "Pushkar", "Jagdishbhai", "Sudhaben"],
+      "partners": [
+        "Keshavlal",
+        "Laltitaben"
+      ],
+      "children": [
+        "MadhukarBabukaka",
+        "Pushkar",
+        "Jagdishbhai",
+        "Sudhaben"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4336,8 +4533,15 @@
     },
     {
       "id": "u_sudhaben_nalin",
-      "partners": ["Sudhaben", "Nalin"],
-      "children": ["Aabha", "Bela", "Chaula"],
+      "partners": [
+        "Sudhaben",
+        "Nalin"
+      ],
+      "children": [
+        "Aabha",
+        "Bela",
+        "Chaula"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya_2",
       "status": "married",
@@ -4346,8 +4550,15 @@
     },
     {
       "id": "u_jadavben_shivshankar",
-      "partners": ["Jadavben", "Shivshankar"],
-      "children": ["Thakorlal_1", "Thakorlal_2", "Kamalaben"],
+      "partners": [
+        "Jadavben",
+        "Shivshankar"
+      ],
+      "children": [
+        "Thakorlal_1",
+        "Thakorlal_2",
+        "Kamalaben"
+      ],
       "adoptedChildren": [],
       "familyId": null,
       "status": "married",
@@ -4356,8 +4567,15 @@
     },
     {
       "id": "u_arunaben_ashwinkumar",
-      "partners": ["Arunaben", "Ashwinkumar"],
-      "children": ["Binaben", "Dipikaben", "Sachin"],
+      "partners": [
+        "Arunaben",
+        "Ashwinkumar"
+      ],
+      "children": [
+        "Binaben",
+        "Dipikaben",
+        "Sachin"
+      ],
       "adoptedChildren": [],
       "familyId": "familyDixit_1",
       "status": "married",
@@ -4366,8 +4584,14 @@
     },
     {
       "id": "u_binaben_jyotindra",
-      "partners": ["Binaben", "Jyotindra"],
-      "children": ["Mihir", "Karishma"],
+      "partners": [
+        "Binaben",
+        "Jyotindra"
+      ],
+      "children": [
+        "Mihir",
+        "Karishma"
+      ],
       "adoptedChildren": [],
       "familyId": "familyDave",
       "status": "married",
@@ -4376,8 +4600,14 @@
     },
     {
       "id": "u_dipikaben_deepak",
-      "partners": ["Dipikaben", "Deepak"],
-      "children": ["Vedant", "Mahima"],
+      "partners": [
+        "Dipikaben",
+        "Deepak"
+      ],
+      "children": [
+        "Vedant",
+        "Mahima"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya_3",
       "status": "married",
@@ -4386,7 +4616,10 @@
     },
     {
       "id": "u_vedant_krupa",
-      "partners": ["Vedant", "Krupa"],
+      "partners": [
+        "Vedant",
+        "Krupa"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyPandya_3",
@@ -4396,8 +4629,13 @@
     },
     {
       "id": "u_sachin_gayatri",
-      "partners": ["Sachin", "Gayatri"],
-      "children": ["Ishaan"],
+      "partners": [
+        "Sachin",
+        "Gayatri"
+      ],
+      "children": [
+        "Ishaan"
+      ],
       "adoptedChildren": [],
       "familyId": "familyDixit_1",
       "status": "married",
@@ -4406,8 +4644,17 @@
     },
     {
       "id": "u_praful_veenaben",
-      "partners": ["Praful", "Veenaben"],
-      "children": ["Akshay", "Kalpesh_1", "Vipul", "Tushar", "Pintu"],
+      "partners": [
+        "Praful",
+        "Veenaben"
+      ],
+      "children": [
+        "Akshay",
+        "Kalpesh_1",
+        "Vipul",
+        "Tushar",
+        "Pintu"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4416,8 +4663,13 @@
     },
     {
       "id": "u_pushkar",
-      "partners": ["Pushkar"],
-      "children": ["Samvidha", "Shrota"],
+      "partners": [
+        "Pushkar"
+      ],
+      "children": [
+        "Samvidha",
+        "Shrota"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "unknown",
@@ -4426,8 +4678,13 @@
     },
     {
       "id": "u_smital_vibhuti",
-      "partners": ["Smital", "Vibhuti"],
-      "children": ["Heer"],
+      "partners": [
+        "Smital",
+        "Vibhuti"
+      ],
+      "children": [
+        "Heer"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4436,8 +4693,12 @@
     },
     {
       "id": "u_hiren",
-      "partners": ["Hiren"],
-      "children": ["Rahi"],
+      "partners": [
+        "Hiren"
+      ],
+      "children": [
+        "Rahi"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "unknown",
@@ -4446,8 +4707,15 @@
     },
     {
       "id": "u_mahesh_vilas",
-      "partners": ["Mahesh", "Vilas"],
-      "children": ["Avani", "Ankit", "Ashish"],
+      "partners": [
+        "Mahesh",
+        "Vilas"
+      ],
+      "children": [
+        "Avani",
+        "Ankit",
+        "Ashish"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4456,8 +4724,14 @@
     },
     {
       "id": "u_avani_deven",
-      "partners": ["Avani", "Deven"],
-      "children": ["Keval", "Tirth"],
+      "partners": [
+        "Avani",
+        "Deven"
+      ],
+      "children": [
+        "Keval",
+        "Tirth"
+      ],
       "adoptedChildren": [],
       "familyId": "familyVyas_1",
       "status": "married",
@@ -4466,8 +4740,14 @@
     },
     {
       "id": "u_ankit_sejal",
-      "partners": ["Ankit", "Sejal"],
-      "children": ["Vedant_1", "Ansh"],
+      "partners": [
+        "Ankit",
+        "Sejal"
+      ],
+      "children": [
+        "Vedant_1",
+        "Ansh"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4476,8 +4756,14 @@
     },
     {
       "id": "u_ashish_pavan",
-      "partners": ["Ashish", "Pavan"],
-      "children": ["Shiv", "Navya"],
+      "partners": [
+        "Ashish",
+        "Pavan"
+      ],
+      "children": [
+        "Shiv",
+        "Navya"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4486,8 +4772,14 @@
     },
     {
       "id": "u_pankajgopal_raginiben",
-      "partners": ["PankajGopal", "Raginiben"],
-      "children": ["Vikesh", "Vrajesh"],
+      "partners": [
+        "PankajGopal",
+        "Raginiben"
+      ],
+      "children": [
+        "Vikesh",
+        "Vrajesh"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -4496,7 +4788,10 @@
     },
     {
       "id": "u_dakshaben_jawahar",
-      "partners": ["Dakshaben", "Jawahar"],
+      "partners": [
+        "Dakshaben",
+        "Jawahar"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": null,
@@ -4506,8 +4801,14 @@
     },
     {
       "id": "u_jayshree_chitranjanraju",
-      "partners": ["Jayshree", "ChitranjanRaju"],
-      "children": ["Raunak", "Dewang"],
+      "partners": [
+        "Jayshree",
+        "ChitranjanRaju"
+      ],
+      "children": [
+        "Raunak",
+        "Dewang"
+      ],
       "adoptedChildren": [],
       "familyId": "familyTrivedi_1",
       "status": "married",
@@ -4516,8 +4817,13 @@
     },
     {
       "id": "u_raunak_nidhi",
-      "partners": ["Raunak", "Nidhi"],
-      "children": ["Saanvi"],
+      "partners": [
+        "Raunak",
+        "Nidhi"
+      ],
+      "children": [
+        "Saanvi"
+      ],
       "adoptedChildren": [],
       "familyId": "familyTrivedi_1",
       "status": "married",
@@ -4526,7 +4832,10 @@
     },
     {
       "id": "u_dewang_pooja",
-      "partners": ["Dewang", "Pooja"],
+      "partners": [
+        "Dewang",
+        "Pooja"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyTrivedi_1",
@@ -4536,8 +4845,14 @@
     },
     {
       "id": "u_nainesh_varsha",
-      "partners": ["Nainesh", "Varsha"],
-      "children": ["Swetal", "Bhavin_1"],
+      "partners": [
+        "Nainesh",
+        "Varsha"
+      ],
+      "children": [
+        "Swetal",
+        "Bhavin_1"
+      ],
       "adoptedChildren": [],
       "familyId": "familyThakar",
       "status": "married",
@@ -4546,7 +4861,10 @@
     },
     {
       "id": "u_swetal_anurag",
-      "partners": ["Swetal", "Anurag"],
+      "partners": [
+        "Swetal",
+        "Anurag"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyThakar",
@@ -4556,8 +4874,13 @@
     },
     {
       "id": "u_daksha_alpesh",
-      "partners": ["Daksha", "Alpesh"],
-      "children": ["Harshil"],
+      "partners": [
+        "Daksha",
+        "Alpesh"
+      ],
+      "children": [
+        "Harshil"
+      ],
       "adoptedChildren": [],
       "familyId": "familySeth",
       "status": "married",
@@ -4566,7 +4889,10 @@
     },
     {
       "id": "u_harshil_vidhi1",
-      "partners": ["Harshil", "Vidhi_1"],
+      "partners": [
+        "Harshil",
+        "Vidhi_1"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familySeth",
@@ -4576,8 +4902,14 @@
     },
     {
       "id": "u_amita_himanshu",
-      "partners": ["Amita", "Himanshu"],
-      "children": ["Jeet", "Siddhi"],
+      "partners": [
+        "Amita",
+        "Himanshu"
+      ],
+      "children": [
+        "Jeet",
+        "Siddhi"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya_5",
       "status": "married",
@@ -4586,8 +4918,14 @@
     },
     {
       "id": "u_darshanatina_dharmendra",
-      "partners": ["DarshanaTina", "Dharmendra"],
-      "children": ["Drashti", "Parth"],
+      "partners": [
+        "DarshanaTina",
+        "Dharmendra"
+      ],
+      "children": [
+        "Drashti",
+        "Parth"
+      ],
       "adoptedChildren": [],
       "familyId": "familyVasu",
       "status": "married",
@@ -4596,7 +4934,10 @@
     },
     {
       "id": "u_hargovindas",
-      "partners": ["Hargovindas", "Monghiba"],
+      "partners": [
+        "Hargovindas",
+        "Monghiba"
+      ],
       "children": [
         "Narnarayan",
         "Savita",
@@ -4613,7 +4954,10 @@
     },
     {
       "id": "u_karan_purvi",
-      "partners": ["Karan", "Purvi"],
+      "partners": [
+        "Karan",
+        "Purvi"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyShah",
@@ -4623,8 +4967,15 @@
     },
     {
       "id": "u_narnarayan_jayaba",
-      "partners": ["Narnarayan", "Jayaba"],
-      "children": ["Bharati", "Urmila", "Manoj"],
+      "partners": [
+        "Narnarayan",
+        "Jayaba"
+      ],
+      "children": [
+        "Bharati",
+        "Urmila",
+        "Manoj"
+      ],
       "adoptedChildren": [],
       "familyId": "familyThakar",
       "status": "married",
@@ -4633,8 +4984,13 @@
     },
     {
       "id": "u_manoj_darshana",
-      "partners": ["Manoj", "Darshana"],
-      "children": ["Het"],
+      "partners": [
+        "Manoj",
+        "Darshana"
+      ],
+      "children": [
+        "Het"
+      ],
       "adoptedChildren": [],
       "familyId": "familyThakar",
       "status": "married",
@@ -4643,8 +4999,14 @@
     },
     {
       "id": "u_gunvantrai_hansaben1",
-      "partners": ["Gunvantrai", "Hansaben_1"],
-      "children": ["Rajubhai", "Payal"],
+      "partners": [
+        "Gunvantrai",
+        "Hansaben_1"
+      ],
+      "children": [
+        "Rajubhai",
+        "Payal"
+      ],
       "adoptedChildren": [],
       "familyId": "familyThakar",
       "status": "married",
@@ -4653,8 +5015,15 @@
     },
     {
       "id": "u_bhanubhai1_hasumati",
-      "partners": ["Bhanubhai_1", "Hasumati"],
-      "children": ["Paresh", "Hansa", "Lalit"],
+      "partners": [
+        "Bhanubhai_1",
+        "Hasumati"
+      ],
+      "children": [
+        "Paresh",
+        "Hansa",
+        "Lalit"
+      ],
       "adoptedChildren": [],
       "familyId": "familyThakar",
       "status": "married",
@@ -4663,7 +5032,10 @@
     },
     {
       "id": "u_damodardas",
-      "partners": ["Damodardas", "Shrikanta"],
+      "partners": [
+        "Damodardas",
+        "Shrikanta"
+      ],
       "children": [
         "Manguba",
         "Manjuba",
@@ -4680,8 +5052,14 @@
     },
     {
       "id": "u_manguba_jayantilal1",
-      "partners": ["Manguba", "Jayantilal_1"],
-      "children": ["Suhasbhai", "Rajeshbhai"],
+      "partners": [
+        "Manguba",
+        "Jayantilal_1"
+      ],
+      "children": [
+        "Suhasbhai",
+        "Rajeshbhai"
+      ],
       "adoptedChildren": [],
       "familyId": "familyTrivedi_2",
       "status": "married",
@@ -4690,7 +5068,10 @@
     },
     {
       "id": "u_rajeshbhai_shilpa",
-      "partners": ["Rajeshbhai", "Shilpa"],
+      "partners": [
+        "Rajeshbhai",
+        "Shilpa"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyTrivedi_2",
@@ -4700,8 +5081,12 @@
     },
     {
       "id": "u_suhasbhai",
-      "partners": ["Suhasbhai"],
-      "children": ["Dipesh"],
+      "partners": [
+        "Suhasbhai"
+      ],
+      "children": [
+        "Dipesh"
+      ],
       "adoptedChildren": [],
       "familyId": "familyTrivedi_2",
       "status": "unknown",
@@ -4710,7 +5095,9 @@
     },
     {
       "id": "u_manjuba",
-      "partners": ["Manjuba"],
+      "partners": [
+        "Manjuba"
+      ],
       "children": [
         "Sudhaben_1",
         "Bharat",
@@ -4726,7 +5113,10 @@
     },
     {
       "id": "u_bharat_mandakini",
-      "partners": ["Bharat", "Mandakini"],
+      "partners": [
+        "Bharat",
+        "Mandakini"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyJani",
@@ -4736,8 +5126,17 @@
     },
     {
       "id": "u_kapilaba_kantilal1",
-      "partners": ["Kapilaba", "Kantilal_1"],
-      "children": ["Bharatiben", "Dipti", "Chaya", "Mianesh", "Rakesh"],
+      "partners": [
+        "Kapilaba",
+        "Kantilal_1"
+      ],
+      "children": [
+        "Bharatiben",
+        "Dipti",
+        "Chaya",
+        "Mianesh",
+        "Rakesh"
+      ],
       "adoptedChildren": [],
       "familyId": null,
       "status": "married",
@@ -4746,7 +5145,10 @@
     },
     {
       "id": "u_mianesh_varsha1",
-      "partners": ["Mianesh", "Varsha_1"],
+      "partners": [
+        "Mianesh",
+        "Varsha_1"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyAcharya",
@@ -4756,8 +5158,14 @@
     },
     {
       "id": "u_rakesh_vishakha",
-      "partners": ["Rakesh", "Vishakha"],
-      "children": ["Dhara", "Nitya"],
+      "partners": [
+        "Rakesh",
+        "Vishakha"
+      ],
+      "children": [
+        "Dhara",
+        "Nitya"
+      ],
       "adoptedChildren": [],
       "familyId": "familyAcharya",
       "status": "married",
@@ -4766,8 +5174,16 @@
     },
     {
       "id": "u_krishnakantkisan_jyotika",
-      "partners": ["KrishnakantKisan", "Jyotika"],
-      "children": ["Bhavna", "Shilpa_1", "Sejal_2", "Kiran"],
+      "partners": [
+        "KrishnakantKisan",
+        "Jyotika"
+      ],
+      "children": [
+        "Bhavna",
+        "Shilpa_1",
+        "Sejal_2",
+        "Kiran"
+      ],
       "adoptedChildren": [],
       "familyId": "familyJani",
       "status": "married",
@@ -4776,8 +5192,14 @@
     },
     {
       "id": "u_shilpa1_rajesh",
-      "partners": ["Shilpa_1", "Rajesh"],
-      "children": ["Dhwani", "Simran"],
+      "partners": [
+        "Shilpa_1",
+        "Rajesh"
+      ],
+      "children": [
+        "Dhwani",
+        "Simran"
+      ],
       "adoptedChildren": [],
       "familyId": "familyChaurasia",
       "status": "married",
@@ -4786,8 +5208,14 @@
     },
     {
       "id": "u_pravin_chandrika",
-      "partners": ["Pravin", "Chandrika"],
-      "children": ["Deepak_1", "Mihir_1"],
+      "partners": [
+        "Pravin",
+        "Chandrika"
+      ],
+      "children": [
+        "Deepak_1",
+        "Mihir_1"
+      ],
       "adoptedChildren": [],
       "familyId": "familyJani",
       "status": "married",
@@ -4796,7 +5224,10 @@
     },
     {
       "id": "u_mihir1_pinki",
-      "partners": ["Mihir_1", "Pinki"],
+      "partners": [
+        "Mihir_1",
+        "Pinki"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyJani",
@@ -4806,7 +5237,10 @@
     },
     {
       "id": "u_laxminath",
-      "partners": ["Laxminath", "Jadavben_1"],
+      "partners": [
+        "Laxminath",
+        "Jadavben_1"
+      ],
       "children": [
         "Kamalalaxmi",
         "Savitaben_1",
@@ -4822,7 +5256,9 @@
     },
     {
       "id": "u_ratinath",
-      "partners": ["Ratinath"],
+      "partners": [
+        "Ratinath"
+      ],
       "children": [
         "Jethiben",
         "Jadavben_2",
@@ -4839,8 +5275,12 @@
     },
     {
       "id": "u_bhalanath",
-      "partners": ["Bhalanath"],
-      "children": ["Natwarlal_2"],
+      "partners": [
+        "Bhalanath"
+      ],
+      "children": [
+        "Natwarlal_2"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPathak",
       "status": "unknown",
@@ -4849,8 +5289,13 @@
     },
     {
       "id": "u_natwarlal2_madhuben",
-      "partners": ["Natwarlal_2", "Madhuben"],
-      "children": ["Arun"],
+      "partners": [
+        "Natwarlal_2",
+        "Madhuben"
+      ],
+      "children": [
+        "Arun"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPathak",
       "status": "married",
@@ -4859,8 +5304,13 @@
     },
     {
       "id": "u_arun_taraben",
-      "partners": ["Arun", "Taraben"],
-      "children": ["Dharmendra_1"],
+      "partners": [
+        "Arun",
+        "Taraben"
+      ],
+      "children": [
+        "Dharmendra_1"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPathak",
       "status": "married",
@@ -4869,7 +5319,10 @@
     },
     {
       "id": "u_dharmendra1_trupti",
-      "partners": ["Dharmendra_1", "Trupti"],
+      "partners": [
+        "Dharmendra_1",
+        "Trupti"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyPathak",
@@ -4879,8 +5332,13 @@
     },
     {
       "id": "u_savitaben1_narayan",
-      "partners": ["Savitaben_1", "Narayan"],
-      "children": ["Niranjan_1"],
+      "partners": [
+        "Savitaben_1",
+        "Narayan"
+      ],
+      "children": [
+        "Niranjan_1"
+      ],
       "adoptedChildren": [],
       "familyId": "familyJoshi_1",
       "status": "married",
@@ -4889,8 +5347,13 @@
     },
     {
       "id": "u_niranjan1_kumudben",
-      "partners": ["Niranjan_1", "Kumudben"],
-      "children": ["Pradeep"],
+      "partners": [
+        "Niranjan_1",
+        "Kumudben"
+      ],
+      "children": [
+        "Pradeep"
+      ],
       "adoptedChildren": [],
       "familyId": "familyJoshi_1",
       "status": "married",
@@ -4899,7 +5362,10 @@
     },
     {
       "id": "u_rasiklal_chandramaniben",
-      "partners": ["Rasiklal", "Chandramaniben"],
+      "partners": [
+        "Rasiklal",
+        "Chandramaniben"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyPathak",
@@ -4909,8 +5375,15 @@
     },
     {
       "id": "u_kanubhai_kantaben1",
-      "partners": ["Kanubhai", "Kantaben_1"],
-      "children": ["Jayendra", "Arunaben_1", "Pratimaben"],
+      "partners": [
+        "Kanubhai",
+        "Kantaben_1"
+      ],
+      "children": [
+        "Jayendra",
+        "Arunaben_1",
+        "Pratimaben"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPathak",
       "status": "married",
@@ -4919,8 +5392,15 @@
     },
     {
       "id": "u_kirit1",
-      "partners": ["Kirit_1"],
-      "children": ["Hemant", "Dipti_1", "Sameer", "Hema"],
+      "partners": [
+        "Kirit_1"
+      ],
+      "children": [
+        "Hemant",
+        "Dipti_1",
+        "Sameer",
+        "Hema"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "unknown",
@@ -4929,7 +5409,10 @@
     },
     {
       "id": "u_ushaben_surendrabhai",
-      "partners": ["Ushaben", "Surendrabhai"],
+      "partners": [
+        "Ushaben",
+        "Surendrabhai"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": null,
@@ -4939,7 +5422,10 @@
     },
     {
       "id": "u_gopaldilip_mandaben",
-      "partners": ["GopalDilip", "Mandaben"],
+      "partners": [
+        "GopalDilip",
+        "Mandaben"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyPandya",
@@ -4949,8 +5435,14 @@
     },
     {
       "id": "u_jagdishbhai",
-      "partners": ["Jagdishbhai"],
-      "children": ["Hariprasad", "Ipsa", "Lipsa"],
+      "partners": [
+        "Jagdishbhai"
+      ],
+      "children": [
+        "Hariprasad",
+        "Ipsa",
+        "Lipsa"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "unknown",
@@ -4959,8 +5451,13 @@
     },
     {
       "id": "u_thakorlal2_lalitaben",
-      "partners": ["Thakorlal_2", "Lalitaben"],
-      "children": ["Rajendrakumar"],
+      "partners": [
+        "Thakorlal_2",
+        "Lalitaben"
+      ],
+      "children": [
+        "Rajendrakumar"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya_6",
       "status": "married",
@@ -4969,8 +5466,13 @@
     },
     {
       "id": "u_kamalaben_bhanushankar",
-      "partners": ["Kamalaben", "Bhanushankar"],
-      "children": ["Mandaben"],
+      "partners": [
+        "Kamalaben",
+        "Bhanushankar"
+      ],
+      "children": [
+        "Mandaben"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya_6",
       "status": "married",
@@ -4979,8 +5481,13 @@
     },
     {
       "id": "u_bhanubhai_sulochana",
-      "partners": ["Bhanubhai", "Sulochana"],
-      "children": ["Parimal"],
+      "partners": [
+        "Bhanubhai",
+        "Sulochana"
+      ],
+      "children": [
+        "Parimal"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya_1",
       "status": "married",
@@ -4989,8 +5496,14 @@
     },
     {
       "id": "u_niranjan_niranjana",
-      "partners": ["Niranjan", "Niranjana"],
-      "children": ["Sameer_1", "Nimisha"],
+      "partners": [
+        "Niranjan",
+        "Niranjana"
+      ],
+      "children": [
+        "Sameer_1",
+        "Nimisha"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya_1",
       "status": "married",
@@ -4999,7 +5512,10 @@
     },
     {
       "id": "u_sarmistha_yogesh",
-      "partners": ["Sarmistha", "Yogesh"],
+      "partners": [
+        "Sarmistha",
+        "Yogesh"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": null,
@@ -5009,8 +5525,12 @@
     },
     {
       "id": "u_vasudev",
-      "partners": ["Vasudev"],
-      "children": ["Kuntal"],
+      "partners": [
+        "Vasudev"
+      ],
+      "children": [
+        "Kuntal"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya_1",
       "status": "unknown",
@@ -5019,7 +5539,10 @@
     },
     {
       "id": "u_karishma_kandarp",
-      "partners": ["Karishma", "Kandarp"],
+      "partners": [
+        "Karishma",
+        "Kandarp"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyVyas_2",
@@ -5029,8 +5552,15 @@
     },
     {
       "id": "u_jayendra_jaybalaba",
-      "partners": ["Jayendra", "Jaybalaba"],
-      "children": ["Yogesh_1", "Manishaben", "Kalpesh"],
+      "partners": [
+        "Jayendra",
+        "Jaybalaba"
+      ],
+      "children": [
+        "Yogesh_1",
+        "Manishaben",
+        "Kalpesh"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPathak",
       "status": "married",
@@ -5039,7 +5569,10 @@
     },
     {
       "id": "u_arunaben1_harshad",
-      "partners": ["Arunaben_1", "Harshad"],
+      "partners": [
+        "Arunaben_1",
+        "Harshad"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyPandya_8",
@@ -5049,8 +5582,15 @@
     },
     {
       "id": "u_pratimaben_devendrakumar",
-      "partners": ["Pratimaben", "Devendrakumar"],
-      "children": ["Darshan", "Trupti_1", "Kiran_1"],
+      "partners": [
+        "Pratimaben",
+        "Devendrakumar"
+      ],
+      "children": [
+        "Darshan",
+        "Trupti_1",
+        "Kiran_1"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya_9",
       "status": "married",
@@ -5059,7 +5599,10 @@
     },
     {
       "id": "u_darshan_rupal1",
-      "partners": ["Darshan", "Rupal_1"],
+      "partners": [
+        "Darshan",
+        "Rupal_1"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyPandya_9",
@@ -5069,8 +5612,13 @@
     },
     {
       "id": "u_yogesh1_manishaben1",
-      "partners": ["Yogesh_1", "Manishaben_1"],
-      "children": ["Saket"],
+      "partners": [
+        "Yogesh_1",
+        "Manishaben_1"
+      ],
+      "children": [
+        "Saket"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPathak",
       "status": "married",
@@ -5079,8 +5627,13 @@
     },
     {
       "id": "u_saket_bhakti",
-      "partners": ["Saket", "Bhakti"],
-      "children": ["Daivik"],
+      "partners": [
+        "Saket",
+        "Bhakti"
+      ],
+      "children": [
+        "Daivik"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPathak",
       "status": "married",
@@ -5089,8 +5642,13 @@
     },
     {
       "id": "u_manishaben_amrishbhai",
-      "partners": ["Manishaben", "Amrishbhai"],
-      "children": ["Harsh"],
+      "partners": [
+        "Manishaben",
+        "Amrishbhai"
+      ],
+      "children": [
+        "Harsh"
+      ],
       "adoptedChildren": [],
       "familyId": "familyVyas_3",
       "status": "married",
@@ -5099,8 +5657,14 @@
     },
     {
       "id": "u_kalpesh_kuntal",
-      "partners": ["Kalpesh", "Kuntal"],
-      "children": ["Kinjal", "Jinesh"],
+      "partners": [
+        "Kalpesh",
+        "Kuntal"
+      ],
+      "children": [
+        "Kinjal",
+        "Jinesh"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPathak",
       "status": "married",
@@ -5109,8 +5673,13 @@
     },
     {
       "id": "u_vipul_malini",
-      "partners": ["Vipul", "Malini"],
-      "children": ["Bhishma"],
+      "partners": [
+        "Vipul",
+        "Malini"
+      ],
+      "children": [
+        "Bhishma"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya",
       "status": "married",
@@ -5119,7 +5688,10 @@
     },
     {
       "id": "u_tushar_rita",
-      "partners": ["Tushar", "Rita"],
+      "partners": [
+        "Tushar",
+        "Rita"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyPandya",
@@ -5129,8 +5701,12 @@
     },
     {
       "id": "u_laljibhai1",
-      "partners": ["Laljibhai_1"],
-      "children": ["Natwarlal"],
+      "partners": [
+        "Laljibhai_1"
+      ],
+      "children": [
+        "Natwarlal"
+      ],
       "adoptedChildren": [],
       "familyId": "familyVyas",
       "status": "unknown",
@@ -5139,8 +5715,14 @@
     },
     {
       "id": "u_sumanlal_indiraben",
-      "partners": ["Sumanlal", "Indiraben"],
-      "children": ["Geetaben_1", "Kalpanaben"],
+      "partners": [
+        "Sumanlal",
+        "Indiraben"
+      ],
+      "children": [
+        "Geetaben_1",
+        "Kalpanaben"
+      ],
       "adoptedChildren": [],
       "familyId": "familyVyas",
       "status": "married",
@@ -5149,8 +5731,15 @@
     },
     {
       "id": "u_geetaben1_rajendrakumar",
-      "partners": ["Geetaben_1", "Rajendrakumar"],
-      "children": ["Nehaben", "Avniben", "Boski"],
+      "partners": [
+        "Geetaben_1",
+        "Rajendrakumar"
+      ],
+      "children": [
+        "Nehaben",
+        "Avniben",
+        "Boski"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya_6",
       "status": "married",
@@ -5159,7 +5748,10 @@
     },
     {
       "id": "u_nehaben_hiteshkumar",
-      "partners": ["Nehaben", "Hiteshkumar"],
+      "partners": [
+        "Nehaben",
+        "Hiteshkumar"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyPandya_10",
@@ -5169,8 +5761,13 @@
     },
     {
       "id": "u_boski_bharatkumar",
-      "partners": ["Boski", "Bharatkumar"],
-      "children": ["Maitri"],
+      "partners": [
+        "Boski",
+        "Bharatkumar"
+      ],
+      "children": [
+        "Maitri"
+      ],
       "adoptedChildren": [],
       "familyId": "familyRami",
       "status": "married",
@@ -5179,8 +5776,14 @@
     },
     {
       "id": "u_parimal_kiran2",
-      "partners": ["Parimal", "Kiran_2"],
-      "children": ["Parth_1", "Param"],
+      "partners": [
+        "Parimal",
+        "Kiran_2"
+      ],
+      "children": [
+        "Parth_1",
+        "Param"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandya_1",
       "status": "married",
@@ -5189,7 +5792,10 @@
     },
     {
       "id": "u_parth1_dolly",
-      "partners": ["Parth_1", "Dolly"],
+      "partners": [
+        "Parth_1",
+        "Dolly"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyPandya_1",
@@ -5199,8 +5805,16 @@
     },
     {
       "id": "u_maneklal1",
-      "partners": ["Maneklal_1", "Lalitaben_1"],
-      "children": ["Savitaben", "Sushilaben", "Jayantilal_2", "Rasiklal_1"],
+      "partners": [
+        "Maneklal_1",
+        "Lalitaben_1"
+      ],
+      "children": [
+        "Savitaben",
+        "Sushilaben",
+        "Jayantilal_2",
+        "Rasiklal_1"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandit",
       "status": "married",
@@ -5209,8 +5823,15 @@
     },
     {
       "id": "u_jayantilal2",
-      "partners": ["Jayantilal_2"],
-      "children": ["Jayprakash", "Vijay_1", "Ajay", "Chaya_1"],
+      "partners": [
+        "Jayantilal_2"
+      ],
+      "children": [
+        "Jayprakash",
+        "Vijay_1",
+        "Ajay",
+        "Chaya_1"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandit",
       "status": "unknown",
@@ -5219,8 +5840,16 @@
     },
     {
       "id": "u_sushilaben_krushnaprasad",
-      "partners": ["Sushilaben", "Krushnaprasad"],
-      "children": ["Ashwin", "Sanjay", "Suvarna", "Aurupa"],
+      "partners": [
+        "Sushilaben",
+        "Krushnaprasad"
+      ],
+      "children": [
+        "Ashwin",
+        "Sanjay",
+        "Suvarna",
+        "Aurupa"
+      ],
       "adoptedChildren": [],
       "familyId": "familyJoshi_2",
       "status": "married",
@@ -5229,8 +5858,14 @@
     },
     {
       "id": "u_ashwin_meenakshi",
-      "partners": ["Ashwin", "Meenakshi"],
-      "children": ["Priteshkumar", "Hiteshkumar_1"],
+      "partners": [
+        "Ashwin",
+        "Meenakshi"
+      ],
+      "children": [
+        "Priteshkumar",
+        "Hiteshkumar_1"
+      ],
       "adoptedChildren": [],
       "familyId": "familyJoshi_2",
       "status": "married",
@@ -5239,8 +5874,14 @@
     },
     {
       "id": "u_priteshkumar_rupal2",
-      "partners": ["Priteshkumar", "Rupal_2"],
-      "children": ["Umang", "Hiten"],
+      "partners": [
+        "Priteshkumar",
+        "Rupal_2"
+      ],
+      "children": [
+        "Umang",
+        "Hiten"
+      ],
       "adoptedChildren": [],
       "familyId": "familyJoshi_2",
       "status": "married",
@@ -5249,8 +5890,14 @@
     },
     {
       "id": "u_hiteshkumar1_aabhaben",
-      "partners": ["Hiteshkumar_1", "Aabhaben"],
-      "children": ["Prapti", "Ritu"],
+      "partners": [
+        "Hiteshkumar_1",
+        "Aabhaben"
+      ],
+      "children": [
+        "Prapti",
+        "Ritu"
+      ],
       "adoptedChildren": [],
       "familyId": "familyJoshi_2",
       "status": "married",
@@ -5259,8 +5906,14 @@
     },
     {
       "id": "u_sanjay_anita",
-      "partners": ["Sanjay", "Anita"],
-      "children": ["Nirali", "Vivek"],
+      "partners": [
+        "Sanjay",
+        "Anita"
+      ],
+      "children": [
+        "Nirali",
+        "Vivek"
+      ],
       "adoptedChildren": [],
       "familyId": "familyJoshi_2",
       "status": "married",
@@ -5269,8 +5922,14 @@
     },
     {
       "id": "u_nirali_nikhilkumar",
-      "partners": ["Nirali", "Nikhilkumar"],
-      "children": ["Tanisha", "Hetansh"],
+      "partners": [
+        "Nirali",
+        "Nikhilkumar"
+      ],
+      "children": [
+        "Tanisha",
+        "Hetansh"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPatel_1",
       "status": "married",
@@ -5279,7 +5938,10 @@
     },
     {
       "id": "u_vivek_arpita",
-      "partners": ["Vivek", "Arpita"],
+      "partners": [
+        "Vivek",
+        "Arpita"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyJoshi_2",
@@ -5289,7 +5951,10 @@
     },
     {
       "id": "u_suvarna_ashwinkumar1",
-      "partners": ["Suvarna", "Ashwinkumar_1"],
+      "partners": [
+        "Suvarna",
+        "Ashwinkumar_1"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyPandya_11",
@@ -5299,8 +5964,13 @@
     },
     {
       "id": "u_aurupa_ashokkumar",
-      "partners": ["Aurupa", "Ashokkumar"],
-      "children": ["Venu"],
+      "partners": [
+        "Aurupa",
+        "Ashokkumar"
+      ],
+      "children": [
+        "Venu"
+      ],
       "adoptedChildren": [],
       "familyId": "familyVyas_4",
       "status": "married",
@@ -5309,8 +5979,16 @@
     },
     {
       "id": "u_rasiklal1",
-      "partners": ["Rasiklal_1", "Hasumati_1"],
-      "children": ["Anil", "Jaymin", "Nitaben", "Raginiben"],
+      "partners": [
+        "Rasiklal_1",
+        "Hasumati_1"
+      ],
+      "children": [
+        "Anil",
+        "Jaymin",
+        "Nitaben",
+        "Raginiben"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandit",
       "status": "married",
@@ -5319,8 +5997,13 @@
     },
     {
       "id": "u_anil_rekha",
-      "partners": ["Anil", "Rekha"],
-      "children": ["Ajay_1"],
+      "partners": [
+        "Anil",
+        "Rekha"
+      ],
+      "children": [
+        "Ajay_1"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPandit",
       "status": "married",
@@ -5329,7 +6012,10 @@
     },
     {
       "id": "u_jaymin_meena1",
-      "partners": ["Jaymin", "Meena_1"],
+      "partners": [
+        "Jaymin",
+        "Meena_1"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyPandit",
@@ -5339,8 +6025,13 @@
     },
     {
       "id": "u_nitaben_yogesh2",
-      "partners": ["Nitaben", "Yogesh_2"],
-      "children": ["Viram"],
+      "partners": [
+        "Nitaben",
+        "Yogesh_2"
+      ],
+      "children": [
+        "Viram"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPathak_1",
       "status": "married",
@@ -5349,8 +6040,13 @@
     },
     {
       "id": "u_arun_jasodaben",
-      "partners": ["Arun", "Jasodaben"],
-      "children": ["Rupesh"],
+      "partners": [
+        "Arun",
+        "Jasodaben"
+      ],
+      "children": [
+        "Rupesh"
+      ],
       "adoptedChildren": [],
       "familyId": "familyPathak",
       "status": "married",
@@ -5359,8 +6055,15 @@
     },
     {
       "id": "u_jyotsna1_ashok",
-      "partners": ["Jyotsna_1", "Ashok"],
-      "children": ["Nilam", "Vimal", "Tejal"],
+      "partners": [
+        "Jyotsna_1",
+        "Ashok"
+      ],
+      "children": [
+        "Nilam",
+        "Vimal",
+        "Tejal"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah_2",
       "status": "married",
@@ -5369,8 +6072,13 @@
     },
     {
       "id": "u_anil1_nila",
-      "partners": ["Anil_1", "Nila"],
-      "children": ["Sonal"],
+      "partners": [
+        "Anil_1",
+        "Nila"
+      ],
+      "children": [
+        "Sonal"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah",
       "status": "married",
@@ -5379,8 +6087,14 @@
     },
     {
       "id": "u_sonal_nishant",
-      "partners": ["Sonal", "Nishant"],
-      "children": ["Sarth", "Anvit"],
+      "partners": [
+        "Sonal",
+        "Nishant"
+      ],
+      "children": [
+        "Sarth",
+        "Anvit"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShirke",
       "status": "married",
@@ -5389,8 +6103,13 @@
     },
     {
       "id": "u_kaushik_nayana1",
-      "partners": ["Kaushik", "Nayana_1"],
-      "children": ["Ridhesh"],
+      "partners": [
+        "Kaushik",
+        "Nayana_1"
+      ],
+      "children": [
+        "Ridhesh"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah",
       "status": "married",
@@ -5399,7 +6118,10 @@
     },
     {
       "id": "u_ridhesh_srishti",
-      "partners": ["Ridhesh", "Srishti"],
+      "partners": [
+        "Ridhesh",
+        "Srishti"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyShah",
@@ -5409,8 +6131,13 @@
     },
     {
       "id": "u_ila_gaurang",
-      "partners": ["Ila", "Gaurang"],
-      "children": ["Abhishek"],
+      "partners": [
+        "Ila",
+        "Gaurang"
+      ],
+      "children": [
+        "Abhishek"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah_3",
       "status": "married",
@@ -5419,8 +6146,14 @@
     },
     {
       "id": "u_bhaichandbhai",
-      "partners": ["Bhaichandbhai"],
-      "children": ["Mohanlal", "Maganlal", "Bhagwanbhai"],
+      "partners": [
+        "Bhaichandbhai"
+      ],
+      "children": [
+        "Mohanlal",
+        "Maganlal",
+        "Bhagwanbhai"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah",
       "status": "unknown",
@@ -5429,8 +6162,14 @@
     },
     {
       "id": "u_maganlal",
-      "partners": ["Maganlal"],
-      "children": ["Vijay_2", "Dharmendra_2", "Prafulla"],
+      "partners": [
+        "Maganlal"
+      ],
+      "children": [
+        "Vijay_2",
+        "Dharmendra_2",
+        "Prafulla"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah",
       "status": "unknown",
@@ -5439,8 +6178,13 @@
     },
     {
       "id": "u_vijay2_manisha",
-      "partners": ["Vijay_2", "Manisha"],
-      "children": ["Krunal"],
+      "partners": [
+        "Vijay_2",
+        "Manisha"
+      ],
+      "children": [
+        "Krunal"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah",
       "status": "married",
@@ -5449,8 +6193,13 @@
     },
     {
       "id": "u_krunal_pooja1",
-      "partners": ["Krunal", "Pooja_1"],
-      "children": ["Akaay"],
+      "partners": [
+        "Krunal",
+        "Pooja_1"
+      ],
+      "children": [
+        "Akaay"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah",
       "status": "married",
@@ -5459,8 +6208,13 @@
     },
     {
       "id": "u_dharmendra2_mala",
-      "partners": ["Dharmendra_2", "Mala"],
-      "children": ["Gaurang_1"],
+      "partners": [
+        "Dharmendra_2",
+        "Mala"
+      ],
+      "children": [
+        "Gaurang_1"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah",
       "status": "married",
@@ -5469,7 +6223,10 @@
     },
     {
       "id": "u_gaurang1_hemali",
-      "partners": ["Gaurang_1", "Hemali"],
+      "partners": [
+        "Gaurang_1",
+        "Hemali"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyShah",
@@ -5479,8 +6236,14 @@
     },
     {
       "id": "u_bhagwanbhai_nirmalabennimu",
-      "partners": ["Bhagwanbhai", "NirmalabenNimu"],
-      "children": ["Ashaben", "Ilesh"],
+      "partners": [
+        "Bhagwanbhai",
+        "NirmalabenNimu"
+      ],
+      "children": [
+        "Ashaben",
+        "Ilesh"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah",
       "status": "married",
@@ -5489,7 +6252,10 @@
     },
     {
       "id": "u_ilesh_rashmi",
-      "partners": ["Ilesh", "Rashmi"],
+      "partners": [
+        "Ilesh",
+        "Rashmi"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyShah",
@@ -5499,8 +6265,13 @@
     },
     {
       "id": "u_nilam_ketan",
-      "partners": ["Nilam", "Ketan"],
-      "children": ["Harsh_1"],
+      "partners": [
+        "Nilam",
+        "Ketan"
+      ],
+      "children": [
+        "Harsh_1"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah_4",
       "status": "married",
@@ -5509,7 +6280,10 @@
     },
     {
       "id": "u_tejal_nirav",
-      "partners": ["Tejal", "Nirav"],
+      "partners": [
+        "Tejal",
+        "Nirav"
+      ],
       "children": [],
       "adoptedChildren": [],
       "familyId": "familyShah_4",
@@ -5519,8 +6293,14 @@
     },
     {
       "id": "u_vimal_kajal",
-      "partners": ["Vimal", "Kajal"],
-      "children": ["Veer", "Anushree"],
+      "partners": [
+        "Vimal",
+        "Kajal"
+      ],
+      "children": [
+        "Veer",
+        "Anushree"
+      ],
       "adoptedChildren": [],
       "familyId": "familyShah_2",
       "status": "married",
@@ -5529,8 +6309,17 @@
     },
     {
       "id": "u_brazil",
-      "partners": ["Brazil", "Benita"],
-      "children": ["Leena", "Agnus", "JohnJohnny", "Geetaben", "Thomas"],
+      "partners": [
+        "Brazil",
+        "Benita"
+      ],
+      "children": [
+        "Leena",
+        "Agnus",
+        "JohnJohnny",
+        "Geetaben",
+        "Thomas"
+      ],
       "adoptedChildren": [],
       "familyId": "familyDsouza",
       "status": "married",
@@ -5539,8 +6328,13 @@
     },
     {
       "id": "u_agnus_norbert",
-      "partners": ["Agnus", "Norbert"],
-      "children": ["Stalin"],
+      "partners": [
+        "Agnus",
+        "Norbert"
+      ],
+      "children": [
+        "Stalin"
+      ],
       "adoptedChildren": [],
       "familyId": "familyDsa",
       "status": "married",
