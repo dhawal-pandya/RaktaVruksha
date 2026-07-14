@@ -36,24 +36,18 @@ import type { FamilyRecord } from "../core/types";
 // this URL param each load — never persisted — so the app defaults to a plain
 // viewing platform for anyone without the link.
 const EDIT_KEY = "durga";
+// Editing exists only on the local dev server, where changes write through to
+// public/family-data.json. The deployed site is a read-only viewer: no edit
+// unlock, no browser-side persistence.
 const computeEditUnlocked = (): boolean => {
-  if (typeof window === "undefined") return false;
+  if (!import.meta.env.DEV || typeof window === "undefined") return false;
   try {
     return new URLSearchParams(window.location.search).get("edit") === EDIT_KEY;
   } catch {
     return false;
   }
 };
-import {
-  clearDraft,
-  downloadFile,
-  getSavedHandle,
-  loadDraft,
-  pickSaveFile,
-  saveDraft,
-  supportsFileSave,
-  writeToHandle,
-} from "./persistence";
+import { downloadFile, purgeLegacyBrowserData } from "./persistence";
 
 export type CameraRequest =
   | { seq: number; kind: "person"; id: string }
@@ -120,7 +114,6 @@ interface AppState {
 
   isDraft: boolean;
   dirty: boolean;
-  canFileSave: boolean;
   /** True when the hidden edit key has unlocked writing/import/export. */
   editUnlocked: boolean;
 
@@ -233,28 +226,19 @@ export const useStore = create<AppState>((set, get) => {
     }, 700);
   };
 
-  /** Apply a data mutation: re-derive everything, autosave the draft, and (on the
-   *  local dev server, when unlocked) write through to family-data.json. */
+  /** Apply a data mutation: re-derive everything and write through to
+   *  family-data.json on the dev server. The file is the only persistence:
+   *  nothing is ever stored in the browser. */
   const commit = (raw: FamilyDataV2) => {
     set({ ...deriveAll(raw), isDraft: true, dirty: true });
-    // In dev, the debounced write-through to family-data.json IS the persistence;
-    // a parallel IndexedDB draft would just shadow the file on the next boot.
-    if (DEV) {
-      if (get().editUnlocked) scheduleDevWrite(raw);
-    } else {
-      void saveDraft(raw);
-    }
+    if (get().editUnlocked) scheduleDevWrite(raw);
   };
 
   return {
     phase: "loading",
     loadError: null,
     dataSource: "default",
-    viewMode:
-      typeof localStorage !== "undefined" &&
-      localStorage.getItem("rv-view") === "3d"
-        ? "3d"
-        : "2d",
+    viewMode: "2d",
     raw: null,
     dataset: null,
     graph: null,
@@ -267,7 +251,6 @@ export const useStore = create<AppState>((set, get) => {
     cameraRequest: null,
     isDraft: false,
     dirty: false,
-    canFileSave: typeof window !== "undefined" && supportsFileSave(),
     editUnlocked: computeEditUnlocked(),
     confirmDelete: null,
     mergeKeepId: null,
@@ -277,47 +260,35 @@ export const useStore = create<AppState>((set, get) => {
     mergeReport: null,
     importErrors: null,
     confirmReset: false,
-    hintDismissed:
-      typeof localStorage !== "undefined" &&
-      localStorage.getItem("rv-hint") === "1",
+    hintDismissed: false,
     toast: null,
 
     boot: async () => {
       const params = new URLSearchParams(window.location.search);
       const dataSource = params.get("data") === "stress" ? "stress" : "default";
       set({ dataSource });
+      // Older builds stored a data draft in IndexedDB that shadowed the deployed
+      // file forever. Clean out anything they left behind so every visitor is
+      // unpinned from stale data on their next load.
+      purgeLegacyBrowserData();
       try {
-        let raw: FamilyDataV2 | null = null;
-        let isDraft = false;
-        // In local dev the file is the single source of truth: edits write through
-        // to public/family-data.json, so an IndexedDB draft would only shadow the
-        // file and go stale the moment it changes by any other route (a direct JSON
-        // edit, a script, git). Purge any leftover draft and always load the file.
-        if (DEV) {
-          void clearDraft().catch(() => undefined);
-        } else if (dataSource === "default") {
-          const draft = await loadDraft().catch(() => undefined);
-          if (draft && validateData(draft).errors.length === 0) {
-            raw = draft;
-            isDraft = true;
-          }
-        }
-        if (!raw) {
-          // Relative to BASE_URL so it resolves under a GitHub Pages subpath too.
-          const base = import.meta.env.BASE_URL;
-          const file =
-            base +
-            (dataSource === "stress"
-              ? "family-data.stress.json"
-              : "family-data.json");
-          const res = await fetch(file);
-          if (!res.ok)
-            throw new Error(`could not load ${file} (${res.status})`);
-          const parsed = parseFamilyData(await res.text());
-          if (!parsed.raw)
-            throw new Error(parsed.errors[0] ?? "invalid data file");
-          raw = parsed.raw;
-        }
+        // family-data.json is the single source of truth: always fetch it.
+        // Relative to BASE_URL so it resolves under a GitHub Pages subpath too;
+        // 'no-cache' revalidates against the server (cheap 304 when unchanged)
+        // so a plain refresh always shows the latest deployed data.
+        const base = import.meta.env.BASE_URL;
+        const file =
+          base +
+          (dataSource === "stress"
+            ? "family-data.stress.json"
+            : "family-data.json");
+        const res = await fetch(file, { cache: "no-cache" });
+        if (!res.ok)
+          throw new Error(`could not load ${file} (${res.status})`);
+        const parsed = parseFamilyData(await res.text());
+        if (!parsed.raw)
+          throw new Error(parsed.errors[0] ?? "invalid data file");
+        const raw = parsed.raw;
         const derived = deriveAll(raw);
         const requestedFamily = params.get(FAMILY_PARAM);
         const sharedFamily =
@@ -328,8 +299,8 @@ export const useStore = create<AppState>((set, get) => {
         set({
           ...derived,
           phase: "ready",
-          isDraft,
-          dirty: isDraft,
+          isDraft: false,
+          dirty: false,
           family2d: sharedFamily ?? largestFamily(derived.dataset),
           lensFamilyId: is3d ? sharedFamily : null,
           cameraRequest:
@@ -425,7 +396,6 @@ export const useStore = create<AppState>((set, get) => {
         set({ focusId: id, cameraRequest: cam({ kind: "person", id }) });
         return;
       }
-      localStorage.setItem("rv-view", "3d");
       set({ viewMode: "3d", focusId: id });
       // Wait for the 3D renderer to mount before framing the person.
       setTimeout(() => set({ cameraRequest: cam({ kind: "person", id }) }), 500);
@@ -436,7 +406,6 @@ export const useStore = create<AppState>((set, get) => {
     toggleViewMode: () => {
       const s = get();
       const next = s.viewMode === "3d" ? "2d" : "3d";
-      localStorage.setItem("rv-view", next);
       const patch: Partial<AppState> = { viewMode: next };
       if (next === "2d" && !s.family2d && s.dataset) {
         patch.family2d =
@@ -646,40 +615,19 @@ export const useStore = create<AppState>((set, get) => {
     closeMergeReport: () => set({ mergeReport: null }),
     closeImportErrors: () => set({ importErrors: null }),
 
+    // Dev-only (editing exists only there): write straight to
+    // public/family-data.json via the dev endpoint.
     saveToFile: async () => {
       const s = get();
       if (!s.raw) return;
-      const text = serialize(s.raw);
-      // Local dev: write straight to public/family-data.json via the dev endpoint.
-      if (DEV) {
-        if (devWriteTimer) clearTimeout(devWriteTimer);
-        const ok = await postDataFile(text);
-        set({
-          dirty: false,
-          toast: ok
-            ? "Saved to public/family-data.json"
-            : "Could not reach the dev server to save",
-        });
-        return;
-      }
-      if (!s.canFileSave) {
-        downloadFile("family-data.json", text);
-        set({
-          dirty: false,
-          toast: "Downloaded: drop it into app/public/ to make it the default",
-        });
-        return;
-      }
-      let handle = await getSavedHandle().catch(() => undefined);
-      if (!handle) handle = (await pickSaveFile()) ?? undefined;
-      if (!handle) return; // cancelled
-      const ok = await writeToHandle(handle, text);
-      if (ok) {
-        set({ dirty: false, toast: `Saved to ${handle.name}` });
-      } else {
-        downloadFile("family-data.json", text);
-        set({ dirty: false, toast: "File write failed: downloaded instead" });
-      }
+      if (devWriteTimer) clearTimeout(devWriteTimer);
+      const ok = await postDataFile(serialize(s.raw));
+      set({
+        dirty: false,
+        toast: ok
+          ? "Saved to public/family-data.json"
+          : "Could not reach the dev server to save",
+      });
     },
 
     exportDownload: () => {
@@ -691,7 +639,6 @@ export const useStore = create<AppState>((set, get) => {
     requestReset: () => set({ confirmReset: true }),
     cancelReset: () => set({ confirmReset: false }),
     confirmResetNow: async () => {
-      await clearDraft().catch(() => undefined);
       set({
         confirmReset: false,
         isDraft: false,
@@ -754,10 +701,7 @@ export const useStore = create<AppState>((set, get) => {
       set({ editUnlocked: false, form: null, confirmDelete: null, mergeKeepId: null });
     },
 
-    dismissHint: () => {
-      localStorage.setItem("rv-hint", "1");
-      set({ hintDismissed: true });
-    },
+    dismissHint: () => set({ hintDismissed: true }),
     clearToast: () => set({ toast: null }),
   };
 });
