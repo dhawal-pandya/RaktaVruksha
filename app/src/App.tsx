@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import Scene3D from './render/Scene3D';
 import Scene2D from './render/Scene2D';
 import TopBar from './ui/TopBar';
-import Legend from './ui/Legend';
 import DetailCard from './ui/DetailCard';
 import RelationPanel from './ui/RelationPanel';
 import PersonForm from './ui/PersonForm';
@@ -99,7 +98,6 @@ export default function App() {
     <>
       {viewMode === '3d' ? <Scene3D /> : <Scene2D />}
       <TopBar />
-      <Legend />
       <DetailCard />
       <RelationPanel />
       <Hint />

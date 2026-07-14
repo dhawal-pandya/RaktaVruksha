@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { useStore } from '../state/store';
+import Legend from './Legend';
 import SearchBar from './SearchBar';
 
 export default function TopBar() {
@@ -56,6 +57,7 @@ export default function TopBar() {
         >
           Relation
         </button>
+        <Legend />
 
         {/* Editing tools: only shown once unlocked with the edit key. */}
         {editUnlocked && (
@@ -64,7 +66,7 @@ export default function TopBar() {
               + Add
             </button>
             <button className="btn" onClick={openFamilyEditor} title="Edit family names, colors, branches">
-              Families
+              Edit families
             </button>
             <button className="btn" onClick={() => fileRef.current?.click()} title="Merge a relative's file into yours">
               Import

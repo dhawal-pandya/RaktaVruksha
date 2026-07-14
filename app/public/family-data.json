@@ -1,12 +1,12 @@
 {
   "meta": {
     "schemaVersion": 2,
-    "exportedAt": "2026-07-14T14:09:35.384Z"
+    "exportedAt": "2026-07-14T14:46:24.699Z"
   },
   "families": {
     "familyPandya": {
       "name": "Pandya",
-      "color": "#22d3aa"
+      "color": "#49e9c3"
     },
     "familyBhatt": {
       "name": "Bhatt",
@@ -34,7 +34,7 @@
     },
     "familyShah": {
       "name": "Shah",
-      "color": "#1abc9c"
+      "color": "#0e715e"
     },
     "familyThakar": {
       "name": "Thakar",
@@ -106,7 +106,7 @@
     },
     "familySeth": {
       "name": "Seth",
-      "color": "#5ad2d8"
+      "color": "#067d84"
     },
     "familyRawal_1": {
       "name": "Rawal",
@@ -162,7 +162,7 @@
     },
     "familyVyas_3": {
       "name": "Vyas",
-      "color": "#5ab3d8"
+      "color": "#4baad2"
     },
     "familyPandya_10": {
       "name": "Pandya",
@@ -202,7 +202,7 @@
     },
     "familyShah_2": {
       "name": "Shah",
-      "color": "#5ad8cb"
+      "color": "#1d776e"
     },
     "familyShirke": {
       "name": "Shirke",

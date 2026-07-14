@@ -242,27 +242,29 @@ textarea:focus {
   font-size: var(--fs-sm);
 }
 
-/* ---------- legend ---------- */
+/* ---------- legend (families dropdown in the top bar) ---------- */
 .legend {
-  position: fixed;
-  right: var(--sp-4);
-  bottom: var(--sp-4);
-  z-index: 20;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: var(--sp-2);
 }
-.legend-toggle {
-  display: none;
-}
 .legend-body {
+  display: none;
   padding: var(--sp-2);
-  display: flex;
   flex-direction: column;
   gap: 2px;
   max-height: 46vh;
   overflow-y: auto;
+}
+.legend-open .legend-body {
+  display: flex;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: 240px;
+  z-index: 40;
 }
 .legend-item {
   display: flex;
@@ -720,25 +722,18 @@ input[type='color'] {
     border-bottom: none;
   }
 
+  /* The dropdown escapes the scrollable topbar nav: a floating toggle below it. */
   .legend {
-    bottom: auto;
+    position: fixed;
     top: 108px;
     right: var(--sp-2);
+    z-index: 20;
   }
   .legend-toggle {
-    display: inline-flex;
     background: var(--bg-raised);
-    border: 1px solid var(--border);
     backdrop-filter: blur(var(--blur));
   }
-  .legend-body {
-    display: none;
-  }
   .legend-open .legend-body {
-    display: flex;
-    position: absolute;
-    top: calc(100% + 6px);
-    right: 0;
     width: 220px;
   }
 

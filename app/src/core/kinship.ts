@@ -182,7 +182,23 @@ export const nameRelation = (
   const chain: { personId: string; label: string }[] = [
     { personId: a, label: personName(ds.people.get(a)!) },
   ];
-  for (const s of steps) {
+  for (let i = 0; i < steps.length; i++) {
+    const s = steps[i];
+    const next = steps[i + 1];
+    // An up-then-down pair goes through a shared parent, i.e. a sibling: narrate
+    // it as one hop ("sister Hitarthi") instead of routing the reader through the
+    // parent. Only the chain compresses; the steps (and the lit path) still pass
+    // through the parent.
+    if (s.dir === 'up' && next?.dir === 'down') {
+      const kind = siblingKind(ds, s.from, next.to, [s, next]);
+      const word = `${kind}${genderWord(ds, next.to, 'brother', 'sister')}`;
+      chain.push({
+        personId: next.to,
+        label: `${word} ${personName(ds.people.get(next.to)!)}`,
+      });
+      i++;
+      continue;
+    }
     const name = personName(ds.people.get(s.to)!);
     const word =
       s.dir === 'up'

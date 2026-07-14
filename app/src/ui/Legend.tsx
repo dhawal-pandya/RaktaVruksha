@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useStore } from '../state/store';
 
 export default function Legend() {
@@ -7,7 +7,18 @@ export default function Legend() {
   const family2d = useStore(s => s.family2d);
   const viewMode = useStore(s => s.viewMode);
   const setLens = useStore(s => s.setLens);
-  const [openMobile, setOpenMobile] = useState(false);
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLElement>(null);
+
+  // Clicking anywhere outside (canvas, other HUD, top bar) closes the dropdown.
+  useEffect(() => {
+    if (!open) return;
+    const onPointerDown = (e: PointerEvent) => {
+      if (!rootRef.current?.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener('pointerdown', onPointerDown, true);
+    return () => document.removeEventListener('pointerdown', onPointerDown, true);
+  }, [open]);
 
   if (!dataset) return null;
   const families = Object.entries(dataset.raw.families).sort((a, b) =>
@@ -18,9 +29,13 @@ export default function Legend() {
   const activeId = viewMode === '2d' ? family2d : lensFamilyId;
 
   return (
-    <aside className={`legend ${openMobile ? 'legend-open' : ''}`}>
-      <button className="legend-toggle btn btn-subtle" onClick={() => setOpenMobile(v => !v)}>
-        {openMobile ? '× Families' : `Families (${families.length})`}
+    <aside ref={rootRef} className={`legend ${open ? 'legend-open' : ''}`}>
+      <button
+        className="legend-toggle btn"
+        onClick={() => setOpen(v => !v)}
+        title={viewMode === '2d' ? 'Pick the family to view' : 'Spotlight a family'}
+      >
+        {open ? '× Families' : `Families (${families.length})`}
       </button>
       <div className="legend-body panel">
         {viewMode === '3d' && lensFamilyId && (

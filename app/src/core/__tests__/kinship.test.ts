@@ -64,6 +64,39 @@ describe('shortest kinship path + namer', () => {
     expect(relate('Son', 'Son')!.name).toBe('the same person');
   });
 
+  it('narrates siblings as a single chain hop, not up-and-down through the parent', () => {
+    // Full siblings: no parent hop in the chain.
+    expect(relate('Son', 'Dau')!.chain.map(h => h.label)).toEqual([
+      'Son famA',
+      'sister Dau famA',
+    ]);
+    // Half-siblings collapse too, labeled as such.
+    expect(relate('Son', 'HalfSis')!.chain.map(h => h.label)).toEqual([
+      'Son famA',
+      'half-sister HalfSis famA',
+    ]);
+    // Adoptive: the pair carries an adoptive tag.
+    expect(relate('AdoptedKid', 'Son')!.chain.map(h => h.label)).toEqual([
+      'AdoptedKid famC',
+      'adoptive brother Son famA',
+    ]);
+  });
+
+  it('collapses sibling hops mid-chain (uncles, nephews)', () => {
+    // Son → Mom → (GpaB → UncleB) reads as mother's brother.
+    expect(relate('Son', 'UncleB')!.chain.map(h => h.label)).toEqual([
+      'Son famA',
+      'mother Mom famB',
+      'brother UncleB famB',
+    ]);
+    // UncleB → (GpaB → Mom) → Son reads as sister's son.
+    expect(relate('UncleB', 'Son')!.chain.map(h => h.label)).toEqual([
+      'UncleB famB',
+      'sister Mom famB',
+      'son Son famA',
+    ]);
+  });
+
   it('gives Sanskrit (Gujarati) terms with paternal/maternal distinctions', () => {
     expect(relate('Son', 'Dad')!.local).toBe('pita (bapa)');
     expect(relate('Dad', 'Son')!.local).toBe('putra (dikro)');
