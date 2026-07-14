@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 2,
-    "exportedAt": "2026-07-13T16:14:19.883Z"
+    "exportedAt": "2026-07-14T08:30:09.509Z"
   },
   "families": {
     "familyPandya": {
@@ -199,6 +199,18 @@
     "familyPathak_1": {
       "name": "Pathak",
       "color": "#d85a78"
+    },
+    "familyShah_2": {
+      "name": "Shah",
+      "color": "#5ad8cb"
+    },
+    "familyShirke": {
+      "name": "Shirke",
+      "color": "#6e5ad8"
+    },
+    "familyShah_3": {
+      "name": "Shah",
+      "color": "#5ad899"
     }
   },
   "people": [
@@ -2372,22 +2384,13 @@
       "updatedAt": "2026-07-12T18:36:09.750Z"
     },
     {
-      "id": "Jasodaben",
-      "firstName": "Jasodaben",
-      "lastName": "Pathak",
-      "gender": "female",
-      "alive": false,
-      "birthFamilyId": "familyPathak",
-      "updatedAt": "2026-07-12T18:36:42.932Z"
-    },
-    {
       "id": "Rupal",
       "firstName": "Rupesh",
       "lastName": "Pathak",
       "gender": "male",
       "alive": false,
       "birthFamilyId": "familyPathak",
-      "updatedAt": "2026-07-13T16:14:18.546Z"
+      "updatedAt": "2026-07-14T07:12:05.922Z"
     },
     {
       "id": "Dharmendra_1",
@@ -2721,15 +2724,6 @@
       "alive": true,
       "birthFamilyId": "familyVyas_2",
       "updatedAt": "2026-07-12T19:53:01.371Z"
-    },
-    {
-      "id": "Jasodaben_1",
-      "firstName": "Jasodaben",
-      "lastName": "Pathak",
-      "gender": "female",
-      "alive": false,
-      "birthFamilyId": null,
-      "updatedAt": "2026-07-12T19:54:11.108Z"
     },
     {
       "id": "Jayendra",
@@ -3513,6 +3507,312 @@
       "alive": true,
       "birthFamilyId": "familyPathak",
       "updatedAt": "2026-07-13T13:23:50.378Z"
+    },
+    {
+      "id": "Jasodaben",
+      "firstName": "Jasodaben",
+      "lastName": "Pathak",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-14T07:13:24.805Z"
+    },
+    {
+      "id": "Rupesh",
+      "firstName": "Rupesh",
+      "lastName": "Pathak",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPathak",
+      "updatedAt": "2026-07-14T07:13:38.605Z"
+    },
+    {
+      "id": "Jyotsna_1",
+      "firstName": "Jyotsna",
+      "lastName": "Shah",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:11:26.813Z"
+    },
+    {
+      "id": "Ashok",
+      "firstName": "Ashok",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShah_2",
+      "updatedAt": "2026-07-14T08:12:00.445Z"
+    },
+    {
+      "id": "Anil_1",
+      "firstName": "Anil",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:12:28.261Z"
+    },
+    {
+      "id": "Kaushik",
+      "firstName": "Kaushik",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:12:44.678Z"
+    },
+    {
+      "id": "Nila",
+      "firstName": "Nila",
+      "lastName": "Shah",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-14T08:12:56.029Z"
+    },
+    {
+      "id": "Sonal",
+      "firstName": "Sonal",
+      "lastName": "Shah",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:13:03.978Z"
+    },
+    {
+      "id": "Nishant",
+      "firstName": "Nishant",
+      "lastName": "Shirke",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShirke",
+      "updatedAt": "2026-07-14T08:13:23.979Z"
+    },
+    {
+      "id": "Sarth",
+      "firstName": "Sarth",
+      "lastName": "Shirke",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShirke",
+      "updatedAt": "2026-07-14T08:13:50.930Z"
+    },
+    {
+      "id": "Anvit",
+      "firstName": "Anvit",
+      "lastName": "Shirke",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShirke",
+      "updatedAt": "2026-07-14T08:13:58.846Z"
+    },
+    {
+      "id": "Nayana_1",
+      "firstName": "Nayana",
+      "lastName": "Shah",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-14T08:14:22.481Z"
+    },
+    {
+      "id": "Ridhesh",
+      "firstName": "Ridhesh",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:14:46.914Z"
+    },
+    {
+      "id": "Srishti",
+      "firstName": "Srishti",
+      "lastName": "Shah",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-14T08:15:39.715Z"
+    },
+    {
+      "id": "Ila",
+      "firstName": "Ila",
+      "lastName": "Shah",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:15:51.098Z"
+    },
+    {
+      "id": "Gaurang",
+      "firstName": "Gaurang",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShah_3",
+      "updatedAt": "2026-07-14T08:16:10.116Z"
+    },
+    {
+      "id": "Abhishek",
+      "firstName": "Abhishek",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShah_3",
+      "updatedAt": "2026-07-14T08:16:22.449Z"
+    },
+    {
+      "id": "Bhaichandbhai",
+      "firstName": "Bhaichandbhai",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:17:51.117Z"
+    },
+    {
+      "id": "Maganlal",
+      "firstName": "Maganlal",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:18:38.951Z"
+    },
+    {
+      "id": "Vijay_2",
+      "firstName": "Vijay",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:19:46.736Z"
+    },
+    {
+      "id": "Manisha",
+      "firstName": "Manisha",
+      "lastName": "Shah",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-14T08:19:57.054Z"
+    },
+    {
+      "id": "Krunal",
+      "firstName": "Krunal",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:20:07.538Z"
+    },
+    {
+      "id": "Pooja_1",
+      "firstName": "Pooja",
+      "lastName": "Suvarna Shah",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-14T08:21:03.656Z"
+    },
+    {
+      "id": "Akaay",
+      "firstName": "Akaay",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:21:47.287Z"
+    },
+    {
+      "id": "Dharmendra_2",
+      "firstName": "Dharmendra",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:22:39.406Z"
+    },
+    {
+      "id": "Mala",
+      "firstName": "Mala",
+      "lastName": "Shah",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-14T08:22:50.357Z"
+    },
+    {
+      "id": "Gaurang_1",
+      "firstName": "Gaurang",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:23:02.788Z"
+    },
+    {
+      "id": "Hemali",
+      "firstName": "Hemali",
+      "lastName": "Shah",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-14T08:24:27.641Z"
+    },
+    {
+      "id": "Prafulla",
+      "firstName": "Prafulla",
+      "lastName": "Shah",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:25:48.726Z"
+    },
+    {
+      "id": "Bhagwanbhai",
+      "firstName": "Bhagwanbhai",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:26:30.192Z"
+    },
+    {
+      "id": "NirmalabenNimu",
+      "firstName": "Nirmalaben (Nimu)",
+      "lastName": "Shah",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-14T08:27:50.403Z"
+    },
+    {
+      "id": "Ashaben",
+      "firstName": "Ashaben",
+      "lastName": "Shah",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:28:05.536Z"
+    },
+    {
+      "id": "Ilesh",
+      "firstName": "Nilesh",
+      "lastName": "Shah",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyShah",
+      "updatedAt": "2026-07-14T08:29:00.120Z"
+    },
+    {
+      "id": "Rashmi",
+      "firstName": "Rashmi",
+      "lastName": "Shah",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-14T08:29:08.921Z"
     }
   ],
   "unions": [
@@ -3768,12 +4068,16 @@
         "Mohanlal"
       ],
       "children": [
-        "Kirit"
+        "Jyotsna_1",
+        "Kirit",
+        "Anil_1",
+        "Kaushik",
+        "Ila"
       ],
       "adoptedChildren": [],
       "familyId": "familyShah",
       "status": "married",
-      "updatedAt": "2026-07-11T10:02:09.122Z"
+      "updatedAt": "2026-07-14T08:15:51.098Z"
     },
     {
       "id": "u_kevalji",
@@ -4834,8 +5138,7 @@
         "Madhuben"
       ],
       "children": [
-        "Arun",
-        "Jasodaben"
+        "Arun"
       ],
       "adoptedChildren": [],
       "familyId": "familyPathak",
@@ -4857,20 +5160,6 @@
       "status": "married",
       "order": 1,
       "updatedAt": "2026-07-12T18:40:57.003Z"
-    },
-    {
-      "id": "u_jasodaben",
-      "partners": [
-        "Jasodaben"
-      ],
-      "children": [
-        "Rupal"
-      ],
-      "adoptedChildren": [],
-      "familyId": "familyPathak",
-      "status": "unknown",
-      "order": 1,
-      "updatedAt": "2026-07-12T18:36:54.032Z"
     },
     {
       "id": "u_dharmendra1_trupti",
@@ -5104,19 +5393,6 @@
       "status": "married",
       "order": 1,
       "updatedAt": "2026-07-12T19:53:01.371Z"
-    },
-    {
-      "id": "u_arun_jasodaben1",
-      "partners": [
-        "Arun",
-        "Jasodaben_1"
-      ],
-      "children": [],
-      "adoptedChildren": [],
-      "familyId": "familyPathak",
-      "status": "married",
-      "order": 2,
-      "updatedAt": "2026-07-12T19:54:11.108Z"
     },
     {
       "id": "u_jayendra_jaybalaba",
@@ -5605,6 +5881,227 @@
       "status": "married",
       "order": 1,
       "updatedAt": "2026-07-13T13:10:08.995Z"
+    },
+    {
+      "id": "u_arun_jasodaben",
+      "partners": [
+        "Arun",
+        "Jasodaben"
+      ],
+      "children": [
+        "Rupesh"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPathak",
+      "status": "married",
+      "order": 2,
+      "updatedAt": "2026-07-14T07:13:38.605Z"
+    },
+    {
+      "id": "u_jyotsna1_ashok",
+      "partners": [
+        "Jyotsna_1",
+        "Ashok"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyShah_2",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-14T08:12:00.446Z"
+    },
+    {
+      "id": "u_anil1_nila",
+      "partners": [
+        "Anil_1",
+        "Nila"
+      ],
+      "children": [
+        "Sonal"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyShah",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-14T08:13:03.978Z"
+    },
+    {
+      "id": "u_sonal_nishant",
+      "partners": [
+        "Sonal",
+        "Nishant"
+      ],
+      "children": [
+        "Sarth",
+        "Anvit"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyShirke",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-14T08:13:58.846Z"
+    },
+    {
+      "id": "u_kaushik_nayana1",
+      "partners": [
+        "Kaushik",
+        "Nayana_1"
+      ],
+      "children": [
+        "Ridhesh"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyShah",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-14T08:14:46.914Z"
+    },
+    {
+      "id": "u_ridhesh_srishti",
+      "partners": [
+        "Ridhesh",
+        "Srishti"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyShah",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-14T08:15:39.715Z"
+    },
+    {
+      "id": "u_ila_gaurang",
+      "partners": [
+        "Ila",
+        "Gaurang"
+      ],
+      "children": [
+        "Abhishek"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyShah_3",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-14T08:16:22.449Z"
+    },
+    {
+      "id": "u_bhaichandbhai",
+      "partners": [
+        "Bhaichandbhai"
+      ],
+      "children": [
+        "Mohanlal",
+        "Maganlal",
+        "Bhagwanbhai"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyShah",
+      "status": "unknown",
+      "order": 1,
+      "updatedAt": "2026-07-14T08:26:30.192Z"
+    },
+    {
+      "id": "u_maganlal",
+      "partners": [
+        "Maganlal"
+      ],
+      "children": [
+        "Vijay_2",
+        "Dharmendra_2",
+        "Prafulla"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyShah",
+      "status": "unknown",
+      "order": 1,
+      "updatedAt": "2026-07-14T08:25:48.726Z"
+    },
+    {
+      "id": "u_vijay2_manisha",
+      "partners": [
+        "Vijay_2",
+        "Manisha"
+      ],
+      "children": [
+        "Krunal"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyShah",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-14T08:20:07.538Z"
+    },
+    {
+      "id": "u_krunal_pooja1",
+      "partners": [
+        "Krunal",
+        "Pooja_1"
+      ],
+      "children": [
+        "Akaay"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyShah",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-14T08:21:40.289Z"
+    },
+    {
+      "id": "u_dharmendra2_mala",
+      "partners": [
+        "Dharmendra_2",
+        "Mala"
+      ],
+      "children": [
+        "Gaurang_1"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyShah",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-14T08:23:02.789Z"
+    },
+    {
+      "id": "u_gaurang1_hemali",
+      "partners": [
+        "Gaurang_1",
+        "Hemali"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyShah",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-14T08:24:27.641Z"
+    },
+    {
+      "id": "u_bhagwanbhai_nirmalabennimu",
+      "partners": [
+        "Bhagwanbhai",
+        "NirmalabenNimu"
+      ],
+      "children": [
+        "Ashaben",
+        "Ilesh"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyShah",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-14T08:28:15.986Z"
+    },
+    {
+      "id": "u_ilesh_rashmi",
+      "partners": [
+        "Ilesh",
+        "Rashmi"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyShah",
+      "status": "married",
+      "order": 1,
+      "updatedAt": "2026-07-14T08:29:08.921Z"
     }
   ]
 }
