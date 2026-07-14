@@ -168,6 +168,7 @@ interface AppState {
   cancelReset: () => void;
   confirmResetNow: () => Promise<void>;
   dismissHint: () => void;
+  showToast: (msg: string) => void;
   clearToast: () => void;
 }
 
@@ -702,6 +703,7 @@ export const useStore = create<AppState>((set, get) => {
     },
 
     dismissHint: () => set({ hintDismissed: true }),
+    showToast: (msg) => set({ toast: msg }),
     clearToast: () => set({ toast: null }),
   };
 });

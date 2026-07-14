@@ -71,4 +71,41 @@ describe('layout', () => {
       expect(Number.isFinite(v.z)).toBe(true);
     }
   });
+
+  it('keeps couples adjacent: no stranger closer to a person than their spouse', () => {
+    const pos = computeLayout(graph);
+    const dist = (a: string, b: string) => {
+      const pa = pos.get(a)!;
+      const pb = pos.get(b)!;
+      return Math.hypot(pa.x - pb.x, pa.y - pb.y, pa.z - pb.z);
+    };
+    // Each person's primary couple is welded exactly 2×offset apart.
+    const primaryCouples = [
+      ['GpaA', 'GmaA'],
+      ['GpaB', 'GmaB'],
+      ['Dad', 'Mom'],
+      ['Son', 'Girlfriend'],
+    ];
+    const coSpouses = new Map<string, Set<string>>();
+    for (const u of fixture().unions) {
+      for (const p of u.partners) {
+        if (!coSpouses.has(p)) coSpouses.set(p, new Set());
+        for (const q of u.partners) if (q !== p) coSpouses.get(p)!.add(q);
+      }
+    }
+    const personIds = graph.nodes.filter(n => n.kind === 'person').map(n => n.id);
+    for (const [a, b] of primaryCouples) {
+      const spouseDist = dist(a, b);
+      expect(spouseDist).toBeCloseTo(30, 5);
+      for (const other of personIds) {
+        if (other === a || other === b) continue;
+        for (const self of [a, b]) {
+          if (coSpouses.get(self)?.has(other)) continue; // an ex may sit as close
+          expect(dist(self, other)).toBeGreaterThanOrEqual(spouseDist);
+        }
+      }
+    }
+    // The remarried spouse sits in a row on Dad's other side, adjacent too.
+    expect(dist('Dad', 'Ex')).toBeCloseTo(30, 5);
+  });
 });

@@ -13,27 +13,32 @@ const UNION_Y_OFFSET = -LAYER_GAP * 0.4;
 
 // --- Force tuning (X/Z only; Y is always locked to generation) --------------
 // CHARGE is the "repulsion" dial: raise its magnitude for more space between orbs.
-// It scales the whole web roughly uniformly, so the existing character — families
-// grouped by link + family-pull, spouses snapped together — is preserved; you just
-// get more of the same repulsion. Note: cranking FAMILY_PULL/FAMILY_RING to force
-// families tighter backfires on this data — with heavy intermarriage, the couple-
-// snap drags cross-family spouses toward each other while a strong pull yanks them
-// toward opposite family centers, stranding couples in the gaps. So those are left
-// at their original, well-behaved values; charge is the knob to tune.
-const CHARGE_STRENGTH = -200; // repulsion between orbs — more than before (was -70)
-const CHARGE_DISTANCE_MAX = 360; // how far that repulsion reaches (was 320)
-const FAMILY_PULL = 0.05; // pull toward family center (left as-is: raising it flings couples)
+// Couples are simulated as one rigid body (see below) whose collide radius covers
+// the whole pair, so no other orb can ever sit between partners or closer to a
+// person than their spouse; the body is pulled toward a single family center
+// (the union's family), so cross-family marriages no longer get torn between two
+// centers. FAMILY_PULL/FAMILY_RING stay at their original, well-behaved values;
+// charge is the knob to tune.
+const CHARGE_STRENGTH = -200; // repulsion between orbs
+const CHARGE_DISTANCE_MAX = 360; // how far that repulsion reaches
+const FAMILY_PULL = 0.05; // pull toward family center
 const FAMILY_RING = { scale: 26, base: 60 }; // spacing between family cluster centers
-const PARTNER_DISTANCE = 20; // spouses sit close…
-const PARTNER_STRENGTH = 1; // …and are held firmly together (couple-snap also guarantees this)
+const PARTNER_DISTANCE = 20; // an outside spouse (remarriage) sits close…
+const PARTNER_STRENGTH = 1; // …and is held firmly
 const CHILD_DISTANCE = 48;
 const CHILD_STRENGTH = 0.25;
 const PERSON_COLLIDE = 16; // hard minimum spacing so orbs never overlap
 const UNION_COLLIDE = 8;
+const COUPLE_OFFSET = 15; // each partner sits this far from the couple's center
+// Radius of a rigid couple body — two people wide. Must be ≥ 30 so that both a
+// stranger (kept at COUPLE_COLLIDE+PERSON_COLLIDE from the center, partner 15
+// out) and the facing partner of another couple (centers ≥ 2×COUPLE_COLLIDE
+// apart) always end farther from a person than their own spouse (30).
+const COUPLE_COLLIDE = PERSON_COLLIDE * 2;
 
 interface SimNode {
   id: string;
-  kind: "person" | "union";
+  kind: "person" | "union" | "couple";
   familyKey: string;
   x: number;
   y: number;
@@ -41,10 +46,26 @@ interface SimNode {
   fy: number;
 }
 
+// When someone has several unions, the one whose couple stays welded together:
+// the current marriage beats an old one.
+const STATUS_RANK: Record<string, number> = {
+  married: 0,
+  partners: 1,
+  unknown: 2,
+  divorced: 3,
+};
+
 /**
  * Headless, deterministic 3D layout. Y is locked to generation (ancestors up);
  * X/Z settle via forces, seeded per family so families form spatial clusters.
- * Same graph in → same positions out; the world never reshuffles.
+ *
+ * Each 2-partner union whose partners belong to no earlier-ranked union is a
+ * single rigid "couple" body in the simulation, with a collide radius covering
+ * both partners. That makes adjacency a geometric guarantee, not a force
+ * outcome: nothing can drift between a couple, and no stranger ends up closer
+ * to a person than their own partner. Partners are emitted ±COUPLE_OFFSET
+ * around the body at the end; remaining unions (remarriages) keep the old
+ * symmetric snap. Same graph in → same positions out.
  */
 export const computeLayout = (graph: Graph): Map<string, Vec3> => {
   const familyKeys = Array.from(
@@ -61,32 +82,70 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
     });
   });
 
-  // Deterministic phyllotaxis seed within each family cluster.
+  // --- pick each person's primary union: those couples become rigid bodies --
+  const partnersByUnion = new Map<string, string[]>();
+  for (const l of graph.links) {
+    if (l.kind !== "partner") continue;
+    if (!partnersByUnion.has(l.target)) partnersByUnion.set(l.target, []);
+    partnersByUnion.get(l.target)!.push(l.source);
+  }
+  const repOf = new Map<string, string>(); // person id → couple body (union node) id
+  const rigidSpouseOf = new Map<string, string>(); // person id → their welded partner
+  const rigidUnions = new Set<string>();
+  const unionNodes = graph.nodes
+    .filter((n) => n.kind === "union")
+    .sort(
+      (a, b) =>
+        (STATUS_RANK[a.status] ?? 2) - (STATUS_RANK[b.status] ?? 2) ||
+        a.id.localeCompare(b.id),
+    );
+  for (const un of unionNodes) {
+    const ps = partnersByUnion.get(un.id);
+    if (!ps || ps.length !== 2) continue;
+    if (repOf.has(ps[0]) || repOf.has(ps[1])) continue;
+    rigidUnions.add(un.id);
+    repOf.set(ps[0], un.id);
+    repOf.set(ps[1], un.id);
+    rigidSpouseOf.set(ps[0], ps[1]);
+    rigidSpouseOf.set(ps[1], ps[0]);
+  }
+  const rep = (id: string): string => repOf.get(id) ?? id;
+
+  // --- sim nodes, seeded deterministically (phyllotaxis per family) ---------
   const perFamilyCount = new Map<string, number>();
-  const nodes: SimNode[] = graph.nodes.map((n) => {
+  const nodes: SimNode[] = [];
+  for (const n of graph.nodes) {
+    if (n.kind === "person" && repOf.has(n.id)) continue; // lives inside a couple body
+    const kind: SimNode["kind"] =
+      n.kind === "union" ? (rigidUnions.has(n.id) ? "couple" : "union") : "person";
     const familyKey = n.familyId ?? "__none";
     const k = perFamilyCount.get(familyKey) ?? 0;
     perFamilyCount.set(familyKey, k + 1);
     const c = centers.get(familyKey)!;
     const r = 13 * Math.sqrt(k);
     const theta = k * 2.39996;
-    const y = -n.gen * LAYER_GAP + (n.kind === "union" ? UNION_Y_OFFSET : 0);
-    return {
+    // Couple bodies live on the partners' layer; loose union dots sit below it.
+    const y = -n.gen * LAYER_GAP + (kind === "union" ? UNION_Y_OFFSET : 0);
+    nodes.push({
       id: n.id,
-      kind: n.kind,
+      kind,
       familyKey,
       x: c.x + r * Math.cos(theta),
       y,
       z: c.z + r * Math.sin(theta),
       fy: y,
-    };
-  });
+    });
+  }
 
-  const links = graph.links.map((l) => ({
-    source: l.source,
-    target: l.target,
-    kind: l.kind,
-  }));
+  // Links between representatives; a rigid couple's own partner links collapse
+  // to self-links and are dropped.
+  const links: { source: string; target: string; kind: string }[] = [];
+  for (const l of graph.links) {
+    const source = rep(l.source);
+    const target = rep(l.target);
+    if (source === target) continue;
+    links.push({ source, target, kind: l.kind });
+  }
 
   const sim = forceSimulation(nodes, 3)
     .force(
@@ -96,7 +155,6 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
         .distance((l: { kind: string }) =>
           l.kind === "partner" ? PARTNER_DISTANCE : CHILD_DISTANCE,
         )
-        // Couples must not be pulled apart by the rest of the web.
         .strength((l: { kind: string }) =>
           l.kind === "partner" ? PARTNER_STRENGTH : CHILD_STRENGTH,
         ),
@@ -104,14 +162,21 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
     .force(
       "charge",
       forceManyBody()
-        .strength(CHARGE_STRENGTH)
+        // A couple body stands in for two people.
+        .strength((d: SimNode) =>
+          d.kind === "couple" ? CHARGE_STRENGTH * 2 : CHARGE_STRENGTH,
+        )
         .distanceMax(CHARGE_DISTANCE_MAX),
     )
     .force(
       "collide",
       forceCollide((d: SimNode) =>
-        d.kind === "union" ? UNION_COLLIDE : PERSON_COLLIDE,
-      ),
+        d.kind === "couple"
+          ? COUPLE_COLLIDE
+          : d.kind === "union"
+            ? UNION_COLLIDE
+            : PERSON_COLLIDE,
+      ).iterations(2),
     )
     .force(
       "famX",
@@ -126,50 +191,100 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
   const ticks = graph.nodes.length > 2500 ? 130 : 220;
   for (let i = 0; i < ticks; i++) sim.tick();
 
-  // Couple snap: place each 2-partner union's partners symmetrically around the
-  // union node, so a marriage always reads as one tight visual unit no matter
-  // what the forces did. People with several unions keep their first snap;
-  // the union node re-centers between the final partner positions.
-  const byId = new Map(nodes.map((n) => [n.id, n]));
-  const partnersByUnion = new Map<string, string[]>();
-  for (const l of graph.links) {
-    if (l.kind !== "partner") continue;
-    if (!partnersByUnion.has(l.target)) partnersByUnion.set(l.target, []);
-    partnersByUnion.get(l.target)!.push(l.source);
-  }
-  const COUPLE_OFFSET = 15;
-  const snapped = new Set<string>();
+  // --- emit: split couple bodies into their two orbs -------------------------
+  const personGen = new Map<string, number>();
+  for (const n of graph.nodes) if (n.kind === "person") personGen.set(n.id, n.gen);
+  const unionGen = new Map<string, number>();
+  for (const n of graph.nodes) if (n.kind === "union") unionGen.set(n.id, n.gen);
+  const layerY = (gen: number): number => -gen * LAYER_GAP + 0; // +0 kills -0
+
+  const out = new Map<string, Vec3>();
+  const snapped = new Set<string>(); // people already welded into a couple
   for (const n of nodes) {
-    if (n.kind !== "union") continue;
-    const partnerIds = partnersByUnion.get(n.id);
-    if (!partnerIds || partnerIds.length !== 2) continue;
-    const a = byId.get(partnerIds[0])!;
-    const b = byId.get(partnerIds[1])!;
-    const midX = (a.x + b.x) / 2;
-    const midZ = (a.z + b.z) / 2;
-    let dx = b.x - a.x;
-    let dz = b.z - a.z;
-    const len = Math.hypot(dx, dz);
+    if (n.kind === "person") {
+      out.set(n.id, { x: n.x, y: n.fy, z: n.z });
+      continue;
+    }
+    if (n.kind === "union") {
+      out.set(n.id, { x: n.x, y: n.fy, z: n.z });
+      continue;
+    }
+    // Couple: partners sit ±offset along the tangent of the family ring, so the
+    // pair faces along its cluster rather than pointing at the center.
+    const [a, b] = partnersByUnion.get(n.id)!;
+    const c = centers.get(n.familyKey)!;
+    let tx = -(n.z - c.z);
+    let tz = n.x - c.x;
+    const len = Math.hypot(tx, tz);
     if (len < 1e-6) {
-      dx = 1;
-      dz = 0;
+      tx = 1;
+      tz = 0;
     } else {
-      dx /= len;
-      dz /= len;
+      tx /= len;
+      tz /= len;
     }
-    if (!snapped.has(a.id)) {
-      a.x = midX - dx * COUPLE_OFFSET;
-      a.z = midZ - dz * COUPLE_OFFSET;
-      snapped.add(a.id);
-    }
-    if (!snapped.has(b.id)) {
-      b.x = midX + dx * COUPLE_OFFSET;
-      b.z = midZ + dz * COUPLE_OFFSET;
-      snapped.add(b.id);
-    }
-    n.x = (a.x + b.x) / 2;
-    n.z = (a.z + b.z) / 2;
+    out.set(a, {
+      x: n.x - tx * COUPLE_OFFSET,
+      y: layerY(personGen.get(a) ?? 0),
+      z: n.z - tz * COUPLE_OFFSET,
+    });
+    out.set(b, {
+      x: n.x + tx * COUPLE_OFFSET,
+      y: layerY(personGen.get(b) ?? 0),
+      z: n.z + tz * COUPLE_OFFSET,
+    });
+    out.set(n.id, {
+      x: n.x,
+      y: layerY(unionGen.get(n.id) ?? 0) + UNION_Y_OFFSET,
+      z: n.z,
+    });
+    snapped.add(a);
+    snapped.add(b);
   }
 
-  return new Map(nodes.map((n) => [n.id, { x: n.x, y: n.fy, z: n.z }]));
+  // Remaining 2-partner unions (remarriages). Non-rigid means at least one
+  // partner is welded into a couple, so seat the free partner in a row on the
+  // welded partner's other side, opposite their rigid spouse — Jasodaben—Arun—
+  // Taraben — with further extra spouses fanned around them. Nobody already
+  // welded moves; the union dot re-centers between the final positions.
+  const extraPlaced = new Map<string, number>();
+  for (const [unId, partnerIds] of partnersByUnion) {
+    if (rigidUnions.has(unId) || partnerIds.length !== 2) continue;
+    const aFixed = snapped.has(partnerIds[0]);
+    const bFixed = snapped.has(partnerIds[1]);
+    if (aFixed !== bFixed) {
+      const [wid, fid] = aFixed
+        ? [partnerIds[0], partnerIds[1]]
+        : [partnerIds[1], partnerIds[0]];
+      const w = out.get(wid)!;
+      const f = out.get(fid)!;
+      const sp = rigidSpouseOf.has(wid) ? out.get(rigidSpouseOf.get(wid)!) : undefined;
+      let dx = sp ? w.x - sp.x : f.x - w.x;
+      let dz = sp ? w.z - sp.z : f.z - w.z;
+      const len = Math.hypot(dx, dz);
+      if (len < 1e-6) {
+        dx = 1;
+        dz = 0;
+      } else {
+        dx /= len;
+        dz /= len;
+      }
+      const k = extraPlaced.get(wid) ?? 0;
+      extraPlaced.set(wid, k + 1);
+      const rot = (k * 72 * Math.PI) / 180;
+      const ux = dx * Math.cos(rot) - dz * Math.sin(rot);
+      const uz = dx * Math.sin(rot) + dz * Math.cos(rot);
+      f.x = w.x + ux * COUPLE_OFFSET * 2;
+      f.z = w.z + uz * COUPLE_OFFSET * 2;
+      snapped.add(fid);
+    }
+    // Both welded (chain of marriages between couples): nothing moves.
+    const a = out.get(partnerIds[0])!;
+    const b = out.get(partnerIds[1])!;
+    const un = out.get(unId)!;
+    un.x = (a.x + b.x) / 2;
+    un.z = (a.z + b.z) / 2;
+  }
+
+  return out;
 };

@@ -283,6 +283,27 @@ export default function Scene2D() {
     [clickPerson],
   );
 
+  const shareFamily = useCallback(() => {
+    if (!activeFamily) return;
+    const url = new URL(window.location.href);
+    url.searchParams.set('family', activeFamily);
+    url.searchParams.delete('edit'); // a shared link must never carry the edit key
+    const link = url.toString();
+    const done = () =>
+      useStore.getState().showToast('Link copied — it opens on this family tree');
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard
+        .writeText(link)
+        .then(done, () => window.prompt('Copy this link:', link));
+    } else {
+      window.prompt('Copy this link:', link);
+    }
+  }, [activeFamily]);
+
+  const familyName = activeFamily
+    ? dataset?.raw.families[activeFamily]?.name ?? 'this family'
+    : null;
+
   return (
     <div className="scene-root">
       <ForceGraph2D
@@ -302,6 +323,15 @@ export default function Scene2D() {
         onNodeClick={onNodeClick}
         onBackgroundClick={backgroundClick}
       />
+      {activeFamily && (
+        <button
+          className="btn share-btn"
+          onClick={shareFamily}
+          title={`Copy a link that opens the ${familyName} tree`}
+        >
+          ⤴ Share
+        </button>
+      )}
     </div>
   );
 }

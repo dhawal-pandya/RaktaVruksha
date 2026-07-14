@@ -299,6 +299,17 @@ textarea:focus {
   color: var(--text-dim);
   font-style: italic;
 }
+/* Small share button in the 2D view's corner. */
+.share-btn {
+  position: fixed;
+  right: var(--sp-4);
+  bottom: var(--sp-4);
+  z-index: 20;
+  font-size: var(--fs-sm);
+  padding: 5px 11px;
+  background: var(--bg-raised);
+  backdrop-filter: blur(var(--blur));
+}
 
 /* ---------- detail card / relation panel ---------- */
 .detail-card,
