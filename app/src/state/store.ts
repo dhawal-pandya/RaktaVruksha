@@ -114,6 +114,8 @@ interface AppState {
 
   isDraft: boolean;
   dirty: boolean;
+  /** When family-data.json was last modified (epoch ms), from the fetch response. */
+  dataUpdatedAt: number | null;
   /** True when the hidden edit key has unlocked writing/import/export. */
   editUnlocked: boolean;
 
@@ -252,6 +254,7 @@ export const useStore = create<AppState>((set, get) => {
     cameraRequest: null,
     isDraft: false,
     dirty: false,
+    dataUpdatedAt: null,
     editUnlocked: computeEditUnlocked(),
     confirmDelete: null,
     mergeKeepId: null,
@@ -286,6 +289,7 @@ export const useStore = create<AppState>((set, get) => {
         const res = await fetch(file, { cache: "no-cache" });
         if (!res.ok)
           throw new Error(`could not load ${file} (${res.status})`);
+        const lastModified = Date.parse(res.headers.get("last-modified") ?? "");
         const parsed = parseFamilyData(await res.text());
         if (!parsed.raw)
           throw new Error(parsed.errors[0] ?? "invalid data file");
@@ -302,6 +306,7 @@ export const useStore = create<AppState>((set, get) => {
           phase: "ready",
           isDraft: false,
           dirty: false,
+          dataUpdatedAt: Number.isNaN(lastModified) ? null : lastModified,
           family2d: sharedFamily ?? largestFamily(derived.dataset),
           lensFamilyId: is3d ? sharedFamily : null,
           cameraRequest:

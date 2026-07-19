@@ -54,6 +54,21 @@ function Footer() {
   );
 }
 
+function UpdatedStamp() {
+  const t = useStore(s => s.dataUpdatedAt);
+  if (!t) return null;
+  const stamp = new Intl.DateTimeFormat('en-IN', {
+    timeZone: 'Asia/Kolkata',
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true,
+  }).format(t);
+  return <div className="data-stamp">updated {stamp} IST</div>;
+}
+
 export default function App() {
   const phase = useStore(s => s.phase);
   const loadError = useStore(s => s.loadError);
@@ -109,6 +124,7 @@ export default function App() {
       <ImportErrorModal />
       <ConfirmResetModal />
       <ConfirmDeleteModal />
+      <UpdatedStamp />
       <Footer />
     </>
   );

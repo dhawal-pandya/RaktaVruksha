@@ -499,11 +499,24 @@ textarea:focus {
   overflow-y: auto;
 }
 
+/* ---------- data stamp ---------- */
+.data-stamp {
+  position: fixed;
+  left: var(--sp-4);
+  bottom: var(--sp-1);
+  z-index: 15;
+  font-size: 11px;
+  color: var(--text-faint);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
 /* ---------- hint & toast ---------- */
 .hint {
   position: fixed;
   left: var(--sp-4);
-  bottom: var(--sp-4);
+  bottom: calc(var(--sp-4) + 14px);
   display: flex;
   align-items: center;
   gap: var(--sp-2);
@@ -750,6 +763,11 @@ input[type='color'] {
 
   .hint {
     display: none;
+  }
+  /* keep the stamp clear of the centered footer line */
+  .data-stamp {
+    left: var(--sp-2);
+    bottom: calc(var(--sp-2) + 22px);
   }
   .modal {
     width: 100%;
