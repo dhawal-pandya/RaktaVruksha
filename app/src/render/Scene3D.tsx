@@ -34,7 +34,7 @@ const UNION_COLOR = '#4a5468';
 // either. POLAR_LEVEL (π/2) is dead-level/head-on; POLAR_TILTED looks gently down
 // (the classic 3/4 elevation). Node framing lands at head-on.
 const POLAR_LEVEL = Math.PI * 0.5;
-const POLAR_TILTED = Math.PI * 0.42;
+const POLAR_TILTED = Math.PI * 0.0;
 
 // Default orbit anchor: whole-tree views pivot around this person, so the spin
 // axis passes through him rather than the graph centroid. Focusing a person or
