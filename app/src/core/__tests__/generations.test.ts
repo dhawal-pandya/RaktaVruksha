@@ -31,8 +31,10 @@ describe('generation solver', () => {
     expect(gen('UncleB')).toBe(1); // Mom's brother, same gen as Dad
   });
 
-  it('gives disconnected people their own component at generation 0', () => {
-    expect(gen('Hermit')).toBe(0);
+  it('gives disconnected people their own component, bottom-aligned to the present', () => {
+    // Its own component, and lined up with the youngest (deepest) generation in the
+    // data rather than sitting at the top — so separate lineages share a "present".
+    expect(gen('Hermit')).toBe(3);
     const compHermit = ds.componentOf.get('Hermit');
     const compDad = ds.componentOf.get('Dad');
     expect(compHermit).not.toBe(compDad);

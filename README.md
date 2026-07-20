@@ -46,7 +46,7 @@ Three trees, same app, see how it holds up on very different families:
   true fathers, present but bound to no generation. Best seen in the default 3D
   view; ask the Relation finder how Krishna and Arjuna, or Karna and
   Yudhishthira, are related.
-- **[The Ramayan, the Raghu dynasty](https://dhawal-pandya.github.io/RaktaVruksha/?data=ramayan)** *(work in progress)* —
+- **[The Ramayan, the Raghu dynasty](https://dhawal-pandya.github.io/RaktaVruksha/?data=ramayan)** —
   several distinct trees at once: Rama's solar Ikshvaku line, Janaka's Videha
   line (with Sita as an adopted, earth-born daughter), Ravana's Rakshasa house of
   Lanka, and the Vanaras of Kishkindha, with the devas Vayu, Indra and Surya as

@@ -39,10 +39,7 @@ export default function TopBar() {
           <span className="badge badge-mahabharat">कुरुवंश Kuruvansh</span>
         )}
         {dataSource === 'ramayan' && (
-          <>
-            <span className="badge badge-ramayan">रघुवंश Raghuvansh</span>
-            <span className="badge badge-wip" title="Work in progress: this tree is still being built out">WIP</span>
-          </>
+          <span className="badge badge-ramayan">रघुवंश Raghuvansh</span>
         )}
       </div>
 

@@ -27,6 +27,16 @@
   },
   "people": [
     {
+      "id": "Manu",
+      "firstName": "Vaivasvata Manu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Surya Deva; progenitor of humankind in this age and father of Ikshvaku, first of the solar kings."
+    },
+    {
       "id": "Ikshvaku",
       "firstName": "Ikshvaku",
       "lastName": "",
@@ -84,17 +94,7 @@
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Grandson of Sagara who recovered the sacrificial horse."
-    },
-    {
-      "id": "Dilipa",
-      "firstName": "Dilipa",
-      "lastName": "",
-      "gender": "male",
-      "alive": true,
-      "birthFamilyId": "familyIkshvaku",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Amshuman; he strove but failed to bring the Ganga down to redeem Sagara's sons."
+      "notes": "Grandson of Sagara who recovered the sacrificial horse; father of Bhagiratha."
     },
     {
       "id": "Bhagiratha",
@@ -104,7 +104,17 @@
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Dilipa; by fierce penance he brought the Ganga down from heaven to earth, hence the river's name Bhagirathi."
+      "notes": "Son of Amshuman; by fierce penance he brought the Ganga down from heaven to earth to redeem Sagara's sons, hence the river Bhagirathi."
+    },
+    {
+      "id": "Dilipa",
+      "firstName": "Dilipa",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Bhagiratha; the ideal king whose devotion to the divine cow Nandini won him his son Raghu — the hero of Kalidasa's Raghuvamsha."
     },
     {
       "id": "Raghu",
@@ -114,7 +124,7 @@
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "A celebrated emperor some generations after Bhagiratha; so glorious that the line is called the Raghuvamsha after him."
+      "notes": "Son of Dilipa; so glorious an emperor that the line is called the Raghuvamsha after him."
     },
     {
       "id": "Aja",
@@ -135,6 +145,26 @@
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-20T00:00:00.000Z",
       "notes": "King of Kosala at Ayodhya; father of Rama by three queens. His promise to Kaikeyi sent Rama into exile and broke his own heart."
+    },
+    {
+      "id": "Sudakshina",
+      "firstName": "Sudakshina",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Queen of Dilipa, princess of the Magadha line; mother of Raghu."
+    },
+    {
+      "id": "Indumati",
+      "firstName": "Indumati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Princess who chose Aja at her svayamvara; queen of Aja and mother of Dasharatha."
     },
     {
       "id": "Kausalya",
@@ -377,6 +407,17 @@
       "notes": "Daughter of Kushadhvaja; wife of Shatrughna."
     },
     {
+      "id": "Brahma",
+      "firstName": "Brahma Dev",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The creator, first of the devas. Ravana's line springs almost directly from him — Brahma, his mind-born son Pulastya, then Vishrava, then Ravana — a short descent, unlike the long solar line of Rama.",
+      "divine": true
+    },
+    {
       "id": "Pulastya",
       "firstName": "Pulastya",
       "lastName": "",
@@ -384,7 +425,7 @@
       "alive": true,
       "birthFamilyId": "familyRakshasa",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "One of the mind-born sons of Brahma (a Prajapati); grandfather of Ravana through his son Vishrava."
+      "notes": "A mind-born son of Brahma (a Prajapati); grandfather of Ravana through his son Vishrava."
     },
     {
       "id": "Vishrava",
@@ -577,10 +618,7 @@
       "alive": true,
       "birthFamilyId": "familyVanara",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Younger vanara prince, son of Surya; exiled by Vali and restored by Rama, whose army of vanaras he then led to Lanka.",
-      "divineParents": [
-        "Surya"
-      ]
+      "notes": "Younger vanara prince, son of Surya; exiled by Vali and restored by Rama, whose army of vanaras he then led to Lanka."
     },
     {
       "id": "Sushena",
@@ -684,7 +722,7 @@
       "alive": true,
       "birthFamilyId": null,
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "King of the devas; an Aditya, son of Aditi and Kashyap, and a brother of Surya. The divine father of the vanara king Vali.",
+      "notes": "King of the devas; the divine father of the vanara king Vali.",
       "divine": true
     },
     {
@@ -693,13 +731,39 @@
       "lastName": "",
       "gender": "male",
       "alive": true,
-      "birthFamilyId": null,
+      "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "The deva of the sun; an Aditya, son of Aditi and Kashyap. The divine father of Sugriva — so Vali and Sugriva are sons of divine brothers.",
+      "notes": "The deva of the sun and fount of the solar dynasty (Suryavamsha): through Vaivasvata Manu he fathers the line of Ikshvaku and Rama, and in this age he is also the divine father of the vanara Sugriva.",
       "divine": true
     }
   ],
   "unions": [
+    {
+      "id": "u_surya_manu",
+      "partners": [
+        "Surya"
+      ],
+      "children": [
+        "Manu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_manu",
+      "partners": [
+        "Manu"
+      ],
+      "children": [
+        "Ikshvaku"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
     {
       "id": "u_ikshvaku",
       "partners": [
@@ -771,19 +835,6 @@
         "Amshuman"
       ],
       "children": [
-        "Dilipa"
-      ],
-      "adoptedChildren": [],
-      "familyId": "familyIkshvaku",
-      "status": "married",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
-    },
-    {
-      "id": "u_dilipa",
-      "partners": [
-        "Dilipa"
-      ],
-      "children": [
         "Bhagiratha"
       ],
       "adoptedChildren": [],
@@ -795,6 +846,20 @@
       "id": "u_bhagiratha",
       "partners": [
         "Bhagiratha"
+      ],
+      "children": [
+        "Dilipa"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_dilipa",
+      "partners": [
+        "Dilipa",
+        "Sudakshina"
       ],
       "children": [
         "Raghu"
@@ -820,7 +885,8 @@
     {
       "id": "u_aja",
       "partners": [
-        "Aja"
+        "Aja",
+        "Indumati"
       ],
       "children": [
         "Dasharatha"
@@ -990,6 +1056,19 @@
       ],
       "adoptedChildren": [],
       "familyId": "familyVideha",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_brahma",
+      "partners": [
+        "Brahma"
+      ],
+      "children": [
+        "Pulastya"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyRakshasa",
       "status": "married",
       "updatedAt": "2026-07-20T00:00:00.000Z"
     },

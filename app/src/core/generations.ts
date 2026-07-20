@@ -62,6 +62,20 @@ export const computeGenerations = (
     comp++;
   }
 
+  // Bottom-align disconnected components: line up their YOUNGEST generation (each
+  // separate tree's "present day") rather than their oldest, so contemporaries in
+  // unrelated lineages — Rama, Ravana, Vali, Hanuman — sit on the same level. A
+  // single connected component (Mahabharat, my family) is unaffected.
+  const compMax = new Map<number, number>();
+  for (const [id, comp] of componentOf) {
+    compMax.set(comp, Math.max(compMax.get(comp) ?? -Infinity, gen.get(id)!));
+  }
+  const globalMax = Math.max(...compMax.values());
+  for (const [id, comp] of componentOf) {
+    const shift = globalMax - (compMax.get(comp) ?? globalMax);
+    if (shift) gen.set(id, gen.get(id)! + shift);
+  }
+
   // Devas are free agents: their divine parentage never entered the leveling
   // above (no edges were added for it), so it can never shift a mortal's
   // generation. Here we simply *display* each deva one level above its earliest
