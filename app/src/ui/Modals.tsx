@@ -192,7 +192,7 @@ export function MergePersonModal() {
 
         <p className="muted">
           Use this when the same person was entered twice. The person you pick is
-          absorbed into <strong>{personName(keep)}</strong> — their marriages, children and
+          absorbed into <strong>{personName(keep)}</strong>: their marriages, children and
           parents move over, and the duplicate record is deleted.
         </p>
 
@@ -219,7 +219,7 @@ export function MergePersonModal() {
             <h3>Moving onto {personName(keep)}</h3>
             {spouses.length + children.length + parents.length === 0 ? (
               <span className="muted">
-                {personName(absorb)} has no relations to move — the record is just removed.
+                {personName(absorb)} has no relations to move, so the record is just removed.
               </span>
             ) : (
               <>

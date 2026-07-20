@@ -319,7 +319,7 @@ export default function Scene2D() {
     url.searchParams.delete('edit'); // a shared link must never carry the edit key
     const link = url.toString();
     const done = () =>
-      useStore.getState().showToast('Link copied — it opens on this family tree');
+      useStore.getState().showToast('Link copied, it opens on this family tree');
     if (navigator.clipboard?.writeText) {
       navigator.clipboard
         .writeText(link)

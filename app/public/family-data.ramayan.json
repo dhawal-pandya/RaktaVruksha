@@ -114,7 +114,7 @@
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Bhagiratha; the ideal king whose devotion to the divine cow Nandini won him his son Raghu — the hero of Kalidasa's Raghuvamsha."
+      "notes": "Son of Bhagiratha; the ideal king whose devotion to the divine cow Nandini won him his son Raghu, the hero of Kalidasa's Raghuvamsha."
     },
     {
       "id": "Raghu",
@@ -414,7 +414,7 @@
       "alive": true,
       "birthFamilyId": "familyRakshasa",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "The creator, first of the devas. Ravana's line springs almost directly from him — Brahma, his mind-born son Pulastya, then Vishrava, then Ravana — a short descent, unlike the long solar line of Rama.",
+      "notes": "The creator, first of the devas. Ravana's line springs almost directly from him, Brahma, his mind-born son Pulastya, then Vishrava, then Ravana, a short descent, unlike the long solar line of Rama.",
       "divine": true
     },
     {
@@ -495,7 +495,7 @@
       "alive": true,
       "birthFamilyId": "familyRakshasa",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Sister of Ravana whose courting of Rama and Lakshmana — and the loss of her nose — set the war in motion."
+      "notes": "Sister of Ravana whose courting of Rama and Lakshmana, and the loss of her nose, set the war in motion."
     },
     {
       "id": "Vibhishana",

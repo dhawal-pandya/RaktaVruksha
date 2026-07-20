@@ -36,7 +36,7 @@ Three trees, same app, see how it holds up on very different families:
 
 - **[My family](https://dhawal-pandya.github.io/RaktaVruksha/)** (default). the
   real Pandya lineage this was built for.
-- **[The Mahabharat: the Kuru dynasty](https://dhawal-pandya.github.io/RaktaVruksha/?data=mahabharat)** —
+- **[The Mahabharat: the Kuru dynasty](https://dhawal-pandya.github.io/RaktaVruksha/?data=mahabharat)**,
   the epic's cast as one graph, 260+ people across fifteen intertwined lineages,
   running from Chandra Deva down through Yayati, where the Kuru and Yadava lines
   fork, to the war and beyond. It stresses everything the schema can express:
@@ -46,7 +46,7 @@ Three trees, same app, see how it holds up on very different families:
   true fathers, present but bound to no generation. Best seen in the default 3D
   view; ask the Relation finder how Krishna and Arjuna, or Karna and
   Yudhishthira, are related.
-- **[The Ramayan, the Raghu dynasty](https://dhawal-pandya.github.io/RaktaVruksha/?data=ramayan)** —
+- **[The Ramayan, the Raghu dynasty](https://dhawal-pandya.github.io/RaktaVruksha/?data=ramayan)**,
   several distinct trees at once: Rama's solar Ikshvaku line, Janaka's Videha
   line (with Sita as an adopted, earth-born daughter), Ravana's Rakshasa house of
   Lanka, and the Vanaras of Kishkindha, with the devas Vayu, Indra and Surya as

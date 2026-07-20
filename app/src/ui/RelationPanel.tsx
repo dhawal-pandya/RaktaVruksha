@@ -59,7 +59,7 @@ export default function RelationPanel() {
         <span className="relation-arrow">→</span>
         <div className={`relation-slot ${relation.bId ? 'filled' : ''}`}>
           <span className="slot-label">B</span>
-          {name(relation.bId) ?? (relation.aId ? 'search or click…' : '—')}
+          {name(relation.bId) ?? (relation.aId ? 'search or click…' : '·')}
         </div>
       </div>
 

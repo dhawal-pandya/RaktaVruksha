@@ -382,7 +382,7 @@ export default function PersonForm() {
               <div className="detail-section">
                 <h3>Also a parent of</h3>
                 <span className="muted">
-                  {anchor ? personName(anchor) : 'their'} existing children with no second parent —
+                  {anchor ? personName(anchor) : 'their'} existing children with no second parent:
                   tick any that belong to this marriage too.
                 </span>
                 {soloChildren.map(cid => {
