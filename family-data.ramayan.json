@@ -1,0 +1,1247 @@
+{
+  "meta": {
+    "schemaVersion": 2,
+    "exportedAt": "2026-07-20T00:00:00.000Z"
+  },
+  "families": {
+    "familyIkshvaku": {
+      "name": "Ikshvaku",
+      "color": "#e6bf3e"
+    },
+    "familyVideha": {
+      "name": "Videha",
+      "color": "#5cc97f"
+    },
+    "familyKekaya": {
+      "name": "Kekaya",
+      "color": "#a78bea"
+    },
+    "familyRakshasa": {
+      "name": "Rakshasa",
+      "color": "#e05a68"
+    },
+    "familyVanara": {
+      "name": "Vanara",
+      "color": "#b07a44"
+    }
+  },
+  "people": [
+    {
+      "id": "Manu",
+      "firstName": "Vaivasvata Manu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Surya Deva; progenitor of humankind in this age and father of Ikshvaku, first of the solar kings."
+    },
+    {
+      "id": "Ikshvaku",
+      "firstName": "Ikshvaku",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Vaivasvata Manu; founder of the solar dynasty (Suryavamsha) and first king of Kosala at Ayodhya."
+    },
+    {
+      "id": "Mandhata",
+      "firstName": "Mandhata",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A world-conquering emperor of the Ikshvaku line, several generations after Ikshvaku."
+    },
+    {
+      "id": "Harishchandra",
+      "firstName": "Harishchandra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The king who never told a lie, giving up throne, wife and son rather than break his word; generations after Mandhata."
+    },
+    {
+      "id": "Sagara",
+      "firstName": "Sagara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Emperor whose sixty thousand sons were burnt to ash for disturbing the sage Kapila; generations after Harishchandra."
+    },
+    {
+      "id": "Asamanja",
+      "firstName": "Asamanja",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Wayward son of Sagara, exiled for his cruelty."
+    },
+    {
+      "id": "Amshuman",
+      "firstName": "Amshuman",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Grandson of Sagara who recovered the sacrificial horse; father of Bhagiratha."
+    },
+    {
+      "id": "Bhagiratha",
+      "firstName": "Bhagiratha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Amshuman; by fierce penance he brought the Ganga down from heaven to earth to redeem Sagara's sons, hence the river Bhagirathi."
+    },
+    {
+      "id": "Dilipa",
+      "firstName": "Dilipa",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Bhagiratha; the ideal king whose devotion to the divine cow Nandini won him his son Raghu, the hero of Kalidasa's Raghuvamsha."
+    },
+    {
+      "id": "Raghu",
+      "firstName": "Raghu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Dilipa; so glorious an emperor that the line is called the Raghuvamsha after him."
+    },
+    {
+      "id": "Aja",
+      "firstName": "Aja",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Raghu; father of Dasharatha."
+    },
+    {
+      "id": "Dasharatha",
+      "firstName": "Dasharatha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of Kosala at Ayodhya; father of Rama by three queens. His promise to Kaikeyi sent Rama into exile and broke his own heart."
+    },
+    {
+      "id": "Sudakshina",
+      "firstName": "Sudakshina",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Queen of Dilipa, princess of the Magadha line; mother of Raghu."
+    },
+    {
+      "id": "Indumati",
+      "firstName": "Indumati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Princess who chose Aja at her svayamvara; queen of Aja and mother of Dasharatha."
+    },
+    {
+      "id": "Kausalya",
+      "firstName": "Kausalya",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Chief queen of Dasharatha and mother of Rama; a princess of Dakshina Kosala."
+    },
+    {
+      "id": "Kaikeyi",
+      "firstName": "Kaikeyi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyKekaya",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Second queen of Dasharatha, princess of Kekaya; her two boons won Bharata the throne and drove Rama to the forest."
+    },
+    {
+      "id": "Sumitra",
+      "firstName": "Sumitra",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Third queen of Dasharatha; mother of the twins Lakshmana and Shatrughna."
+    },
+    {
+      "id": "Rama",
+      "firstName": "Rama",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Eldest son of Dasharatha, by Kausalya; the seventh avatar of Vishnu, exiled fourteen years, who slew Ravana to win back Sita."
+    },
+    {
+      "id": "Bharata",
+      "firstName": "Bharata",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Dasharatha by Kaikeyi; he refused the throne his mother seized and ruled only as regent for Rama's sandals."
+    },
+    {
+      "id": "Lakshmana",
+      "firstName": "Lakshmana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Dasharatha by Sumitra; Rama's devoted brother who followed him into exile and warred at his side."
+    },
+    {
+      "id": "Shatrughna",
+      "firstName": "Shatrughna",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Youngest son of Dasharatha by Sumitra, twin of Lakshmana; the slayer of the demon Lavana."
+    },
+    {
+      "id": "Lava",
+      "firstName": "Lava",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Rama and Sita, born in the forest hermitage; twin of Kusha."
+    },
+    {
+      "id": "Kusha",
+      "firstName": "Kusha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Rama and Sita, born in the forest hermitage; twin of Lava. Kusha and Lava sang the Ramayana before their father, not knowing him."
+    },
+    {
+      "id": "Chandraketu",
+      "firstName": "Chandraketu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Lakshmana and Urmila (Lakshmana also had a son Angada, a namesake of the vanara prince)."
+    },
+    {
+      "id": "Taksha",
+      "firstName": "Taksha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Bharata and Mandavi; he gave his name to Takshashila."
+    },
+    {
+      "id": "Pushkala",
+      "firstName": "Pushkala",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Bharata and Mandavi."
+    },
+    {
+      "id": "Subahu",
+      "firstName": "Subahu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Shatrughna and Shrutakirti; king of Mathura."
+    },
+    {
+      "id": "Shatrughati",
+      "firstName": "Shatrughati",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Shatrughna and Shrutakirti."
+    },
+    {
+      "id": "Ashvapati",
+      "firstName": "Ashvapati",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKekaya",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of Kekaya; father of Kaikeyi and Yudhajit."
+    },
+    {
+      "id": "Yudhajit",
+      "firstName": "Yudhajit",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKekaya",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Prince of Kekaya, Kaikeyi's brother, whose invitation took Bharata away from Ayodhya at the hour of Dasharatha's death."
+    },
+    {
+      "id": "Hrasvaroma",
+      "firstName": "Hrasvaroma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyVideha",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of Videha; father of Janaka and Kushadhvaja. The Janaka kings descend from Nimi, a son of Ikshvaku."
+    },
+    {
+      "id": "Janaka",
+      "firstName": "Janaka",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyVideha",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Seeradhvaja Janaka, the philosopher-king of Mithila; he found the infant Sita in a furrow and gave her to whoever could string Shiva's bow."
+    },
+    {
+      "id": "Kushadhvaja",
+      "firstName": "Kushadhvaja",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyVideha",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Younger brother of Janaka, king of Sankashya."
+    },
+    {
+      "id": "Sunayana",
+      "firstName": "Sunayana",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Queen of Janaka; foster-mother of Sita and mother of Urmila."
+    },
+    {
+      "id": "Sita",
+      "firstName": "Sita",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Found by Janaka in a furrow of the earth (Bhumija) and raised as his daughter; wife of Rama, carried off by Ravana, at last taken back into the earth. Her birth lineage is none but the Earth's."
+    },
+    {
+      "id": "Urmila",
+      "firstName": "Urmila",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyVideha",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of Janaka and Sunayana; wife of Lakshmana, who slept fourteen years in her stead so he could guard Rama night and day."
+    },
+    {
+      "id": "Mandavi",
+      "firstName": "Mandavi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyVideha",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of Kushadhvaja; wife of Bharata."
+    },
+    {
+      "id": "Shrutakirti",
+      "firstName": "Shrutakirti",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyVideha",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of Kushadhvaja; wife of Shatrughna."
+    },
+    {
+      "id": "Brahma",
+      "firstName": "Brahma Dev",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The creator, first of the devas. Ravana's line springs almost directly from him, Brahma, his mind-born son Pulastya, then Vishrava, then Ravana, a short descent, unlike the long solar line of Rama.",
+      "divine": true
+    },
+    {
+      "id": "Pulastya",
+      "firstName": "Pulastya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A mind-born son of Brahma (a Prajapati); grandfather of Ravana through his son Vishrava."
+    },
+    {
+      "id": "Vishrava",
+      "firstName": "Vishrava",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Sage son of Pulastya; father of Kubera by Ilavida and of Ravana and his siblings by the rakshasi Kaikasi."
+    },
+    {
+      "id": "Ilavida",
+      "firstName": "Ilavida",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "First wife of Vishrava; mother of Kubera."
+    },
+    {
+      "id": "Kaikasi",
+      "firstName": "Kaikasi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Rakshasi wife of Vishrava, daughter of the demon Sumali; mother of Ravana, Kumbhakarna, Shurpanakha and Vibhishana."
+    },
+    {
+      "id": "Kubera",
+      "firstName": "Kubera",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Vishrava and Ilavida; the yaksha lord of wealth who first ruled Lanka, until his half-brother Ravana drove him out."
+    },
+    {
+      "id": "Ravana",
+      "firstName": "Ravana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The ten-headed rakshasa king of Lanka; a mighty devotee of Shiva and master of the Vedas whose abduction of Sita brought his doom."
+    },
+    {
+      "id": "Kumbhakarna",
+      "firstName": "Kumbhakarna",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Giant brother of Ravana, cursed to sleep six months at a time; woken for the war, he was slain by Rama."
+    },
+    {
+      "id": "Shurpanakha",
+      "firstName": "Shurpanakha",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Sister of Ravana whose courting of Rama and Lakshmana, and the loss of her nose, set the war in motion."
+    },
+    {
+      "id": "Vibhishana",
+      "firstName": "Vibhishana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Youngest brother of Ravana; righteous, he deserted to Rama and was crowned king of Lanka after the war."
+    },
+    {
+      "id": "Maya",
+      "firstName": "Maya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Mayasura, the great asura architect; father of Mandodari."
+    },
+    {
+      "id": "Mandodari",
+      "firstName": "Mandodari",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of Mayasura; the wise and virtuous chief queen of Ravana and mother of Indrajit."
+    },
+    {
+      "id": "Indrajit",
+      "firstName": "Indrajit",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Meghanada, son of Ravana and Mandodari; he once defeated Indra himself, hence his name, and was slain by Lakshmana."
+    },
+    {
+      "id": "Atikaya",
+      "firstName": "Atikaya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Ravana and Mandodari; a colossal warrior slain by Lakshmana."
+    },
+    {
+      "id": "Akshayakumara",
+      "firstName": "Akshayakumara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Young son of Ravana, slain by Hanuman in the burning of Lanka."
+    },
+    {
+      "id": "Kumbha",
+      "firstName": "Kumbha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Kumbhakarna, killed in the war."
+    },
+    {
+      "id": "Nikumbha",
+      "firstName": "Nikumbha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Kumbhakarna, killed in the war."
+    },
+    {
+      "id": "Vajrajwala",
+      "firstName": "Vajrajwala",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Wife of Kumbhakarna; a granddaughter of the demon Virochana."
+    },
+    {
+      "id": "Riksharaja",
+      "firstName": "Riksharaja",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyVanara",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The vanara king of Kishkindha; foster-father of Vali and Sugriva, who were begotten of the gods Indra and Surya."
+    },
+    {
+      "id": "Vali",
+      "firstName": "Vali",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyVanara",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Elder vanara prince, son of Indra; king of Kishkindha of peerless strength, slain by Rama's arrow to restore Sugriva.",
+      "divineParents": [
+        "Indra"
+      ]
+    },
+    {
+      "id": "Sugriva",
+      "firstName": "Sugriva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyVanara",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Younger vanara prince, son of Surya; exiled by Vali and restored by Rama, whose army of vanaras he then led to Lanka."
+    },
+    {
+      "id": "Sushena",
+      "firstName": "Sushena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyVanara",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Vanara elder and physician; father of Tara."
+    },
+    {
+      "id": "Tara",
+      "firstName": "Tara",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyVanara",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of Sushena; the wise queen of Vali, and after him of Sugriva. Mother of Angada."
+    },
+    {
+      "id": "Ruma",
+      "firstName": "Ruma",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyVanara",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Wife of Sugriva."
+    },
+    {
+      "id": "Angada",
+      "firstName": "Angada",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyVanara",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Vali and Tara; the vanara prince who led Rama's embassy to Ravana."
+    },
+    {
+      "id": "Kesari",
+      "firstName": "Kesari",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyVanara",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A vanara chief; the earthly father of Hanuman."
+    },
+    {
+      "id": "Anjana",
+      "firstName": "Anjana",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyVanara",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "An apsara born as a vanara; mother of Hanuman."
+    },
+    {
+      "id": "Hanuman",
+      "firstName": "Hanuman",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyVanara",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Kesari and Anjana, begotten by Vayu the wind-god; the immortal devotee of Rama who leapt to Lanka and found Sita.",
+      "divineParents": [
+        "Vayu"
+      ]
+    },
+    {
+      "id": "Sumali",
+      "firstName": "Sumali",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A rakshasa lord of the elder line of Lanka; father of Kaikasi, whom he gave to the sage Vishrava to sire sons who might rival the devas."
+    },
+    {
+      "id": "Vayu",
+      "firstName": "Vayu Deva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The deva of the wind; father of Hanuman, whose boundless strength and flight are his gift.",
+      "divine": true
+    },
+    {
+      "id": "Indra",
+      "firstName": "Indra Deva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of the devas; the divine father of the vanara king Vali.",
+      "divine": true
+    },
+    {
+      "id": "Surya",
+      "firstName": "Surya Deva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The deva of the sun and fount of the solar dynasty (Suryavamsha): through Vaivasvata Manu he fathers the line of Ikshvaku and Rama, and in this age he is also the divine father of the vanara Sugriva.",
+      "divine": true
+    }
+  ],
+  "unions": [
+    {
+      "id": "u_surya_manu",
+      "partners": [
+        "Surya"
+      ],
+      "children": [
+        "Manu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_manu",
+      "partners": [
+        "Manu"
+      ],
+      "children": [
+        "Ikshvaku"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_ikshvaku",
+      "partners": [
+        "Ikshvaku"
+      ],
+      "children": [
+        "Mandhata"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_mandhata",
+      "partners": [
+        "Mandhata"
+      ],
+      "children": [
+        "Harishchandra"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_harishchandra",
+      "partners": [
+        "Harishchandra"
+      ],
+      "children": [
+        "Sagara"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_sagara",
+      "partners": [
+        "Sagara"
+      ],
+      "children": [
+        "Asamanja"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_asamanja",
+      "partners": [
+        "Asamanja"
+      ],
+      "children": [
+        "Amshuman"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_amshuman",
+      "partners": [
+        "Amshuman"
+      ],
+      "children": [
+        "Bhagiratha"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_bhagiratha",
+      "partners": [
+        "Bhagiratha"
+      ],
+      "children": [
+        "Dilipa"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_dilipa",
+      "partners": [
+        "Dilipa",
+        "Sudakshina"
+      ],
+      "children": [
+        "Raghu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_raghu",
+      "partners": [
+        "Raghu"
+      ],
+      "children": [
+        "Aja"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_aja",
+      "partners": [
+        "Aja",
+        "Indumati"
+      ],
+      "children": [
+        "Dasharatha"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_dasha_kausalya",
+      "partners": [
+        "Dasharatha",
+        "Kausalya"
+      ],
+      "children": [
+        "Rama"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_dasha_kaikeyi",
+      "partners": [
+        "Dasharatha",
+        "Kaikeyi"
+      ],
+      "children": [
+        "Bharata"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_dasha_sumitra",
+      "partners": [
+        "Dasharatha",
+        "Sumitra"
+      ],
+      "children": [
+        "Lakshmana",
+        "Shatrughna"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 2
+    },
+    {
+      "id": "u_rama_sita",
+      "partners": [
+        "Rama",
+        "Sita"
+      ],
+      "children": [
+        "Lava",
+        "Kusha"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_lakshmana_urmila",
+      "partners": [
+        "Lakshmana",
+        "Urmila"
+      ],
+      "children": [
+        "Chandraketu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_bharata_mandavi",
+      "partners": [
+        "Bharata",
+        "Mandavi"
+      ],
+      "children": [
+        "Taksha",
+        "Pushkala"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_shatrughna_shrutakirti",
+      "partners": [
+        "Shatrughna",
+        "Shrutakirti"
+      ],
+      "children": [
+        "Subahu",
+        "Shatrughati"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_ashvapati",
+      "partners": [
+        "Ashvapati"
+      ],
+      "children": [
+        "Kaikeyi",
+        "Yudhajit"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKekaya",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_hrasvaroma",
+      "partners": [
+        "Hrasvaroma"
+      ],
+      "children": [
+        "Janaka",
+        "Kushadhvaja"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyVideha",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_janaka",
+      "partners": [
+        "Janaka",
+        "Sunayana"
+      ],
+      "children": [
+        "Urmila"
+      ],
+      "adoptedChildren": [
+        "Sita"
+      ],
+      "familyId": "familyVideha",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_kushadhvaja",
+      "partners": [
+        "Kushadhvaja"
+      ],
+      "children": [
+        "Mandavi",
+        "Shrutakirti"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyVideha",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_brahma",
+      "partners": [
+        "Brahma"
+      ],
+      "children": [
+        "Pulastya"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyRakshasa",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_pulastya",
+      "partners": [
+        "Pulastya"
+      ],
+      "children": [
+        "Vishrava"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyRakshasa",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_vishrava_ilavida",
+      "partners": [
+        "Vishrava",
+        "Ilavida"
+      ],
+      "children": [
+        "Kubera"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyRakshasa",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_vishrava_kaikasi",
+      "partners": [
+        "Vishrava",
+        "Kaikasi"
+      ],
+      "children": [
+        "Ravana",
+        "Kumbhakarna",
+        "Shurpanakha",
+        "Vibhishana"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyRakshasa",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_maya",
+      "partners": [
+        "Maya"
+      ],
+      "children": [
+        "Mandodari"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "unknown",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_ravana",
+      "partners": [
+        "Ravana",
+        "Mandodari"
+      ],
+      "children": [
+        "Indrajit",
+        "Atikaya",
+        "Akshayakumara"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyRakshasa",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_kumbhakarna",
+      "partners": [
+        "Kumbhakarna",
+        "Vajrajwala"
+      ],
+      "children": [
+        "Kumbha",
+        "Nikumbha"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyRakshasa",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_riksharaja",
+      "partners": [
+        "Riksharaja"
+      ],
+      "children": [
+        "Vali",
+        "Sugriva"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyVanara",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_sushena",
+      "partners": [
+        "Sushena"
+      ],
+      "children": [
+        "Tara"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyVanara",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_vali_tara",
+      "partners": [
+        "Vali",
+        "Tara"
+      ],
+      "children": [
+        "Angada"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyVanara",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_sugriva_ruma",
+      "partners": [
+        "Sugriva",
+        "Ruma"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyVanara",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_kesari_anjana",
+      "partners": [
+        "Kesari",
+        "Anjana"
+      ],
+      "children": [
+        "Hanuman"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyVanara",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_sumali",
+      "partners": [
+        "Sumali"
+      ],
+      "children": [
+        "Kaikasi"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyRakshasa",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    }
+  ]
+}

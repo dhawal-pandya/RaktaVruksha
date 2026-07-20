@@ -1,0 +1,4378 @@
+{
+  "meta": {
+    "schemaVersion": 2,
+    "exportedAt": "2026-07-20T00:00:00.000Z"
+  },
+  "families": {
+    "familyKuru": {
+      "name": "Kuru",
+      "color": "#dcb64a"
+    },
+    "familyYadava": {
+      "name": "Yadava",
+      "color": "#46c7d0"
+    },
+    "familyPanchala": {
+      "name": "Panchala",
+      "color": "#ef6f9a"
+    },
+    "familyGandhara": {
+      "name": "Gandhara",
+      "color": "#a78bea"
+    },
+    "familyMadra": {
+      "name": "Madra",
+      "color": "#5cc97f"
+    },
+    "familyMatsya": {
+      "name": "Matsya",
+      "color": "#ef8f3c"
+    },
+    "familyKashi": {
+      "name": "Kashi",
+      "color": "#d97fbf"
+    },
+    "familyChedi": {
+      "name": "Chedi",
+      "color": "#8fa3b8"
+    },
+    "familyAngirasa": {
+      "name": "Angirasa",
+      "color": "#b8c24e"
+    },
+    "familyNaga": {
+      "name": "Naga",
+      "color": "#5c8def"
+    },
+    "familyManipura": {
+      "name": "Manipura",
+      "color": "#e8695b"
+    },
+    "familySuta": {
+      "name": "Suta",
+      "color": "#b5763a"
+    },
+    "familySindhu": {
+      "name": "Sindhu",
+      "color": "#7ec8a0"
+    },
+    "familySoma": {
+      "name": "Chandravamsha",
+      "color": "#cfd6e2"
+    },
+    "familyMagadha": {
+      "name": "Magadha",
+      "color": "#5aa0a8"
+    }
+  },
+  "people": [
+    {
+      "id": "Chandra",
+      "firstName": "Chandra Deva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Chandra Deva (also Soma), the radiant deva of the moon and of the soma nectar; progenitor and eponym of the Chandravamsha, the lunar dynasty from which both the Kurus and the Yadavas descend.",
+      "divine": true
+    },
+    {
+      "id": "Budha",
+      "firstName": "Budha Deva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Budha Deva, the deva of the planet Mercury and son of Chandra; husband of Ila.",
+      "divine": true
+    },
+    {
+      "id": "Pururavas",
+      "firstName": "Pururavas",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Budha and Ila; first emperor of the lunar line, famed for his love of the apsara Urvashi."
+    },
+    {
+      "id": "Ayus",
+      "firstName": "Ayus",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Pururavas and Urvashi."
+    },
+    {
+      "id": "Nahusha",
+      "firstName": "Nahusha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Ayus; so mighty he briefly took Indra's throne, then fell for his pride and became a serpent."
+    },
+    {
+      "id": "Yayati",
+      "firstName": "Yayati",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Nahusha; a great emperor cursed with old age, which his youngest son Puru bore for him. His five sons founded five peoples."
+    },
+    {
+      "id": "Ila",
+      "firstName": "Ila",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Wife of Budha; born of Vaivasvata Manu and, by a boon, living as both woman and man across her life."
+    },
+    {
+      "id": "Urvashi",
+      "firstName": "Urvashi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The apsara beloved of Pururavas and mother of Ayus."
+    },
+    {
+      "id": "Devayani",
+      "firstName": "Devayani",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "First wife of Yayati; daughter of Shukracharya, preceptor of the asuras. Mother of Yadu and Turvasu."
+    },
+    {
+      "id": "Sharmishtha",
+      "firstName": "Sharmishtha",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Second wife of Yayati; daughter of the asura king Vrishaparva. Mother of Druhyu, Anu and Puru."
+    },
+    {
+      "id": "Yadu",
+      "firstName": "Yadu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Eldest son of Yayati and Devayani; progenitor of the Yadavas (the Yadu line), into which Krishna is born."
+    },
+    {
+      "id": "Turvasu",
+      "firstName": "Turvasu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Yayati and Devayani; ancestor of the Yavana peoples."
+    },
+    {
+      "id": "Druhyu",
+      "firstName": "Druhyu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Yayati and Sharmishtha; ancestor of the Bhoja peoples."
+    },
+    {
+      "id": "Anu",
+      "firstName": "Anu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Yayati and Sharmishtha; ancestor of the Mleccha peoples."
+    },
+    {
+      "id": "Puru",
+      "firstName": "Puru",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Youngest son of Yayati and Sharmishtha; he gave his own youth to his aged father and so inherited the throne, founding the Paurava (Kuru) line."
+    },
+    {
+      "id": "Dushyanta",
+      "firstName": "Dushyanta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Paurava emperor descended from Puru through several generations; husband of Shakuntala and father of Bharata."
+    },
+    {
+      "id": "Shakuntala",
+      "firstName": "Shakuntala",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of the sage Vishvamitra and the apsara Menaka, raised by the sage Kanva; wife of Dushyanta and mother of Bharata."
+    },
+    {
+      "id": "Bharata",
+      "firstName": "Bharata",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The great emperor son of Dushyanta and Shakuntala, after whom the land Bharatavarsha and the Bharata clan are named."
+    },
+    {
+      "id": "Hastin",
+      "firstName": "Hastin",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Bharata king, some generations after Bharata; founder of Hastinapura, the Kuru capital."
+    },
+    {
+      "id": "Kuru",
+      "firstName": "Kuru",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King some generations after Hastin; eponymous ancestor of the Kurus and of the field of Kurukshetra."
+    },
+    {
+      "id": "Kroshtu",
+      "firstName": "Kroshtu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Yadu; the Yadava kings descend from him."
+    },
+    {
+      "id": "Vrijinivat",
+      "firstName": "Vrijinivat",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Yadava king, son of Kroshtu."
+    },
+    {
+      "id": "Swahi",
+      "firstName": "Swahi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Yadava king of the early Yadu line."
+    },
+    {
+      "id": "Rushadru",
+      "firstName": "Rushadru",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Yadava king of the early Yadu line."
+    },
+    {
+      "id": "Madhu",
+      "firstName": "Madhu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Yadava king; progenitor of the Madhava branch, whence Krishna's epithet Madhava. Several generations separate him from Vrishni."
+    },
+    {
+      "id": "Vrishni",
+      "firstName": "Vrishni",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Yadava king; eponym of the Vrishni clan of Krishna and Vasudeva."
+    },
+    {
+      "id": "Pratipa",
+      "firstName": "Pratipa",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of the Kuru line; husband of Sunanda."
+    },
+    {
+      "id": "Sunanda",
+      "firstName": "Sunanda",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Wife of Pratipa; a princess of Shibi and mother of Devapi, Bahlika and Shantanu."
+    },
+    {
+      "id": "Devapi",
+      "firstName": "Devapi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Eldest son of Pratipa; a skin ailment led him to renounce the throne and take to the forest as an ascetic."
+    },
+    {
+      "id": "Bahlika",
+      "firstName": "Bahlika",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Pratipa; ruled the Bahlika kingdom. His descendants fought on the Kaurava side."
+    },
+    {
+      "id": "Shantanu",
+      "firstName": "Shantanu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Youngest son of Pratipa; became king when Devapi renounced. Father of Bhishma."
+    },
+    {
+      "id": "Somadatta",
+      "firstName": "Somadatta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Bahlika."
+    },
+    {
+      "id": "Bhurishravas",
+      "firstName": "Bhurishravas",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Somadatta; a mighty Kaurava warrior slain by Satyaki at Kurukshetra."
+    },
+    {
+      "id": "Ganga",
+      "firstName": "Ganga Devi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The devi of the sacred river; Shantanu's first wife and mother of Bhishma, whom she bore as the last of the eight Vasus made mortal.",
+      "divine": true
+    },
+    {
+      "id": "Bhishma",
+      "firstName": "Bhishma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Born Devavrata; took a vow of lifelong celibacy so his father could marry Satyavati, hence 'Bhishma'. He was Prabhasa, the eighth and last of the eight Vasus, cursed to a long mortal life for stealing the sage Vasishtha's cow; his seven brother-Vasus, shown here as Ganga's other sons, she returned at once to heaven. Grandsire and regent of the Kurus; a chiranjivi who chose his own hour of death."
+    },
+    {
+      "id": "VasuDhara",
+      "firstName": "Dhara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Vasu, deva of the earth; a brother-Vasu of Bhishma (Prabhasa), borne by Ganga and returned to heaven.",
+      "divine": true
+    },
+    {
+      "id": "VasuDhruva",
+      "firstName": "Dhruva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Vasu, deva of the pole star; borne by Ganga and returned to heaven.",
+      "divine": true
+    },
+    {
+      "id": "VasuSoma",
+      "firstName": "Soma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Vasu, deva of the moon; borne by Ganga and returned to heaven.",
+      "divine": true
+    },
+    {
+      "id": "VasuAha",
+      "firstName": "Aha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Vasu, deva of the day and the ethereal space; borne by Ganga and returned to heaven.",
+      "divine": true
+    },
+    {
+      "id": "VasuAnila",
+      "firstName": "Anila",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Vasu, deva of the wind; borne by Ganga and returned to heaven.",
+      "divine": true
+    },
+    {
+      "id": "VasuAnala",
+      "firstName": "Anala",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Vasu, deva of fire (Agni); borne by Ganga and returned to heaven.",
+      "divine": true
+    },
+    {
+      "id": "VasuPratyusha",
+      "firstName": "Pratyusha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Vasu, deva of the dawn; borne by Ganga and returned to heaven.",
+      "divine": true
+    },
+    {
+      "id": "Satyavati",
+      "firstName": "Satyavati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A fisherman's daughter, raised by the ferryman Dasharaja; queen of Shantanu and matriarch of the later Kuru line."
+    },
+    {
+      "id": "Parashara",
+      "firstName": "Parashara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A great sage; father of Vyasa by Satyavati before her marriage to Shantanu."
+    },
+    {
+      "id": "Vyasa",
+      "firstName": "Vyasa",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Krishna Dvaipayana Vyasa, son of Satyavati and the sage Parashara before her marriage; arranger of the Vedas and composer of the Mahabharat. Biological father, through niyoga, of Dhritarashtra, Pandu and Vidura."
+    },
+    {
+      "id": "Chitrangada",
+      "firstName": "Chitrangada",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Elder son of Shantanu and Satyavati; a proud king slain young by a gandharva, leaving no heir."
+    },
+    {
+      "id": "Vichitravirya",
+      "firstName": "Vichitravirya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Younger son of Shantanu and Satyavati; wed Ambika and Ambalika but died childless, prompting the niyoga that continued the line."
+    },
+    {
+      "id": "Kashiraja",
+      "firstName": "Kashiraja",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKashi",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of Kashi; his three daughters were carried off from their svayamvara by Bhishma as brides for Vichitravirya."
+    },
+    {
+      "id": "Amba",
+      "firstName": "Amba",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyKashi",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Eldest Kashi princess; rejected because she loved another, she vowed vengeance on Bhishma and was reborn in Panchala as Shikhandi."
+    },
+    {
+      "id": "Ambika",
+      "firstName": "Ambika",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyKashi",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Kashi princess wed to Vichitravirya; mother, through Vyasa's niyoga, of Dhritarashtra, she shut her eyes, so her son was born blind."
+    },
+    {
+      "id": "Ambalika",
+      "firstName": "Ambalika",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyKashi",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Kashi princess wed to Vichitravirya; mother, through Vyasa's niyoga, of Pandu, she paled at the sight of Vyasa, so her son was born pale."
+    },
+    {
+      "id": "Parishrami",
+      "firstName": "Parishrami",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A maidservant of the Kuru queens; mother of Vidura through Vyasa's niyoga."
+    },
+    {
+      "id": "Dhritarashtra",
+      "firstName": "Dhritarashtra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Born blind to Ambika through Vyasa's niyoga; the elder prince, kept from the throne by his blindness. Father of the Kauravas."
+    },
+    {
+      "id": "Pandu",
+      "firstName": "Pandu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Born pale to Ambalika through Vyasa's niyoga; king of Hastinapura. A curse made his touch fatal to a wife, so his sons were god-begotten."
+    },
+    {
+      "id": "Vidura",
+      "firstName": "Vidura",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Born to the maid Parishrami through Vyasa's niyoga; an incarnation of Dharma, wisest counsellor of the Kurus, never king by birth of a servant."
+    },
+    {
+      "id": "Sulabha",
+      "firstName": "Sulabha",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Wife of Vidura."
+    },
+    {
+      "id": "Subala",
+      "firstName": "Subala",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyGandhara",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of Gandhara; father of Gandhari and Shakuni."
+    },
+    {
+      "id": "Gandhari",
+      "firstName": "Gandhari",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyGandhara",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Princess of Gandhara; on marrying the blind Dhritarashtra she bound her own eyes for life. By a boon she bore a hundred sons and a daughter."
+    },
+    {
+      "id": "Shakuni",
+      "firstName": "Shakuni",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyGandhara",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Prince of Gandhara, Gandhari's brother; master of the loaded dice, he engineered the Kauravas' schemes against the Pandavas."
+    },
+    {
+      "id": "Uluka",
+      "firstName": "Uluka",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyGandhara",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Shakuni; the Kauravas' envoy to the Pandava camp."
+    },
+    {
+      "id": "Duryodhana",
+      "firstName": "Duryodhana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Eldest of the hundred Kauravas; the crown prince whose enmity for the Pandavas drove the war. At his birth jackals howled, an omen he should be cast out."
+    },
+    {
+      "id": "Dushasana",
+      "firstName": "Dushasana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Second Kaurava; dragged Draupadi into the assembly and tried to disrobe her, an outrage Bhima avenged by tearing open his breast."
+    },
+    {
+      "id": "Duhsaha",
+      "firstName": "Duhsaha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Jalasandha",
+      "firstName": "Jalasandha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Sama",
+      "firstName": "Sama",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Saha",
+      "firstName": "Saha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Vinda",
+      "firstName": "Vinda",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Anuvinda",
+      "firstName": "Anuvinda",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Durdharsha",
+      "firstName": "Durdharsha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Subahu",
+      "firstName": "Subahu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Dushpradharshana",
+      "firstName": "Dushpradharshana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Durmarshana",
+      "firstName": "Durmarshana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Durmukha",
+      "firstName": "Durmukha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Dushkarna",
+      "firstName": "Dushkarna",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Vivimshati",
+      "firstName": "Vivimshati",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Vikarna",
+      "firstName": "Vikarna",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The one Kaurava who spoke up for Draupadi's honour in the dice hall; reckoned the most righteous of the brothers."
+    },
+    {
+      "id": "Sulochana",
+      "firstName": "Sulochana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Chitra",
+      "firstName": "Chitra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Upachitra",
+      "firstName": "Upachitra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Chitraksha",
+      "firstName": "Chitraksha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Charuchitra",
+      "firstName": "Charuchitra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Sharasana",
+      "firstName": "Sharasana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Durmada",
+      "firstName": "Durmada",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Dushpragaha",
+      "firstName": "Dushpragaha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Vivitsu",
+      "firstName": "Vivitsu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Vikata",
+      "firstName": "Vikata",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Urnanabha",
+      "firstName": "Urnanabha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Sunabha",
+      "firstName": "Sunabha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Nanda",
+      "firstName": "Nanda",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Upananda",
+      "firstName": "Upananda",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Senapati",
+      "firstName": "Senapati",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Sushena",
+      "firstName": "Sushena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Kundodara",
+      "firstName": "Kundodara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Mahodara",
+      "firstName": "Mahodara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Chitrabahu",
+      "firstName": "Chitrabahu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Chitravarma",
+      "firstName": "Chitravarma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Suvarma",
+      "firstName": "Suvarma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Durvimochana",
+      "firstName": "Durvimochana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Ayobahu",
+      "firstName": "Ayobahu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Mahabahu",
+      "firstName": "Mahabahu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Chitranga",
+      "firstName": "Chitranga",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Chitrakundala",
+      "firstName": "Chitrakundala",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Bhimavega",
+      "firstName": "Bhimavega",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Bhimabala",
+      "firstName": "Bhimabala",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Balaki",
+      "firstName": "Balaki",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Balavardhana",
+      "firstName": "Balavardhana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Ugrayudha",
+      "firstName": "Ugrayudha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Bhimakarma",
+      "firstName": "Bhimakarma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Kanakayu",
+      "firstName": "Kanakayu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Dridhayudha",
+      "firstName": "Dridhayudha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Dridhavarma",
+      "firstName": "Dridhavarma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Dridhakshatra",
+      "firstName": "Dridhakshatra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Somakirti",
+      "firstName": "Somakirti",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Anudara",
+      "firstName": "Anudara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Dridhasandha",
+      "firstName": "Dridhasandha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Jarasandha",
+      "firstName": "Jarasandha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Kaurava son (not to be confused with the king of Magadha of the same name)."
+    },
+    {
+      "id": "Satyasandha",
+      "firstName": "Satyasandha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Sadasuvak",
+      "firstName": "Sadasuvak",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Ugrashrava",
+      "firstName": "Ugrashrava",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Ashvasena",
+      "firstName": "Ashvasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Senani",
+      "firstName": "Senani",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Dushparajaya",
+      "firstName": "Dushparajaya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Aparajita",
+      "firstName": "Aparajita",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Panditaka",
+      "firstName": "Panditaka",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Vishalaksha",
+      "firstName": "Vishalaksha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Duravara",
+      "firstName": "Duravara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Dridhahasta",
+      "firstName": "Dridhahasta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Suhasta",
+      "firstName": "Suhasta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Vatavega",
+      "firstName": "Vatavega",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Suvarcha",
+      "firstName": "Suvarcha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Adityaketu",
+      "firstName": "Adityaketu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Bahvashi",
+      "firstName": "Bahvashi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Nagadanta",
+      "firstName": "Nagadanta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Ugrayayi",
+      "firstName": "Ugrayayi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Kavachi",
+      "firstName": "Kavachi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Nishangi",
+      "firstName": "Nishangi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Pashi",
+      "firstName": "Pashi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Dandadhara",
+      "firstName": "Dandadhara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Dhanurgraha",
+      "firstName": "Dhanurgraha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Ugra",
+      "firstName": "Ugra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Bhimaratha",
+      "firstName": "Bhimaratha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Vira",
+      "firstName": "Vira",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Virabahu",
+      "firstName": "Virabahu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Alolupa",
+      "firstName": "Alolupa",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Abhaya",
+      "firstName": "Abhaya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Raudrakarma",
+      "firstName": "Raudrakarma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Dridharatha",
+      "firstName": "Dridharatha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Anadhrishya",
+      "firstName": "Anadhrishya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Kundabhedi",
+      "firstName": "Kundabhedi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Viravi",
+      "firstName": "Viravi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Chitrasena",
+      "firstName": "Chitrasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Kaurava skilled with the mace, often at Duryodhana's side."
+    },
+    {
+      "id": "Dirghalochana",
+      "firstName": "Dirghalochana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Dirghabahu",
+      "firstName": "Dirghabahu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Pramathi",
+      "firstName": "Pramathi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Vyudhoru",
+      "firstName": "Vyudhoru",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Kanakadhvaja",
+      "firstName": "Kanakadhvaja",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Kundadhara",
+      "firstName": "Kundadhara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Kundashi",
+      "firstName": "Kundashi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Viraja",
+      "firstName": "Viraja",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Suvarchas",
+      "firstName": "Suvarchas",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "Dushala",
+      "firstName": "Dushala",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The only daughter of Dhritarashtra and Gandhari, born after the hundred sons; wed to Jayadratha, king of Sindhu."
+    },
+    {
+      "id": "Yuyutsu",
+      "firstName": "Yuyutsu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Dhritarashtra by the maid Sughada; the one son of that house to cross over and fight on the Pandava side."
+    },
+    {
+      "id": "Sughada",
+      "firstName": "Sughada",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A vaishya attendant of the Kuru household; mother of Yuyutsu by Dhritarashtra."
+    },
+    {
+      "id": "Bhanumati",
+      "firstName": "Bhanumati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Wife of Duryodhana; a princess of Kalinga."
+    },
+    {
+      "id": "Lakshmanaa",
+      "firstName": "Lakshmanaa",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of Duryodhana; carried off by Krishna's son Samba, which nearly sparked a war."
+    },
+    {
+      "id": "LakshmanaK",
+      "firstName": "Lakshmana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Duryodhana (Lakshmana Kumara); slain by Abhimanyu inside the chakravyuha."
+    },
+    {
+      "id": "Jayadratha",
+      "firstName": "Jayadratha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySindhu",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of Sindhu, husband of Dushala; his blocking of the Pandavas at the pass sealed Abhimanyu's death, and Arjuna vowed and took his head the next day."
+    },
+    {
+      "id": "Suratha",
+      "firstName": "Suratha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySindhu",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Jayadratha and Dushala."
+    },
+    {
+      "id": "Yudhishthira",
+      "firstName": "Yudhishthira",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Eldest Pandava, begotten of Kunti by Dharma (Yama); the just king, never known to lie.",
+      "divineParents": [
+        "Yama"
+      ]
+    },
+    {
+      "id": "Bhima",
+      "firstName": "Bhima",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Second Pandava, begotten of Kunti by Vayu; of superhuman strength, sworn to kill all hundred Kauravas.",
+      "divineParents": [
+        "Vayu"
+      ]
+    },
+    {
+      "id": "Arjuna",
+      "firstName": "Arjuna",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Third Pandava, begotten of Kunti by Indra; the supreme archer, friend of Krishna, hearer of the Bhagavad Gita.",
+      "divineParents": [
+        "Indra"
+      ]
+    },
+    {
+      "id": "Nakula",
+      "firstName": "Nakula",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Fourth Pandava, twin son of Madri by the Ashvins; matchless horseman and the handsomest of men.",
+      "divineParents": [
+        "Nasatya"
+      ]
+    },
+    {
+      "id": "Sahadeva",
+      "firstName": "Sahadeva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Youngest Pandava, twin son of Madri by the Ashvins; wisest of the brothers and a knower of the future.",
+      "divineParents": [
+        "Dasra"
+      ]
+    },
+    {
+      "id": "Karna",
+      "firstName": "Karna",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Kunti's firstborn, begotten by Surya the sun-god before her marriage; set adrift on the river and raised by the charioteer Adhiratha, so his birth lineage stayed unknown even to him. Half-brother of the Pandavas, he fought and died for Duryodhana, learning his kin too late.",
+      "divineParents": [
+        "Surya"
+      ]
+    },
+    {
+      "id": "Adhiratha",
+      "firstName": "Adhiratha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySuta",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A charioteer (suta) of Hastinapura who drew the infant Karna from the river and raised him as his own."
+    },
+    {
+      "id": "Radha",
+      "firstName": "Radha",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familySuta",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Wife of Adhiratha; foster-mother of Karna, whence his name Radheya."
+    },
+    {
+      "id": "Vrushali",
+      "firstName": "Vrushali",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Wife of Karna."
+    },
+    {
+      "id": "Vrishasena",
+      "firstName": "Vrishasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySuta",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Karna; a warrior slain by Arjuna at Kurukshetra."
+    },
+    {
+      "id": "Vrishaketu",
+      "firstName": "Vrishaketu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySuta",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Youngest son of Karna and the only one to outlive the war; taken in and cherished by the Pandavas once his parentage was known."
+    },
+    {
+      "id": "Prativindhya",
+      "firstName": "Prativindhya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Yudhishthira and Draupadi; one of the Upapandavas."
+    },
+    {
+      "id": "Sutasoma",
+      "firstName": "Sutasoma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Bhima and Draupadi; one of the Upapandavas."
+    },
+    {
+      "id": "Shrutakarma",
+      "firstName": "Shrutakarma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Arjuna and Draupadi; one of the Upapandavas."
+    },
+    {
+      "id": "Shatanika",
+      "firstName": "Shatanika",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Nakula and Draupadi; one of the Upapandavas."
+    },
+    {
+      "id": "Shrutasena",
+      "firstName": "Shrutasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Sahadeva and Draupadi; one of the Upapandavas."
+    },
+    {
+      "id": "Hidimba",
+      "firstName": "Hidimba",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A rakshasi of the forest who loved Bhima during the Pandavas' exile; mother of Ghatotkacha."
+    },
+    {
+      "id": "Ghatotkacha",
+      "firstName": "Ghatotkacha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Bhima and Hidimba; a rakshasa prince of great sorcery who grew to manhood in a day and died turning the tide of the war, drawing Karna's infallible weapon onto himself."
+    },
+    {
+      "id": "Maurvi",
+      "firstName": "Maurvi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Wife of Ghatotkacha; mother of Barbarika."
+    },
+    {
+      "id": "Barbarika",
+      "firstName": "Barbarika",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Ghatotkacha; the archer of the three arrows who vowed to fight for whichever side was losing and so gave up his head to Krishna."
+    },
+    {
+      "id": "Abhimanyu",
+      "firstName": "Abhimanyu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Arjuna and Subhadra; the boy warrior who broke into the chakravyuha and was killed within it, leaving Uttara pregnant with the Kuru line's sole heir."
+    },
+    {
+      "id": "Ulupi",
+      "firstName": "Ulupi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyNaga",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Naga princess who wed Arjuna during his wanderings; mother of Iravan and, later, protector of the reborn Arjuna."
+    },
+    {
+      "id": "Iravan",
+      "firstName": "Iravan",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyNaga",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Arjuna and Ulupi; raised among the Nagas, he offered himself in sacrifice for the Pandava victory."
+    },
+    {
+      "id": "Chitrangada_M",
+      "firstName": "Chitrangada",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyManipura",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Princess of Manipura who wed Arjuna on the condition that their son remain to rule her land; mother of Babhruvahana."
+    },
+    {
+      "id": "Babhruvahana",
+      "firstName": "Babhruvahana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyManipura",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Arjuna and Chitrangada; king of Manipura. Not knowing his father, he met and slew Arjuna in battle during the horse sacrifice; Ulupi's gem restored him to life."
+    },
+    {
+      "id": "Parikshit",
+      "firstName": "Parikshit",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Abhimanyu and Uttara; stillborn but revived by Krishna, he became the sole surviving heir and king of the Kurus after the war."
+    },
+    {
+      "id": "Madravati",
+      "firstName": "Madravati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyMadra",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A princess of Madra; wife of Parikshit and mother of Janamejaya."
+    },
+    {
+      "id": "Janamejaya",
+      "firstName": "Janamejaya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Parikshit; the king at whose serpent sacrifice the Mahabharat was first recited by Vaishampayana."
+    },
+    {
+      "id": "ShatanikaII",
+      "firstName": "Shatanika",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Janamejaya (not to be confused with the Upapandava of the same name); he carried the Kuru throne into the age after the war."
+    },
+    {
+      "id": "Ashwamedhadatta",
+      "firstName": "Ashwamedhadatta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Shatanika; a later Kuru king. The Puranas run the line on through several more kings to Kshemaka, its last."
+    },
+    {
+      "id": "Dyutimanta",
+      "firstName": "Dyutimanta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyMadra",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of Madra; father of Shalya and Madri."
+    },
+    {
+      "id": "Shalya",
+      "firstName": "Shalya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyMadra",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of Madra, brother of Madri; a peerless charioteer tricked into fighting for Duryodhana, whom he served as Karna's charioteer."
+    },
+    {
+      "id": "Madri",
+      "firstName": "Madri",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyMadra",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Princess of Madra; second wife of Pandu and mother, by the Ashvins, of the twins Nakula and Sahadeva. She followed Pandu onto his pyre."
+    },
+    {
+      "id": "Prishata",
+      "firstName": "Prishata",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of Panchala; father of Drupada."
+    },
+    {
+      "id": "Drupada",
+      "firstName": "Drupada",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of Panchala; humiliated by his old classmate Drona, he won from a sacrifice a son to slay Drona and a daughter to wed the Pandavas."
+    },
+    {
+      "id": "Shikhandi",
+      "firstName": "Shikhandi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Child of Drupada, the reincarnation of Amba; born a girl and later made a man, whose presence let Bhishma be brought down, for Bhishma would not fight one born a woman."
+    },
+    {
+      "id": "Dhrishtadyumna",
+      "firstName": "Dhrishtadyumna",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Drupada, born from the sacrificial fire; commander of the Pandava army, fated to and did slay Drona."
+    },
+    {
+      "id": "Draupadi",
+      "firstName": "Draupadi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Also Krishnaa and Yajnaseni; born of the sacrificial fire beside Dhrishtadyumna. Won by Arjuna, she became the shared wife of all five Pandavas and empress of Indraprastha."
+    },
+    {
+      "id": "Virata",
+      "firstName": "Virata",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyMatsya",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of Matsya, in whose court the Pandavas passed their thirteenth year of exile in disguise."
+    },
+    {
+      "id": "Sudeshna",
+      "firstName": "Sudeshna",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Queen of Virata."
+    },
+    {
+      "id": "UttarKumara",
+      "firstName": "Uttara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyMatsya",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Prince of Matsya (Uttara-kumara / Bhuminjaya); he rode out with the disguised Arjuna against the Kuru cattle-raid."
+    },
+    {
+      "id": "Uttara",
+      "firstName": "Uttara",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyMatsya",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Princess of Matsya; wed to Abhimanyu and, widowed in the war, mother of Parikshit who carried on the Kuru line."
+    },
+    {
+      "id": "Ahuka",
+      "firstName": "Ahuka",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Yadava patriarch; father of Devaka and Ugrasena."
+    },
+    {
+      "id": "Devaka",
+      "firstName": "Devaka",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Yadava prince, son of Ahuka; father of Devaki."
+    },
+    {
+      "id": "Ugrasena",
+      "firstName": "Ugrasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Yadava king of Mathura, son of Ahuka; deposed by his son Kamsa and restored by Krishna."
+    },
+    {
+      "id": "Kamsa",
+      "firstName": "Kamsa",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Ugrasena; the tyrant of Mathura who jailed Devaki and Vasudeva and was slain by the young Krishna."
+    },
+    {
+      "id": "Devaki",
+      "firstName": "Devaki",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of Devaka, wife of Vasudeva and mother of Krishna; her first sons were killed by her cousin Kamsa."
+    },
+    {
+      "id": "Shurasena",
+      "firstName": "Shurasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Yadava chief of the Vrishnis; father of Vasudeva and of Pritha (Kunti), which makes Krishna and the Pandavas cousins."
+    },
+    {
+      "id": "Vasudeva",
+      "firstName": "Vasudeva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Shurasena; father of Krishna, Balarama and Subhadra. Imprisoned by Kamsa, he bore the newborn Krishna across the river to safety."
+    },
+    {
+      "id": "Kunti",
+      "firstName": "Kunti",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Born Pritha, daughter of Shurasena; given in adoption to the childless Kuntibhoja and renamed Kunti. By a sage's boon she could summon any god to father a child, hence Karna and the three eldest Pandavas."
+    },
+    {
+      "id": "Shrutashrava",
+      "firstName": "Shrutashrava",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of Shurasena, sister of Vasudeva; wed to Damaghosha of Chedi and mother of Shishupala."
+    },
+    {
+      "id": "Kuntibhoja",
+      "firstName": "Kuntibhoja",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A childless Bhoja king, cousin of Shurasena; he adopted Pritha, who took his name as Kunti."
+    },
+    {
+      "id": "Rohini",
+      "firstName": "Rohini",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Senior wife of Vasudeva; mother of Balarama and Subhadra."
+    },
+    {
+      "id": "Krishna",
+      "firstName": "Krishna",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Vasudeva and Devaki; the eighth child, an avatar of Vishnu, spirited to Gokula the night he was born. Counsellor and charioteer of Arjuna, speaker of the Bhagavad Gita. Beyond his eight principal queens (the Ashtabharya) he wed the sixteen thousand one hundred women he freed from the demon Narakasura's captivity, giving each of them honour and a home."
+    },
+    {
+      "id": "Balarama",
+      "firstName": "Balarama",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Elder half-brother of Krishna, son of Rohini; wielder of the plough and mace, teacher of both Bhima and Duryodhana."
+    },
+    {
+      "id": "Subhadra",
+      "firstName": "Subhadra",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Sister of Krishna, daughter of Rohini; she eloped with Arjuna at Krishna's urging and became the mother of Abhimanyu."
+    },
+    {
+      "id": "Rukmini",
+      "firstName": "Rukmini",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Princess of Vidarbha, sister of Rukmi; chief queen (patrani) of Krishna, held to be an incarnation of Lakshmi."
+    },
+    {
+      "id": "Satyabhama",
+      "firstName": "Satyabhama",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of Satrajit; the fiery queen who rode into battle beside Krishna against the demon Narakasura."
+    },
+    {
+      "id": "Jambavati",
+      "firstName": "Jambavati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of the bear-king Jambavan; won when Krishna wrestled Jambavan for the Syamantaka gem. Mother of Samba."
+    },
+    {
+      "id": "Kalindi",
+      "firstName": "Kalindi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The river Yamuna personified; she wed Krishna after long penance on its banks."
+    },
+    {
+      "id": "Mitravinda",
+      "firstName": "Mitravinda",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "An Avanti princess and Krishna's cousin, whom he carried off from her svayamvara."
+    },
+    {
+      "id": "Nagnajiti",
+      "firstName": "Nagnajiti",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Princess of Kosala (also called Satya), won by Krishna when he subdued her father's seven fierce bulls."
+    },
+    {
+      "id": "Bhadra",
+      "firstName": "Bhadra",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Kekaya princess and Krishna's cousin, given to him by her brothers."
+    },
+    {
+      "id": "Lakshmana",
+      "firstName": "Lakshmana",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A princess of Madra, won by Krishna at her svayamvara."
+    },
+    {
+      "id": "Pradyumna",
+      "firstName": "Pradyumna",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Krishna and Rukmini; a rebirth of Kamadeva, the god of love."
+    },
+    {
+      "id": "Samba",
+      "firstName": "Samba",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Krishna and Jambavati; his prank on the sages drew the curse that destroyed the Yadava race."
+    },
+    {
+      "id": "Rukmavati",
+      "firstName": "Rukmavati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of Rukmi; wife of Pradyumna."
+    },
+    {
+      "id": "Aniruddha",
+      "firstName": "Aniruddha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Pradyumna; carried off by Usha, daughter of the asura Bana, and rescued by Krishna."
+    },
+    {
+      "id": "Usha",
+      "firstName": "Usha",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of the asura Banasura; she wed Aniruddha."
+    },
+    {
+      "id": "Vajra",
+      "firstName": "Vajra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Great-grandson of Krishna; after the Yadavas destroyed themselves he was made their king, so the line survived."
+    },
+    {
+      "id": "Revati",
+      "firstName": "Revati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of King Raivata; born in an earlier age, she was shrunk to human height to become Balarama's wife."
+    },
+    {
+      "id": "Damaghosha",
+      "firstName": "Damaghosha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyChedi",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of Chedi; husband of Shrutashrava and father of Shishupala."
+    },
+    {
+      "id": "Shishupala",
+      "firstName": "Shishupala",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyChedi",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of Chedi, cousin of Krishna; born three-eyed and four-armed under a doom that Krishna would kill him, which came to pass at Yudhishthira's rajasuya after his hundredth insult."
+    },
+    {
+      "id": "Bharadwaja",
+      "firstName": "Bharadwaja",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAngirasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A great sage; Drona was born of his seed kept in a vessel (drona)."
+    },
+    {
+      "id": "Drona",
+      "firstName": "Drona",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAngirasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Preceptor in arms to both Kaurava and Pandava princes; brahmin by birth, warrior by trade, commander of the Kaurava host after Bhishma."
+    },
+    {
+      "id": "Sharadvan",
+      "firstName": "Sharadvan",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAngirasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A sage of the Gautama line; father of the twins Kripa and Kripi, born in a clump of reeds and raised in the Kuru court."
+    },
+    {
+      "id": "Kripa",
+      "firstName": "Kripa",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAngirasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Twin of Kripi; a chiranjivi and early teacher of the Kuru princes, he survived the war."
+    },
+    {
+      "id": "Kripi",
+      "firstName": "Kripi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAngirasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Twin of Kripa; wife of Drona and mother of Ashwatthama."
+    },
+    {
+      "id": "Ashwatthama",
+      "firstName": "Ashwatthama",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAngirasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Drona and Kripi, born with a gem in his brow; a chiranjivi cursed to wander after he slew the Pandava sons in their sleep."
+    },
+    {
+      "id": "Kauravya",
+      "firstName": "Kauravya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyNaga",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A king of the Nagas (serpent race); father of Ulupi."
+    },
+    {
+      "id": "Chitravahana",
+      "firstName": "Chitravahana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyManipura",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of Manipura; father of Chitrangada, he gave her to Arjuna on the pledge that their son would inherit his throne."
+    },
+    {
+      "id": "Satyajit",
+      "firstName": "Satyajit",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Drupada; a Panchala warrior who died shielding Yudhishthira in the war."
+    },
+    {
+      "id": "Nishatha",
+      "firstName": "Nishatha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Balarama and Revati."
+    },
+    {
+      "id": "Ulmuka",
+      "firstName": "Ulmuka",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Balarama and Revati."
+    },
+    {
+      "id": "Sweta",
+      "firstName": "Sweta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyMatsya",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Elder son of Virata; among the first great warriors to fall at Kurukshetra."
+    },
+    {
+      "id": "Sankha",
+      "firstName": "Sankha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyMatsya",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Virata, slain early in the war."
+    },
+    {
+      "id": "Devika",
+      "firstName": "Devika",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A princess of the Shibi people; wife of Yudhishthira."
+    },
+    {
+      "id": "Yaudheya",
+      "firstName": "Yaudheya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Yudhishthira and Devika."
+    },
+    {
+      "id": "Balandhara",
+      "firstName": "Balandhara",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyKashi",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A princess of Kashi; wife of Bhima."
+    },
+    {
+      "id": "Sarvaga",
+      "firstName": "Sarvaga",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Bhima and Balandhara."
+    },
+    {
+      "id": "Karenumati",
+      "firstName": "Karenumati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyChedi",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A princess of Chedi; wife of Nakula."
+    },
+    {
+      "id": "Niramitra",
+      "firstName": "Niramitra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Nakula and Karenumati."
+    },
+    {
+      "id": "Vijaya",
+      "firstName": "Vijaya",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A princess won by Sahadeva at her svayamvara; his wife."
+    },
+    {
+      "id": "Suhotra",
+      "firstName": "Suhotra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Sahadeva and Vijaya."
+    },
+    {
+      "id": "Dhrishtaketu",
+      "firstName": "Dhrishtaketu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyChedi",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Shishupala; king of Chedi after his father and an ally of the Pandavas in the war."
+    },
+    {
+      "id": "Kshatradharma",
+      "firstName": "Kshatradharma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Dhrishtadyumna, of the Panchala line."
+    },
+    {
+      "id": "Rukmangada",
+      "firstName": "Rukmangada",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyMadra",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Shalya of Madra, slain in the war."
+    },
+    {
+      "id": "Rukmaratha",
+      "firstName": "Rukmaratha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyMadra",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Son of Shalya of Madra, slain in the war."
+    },
+    {
+      "id": "Brihadratha",
+      "firstName": "Brihadratha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyMagadha",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Founder-king of Magadha; father of Jarasandha."
+    },
+    {
+      "id": "JarasandhaMagadha",
+      "firstName": "Jarasandha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyMagadha",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The mighty emperor of Magadha, born in two halves joined by the demoness Jara. Rival of Krishna, he was at last torn apart by Bhima. (A namesake also appears among the hundred Kauravas.)"
+    },
+    {
+      "id": "Asti",
+      "firstName": "Asti",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyMagadha",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of Jarasandha; a queen of Kamsa."
+    },
+    {
+      "id": "Prapti",
+      "firstName": "Prapti",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyMagadha",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Daughter of Jarasandha; a queen of Kamsa. Kamsa's death at Krishna's hands turned their father into Mathura's implacable enemy."
+    },
+    {
+      "id": "Shukracharya",
+      "firstName": "Shukracharya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The rishi Shukra, preceptor of the asuras and keeper of the reviving art; father of Devayani."
+    },
+    {
+      "id": "Vrishaparva",
+      "firstName": "Vrishaparva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "An asura king; father of Sharmishtha."
+    },
+    {
+      "id": "Vishvamitra",
+      "firstName": "Vishvamitra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A king who won brahmarshi-hood by fierce penance; father of Shakuntala by the apsara Menaka."
+    },
+    {
+      "id": "Menaka",
+      "firstName": "Menaka",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "An apsara sent to break Vishvamitra's penance; mother of Shakuntala, who was then raised by the sage Kanva."
+    },
+    {
+      "id": "Satrajit",
+      "firstName": "Satrajit",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Yadava noble, keeper of the Syamantaka gem; father of Satyabhama."
+    },
+    {
+      "id": "Jambavan",
+      "firstName": "Jambavan",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The immortal bear-king of the Ramayan age; Krishna wrestled him for the Syamantaka gem and won his daughter Jambavati."
+    },
+    {
+      "id": "Banasura",
+      "firstName": "Banasura",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A thousand-armed asura king and devotee of Shiva; father of Usha."
+    },
+    {
+      "id": "Raivata",
+      "firstName": "Raivata",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King Raivata (Kakudmi), who took his daughter Revati to Brahma's realm and returned an age later to a world grown small."
+    },
+    {
+      "id": "Surya",
+      "firstName": "Surya Deva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The deva of the sun; an Aditya, son of the devi Aditi and the rishi Kashyap. Father of Karna, whom Kunti bore before her marriage by invoking Surya with a boon she wished to test.",
+      "divine": true
+    },
+    {
+      "id": "Yama",
+      "firstName": "Yama (Dharma)",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Dharma, the deva of righteousness and lord of justice; father of Yudhishthira, who inherited his unwavering truth.",
+      "divine": true
+    },
+    {
+      "id": "Vayu",
+      "firstName": "Vayu Deva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The deva of the wind; father of the mighty Bhima (and, in the earlier age of the Ramayan, of Hanuman).",
+      "divine": true
+    },
+    {
+      "id": "Indra",
+      "firstName": "Indra Deva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of the devas, wielder of the thunderbolt; an Aditya, son of Aditi and Kashyap, and so a brother of Surya. Father of Arjuna, to whom he later gave celestial weapons.",
+      "divine": true
+    },
+    {
+      "id": "Nasatya",
+      "firstName": "Nasatya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "One of the twin Ashvini Kumaras, devas of dawn and healing; father, by Madri, of Nakula.",
+      "divine": true
+    },
+    {
+      "id": "Dasra",
+      "firstName": "Dasra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "One of the twin Ashvini Kumaras, devas of dawn and healing; father, by Madri, of Sahadeva.",
+      "divine": true
+    }
+  ],
+  "unions": [
+    {
+      "id": "u_chandra",
+      "partners": [
+        "Chandra"
+      ],
+      "children": [
+        "Budha"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_budha",
+      "partners": [
+        "Budha",
+        "Ila"
+      ],
+      "children": [
+        "Pururavas"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_pururavas",
+      "partners": [
+        "Pururavas",
+        "Urvashi"
+      ],
+      "children": [
+        "Ayus"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_ayus",
+      "partners": [
+        "Ayus"
+      ],
+      "children": [
+        "Nahusha"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_nahusha",
+      "partners": [
+        "Nahusha"
+      ],
+      "children": [
+        "Yayati"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_yayati_devayani",
+      "partners": [
+        "Yayati",
+        "Devayani"
+      ],
+      "children": [
+        "Yadu",
+        "Turvasu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_yayati_sharmishtha",
+      "partners": [
+        "Yayati",
+        "Sharmishtha"
+      ],
+      "children": [
+        "Druhyu",
+        "Anu",
+        "Puru"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_puru",
+      "partners": [
+        "Puru"
+      ],
+      "children": [
+        "Dushyanta"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_dushyanta",
+      "partners": [
+        "Dushyanta",
+        "Shakuntala"
+      ],
+      "children": [
+        "Bharata"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_bharata",
+      "partners": [
+        "Bharata"
+      ],
+      "children": [
+        "Hastin"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_hastin",
+      "partners": [
+        "Hastin"
+      ],
+      "children": [
+        "Kuru"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_kuru_to_pratipa",
+      "partners": [
+        "Kuru"
+      ],
+      "children": [
+        "Pratipa"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_yadu",
+      "partners": [
+        "Yadu"
+      ],
+      "children": [
+        "Kroshtu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_kroshtu",
+      "partners": [
+        "Kroshtu"
+      ],
+      "children": [
+        "Vrijinivat"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_vrijinivat",
+      "partners": [
+        "Vrijinivat"
+      ],
+      "children": [
+        "Swahi"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_swahi",
+      "partners": [
+        "Swahi"
+      ],
+      "children": [
+        "Rushadru"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_rushadru",
+      "partners": [
+        "Rushadru"
+      ],
+      "children": [
+        "Madhu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_madhu",
+      "partners": [
+        "Madhu"
+      ],
+      "children": [
+        "Vrishni"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_vrishni_to_shurasena",
+      "partners": [
+        "Vrishni"
+      ],
+      "children": [
+        "Shurasena"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_pratipa",
+      "partners": [
+        "Pratipa",
+        "Sunanda"
+      ],
+      "children": [
+        "Devapi",
+        "Bahlika",
+        "Shantanu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_bahlika",
+      "partners": [
+        "Bahlika"
+      ],
+      "children": [
+        "Somadatta"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_somadatta",
+      "partners": [
+        "Somadatta"
+      ],
+      "children": [
+        "Bhurishravas"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_shantanu_ganga",
+      "partners": [
+        "Shantanu",
+        "Ganga"
+      ],
+      "children": [
+        "VasuDhara",
+        "VasuDhruva",
+        "VasuSoma",
+        "VasuAha",
+        "VasuAnila",
+        "VasuAnala",
+        "VasuPratyusha",
+        "Bhishma"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_parashara_satyavati",
+      "partners": [
+        "Parashara",
+        "Satyavati"
+      ],
+      "children": [
+        "Vyasa"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "unknown",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_shantanu_satyavati",
+      "partners": [
+        "Shantanu",
+        "Satyavati"
+      ],
+      "children": [
+        "Chitrangada",
+        "Vichitravirya"
+      ],
+      "adoptedChildren": [
+        "Kripa",
+        "Kripi"
+      ],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_kashiraja",
+      "partners": [
+        "Kashiraja"
+      ],
+      "children": [
+        "Amba",
+        "Ambika",
+        "Ambalika"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKashi",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_vv_ambika",
+      "partners": [
+        "Vichitravirya",
+        "Ambika"
+      ],
+      "children": [
+        "Dhritarashtra"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_vv_ambalika",
+      "partners": [
+        "Vichitravirya",
+        "Ambalika"
+      ],
+      "children": [
+        "Pandu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_vv_parishrami",
+      "partners": [
+        "Vichitravirya",
+        "Parishrami"
+      ],
+      "children": [
+        "Vidura"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "unknown",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 2
+    },
+    {
+      "id": "u_vidura",
+      "partners": [
+        "Vidura",
+        "Sulabha"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_subala",
+      "partners": [
+        "Subala"
+      ],
+      "children": [
+        "Gandhari",
+        "Shakuni"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyGandhara",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_shakuni",
+      "partners": [
+        "Shakuni"
+      ],
+      "children": [
+        "Uluka"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyGandhara",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_dhrita_gandhari",
+      "partners": [
+        "Dhritarashtra",
+        "Gandhari"
+      ],
+      "children": [
+        "Duryodhana",
+        "Dushasana",
+        "Duhsaha",
+        "Jalasandha",
+        "Sama",
+        "Saha",
+        "Vinda",
+        "Anuvinda",
+        "Durdharsha",
+        "Subahu",
+        "Dushpradharshana",
+        "Durmarshana",
+        "Durmukha",
+        "Dushkarna",
+        "Vivimshati",
+        "Vikarna",
+        "Sulochana",
+        "Chitra",
+        "Upachitra",
+        "Chitraksha",
+        "Charuchitra",
+        "Sharasana",
+        "Durmada",
+        "Dushpragaha",
+        "Vivitsu",
+        "Vikata",
+        "Urnanabha",
+        "Sunabha",
+        "Nanda",
+        "Upananda",
+        "Senapati",
+        "Sushena",
+        "Kundodara",
+        "Mahodara",
+        "Chitrabahu",
+        "Chitravarma",
+        "Suvarma",
+        "Durvimochana",
+        "Ayobahu",
+        "Mahabahu",
+        "Chitranga",
+        "Chitrakundala",
+        "Bhimavega",
+        "Bhimabala",
+        "Balaki",
+        "Balavardhana",
+        "Ugrayudha",
+        "Bhimakarma",
+        "Kanakayu",
+        "Dridhayudha",
+        "Dridhavarma",
+        "Dridhakshatra",
+        "Somakirti",
+        "Anudara",
+        "Dridhasandha",
+        "Jarasandha",
+        "Satyasandha",
+        "Sadasuvak",
+        "Ugrashrava",
+        "Ashvasena",
+        "Senani",
+        "Dushparajaya",
+        "Aparajita",
+        "Panditaka",
+        "Vishalaksha",
+        "Duravara",
+        "Dridhahasta",
+        "Suhasta",
+        "Vatavega",
+        "Suvarcha",
+        "Adityaketu",
+        "Bahvashi",
+        "Nagadanta",
+        "Ugrayayi",
+        "Kavachi",
+        "Nishangi",
+        "Pashi",
+        "Dandadhara",
+        "Dhanurgraha",
+        "Ugra",
+        "Bhimaratha",
+        "Vira",
+        "Virabahu",
+        "Alolupa",
+        "Abhaya",
+        "Raudrakarma",
+        "Dridharatha",
+        "Anadhrishya",
+        "Kundabhedi",
+        "Viravi",
+        "Chitrasena",
+        "Dirghalochana",
+        "Dirghabahu",
+        "Pramathi",
+        "Vyudhoru",
+        "Kanakadhvaja",
+        "Kundadhara",
+        "Kundashi",
+        "Viraja",
+        "Suvarchas",
+        "Dushala"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_dhrita_maid",
+      "partners": [
+        "Dhritarashtra",
+        "Sughada"
+      ],
+      "children": [
+        "Yuyutsu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "unknown",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_duryodhana",
+      "partners": [
+        "Duryodhana",
+        "Bhanumati"
+      ],
+      "children": [
+        "LakshmanaK",
+        "Lakshmanaa"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_jayadratha",
+      "partners": [
+        "Jayadratha",
+        "Dushala"
+      ],
+      "children": [
+        "Suratha"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySindhu",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_pandu_kunti",
+      "partners": [
+        "Pandu",
+        "Kunti"
+      ],
+      "children": [
+        "Yudhishthira",
+        "Bhima",
+        "Arjuna"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_pandu_madri",
+      "partners": [
+        "Pandu",
+        "Madri"
+      ],
+      "children": [
+        "Nakula",
+        "Sahadeva"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_kunti_karna",
+      "partners": [
+        "Kunti"
+      ],
+      "children": [
+        "Karna"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "unknown",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_adhiratha_radha",
+      "partners": [
+        "Adhiratha",
+        "Radha"
+      ],
+      "children": [],
+      "adoptedChildren": [
+        "Karna"
+      ],
+      "familyId": "familySuta",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_karna",
+      "partners": [
+        "Karna",
+        "Vrushali"
+      ],
+      "children": [
+        "Vrishasena",
+        "Vrishaketu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySuta",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_yudh_draupadi",
+      "partners": [
+        "Yudhishthira",
+        "Draupadi"
+      ],
+      "children": [
+        "Prativindhya"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_bhima_draupadi",
+      "partners": [
+        "Bhima",
+        "Draupadi"
+      ],
+      "children": [
+        "Sutasoma"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_arjuna_draupadi",
+      "partners": [
+        "Arjuna",
+        "Draupadi"
+      ],
+      "children": [
+        "Shrutakarma"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_nakula_draupadi",
+      "partners": [
+        "Nakula",
+        "Draupadi"
+      ],
+      "children": [
+        "Shatanika"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_sahadeva_draupadi",
+      "partners": [
+        "Sahadeva",
+        "Draupadi"
+      ],
+      "children": [
+        "Shrutasena"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_bhima_hidimba",
+      "partners": [
+        "Bhima",
+        "Hidimba"
+      ],
+      "children": [
+        "Ghatotkacha"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_ghatotkacha",
+      "partners": [
+        "Ghatotkacha",
+        "Maurvi"
+      ],
+      "children": [
+        "Barbarika"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_arjuna_subhadra",
+      "partners": [
+        "Arjuna",
+        "Subhadra"
+      ],
+      "children": [
+        "Abhimanyu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_arjuna_ulupi",
+      "partners": [
+        "Arjuna",
+        "Ulupi"
+      ],
+      "children": [
+        "Iravan"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyNaga",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 2
+    },
+    {
+      "id": "u_arjuna_chitrangada",
+      "partners": [
+        "Arjuna",
+        "Chitrangada_M"
+      ],
+      "children": [
+        "Babhruvahana"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyManipura",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 3
+    },
+    {
+      "id": "u_abhimanyu_uttara",
+      "partners": [
+        "Abhimanyu",
+        "Uttara"
+      ],
+      "children": [
+        "Parikshit"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_parikshit",
+      "partners": [
+        "Parikshit",
+        "Madravati"
+      ],
+      "children": [
+        "Janamejaya"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_janamejaya",
+      "partners": [
+        "Janamejaya"
+      ],
+      "children": [
+        "ShatanikaII"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_shatanika2",
+      "partners": [
+        "ShatanikaII"
+      ],
+      "children": [
+        "Ashwamedhadatta"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_dyutimanta",
+      "partners": [
+        "Dyutimanta"
+      ],
+      "children": [
+        "Shalya",
+        "Madri"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyMadra",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_prishata",
+      "partners": [
+        "Prishata"
+      ],
+      "children": [
+        "Drupada"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_drupada",
+      "partners": [
+        "Drupada"
+      ],
+      "children": [
+        "Shikhandi",
+        "Dhrishtadyumna",
+        "Draupadi",
+        "Satyajit"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_virata",
+      "partners": [
+        "Virata",
+        "Sudeshna"
+      ],
+      "children": [
+        "Sweta",
+        "Sankha",
+        "UttarKumara",
+        "Uttara"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyMatsya",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_ahuka",
+      "partners": [
+        "Ahuka"
+      ],
+      "children": [
+        "Devaka",
+        "Ugrasena"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_devaka",
+      "partners": [
+        "Devaka"
+      ],
+      "children": [
+        "Devaki"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_ugrasena",
+      "partners": [
+        "Ugrasena"
+      ],
+      "children": [
+        "Kamsa"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_shurasena",
+      "partners": [
+        "Shurasena"
+      ],
+      "children": [
+        "Vasudeva",
+        "Kunti",
+        "Shrutashrava"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_kuntibhoja",
+      "partners": [
+        "Kuntibhoja"
+      ],
+      "children": [],
+      "adoptedChildren": [
+        "Kunti"
+      ],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_vasudeva_devaki",
+      "partners": [
+        "Vasudeva",
+        "Devaki"
+      ],
+      "children": [
+        "Krishna"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_vasudeva_rohini",
+      "partners": [
+        "Vasudeva",
+        "Rohini"
+      ],
+      "children": [
+        "Balarama",
+        "Subhadra"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_krishna_rukmini",
+      "partners": [
+        "Krishna",
+        "Rukmini"
+      ],
+      "children": [
+        "Pradyumna"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_krishna_satyabhama",
+      "partners": [
+        "Krishna",
+        "Satyabhama"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_krishna_jambavati",
+      "partners": [
+        "Krishna",
+        "Jambavati"
+      ],
+      "children": [
+        "Samba"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 2
+    },
+    {
+      "id": "u_krishna_kalindi",
+      "partners": [
+        "Krishna",
+        "Kalindi"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 3
+    },
+    {
+      "id": "u_krishna_mitravinda",
+      "partners": [
+        "Krishna",
+        "Mitravinda"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 4
+    },
+    {
+      "id": "u_krishna_nagnajiti",
+      "partners": [
+        "Krishna",
+        "Nagnajiti"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 5
+    },
+    {
+      "id": "u_krishna_bhadra",
+      "partners": [
+        "Krishna",
+        "Bhadra"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 6
+    },
+    {
+      "id": "u_krishna_lakshmana",
+      "partners": [
+        "Krishna",
+        "Lakshmana"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 7
+    },
+    {
+      "id": "u_pradyumna",
+      "partners": [
+        "Pradyumna",
+        "Rukmavati"
+      ],
+      "children": [
+        "Aniruddha"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_aniruddha",
+      "partners": [
+        "Aniruddha",
+        "Usha"
+      ],
+      "children": [
+        "Vajra"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_balarama",
+      "partners": [
+        "Balarama",
+        "Revati"
+      ],
+      "children": [
+        "Nishatha",
+        "Ulmuka"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_damaghosha",
+      "partners": [
+        "Damaghosha",
+        "Shrutashrava"
+      ],
+      "children": [
+        "Shishupala"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyChedi",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_bharadwaja",
+      "partners": [
+        "Bharadwaja"
+      ],
+      "children": [
+        "Drona"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAngirasa",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_sharadvan",
+      "partners": [
+        "Sharadvan"
+      ],
+      "children": [
+        "Kripa",
+        "Kripi"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAngirasa",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_drona",
+      "partners": [
+        "Drona",
+        "Kripi"
+      ],
+      "children": [
+        "Ashwatthama"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAngirasa",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_kauravya",
+      "partners": [
+        "Kauravya"
+      ],
+      "children": [
+        "Ulupi"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyNaga",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_chitravahana",
+      "partners": [
+        "Chitravahana"
+      ],
+      "children": [
+        "Chitrangada_M"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyManipura",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_yudh_devika",
+      "partners": [
+        "Yudhishthira",
+        "Devika"
+      ],
+      "children": [
+        "Yaudheya"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_bhima_balandhara",
+      "partners": [
+        "Bhima",
+        "Balandhara"
+      ],
+      "children": [
+        "Sarvaga"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 2
+    },
+    {
+      "id": "u_nakula_karenumati",
+      "partners": [
+        "Nakula",
+        "Karenumati"
+      ],
+      "children": [
+        "Niramitra"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_sahadeva_vijaya",
+      "partners": [
+        "Sahadeva",
+        "Vijaya"
+      ],
+      "children": [
+        "Suhotra"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_shishupala",
+      "partners": [
+        "Shishupala"
+      ],
+      "children": [
+        "Dhrishtaketu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyChedi",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_dhrishtadyumna",
+      "partners": [
+        "Dhrishtadyumna"
+      ],
+      "children": [
+        "Kshatradharma"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_shalya",
+      "partners": [
+        "Shalya"
+      ],
+      "children": [
+        "Rukmangada",
+        "Rukmaratha"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyMadra",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_brihadratha",
+      "partners": [
+        "Brihadratha"
+      ],
+      "children": [
+        "JarasandhaMagadha"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyMagadha",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_jarasandha",
+      "partners": [
+        "JarasandhaMagadha"
+      ],
+      "children": [
+        "Asti",
+        "Prapti"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyMagadha",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_kamsa_asti",
+      "partners": [
+        "Kamsa",
+        "Asti"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 0
+    },
+    {
+      "id": "u_kamsa_prapti",
+      "partners": [
+        "Kamsa",
+        "Prapti"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "order": 1
+    },
+    {
+      "id": "u_shukra",
+      "partners": [
+        "Shukracharya"
+      ],
+      "children": [
+        "Devayani"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_vrishaparva",
+      "partners": [
+        "Vrishaparva"
+      ],
+      "children": [
+        "Sharmishtha"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_vishvamitra",
+      "partners": [
+        "Vishvamitra",
+        "Menaka"
+      ],
+      "children": [
+        "Shakuntala"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_satrajit",
+      "partners": [
+        "Satrajit"
+      ],
+      "children": [
+        "Satyabhama"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_jambavan",
+      "partners": [
+        "Jambavan"
+      ],
+      "children": [
+        "Jambavati"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_banasura",
+      "partners": [
+        "Banasura"
+      ],
+      "children": [
+        "Usha"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_raivata",
+      "partners": [
+        "Raivata"
+      ],
+      "children": [
+        "Revati"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    }
+  ]
+}
