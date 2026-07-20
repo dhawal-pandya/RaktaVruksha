@@ -44,10 +44,14 @@ export const computeLayout2d = (
   const unionChildren = new Map<string, string[]>(); // unionNodeId -> children (birth order)
   const soloChildren = new Map<string, string[]>(); // personId -> children of a 1-partner union
   const unionGen = new Map<string, number>();
+  const unionOrder = new Map<string, number>(); // union-node id -> authoring order
   const parentsInView = new Map<string, string[]>();
 
   for (const n of graph.nodes)
-    if (n.kind === "union") unionGen.set(n.id, n.gen);
+    if (n.kind === "union") {
+      unionGen.set(n.id, n.gen);
+      unionOrder.set(n.id, n.order ?? 0);
+    }
   for (const l of graph.links) {
     if (l.kind === "partner") mapPush(unionPartners, l.target, l.source);
   }
@@ -97,9 +101,16 @@ export const computeLayout2d = (
       });
     }
   }
-  // Stable order of a person's unions (remarriage etc.).
+  // Order a person's unions by authoring order (then id): the first is the
+  // "primary" spouse, seated on the left; the rest fan out to the right.
+  const orderOf = (o: OwnedUnion) =>
+    o.unionId ? (unionOrder.get(o.unionId) ?? 0) : 0;
   for (const list of owned.values())
-    list.sort((a, b) => (a.unionId ?? "").localeCompare(b.unionId ?? ""));
+    list.sort(
+      (a, b) =>
+        orderOf(a) - orderOf(b) ||
+        (a.unionId ?? "").localeCompare(b.unionId ?? ""),
+    );
 
   const coupleSlots = (id: string) =>
     1 + (owned.get(id) ?? []).filter((o) => o.spouseId).length;
@@ -129,24 +140,42 @@ export const computeLayout2d = (
     const list = owned.get(id) ?? [];
     const kids = kidsOf(id);
     const childSlots = kids.reduce((s, c) => s + measure(c), 0);
-    const cs = coupleSlots(id);
+    // Seat the couple as [primary spouse] · owner · [other spouses]: the first
+    // (primary) spouse sits to the owner's left, the rest fan out to the right,
+    // so a two-spouse person is flanked on both sides. Spouses already placed
+    // elsewhere (a shared partner, e.g. one wife married to several brothers) are
+    // only linked, not re-seated. One spouse stays on the right, as before.
+    const spouseIds = list
+      .filter((o) => o.spouseId)
+      .map((o) => o.spouseId as string);
+    const newSpouses = spouseIds.filter((sid) => !xSlot.has(sid));
+    const leftS = newSpouses.length >= 2 ? newSpouses.slice(0, 1) : [];
+    const rightS = newSpouses.length >= 2 ? newSpouses.slice(1) : newSpouses;
+    const usedCount = 1 + newSpouses.length;
+    const seat = (rowStart: number): number => {
+      let gx = rowStart;
+      for (const s of leftS) xSlot.set(s, gx++);
+      const ox = gx++;
+      xSlot.set(id, ox);
+      for (const s of rightS) xSlot.set(s, gx++);
+      return ox;
+    };
+    const unionAt = (o: OwnedUnion, ox: number) => {
+      if (!o.unionId) return;
+      if (o.children.length) {
+        const cx = o.children.map((c) => anchor.get(c) ?? ox);
+        unionSlot.set(o.unionId, (Math.min(...cx) + Math.max(...cx)) / 2);
+      } else {
+        const sp = o.spouseId ? (xSlot.get(o.spouseId) ?? ox) : ox;
+        unionSlot.set(o.unionId, (ox + sp) / 2);
+      }
+    };
 
     if (childSlots === 0) {
-      // Leaf couple: centre person (+ spouses) within the band.
-      let x = left + (w - cs) / 2;
-      xSlot.set(id, x);
-      anchor.set(id, x);
-      x += 1;
-      for (const o of list) {
-        if (o.spouseId && !xSlot.has(o.spouseId)) {
-          xSlot.set(o.spouseId, x);
-          x += 1;
-        }
-        if (o.unionId) {
-          const sp = o.spouseId ? xSlot.get(o.spouseId)! : xSlot.get(id)!;
-          unionSlot.set(o.unionId, (xSlot.get(id)! + sp) / 2);
-        }
-      }
+      // Leaf couple: centre the seated row within the band.
+      const ox = seat(left + (w - usedCount) / 2);
+      anchor.set(id, ox);
+      for (const o of list) unionAt(o, ox);
       return;
     }
 
@@ -163,29 +192,9 @@ export const computeLayout2d = (
     const cCenter = (centres[0] + centres[centres.length - 1]) / 2;
     anchor.set(id, cCenter);
 
-    // Couple straddles the children's centre; the bloodline person leads.
-    let gx = cCenter - (cs - 1) / 2;
-    xSlot.set(id, gx);
-    gx += 1;
-    for (const o of list) {
-      if (o.spouseId && !xSlot.has(o.spouseId)) {
-        xSlot.set(o.spouseId, gx);
-        gx += 1;
-      }
-    }
-    // Union node sits over its own children (or the couple, if childless here).
-    for (const o of list) {
-      if (!o.unionId) continue;
-      if (o.children.length) {
-        const cx = o.children.map((c) => anchor.get(c) ?? 0);
-        unionSlot.set(o.unionId, (Math.min(...cx) + Math.max(...cx)) / 2);
-      } else {
-        const sp = o.spouseId
-          ? (xSlot.get(o.spouseId) ?? xSlot.get(id)!)
-          : xSlot.get(id)!;
-        unionSlot.set(o.unionId, (xSlot.get(id)! + sp) / 2);
-      }
-    }
+    // Couple straddles the children's centre.
+    const ox = seat(cCenter - (usedCount - 1) / 2);
+    for (const o of list) unionAt(o, ox);
   };
 
   // Roots: members with no parents in view that aren't just someone's spouse.

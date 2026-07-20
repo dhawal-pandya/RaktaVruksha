@@ -107,6 +107,8 @@ export interface UnionNode {
   gen: number;
   status: UnionStatus;
   familyId: string | null;
+  /** Authoring order among a person's unions; drives spouse placement in 2D. */
+  order?: number;
 }
 
 export type GraphNode = PersonNode | UnionNode;

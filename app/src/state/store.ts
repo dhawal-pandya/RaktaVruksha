@@ -93,10 +93,20 @@ const emptyRelation: RelationState = {
   noRelation: false,
 };
 
+// Alternate datasets live beside the default file and are selected with ?data=<key>.
+// The default (no param) is always my real family; extend this map to add more.
+export type DataSource = "default" | "stress" | "mahabharat" | "ramayan";
+const DATA_FILES: Record<DataSource, string> = {
+  default: "family-data.json",
+  stress: "family-data.stress.json",
+  mahabharat: "family-data.mahabharat.json",
+  ramayan: "family-data.ramayan.json",
+};
+
 interface AppState {
   phase: "loading" | "ready" | "error";
   loadError: string | null;
-  dataSource: "default" | "stress";
+  dataSource: DataSource;
   viewMode: "2d" | "3d";
 
   raw: FamilyDataV2 | null;
@@ -269,7 +279,13 @@ export const useStore = create<AppState>((set, get) => {
 
     boot: async () => {
       const params = new URLSearchParams(window.location.search);
-      const dataSource = params.get("data") === "stress" ? "stress" : "default";
+      const requested = params.get("data");
+      const dataSource: DataSource =
+        requested === "stress" ||
+        requested === "mahabharat" ||
+        requested === "ramayan"
+          ? requested
+          : "default";
       set({ dataSource });
       // Older builds stored a data draft in IndexedDB that shadowed the deployed
       // file forever. Clean out anything they left behind so every visitor is
@@ -281,11 +297,7 @@ export const useStore = create<AppState>((set, get) => {
         // 'no-cache' revalidates against the server (cheap 304 when unchanged)
         // so a plain refresh always shows the latest deployed data.
         const base = import.meta.env.BASE_URL;
-        const file =
-          base +
-          (dataSource === "stress"
-            ? "family-data.stress.json"
-            : "family-data.json");
+        const file = base + DATA_FILES[dataSource];
         const res = await fetch(file, { cache: "no-cache" });
         if (!res.ok)
           throw new Error(`could not load ${file} (${res.status})`);

@@ -49,6 +49,7 @@ export const buildGraph = (ds: Dataset): Graph => {
         gen,
         status: u.status,
         familyId: u.familyId ?? displayFamilyOf(ds, partners[0]),
+        order: u.order,
       });
       for (const pid of partners) {
         links.push({

@@ -35,6 +35,12 @@ export default function TopBar() {
         <div className="wordmark-latin">Raktavruksha</div>
         <div className="wordmark-devanagari">रक्तवृक्ष</div>
         {dataSource === 'stress' && <span className="badge badge-stress">stress</span>}
+        {dataSource === 'mahabharat' && (
+          <span className="badge badge-mahabharat">कुरुवंश Kuruvansh</span>
+        )}
+        {dataSource === 'ramayan' && (
+          <span className="badge badge-ramayan">रघुवंश Raghuvansh</span>
+        )}
       </div>
 
       <SearchBar />
