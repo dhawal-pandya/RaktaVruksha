@@ -30,6 +30,16 @@ export const validateData = (raw: FamilyDataV2): ValidationResult => {
     }
   }
 
+  // Divine parentage: parents must exist and be marked divine (a free-agent link,
+  // so it isn't subject to the one-biological-union rule).
+  const divineById = new Map(raw.people.map(p => [p.id, p.divine === true]));
+  for (const p of raw.people) {
+    for (const dp of p.divineParents ?? []) {
+      if (!personIds.has(dp)) errors.push(`person "${p.id}": unknown divineParent "${dp}"`);
+      else if (!divineById.get(dp)) warnings.push(`"${p.id}": divineParent "${dp}" is not marked divine`);
+    }
+  }
+
   const unionIds = new Set<string>();
   const partnerKeys = new Set<string>();
   const bioUnionOf = new Map<string, string>();
@@ -120,6 +130,10 @@ export const parseFamilyData = (
     birthFamilyId: p.birthFamilyId == null ? null : String(p.birthFamilyId),
     ...(p.notes ? { notes: String(p.notes) } : {}),
     updatedAt: String(p.updatedAt ?? new Date(0).toISOString()),
+    ...(p.divine === true ? { divine: true } : {}),
+    ...(Array.isArray(p.divineParents) && p.divineParents.length
+      ? { divineParents: p.divineParents.map(String) }
+      : {}),
   }));
 
   const unions: UnionRecord[] = (json.unions as Record<string, unknown>[]).map(u => ({

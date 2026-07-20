@@ -537,6 +537,16 @@
       "notes": "Son of Kumbhakarna, killed in the war."
     },
     {
+      "id": "Vajrajwala",
+      "firstName": "Vajrajwala",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Wife of Kumbhakarna; a granddaughter of the demon Virochana."
+    },
+    {
       "id": "Riksharaja",
       "firstName": "Riksharaja",
       "lastName": "",
@@ -554,7 +564,10 @@
       "alive": true,
       "birthFamilyId": "familyVanara",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Elder vanara prince, son of Indra; king of Kishkindha of peerless strength, slain by Rama's arrow to restore Sugriva."
+      "notes": "Elder vanara prince, son of Indra; king of Kishkindha of peerless strength, slain by Rama's arrow to restore Sugriva.",
+      "divineParents": [
+        "Indra"
+      ]
     },
     {
       "id": "Sugriva",
@@ -564,7 +577,10 @@
       "alive": true,
       "birthFamilyId": "familyVanara",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Younger vanara prince, son of Surya; exiled by Vali and restored by Rama, whose army of vanaras he then led to Lanka."
+      "notes": "Younger vanara prince, son of Surya; exiled by Vali and restored by Rama, whose army of vanaras he then led to Lanka.",
+      "divineParents": [
+        "Surya"
+      ]
     },
     {
       "id": "Sushena",
@@ -634,7 +650,53 @@
       "alive": true,
       "birthFamilyId": "familyVanara",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Kesari and Anjana, begotten by Vayu the wind-god; the immortal devotee of Rama who leapt to Lanka and found Sita."
+      "notes": "Son of Kesari and Anjana, begotten by Vayu the wind-god; the immortal devotee of Rama who leapt to Lanka and found Sita.",
+      "divineParents": [
+        "Vayu"
+      ]
+    },
+    {
+      "id": "Sumali",
+      "firstName": "Sumali",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A rakshasa lord of the elder line of Lanka; father of Kaikasi, whom he gave to the sage Vishrava to sire sons who might rival the devas."
+    },
+    {
+      "id": "Vayu",
+      "firstName": "Vayu Deva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The deva of the wind; father of Hanuman, whose boundless strength and flight are his gift.",
+      "divine": true
+    },
+    {
+      "id": "Indra",
+      "firstName": "Indra Deva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of the devas; an Aditya, son of Aditi and Kashyap, and a brother of Surya. The divine father of the vanara king Vali.",
+      "divine": true
+    },
+    {
+      "id": "Surya",
+      "firstName": "Surya Deva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The deva of the sun; an Aditya, son of Aditi and Kashyap. The divine father of Sugriva — so Vali and Sugriva are sons of divine brothers.",
+      "divine": true
     }
   ],
   "unions": [
@@ -1009,7 +1071,8 @@
     {
       "id": "u_kumbhakarna",
       "partners": [
-        "Kumbhakarna"
+        "Kumbhakarna",
+        "Vajrajwala"
       ],
       "children": [
         "Kumbha",
@@ -1017,7 +1080,7 @@
       ],
       "adoptedChildren": [],
       "familyId": "familyRakshasa",
-      "status": "unknown",
+      "status": "married",
       "updatedAt": "2026-07-20T00:00:00.000Z"
     },
     {
@@ -1085,6 +1148,19 @@
       ],
       "adoptedChildren": [],
       "familyId": "familyVanara",
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_sumali",
+      "partners": [
+        "Sumali"
+      ],
+      "children": [
+        "Kaikasi"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyRakshasa",
       "status": "married",
       "updatedAt": "2026-07-20T00:00:00.000Z"
     }

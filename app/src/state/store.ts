@@ -251,7 +251,7 @@ export const useStore = create<AppState>((set, get) => {
     phase: "loading",
     loadError: null,
     dataSource: "default",
-    viewMode: "2d",
+    viewMode: "3d",
     raw: null,
     dataset: null,
     graph: null,
@@ -286,7 +286,11 @@ export const useStore = create<AppState>((set, get) => {
         requested === "ramayan"
           ? requested
           : "default";
-      set({ dataSource });
+      // The epics open in the 3D constellation by default; the real family and
+      // the stress set open in the 2D genealogical view.
+      const initialViewMode: AppState["viewMode"] =
+        dataSource === "mahabharat" || dataSource === "ramayan" ? "3d" : "2d";
+      set({ dataSource, viewMode: initialViewMode });
       // Older builds stored a data draft in IndexedDB that shadowed the deployed
       // file forever. Clean out anything they left behind so every visitor is
       // unpinned from stale data on their next load.
@@ -299,8 +303,7 @@ export const useStore = create<AppState>((set, get) => {
         const base = import.meta.env.BASE_URL;
         const file = base + DATA_FILES[dataSource];
         const res = await fetch(file, { cache: "no-cache" });
-        if (!res.ok)
-          throw new Error(`could not load ${file} (${res.status})`);
+        if (!res.ok) throw new Error(`could not load ${file} (${res.status})`);
         const lastModified = Date.parse(res.headers.get("last-modified") ?? "");
         const parsed = parseFamilyData(await res.text());
         if (!parsed.raw)
@@ -358,7 +361,11 @@ export const useStore = create<AppState>((set, get) => {
               },
             });
           } else {
-            const { name, local, chain } = nameRelation(s.dataset, r.aId, steps);
+            const { name, local, chain } = nameRelation(
+              s.dataset,
+              r.aId,
+              steps,
+            );
             set({
               relation: {
                 ...r,
@@ -416,7 +423,10 @@ export const useStore = create<AppState>((set, get) => {
       }
       set({ viewMode: "3d", focusId: id });
       // Wait for the 3D renderer to mount before framing the person.
-      setTimeout(() => set({ cameraRequest: cam({ kind: "person", id }) }), 500);
+      setTimeout(
+        () => set({ cameraRequest: cam({ kind: "person", id }) }),
+        500,
+      );
     },
 
     clearFocus: () => set({ focusId: null }),
@@ -711,12 +721,20 @@ export const useStore = create<AppState>((set, get) => {
           cameraRequest: cam({ kind: "person", id: s.mergeKeepId }),
         });
       } catch (e) {
-        set({ mergeKeepId: null, toast: `Merge failed: ${(e as Error).message}` });
+        set({
+          mergeKeepId: null,
+          toast: `Merge failed: ${(e as Error).message}`,
+        });
       }
     },
 
     lockEditing: () => {
-      set({ editUnlocked: false, form: null, confirmDelete: null, mergeKeepId: null });
+      set({
+        editUnlocked: false,
+        form: null,
+        confirmDelete: null,
+        mergeKeepId: null,
+      });
     },
 
     dismissHint: () => set({ hintDismissed: true }),
@@ -733,6 +751,8 @@ useStore.subscribe((state, prev) => {
     state.lensFamilyId !== prev.lensFamilyId ||
     state.viewMode !== prev.viewMode
   ) {
-    syncFamilyParam(state.viewMode === "2d" ? state.family2d : state.lensFamilyId);
+    syncFamilyParam(
+      state.viewMode === "2d" ? state.family2d : state.lensFamilyId,
+    );
   }
 });

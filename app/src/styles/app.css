@@ -183,6 +183,11 @@ textarea:focus {
   border: 1px solid var(--border-strong);
   color: var(--text-dim);
 }
+.badge-wip {
+  border-color: rgba(255, 176, 92, 0.5);
+  color: #ffb05c;
+  letter-spacing: 0.5px;
+}
 .topbar-actions {
   display: flex;
   gap: var(--sp-2);

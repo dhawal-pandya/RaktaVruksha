@@ -113,6 +113,20 @@ export const buildDataset = (raw: FamilyDataV2): Dataset => {
     familiesOf.set(p.id, affs);
   }
 
+  // Divine parentage: index deva → children, and let a deva "belong" (for the 2D
+  // family view and camera framing) to each of its children's families, so it
+  // hovers above them. Membership only; the deva keeps no family colour of its own.
+  const divineChildrenOf = new Map<string, string[]>();
+  for (const p of raw.people) {
+    for (const dp of p.divineParents ?? []) {
+      if (!people.has(dp)) continue;
+      const list = divineChildrenOf.get(dp);
+      if (list) list.push(p.id);
+      else divineChildrenOf.set(dp, [p.id]);
+      addMember(familiesOf.get(p.id)?.[0]?.familyId ?? null, dp);
+    }
+  }
+
   const { gen, componentOf } = computeGenerations(raw.people, raw.unions);
   const familyLabels = computeFamilyLabels(raw, people, gen);
 
@@ -127,6 +141,7 @@ export const buildDataset = (raw: FamilyDataV2): Dataset => {
     childUnionOf,
     familiesOf,
     membersOfFamily,
+    divineChildrenOf,
     familyLabels,
     generations: gen,
     componentOf,

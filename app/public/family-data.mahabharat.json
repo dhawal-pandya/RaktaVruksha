@@ -68,23 +68,25 @@
   "people": [
     {
       "id": "Chandra",
-      "firstName": "Chandra",
+      "firstName": "Chandra Deva",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySoma",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Soma, the moon-god; founder and eponym of the Chandravamsha, the lunar dynasty from which both the Kurus and the Yadavas descend."
+      "notes": "Chandra Deva (also Soma), the radiant deva of the moon and of the soma nectar; progenitor and eponym of the Chandravamsha, the lunar dynasty from which both the Kurus and the Yadavas descend.",
+      "divine": true
     },
     {
       "id": "Budha",
-      "firstName": "Budha",
+      "firstName": "Budha Deva",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySoma",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Chandra (the planet Mercury); husband of Ila."
+      "notes": "Budha Deva, the deva of the planet Mercury and son of Chandra; husband of Ila.",
+      "divine": true
     },
     {
       "id": "Pururavas",
@@ -125,6 +127,26 @@
       "birthFamilyId": "familySoma",
       "updatedAt": "2026-07-20T00:00:00.000Z",
       "notes": "Son of Nahusha; a great emperor cursed with old age, which his youngest son Puru bore for him. His five sons founded five peoples."
+    },
+    {
+      "id": "Ila",
+      "firstName": "Ila",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Wife of Budha; born of Vaivasvata Manu and, by a boon, living as both woman and man across her life."
+    },
+    {
+      "id": "Urvashi",
+      "firstName": "Urvashi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The apsara beloved of Pururavas and mother of Ayus."
     },
     {
       "id": "Devayani",
@@ -314,7 +336,17 @@
       "alive": true,
       "birthFamilyId": "familyKuru",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "King of the Kuru line; wife Sunanda."
+      "notes": "King of the Kuru line; husband of Sunanda."
+    },
+    {
+      "id": "Sunanda",
+      "firstName": "Sunanda",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Wife of Pratipa; a princess of Shibi and mother of Devapi, Bahlika and Shantanu."
     },
     {
       "id": "Devapi",
@@ -368,13 +400,14 @@
     },
     {
       "id": "Ganga",
-      "firstName": "Ganga",
+      "firstName": "Ganga Devi",
       "lastName": "",
       "gender": "female",
       "alive": true,
       "birthFamilyId": null,
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "The river-goddess; Shantanu's first wife and mother of Bhishma."
+      "notes": "The devi of the sacred river; Shantanu's first wife and mother of Bhishma, whom she bore as the last of the eight Vasus made mortal.",
+      "divine": true
     },
     {
       "id": "Bhishma",
@@ -384,7 +417,84 @@
       "alive": true,
       "birthFamilyId": "familyKuru",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Born Devavrata; took a vow of lifelong celibacy so his father could marry Satyavati, hence 'Bhishma'. Grandsire and regent of the Kurus; a chiranjivi who chose the hour of his own death."
+      "notes": "Born Devavrata; took a vow of lifelong celibacy so his father could marry Satyavati, hence 'Bhishma'. He was Prabhasa, the eighth and last of the eight Vasus, cursed to a long mortal life for stealing the sage Vasishtha's cow; his seven brother-Vasus — shown here as Ganga's other sons — she returned at once to heaven. Grandsire and regent of the Kurus; a chiranjivi who chose his own hour of death."
+    },
+    {
+      "id": "VasuDhara",
+      "firstName": "Dhara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Vasu, deva of the earth; a brother-Vasu of Bhishma (Prabhasa), borne by Ganga and returned to heaven.",
+      "divine": true
+    },
+    {
+      "id": "VasuDhruva",
+      "firstName": "Dhruva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Vasu, deva of the pole star; borne by Ganga and returned to heaven.",
+      "divine": true
+    },
+    {
+      "id": "VasuSoma",
+      "firstName": "Soma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Vasu, deva of the moon; borne by Ganga and returned to heaven.",
+      "divine": true
+    },
+    {
+      "id": "VasuAha",
+      "firstName": "Aha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Vasu, deva of the day and the ethereal space; borne by Ganga and returned to heaven.",
+      "divine": true
+    },
+    {
+      "id": "VasuAnila",
+      "firstName": "Anila",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Vasu, deva of the wind; borne by Ganga and returned to heaven.",
+      "divine": true
+    },
+    {
+      "id": "VasuAnala",
+      "firstName": "Anala",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Vasu, deva of fire (Agni); borne by Ganga and returned to heaven.",
+      "divine": true
+    },
+    {
+      "id": "VasuPratyusha",
+      "firstName": "Pratyusha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Vasu, deva of the dawn; borne by Ganga and returned to heaven.",
+      "divine": true
     },
     {
       "id": "Satyavati",
@@ -1492,6 +1602,16 @@
       "notes": "Son of Dhritarashtra by the maid Sughada; the one son of that house to cross over and fight on the Pandava side."
     },
     {
+      "id": "Sughada",
+      "firstName": "Sughada",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A vaishya attendant of the Kuru household; mother of Yuyutsu by Dhritarashtra."
+    },
+    {
       "id": "Bhanumati",
       "firstName": "Bhanumati",
       "lastName": "",
@@ -1549,7 +1669,10 @@
       "alive": true,
       "birthFamilyId": "familyKuru",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Eldest Pandava, begotten of Kunti by Dharma (Yama); the just king, never known to lie."
+      "notes": "Eldest Pandava, begotten of Kunti by Dharma (Yama); the just king, never known to lie.",
+      "divineParents": [
+        "Yama"
+      ]
     },
     {
       "id": "Bhima",
@@ -1559,7 +1682,10 @@
       "alive": true,
       "birthFamilyId": "familyKuru",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Second Pandava, begotten of Kunti by Vayu; of superhuman strength, sworn to kill all hundred Kauravas."
+      "notes": "Second Pandava, begotten of Kunti by Vayu; of superhuman strength, sworn to kill all hundred Kauravas.",
+      "divineParents": [
+        "Vayu"
+      ]
     },
     {
       "id": "Arjuna",
@@ -1569,7 +1695,10 @@
       "alive": true,
       "birthFamilyId": "familyKuru",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Third Pandava, begotten of Kunti by Indra; the supreme archer, friend of Krishna, hearer of the Bhagavad Gita."
+      "notes": "Third Pandava, begotten of Kunti by Indra; the supreme archer, friend of Krishna, hearer of the Bhagavad Gita.",
+      "divineParents": [
+        "Indra"
+      ]
     },
     {
       "id": "Nakula",
@@ -1579,7 +1708,10 @@
       "alive": true,
       "birthFamilyId": "familyKuru",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Fourth Pandava, twin son of Madri by the Ashvins; matchless horseman and the handsomest of men."
+      "notes": "Fourth Pandava, twin son of Madri by the Ashvins; matchless horseman and the handsomest of men.",
+      "divineParents": [
+        "Nasatya"
+      ]
     },
     {
       "id": "Sahadeva",
@@ -1589,7 +1721,10 @@
       "alive": true,
       "birthFamilyId": "familyKuru",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Youngest Pandava, twin son of Madri by the Ashvins; wisest of the brothers and a knower of the future."
+      "notes": "Youngest Pandava, twin son of Madri by the Ashvins; wisest of the brothers and a knower of the future.",
+      "divineParents": [
+        "Dasra"
+      ]
     },
     {
       "id": "Karna",
@@ -1599,7 +1734,10 @@
       "alive": true,
       "birthFamilyId": null,
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Kunti's firstborn, begotten by Surya the sun-god before her marriage; set adrift on the river and raised by the charioteer Adhiratha, so his birth lineage stayed unknown even to him. Half-brother of the Pandavas, he fought and died for Duryodhana, learning his kin too late."
+      "notes": "Kunti's firstborn, begotten by Surya the sun-god before her marriage; set adrift on the river and raised by the charioteer Adhiratha, so his birth lineage stayed unknown even to him. Half-brother of the Pandavas, he fought and died for Duryodhana, learning his kin too late.",
+      "divineParents": [
+        "Surya"
+      ]
     },
     {
       "id": "Adhiratha",
@@ -2560,6 +2698,152 @@
       "birthFamilyId": "familyMagadha",
       "updatedAt": "2026-07-20T00:00:00.000Z",
       "notes": "Daughter of Jarasandha; a queen of Kamsa. Kamsa's death at Krishna's hands turned their father into Mathura's implacable enemy."
+    },
+    {
+      "id": "Shukracharya",
+      "firstName": "Shukracharya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The rishi Shukra, preceptor of the asuras and keeper of the reviving art; father of Devayani."
+    },
+    {
+      "id": "Vrishaparva",
+      "firstName": "Vrishaparva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "An asura king; father of Sharmishtha."
+    },
+    {
+      "id": "Vishvamitra",
+      "firstName": "Vishvamitra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A king who won brahmarshi-hood by fierce penance; father of Shakuntala by the apsara Menaka."
+    },
+    {
+      "id": "Menaka",
+      "firstName": "Menaka",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "An apsara sent to break Vishvamitra's penance; mother of Shakuntala, who was then raised by the sage Kanva."
+    },
+    {
+      "id": "Satrajit",
+      "firstName": "Satrajit",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A Yadava noble, keeper of the Syamantaka gem; father of Satyabhama."
+    },
+    {
+      "id": "Jambavan",
+      "firstName": "Jambavan",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The immortal bear-king of the Ramayan age; Krishna wrestled him for the Syamantaka gem and won his daughter Jambavati."
+    },
+    {
+      "id": "Banasura",
+      "firstName": "Banasura",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "A thousand-armed asura king and devotee of Shiva; father of Usha."
+    },
+    {
+      "id": "Raivata",
+      "firstName": "Raivata",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King Raivata (Kakudmi), who took his daughter Revati to Brahma's realm and returned an age later to a world grown small."
+    },
+    {
+      "id": "Surya",
+      "firstName": "Surya Deva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The deva of the sun; an Aditya, son of the devi Aditi and the rishi Kashyap. Father of Karna, whom Kunti bore before her marriage by invoking Surya with a boon she wished to test.",
+      "divine": true
+    },
+    {
+      "id": "Yama",
+      "firstName": "Yama (Dharma)",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "Dharma, the deva of righteousness and lord of justice; father of Yudhishthira, who inherited his unwavering truth.",
+      "divine": true
+    },
+    {
+      "id": "Vayu",
+      "firstName": "Vayu Deva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "The deva of the wind; father of the mighty Bhima (and, in the earlier age of the Ramayan, of Hanuman).",
+      "divine": true
+    },
+    {
+      "id": "Indra",
+      "firstName": "Indra Deva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "King of the devas, wielder of the thunderbolt; an Aditya, son of Aditi and Kashyap, and so a brother of Surya. Father of Arjuna, to whom he later gave celestial weapons.",
+      "divine": true
+    },
+    {
+      "id": "Nasatya",
+      "firstName": "Nasatya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "One of the twin Ashvini Kumaras, devas of dawn and healing; father, by Madri, of Nakula.",
+      "divine": true
+    },
+    {
+      "id": "Dasra",
+      "firstName": "Dasra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "notes": "One of the twin Ashvini Kumaras, devas of dawn and healing; father, by Madri, of Sahadeva.",
+      "divine": true
     }
   ],
   "unions": [
@@ -2579,7 +2863,8 @@
     {
       "id": "u_budha",
       "partners": [
-        "Budha"
+        "Budha",
+        "Ila"
       ],
       "children": [
         "Pururavas"
@@ -2592,7 +2877,8 @@
     {
       "id": "u_pururavas",
       "partners": [
-        "Pururavas"
+        "Pururavas",
+        "Urvashi"
       ],
       "children": [
         "Ayus"
@@ -2821,7 +3107,8 @@
     {
       "id": "u_pratipa",
       "partners": [
-        "Pratipa"
+        "Pratipa",
+        "Sunanda"
       ],
       "children": [
         "Devapi",
@@ -2866,6 +3153,13 @@
         "Ganga"
       ],
       "children": [
+        "VasuDhara",
+        "VasuDhruva",
+        "VasuSoma",
+        "VasuAha",
+        "VasuAnila",
+        "VasuAnala",
+        "VasuPratyusha",
         "Bhishma"
       ],
       "adoptedChildren": [],
@@ -3125,7 +3419,8 @@
     {
       "id": "u_dhrita_maid",
       "partners": [
-        "Dhritarashtra"
+        "Dhritarashtra",
+        "Sughada"
       ],
       "children": [
         "Yuyutsu"
@@ -3986,6 +4281,98 @@
       "status": "married",
       "updatedAt": "2026-07-20T00:00:00.000Z",
       "order": 1
+    },
+    {
+      "id": "u_shukra",
+      "partners": [
+        "Shukracharya"
+      ],
+      "children": [
+        "Devayani"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_vrishaparva",
+      "partners": [
+        "Vrishaparva"
+      ],
+      "children": [
+        "Sharmishtha"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_vishvamitra",
+      "partners": [
+        "Vishvamitra",
+        "Menaka"
+      ],
+      "children": [
+        "Shakuntala"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_satrajit",
+      "partners": [
+        "Satrajit"
+      ],
+      "children": [
+        "Satyabhama"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_jambavan",
+      "partners": [
+        "Jambavan"
+      ],
+      "children": [
+        "Jambavati"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_banasura",
+      "partners": [
+        "Banasura"
+      ],
+      "children": [
+        "Usha"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "id": "u_raivata",
+      "partners": [
+        "Raivata"
+      ],
+      "children": [
+        "Revati"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "updatedAt": "2026-07-20T00:00:00.000Z"
     }
   ]
 }

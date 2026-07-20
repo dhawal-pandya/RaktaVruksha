@@ -12,6 +12,12 @@ export interface PersonRecord {
   birthFamilyId: string | null;
   notes?: string;
   updatedAt: string;
+  /** A deva / divine being. Rendered distinctly and kept as a "free agent": its
+   *  parentage never binds the generation leveling of mortals. */
+  divine?: boolean;
+  /** Divine parent(s): a free-agent parentage that adds a divine father/mother
+   *  without disturbing the child's mortal (biological/adoptive) parentage. */
+  divineParents?: string[];
 }
 
 export interface UnionRecord {
@@ -82,6 +88,8 @@ export interface Dataset {
   childUnionOf: Map<string, { biological?: string; adoptive?: string }>;
   familiesOf: Map<string, FamilyAffiliation[]>;
   membersOfFamily: Map<string, Set<string>>;
+  /** Deva id → the ids of its divine children (free-agent parentage). */
+  divineChildrenOf: Map<string, string[]>;
   /** Per-family display label; adds a distinguisher when a name is shared. */
   familyLabels: Map<string, FamilyLabel>;
   generations: Map<string, number>;
@@ -98,6 +106,8 @@ export interface PersonNode {
   familyId: string | null;
   alive: boolean;
   gender: Gender;
+  /** True for a deva, the renderer gives these a distinct, radiant treatment. */
+  divine?: boolean;
 }
 
 export interface UnionNode {
@@ -116,7 +126,7 @@ export type GraphNode = PersonNode | UnionNode;
 export interface GraphLink {
   source: string;
   target: string;
-  kind: "partner" | "child";
+  kind: "partner" | "child" | "divine";
   tag?: ParentTag;
   status?: UnionStatus;
 }

@@ -16,6 +16,7 @@ type FGNode = GraphNode & {
   fy?: number;
   fz?: number;
   __mat?: THREE.MeshLambertMaterial;
+  __aura?: THREE.MeshBasicMaterial;
   __sprite?: SpriteText;
 };
 
@@ -26,6 +27,10 @@ type FGLink = Omit<GraphLink, 'source' | 'target'> & {
 
 const personGeometry = new THREE.SphereGeometry(6, 20, 20);
 const unionGeometry = new THREE.SphereGeometry(2.6, 12, 12);
+// A deva is a sphere too — just larger and radiant (deva = "the shining one"),
+// wrapped in a soft glowing aura.
+const divineGeometry = new THREE.SphereGeometry(9, 24, 24);
+const divineAuraGeometry = new THREE.SphereGeometry(15, 18, 18);
 const UNION_COLOR = '#4a5468';
 
 // The camera's polar angle (measured from +Y) is confined to a narrow band, so a
@@ -78,11 +83,13 @@ const linkBaseColor = (l: FGLink): string =>
 // types: divorced marriages dash, adoptive child links dot.
 const linkDashProp: Record<string, unknown> = {
   linkLineDash: (l: FGLink) =>
-    l.kind === 'partner' && l.status === 'divorced'
-      ? [4, 3]
-      : l.kind === 'child' && l.tag === 'adoptive'
-        ? [1.5, 2.5]
-        : null,
+    l.kind === 'divine'
+      ? [2, 3]
+      : l.kind === 'partner' && l.status === 'divorced'
+        ? [4, 3]
+        : l.kind === 'child' && l.tag === 'adoptive'
+          ? [1.5, 2.5]
+          : null,
 };
 
 export default function Scene3D() {
@@ -157,8 +164,14 @@ export default function Scene3D() {
       if (!mat) continue;
       const op = visuals.nodeOpacity.get(node.id) ?? 1;
       mat.opacity = op;
-      mat.emissiveIntensity =
-        visuals.glow.has(node.id) ? 1.1 : node.kind === 'person' ? 0.45 : 0.2;
+      if (node.__aura) node.__aura.opacity = 0.16 * op;
+      mat.emissiveIntensity = visuals.glow.has(node.id)
+        ? 1.1
+        : node.kind === 'person' && node.divine
+          ? 0.95
+          : node.kind === 'person'
+            ? 0.45
+            : 0.2;
     }
     updateLabelVisibility();
   }, [visuals, data, updateLabelVisibility]);
@@ -306,19 +319,31 @@ export default function Scene3D() {
       node.__mat = mat;
       return new THREE.Mesh(unionGeometry, mat);
     }
+    const divine = node.divine === true;
     const color = new THREE.Color(node.color);
     const mat = new THREE.MeshLambertMaterial({
       color,
       transparent: true,
-      opacity: 0.96,
+      opacity: divine ? 0.98 : 0.96,
       emissive: color,
-      emissiveIntensity: 0.45,
+      emissiveIntensity: divine ? 0.95 : 0.45,
     });
-    const mesh = new THREE.Mesh(personGeometry, mat);
-    const sprite = new SpriteText(node.label, 7, '#e6ebf5');
+    const mesh = new THREE.Mesh(divine ? divineGeometry : personGeometry, mat);
+    if (divine) {
+      // A soft glowing aura around the deva — the radiance of a shining one.
+      const auraMat = new THREE.MeshBasicMaterial({
+        color,
+        transparent: true,
+        opacity: 0.16,
+        depthWrite: false,
+      });
+      mesh.add(new THREE.Mesh(divineAuraGeometry, auraMat));
+      node.__aura = auraMat;
+    }
+    const sprite = new SpriteText(node.label, divine ? 8 : 7, divine ? '#fff2c8' : '#e6ebf5');
     // Split couple labels: men's names above the sphere, women's below, so a
     // married pair sitting side by side never prints its names over each other.
-    sprite.position.set(0, node.gender === 'male' ? 14.5 : -14.5, 0);
+    sprite.position.set(0, divine ? 17 : node.gender === 'male' ? 14.5 : -14.5, 0);
     sprite.material.depthWrite = false;
     sprite.fontFace = 'Inter, system-ui, sans-serif';
     sprite.backgroundColor = 'rgba(10, 14, 26, 0.55)';
@@ -361,6 +386,7 @@ export default function Scene3D() {
       const a = endpointId(l.source);
       const b = endpointId(l.target);
       if (vis?.pathSet && vis.pathSet.has(a) && vis.pathSet.has(b)) return '#ffd27d';
+      if (l.kind === 'divine') return '#ffd76a'; // radiant gold ray
       // Child links carry the child's gender (target is always the child); partner
       // and other links keep their status/tag color.
       const childGender = l.kind === 'child' ? genderById.get(b) : undefined;

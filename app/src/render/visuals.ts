@@ -59,6 +59,9 @@ const focusNeighborhood = (ds: Dataset, focusId: string): Set<string> => {
   for (const c of ds.childrenOf.get(focusId) ?? []) set.add(c.id);
   for (const s of ds.spousesOf.get(focusId) ?? []) set.add(s.id);
   for (const uid of ds.unionsOf.get(focusId) ?? []) set.add(unionNodeId(uid));
+  // A deva and its divine child light up together.
+  for (const dp of ds.people.get(focusId)?.divineParents ?? []) set.add(dp);
+  for (const dc of ds.divineChildrenOf.get(focusId) ?? []) set.add(dc);
   const asChild = ds.childUnionOf.get(focusId);
   for (const uid of [asChild?.biological, asChild?.adoptive]) {
     if (uid && (ds.unions.get(uid)?.partners.length ?? 0) === 2) set.add(unionNodeId(uid));

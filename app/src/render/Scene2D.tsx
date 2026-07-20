@@ -129,6 +129,32 @@ export default function Scene2D() {
     (node: FG2Node, ctx: CanvasRenderingContext2D, globalScale: number) => {
       const op = nodeOpacity(node);
       if (op <= 0.02) return;
+      if (node.kind === 'person' && node.divine) {
+        // A deva: a larger, radiant gold orb wrapped in a soft glow (deva = "the
+        // shining one").
+        const x = node.x ?? 0;
+        const y = node.y ?? 0;
+        const rr = NODE_R * 1.45;
+        ctx.globalAlpha = op;
+        ctx.beginPath();
+        ctx.arc(x, y, rr * 2.1, 0, 2 * Math.PI);
+        ctx.fillStyle = 'rgba(255, 215, 106, 0.10)';
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(x, y, rr * 1.45, 0, 2 * Math.PI);
+        ctx.fillStyle = 'rgba(255, 215, 106, 0.18)';
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(x, y, rr, 0, 2 * Math.PI);
+        ctx.fillStyle = node.color;
+        ctx.fill();
+        ctx.lineWidth = 1 / globalScale;
+        ctx.strokeStyle = '#fff2c8';
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+        drawLabel(ctx, node, globalScale, true, op);
+        return;
+      }
       const isUnion = node.kind === 'union';
       const r = isUnion ? UNION_R : NODE_R;
       const x = node.x ?? 0;
@@ -208,6 +234,7 @@ export default function Scene2D() {
       const a = endpointId(l.source);
       const b = endpointId(l.target);
       if (vis?.pathSet && vis.pathSet.has(a) && vis.pathSet.has(b)) return PATH_COLOR;
+      if (l.kind === 'divine') return '#ffd76a'; // radiant gold ray
       const na = nodeById.current.get(a);
       const nb = nodeById.current.get(b);
       // Child links carry the child's gender (target is always the child); partner
@@ -227,17 +254,19 @@ export default function Scene2D() {
       const a = endpointId(l.source);
       const b = endpointId(l.target);
       if (vis?.pathSet && vis.pathSet.has(a) && vis.pathSet.has(b)) return 2.5;
-      return l.kind === 'partner' ? 1.6 : 1;
+      return l.kind === 'partner' ? 1.6 : l.kind === 'divine' ? 1.2 : 1;
     };
   }, [visuals]);
 
   const linkDash = useMemo(
     () => (l: FG2Link): number[] | null =>
-      l.kind === 'partner' && l.status === 'divorced'
-        ? [3, 3]
-        : l.kind === 'child' && l.tag === 'adoptive'
-          ? [1.5, 2]
-          : null,
+      l.kind === 'divine'
+        ? [2, 3]
+        : l.kind === 'partner' && l.status === 'divorced'
+          ? [3, 3]
+          : l.kind === 'child' && l.tag === 'adoptive'
+            ? [1.5, 2]
+            : null,
     [],
   );
 

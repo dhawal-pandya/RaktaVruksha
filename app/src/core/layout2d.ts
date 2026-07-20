@@ -39,6 +39,15 @@ export const computeLayout2d = (
   const minGen = Math.min(...persons.map((p) => p.gen));
   const isPerson = (id: string) => genOf.has(id);
 
+  // Devas don't join the tidy packing; they hover a generation above their child.
+  const divineChildOf = new Map<string, string>();
+  for (const l of graph.links) {
+    if (l.kind === "divine" && genOf.has(l.source) && genOf.has(l.target)) {
+      if (!divineChildOf.has(l.source)) divineChildOf.set(l.source, l.target);
+    }
+  }
+  const isDivine = (id: string) => divineChildOf.has(id);
+
   // --- parse the subgraph into descent relations ---------------------------
   const unionPartners = new Map<string, string[]>(); // unionNodeId -> [a, b]
   const unionChildren = new Map<string, string[]>(); // unionNodeId -> children (birth order)
@@ -200,7 +209,7 @@ export const computeLayout2d = (
   // Roots: members with no parents in view that aren't just someone's spouse.
   const roots = persons
     .map((p) => p.id)
-    .filter((id) => !hasParent(id) && !spouseSet.has(id))
+    .filter((id) => !hasParent(id) && !spouseSet.has(id) && !isDivine(id))
     .sort((a, b) => genOf.get(a)! - genOf.get(b)! || a.localeCompare(b));
 
   let cursor = 0;
@@ -210,8 +219,9 @@ export const computeLayout2d = (
     cursor += measure(r) + TREE_GAP;
   }
   // Safety net: anything unplaced (odd cycles, stray spouses) gets its own slot.
+  // Devas are placed separately (below), so leave them out here.
   for (const p of persons) {
-    if (!xSlot.has(p.id)) {
+    if (!xSlot.has(p.id) && !isDivine(p.id)) {
       xSlot.set(p.id, cursor);
       anchor.set(p.id, cursor);
       cursor += 1 + TREE_GAP;
@@ -222,6 +232,7 @@ export const computeLayout2d = (
   const xs = [...xSlot.values()];
   const shift = (Math.min(...xs) + Math.max(...xs)) / 2;
   for (const p of persons) {
+    if (!xSlot.has(p.id)) continue; // devas: placed by the post-pass below
     out.set(p.id, {
       x: (xSlot.get(p.id)! - shift) * SLOT,
       y: (p.gen - minGen) * GEN_GAP_2D,
@@ -233,6 +244,13 @@ export const computeLayout2d = (
       x: (slot - shift) * SLOT,
       y: (gen - minGen) * GEN_GAP_2D + UNION_DROP,
     });
+  }
+
+  // Devas hover BETWEEN generations — half a level above their divine child, so
+  // they sit on no mortal tier — nudged to the side to stand apart from parents.
+  for (const [deva, child] of divineChildOf) {
+    const cp = out.get(child);
+    if (cp) out.set(deva, { x: cp.x + SLOT * 0.85, y: cp.y - GEN_GAP_2D * 0.5 });
   }
   return out;
 };

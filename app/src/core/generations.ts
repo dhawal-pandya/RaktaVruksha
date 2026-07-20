@@ -62,5 +62,42 @@ export const computeGenerations = (
     comp++;
   }
 
+  // Devas are free agents: their divine parentage never entered the leveling
+  // above (no edges were added for it), so it can never shift a mortal's
+  // generation. Here we simply *display* each deva one level above its earliest
+  // divine child, and fold it into that child's component so it isn't a stray
+  // island. A deva with no divineParent role (e.g. an ancestor merely flagged
+  // divine, like Chandra Deva) keeps its own leveled generation.
+  const divineChildrenOf = new Map<string, string[]>();
+  for (const p of people) {
+    for (const dp of p.divineParents ?? []) {
+      if (!known.has(dp)) continue;
+      const list = divineChildrenOf.get(dp);
+      if (list) list.push(p.id);
+      else divineChildrenOf.set(dp, [p.id]);
+    }
+  }
+  // A deva belongs to NO generation. We display it half a level above its earliest
+  // divine child — floating *between* the child's generation and the parent
+  // generation — so it never sits on any mortal tier. Several passes so a deva
+  // whose child is itself a deva still settles regardless of iteration order.
+  for (let pass = 0; pass < 8; pass++) {
+    let changed = false;
+    for (const [deva, kids] of divineChildrenOf) {
+      const childGens = kids
+        .map(k => gen.get(k))
+        .filter((g): g is number => g !== undefined);
+      if (!childGens.length) continue;
+      const ng = Math.min(...childGens) - 0.5;
+      if (gen.get(deva) !== ng) {
+        gen.set(deva, ng);
+        changed = true;
+      }
+      const kidComp = componentOf.get(kids[0]);
+      if (kidComp !== undefined) componentOf.set(deva, kidComp);
+    }
+    if (!changed) break;
+  }
+
   return { gen, componentOf };
 };
