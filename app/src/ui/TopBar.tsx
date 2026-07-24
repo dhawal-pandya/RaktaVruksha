@@ -41,6 +41,9 @@ export default function TopBar() {
         {dataSource === 'ramayan' && (
           <span className="badge badge-ramayan">रघुवंश Raghuvansh</span>
         )}
+        {dataSource === 'vansh' && (
+          <span className="badge badge-vansh">ब्रह्मवंश Brahmavansh</span>
+        )}
       </div>
 
       <SearchBar />

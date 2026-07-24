@@ -18,6 +18,10 @@ export interface PersonRecord {
   /** Divine parent(s): a free-agent parentage that adds a divine father/mother
    *  without disturbing the child's mortal (biological/adoptive) parentage. */
   divineParents?: string[];
+  /** Manual era anchor. Pins this person's whole disconnected tree to this
+   *  absolute generation (smaller/negative = higher/older, larger = lower/younger),
+   *  overriding the auto bottom-align. Lets separate lineages share a time-plane. */
+  genAnchor?: number;
 }
 
 export interface UnionRecord {
@@ -32,6 +36,10 @@ export interface UnionRecord {
   familyId: string | null;
   status: UnionStatus;
   order?: number;
+  /** How many generation layers below the parents the children sit (default 1).
+   *  Use >1 when a child was born to already-old parents, to keep same-era people
+   *  on the same level across the tree. */
+  childGap?: number;
   updatedAt: string;
 }
 

@@ -379,6 +379,11 @@ export default function Scene3D() {
     for (const n of data.nodes) if (n.kind === 'person') m.set(n.id, n.gender);
     return m;
   }, [data]);
+  const colorById = useMemo(() => {
+    const m = new Map<string, string>();
+    for (const n of data.nodes) if (n.kind === 'person') m.set(n.id, n.color);
+    return m;
+  }, [data]);
 
   const linkColor = useMemo(() => {
     const vis = visuals;
@@ -386,7 +391,8 @@ export default function Scene3D() {
       const a = endpointId(l.source);
       const b = endpointId(l.target);
       if (vis?.pathSet && vis.pathSet.has(a) && vis.pathSet.has(b)) return '#ffd27d';
-      if (l.kind === 'divine') return '#ffd76a'; // radiant gold ray
+      // A deva's ray glows in the deva's own lineage colour (source is the deva).
+      if (l.kind === 'divine') return colorById.get(a) ?? '#ffd76a';
       // Child links carry the child's gender (target is always the child); partner
       // and other links keep their status/tag color.
       const childGender = l.kind === 'child' ? genderById.get(b) : undefined;
@@ -395,7 +401,7 @@ export default function Scene3D() {
       const op = Math.min(vis.nodeOpacity.get(a) ?? 1, vis.nodeOpacity.get(b) ?? 1);
       return dimToward(base, 1 - Math.min(1, op + 0.08));
     };
-  }, [visuals, genderById]);
+  }, [visuals, genderById, colorById]);
 
   const linkWidth = useMemo(() => {
     const vis = visuals;

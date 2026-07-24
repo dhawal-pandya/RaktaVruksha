@@ -130,26 +130,29 @@ export default function Scene2D() {
       const op = nodeOpacity(node);
       if (op <= 0.02) return;
       if (node.kind === 'person' && node.divine) {
-        // A deva: a larger, radiant gold orb wrapped in a soft glow (deva = "the
-        // shining one").
+        // A deva: a larger orb of its own lineage colour wrapped in a soft glow of
+        // that same colour (deva = "the shining one") — the radiance, not the hue,
+        // marks it divine.
         const x = node.x ?? 0;
         const y = node.y ?? 0;
         const rr = NODE_R * 1.45;
-        ctx.globalAlpha = op;
         ctx.beginPath();
         ctx.arc(x, y, rr * 2.1, 0, 2 * Math.PI);
-        ctx.fillStyle = 'rgba(255, 215, 106, 0.10)';
+        ctx.globalAlpha = op * 0.12;
+        ctx.fillStyle = node.color;
         ctx.fill();
         ctx.beginPath();
         ctx.arc(x, y, rr * 1.45, 0, 2 * Math.PI);
-        ctx.fillStyle = 'rgba(255, 215, 106, 0.18)';
+        ctx.globalAlpha = op * 0.22;
+        ctx.fillStyle = node.color;
         ctx.fill();
         ctx.beginPath();
         ctx.arc(x, y, rr, 0, 2 * Math.PI);
+        ctx.globalAlpha = op;
         ctx.fillStyle = node.color;
         ctx.fill();
-        ctx.lineWidth = 1 / globalScale;
-        ctx.strokeStyle = '#fff2c8';
+        ctx.lineWidth = 1.4 / globalScale;
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.78)';
         ctx.stroke();
         ctx.globalAlpha = 1;
         drawLabel(ctx, node, globalScale, true, op);
@@ -234,8 +237,9 @@ export default function Scene2D() {
       const a = endpointId(l.source);
       const b = endpointId(l.target);
       if (vis?.pathSet && vis.pathSet.has(a) && vis.pathSet.has(b)) return PATH_COLOR;
-      if (l.kind === 'divine') return '#ffd76a'; // radiant gold ray
       const na = nodeById.current.get(a);
+      // A deva's ray glows in the deva's own lineage colour (source is the deva).
+      if (l.kind === 'divine') return (na?.kind === 'person' ? na.color : undefined) ?? '#ffd76a';
       const nb = nodeById.current.get(b);
       // Child links carry the child's gender (target is always the child); partner
       // and other links keep their status/tag color.

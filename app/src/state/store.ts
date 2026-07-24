@@ -95,12 +95,18 @@ const emptyRelation: RelationState = {
 
 // Alternate datasets live beside the default file and are selected with ?data=<key>.
 // The default (no param) is always my real family; extend this map to add more.
-export type DataSource = "default" | "stress" | "mahabharat" | "ramayan";
+export type DataSource =
+  | "default"
+  | "stress"
+  | "mahabharat"
+  | "ramayan"
+  | "vansh";
 const DATA_FILES: Record<DataSource, string> = {
   default: "family-data.json",
   stress: "family-data.stress.json",
   mahabharat: "family-data.mahabharat.json",
   ramayan: "family-data.ramayan.json",
+  vansh: "family-data.vansh.json",
 };
 
 interface AppState {
@@ -219,9 +225,12 @@ const deriveAll = (raw: FamilyDataV2) => {
 // via the dev-only /__save-data endpoint (see vite.config.ts): no export needed.
 // In production this route doesn't exist, so callers fall back to download/export.
 const DEV = import.meta.env.DEV;
-const postDataFile = async (text: string): Promise<boolean> => {
+const postDataFile = async (text: string, file: string): Promise<boolean> => {
   try {
-    const res = await fetch("/__save-data", { method: "POST", body: text });
+    const res = await fetch(`/__save-data?file=${encodeURIComponent(file)}`, {
+      method: "POST",
+      body: text,
+    });
     return res.ok;
   } catch {
     return false;
@@ -234,7 +243,7 @@ export const useStore = create<AppState>((set, get) => {
   const scheduleDevWrite = (raw: FamilyDataV2) => {
     if (devWriteTimer) clearTimeout(devWriteTimer);
     devWriteTimer = setTimeout(async () => {
-      const ok = await postDataFile(serialize(raw));
+      const ok = await postDataFile(serialize(raw), DATA_FILES[get().dataSource]);
       if (ok) set({ dirty: false });
     }, 700);
   };
@@ -283,13 +292,18 @@ export const useStore = create<AppState>((set, get) => {
       const dataSource: DataSource =
         requested === "stress" ||
         requested === "mahabharat" ||
-        requested === "ramayan"
+        requested === "ramayan" ||
+        requested === "vansh"
           ? requested
           : "default";
       // The epics open in the 3D constellation by default; the real family and
       // the stress set open in the 2D genealogical view.
       const initialViewMode: AppState["viewMode"] =
-        dataSource === "mahabharat" || dataSource === "ramayan" ? "3d" : "2d";
+        dataSource === "mahabharat" ||
+        dataSource === "ramayan" ||
+        dataSource === "vansh"
+          ? "3d"
+          : "2d";
       set({ dataSource, viewMode: initialViewMode });
       // Older builds stored a data draft in IndexedDB that shadowed the deployed
       // file forever. Clean out anything they left behind so every visitor is
@@ -649,11 +663,12 @@ export const useStore = create<AppState>((set, get) => {
       const s = get();
       if (!s.raw) return;
       if (devWriteTimer) clearTimeout(devWriteTimer);
-      const ok = await postDataFile(serialize(s.raw));
+      const file = DATA_FILES[s.dataSource];
+      const ok = await postDataFile(serialize(s.raw), file);
       set({
         dirty: false,
         toast: ok
-          ? "Saved to public/family-data.json"
+          ? `Saved to public/${file}`
           : "Could not reach the dev server to save",
       });
     },

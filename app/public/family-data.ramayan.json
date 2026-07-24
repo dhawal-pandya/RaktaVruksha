@@ -314,7 +314,8 @@
       "alive": true,
       "birthFamilyId": "familyKekaya",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "King of Kekaya; father of Kaikeyi and Yudhajit."
+      "notes": "King of Kekaya; father of Kaikeyi and Yudhajit.",
+      "genAnchor": 11
     },
     {
       "id": "Yudhajit",
@@ -334,7 +335,8 @@
       "alive": true,
       "birthFamilyId": "familyVideha",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "King of Videha; father of Janaka and Kushadhvaja. The Janaka kings descend from Nimi, a son of Ikshvaku."
+      "notes": "King of Videha; father of Janaka and Kushadhvaja. The Janaka kings descend from Nimi, a son of Ikshvaku.",
+      "genAnchor": 11
     },
     {
       "id": "Janaka",
@@ -415,7 +417,8 @@
       "birthFamilyId": "familyRakshasa",
       "updatedAt": "2026-07-20T00:00:00.000Z",
       "notes": "The creator, first of the devas. Ravana's line springs almost directly from him, Brahma, his mind-born son Pulastya, then Vishrava, then Ravana, a short descent, unlike the long solar line of Rama.",
-      "divine": true
+      "divine": true,
+      "genAnchor": 10
     },
     {
       "id": "Pulastya",
@@ -515,7 +518,8 @@
       "alive": true,
       "birthFamilyId": null,
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Mayasura, the great asura architect; father of Mandodari."
+      "notes": "Mayasura, the great asura architect; father of Mandodari.",
+      "genAnchor": 12
     },
     {
       "id": "Mandodari",
@@ -701,7 +705,8 @@
       "alive": true,
       "birthFamilyId": "familyRakshasa",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "A rakshasa lord of the elder line of Lanka; father of Kaikasi, whom he gave to the sage Vishrava to sire sons who might rival the devas."
+      "notes": "A rakshasa lord of the elder line of Lanka; father of Kaikasi, whom he gave to the sage Vishrava to sire sons who might rival the devas.",
+      "genAnchor": 11
     },
     {
       "id": "Vayu",

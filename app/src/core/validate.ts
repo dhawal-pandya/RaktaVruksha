@@ -134,6 +134,7 @@ export const parseFamilyData = (
     ...(Array.isArray(p.divineParents) && p.divineParents.length
       ? { divineParents: p.divineParents.map(String) }
       : {}),
+    ...(typeof p.genAnchor === 'number' ? { genAnchor: p.genAnchor } : {}),
   }));
 
   const unions: UnionRecord[] = (json.unions as Record<string, unknown>[]).map(u => ({
@@ -147,6 +148,7 @@ export const parseFamilyData = (
         ? u.status
         : 'married',
     ...(typeof u.order === 'number' ? { order: u.order } : {}),
+    ...(typeof u.childGap === 'number' && u.childGap >= 1 ? { childGap: u.childGap } : {}),
     updatedAt: String(u.updatedAt ?? new Date(0).toISOString()),
   }));
 

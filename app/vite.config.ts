@@ -3,15 +3,22 @@ import react from "@vitejs/plugin-react";
 import { writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 
-const DATA_PATH = fileURLToPath(
-  new URL("./public/family-data.json", import.meta.url),
-);
+const PUBLIC_DIR = fileURLToPath(new URL("./public/", import.meta.url));
+// Only these files may be written back, so a stray request can never touch
+// anything else on disk. Editing works on every dataset, each to its own file.
+const WRITABLE = new Set([
+  "family-data.json",
+  "family-data.stress.json",
+  "family-data.mahabharat.json",
+  "family-data.ramayan.json",
+  "family-data.vansh.json",
+]);
 
 /**
- * Dev-only endpoint that lets the running app write edits straight back to
- * public/family-data.json: so editing locally needs no export/download step.
- * `apply: 'serve'` keeps it out of production builds; the deployed static site
- * has no such route and the app falls back to Export there.
+ * Dev-only endpoint that lets the running app write edits straight back to the
+ * dataset file it's viewing (?file=<name>), so editing locally needs no
+ * export/download step. `apply: 'serve'` keeps it out of production builds; the
+ * deployed static site has no such route and the app falls back to Export there.
  */
 function writeDataPlugin(): Plugin {
   return {
@@ -24,12 +31,20 @@ function writeDataPlugin(): Plugin {
           res.end();
           return;
         }
+        const file =
+          new URL(req.url ?? "", "http://localhost").searchParams.get("file") ??
+          "family-data.json";
+        if (!WRITABLE.has(file)) {
+          res.statusCode = 403;
+          res.end("file not allowed");
+          return;
+        }
         let body = "";
         req.on("data", (chunk) => (body += chunk));
         req.on("end", async () => {
           try {
             JSON.parse(body); // never write anything but valid JSON to the data file
-            await writeFile(DATA_PATH, body);
+            await writeFile(PUBLIC_DIR + file, body);
             res.statusCode = 200;
             res.end("ok");
           } catch (e) {
@@ -50,7 +65,7 @@ export default defineConfig({
   server: {
     // Don't reload the page when the app writes the data file back to disk.
     watch: {
-      ignored: ["**/node_modules/**", "**/.git/**", "**/family-data.json"],
+      ignored: ["**/node_modules/**", "**/.git/**", "**/public/family-data*.json"],
     },
   },
 });

@@ -18,21 +18,21 @@ export const buildGraph = (ds: Dataset): Graph => {
   const links: GraphLink[] = [];
 
   for (const p of ds.raw.people) {
-    // A free-agent deva (one that fathers a divine child) clusters near — and
-    // hovers just above — that child, so it borrows the child's family for
-    // layout. A deva merely flagged divine but rooted in the tree (e.g. Chandra
-    // Deva, an ancestor) keeps its own lineage.
+    // A deva shows its OWN lineage's colour whenever it has one — its divinity
+    // reads from the glow and size, not a single flat gold. Only a free-agent deva
+    // with no lineage in THIS dataset (a father-deva floating beside a mortal child,
+    // e.g. Surya over Karna in the standalone Mahabharat) borrows that child's family
+    // for layout and keeps the radiant divine gold.
+    const own = displayFamilyOf(ds, p.id);
     const divineChild = ds.divineChildrenOf.get(p.id)?.[0];
-    const famId = divineChild
-      ? displayFamilyOf(ds, divineChild)
-      : displayFamilyOf(ds, p.id);
+    const famId = own ?? (divineChild ? displayFamilyOf(ds, divineChild) : null);
     const famColor = famId ? (ds.raw.families[famId]?.color ?? null) : null;
     nodes.push({
       id: p.id,
       kind: "person",
       personId: p.id,
       label: personName(p),
-      color: p.divine ? DIVINE_COLOR : personColor(famColor, p.alive),
+      color: p.divine && !own ? DIVINE_COLOR : personColor(famColor, p.alive),
       gen: ds.generations.get(p.id) ?? 0,
       familyId: famId,
       alive: p.alive,
