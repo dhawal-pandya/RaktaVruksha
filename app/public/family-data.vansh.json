@@ -763,7 +763,8 @@
       "alive": true,
       "birthFamilyId": "familyGandhara",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Prince of Gandhara, Gandhari's brother; master of the loaded dice, he engineered the Kauravas' schemes against the Pandavas."
+      "notes": "Prince of Gandhara, Gandhari's brother; master of the loaded dice, he engineered the Kauravas' schemes against the Pandavas.",
+      "genAnchor": 33
     },
     {
       "id": "Uluka",
@@ -2098,7 +2099,8 @@
       "alive": true,
       "birthFamilyId": "familyMadra",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "King of Madra, brother of Madri; a peerless charioteer tricked into fighting for Duryodhana, whom he served as Karna's charioteer."
+      "notes": "King of Madra, brother of Madri; a peerless charioteer tricked into fighting for Duryodhana, whom he served as Karna's charioteer.",
+      "genAnchor": 33
     },
     {
       "id": "Madri",
@@ -2321,7 +2323,8 @@
       "alive": true,
       "birthFamilyId": "familyYadava",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Vasudeva and Devaki; the eighth child, an avatar of Vishnu, spirited to Gokula the night he was born. Counsellor and charioteer of Arjuna, speaker of the Bhagavad Gita. Beyond his eight principal queens (the Ashtabharya) he wed the sixteen thousand one hundred women he freed from the demon Narakasura's captivity, giving each of them honour and a home."
+      "notes": "Son of Vasudeva and Devaki; the eighth child, an avatar of Vishnu, spirited to Gokula the night he was born. Counsellor and charioteer of Arjuna, speaker of the Bhagavad Gita. Beyond his eight principal queens (the Ashtabharya) he wed the sixteen thousand one hundred women he freed from the demon Narakasura's captivity, giving each of them honour and a home.",
+      "divine": true
     },
     {
       "id": "Balarama",
@@ -2351,7 +2354,8 @@
       "alive": true,
       "birthFamilyId": "familyVidarbha",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Princess of Vidarbha, sister of Rukmi; chief queen (patrani) of Krishna, held to be an incarnation of Lakshmi."
+      "notes": "Princess of Vidarbha, sister of Rukmi; chief queen (patrani) of Krishna, held to be an incarnation of Lakshmi.",
+      "divine": true
     },
     {
       "id": "Satyabhama",
@@ -2361,7 +2365,8 @@
       "alive": true,
       "birthFamilyId": null,
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Daughter of Satrajit; the fiery queen who rode into battle beside Krishna against the demon Narakasura."
+      "notes": "Daughter of Satrajit; the fiery queen who rode into battle beside Krishna against the demon Narakasura.",
+      "divine": true
     },
     {
       "id": "Jambavati",
@@ -3211,7 +3216,8 @@
       "alive": true,
       "birthFamilyId": "familyNishada",
       "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "Nishada prince who taught himself archery before a clay Drona; Drona claimed his right thumb as guru's fee so none would surpass Arjuna."
+      "notes": "Nishada prince who taught himself archery before a clay Drona; Drona claimed his right thumb as guru's fee so none would surpass Arjuna.",
+      "genAnchor": 34
     },
     {
       "id": "Narakasura",
@@ -3497,7 +3503,8 @@
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Eldest son of Dasharatha, by Kausalya; the seventh avatar of Vishnu, exiled fourteen years, who slew Ravana to win back Sita."
+      "notes": "Eldest son of Dasharatha, by Kausalya; the seventh avatar of Vishnu, exiled fourteen years, who slew Ravana to win back Sita.",
+      "divine": true
     },
     {
       "id": "BharataR",
@@ -3669,7 +3676,8 @@
       "alive": true,
       "birthFamilyId": null,
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Found by Janaka in a furrow of the earth (Bhumija) and raised as his daughter; wife of Rama, carried off by Ravana, at last taken back into the earth. Her birth lineage is none but the Earth's."
+      "notes": "Found by Janaka in a furrow of the earth (Bhumija) and raised as his daughter; wife of Rama, carried off by Ravana, at last taken back into the earth. Her birth lineage is none but the Earth's.",
+      "divine": true
     },
     {
       "id": "Urmila",
@@ -4054,7 +4062,8 @@
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "King of Kosala, last great king of Rama's solar line to fight in the Mahabharat war, generations after Rama; he was slain there by Abhimanyu. His descendants ran on to Sumitra, the line's last king."
+      "notes": "King of Kosala, last great king of Rama's solar line to fight in the Mahabharat war, generations after Rama; he was slain there by Abhimanyu. His descendants ran on to Sumitra, the line's last king.",
+      "genAnchor": 33
     },
     {
       "id": "Shanta",
@@ -5838,6 +5847,111 @@
       "alive": false,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Ahalya",
+      "firstName": "Ahalya",
+      "lastName": "",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "divineParents": [
+        "Brahma"
+      ],
+      "notes": "Twin of Divodasa in the royal Panchala line; also told as Brahma-born (the divine ray). Famed as the wife of Gautama, cursed and later redeemed."
+    },
+    {
+      "id": "Gautama",
+      "firstName": "Gautama",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyAngirasa",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "Gautama Maharishi, of the Angirasa gotra (descended from Utathya, son of Angiras). Husband of Ahalya."
+    },
+    {
+      "id": "Shatananda",
+      "firstName": "Shatananda",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyAngirasa",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "Son of Gautama and Ahalya; purohita of King Janaka of Videha."
+    },
+    {
+      "id": "Chirakari",
+      "firstName": "Chirakari",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyAngirasa",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "Son of Gautama and Ahalya; the son who deliberated so long he spared a rash act (Mahabharata)."
+    },
+    {
+      "id": "NalaNishadha",
+      "firstName": "Nala",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyNishada",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "genAnchor": 23,
+      "notes": "King Nala of Nishadha; hero of the Nalopakhyana. (Distinct from Nala the vanara bridge-builder.)"
+    },
+    {
+      "id": "Damayanti",
+      "firstName": "Damayanti",
+      "lastName": "",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": "familyVidarbha",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "genAnchor": 23,
+      "notes": "Princess of Vidarbha; wife of Nala."
+    },
+    {
+      "id": "Nalayani",
+      "firstName": "Nalayani",
+      "lastName": "",
+      "gender": "female",
+      "alive": false,
+      "birthFamilyId": "familyNishada",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "Also called Indrasena; daughter of Nala and Damayanti, wife of Mudgala."
+    },
+    {
+      "id": "Maudgalya",
+      "firstName": "Maudgalya",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "Eponym of the Maudgalya gotra: the Brahmin line of Mudgala’s descendants, distinct from the royal Panchala line carried by Vadhryasva."
+    },
+    {
+      "id": "Jantu",
+      "firstName": "Jantu",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "Somaka’s eldest son; offered in sacrifice, per the Mahabharata, so that Somaka might gain a hundred sons."
+    },
+    {
+      "id": "Atapi",
+      "firstName": "Atapi",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyDanava",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "Asura brother of Vatapi; the pair who preyed on guests until Agastya digested Vatapi."
     }
   ],
   "unions": [
@@ -9008,7 +9122,8 @@
         "Rahu",
         "Ketu",
         "Vatapi",
-        "Ilvala"
+        "Ilvala",
+        "Atapi"
       ],
       "adoptedChildren": [],
       "familyId": "familyDanava",
@@ -9400,10 +9515,12 @@
     {
       "id": "u_Mudgala_Vadhryasva",
       "partners": [
-        "Mudgala"
+        "Mudgala",
+        "Nalayani"
       ],
       "children": [
-        "Vadhryasva"
+        "Vadhryasva",
+        "Maudgalya"
       ],
       "adoptedChildren": [],
       "familyId": "familyPanchala",
@@ -9416,7 +9533,8 @@
         "Vadhryasva"
       ],
       "children": [
-        "Divodasa"
+        "Divodasa",
+        "Ahalya"
       ],
       "adoptedChildren": [],
       "familyId": "familyPanchala",
@@ -9494,10 +9612,54 @@
         "Somaka"
       ],
       "children": [
-        "Prishata"
+        "Prishata",
+        "Jantu"
       ],
       "adoptedChildren": [],
       "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_gautama_ahalya",
+      "partners": [
+        "Gautama",
+        "Ahalya"
+      ],
+      "children": [
+        "Shatananda",
+        "Chirakari"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAngirasa",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_shatananda_sharadvan",
+      "partners": [
+        "Shatananda"
+      ],
+      "children": [
+        "Sharadvan"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAngirasa",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "childGap": 2
+    },
+    {
+      "id": "u_nala_damayanti",
+      "partners": [
+        "NalaNishadha",
+        "Damayanti"
+      ],
+      "children": [
+        "Nalayani"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyNishada",
       "status": "married",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     }

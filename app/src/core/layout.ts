@@ -247,6 +247,21 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
   // welded partner's other side, opposite their rigid spouse — Jasodaben—Arun—
   // Taraben — with further extra spouses fanned around them. Nobody already
   // welded moves; the union dot re-centers between the final positions.
+  // How many free spouses fan around each welded partner, so a partner wed to
+  // many (Daksha's daughters, a polygamous sage) gets a ring sized to fit them
+  // all rather than piling them onto a fixed little circle.
+  const rigidSnapped = new Set(snapped);
+  const extraCountOf = new Map<string, number>();
+  for (const [unId, partnerIds] of partnersByUnion) {
+    if (rigidUnions.has(unId) || partnerIds.length !== 2) continue;
+    const a0 = rigidSnapped.has(partnerIds[0]);
+    const b0 = rigidSnapped.has(partnerIds[1]);
+    if (a0 !== b0) {
+      const wid = a0 ? partnerIds[0] : partnerIds[1];
+      extraCountOf.set(wid, (extraCountOf.get(wid) ?? 0) + 1);
+    }
+  }
+
   const extraPlaced = new Map<string, number>();
   for (const [unId, partnerIds] of partnersByUnion) {
     if (rigidUnions.has(unId) || partnerIds.length !== 2) continue;
@@ -269,13 +284,22 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
         dx /= len;
         dz /= len;
       }
+      const total = extraCountOf.get(wid) ?? 1;
       const k = extraPlaced.get(wid) ?? 0;
       extraPlaced.set(wid, k + 1);
-      const rot = (k * 72 * Math.PI) / 180;
+      // A few remarriages: a small offset opposite the rigid spouse, as before.
+      // Many spouses on one partner: spread them evenly on a ring whose radius
+      // grows with the count, so N orbs never overlap however large N gets.
+      const step = total <= 2 ? (72 * Math.PI) / 180 : (2 * Math.PI) / total;
+      const rot = total <= 2 ? k * step : (k - (total - 1) / 2) * step;
+      const radius =
+        total <= 2
+          ? COUPLE_OFFSET * 2
+          : Math.max(COUPLE_OFFSET * 2, (total * PERSON_COLLIDE * 2.3) / (2 * Math.PI));
       const ux = dx * Math.cos(rot) - dz * Math.sin(rot);
       const uz = dx * Math.sin(rot) + dz * Math.cos(rot);
-      f.x = w.x + ux * COUPLE_OFFSET * 2;
-      f.z = w.z + uz * COUPLE_OFFSET * 2;
+      f.x = w.x + ux * radius;
+      f.z = w.z + uz * radius;
       snapped.add(fid);
     }
     // Both welded (chain of marriages between couples): nothing moves.

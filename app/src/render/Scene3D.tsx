@@ -396,7 +396,9 @@ export default function Scene3D() {
     const sprite = new SpriteText(node.label, divine ? 8 : 7, divine ? '#fff2c8' : '#e6ebf5');
     // Split couple labels: men's names above the sphere, women's below, so a
     // married pair sitting side by side never prints its names over each other.
-    sprite.position.set(0, divine ? 17 : node.gender === 'male' ? 14.5 : -14.5, 0);
+    // Divine beings follow the same gender rule (names just sit a touch further
+    // out), so a goddess like Saraswati still reads below her orb, not above.
+    sprite.position.set(0, (node.gender === 'male' ? 1 : -1) * (divine ? 17 : 14.5), 0);
     sprite.material.depthWrite = false;
     sprite.fontFace = 'Inter, system-ui, sans-serif';
     sprite.backgroundColor = 'rgba(10, 14, 26, 0.55)';
