@@ -194,8 +194,6 @@ export default function Scene3D() {
   const updateLabelVisibility = useCallback(() => {
     const fg = fgRef.current;
     if (!fg) return;
-    (window as unknown as { __fg?: unknown; __data?: unknown }).__fg = fg; // TEMP DEBUG
-    (window as unknown as { __data?: unknown }).__data = data; // TEMP DEBUG
     const cam = fg.camera();
     const maxSq = labelDistance * labelDistance;
     for (const node of data.nodes) {
