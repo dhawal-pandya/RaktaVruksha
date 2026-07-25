@@ -38,6 +38,7 @@ export const buildGraph = (ds: Dataset): Graph => {
       alive: p.alive,
       gender: p.gender,
       ...(p.divine ? { divine: true } : {}),
+      ...(p.altName ? { altName: p.altName, altGender: p.altGender ?? (p.gender === 'male' ? 'female' : 'male') } : {}),
     });
   }
 

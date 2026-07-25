@@ -18,6 +18,7 @@ type FGNode = GraphNode & {
   __mat?: THREE.MeshLambertMaterial;
   __aura?: THREE.MeshBasicMaterial;
   __sprite?: SpriteText;
+  __altSprite?: SpriteText;
 };
 
 type FGLink = Omit<GraphLink, 'source' | 'target'> & {
@@ -193,19 +194,24 @@ export default function Scene3D() {
   const updateLabelVisibility = useCallback(() => {
     const fg = fgRef.current;
     if (!fg) return;
+    (window as unknown as { __fg?: unknown; __data?: unknown }).__fg = fg; // TEMP DEBUG
+    (window as unknown as { __data?: unknown }).__data = data; // TEMP DEBUG
     const cam = fg.camera();
     const maxSq = labelDistance * labelDistance;
     for (const node of data.nodes) {
       if (!node.__sprite) continue;
       const op = visualRef.current?.nodeOpacity.get(node.id) ?? 1;
+      let vis: boolean;
       if (maxSq === Infinity) {
-        node.__sprite.visible = op > 0.5;
-        continue;
+        vis = op > 0.5;
+      } else {
+        const dx = (node.x ?? 0) - cam.position.x;
+        const dy = (node.y ?? 0) - cam.position.y;
+        const dz = (node.z ?? 0) - cam.position.z;
+        vis = op > 0.5 && dx * dx + dy * dy + dz * dz < maxSq;
       }
-      const dx = (node.x ?? 0) - cam.position.x;
-      const dy = (node.y ?? 0) - cam.position.y;
-      const dz = (node.z ?? 0) - cam.position.z;
-      node.__sprite.visible = op > 0.5 && dx * dx + dy * dy + dz * dz < maxSq;
+      node.__sprite.visible = vis;
+      if (node.__altSprite) node.__altSprite.visible = vis;
     }
   }, [data, labelDistance]);
 
@@ -393,18 +399,25 @@ export default function Scene3D() {
       mesh.add(new THREE.Mesh(divineAuraGeometry, auraMat));
       node.__aura = auraMat;
     }
-    const sprite = new SpriteText(node.label, divine ? 8 : 7, divine ? '#fff2c8' : '#e6ebf5');
     // Split couple labels: men's names above the sphere, women's below, so a
     // married pair sitting side by side never prints its names over each other.
     // Divine beings follow the same gender rule (names just sit a touch further
     // out), so a goddess like Saraswati still reads below her orb, not above.
-    sprite.position.set(0, (node.gender === 'male' ? 1 : -1) * (divine ? 17 : 14.5), 0);
-    sprite.material.depthWrite = false;
-    sprite.fontFace = 'Inter, system-ui, sans-serif';
-    sprite.backgroundColor = 'rgba(10, 14, 26, 0.55)';
-    sprite.padding = 1.2;
-    sprite.borderRadius = 1.5;
-    mesh.add(sprite);
+    const makeLabel = (text: string, gender: string): SpriteText => {
+      const s = new SpriteText(text, divine ? 8 : 7, divine ? '#fff2c8' : '#e6ebf5');
+      s.position.set(0, (gender === 'male' ? 1 : -1) * (divine ? 17 : 14.5), 0);
+      s.material.depthWrite = false;
+      s.fontFace = 'Inter, system-ui, sans-serif';
+      s.backgroundColor = 'rgba(10, 14, 26, 0.55)';
+      s.padding = 1.2;
+      s.borderRadius = 1.5;
+      mesh.add(s);
+      return s;
+    };
+    const sprite = makeLabel(node.label, node.gender);
+    // A dual-life figure (e.g. Ila / Sudyumna) also shows its other name on the
+    // opposite side of the orb, seated by that name's own gender.
+    if (node.altName) node.__altSprite = makeLabel(node.altName, node.altGender ?? node.gender);
     node.__mat = mat;
     node.__sprite = sprite;
     return mesh;

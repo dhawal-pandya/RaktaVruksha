@@ -310,13 +310,16 @@ export const useStore = create<AppState>((set, get) => {
       // unpinned from stale data on their next load.
       purgeLegacyBrowserData();
       try {
-        // family-data.json is the single source of truth: always fetch it.
-        // Relative to BASE_URL so it resolves under a GitHub Pages subpath too;
-        // 'no-cache' revalidates against the server (cheap 304 when unchanged)
-        // so a plain refresh always shows the latest deployed data.
+        // The data file is the single source of truth and must never be served
+        // stale. 'no-cache' only asks the *browser* to revalidate — the GitHub
+        // Pages CDN (Fastly) can still hand back an old copy on a plain refresh.
+        // A unique query param makes every load a guaranteed cache miss at every
+        // layer (browser AND CDN), and no-store keeps the browser from holding
+        // its own copy, so a refresh — local or deployed — always shows the
+        // current JSON. Relative to BASE_URL so it resolves under a Pages subpath.
         const base = import.meta.env.BASE_URL;
         const file = base + DATA_FILES[dataSource];
-        const res = await fetch(file, { cache: "no-cache" });
+        const res = await fetch(`${file}?t=${Date.now()}`, { cache: "no-store" });
         if (!res.ok) throw new Error(`could not load ${file} (${res.status})`);
         const lastModified = Date.parse(res.headers.get("last-modified") ?? "");
         const parsed = parseFamilyData(await res.text());

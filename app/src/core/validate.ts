@@ -135,6 +135,8 @@ export const parseFamilyData = (
       ? { divineParents: p.divineParents.map(String) }
       : {}),
     ...(typeof p.genAnchor === 'number' ? { genAnchor: p.genAnchor } : {}),
+    ...(p.altName ? { altName: String(p.altName) } : {}),
+    ...(p.altGender === 'female' || p.altGender === 'male' ? { altGender: p.altGender } : {}),
   }));
 
   const unions: UnionRecord[] = (json.unions as Record<string, unknown>[]).map(u => ({

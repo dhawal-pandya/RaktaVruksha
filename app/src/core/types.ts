@@ -22,6 +22,11 @@ export interface PersonRecord {
    *  absolute generation (smaller/negative = higher/older, larger = lower/younger),
    *  overriding the auto bottom-align. Lets separate lineages share a time-plane. */
   genAnchor?: number;
+  /** A second name for a dual-life figure (e.g. Sudyumna for Ila), shown on the
+   *  opposite side of the orb, placed by `altGender` (defaults to the opposite of
+   *  `gender`). The person's own gender/leveling are unchanged. */
+  altName?: string;
+  altGender?: Gender;
 }
 
 export interface UnionRecord {
@@ -116,6 +121,9 @@ export interface PersonNode {
   gender: Gender;
   /** True for a deva, the renderer gives these a distinct, radiant treatment. */
   divine?: boolean;
+  /** Second name of a dual-life figure, shown opposite the primary label. */
+  altName?: string;
+  altGender?: Gender;
 }
 
 export interface UnionNode {

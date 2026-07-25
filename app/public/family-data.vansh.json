@@ -232,7 +232,9 @@
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Child of Vaivasvata Manu and Shraddha, fluid between woman and man; her marriage to Budha weds the solar line into the lunar (the Mahabharat)."
+      "notes": "Child of Vaivasvata Manu. Lived alternately as the woman Ila (mother of Pururavas by Budha) and the man Sudyumna, whose reign gave the sons below.",
+      "altName": "Sudyumna",
+      "altGender": "male"
     },
     {
       "id": "Urvashi",
@@ -2140,7 +2142,9 @@
       "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Child of Drupada, the reincarnation of Amba; born a girl and later made a man, whose presence let Bhishma be brought down, for Bhishma would not fight one born a woman."
+      "notes": "Child of Drupada, the reincarnation of Amba; born a girl and later made a man, whose presence let Bhishma be brought down, for Bhishma would not fight one born a woman.",
+      "altName": "Shikhandini",
+      "altGender": "female"
     },
     {
       "id": "Dhrishtadyumna",
@@ -5664,7 +5668,7 @@
       "firstName": "Ajamidha",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familySoma",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5673,7 +5677,7 @@
       "firstName": "Riksha",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familySoma",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5682,7 +5686,7 @@
       "firstName": "Viduratha",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyKuru",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5691,7 +5695,7 @@
       "firstName": "Anashwan",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyKuru",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5700,7 +5704,7 @@
       "firstName": "Parikshit",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyKuru",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5709,7 +5713,7 @@
       "firstName": "Bhimasena",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyKuru",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5718,7 +5722,7 @@
       "firstName": "Pratishravas",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyKuru",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5727,7 +5731,7 @@
       "firstName": "Arka",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5736,7 +5740,7 @@
       "firstName": "Bharmyashva",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5745,7 +5749,7 @@
       "firstName": "Mudgala",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5754,7 +5758,7 @@
       "firstName": "Vadhryasva",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5763,7 +5767,7 @@
       "firstName": "Divodasa",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5772,7 +5776,7 @@
       "firstName": "Mitrayu",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5781,7 +5785,7 @@
       "firstName": "Chyavana",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5790,7 +5794,7 @@
       "firstName": "Sudasa",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5799,7 +5803,7 @@
       "firstName": "Sahadeva",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5808,7 +5812,7 @@
       "firstName": "Somaka",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5817,7 +5821,7 @@
       "firstName": "Yavinara",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5826,7 +5830,7 @@
       "firstName": "Brihadvishva",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5835,7 +5839,7 @@
       "firstName": "Kampilla",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5844,7 +5848,7 @@
       "firstName": "Sanjaya",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z"
     },
@@ -5853,7 +5857,7 @@
       "firstName": "Ahalya",
       "lastName": "",
       "gender": "female",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z",
       "divineParents": [
@@ -5866,7 +5870,7 @@
       "firstName": "Gautama",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyAngirasa",
       "updatedAt": "2026-07-25T00:00:00.000Z",
       "notes": "Gautama Maharishi, of the Angirasa gotra (descended from Utathya, son of Angiras). Husband of Ahalya."
@@ -5876,7 +5880,7 @@
       "firstName": "Shatananda",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyAngirasa",
       "updatedAt": "2026-07-25T00:00:00.000Z",
       "notes": "Son of Gautama and Ahalya; purohita of King Janaka of Videha."
@@ -5886,7 +5890,7 @@
       "firstName": "Chirakari",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyAngirasa",
       "updatedAt": "2026-07-25T00:00:00.000Z",
       "notes": "Son of Gautama and Ahalya; the son who deliberated so long he spared a rash act (Mahabharata)."
@@ -5896,7 +5900,7 @@
       "firstName": "Nala",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyNishada",
       "updatedAt": "2026-07-25T00:00:00.000Z",
       "genAnchor": 23,
@@ -5907,7 +5911,7 @@
       "firstName": "Damayanti",
       "lastName": "",
       "gender": "female",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyVidarbha",
       "updatedAt": "2026-07-25T00:00:00.000Z",
       "genAnchor": 23,
@@ -5918,7 +5922,7 @@
       "firstName": "Nalayani",
       "lastName": "",
       "gender": "female",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyNishada",
       "updatedAt": "2026-07-25T00:00:00.000Z",
       "notes": "Also called Indrasena; daughter of Nala and Damayanti, wife of Mudgala."
@@ -5928,7 +5932,7 @@
       "firstName": "Maudgalya",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z",
       "notes": "Eponym of the Maudgalya gotra: the Brahmin line of Mudgala’s descendants, distinct from the royal Panchala line carried by Vadhryasva."
@@ -5938,7 +5942,7 @@
       "firstName": "Jantu",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-25T00:00:00.000Z",
       "notes": "Somaka’s eldest son; offered in sacrifice, per the Mahabharata, so that Somaka might gain a hundred sons."
@@ -5948,10 +5952,1116 @@
       "firstName": "Atapi",
       "lastName": "",
       "gender": "male",
-      "alive": false,
+      "alive": true,
       "birthFamilyId": "familyDanava",
       "updatedAt": "2026-07-25T00:00:00.000Z",
       "notes": "Asura brother of Vatapi; the pair who preyed on guests until Agastya digested Vatapi."
+    },
+    {
+      "id": "Arundhati",
+      "firstName": "Arundhati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "Wife of Vasishtha; the star Alcor, paired with him as the archetypal devoted couple."
+    },
+    {
+      "id": "Sachi",
+      "firstName": "Sachi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAditya",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "Also Indrani/Pulomaja; queen of the devas, wife of Indra."
+    },
+    {
+      "id": "Jayanta",
+      "firstName": "Jayanta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAditya",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Jayanti",
+      "firstName": "Jayanti",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAditya",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "Daughter of Indra; wed to Shukracharya."
+    },
+    {
+      "id": "Devasena",
+      "firstName": "Devasena",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAditya",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "Daughter of Indra; wed to Kartikeya (Skanda)."
+    },
+    {
+      "id": "Puloma",
+      "firstName": "Puloma",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "Wife of Bhrigu; mother of Chyavana and Shukracharya."
+    },
+    {
+      "id": "Pramati",
+      "firstName": "Pramati",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBhargava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Dhumorna",
+      "firstName": "Dhumorna",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAditya",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Varuni",
+      "firstName": "Varuni",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAditya",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Kirtiman",
+      "firstName": "Kirtiman",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Sushena_2",
+      "firstName": "Sushena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Bhadrasena",
+      "firstName": "Bhadrasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Riju",
+      "firstName": "Riju",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Sammardana",
+      "firstName": "Sammardana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Bhadra_2",
+      "firstName": "Bhadra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Sarana",
+      "firstName": "Sarana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Durmada_2",
+      "firstName": "Durmada",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Rumanvan",
+      "firstName": "Rumanvan",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBhargava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Sushena_3",
+      "firstName": "Sushena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBhargava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vasu",
+      "firstName": "Vasu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBhargava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vishvavasu",
+      "firstName": "Vishvavasu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBhargava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Chitrasena_2",
+      "firstName": "Chitrasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySuta",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Satyasena",
+      "firstName": "Satyasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySuta",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Sushena_4",
+      "firstName": "Sushena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySuta",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Shatrunjaya",
+      "firstName": "Shatrunjaya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySuta",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Prasena",
+      "firstName": "Prasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySuta",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Banasena",
+      "firstName": "Banasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySuta",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Dvipata",
+      "firstName": "Dvipata",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySuta",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Revanta",
+      "firstName": "Revanta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAditya",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Dhatri",
+      "firstName": "Dhatri",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Amsha",
+      "firstName": "Amsha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Anjanaparvan",
+      "firstName": "Anjanaparvan",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Sudeshna_2",
+      "firstName": "Sudeshna",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Charudeha",
+      "firstName": "Charudeha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Sucharu",
+      "firstName": "Sucharu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Charugupta",
+      "firstName": "Charugupta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Bhadracharu",
+      "firstName": "Bhadracharu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Charuchandra",
+      "firstName": "Charuchandra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vicharu",
+      "firstName": "Vicharu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Charu",
+      "firstName": "Charu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Subhanu",
+      "firstName": "Subhanu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Svarbhanu",
+      "firstName": "Svarbhanu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Prabhanu",
+      "firstName": "Prabhanu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Bhanuman",
+      "firstName": "Bhanuman",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Chandrabhanu",
+      "firstName": "Chandrabhanu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Brihadbhanu",
+      "firstName": "Brihadbhanu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Atibhanu",
+      "firstName": "Atibhanu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Sribhanu",
+      "firstName": "Sribhanu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Pratibhanu",
+      "firstName": "Pratibhanu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Sumitra_2",
+      "firstName": "Sumitra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Purujit",
+      "firstName": "Purujit",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Shatajit",
+      "firstName": "Shatajit",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Sahasrajit",
+      "firstName": "Sahasrajit",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vijaya_2",
+      "firstName": "Vijaya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Chitraketu",
+      "firstName": "Chitraketu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vasuman",
+      "firstName": "Vasuman",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Dravida",
+      "firstName": "Dravida",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Kratu",
+      "firstName": "Kratu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vira_2",
+      "firstName": "Vira",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Chandra_2",
+      "firstName": "Chandra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Ashvasena_2",
+      "firstName": "Ashvasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Chitragu",
+      "firstName": "Chitragu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vegavan",
+      "firstName": "Vegavan",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vrisha",
+      "firstName": "Vrisha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Ama",
+      "firstName": "Ama",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Shanku",
+      "firstName": "Shanku",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vasu_2",
+      "firstName": "Vasu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Kunti_2",
+      "firstName": "Kunti",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Shruta",
+      "firstName": "Shruta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Kavi",
+      "firstName": "Kavi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vrisha_2",
+      "firstName": "Vrisha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vira_3",
+      "firstName": "Vira",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Subahu_2",
+      "firstName": "Subahu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Bhadra_3",
+      "firstName": "Bhadra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Shanti",
+      "firstName": "Shanti",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Darsha",
+      "firstName": "Darsha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Purnamasa",
+      "firstName": "Purnamasa",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Somaka_2",
+      "firstName": "Somaka",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vrika",
+      "firstName": "Vrika",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Harsha",
+      "firstName": "Harsha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Anila",
+      "firstName": "Anila",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Gridhra",
+      "firstName": "Gridhra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vardhana",
+      "firstName": "Vardhana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Unnada",
+      "firstName": "Unnada",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Mahamsa",
+      "firstName": "Mahamsa",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Pavana",
+      "firstName": "Pavana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vahni",
+      "firstName": "Vahni",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Kshudhi",
+      "firstName": "Kshudhi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Sangramajit",
+      "firstName": "Sangramajit",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Brihatsena",
+      "firstName": "Brihatsena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Sura",
+      "firstName": "Sura",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Praharana",
+      "firstName": "Praharana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Arijit",
+      "firstName": "Arijit",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Jaya",
+      "firstName": "Jaya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Subhadra_2",
+      "firstName": "Subhadra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vama",
+      "firstName": "Vama",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Ayus_2",
+      "firstName": "Ayus",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Satyaka",
+      "firstName": "Satyaka",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Praghosha",
+      "firstName": "Praghosha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Gatravan",
+      "firstName": "Gatravan",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Simha",
+      "firstName": "Simha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Bala",
+      "firstName": "Bala",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Prabala",
+      "firstName": "Prabala",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Urdhaga",
+      "firstName": "Urdhaga",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Mahashakti",
+      "firstName": "Mahashakti",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Saha_2",
+      "firstName": "Saha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Oja",
+      "firstName": "Oja",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Aparajita_2",
+      "firstName": "Aparajita",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Charumati",
+      "firstName": "Charumati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyYadava",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Padma",
+      "firstName": "Padma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyNaga",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Mahapadma",
+      "firstName": "Mahapadma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyNaga",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Kambala",
+      "firstName": "Kambala",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyNaga",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Ashvatara",
+      "firstName": "Ashvatara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyNaga",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Elapatra",
+      "firstName": "Elapatra",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyNaga",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Shankhapala",
+      "firstName": "Shankhapala",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyNaga",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Dhananjaya",
+      "firstName": "Dhananjaya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyNaga",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Aryaka",
+      "firstName": "Aryaka",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyNaga",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "Naga elder; per the Mahabharata, kin who revived Bhima with nectar in the naga realm."
+    },
+    {
+      "id": "Kamadeva",
+      "firstName": "Kamadeva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "God of love, mind-born of Brahma. (Later reborn as Pradyumna, Krishna’s son.)"
+    },
+    {
+      "id": "Rati",
+      "firstName": "Rati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "Goddess of desire; daughter of Daksha, wife of Kamadeva."
+    },
+    {
+      "id": "Utkala",
+      "firstName": "Utkala",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Gaya",
+      "firstName": "Gaya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vinatashva",
+      "firstName": "Vinatashva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
     }
   ],
   "unions": [
@@ -6644,7 +7754,14 @@
       ],
       "children": [
         "Vrishasena",
-        "Vrishaketu"
+        "Vrishaketu",
+        "Chitrasena_2",
+        "Satyasena",
+        "Sushena_4",
+        "Shatrunjaya",
+        "Prasena",
+        "Banasena",
+        "Dvipata"
       ],
       "adoptedChildren": [],
       "familyId": "familySuta",
@@ -6748,7 +7865,8 @@
         "Maurvi"
       ],
       "children": [
-        "Barbarika"
+        "Barbarika",
+        "Anjanaparvan"
       ],
       "adoptedChildren": [],
       "familyId": "familyKuru",
@@ -6997,7 +8115,13 @@
         "Devaki"
       ],
       "children": [
-        "Krishna"
+        "Krishna",
+        "Kirtiman",
+        "Sushena_2",
+        "Bhadrasena",
+        "Riju",
+        "Sammardana",
+        "Bhadra_2"
       ],
       "adoptedChildren": [],
       "familyId": "familyYadava",
@@ -7013,7 +8137,9 @@
       ],
       "children": [
         "Balarama",
-        "Subhadra"
+        "Subhadra",
+        "Sarana",
+        "Durmada_2"
       ],
       "adoptedChildren": [],
       "familyId": "familyYadava",
@@ -7029,7 +8155,16 @@
       ],
       "children": [
         "Pradyumna",
-        "Charudeshna"
+        "Charudeshna",
+        "Sudeshna_2",
+        "Charudeha",
+        "Sucharu",
+        "Charugupta",
+        "Bhadracharu",
+        "Charuchandra",
+        "Vicharu",
+        "Charu",
+        "Charumati"
       ],
       "adoptedChildren": [],
       "familyId": "familyYadava",
@@ -7044,7 +8179,16 @@
         "Satyabhama"
       ],
       "children": [
-        "Bhanu"
+        "Bhanu",
+        "Subhanu",
+        "Svarbhanu",
+        "Prabhanu",
+        "Bhanuman",
+        "Chandrabhanu",
+        "Brihadbhanu",
+        "Atibhanu",
+        "Sribhanu",
+        "Pratibhanu"
       ],
       "adoptedChildren": [],
       "familyId": "familyYadava",
@@ -7059,7 +8203,16 @@
         "Jambavati"
       ],
       "children": [
-        "Samba"
+        "Samba",
+        "Sumitra_2",
+        "Purujit",
+        "Shatajit",
+        "Sahasrajit",
+        "Vijaya_2",
+        "Chitraketu",
+        "Vasuman",
+        "Dravida",
+        "Kratu"
       ],
       "adoptedChildren": [],
       "familyId": "familyYadava",
@@ -7073,7 +8226,18 @@
         "Krishna",
         "Kalindi"
       ],
-      "children": [],
+      "children": [
+        "Shruta",
+        "Kavi",
+        "Vrisha_2",
+        "Vira_3",
+        "Subahu_2",
+        "Bhadra_3",
+        "Shanti",
+        "Darsha",
+        "Purnamasa",
+        "Somaka_2"
+      ],
       "adoptedChildren": [],
       "familyId": "familyYadava",
       "status": "married",
@@ -7086,7 +8250,18 @@
         "Krishna",
         "Mitravinda"
       ],
-      "children": [],
+      "children": [
+        "Vrika",
+        "Harsha",
+        "Anila",
+        "Gridhra",
+        "Vardhana",
+        "Unnada",
+        "Mahamsa",
+        "Pavana",
+        "Vahni",
+        "Kshudhi"
+      ],
       "adoptedChildren": [],
       "familyId": "familyYadava",
       "status": "married",
@@ -7099,7 +8274,18 @@
         "Krishna",
         "Nagnajiti"
       ],
-      "children": [],
+      "children": [
+        "Vira_2",
+        "Chandra_2",
+        "Ashvasena_2",
+        "Chitragu",
+        "Vegavan",
+        "Vrisha",
+        "Ama",
+        "Shanku",
+        "Vasu_2",
+        "Kunti_2"
+      ],
       "adoptedChildren": [],
       "familyId": "familyYadava",
       "status": "married",
@@ -7112,7 +8298,18 @@
         "Krishna",
         "Bhadra"
       ],
-      "children": [],
+      "children": [
+        "Sangramajit",
+        "Brihatsena",
+        "Sura",
+        "Praharana",
+        "Arijit",
+        "Jaya",
+        "Subhadra_2",
+        "Vama",
+        "Ayus_2",
+        "Satyaka"
+      ],
       "adoptedChildren": [],
       "familyId": "familyYadava",
       "status": "married",
@@ -7125,7 +8322,18 @@
         "Krishna",
         "Lakshmana"
       ],
-      "children": [],
+      "children": [
+        "Praghosha",
+        "Gatravan",
+        "Simha",
+        "Bala",
+        "Prabala",
+        "Urdhaga",
+        "Mahashakti",
+        "Saha_2",
+        "Oja",
+        "Aparajita_2"
+      ],
       "adoptedChildren": [],
       "familyId": "familyYadava",
       "status": "married",
@@ -7725,7 +8933,8 @@
         "Yama",
         "Yami",
         "Nasatya",
-        "Dasra"
+        "Dasra",
+        "Revanta"
       ],
       "adoptedChildren": [],
       "familyId": "familyAditya",
@@ -8401,7 +9610,8 @@
         "Daksha",
         "Angiras",
         "Bhrigu",
-        "Vasishtha"
+        "Vasishtha",
+        "Kamadeva"
       ],
       "adoptedChildren": [],
       "familyId": "familyBrahma",
@@ -8467,7 +9677,8 @@
         "Surasa",
         "Krodhavasha",
         "Ira",
-        "Khasa"
+        "Khasa",
+        "Rati"
       ],
       "adoptedChildren": [],
       "familyId": "familyBrahma",
@@ -8490,7 +9701,9 @@
         "Bhaga",
         "Pushan",
         "Vamana",
-        "Tvashtar"
+        "Tvashtar",
+        "Dhatri",
+        "Amsha"
       ],
       "adoptedChildren": [],
       "familyId": "familyBrahma",
@@ -8557,7 +9770,15 @@
         "Takshaka",
         "Shesha",
         "Karkotaka",
-        "Airavata"
+        "Airavata",
+        "Padma",
+        "Mahapadma",
+        "Kambala",
+        "Ashvatara",
+        "Elapatra",
+        "Shankhapala",
+        "Dhananjaya",
+        "Aryaka"
       ],
       "adoptedChildren": [],
       "familyId": "familyBrahma",
@@ -8610,7 +9831,8 @@
     {
       "id": "u_bhrigu",
       "partners": [
-        "Bhrigu"
+        "Bhrigu",
+        "Puloma"
       ],
       "children": [
         "Shukracharya",
@@ -8624,7 +9846,8 @@
     {
       "id": "u_vasishtha",
       "partners": [
-        "Vasishtha"
+        "Vasishtha",
+        "Arundhati"
       ],
       "children": [
         "Shakti"
@@ -9249,7 +10472,8 @@
         "Sukanya"
       ],
       "children": [
-        "Aurva"
+        "Aurva",
+        "Pramati"
       ],
       "adoptedChildren": [],
       "familyId": "familyBhargava",
@@ -9290,7 +10514,11 @@
         "Renuka"
       ],
       "children": [
-        "Parashurama"
+        "Parashurama",
+        "Rumanvan",
+        "Sushena_3",
+        "Vasu",
+        "Vishvavasu"
       ],
       "adoptedChildren": [],
       "familyId": "familyBhargava",
@@ -9662,6 +10890,74 @@
       "familyId": "familyNishada",
       "status": "married",
       "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_indra_sachi",
+      "partners": [
+        "Indra",
+        "Sachi"
+      ],
+      "children": [
+        "Jayanta",
+        "Jayanti",
+        "Devasena"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAditya",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_yama_dhumorna",
+      "partners": [
+        "Yama",
+        "Dhumorna"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyAditya",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_varuna_varuni",
+      "partners": [
+        "Varuna",
+        "Varuni"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyAditya",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_kama_rati",
+      "partners": [
+        "Kamadeva",
+        "Rati"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyBrahma",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_ila_sudyumna",
+      "partners": [
+        "Ila"
+      ],
+      "children": [
+        "Utkala",
+        "Gaya",
+        "Vinatashva"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "notes": "The sons of Sudyumna (Ila’s male phase)."
     }
   ]
 }

@@ -21,9 +21,10 @@ const GENDER_LINK: Record<Gender, string> = { male: '#5b9bd5', female: '#d86fa4'
 
 // Name sits above the node for men, below for women — matching the 3D view, so a
 // married pair side by side never prints its two names over each other.
-const labelTop = (node: FG2Node, fontSize: number): number => {
+const labelTop = (node: FG2Node, fontSize: number, gender?: string): number => {
   const yy = node.y ?? 0;
-  const above = node.kind === 'person' && node.gender === 'male';
+  const g = gender ?? (node.kind === 'person' ? node.gender : undefined);
+  const above = g === 'male';
   return above ? yy - NODE_R - 2 - fontSize : yy + NODE_R + 2;
 };
 
@@ -104,23 +105,27 @@ export default function Scene2D() {
     (ctx: CanvasRenderingContext2D, node: FG2Node, globalScale: number, force: boolean, op: number) => {
       const fontSize = Math.max(4, 12 / globalScale);
       ctx.font = `${fontSize}px Inter, system-ui, sans-serif`;
-      const text = node.short ?? '';
-      if (!text) return;
-      const w = ctx.measureText(text).width;
       const cx = node.x ?? 0;
-      const top = labelTop(node, fontSize);
       const pad = 2 / globalScale;
-      const box: LabelBox = { x0: cx - w / 2 - pad, y0: top - pad, x1: cx + w / 2 + pad, y1: top + fontSize + pad };
-      if (!force && boxesOverlap(box, labelBoxes.current)) return;
-      labelBoxes.current.push(box);
-      ctx.globalAlpha = Math.min(1, op + 0.15);
-      ctx.fillStyle = 'rgba(10, 14, 26, 0.6)';
-      ctx.fillRect(box.x0, box.y0, box.x1 - box.x0, box.y1 - box.y0);
-      ctx.fillStyle = node.ext ? '#aeb7c8' : '#e6ebf5';
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'top';
-      ctx.fillText(text, cx, top);
-      ctx.globalAlpha = 1;
+      const draw = (text: string, gender?: string): void => {
+        if (!text) return;
+        const w = ctx.measureText(text).width;
+        const top = labelTop(node, fontSize, gender);
+        const box: LabelBox = { x0: cx - w / 2 - pad, y0: top - pad, x1: cx + w / 2 + pad, y1: top + fontSize + pad };
+        if (!force && boxesOverlap(box, labelBoxes.current)) return;
+        labelBoxes.current.push(box);
+        ctx.globalAlpha = Math.min(1, op + 0.15);
+        ctx.fillStyle = 'rgba(10, 14, 26, 0.6)';
+        ctx.fillRect(box.x0, box.y0, box.x1 - box.x0, box.y1 - box.y0);
+        ctx.fillStyle = node.ext ? '#aeb7c8' : '#e6ebf5';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'top';
+        ctx.fillText(text, cx, top);
+        ctx.globalAlpha = 1;
+      };
+      draw(node.short ?? '');
+      // A dual-life figure (Ila / Sudyumna) shows its other name on the opposite side.
+      if (node.kind === 'person' && node.altName) draw(node.altName, node.altGender);
     },
     [],
   );
