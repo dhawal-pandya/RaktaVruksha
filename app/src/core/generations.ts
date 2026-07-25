@@ -6,22 +6,40 @@ export interface GenerationResult {
 }
 
 /**
- * Assign a generation number to every person: partners share a generation,
- * children (biological and adopted) sit `childGap` layers below their union's
- * partners (default 1).
+ * Two levelers, chosen by whether the dataset uses ERA CONTROLS (genAnchor /
+ * childGap):
  *
- * Partners are merged into groups (union-find); child links become directed
- * edges between groups. Each person's generation is the LONGEST path of gaps
- * down to them, computed by relaxation. Longest-path (rather than first-path)
- * leveling is order-independent and, crucially, keeps every descendant below
- * ALL of their ancestors even when cousin-marriages create multiple paths of
- * differing length between two lineages (e.g. the Kuru and Yadava lines meeting
- * again at Kunti-Pandu): the deeper path wins, so an era gap set on one branch
- * is never bypassed by a shorter route through the other. For data with no such
- * conflicting cycles this yields exactly the same layout as a simple BFS.
- * Deterministic given input order.
+ *  - A curated mythological tree (the epics, the Brahmavansh) DOES: there,
+ *    cousin-marriages between lineages of deliberately different documented depth
+ *    are the whole point, and `childGap`/`genAnchor` place each era. It needs the
+ *    LONGEST-PATH leveler so an era gap on one branch is never bypassed by a
+ *    shorter route through the other, and so anchored founders stay pinned.
+ *  - A real family tree does NOT use those controls. Longest-path would there be
+ *    actively wrong: when someone marries into a branch that happens to be
+ *    documented many generations deeper, longest-path drags them (and their kids)
+ *    down to that depth, tearing them 6-8 rows away from their own parents. A
+ *    plain bidirectional BFS keeps a person beside their own parents, which is
+ *    what a family wants. So real families take the compact BFS leveler.
  */
 export const computeGenerations = (
+  people: PersonRecord[],
+  unions: UnionRecord[],
+): GenerationResult => {
+  const usesEraControls =
+    people.some(p => typeof p.genAnchor === 'number') ||
+    unions.some(u => typeof u.childGap === 'number' && u.childGap > 1);
+  return usesEraControls
+    ? computeGenerationsLeveled(people, unions)
+    : computeGenerationsBFS(people, unions);
+};
+
+/**
+ * LONGEST-PATH leveler for curated trees with era controls. Partners are merged
+ * into groups (union-find); child links become directed edges between groups; each
+ * person's generation is the longest path of gaps down to them. genAnchor is an
+ * absolute-generation floor; unanchored components are bottom-aligned.
+ */
+const computeGenerationsLeveled = (
   people: PersonRecord[],
   unions: UnionRecord[],
 ): GenerationResult => {
@@ -188,6 +206,97 @@ export const computeGenerations = (
         gen.set(deva, ng);
         changed = true;
       }
+      const kidComp = componentOf.get(kids[0]);
+      if (kidComp !== undefined) componentOf.set(deva, kidComp);
+    }
+    if (!changed) break;
+  }
+
+  return { gen, componentOf };
+};
+
+/**
+ * BFS leveler for real family trees (no era controls). Partners share a
+ * generation (delta 0), a child sits one below its parents (delta 1); a plain
+ * bidirectional BFS per connected component settles everyone next to their own
+ * kin, then each component is normalized so its top is 0. First-path-wins keeps a
+ * person beside their parents even when a marriage would otherwise pull them to a
+ * far-deeper branch. Deterministic given input order.
+ */
+const computeGenerationsBFS = (
+  people: PersonRecord[],
+  unions: UnionRecord[],
+): GenerationResult => {
+  const known = new Set(people.map(p => p.id));
+  const adj = new Map<string, { to: string; delta: number }[]>();
+  const addEdge = (a: string, b: string, delta: number) => {
+    if (!known.has(a) || !known.has(b)) return;
+    if (!adj.has(a)) adj.set(a, []);
+    if (!adj.has(b)) adj.set(b, []);
+    adj.get(a)!.push({ to: b, delta });
+    adj.get(b)!.push({ to: a, delta: -delta });
+  };
+  for (const u of unions) {
+    if (u.partners.length === 2) addEdge(u.partners[0], u.partners[1], 0);
+    const kids = [...u.children, ...(u.adoptedChildren ?? [])];
+    for (const p of u.partners) for (const k of kids) addEdge(p, k, 1);
+  }
+
+  const gen = new Map<string, number>();
+  const componentOf = new Map<string, number>();
+  let comp = 0;
+  for (const person of people) {
+    if (gen.has(person.id)) continue;
+    const members: string[] = [person.id];
+    const queue: string[] = [person.id];
+    gen.set(person.id, 0);
+    componentOf.set(person.id, comp);
+    let head = 0;
+    while (head < queue.length) {
+      const cur = queue[head++];
+      const g = gen.get(cur)!;
+      for (const { to, delta } of adj.get(cur) ?? []) {
+        if (!gen.has(to)) {
+          gen.set(to, g + delta);
+          componentOf.set(to, comp);
+          members.push(to);
+          queue.push(to);
+        }
+      }
+    }
+    const min = Math.min(...members.map(id => gen.get(id)!));
+    if (min !== 0) for (const id of members) gen.set(id, gen.get(id)! - min);
+    comp++;
+  }
+
+  // Bottom-align disconnected components so unrelated lineages' "present day" lines up.
+  const compMax = new Map<number, number>();
+  for (const [id, c] of componentOf) compMax.set(c, Math.max(compMax.get(c) ?? -Infinity, gen.get(id)!));
+  const globalMax = Math.max(...compMax.values());
+  for (const [id, c] of componentOf) {
+    const shift = globalMax - (compMax.get(c) ?? globalMax);
+    if (shift) gen.set(id, gen.get(id)! + shift);
+  }
+
+  // Free-agent devas float half a level above their earliest divine child.
+  const divineChildrenOf = new Map<string, string[]>();
+  for (const p of people) for (const dp of p.divineParents ?? []) {
+    if (!known.has(dp)) continue;
+    (divineChildrenOf.get(dp) ?? divineChildrenOf.set(dp, []).get(dp)!).push(p.id);
+  }
+  const rooted = new Set<string>();
+  for (const u of unions) {
+    for (const p of u.partners) rooted.add(p);
+    for (const k of [...u.children, ...(u.adoptedChildren ?? [])]) rooted.add(k);
+  }
+  for (let pass = 0; pass < 8; pass++) {
+    let changed = false;
+    for (const [deva, kids] of divineChildrenOf) {
+      if (rooted.has(deva)) continue;
+      const cg = kids.map(k => gen.get(k)).filter((g): g is number => g !== undefined);
+      if (!cg.length) continue;
+      const ng = Math.min(...cg) - 0.5;
+      if (gen.get(deva) !== ng) { gen.set(deva, ng); changed = true; }
       const kidComp = componentOf.get(kids[0]);
       if (kidComp !== undefined) componentOf.set(deva, kidComp);
     }

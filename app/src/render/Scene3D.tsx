@@ -33,6 +33,59 @@ const divineGeometry = new THREE.SphereGeometry(9, 24, 24);
 const divineAuraGeometry = new THREE.SphereGeometry(15, 18, 18);
 const UNION_COLOR = '#4a5468';
 
+// A link between two orbs on opposite sides of the graph (a divine ray reaching
+// a far devotee, an affinal tie between distant branches) draws as a stray line
+// slashing across the whole scene. Past LONG_LINK_DIST it isn't drawn edge to
+// edge: instead a short brush-stroke tapers out of each orb toward the other,
+// LINK_CAP_LEN long, and the rest of the span is left empty. A link shorter than
+// that (roughly "one generation apart", vs. LAYER_GAP=110 and the settled
+// one-hop distances in layout.ts) still renders as one continuous line, so nearby
+// relationships look exactly as before.
+const LONG_LINK_DIST = 700;
+const LINK_CAP_LEN = 200;
+// The fade reads as "trailing into the dark", not true transparency: with the
+// scene's flat, unlit background this is indistinguishable from real alpha and
+// avoids blend-order glitches from stacking many transparent line segments.
+const BG_THREE_COLOR = new THREE.Color(BACKGROUND_COLOR);
+const TAPER_MATERIAL = new THREE.LineBasicMaterial({
+  vertexColors: true,
+  transparent: true,
+  opacity: 0.55,
+  depthWrite: false,
+});
+
+const makeCapLine = (): THREE.Line => {
+  const geom = new THREE.BufferGeometry();
+  geom.setAttribute('position', new THREE.BufferAttribute(new Float32Array(6), 3));
+  geom.setAttribute('color', new THREE.BufferAttribute(new Float32Array(6), 3));
+  return new THREE.Line(geom, TAPER_MATERIAL);
+};
+
+const scratchColor = new THREE.Color();
+const writeCap = (
+  line: THREE.Line,
+  ox: number,
+  oy: number,
+  oz: number,
+  dx: number,
+  dy: number,
+  dz: number,
+  len: number,
+  baseColor: THREE.Color,
+  fade: boolean,
+) => {
+  const pos = line.geometry.attributes.position as THREE.BufferAttribute;
+  const col = line.geometry.attributes.color as THREE.BufferAttribute;
+  pos.setXYZ(0, ox, oy, oz);
+  pos.setXYZ(1, ox + dx * len, oy + dy * len, oz + dz * len);
+  pos.needsUpdate = true;
+  col.setXYZ(0, baseColor.r, baseColor.g, baseColor.b);
+  scratchColor.copy(fade ? BG_THREE_COLOR : baseColor);
+  col.setXYZ(1, scratchColor.r, scratchColor.g, scratchColor.b);
+  col.needsUpdate = true;
+  line.geometry.computeBoundingSphere();
+};
+
 // The camera's polar angle (measured from +Y) is confined to a narrow band, so a
 // left-drag mostly twirls the world around the vertical axis (azimuth) but also
 // lets you tip the elevation a little between two limits — never tumbling past
@@ -413,6 +466,54 @@ export default function Scene3D() {
     };
   }, [visuals]);
 
+  // A relation-finder path stays as the library's own highlighted line (full
+  // brightness, real width): only non-path links get the tapered treatment, so
+  // that trace-through-the-tree feature reads exactly as it always has.
+  const linkThreeObject = useCallback((l: FGLink) => {
+    const vis = visualRef.current;
+    const a = endpointId(l.source);
+    const b = endpointId(l.target);
+    const onPath = !!(vis?.pathSet && vis.pathSet.has(a) && vis.pathSet.has(b));
+    if (onPath) return undefined;
+    const group = new THREE.Group();
+    group.add(makeCapLine(), makeCapLine());
+    group.userData.isTaperedLink = true;
+    group.userData.posKey = '';
+    return group;
+  }, []);
+
+  const linkPositionUpdate = useCallback(
+    (obj: THREE.Object3D, coords: { start: Vec3; end: Vec3 }, l: FGLink): boolean => {
+      const ud = obj.userData as { isTaperedLink?: boolean; posKey?: string };
+      if (!ud.isTaperedLink) return false; // default/highlighted objects: let the library place them
+      const { start, end } = coords;
+      const key = `${start.x},${start.y},${start.z}|${end.x},${end.y},${end.z}`;
+      if (ud.posKey === key) return true; // static tree: nothing moved since last frame
+      ud.posKey = key;
+      const [capA, capB] = (obj as THREE.Group).children as THREE.Line[];
+      const dx = end.x - start.x;
+      const dy = end.y - start.y;
+      const dz = end.z - start.z;
+      const dist = Math.hypot(dx, dy, dz) || 1;
+      const ux = dx / dist;
+      const uy = dy / dist;
+      const uz = dz / dist;
+      const long = dist > LONG_LINK_DIST;
+      const capLen = long ? Math.min(LINK_CAP_LEN, dist / 2 - 2) : dist / 2;
+      const baseColor = new THREE.Color(linkColor(l));
+      writeCap(capA, start.x, start.y, start.z, ux, uy, uz, capLen, baseColor, long);
+      writeCap(capB, end.x, end.y, end.z, -ux, -uy, -uz, capLen, baseColor, long);
+      return true;
+    },
+    [linkColor],
+  );
+
+  // Both are supported by 3d-force-graph at runtime but too narrowly typed by
+  // the react wrapper (linkThreeObject can't return undefined; linkPositionUpdate
+  // wants the generic LinkObject, not our concrete FGLink) — same workaround as
+  // linkDashProp above.
+  const linkTaperProps: Record<string, unknown> = { linkThreeObject, linkPositionUpdate };
+
   const onNodeClick = useCallback(
     (node: FGNode) => {
       if (node.kind !== 'person') return;
@@ -445,6 +546,7 @@ export default function Scene3D() {
         linkWidth={linkWidth}
         linkOpacity={0.55}
         {...linkDashProp}
+        {...linkTaperProps}
         onNodeClick={onNodeClick}
         onBackgroundClick={backgroundClick}
         onEngineStop={() => {
