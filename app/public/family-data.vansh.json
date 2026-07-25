@@ -652,7 +652,7 @@
       "birthFamilyId": "familyKashi",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "King of Kashi; his three daughters were carried off from their svayamvara by Bhishma as brides for Vichitravirya.",
-      "genAnchor": 24
+      "genAnchor": 27
     },
     {
       "id": "Amba",
@@ -743,7 +743,7 @@
       "birthFamilyId": "familyGandhara",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "King of Gandhara; father of Gandhari and Shakuni.",
-      "genAnchor": 27
+      "genAnchor": 30
     },
     {
       "id": "Gandhari",
@@ -1847,7 +1847,7 @@
       "birthFamilyId": "familySuta",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "A charioteer (suta) of Hastinapura who drew the infant Karna from the river and raised him as his own.",
-      "genAnchor": 28
+      "genAnchor": 31
     },
     {
       "id": "Radha",
@@ -2088,7 +2088,7 @@
       "birthFamilyId": "familyMadra",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "King of Madra; father of Shalya and Madri.",
-      "genAnchor": 26
+      "genAnchor": 29
     },
     {
       "id": "Shalya",
@@ -2118,8 +2118,7 @@
       "alive": true,
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "King of Panchala; father of Drupada.",
-      "genAnchor": 27
+      "notes": "King of Panchala; father of Drupada."
     },
     {
       "id": "Drupada",
@@ -2170,7 +2169,7 @@
       "birthFamilyId": "familyMatsya",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "King of Matsya, in whose court the Pandavas passed their thirteenth year of exile in disguise.",
-      "genAnchor": 28
+      "genAnchor": 31
     },
     {
       "id": "Sudeshna",
@@ -2211,7 +2210,7 @@
       "birthFamilyId": "familyYadava",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "A Yadava patriarch; father of Devaka and Ugrasena.",
-      "genAnchor": 25
+      "genAnchor": 28
     },
     {
       "id": "Devaka",
@@ -2302,7 +2301,7 @@
       "birthFamilyId": "familyYadava",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "A childless Bhoja king, cousin of Shurasena; he adopted Pritha, who took his name as Kunti.",
-      "genAnchor": 27
+      "genAnchor": 30
     },
     {
       "id": "Rohini",
@@ -2543,7 +2542,7 @@
       "birthFamilyId": "familyAngirasa",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "A sage of the Gautama line; father of the twins Kripa and Kripi, born in a clump of reeds and raised in the Kuru court.",
-      "genAnchor": 26
+      "genAnchor": 29
     },
     {
       "id": "Kripa",
@@ -2584,7 +2583,7 @@
       "birthFamilyId": "familyNaga",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "A king of the Nagas (serpent race); father of Ulupi.",
-      "genAnchor": 28
+      "genAnchor": 31
     },
     {
       "id": "Chitravahana",
@@ -2595,7 +2594,7 @@
       "birthFamilyId": "familyManipura",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "King of Manipura; father of Chitrangada, he gave her to Arjuna on the pledge that their son would inherit his throne.",
-      "genAnchor": 28
+      "genAnchor": 31
     },
     {
       "id": "Satyajit",
@@ -2776,7 +2775,7 @@
       "birthFamilyId": "familyMagadha",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "Founder-king of Magadha; father of Jarasandha.",
-      "genAnchor": 25
+      "genAnchor": 28
     },
     {
       "id": "JarasandhaMagadha",
@@ -2858,7 +2857,7 @@
       "birthFamilyId": "familyYadava",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "A Yadava noble, keeper of the Syamantaka gem; father of Satyabhama.",
-      "genAnchor": 29
+      "genAnchor": 32
     },
     {
       "id": "Jambavan",
@@ -2880,7 +2879,7 @@
       "birthFamilyId": "familyDaitya",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "A thousand-armed asura king and devotee of Shiva; father of Usha.",
-      "genAnchor": 31
+      "genAnchor": 34
     },
     {
       "id": "Raivata",
@@ -2891,7 +2890,7 @@
       "birthFamilyId": null,
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "King Raivata (Kakudmi), who took his daughter Revati to Brahma's realm and returned an age later to a world grown small.",
-      "genAnchor": 31
+      "genAnchor": 34
     },
     {
       "id": "Surya",
@@ -3088,7 +3087,7 @@
       "birthFamilyId": "familyVidarbha",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "King of Vidarbha at Kundina; father of Rukmi and of Rukmini.",
-      "genAnchor": 27
+      "genAnchor": 30
     },
     {
       "id": "Rukmi",
@@ -3109,7 +3108,7 @@
       "birthFamilyId": "familyYadava",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "A Vrishni chief; grandfather of the great warrior Satyaki.",
-      "genAnchor": 27
+      "genAnchor": 30
     },
     {
       "id": "Satyaki",
@@ -3130,7 +3129,7 @@
       "birthFamilyId": "familyYadava",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "A Vrishni chief; father of Kritavarma.",
-      "genAnchor": 27
+      "genAnchor": 30
     },
     {
       "id": "Kritavarma",
@@ -3151,7 +3150,7 @@
       "birthFamilyId": "familyYadava",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "A Yadava elder who bore Krishna and Balarama from Gokula to Mathura; keeper of the Syamantaka gem for a time.",
-      "genAnchor": 27
+      "genAnchor": 30
     },
     {
       "id": "Charudeshna",
@@ -3202,7 +3201,7 @@
       "birthFamilyId": "familyNishada",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "King of the Nishadas; father of Ekalavya.",
-      "genAnchor": 27
+      "genAnchor": 30
     },
     {
       "id": "Ekalavya",
@@ -3223,7 +3222,7 @@
       "birthFamilyId": "familyPragjyotisha",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "The asura king of Pragjyotisha, son of the earth; Krishna slew him and freed the sixteen thousand women he had imprisoned.",
-      "genAnchor": 26
+      "genAnchor": 29
     },
     {
       "id": "Bhagadatta",
@@ -3254,7 +3253,7 @@
       "birthFamilyId": "familySuta",
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "Charioteer and counsellor of Dhritarashtra, son of the suta Gavalgana; granted divine sight by Vyasa, he narrated the war to the blind king.",
-      "genAnchor": 26
+      "genAnchor": 29
     },
     {
       "id": "Shuka",
@@ -5373,7 +5372,7 @@
       "alive": true,
       "birthFamilyId": "familyBhargava",
       "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "Son of Bhrigu; the aged sage restored to youth by the Ashvins, husband of Sukanya.",
+      "notes": "Son of Bhrigu; the aged sage restored to youth by the Ashvins, husband of Sukanya. The rejuvenating tonic Chyavanprash, which the Ashvins first prepared for him, is named after him.",
       "divine": true
     },
     {
@@ -5650,6 +5649,195 @@
       "birthFamilyId": null,
       "updatedAt": "2026-07-22T00:00:00.000Z",
       "notes": "Princess fashioned for the sage Agastya; his learned wife and a hymn-seer in her own right."
+    },
+    {
+      "id": "Ajamidha",
+      "firstName": "Ajamidha",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Riksha",
+      "firstName": "Riksha",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familySoma",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Viduratha",
+      "firstName": "Viduratha",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Anashwan",
+      "firstName": "Anashwan",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "ParikshitI",
+      "firstName": "Parikshit",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Bhimasena",
+      "firstName": "Bhimasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Pratishravas",
+      "firstName": "Pratishravas",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyKuru",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Arka",
+      "firstName": "Arka",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Bharmyashva",
+      "firstName": "Bharmyashva",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Mudgala",
+      "firstName": "Mudgala",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Vadhryasva",
+      "firstName": "Vadhryasva",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Divodasa",
+      "firstName": "Divodasa",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Mitrayu",
+      "firstName": "Mitrayu",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "ChyavanaP",
+      "firstName": "Chyavana",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "SudasaP",
+      "firstName": "Sudasa",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "SahadevaP",
+      "firstName": "Sahadeva",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Somaka",
+      "firstName": "Somaka",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Yavinara",
+      "firstName": "Yavinara",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Brihadvishva",
+      "firstName": "Brihadvishva",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "Kampilla",
+      "firstName": "Kampilla",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "SanjayaP",
+      "firstName": "Sanjaya",
+      "lastName": "",
+      "gender": "male",
+      "alive": false,
+      "birthFamilyId": "familyPanchala",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
     }
   ],
   "unions": [
@@ -5803,13 +5991,12 @@
         "Hastin"
       ],
       "children": [
-        "Samvarana"
+        "Ajamidha"
       ],
       "adoptedChildren": [],
       "familyId": "familySoma",
       "status": "married",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "childGap": 2
+      "updatedAt": "2026-07-20T00:00:00.000Z"
     },
     {
       "id": "u_kuru_to_pratipa",
@@ -5817,13 +6004,12 @@
         "Kuru"
       ],
       "children": [
-        "Pratipa"
+        "Viduratha"
       ],
       "adoptedChildren": [],
       "familyId": "familyKuru",
       "status": "married",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "childGap": 4
+      "updatedAt": "2026-07-20T00:00:00.000Z"
     },
     {
       "id": "u_yadu",
@@ -5905,7 +6091,7 @@
       "familyId": "familySoma",
       "status": "married",
       "updatedAt": "2026-07-20T00:00:00.000Z",
-      "childGap": 5
+      "childGap": 8
     },
     {
       "id": "u_vrishni_to_shurasena",
@@ -7951,7 +8137,7 @@
       "familyId": "familyIkshvaku",
       "status": "married",
       "updatedAt": "2026-07-22T00:00:00.000Z",
-      "childGap": 2
+      "childGap": 5
     },
     {
       "id": "r_u_atithi",
@@ -9076,6 +9262,244 @@
       "familyId": "familyBrahma",
       "status": "married",
       "updatedAt": "2026-07-22T00:00:00.000Z"
+    },
+    {
+      "id": "u_Ajamidha_Riksha",
+      "partners": [
+        "Ajamidha"
+      ],
+      "children": [
+        "Riksha"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_Riksha_Samvarana",
+      "partners": [
+        "Riksha"
+      ],
+      "children": [
+        "Samvarana"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySoma",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_Viduratha_Anashwan",
+      "partners": [
+        "Viduratha"
+      ],
+      "children": [
+        "Anashwan"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_Anashwan_ParikshitI",
+      "partners": [
+        "Anashwan"
+      ],
+      "children": [
+        "ParikshitI"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_ParikshitI_Bhimasena",
+      "partners": [
+        "ParikshitI"
+      ],
+      "children": [
+        "Bhimasena"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_Bhimasena_Pratishravas",
+      "partners": [
+        "Bhimasena"
+      ],
+      "children": [
+        "Pratishravas"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_Pratishravas_Pratipa",
+      "partners": [
+        "Pratishravas"
+      ],
+      "children": [
+        "Pratipa"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyKuru",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_Ajamidha_Arka",
+      "partners": [
+        "Ajamidha"
+      ],
+      "children": [
+        "Arka"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_Arka_Bharmyashva",
+      "partners": [
+        "Arka"
+      ],
+      "children": [
+        "Bharmyashva"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_Bharmyashva_Mudgala",
+      "partners": [
+        "Bharmyashva"
+      ],
+      "children": [
+        "Mudgala",
+        "Yavinara",
+        "Brihadvishva",
+        "Kampilla",
+        "SanjayaP"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_Mudgala_Vadhryasva",
+      "partners": [
+        "Mudgala"
+      ],
+      "children": [
+        "Vadhryasva"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_Vadhryasva_Divodasa",
+      "partners": [
+        "Vadhryasva"
+      ],
+      "children": [
+        "Divodasa"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_Divodasa_Mitrayu",
+      "partners": [
+        "Divodasa"
+      ],
+      "children": [
+        "Mitrayu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_Mitrayu_ChyavanaP",
+      "partners": [
+        "Mitrayu"
+      ],
+      "children": [
+        "ChyavanaP"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_ChyavanaP_SudasaP",
+      "partners": [
+        "ChyavanaP"
+      ],
+      "children": [
+        "SudasaP"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_SudasaP_SahadevaP",
+      "partners": [
+        "SudasaP"
+      ],
+      "children": [
+        "SahadevaP"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_SahadevaP_Somaka",
+      "partners": [
+        "SahadevaP"
+      ],
+      "children": [
+        "Somaka"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "id": "u_Somaka_Prishata",
+      "partners": [
+        "Somaka"
+      ],
+      "children": [
+        "Prishata"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyPanchala",
+      "status": "married",
+      "updatedAt": "2026-07-25T00:00:00.000Z"
     }
   ]
 }
