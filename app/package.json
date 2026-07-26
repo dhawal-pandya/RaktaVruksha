@@ -10,6 +10,8 @@
     "test": "vitest run",
     "clean": "tsx scripts/clean-data.ts",
     "rename-ids": "tsx scripts/rename-ids.ts",
+    "add-lineages": "tsx scripts/add-lineages.ts",
+    "reanchor-eras": "tsx scripts/reanchor-eras.ts",
     "deploy": "bash ../scripts/deploy-gh-pages.sh"
   },
   "dependencies": {

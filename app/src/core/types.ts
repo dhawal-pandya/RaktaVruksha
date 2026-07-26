@@ -45,6 +45,9 @@ export interface UnionRecord {
    *  Use >1 when a child was born to already-old parents, to keep same-era people
    *  on the same level across the tree. */
   childGap?: number;
+  /** Free text about the partnership itself: what a `childGap` stands in for,
+   *  which text a descent comes from, why a niyoga birth is counted where it is. */
+  notes?: string;
   updatedAt: string;
 }
 

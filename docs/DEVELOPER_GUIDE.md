@@ -59,13 +59,27 @@ On boot (and after every edit) the store re-runs four pure steps:
    ancestors always sit above descendants and why the 3D camera never tumbles
    past level.
 
+   A curated mythological tree switches to a longest-path leveler instead, driven
+   by two era controls: `childGap` on a union (how many rows the children sit
+   below the parents, standing in for generations the texts don't name) and
+   `genAnchor` on a person (an absolute floor, for a lineage with no ancestry in
+   the data). Anchors only ever push downward, which is what lets Mucukunda sit
+   with his brothers in Mandhata's generation while the man he burns is ninety
+   rows lower. See [PURANIC_LINEAGES.md](PURANIC_LINEAGES.md) for how the
+   Hiranyagarbha tree uses both.
+
 3. **Graph build** — `core/graph.ts`. Person nodes for everyone, plus a small
    **union node** for every 2-partner union (the "marriage bridge"). Both
    partners link to it; children hang off it — so a couple's children visually
    descend from the *marriage*, not from one parent. 1-partner unions skip the
    bridge and link parent→child directly.
 
-4. **Layout** — where 3D and 2D diverge (below).
+4. **Layout** — where 3D and 2D diverge (below). The vertical distance between
+   rows is `LAYER_GAP`, except that `layerGapFor()` shrinks it once a tree passes
+   about forty generations: a tree spreads sideways only as far as its families
+   need but grows downward without limit, and at ninety-seven rows a fixed gap
+   turns the Hiranyagarbha constellation into a hairline. Ordinary family trees
+   and both epics are inside the threshold and unaffected.
 
 ## The 3D layout: rigid couples in a force field
 

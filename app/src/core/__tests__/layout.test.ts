@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { buildDataset } from '../dataset';
 import { buildGraph } from '../graph';
-import { computeLayout, LAYER_GAP } from '../layout';
+import { computeLayout, LAYER_GAP, layerGapFor } from '../layout';
 import { fixture } from './fixture';
 
 describe('graph builder', () => {
@@ -60,6 +60,17 @@ describe('layout', () => {
     expect(pos.get('GpaA')!.y).toBe(0);
     expect(pos.get('Dad')!.y).toBe(-LAYER_GAP);
     expect(pos.get('Son')!.y).toBe(-2 * LAYER_GAP);
+  });
+
+  it('keeps the full layer gap for ordinary depths and shrinks it past them', () => {
+    // A real family tree and both epics sit well under the threshold and must be
+    // untouched; only a lineage deep enough to render as a thread is rescaled.
+    expect(layerGapFor(1)).toBe(LAYER_GAP);
+    expect(layerGapFor(12)).toBe(LAYER_GAP);
+    expect(layerGapFor(42)).toBe(LAYER_GAP);
+    // Past it, total height is held near what it was at the threshold.
+    expect(layerGapFor(84) * 84).toBeCloseTo(LAYER_GAP * 42);
+    expect(layerGapFor(97)).toBeLessThan(LAYER_GAP);
   });
 
   it('positions every node', () => {

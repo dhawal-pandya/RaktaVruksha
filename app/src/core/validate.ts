@@ -151,6 +151,7 @@ export const parseFamilyData = (
         : 'married',
     ...(typeof u.order === 'number' ? { order: u.order } : {}),
     ...(typeof u.childGap === 'number' && u.childGap >= 1 ? { childGap: u.childGap } : {}),
+    ...(u.notes ? { notes: String(u.notes) } : {}),
     updatedAt: String(u.updatedAt ?? new Date(0).toISOString()),
   }));
 

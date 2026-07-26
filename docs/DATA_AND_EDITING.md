@@ -72,6 +72,20 @@ Adding a lineage means one entry in `DATA_FILES`, `SHOWCASE_ORDER`, and
 `SHOWCASE_LABELS` in `state/store.ts`. The view-mode lock and the picker both
 follow from those, and `?data=` accepts any key `DATA_FILES` knows.
 
+The Hiranyagarbha file is not hand-edited. Its Puranic king-lists come from
+[PURANIC_LINEAGES.md](PURANIC_LINEAGES.md), which holds every chain with the text
+it came from, and two scripts that must run in order:
+
+```bash
+cd app
+npm run add-lineages    # splices the king-lists in; refuses to write on an id
+                        # collision or a validation error
+npm run reanchor-eras   # puts every era back on its own level, and checks
+                        # forty-five pairs the texts put in the same room
+```
+
+Both are idempotent. Edit the doc and the scripts together, then re-run both.
+
 ## Presentable vs. editable (the hidden edit key)
 
 By default the app is **read-only**: visitors can navigate, search, trace

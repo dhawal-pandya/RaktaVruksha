@@ -189,7 +189,28 @@ export default function Scene3D() {
 
   // Names stay visible even from afar on human-scale trees; distance culling
   // only kicks in on very large graphs where 1000+ sprites would hurt.
-  const labelDistance = data.nodes.length > 1000 ? 1400 : Infinity;
+  //
+  // The cull radius has to be measured against the tree, not fixed. Fit puts the
+  // camera at roughly 1.9 radii out, so a constant that reads well on a graph
+  // three thousand units across leaves a graph twice that size with no names at
+  // all: the whole thing sits beyond the cutoff. Scaling with the tree's own
+  // bounding radius keeps the same proportion of it labelled at any size, which
+  // is what makes the ninety-seven-row Hiranyagarbha lineage readable while
+  // still sparing the renderer the far half of it.
+  const labelDistance = useMemo(() => {
+    if (data.nodes.length <= 1000) return Infinity;
+    let cx = 0, cy = 0, cz = 0;
+    for (const n of data.nodes) {
+      cx += (n.x ?? 0) / data.nodes.length;
+      cy += (n.y ?? 0) / data.nodes.length;
+      cz += (n.z ?? 0) / data.nodes.length;
+    }
+    let radius = 0;
+    for (const n of data.nodes) {
+      radius = Math.max(radius, Math.hypot((n.x ?? 0) - cx, (n.y ?? 0) - cy, (n.z ?? 0) - cz));
+    }
+    return Math.max(1400, radius * 1.6);
+  }, [data]);
 
   const updateLabelVisibility = useCallback(() => {
     const fg = fgRef.current;

@@ -9,7 +9,25 @@ import {
 import type { Graph, Vec3 } from "./types";
 
 export const LAYER_GAP = 110;
-const UNION_Y_OFFSET = -LAYER_GAP * 0.4;
+const UNION_Y_OFFSET_RATIO = -0.4;
+
+// A tree only spreads sideways as far as its families need; it grows downward
+// without limit. Past this many generations a fixed layer gap stops being a
+// constellation and becomes a thread: the Hiranyagarbha lineage runs ninety-seven
+// rows deep against about twenty of horizontal spread, so at LAYER_GAP it is
+// nearly five times taller than wide and Fit shows a hairline.
+const COMFORTABLE_ROWS = 42;
+
+/**
+ * Vertical distance between generations for THIS graph. Constant at LAYER_GAP
+ * until a tree passes COMFORTABLE_ROWS, then shrinks so the whole thing keeps
+ * roughly the height it would have had at that depth. Ordering, spacing within a
+ * row and the "ancestors are up" invariant are untouched; only the scale changes,
+ * and only for trees deep enough to need it. A real family tree, and both epics,
+ * are well inside the threshold and render exactly as before.
+ */
+export const layerGapFor = (rows: number): number =>
+  rows <= COMFORTABLE_ROWS ? LAYER_GAP : (LAYER_GAP * COMFORTABLE_ROWS) / rows;
 
 // --- Force tuning (X/Z only; Y is always locked to generation) --------------
 // CHARGE is the "repulsion" dial: raise its magnitude for more space between orbs.
@@ -68,6 +86,11 @@ const STATUS_RANK: Record<string, number> = {
  * symmetric snap. Same graph in → same positions out.
  */
 export const computeLayout = (graph: Graph): Map<string, Vec3> => {
+  const gens = graph.nodes.map((n) => n.gen);
+  const layerGap = layerGapFor(
+    gens.length ? Math.max(...gens) - Math.min(...gens) + 1 : 1,
+  );
+  const unionYOffset = layerGap * UNION_Y_OFFSET_RATIO;
   const familyKeys = Array.from(
     new Set(graph.nodes.map((n) => n.familyId ?? "__none")),
   ).sort();
@@ -125,7 +148,7 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
     const r = 13 * Math.sqrt(k);
     const theta = k * 2.39996;
     // Couple bodies live on the partners' layer; loose union dots sit below it.
-    const y = -n.gen * LAYER_GAP + (kind === "union" ? UNION_Y_OFFSET : 0);
+    const y = -n.gen * layerGap + (kind === "union" ? unionYOffset : 0);
     nodes.push({
       id: n.id,
       kind,
@@ -196,7 +219,7 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
   for (const n of graph.nodes) if (n.kind === "person") personGen.set(n.id, n.gen);
   const unionGen = new Map<string, number>();
   for (const n of graph.nodes) if (n.kind === "union") unionGen.set(n.id, n.gen);
-  const layerY = (gen: number): number => -gen * LAYER_GAP + 0; // +0 kills -0
+  const layerY = (gen: number): number => -gen * layerGap + 0; // +0 kills -0
 
   const out = new Map<string, Vec3>();
   const snapped = new Set<string>(); // people already welded into a couple
@@ -235,7 +258,7 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
     });
     out.set(n.id, {
       x: n.x,
-      y: layerY(unionGen.get(n.id) ?? 0) + UNION_Y_OFFSET,
+      y: layerY(unionGen.get(n.id) ?? 0) + unionYOffset,
       z: n.z,
     });
     snapped.add(a);
