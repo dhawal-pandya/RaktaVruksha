@@ -8,10 +8,9 @@ const PUBLIC_DIR = fileURLToPath(new URL("./public/", import.meta.url));
 // anything else on disk. Editing works on every dataset, each to its own file.
 const WRITABLE = new Set([
   "family-data.json",
-  "family-data.stress.json",
   "family-data.mahabharat.json",
   "family-data.ramayan.json",
-  "family-data.vansh.json",
+  "family-data.hiranyagarbha.json",
 ]);
 
 /**

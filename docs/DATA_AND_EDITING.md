@@ -44,8 +44,33 @@ The model distinguishes, without collapsing them into each other:
 | Param | Effect |
 |---|---|
 | `?family=<familyId>` | Opens on that family's 2D tree (what the **Share** button copies). The app also mirrors the on-screen family into this param as you navigate. |
-| `?data=stress` | Loads the ~1,700-person synthetic dataset (`npm run stress` generates it). |
+| `?data=hiranyagarbha` \| `ramayan` \| `mahabharat` | Loads a showcase lineage (below). |
 | `?edit=<key>` | Unlocks editing (below). Never included in shared links. |
+
+## Two halves: the family, and the showcase
+
+The app is deliberately split in two, and the split decides both the default view
+and how a page is shared.
+
+**The real family** (`family-data.json`, no `?data=` param) is a genealogy you read
+one family at a time. It opens in **2D**, the 2D/3D toggle is available, and every
+family carries its own `?family=<id>` link, so any branch is directly shareable.
+
+**The showcase** is the mythological lineages, listed in `SHOWCASE_ORDER`: `ramayan`
+(रघुवंश Raghuvansh), `mahabharat` (कुरुवंश Kuruvansh), and `hiranyagarbha`
+(हिरण्यगर्भ Hiranyagarbha, the golden womb every later line issues from). These only
+make sense as whole constellations, so they are **3D-only**: there is no 2D/3D
+toggle, the lineage label in the wordmark is instead a picker that switches between
+them, and the shareable unit is the lineage itself (`?data=<lineage>`), not a family
+inside it. Switching does a full page reload, so the next lineage starts clean and
+carries over only `?edit=`.
+
+The picker is a native `<select>` on purpose: on a phone that gets the platform's
+own full-height wheel rather than a cramped custom menu.
+
+Adding a lineage means one entry in `DATA_FILES`, `SHOWCASE_ORDER`, and
+`SHOWCASE_LABELS` in `state/store.ts`. The view-mode lock and the picker both
+follow from those, and `?data=` accepts any key `DATA_FILES` knows.
 
 ## Presentable vs. editable (the hidden edit key)
 
@@ -95,5 +120,4 @@ plain URL; keep `?edit=…` to yourself.
 ```bash
 npm run clean      # collapse "unknown lineage" placeholders; reconcile union families
 npm run rename-ids # rewrite generated ids to readable ones
-npm run stress     # regenerate the synthetic stress dataset
 ```

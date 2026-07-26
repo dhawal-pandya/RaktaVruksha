@@ -1,5 +1,11 @@
 import { useRef } from 'react';
-import { useStore } from '../state/store';
+import {
+  isShowcase,
+  SHOWCASE_LABELS,
+  SHOWCASE_ORDER,
+  useStore,
+  type ShowcaseSource,
+} from '../state/store';
 import Legend from './Legend';
 import SearchBar from './SearchBar';
 
@@ -20,8 +26,13 @@ export default function TopBar() {
   const editUnlocked = useStore(s => s.editUnlocked);
   const lockEditing = useStore(s => s.lockEditing);
   const openFamilyEditor = useStore(s => s.openFamilyEditor);
+  const gotoShowcase = useStore(s => s.gotoShowcase);
 
   const fileRef = useRef<HTMLInputElement>(null);
+
+  // On a showcase lineage the wordmark's label doubles as the lineage picker, and
+  // the 2D/3D toggle disappears, since those trees are 3D-only.
+  const showcase = isShowcase(dataSource) ? dataSource : null;
 
   const onFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -34,28 +45,41 @@ export default function TopBar() {
       <div className="wordmark">
         <div className="wordmark-latin">Raktavruksha</div>
         <div className="wordmark-devanagari">रक्तवृक्ष</div>
-        {dataSource === 'stress' && <span className="badge badge-stress">stress</span>}
-        {dataSource === 'mahabharat' && (
-          <span className="badge badge-mahabharat">कुरुवंश Kuruvansh</span>
-        )}
-        {dataSource === 'ramayan' && (
-          <span className="badge badge-ramayan">रघुवंश Raghuvansh</span>
-        )}
-        {dataSource === 'vansh' && (
-          <span className="badge badge-vansh">ब्रह्मवंश Brahmavansh</span>
+        {showcase && (
+          // A native <select> on purpose: it gets the platform's own picker, which
+          // on a phone is a full-height wheel instead of a tiny custom menu.
+          <label className="showcase-picker">
+            <select
+              className="showcase-select"
+              value={showcase}
+              onChange={e => gotoShowcase(e.target.value as ShowcaseSource)}
+              aria-label="Choose a lineage"
+            >
+              {SHOWCASE_ORDER.map(key => (
+                <option key={key} value={key}>
+                  {SHOWCASE_LABELS[key].devanagari} {SHOWCASE_LABELS[key].latin}
+                </option>
+              ))}
+            </select>
+            <span className="showcase-caret" aria-hidden="true">
+              ▾
+            </span>
+          </label>
         )}
       </div>
 
       <SearchBar />
 
       <nav className="topbar-actions">
-        <button
-          className="btn"
-          onClick={toggleViewMode}
-          title={viewMode === '3d' ? 'Switch to 2D view' : 'Switch to 3D view'}
-        >
-          {viewMode === '3d' ? '2D' : '3D'}
-        </button>
+        {!showcase && (
+          <button
+            className="btn"
+            onClick={toggleViewMode}
+            title={viewMode === '3d' ? 'Switch to 2D view' : 'Switch to 3D view'}
+          >
+            {viewMode === '3d' ? '2D' : '3D'}
+          </button>
+        )}
         <button className="btn" onClick={fitView} title="Fit the whole tree in view">
           ⌂ Fit
         </button>
@@ -68,9 +92,10 @@ export default function TopBar() {
         </button>
         <Legend />
 
-        {/* Editing tools: only shown once unlocked with the edit key. */}
+        {/* Editing tools: only shown once unlocked with the edit key. Grouped so the
+            mobile rules can leave them alone, since editing is a laptop-only job. */}
         {editUnlocked && (
-          <>
+          <div className="topbar-edit">
             <button className="btn" onClick={() => openForm('standalone')} title="Add a standalone person">
               + Add
             </button>
@@ -95,7 +120,7 @@ export default function TopBar() {
               Lock
             </button>
             <input ref={fileRef} type="file" accept=".json,application/json" hidden onChange={e => void onFile(e)} />
-          </>
+          </div>
         )}
       </nav>
     </header>

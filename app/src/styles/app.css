@@ -188,11 +188,55 @@ textarea:focus {
   color: #ffb05c;
   letter-spacing: 0.5px;
 }
+/* Showcase picker: the lineage label IS the control that switches lineage, so it
+   keeps the badge's pill shape and warm tint and adds a caret to say it opens. */
+.showcase-picker {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.showcase-select {
+  appearance: none;
+  font: inherit;
+  font-size: var(--fs-sm);
+  padding: 3px 22px 3px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 214, 138, 0.45);
+  background: transparent;
+  color: #ffd68a;
+  cursor: pointer;
+  min-height: 26px;
+}
+.showcase-select:hover {
+  border-color: rgba(255, 214, 138, 0.8);
+}
+.showcase-select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+/* The menu itself is drawn by the OS, which ignores the page's palette: force a
+   dark background so the options aren't white-on-white in the native dropdown. */
+.showcase-select option {
+  background: var(--bg-raised, #131a2c);
+  color: var(--text, #e8ecf5);
+}
+.showcase-caret {
+  position: absolute;
+  right: 8px;
+  font-size: 10px;
+  color: #ffd68a;
+  pointer-events: none;
+}
 .topbar-actions {
   display: flex;
   gap: var(--sp-2);
   margin-left: auto;
   align-items: center;
+}
+/* The edit tools are a group in the markup so the mobile rules can isolate them.
+   On a laptop they belong in the same row as everything else, hence `contents`. */
+.topbar-edit {
+  display: contents;
 }
 .dirty-dot {
   width: 7px;
@@ -722,20 +766,38 @@ input[type='color'] {
     order: 3;
     width: 100%;
   }
+  /* Only a handful of controls remain here (view toggle, Fit, Relation, Families),
+     so they wrap onto the row rather than hiding in a scroll strip that gives no
+     sign there is more to swipe to. */
   .topbar-actions {
     margin-left: auto;
-    overflow-x: auto;
-    max-width: 60vw;
-    scrollbar-width: none;
-  }
-  .topbar-actions::-webkit-scrollbar {
-    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
   .btn {
     min-height: var(--touch);
+    padding: 10px 14px;
   }
   .btn-icon {
     min-height: 36px;
+  }
+  .showcase-select {
+    font-size: var(--fs-base);
+    min-height: 34px;
+    padding: 6px 26px 6px 12px;
+  }
+  /* Editing is a laptop-only job. If it is unlocked on a phone anyway, keep it in
+     its own scroll strip so it can't push the controls above out of shape. */
+  .topbar-edit {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .topbar-edit::-webkit-scrollbar {
+    display: none;
   }
 
   /* bottom sheets */
@@ -751,19 +813,17 @@ input[type='color'] {
     border-bottom: none;
   }
 
-  /* The dropdown escapes the scrollable topbar nav: a floating toggle below it. */
-  .legend {
-    position: fixed;
-    top: 108px;
-    right: var(--sp-2);
-    z-index: 20;
-  }
+  /* The nav no longer scrolls, so the legend stays in flow and drops its panel from
+     wherever it lands: no fixed offset to drift out of sync with the bar's height. */
   .legend-toggle {
     background: var(--bg-raised);
     backdrop-filter: blur(var(--blur));
   }
   .legend-open .legend-body {
-    width: 220px;
+    width: min(260px, calc(100vw - 2 * var(--sp-2)));
+  }
+  .legend-item {
+    min-height: 40px;
   }
 
   .hint {

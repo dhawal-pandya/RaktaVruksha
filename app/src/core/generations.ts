@@ -9,7 +9,7 @@ export interface GenerationResult {
  * Two levelers, chosen by whether the dataset uses ERA CONTROLS (genAnchor /
  * childGap):
  *
- *  - A curated mythological tree (the epics, the Brahmavansh) DOES: there,
+ *  - A curated mythological tree (the epics, the Hiranyagarbha) DOES: there,
  *    cousin-marriages between lineages of deliberately different documented depth
  *    are the whole point, and `childGap`/`genAnchor` place each era. It needs the
  *    LONGEST-PATH leveler so an era gap on one branch is never bypassed by a

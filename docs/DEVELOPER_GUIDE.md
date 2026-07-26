@@ -163,7 +163,6 @@ cd app
 npm run dev        # vite dev server on :5173
 npm test           # vitest — the core layer is the tested surface
 npm run build      # tsc --noEmit + vite build
-npm run stress     # generate ~1,700-person synthetic data → ?data=stress
 ```
 
 Conventions worth keeping:

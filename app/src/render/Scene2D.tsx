@@ -11,6 +11,11 @@ type FG2Node = GraphNode & { x?: number; y?: number; fx?: number; fy?: number; s
 type FG2Link = Omit<GraphLink, 'source' | 'target'> & { source: string | FG2Node; target: string | FG2Node };
 type LabelBox = { x0: number; y0: number; x1: number; y1: number };
 
+// zoomToFit's padding is in screen pixels, so a value tuned for a laptop eats most
+// of a phone's width and leaves the tree shrunk into the middle. Scale it down to
+// match the viewport, using the same breakpoint the stylesheet calls mobile.
+const fitPadding = () => (window.innerWidth < 760 ? 24 : 80);
+
 const NODE_R = 6;
 const UNION_R = 2.8;
 const UNION_COLOR = '#4a5468';
@@ -291,12 +296,12 @@ export default function Scene2D() {
             fg.centerAt(n.x ?? 0, n.y ?? 0, 700);
             fg.zoom(2.2, 700);
           } else {
-            fg.zoomToFit(600, 80);
+            fg.zoomToFit(600, fitPadding());
           }
           break;
         }
         default:
-          fg.zoomToFit(700, 80);
+          fg.zoomToFit(700, fitPadding());
       }
     };
     const t = setTimeout(run, 60);
@@ -308,7 +313,7 @@ export default function Scene2D() {
   useEffect(() => {
     const fg = fgRef.current;
     if (!fg || data.nodes.length === 0) return;
-    const t = setTimeout(() => fg.zoomToFit(600, 80), 120);
+    const t = setTimeout(() => fg.zoomToFit(600, fitPadding()), 120);
     return () => clearTimeout(t);
   }, [data]);
 

@@ -97,8 +97,8 @@ const POLAR_TILTED = Math.PI * 0.0;
 
 // Default orbit anchor: whole-tree views pivot around this person, so the spin
 // axis passes through him rather than the graph centroid. Focusing a person or
-// family still re-pivots there; absent from the data (stress set), views fall
-// back to the centroid.
+// family still re-pivots there; absent from the data (the showcase lineages), views
+// fall back to the centroid.
 const ANCHOR_PERSON_ID = 'Dhawal';
 
 /** Camera position that frames `target` at `dist` head-on (level), preserving the
@@ -316,7 +316,13 @@ export default function Scene3D() {
       60,
       ...points.map(p => Math.hypot(p.x - c.x, p.y - c.y, p.z - c.z)),
     );
-    const dist = radius * 1.9 + 130;
+    // three.js fixes the VERTICAL field of view, so the horizontal one narrows with
+    // the aspect ratio. This distance is tuned for a landscape window; on a phone
+    // held upright the same distance crops the tree at the sides, which reads as
+    // starting zoomed in. Pull back by exactly that shortfall, landscape unchanged.
+    const cam = fg.camera();
+    const aspect = (cam instanceof THREE.PerspectiveCamera && cam.aspect) || 1;
+    const dist = (radius * 1.9 + 130) / Math.min(1, aspect);
     fg.cameraPosition(framedCameraPos(fg.camera().position, c, dist), c, ms);
   }, []);
 

@@ -97,16 +97,38 @@ const emptyRelation: RelationState = {
 // The default (no param) is always my real family; extend this map to add more.
 export type DataSource =
   | "default"
-  | "stress"
   | "mahabharat"
   | "ramayan"
-  | "vansh";
+  | "hiranyagarbha";
 const DATA_FILES: Record<DataSource, string> = {
   default: "family-data.json",
-  stress: "family-data.stress.json",
   mahabharat: "family-data.mahabharat.json",
   ramayan: "family-data.ramayan.json",
-  vansh: "family-data.vansh.json",
+  hiranyagarbha: "family-data.hiranyagarbha.json",
+};
+
+// The app has two halves. The real family is a genealogy you
+// navigate family by family in 2D, where each family carries its own ?family= link.
+// The showcase is the mythological lineages: whole constellations that only ever
+// make sense at once, so they are 3D-only, have no 2D toggle, and are reached by
+// cycling between each other rather than by per-family links.
+// Cycle order runs the two epics first, Raghu's line then Kuru's, and lands last
+// on the Hiranyagarbha: the golden womb both of them, and everyone else, issue from.
+export const SHOWCASE_ORDER = [
+  "ramayan",
+  "mahabharat",
+  "hiranyagarbha",
+] as const;
+export type ShowcaseSource = (typeof SHOWCASE_ORDER)[number];
+export const isShowcase = (source: DataSource): source is ShowcaseSource =>
+  (SHOWCASE_ORDER as readonly string[]).includes(source);
+export const SHOWCASE_LABELS: Record<
+  ShowcaseSource,
+  { devanagari: string; latin: string }
+> = {
+  hiranyagarbha: { devanagari: "हिरण्यगर्भ", latin: "Hiranyagarbha" },
+  ramayan: { devanagari: "रघुवंश", latin: "Raghuvansh" },
+  mahabharat: { devanagari: "कुरुवंश", latin: "Kuruvansh" },
 };
 
 interface AppState {
@@ -149,6 +171,7 @@ interface AppState {
 
   boot: () => Promise<void>;
   toggleViewMode: () => void;
+  gotoShowcase: (next: ShowcaseSource) => void;
   clickPerson: (id: string) => void;
   focusPerson: (id: string) => void;
   showPersonIn3D: (id: string) => void;
@@ -243,7 +266,10 @@ export const useStore = create<AppState>((set, get) => {
   const scheduleDevWrite = (raw: FamilyDataV2) => {
     if (devWriteTimer) clearTimeout(devWriteTimer);
     devWriteTimer = setTimeout(async () => {
-      const ok = await postDataFile(serialize(raw), DATA_FILES[get().dataSource]);
+      const ok = await postDataFile(
+        serialize(raw),
+        DATA_FILES[get().dataSource],
+      );
       if (ok) set({ dirty: false });
     }, 700);
   };
@@ -288,22 +314,19 @@ export const useStore = create<AppState>((set, get) => {
 
     boot: async () => {
       const params = new URLSearchParams(window.location.search);
+      // Any key DATA_FILES knows is valid; anything else falls back to the real
+      // family. hasOwn rather than `in`, so ?data=constructor can't sneak a
+      // prototype member through and send the fetch at a garbage path.
       const requested = params.get("data");
       const dataSource: DataSource =
-        requested === "stress" ||
-        requested === "mahabharat" ||
-        requested === "ramayan" ||
-        requested === "vansh"
-          ? requested
+        requested && Object.hasOwn(DATA_FILES, requested)
+          ? (requested as DataSource)
           : "default";
-      // The epics open in the 3D constellation by default; the real family and
-      // the stress set open in the 2D genealogical view.
-      const initialViewMode: AppState["viewMode"] =
-        dataSource === "mahabharat" ||
-        dataSource === "ramayan" ||
-        dataSource === "vansh"
-          ? "3d"
-          : "2d";
+      // The showcase lineages are 3D-only (see SHOWCASE_ORDER); the real family
+      // opens in the 2D genealogical view.
+      const initialViewMode: AppState["viewMode"] = isShowcase(dataSource)
+        ? "3d"
+        : "2d";
       set({ dataSource, viewMode: initialViewMode });
       // Older builds stored a data draft in IndexedDB that shadowed the deployed
       // file forever. Clean out anything they left behind so every visitor is
@@ -319,7 +342,9 @@ export const useStore = create<AppState>((set, get) => {
         // current JSON. Relative to BASE_URL so it resolves under a Pages subpath.
         const base = import.meta.env.BASE_URL;
         const file = base + DATA_FILES[dataSource];
-        const res = await fetch(`${file}?t=${Date.now()}`, { cache: "no-store" });
+        const res = await fetch(`${file}?t=${Date.now()}`, {
+          cache: "no-store",
+        });
         if (!res.ok) throw new Error(`could not load ${file} (${res.status})`);
         const lastModified = Date.parse(res.headers.get("last-modified") ?? "");
         const parsed = parseFamilyData(await res.text());
@@ -450,6 +475,8 @@ export const useStore = create<AppState>((set, get) => {
 
     toggleViewMode: () => {
       const s = get();
+      // Showcase lineages have no 2D form: the whole point is the constellation.
+      if (isShowcase(s.dataSource)) return;
       const next = s.viewMode === "3d" ? "2d" : "3d";
       const patch: Partial<AppState> = { viewMode: next };
       if (next === "2d" && !s.family2d && s.dataset) {
@@ -461,6 +488,20 @@ export const useStore = create<AppState>((set, get) => {
       set(patch);
       // Re-fit after the new renderer mounts and lays out.
       setTimeout(() => set({ cameraRequest: cam({ kind: "fit" }) }), 400);
+    },
+
+    // Jump to another showcase lineage. A full reload hands it a clean slate: no
+    // leftover focus, lens, or ?family= pointing at a family that only existed in
+    // the lineage we just left. The edit key is the one thing carried over, so
+    // local editing isn't kicked out mid-session.
+    gotoShowcase: (next) => {
+      if (next === get().dataSource) return;
+      const url = new URL(window.location.href);
+      const editKey = url.searchParams.get("edit");
+      url.search = "";
+      url.searchParams.set("data", next);
+      if (editKey) url.searchParams.set("edit", editKey);
+      window.location.assign(url);
     },
 
     fitView: () => set({ cameraRequest: cam({ kind: "fit" }) }),
