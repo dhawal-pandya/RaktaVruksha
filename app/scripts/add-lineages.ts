@@ -1234,19 +1234,29 @@ if (nilaV) { nilaV.divineParents = ["Agni"]; nilaV.updatedAt = STAMP; }
 // Sukadeva counts twenty-two in order at SB 1.3.6-25; the familiar count of
 // twenty-four comes from the later enumerations that add Hamsa and Hayagriva,
 // and SB 1.3.26 says outright that they are innumerable, "like rivulets from an
-// inexhaustible source". Both are followed here.
+// inexhaustible source". The full list is in docs/PURANIC_LINEAGES.md Part VIII.
 //
-// Eight of them were already in this tree with a genealogy of their own, and
-// five of those eight already carried `divine`. The rest fall into two kinds:
+// This tree does not carry all of them, and the line it draws is this: AN AVATAR
+// IS HERE IF IT TOUCHES SOMEONE HERE. That keeps out the ones whose whole story
+// belongs to the Svayambhuva age this tree does not hold (Yajna, Rishabha,
+// Prithu, Nara-Narayana) and the two the later lists add at the very beginning
+// of things (Hamsa, Hayagriva), along with Buddha, whose only placement is the
+// future king-list that is ruled out. The doc keeps all of them on record.
 //
-//   - Those born into a line the tree holds (Narada and the four Kumaras, mind-
-//     born of Brahma) are CONNECTED, and take their family's colour, because
-//     they do come from a genealogy.
-//   - Those with no ancestry to hang from at all (Matsya, Kurma, Varaha,
-//     Narasimha and the rest) are SUSPENDED: a genAnchor alone, floating at the
-//     row of the story they belong to, exactly as Raivata and Mucukunda are
-//     placed. Each gets a family of its own so that each carries a distinct
-//     colour, since none of them shares a genealogy with anything else here.
+// What is left falls into three kinds:
+//
+//   - Eight born into a line the tree already holds, CONNECTED and keeping their
+//     house's colour: Dattatreya, Dhanvantari, Vamana, Parashurama, Vyasa, Rama,
+//     Balarama, Krishna. Five already carried `divine`; three did not, which was
+//     simply an inconsistency.
+//   - Narada and the four Kumaras, also CONNECTED, mind-born of Brahma.
+//   - Six with no ancestry to hang from, SUSPENDED on a genAnchor alone at the
+//     row of the story they act in, exactly as Raivata and Mucukunda are placed:
+//     Matsya beside Manu, Kurma and Mohini at the churning, Varaha beside
+//     Hiranyaksha, Narasimha beside Hiranyakashipu, Kapila beside Sagara. Each
+//     gets a family of its own so it carries a distinct colour, since none of
+//     them shares a genealogy with anything else here.
+//   - And Kalki, who touches nobody, alone three rows below the foot of the tree.
 
 /** An avatar already in the tree: flag it divine and say where it stands in the series. */
 const avatar = (id: string, place: string, note: string): void => {
@@ -1287,18 +1297,6 @@ interface Suspended {
 }
 
 const SUSPENDED: Suspended[] = [
-  { id: "Hamsa", colour: "#dfe3ea", beside: "Brahma's mind-born sons",
-    note: "The swan, who came to Brahma and the Kumaras when they asked what the highest good was, and answered them. One of the two the later enumerations add to reach twenty-four. SB 11.13" },
-  { id: "Hayagriva", colour: "#6fc7b8", beside: "Brahma's mind-born sons",
-    note: "The horse-headed one, who killed the demon Madhu and brought the Vedas back from the bottom of the sea when they were stolen at the dissolution. The second of the two that make the count twenty-four. SB 2.7.11" },
-  { id: "Yajna", colour: "#c7b04a", beside: "the Svayambhuva age",
-    note: "The seventh of the avatars: son of the Prajapati Ruchi and Akuti, daughter of Svayambhuva Manu. He was the Indra of that first manvantara, with his own sons the Yamas for demigods. SB 1.3.12" },
-  { id: "NaraNarayana", name: "Nara-Narayana", colour: "#7d9fd6", beside: "the Svayambhuva age",
-    note: "The fourth of the avatars, counted as one though they are two: the twin sons of Dharma by Murti, who went to Badarikashrama and took on austerities no one has matched. Arjuna and Krishna are held to be these two returned, which is why the Gita is spoken between them. SB 1.3.9" },
-  { id: "Rishabha", colour: "#a3c46a", beside: "the Svayambhuva age",
-    note: "The eighth of the avatars: son of Nabhi and Merudevi, who showed the path of perfection and then wandered the earth as an avadhuta, naked and silent, letting himself be taken for a madman. His eldest son Bharata gave Bharatavarsha its name. Not Vrishabha, Kartavirya's son. SB 1.3.13, 5.3-6" },
-  { id: "Prithu", colour: "#cf7a52", beside: "the Svayambhuva age",
-    note: "The ninth of the avatars: son of the wicked Vena, churned from his dead father's arm. When the earth withheld her yield he took up his bow against her, and she fled as a cow until she consented to be milked; he levelled her and taught her to be tilled, and she is Prithvi after him. Not Prithu of the solar line, nor Rucaka's son. SB 1.3.14, 4.15-23" },
   { id: "Kurma", colour: "#6a8f7a", beside: "the churning of the ocean",
     note: "The eleventh of the avatars: the tortoise whose shell held Mandara up as the devas and asuras churned the ocean with it. Everything that came out of that churning stands in this tree, Surabhi, Airavata, Varuni, and Dhanvantari with the pot of nectar. SB 1.3.16, 8.7" },
   { id: "Mohini", gender: "female", colour: "#e07ab0", beside: "the churning of the ocean",
@@ -1311,8 +1309,6 @@ const SUSPENDED: Suspended[] = [
     note: "The fourteenth of the avatars: neither man nor lion, at neither day nor night, on neither earth nor sky, killing Hiranyakashipu with no weapon on the threshold of his own hall, because the boon had covered everything else. He came for Prahlada, who is here as the demon's son. SB 1.3.18, 7.8" },
   { id: "Kapila", colour: "#b8862b", beside: "Sagara",
     note: "The fifth of the avatars: son of Kardama and Devahuti, daughter of Svayambhuva Manu, and the founder of Sankhya. Sagara's sixty thousand sons dug the earth open looking for their horse, found it beside him at his meditation, took him for the thief, and were ash before they finished the thought. Amshuman came after them and learned that only the Ganga could redeem them, which is the errand Bhagiratha finally completed. SB 1.3.10, 9.8" },
-  { id: "Buddha", colour: "#d9a441", beside: "the opening of the Kali age",
-    note: "The twenty-first of the avatars: born, the Purana says, to Anjana at Gaya at the beginning of Kali, to draw away by gentleness those who would have used the sacrifice for cruelty. The Bhagavata's own Ikshvaku list places him among the kings still to come, after Shakya and Shuddhoda, so the solar line runs on into him; those future kings are deliberately not in this tree, so he floats here instead. Not Anjana the mother of Hanuman. SB 1.3.24, 9.12.10-16" },
   { id: "Kalki", colour: "#9fb8e0", beside: "the close of the Kali age",
     note: "The twenty-second and last: to be born to Vishnu Yasha in the village of Shambhala at the joint of two ages, when the kings have all turned to plunder, and to ride out on a white horse with a sword like a comet. The only avatar in this tree who has not happened. SB 1.3.25, 12.2" },
 ];
@@ -1325,14 +1321,6 @@ for (const s of SUSPENDED) {
   p.divine = true;
   p.updatedAt = STAMP;
 }
-// Nara and Narayana are one incarnation counted as two people.
-person("NarayanaRishi", { name: "Narayana", family: "familyAvatarNaraNarayana",
-  note: "The second of the twin sages, and the one Krishna is held to be returned as. SB 1.3.9" });
-const nnP = peopleById.get("NarayanaRishi");
-if (nnP) { nnP.divine = true; nnP.updatedAt = STAMP; }
-const nnMain = peopleById.get("NaraNarayana");
-if (nnMain) { nnMain.firstName = "Nara"; nnMain.updatedAt = STAMP; }
-
 // --- connected: these two do come from a genealogy the tree already holds -----
 
 person("Narada", { family: BRAHMA,
@@ -1354,6 +1342,63 @@ if (brahmaU) {
   }
   brahmaU.updatedAt = STAMP;
 }
+
+// ============================================================================
+// PART IX — The descent of Adharma.  SB 4.8.2-4
+// ============================================================================
+//
+// The one branch of this tree that is not a dynasty. Sukadeva gives it in three
+// verses, immediately after naming Brahma's celibate sons: another son of Brahma
+// was Irreligion, and from him a line of vices descends by brother-sister pairs,
+// seven generations, ending in Hell. Every step is "from their combination",
+// which is why each generation here is a union of the two children of the last.
+//
+// It hangs off Brahma, the root of the whole tree, and runs down the entire
+// height of it to stop one row above Kalki: the two of them the last things in
+// the tree, the age and the one who ends it, with nothing else on either row.
+
+const ADHARMA = family("familyAdharma", "Adharma", "#5e4550",
+  "The descent of Irreligion, SB 4.8.2-4: not a dynasty but a genealogy of vices");
+
+for (const [id, name, gender, note] of [
+  ["Adharma", "Adharma", "male",
+    "Irreligion, a son of Brahma, and the head of the only line in this tree that is not a dynasty. SB 4.8.2"],
+  ["Mrisha", "Mrisha", "female",
+    "Falsity, wife of Irreligion. SB 4.8.2"],
+  ["Dambha", "Dambha", "male",
+    "Bluffing. He and his sister Maya were taken and raised by the demon Nirriti, who had no children of his own. SB 4.8.2"],
+  ["MayaA", "Maya", "female",
+    "Cheating, sister of Bluffing, and with him the second generation of the descent. Not Maya the danava architect, Mandodari's father. SB 4.8.2"],
+  ["Nirriti", "Nirriti", "male",
+    "The childless demon of decay and the south-west quarter, who took in Bluffing and Cheating and brought them up. SB 4.8.2"],
+  ["Lobha", "Lobha", "male", "Greed. SB 4.8.3"],
+  ["Nikriti", "Nikriti", "female", "Cunning, sister of Greed. SB 4.8.3"],
+  ["Krodha", "Krodha", "male", "Anger. Not Krodhavasha, Daksha's daughter and mother of the beasts. SB 4.8.3"],
+  ["Himsa", "Himsa", "female", "Violence, sister of Anger. SB 4.8.3"],
+  ["Kali", "Kali", "male",
+    "The spirit of the age that bears his name, born of Anger and Violence. He entered Nala at the one moment his purity lapsed and cost him his kingdom, his wife and twelve years, and Parikshit caught him at the far end of this tree beating the bull of Dharma and, when he begged, allotted him gambling, drink, prostitution and slaughter, and then gold as well, because wherever there is gold there is also falsity, intoxication, lust, envy and enmity. SB 4.8.3, 1.17.38-39; MBh 3.55-56"],
+  ["Durukti", "Durukti", "female", "Harsh Speech, sister of Kali and mother of Death by him. SB 4.8.3"],
+  ["Mrityu", "Mrityu", "male", "Death, son of Kali and Harsh Speech. SB 4.8.4"],
+  ["Bhiti", "Bhiti", "female", "Fear, sister of Death. SB 4.8.4"],
+  ["Yatana", "Yatana", "female", "Torment, daughter of Death and Fear. SB 4.8.4"],
+  ["Niraya", "Niraya", "male",
+    "Hell, the last of the descent, seven generations below Brahma and one row above the horseman who ends the age. SB 4.8.4"],
+] as const) person(id, { name, gender: gender as Gender, family: ADHARMA, note });
+
+// Brahma's own: a union of his alone, not by Saraswati, since the text says only
+// that Irreligion was another of his sons.
+union("u_brahma_adharma", ["Brahma"], ["Adharma"], { family: ADHARMA,
+  note: "SB 4.8.2. Named in the verse right after Brahma's celibate sons, as the opposite of them." });
+union("u_adharma_mrisha", ["Adharma", "Mrisha"], ["Dambha", "MayaA"], { family: ADHARMA });
+union("u_nirriti", ["Nirriti"], [], { family: ADHARMA, adopted: ["Dambha", "MayaA"],
+  note: "Nirriti was childless and took them both. SB 4.8.2" });
+// From here every generation is the union of the previous one's brother and
+// sister: "from their combination were born", each time.
+union("u_dambha_maya", ["Dambha", "MayaA"], ["Lobha", "Nikriti"], { family: ADHARMA, status: "partners" });
+union("u_lobha_nikriti", ["Lobha", "Nikriti"], ["Krodha", "Himsa"], { family: ADHARMA, status: "partners" });
+union("u_krodha_himsa", ["Krodha", "Himsa"], ["Kali", "Durukti"], { family: ADHARMA, status: "partners" });
+union("u_kali_durukti", ["Kali", "Durukti"], ["Mrityu", "Bhiti"], { family: ADHARMA, status: "partners" });
+union("u_mrityu_bhiti", ["Mrityu", "Bhiti"], ["Yatana", "Niraya"], { family: ADHARMA, status: "partners" });
 
 // ============================================================================
 // Small fixes

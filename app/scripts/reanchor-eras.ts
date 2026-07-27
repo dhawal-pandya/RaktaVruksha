@@ -372,18 +372,22 @@ setAnchor("Jamadagni", measured.get("KartaviryaArjuna")! - 1);
 // rather than picked. Their rows are the last thing computed because several of
 // them depend on lineages the pads above have just moved.
 
+// Reset the descent of Adharma BEFORE measuring anything. Its links are widened
+// further down to carry it to the foot of the tree, and if last run's widening is
+// still in place when `bottom` is read, the line has already reached the bottom
+// and pushes it lower every time the script runs.
+const ADHARMA_LINKS = [
+  "u_brahma_adharma",
+  "u_adharma_mrisha",
+  "u_dambha_maya",
+  "u_lobha_nikriti",
+  "u_krodha_himsa",
+];
+for (const e of ADHARMA_LINKS) setGap(e, 1);
+
 const beside = rows();
 const at = (id: string, delta = 0): number => beside.get(id)! + delta;
 
-// Primordial: the first kalpa, level with Brahma's mind-born sons.
-setAnchor("Hamsa", at("Marichi"));
-setAnchor("Hayagriva", at("Marichi"));
-// The Svayambhuva age, which this tree does not carry: a row or two under Brahma.
-setAnchor("Yajna", at("Marichi", 1));
-setAnchor("NaraNarayana", at("Marichi", 1));
-setAnchor("NarayanaRishi", at("Marichi", 1));
-setAnchor("Rishabha", at("Marichi", 2));
-setAnchor("Prithu", at("Marichi", 3));
 // The churning of the ocean: Indra's generation, and everything it threw up.
 setAnchor("Kurma", at("Indra"));
 setAnchor("Mohini", at("Indra"));
@@ -392,10 +396,26 @@ setAnchor("Varaha", at("Hiranyaksha"));
 setAnchor("Narasimha", at("Hiranyakashipu"));
 setAnchor("Matsya", at("Manu"));
 setAnchor("Kapila", at("Sagara"));
-// Kali: Buddha at its opening, just under the last of Janamejaya's line, and
-// Kalki at its close, the only person in this tree who has not happened yet.
+// The foot of the tree: the age, and the one who ends it.
+//
+// The descent of Adharma hangs from Brahma at row 0, so left alone it sits in the
+// first four rows among the devas with one ninety-row leap down to Kali. Widening
+// every link of it instead lets the line fall the whole height of the tree as a
+// slow thread, Irreligion to Hell, which is the shape it actually means: it is
+// not a succession in time at all, it is a lineage of causes, and its whole point
+// is that it arrives at the end of the world.
+//
+// It is placed so the line's LAST generation, Torment and Hell, lands one row
+// above Kalki, and Kalki keeps a row to himself below everything, alone. Kali
+// himself therefore stands three rows above Kalki rather than one; there is no
+// arrangement that puts him literally one row above without pushing his own
+// children, Death and Fear, past the end of the tree.
 const bottom = Math.max(...beside.values());
-setAnchor("Buddha", bottom + 1);
+padTo("Kali", bottom, ADHARMA_LINKS, "the descent of Adharma");
+// Nirriti fathered nobody and only took the two in; without a floor he sits at
+// the root of the tree with a long line down to his adopted children.
+setAnchor("Nirriti", rows().get("Dambha")! - 1);
+
 setAnchor("Kalki", bottom + 3);
 
 // ---------------------------------------------------------------------------

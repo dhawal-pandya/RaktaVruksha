@@ -193,36 +193,6 @@
       "name": "Saubhari",
       "color": "#bfae7a"
     },
-    "familyAvatarHamsa": {
-      "name": "Hamsa",
-      "color": "#dfe3ea",
-      "note": "Suspended: an avatar with no ancestry, floated beside Brahma's mind-born sons"
-    },
-    "familyAvatarHayagriva": {
-      "name": "Hayagriva",
-      "color": "#6fc7b8",
-      "note": "Suspended: an avatar with no ancestry, floated beside Brahma's mind-born sons"
-    },
-    "familyAvatarYajna": {
-      "name": "Yajna",
-      "color": "#c7b04a",
-      "note": "Suspended: an avatar with no ancestry, floated beside the Svayambhuva age"
-    },
-    "familyAvatarNaraNarayana": {
-      "name": "Nara-Narayana",
-      "color": "#7d9fd6",
-      "note": "Suspended: an avatar with no ancestry, floated beside the Svayambhuva age"
-    },
-    "familyAvatarRishabha": {
-      "name": "Rishabha",
-      "color": "#a3c46a",
-      "note": "Suspended: an avatar with no ancestry, floated beside the Svayambhuva age"
-    },
-    "familyAvatarPrithu": {
-      "name": "Prithu",
-      "color": "#cf7a52",
-      "note": "Suspended: an avatar with no ancestry, floated beside the Svayambhuva age"
-    },
     "familyAvatarKurma": {
       "name": "Kurma",
       "color": "#6a8f7a",
@@ -253,15 +223,15 @@
       "color": "#b8862b",
       "note": "Suspended: an avatar with no ancestry, floated beside Sagara"
     },
-    "familyAvatarBuddha": {
-      "name": "Buddha",
-      "color": "#d9a441",
-      "note": "Suspended: an avatar with no ancestry, floated beside the opening of the Kali age"
-    },
     "familyAvatarKalki": {
       "name": "Kalki",
       "color": "#9fb8e0",
       "note": "Suspended: an avatar with no ancestry, floated beside the close of the Kali age"
+    },
+    "familyAdharma": {
+      "name": "Adharma",
+      "color": "#5e4550",
+      "note": "The descent of Irreligion, SB 4.8.2-4: not a dynasty but a genealogy of vices"
     }
   },
   "people": [
@@ -10914,78 +10884,6 @@
       "divine": true
     },
     {
-      "id": "Hamsa",
-      "firstName": "Hamsa",
-      "lastName": "",
-      "gender": "male",
-      "alive": true,
-      "birthFamilyId": "familyAvatarHamsa",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "The swan, who came to Brahma and the Kumaras when they asked what the highest good was, and answered them. One of the two the later enumerations add to reach twenty-four. SB 11.13",
-      "divine": true,
-      "genAnchor": 1
-    },
-    {
-      "id": "Hayagriva",
-      "firstName": "Hayagriva",
-      "lastName": "",
-      "gender": "male",
-      "alive": true,
-      "birthFamilyId": "familyAvatarHayagriva",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "The horse-headed one, who killed the demon Madhu and brought the Vedas back from the bottom of the sea when they were stolen at the dissolution. The second of the two that make the count twenty-four. SB 2.7.11",
-      "divine": true,
-      "genAnchor": 1
-    },
-    {
-      "id": "Yajna",
-      "firstName": "Yajna",
-      "lastName": "",
-      "gender": "male",
-      "alive": true,
-      "birthFamilyId": "familyAvatarYajna",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "The seventh of the avatars: son of the Prajapati Ruchi and Akuti, daughter of Svayambhuva Manu. He was the Indra of that first manvantara, with his own sons the Yamas for demigods. SB 1.3.12",
-      "divine": true,
-      "genAnchor": 2
-    },
-    {
-      "id": "NaraNarayana",
-      "firstName": "Nara",
-      "lastName": "",
-      "gender": "male",
-      "alive": true,
-      "birthFamilyId": "familyAvatarNaraNarayana",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "The fourth of the avatars, counted as one though they are two: the twin sons of Dharma by Murti, who went to Badarikashrama and took on austerities no one has matched. Arjuna and Krishna are held to be these two returned, which is why the Gita is spoken between them. SB 1.3.9",
-      "divine": true,
-      "genAnchor": 2
-    },
-    {
-      "id": "Rishabha",
-      "firstName": "Rishabha",
-      "lastName": "",
-      "gender": "male",
-      "alive": true,
-      "birthFamilyId": "familyAvatarRishabha",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "The eighth of the avatars: son of Nabhi and Merudevi, who showed the path of perfection and then wandered the earth as an avadhuta, naked and silent, letting himself be taken for a madman. His eldest son Bharata gave Bharatavarsha its name. Not Vrishabha, Kartavirya's son. SB 1.3.13, 5.3-6",
-      "divine": true,
-      "genAnchor": 3
-    },
-    {
-      "id": "Prithu",
-      "firstName": "Prithu",
-      "lastName": "",
-      "gender": "male",
-      "alive": true,
-      "birthFamilyId": "familyAvatarPrithu",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "The ninth of the avatars: son of the wicked Vena, churned from his dead father's arm. When the earth withheld her yield he took up his bow against her, and she fled as a cow until she consented to be milked; he levelled her and taught her to be tilled, and she is Prithvi after him. Not Prithu of the solar line, nor Rucaka's son. SB 1.3.14, 4.15-23",
-      "divine": true,
-      "genAnchor": 4
-    },
-    {
       "id": "Kurma",
       "firstName": "Kurma",
       "lastName": "",
@@ -11058,18 +10956,6 @@
       "genAnchor": 41
     },
     {
-      "id": "Buddha",
-      "firstName": "Buddha",
-      "lastName": "",
-      "gender": "male",
-      "alive": true,
-      "birthFamilyId": "familyAvatarBuddha",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "The twenty-first of the avatars: born, the Purana says, to Anjana at Gaya at the beginning of Kali, to draw away by gentleness those who would have used the sacrifice for cruelty. The Bhagavata's own Ikshvaku list places him among the kings still to come, after Shakya and Shuddhoda, so the solar line runs on into him; those future kings are deliberately not in this tree, so he floats here instead. Not Anjana the mother of Hanuman. SB 1.3.24, 9.12.10-16",
-      "divine": true,
-      "genAnchor": 97
-    },
-    {
       "id": "Kalki",
       "firstName": "Kalki",
       "lastName": "",
@@ -11080,18 +10966,6 @@
       "notes": "The twenty-second and last: to be born to Vishnu Yasha in the village of Shambhala at the joint of two ages, when the kings have all turned to plunder, and to ride out on a white horse with a sword like a comet. The only avatar in this tree who has not happened. SB 1.3.25, 12.2",
       "divine": true,
       "genAnchor": 99
-    },
-    {
-      "id": "NarayanaRishi",
-      "firstName": "Narayana",
-      "lastName": "",
-      "gender": "male",
-      "alive": true,
-      "birthFamilyId": "familyAvatarNaraNarayana",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "The second of the twin sages, and the one Krishna is held to be returned as. SB 1.3.9",
-      "divine": true,
-      "genAnchor": 2
     },
     {
       "id": "Narada",
@@ -11147,6 +11021,157 @@
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "One of the four Kumaras, the first of the avatars. SB 1.3.6",
       "divine": true
+    },
+    {
+      "id": "Adharma",
+      "firstName": "Adharma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Irreligion, a son of Brahma, and the head of the only line in this tree that is not a dynasty. SB 4.8.2"
+    },
+    {
+      "id": "Mrisha",
+      "firstName": "Mrisha",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Falsity, wife of Irreligion. SB 4.8.2"
+    },
+    {
+      "id": "Dambha",
+      "firstName": "Dambha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Bluffing. He and his sister Maya were taken and raised by the demon Nirriti, who had no children of his own. SB 4.8.2"
+    },
+    {
+      "id": "MayaA",
+      "firstName": "Maya",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Cheating, sister of Bluffing, and with him the second generation of the descent. Not Maya the danava architect, Mandodari's father. SB 4.8.2"
+    },
+    {
+      "id": "Nirriti",
+      "firstName": "Nirriti",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The childless demon of decay and the south-west quarter, who took in Bluffing and Cheating and brought them up. SB 4.8.2",
+      "genAnchor": 38
+    },
+    {
+      "id": "Lobha",
+      "firstName": "Lobha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Greed. SB 4.8.3"
+    },
+    {
+      "id": "Nikriti",
+      "firstName": "Nikriti",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Cunning, sister of Greed. SB 4.8.3"
+    },
+    {
+      "id": "Krodha",
+      "firstName": "Krodha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Anger. Not Krodhavasha, Daksha's daughter and mother of the beasts. SB 4.8.3"
+    },
+    {
+      "id": "Himsa",
+      "firstName": "Himsa",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Violence, sister of Anger. SB 4.8.3"
+    },
+    {
+      "id": "Kali",
+      "firstName": "Kali",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The spirit of the age that bears his name, born of Anger and Violence. He entered Nala at the one moment his purity lapsed and cost him his kingdom, his wife and twelve years, and Parikshit caught him at the far end of this tree beating the bull of Dharma and, when he begged, allotted him gambling, drink, prostitution and slaughter, and then gold as well, because wherever there is gold there is also falsity, intoxication, lust, envy and enmity. SB 4.8.3, 1.17.38-39; MBh 3.55-56"
+    },
+    {
+      "id": "Durukti",
+      "firstName": "Durukti",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Harsh Speech, sister of Kali and mother of Death by him. SB 4.8.3"
+    },
+    {
+      "id": "Mrityu",
+      "firstName": "Mrityu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Death, son of Kali and Harsh Speech. SB 4.8.4"
+    },
+    {
+      "id": "Bhiti",
+      "firstName": "Bhiti",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Fear, sister of Death. SB 4.8.4"
+    },
+    {
+      "id": "Yatana",
+      "firstName": "Yatana",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Torment, daughter of Death and Fear. SB 4.8.4"
+    },
+    {
+      "id": "Niraya",
+      "firstName": "Niraya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAdharma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Hell, the last of the descent, seven generations below Brahma and one row above the horseman who ends the age. SB 4.8.4"
     },
     {
       "id": "Jayasena_2",
@@ -19063,6 +19088,130 @@
       "adoptedChildren": [],
       "familyId": "familyVanara",
       "status": "married",
+      "updatedAt": "2026-07-27T00:00:00.000Z"
+    },
+    {
+      "id": "u_brahma_adharma",
+      "partners": [
+        "Brahma"
+      ],
+      "children": [
+        "Adharma"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAdharma",
+      "status": "married",
+      "notes": "SB 4.8.2. Named in the verse right after Brahma's celibate sons, as the opposite of them.",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "childGap": 20
+    },
+    {
+      "id": "u_adharma_mrisha",
+      "partners": [
+        "Adharma",
+        "Mrisha"
+      ],
+      "children": [
+        "Dambha",
+        "MayaA"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAdharma",
+      "status": "married",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "childGap": 19
+    },
+    {
+      "id": "u_nirriti",
+      "partners": [
+        "Nirriti"
+      ],
+      "children": [],
+      "adoptedChildren": [
+        "Dambha",
+        "MayaA"
+      ],
+      "familyId": "familyAdharma",
+      "status": "married",
+      "notes": "Nirriti was childless and took them both. SB 4.8.2",
+      "updatedAt": "2026-07-27T00:00:00.000Z"
+    },
+    {
+      "id": "u_dambha_maya",
+      "partners": [
+        "Dambha",
+        "MayaA"
+      ],
+      "children": [
+        "Lobha",
+        "Nikriti"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAdharma",
+      "status": "partners",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "childGap": 19
+    },
+    {
+      "id": "u_lobha_nikriti",
+      "partners": [
+        "Lobha",
+        "Nikriti"
+      ],
+      "children": [
+        "Krodha",
+        "Himsa"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAdharma",
+      "status": "partners",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "childGap": 19
+    },
+    {
+      "id": "u_krodha_himsa",
+      "partners": [
+        "Krodha",
+        "Himsa"
+      ],
+      "children": [
+        "Kali",
+        "Durukti"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAdharma",
+      "status": "partners",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "childGap": 19
+    },
+    {
+      "id": "u_kali_durukti",
+      "partners": [
+        "Kali",
+        "Durukti"
+      ],
+      "children": [
+        "Mrityu",
+        "Bhiti"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAdharma",
+      "status": "partners",
+      "updatedAt": "2026-07-27T00:00:00.000Z"
+    },
+    {
+      "id": "u_mrityu_bhiti",
+      "partners": [
+        "Mrityu",
+        "Bhiti"
+      ],
+      "children": [
+        "Yatana",
+        "Niraya"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAdharma",
+      "status": "partners",
       "updatedAt": "2026-07-27T00:00:00.000Z"
     },
     {

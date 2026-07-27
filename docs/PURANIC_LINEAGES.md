@@ -721,7 +721,7 @@ Two collisions were already in the data and are fixed by this pass:
 | **Bhadrā** | Krishna's queen, Shrutakirti's daughter (`SB 10.58.56`) · two Yadava namesakes already in the tree |
 | **Lakṣmaṇā** | Krishna's queen, the Madra king's daughter (`SB 10.58.57`) · Duryodhana's daughter · Rama's brother, a different name entirely (Lakṣmaṇa) |
 | **Aṅga** | Dirghatamas's son, eponym of the Anga kingdom (`SB 9.23.5`) · Vena's father in the Svayambhuva line (`SB 4.13`) |
-| **Añjanā** | Hanuman's mother, the cursed apsara (`Rām 4.66`) · Buddha's mother at Gaya (`SB 1.3.24`) |
+| **Añjanā** | Hanuman's mother, the cursed apsara (`Rām 4.66`) · Buddha's mother at Gaya (`SB 1.3.24`), not in the tree |
 | **Matsya** | The avatar, the fish (`SB 1.3.15`) · the fish-born son of Uparichara Vasu, here `MatsyaKing` (`MBh 1.57`) |
 | **Ṛṣabha / Vṛṣabha** | The eighth avatar, Nabhi's son (`SB 1.3.13`) · Vṛṣabha, a surviving son of Kartavirya Arjuna, here `Vrishabha` (`SB 9.23.27`) |
 | **Nara** | Of Nara-Nārāyaṇa, the fourth avatar (`SB 1.3.9`) · Manyu's son in the Paurava line, Rantideva's grandfather (`SB 9.21.19`) |
@@ -788,8 +788,8 @@ child on the banyan leaf.
 (`SB 9.22.46-49`), and the dynasties of `SB 12.1`: Barhadratha, Pradyota, Śiśunāga,
 **Nanda**, **Maurya**, Śuṅga, Kaṇva, Āndhra. **The tree ends where the texts stop
 describing the past.** One consequence, recorded in VIII.2: Buddha is placed by
-`SB 9.12.10-16` after Śākya and Śuddhoda, and Kalki is given his father at `SB 12.2`, so
-with these lists out those two avatars can only float, which is what they do.
+`SB 9.12.10-16` after Śākya and Śuddhoda, so with that list out he has no place here at
+all and is left out; Kalki is given his father Viṣṇuyaśā at `SB 12.2.18` and floats alone.
 
 **The Ajamidha side branches** (`SB 9.21.25-31`): Bṛhadiṣu → ... → Brahmadatta →
 Viṣvaksena → Udaksena → Bhallāṭa, and Dvimīḍha → Yavīnara → ... → Bahuratha.
@@ -867,12 +867,12 @@ which list it is counting from rather than asserting a number.
 | 1 | The four **Kumāras** | `1.3.6` | connected, Brahmā's mind-born sons |
 | 2 | **Varāha**, the boar | `1.3.7` | suspended, beside Hiraṇyākṣa |
 | 3 | **Nārada** | `1.3.8` | connected, Brahmā's mind-born son |
-| 4 | **Nara and Nārāyaṇa** | `1.3.9` | suspended, the Svayambhuva age |
+| 4 | **Nara and Nārāyaṇa** | `1.3.9` | **not in the tree**, by decision |
 | 5 | **Kapila** | `1.3.10` | suspended, beside Sagara |
 | 6 | **Dattātreya** | `1.3.11` | connected, son of Atri and Anasūyā |
-| 7 | **Yajña** | `1.3.12` | suspended, the Svayambhuva age |
-| 8 | **Ṛṣabha** | `1.3.13` | suspended, the Svayambhuva age |
-| 9 | **Pṛthu** | `1.3.14` | suspended, the Svayambhuva age |
+| 7 | **Yajña** | `1.3.12` | **not in the tree**, by decision |
+| 8 | **Ṛṣabha** | `1.3.13` | **not in the tree**, by decision |
+| 9 | **Pṛthu** | `1.3.14` | **not in the tree**, by decision |
 | 10 | **Matsya**, the fish | `1.3.15` | suspended, beside Vaivasvata Manu |
 | 11 | **Kūrma**, the tortoise | `1.3.16` | suspended, the churning |
 | 12 | **Dhanvantari** | `1.3.17`, `9.17.4` | connected, the Kashi line |
@@ -884,12 +884,12 @@ which list it is counting from rather than asserting a number.
 | 18 | **Rāma** | `1.3.22` | connected, the Ikṣvākus |
 | 19 | **Balarāma** | `1.3.23` | connected, the Vṛṣṇis |
 | 20 | **Kṛṣṇa** | `1.3.23` | connected, the Vṛṣṇis |
-| 21 | **Buddha** | `1.3.24` | suspended, the opening of Kali |
+| 21 | **Buddha** | `1.3.24` | **not in the tree**, by decision |
 | 22 | **Kalki** | `1.3.25` | suspended, the close of Kali |
-| + | **Haṁsa** | `11.13` | suspended, the first kalpa |
-| + | **Hayagrīva** | `2.7.11` | suspended, the first kalpa |
+| + | **Haṁsa** | `11.13` | **not in the tree**, by decision |
+| + | **Hayagrīva** | `2.7.11` | **not in the tree**, by decision |
 
-**All twenty-eight records are marked `divine`.** For the connected ones the flag changes
+**Every avatar record in the tree is marked `divine`.** For the connected ones the flag changes
 only how they are drawn: every one is rooted in a real union, so, exactly as with Hanuman,
 their row never moves. Five of them (Rāma, Kṛṣṇa, Vāmana, Paraśurāma, Dattātreya) already
 carried the flag; **Balarāma, Dhanvantari and Vyāsa did not**, which was simply an
@@ -903,17 +903,21 @@ to, which is the same device that holds Raivata after his age in Brahma's hall a
 Mucukunda asleep through his. The anchor is measured off the person the avatar acts on, not
 picked:
 
+**Which avatars are here at all** is decided by one rule: **an avatar is in the tree if it
+touches somebody in the tree.** That keeps out the six whose whole story belongs to the
+Svāyambhuva age this tree does not carry (Yajña, Ṛṣabha, Pṛthu, Nara-Nārāyaṇa) or to the
+first kalpa before anything (Haṁsa, Hayagrīva), and Buddha, whose only placement is the
+future king-list that is ruled out. All of them stay on record in the table above and in
+Part VI; none of them is in the data.
+
 | Suspended at | Avatars |
 |---|---|
-| The first kalpa, level with Brahmā's mind-born sons | Haṁsa, Hayagrīva |
-| The Svāyambhuva age, which this tree does not carry | Yajña, Nara-Nārāyaṇa, Ṛṣabha, Pṛthu |
 | The churning of the ocean, Indra's generation | Kūrma, Mohinī |
 | Beside Vaivasvata Manu, whose boat he drew | Matsya |
 | Beside Hiraṇyākṣa, whom he killed | Varāha |
 | Beside Hiraṇyakaśipu, whom he killed | Nṛsiṁha |
 | Beside Sagara, whose sons he burned | Kapila |
-| Below the last of Janamejaya's line | Buddha |
-| Three rows below that, alone at the foot of the tree | Kalki |
+| Three rows below the last of Janamejaya's line, alone | Kalki |
 
 **Each suspended avatar has a family and a colour of its own**, because none of them shares
 a genealogy with anything else here; the connected ones keep their house's colour, since
@@ -939,8 +943,60 @@ interesting fact:
   Bhīṣma, Droṇa and Karṇa.
 - **Rāma** killed **Rāvaṇa**.
 - **Kṛṣṇa** and **Balarāma** in the house of Vṛṣṇi.
-- **Buddha** and **Kalki** are the two that touch nothing: both are reachable only through
-  the Kali-yuga king-lists, which are deliberately not in this tree (Part VI). They float.
+- **Buddha** is **not in this tree at all**, by decision. He touches nothing here: the only
+  thing that would place him is the Ikshvaku future list, which is ruled out (Part VI).
+- **Kalki** touches nothing either, and stands alone at the foot of the tree, three rows
+  below the last of Janamejaya's line with those rows left empty. He is the only person in
+  this tree who has not happened yet, and the only one who has a level to himself.
+
+---
+
+# Part IX. The descent of Adharma
+
+`SB 4.8.2-4`, read. The one branch of this tree that is not a dynasty.
+
+Sukadeva gives it in three verses, immediately after naming Brahma's celibate sons, as
+their exact opposite: **another son of Brahma was Irreligion**, and from him a line of
+vices descends by brother-sister pairs, seven generations, ending in Hell.
+
+| Generation | Pair |
+|---|---|
+| 1 | **Adharma** (Irreligion) + **Mṛṣā** (Falsity) |
+| 2 | **Dambha** (Bluffing) + **Māyā** (Cheating) |
+| 3 | **Lobha** (Greed) + **Nikṛti** (Cunning) |
+| 4 | **Krodha** (Anger) + **Hiṁsā** (Violence) |
+| 5 | **Kali** + **Durukti** (Harsh Speech) |
+| 6 | **Mṛtyu** (Death) + **Bhīti** (Fear) |
+| 7 | **Yātanā** (Torment) + **Niraya** (Hell) |
+
+Every step is *"from their combination were born"*, so each generation in the data is a
+union of the previous generation's brother and sister. **Nirṛti**, a demon with no children
+of his own, took in Dambha and Māyā and raised them, so he is in the tree as their adoptive
+father (`SB 4.8.2`).
+
+Note the namesakes: this **Māyā** is not Maya the danava architect, Mandodari's father, and
+is `MayaA` here; this **Krodha** is not Krodhavaśā, Daksha's daughter and mother of the
+beasts of the wild.
+
+## IX.1 Where it stands, and why
+
+The line hangs from **Brahma at row 0** and its last generation sits at **row 98**, one row
+above Kalki. It is stretched across the whole height of the tree rather than left bunched
+in the first four rows, and that is a deliberate reading rather than a claim about time:
+this is not a succession of kings, it is a genealogy of causes, and its whole meaning is
+that it arrives at the end of the world. So it falls as a slow thread, roughly nineteen
+rows to a step, Irreligion at 20, Bluffing at 39, Greed at 58, Anger at 77, **Kali at 96**,
+Death at 97, **Hell at 98**.
+
+Below that, alone on a row of his own with nothing else anywhere near him, **Kalki at 99**.
+The age and the horseman who ends it are the last two things in the tree.
+
+Kali touches the tree twice more, and both are in his note rather than as edges. He entered
+**Nala** at the one moment his purity lapsed, and it cost him his kingdom, his wife and
+twelve years (`MBh 3.55-56`). And at the far end, **Parikshit** caught him beating the bull
+of Dharma and, when he begged for somewhere to live, allotted him gambling, drink,
+prostitution and slaughter, and then gold as well, *"because wherever there is gold there is
+also falsity, intoxication, lust, envy and enmity"* (`SB 1.17.38-39`).
 
 ---
 
@@ -956,6 +1012,8 @@ interesting fact:
 - Mahābhārata: Vana Parva 50-78 (Nalopākhyāna), Udyoga Parva 104-121 (Gālavacarita),
   Ādi Parva 57, 63 (Uparichara Vasu, Satyavati)
 - Aitareya Brāhmaṇa 7.13-18 (Śunaḥśepha)
+- Śrīmad-Bhāgavatam 1.3 (the avatars), 1.17 (Kali and Parikshit), 4.8 (the descent of
+  Adharma) and 12.2 (Kalki), all read for Parts VIII and IX
 - Brahmāṇḍa Purāṇa 3.7.215-221 (the house of Kishkindha past the war)
 - Vettam Mani, *Purāṇic Encyclopaedia* (Motilal Banarsidass, 1975), used to check the
   Mahabharata and Ramayana attributions in Part VII
