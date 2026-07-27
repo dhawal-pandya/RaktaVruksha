@@ -192,6 +192,76 @@
     "familySaubhari": {
       "name": "Saubhari",
       "color": "#bfae7a"
+    },
+    "familyAvatarHamsa": {
+      "name": "Hamsa",
+      "color": "#dfe3ea",
+      "note": "Suspended: an avatar with no ancestry, floated beside Brahma's mind-born sons"
+    },
+    "familyAvatarHayagriva": {
+      "name": "Hayagriva",
+      "color": "#6fc7b8",
+      "note": "Suspended: an avatar with no ancestry, floated beside Brahma's mind-born sons"
+    },
+    "familyAvatarYajna": {
+      "name": "Yajna",
+      "color": "#c7b04a",
+      "note": "Suspended: an avatar with no ancestry, floated beside the Svayambhuva age"
+    },
+    "familyAvatarNaraNarayana": {
+      "name": "Nara-Narayana",
+      "color": "#7d9fd6",
+      "note": "Suspended: an avatar with no ancestry, floated beside the Svayambhuva age"
+    },
+    "familyAvatarRishabha": {
+      "name": "Rishabha",
+      "color": "#a3c46a",
+      "note": "Suspended: an avatar with no ancestry, floated beside the Svayambhuva age"
+    },
+    "familyAvatarPrithu": {
+      "name": "Prithu",
+      "color": "#cf7a52",
+      "note": "Suspended: an avatar with no ancestry, floated beside the Svayambhuva age"
+    },
+    "familyAvatarKurma": {
+      "name": "Kurma",
+      "color": "#6a8f7a",
+      "note": "Suspended: an avatar with no ancestry, floated beside the churning of the ocean"
+    },
+    "familyAvatarMohini": {
+      "name": "Mohini",
+      "color": "#e07ab0",
+      "note": "Suspended: an avatar with no ancestry, floated beside the churning of the ocean"
+    },
+    "familyAvatarMatsya": {
+      "name": "Matsya",
+      "color": "#4aa8d8",
+      "note": "Suspended: an avatar with no ancestry, floated beside Vaivasvata Manu"
+    },
+    "familyAvatarVaraha": {
+      "name": "Varaha",
+      "color": "#8b5e3c",
+      "note": "Suspended: an avatar with no ancestry, floated beside Hiranyaksha"
+    },
+    "familyAvatarNarasimha": {
+      "name": "Narasimha",
+      "color": "#e0913a",
+      "note": "Suspended: an avatar with no ancestry, floated beside Hiranyakashipu"
+    },
+    "familyAvatarKapila": {
+      "name": "Kapila",
+      "color": "#b8862b",
+      "note": "Suspended: an avatar with no ancestry, floated beside Sagara"
+    },
+    "familyAvatarBuddha": {
+      "name": "Buddha",
+      "color": "#d9a441",
+      "note": "Suspended: an avatar with no ancestry, floated beside the opening of the Kali age"
+    },
+    "familyAvatarKalki": {
+      "name": "Kalki",
+      "color": "#9fb8e0",
+      "note": "Suspended: an avatar with no ancestry, floated beside the close of the Kali age"
     }
   },
   "people": [
@@ -656,8 +726,9 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Krishna Dvaipayana Vyasa, son of Satyavati and the sage Parashara before her marriage; arranger of the Vedas and composer of the Mahabharat. Biological father, through niyoga, of Dhritarashtra, Pandu and Vidura."
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Born to Satyavati by Parashara on an island in the Yamuna, hence Krishna Dvaipayana. He divided the one Veda into four because the age had grown too dull to hold it whole, fathered Dhritarashtra, Pandu and Vidura by niyoga, and composed the epic his own descendants are the cast of. The seventeenth of the avatars, SB 1.3.21.",
+      "divine": true
     },
     {
       "id": "Chitrangada",
@@ -2361,8 +2432,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Vasudeva and Devaki; the eighth child, an avatar of Vishnu, spirited to Gokula the night he was born. Counsellor and charioteer of Arjuna, speaker of the Bhagavad Gita. Beyond his eight principal queens (the Ashtabharya) he wed the sixteen thousand one hundred women he freed from the demon Narakasura's captivity, giving each of them honour and a home.",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Eighth son of Vasudeva and Devaki, carried across the Yamuna the night he was born and raised by Nanda and Yashoda in Gokula. Of the whole list the Bhagavata sets him apart: krsnas tu bhagavan svayam, the others are portions and portions of portions, and he is the source Himself. The twentieth of the avatars, SB 1.3.23 and 1.3.28.",
       "divine": true
     },
     {
@@ -2372,8 +2443,9 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Elder half-brother of Krishna, son of Rohini; wielder of the plough and mace, teacher of both Bhima and Duryodhana."
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Elder brother of Krishna, carried from Devaki's womb into Rohini's, and counted with him as the nineteenth and twentieth descents, born in the house of Vrishni to take the burden off the earth. He carried the plough and the pestle, taught both Duryodhana and Bhima the mace, and would take neither side in the war. The nineteenth of the avatars, SB 1.3.23.",
+      "divine": true
     },
     {
       "id": "Subhadra",
@@ -3444,15 +3516,13 @@
     },
     {
       "id": "Dilipa",
-      "firstName": "Dilipa",
+      "firstName": "Dilipa (Dirghabahu)",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Dilipa II, also Dirghabahu, son of Khatvanga. The ideal king of Kalidasa's Raghuvamsha, whose service of the divine cow Nandini won him his son Raghu. SB 9.10.1",
-      "altName": "Dirghabahu",
-      "altGender": "male"
+      "notes": "Dilipa II, also Dirghabahu, son of Khatvanga. The ideal king of Kalidasa's Raghuvamsha, whose service of the divine cow Nandini won him his son Raghu. SB 9.10.1"
     },
     {
       "id": "Raghu",
@@ -3541,8 +3611,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Eldest son of Dasharatha, by Kausalya; the seventh avatar of Vishnu, exiled fourteen years, who slew Ravana to win back Sita.",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Eldest son of Dasharatha and Kausalya of the solar line. He bound the ocean and killed Ravana, and the Purana counts him the eighteenth descent. The eighteenth of the avatars, SB 1.3.22.",
       "divine": true
     },
     {
@@ -4020,15 +4090,13 @@
     },
     {
       "id": "Anjana",
-      "firstName": "Anjana",
+      "firstName": "Anjana (Punjikasthala)",
       "lastName": "",
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyVanara",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "The apsara Punjikasthala, called Managarva in the Puranic account, cursed into the body of a vanara and born a princess of Kishkindha. She and Kesari propitiated Vayu for a son and got Hanuman. Rama 4.66; Puranic Encyclopaedia, Anjana",
-      "altName": "Punjikasthala",
-      "altGender": "female"
+      "notes": "The apsara Punjikasthala, called Managarva in the Puranic account, cursed into the body of a vanara and born a princess of Kishkindha. She and Kesari propitiated Vayu for a son and got Hanuman. Rama 4.66; Puranic Encyclopaedia, Anjana"
     },
     {
       "id": "Hanuman",
@@ -5117,8 +5185,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyAditya",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "The dwarf Aditya, avatar of Vishnu, who measured the three worlds from Bali.",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The dwarf brahmin who came to Bali's sacrifice and asked for three steps of ground, then took the earth with one and the sky with the second, and set the third on Bali's own head. Son of Kashyapa and Aditi, and so a brother of Indra, whose lost heaven he was recovering. The fifteenth of the avatars, SB 1.3.19.",
       "divine": true
     },
     {
@@ -5497,8 +5565,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyBhargava",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "The axe-wielding Bhargava, avatar of Vishnu; a chiranjivi who taught Bhishma, Drona and Karna and ranged across the ages.",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Rama of the axe, called Bhrigupati for his house. He killed Kartavirya Arjuna over the stolen cow and then cleared the earth of kshatriyas twenty-one times, and lived on to teach Bhishma, Drona and Karna, three ages of this tree apart. The sixteenth of the avatars, SB 1.3.20.",
       "divine": true
     },
     {
@@ -5541,8 +5609,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "Son of Atri and Anasuya; an avatar uniting Brahma, Vishnu and Shiva.",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Son of Atri and Anasuya, born because she prayed for an incarnation. He gave the teaching of transcendence to Alarka, to Prahlada and to Kartavirya Arjuna, all three of whom stand in this tree, and the mystic perfections he gave Kartavirya are what made that king unkillable by anyone but Parashurama. The sixth of the avatars, SB 1.3.11.",
       "divine": true
     },
     {
@@ -5939,15 +6007,13 @@
     },
     {
       "id": "NalaNishadha",
-      "firstName": "Nala",
+      "firstName": "Nala (Bahuka)",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyNishadha",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King of Nishadha, son of Virasena. Master of horses and of cookery, and beloved of Damayanti before either had seen the other. Possessed by Kali, he gambled his kingdom away to his brother Pushkara, abandoned Damayanti in the forest, and lived disfigured as Bahuka, charioteer and cook to Rituparna of Ayodhya, until the science of horses he traded for the science of dice gave him both back. MBh 3.50-78",
-      "altName": "Bahuka",
-      "altGender": "male",
       "genAnchor": 74
     },
     {
@@ -5963,15 +6029,13 @@
     },
     {
       "id": "Nalayani",
-      "firstName": "Nalayani",
+      "firstName": "Nalayani (Indrasena)",
       "lastName": "",
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyNishadha",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Also called Indrasena; daughter of Nala and Damayanti, wife of Mudgala.",
-      "altName": "Indrasena",
-      "altGender": "female"
+      "notes": "Also called Indrasena; daughter of Nala and Damayanti, wife of Mudgala."
     },
     {
       "id": "Maudgalya",
@@ -7111,27 +7175,23 @@
     },
     {
       "id": "Vikukshi",
-      "firstName": "Vikukshi",
+      "firstName": "Vikukshi (Shashada)",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Eldest of Ikshvaku's hundred sons. Banished for eating a hare from the sacrificial offering, hence Shashada, the hare-eater; recalled to the throne at his father's death. SB 9.6.6-8",
-      "altName": "Shashada",
-      "altGender": "male"
+      "notes": "Eldest of Ikshvaku's hundred sons. Banished for eating a hare from the sacrificial offering, hence Shashada, the hare-eater; recalled to the throne at his father's death. SB 9.6.6-8"
     },
     {
       "id": "Puranjaya",
-      "firstName": "Puranjaya",
+      "firstName": "Puranjaya (Kakutstha)",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Fought the demons for the devas mounted on Indra, who had taken the form of a bull: seated on its hump he is Kakutstha, and as the vehicle of Indra, Indravaha. SB 9.6.11-15",
-      "altName": "Kakutstha",
-      "altGender": "male"
+      "notes": "Fought the demons for the devas mounted on Indra, who had taken the form of a bull: seated on its hump he is Kakutstha, and as the vehicle of Indra, Indravaha. SB 9.6.11-15"
     },
     {
       "id": "Anena",
@@ -7205,15 +7265,13 @@
     },
     {
       "id": "Kuvalayashva",
-      "firstName": "Kuvalayashva",
+      "firstName": "Kuvalayashva (Dhundhumara)",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Killed the demon Dhundhu with twenty-one thousand sons at his side, and took the name Dhundhumara, slayer of Dhundhu. All but three of the sons burned in the fire the demon breathed. SB 9.6.21-24",
-      "altName": "Dhundhumara",
-      "altGender": "male"
+      "notes": "Killed the demon Dhundhu with twenty-one thousand sons at his side, and took the name Dhundhumara, slayer of Dhundhu. All but three of the sons burned in the fire the demon breathed. SB 9.6.21-24"
     },
     {
       "id": "Dridhashva",
@@ -7347,15 +7405,13 @@
     },
     {
       "id": "Trishanku",
-      "firstName": "Trishanku",
+      "firstName": "Trishanku (Satyavrata)",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Cursed by his own father into a chandala for carrying off a brahmin's bride at her wedding. Vishvamitra sent him bodily to heaven; the devas threw him back; Vishvamitra stopped him mid-fall, and he hangs there yet, head downward. SB 9.7.5-6",
-      "altName": "Satyavrata",
-      "altGender": "male"
+      "notes": "Cursed by his own father into a chandala for carrying off a brahmin's bride at her wedding. Vishvamitra sent him bodily to heaven; the devas threw him back; Vishvamitra stopped him mid-fall, and he hangs there yet, head downward. SB 9.7.5-6"
     },
     {
       "id": "Rohita",
@@ -7429,15 +7485,13 @@
     },
     {
       "id": "Bahuka",
-      "firstName": "Bahuka",
+      "firstName": "Bahuka (Asita)",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Driven out by his enemies, he died in the forest. His pregnant widow was poisoned by her co-wives but the child was born alive, carrying the poison: sa-gara. SB 9.8.2-5",
-      "altName": "Asita",
-      "altGender": "male"
+      "notes": "Driven out by his enemies, he died in the forest. His pregnant widow was poisoned by her co-wives but the child was born alive, carrying the poison: sa-gara. SB 9.8.2-5"
     },
     {
       "id": "DilipaI",
@@ -7521,15 +7575,13 @@
     },
     {
       "id": "Saudasa",
-      "firstName": "Saudasa",
+      "firstName": "Saudasa (Kalmashapada)",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Also Mitrasaha. Cursed by Vasishtha into a rakshasa; in that state he devoured a brahmin, and the widow cursed him to die at his next embrace. Twelve years sonless, he let Vasishtha beget his heir on his queen Madayanti. SB 9.9.20-38",
-      "altName": "Kalmashapada",
-      "altGender": "male"
+      "notes": "Also Mitrasaha. Cursed by Vasishtha into a rakshasa; in that state he devoured a brahmin, and the widow cursed him to die at his next embrace. Twelve years sonless, he let Vasishtha beget his heir on his queen Madayanti. SB 9.9.20-38"
     },
     {
       "id": "Ashmaka",
@@ -7543,15 +7595,13 @@
     },
     {
       "id": "Balika",
-      "firstName": "Balika",
+      "firstName": "Balika (Mulaka)",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Survived Parashurama's purge of the kshatriyas screened by a ring of women, hence Narikavacha, armoured in women; and because the kshatriyas began again from him, Mulaka, the root. SB 9.9.39-40",
-      "altName": "Mulaka",
-      "altGender": "male"
+      "notes": "Survived Parashurama's purge of the kshatriyas screened by a ring of women, hence Narikavacha, armoured in women; and because the kshatriyas began again from him, Mulaka, the root. SB 9.9.39-40"
     },
     {
       "id": "DasharathaI",
@@ -7825,15 +7875,13 @@
     },
     {
       "id": "MithiJanaka",
-      "firstName": "Janaka",
+      "firstName": "Janaka (Mithi)",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyVideha",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Born of no womb, from the churning of his father's body: hence Vaideha, the bodiless-born, and Mithi, the churned, and Mithila for the city he founded. Every king of this line is called Janaka after him. SB 9.13.12-13",
-      "altName": "Mithi",
-      "altGender": "male"
+      "notes": "Born of no womb, from the churning of his father's body: hence Vaideha, the bodiless-born, and Mithi, the churned, and Mithila for the city he founded. Every king of this line is called Janaka after him. SB 9.13.12-13"
     },
     {
       "id": "Udavasu",
@@ -8210,15 +8258,13 @@
     },
     {
       "id": "Shunahshepha",
-      "firstName": "Shunahshepha",
+      "firstName": "Shunahshepha (Devarata)",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyBrahma",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "Bought by Rohita to die in his place, he praised the devas from the stake until his bonds fell away. Vishvamitra adopted him as Devarata, god-given, over the protests of his own sons. His brothers were Shunahpuccha and Shunolangula. SB 9.7.20-26; AB 7.13-18",
-      "altName": "Devarata",
-      "altGender": "male",
       "genAnchor": 33
     },
     {
@@ -8413,15 +8459,13 @@
     },
     {
       "id": "Vitatha",
-      "firstName": "Vitatha",
+      "firstName": "Vitatha (Bharadvaja)",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySoma",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Bharata's sacrifices gave him no worthy heir, and Bharadvaja, the son Brihaspati begot on Mamata, was given to him instead: given away he is Vitatha, the one who was otherwise. The same sage appears in this tree in his own right, in the Angirasa line, as the father of Drona. SB 9.20.37-38",
-      "altName": "Bharadvaja",
-      "altGender": "male"
+      "notes": "Bharata's sacrifices gave him no worthy heir, and Bharadvaja, the son Brihaspati begot on Mamata, was given to him instead: given away he is Vitatha, the one who was otherwise. The same sage appears in this tree in his own right, in the Angirasa line, as the father of Drona. SB 9.20.37-38"
     },
     {
       "id": "Manyu",
@@ -8771,7 +8815,8 @@
       "alive": true,
       "birthFamilyId": "familyKashi",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Who brought medicine into the world: the founder of Ayurveda, and a shaktyavesha incarnation of Vasudeva. Merely remembering him, the Purana says, quiets disease. SB 9.17.4"
+      "notes": "He rose from the churned ocean carrying the pot of nectar, and was born again in the Kashi line of Kshatravriddha to bring medicine into the world: the founder of Ayurveda. Merely remembering him, the Purana says, quiets disease. The twelfth of the avatars, SB 1.3.17 and 9.17.4.",
+      "divine": true
     },
     {
       "id": "Ketuman",
@@ -8805,15 +8850,13 @@
     },
     {
       "id": "Pratardana",
-      "firstName": "Pratardana",
+      "firstName": "Pratardana (Dyuman)",
       "lastName": "",
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKashi",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Son of Divodasa of Kashi by Madhavi; called also Shatrujit, Vatsa, Ritadhvaja and Kuvalayashva. SB 9.17.5-6; MBh 5.113",
-      "altName": "Dyuman",
-      "altGender": "male"
+      "notes": "Son of Divodasa of Kashi by Madhavi; called also Shatrujit, Vatsa, Ritadhvaja and Kuvalayashva. SB 9.17.5-6; MBh 5.113"
     },
     {
       "id": "Alarka",
@@ -10868,6 +10911,241 @@
       "birthFamilyId": null,
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "The deva of fire, who carries the offering. Father of the vanara Nila, whose effulgence the epic says was his father's. Rama 1.17",
+      "divine": true
+    },
+    {
+      "id": "Hamsa",
+      "firstName": "Hamsa",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAvatarHamsa",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The swan, who came to Brahma and the Kumaras when they asked what the highest good was, and answered them. One of the two the later enumerations add to reach twenty-four. SB 11.13",
+      "divine": true,
+      "genAnchor": 1
+    },
+    {
+      "id": "Hayagriva",
+      "firstName": "Hayagriva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAvatarHayagriva",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The horse-headed one, who killed the demon Madhu and brought the Vedas back from the bottom of the sea when they were stolen at the dissolution. The second of the two that make the count twenty-four. SB 2.7.11",
+      "divine": true,
+      "genAnchor": 1
+    },
+    {
+      "id": "Yajna",
+      "firstName": "Yajna",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAvatarYajna",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The seventh of the avatars: son of the Prajapati Ruchi and Akuti, daughter of Svayambhuva Manu. He was the Indra of that first manvantara, with his own sons the Yamas for demigods. SB 1.3.12",
+      "divine": true,
+      "genAnchor": 2
+    },
+    {
+      "id": "NaraNarayana",
+      "firstName": "Nara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAvatarNaraNarayana",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The fourth of the avatars, counted as one though they are two: the twin sons of Dharma by Murti, who went to Badarikashrama and took on austerities no one has matched. Arjuna and Krishna are held to be these two returned, which is why the Gita is spoken between them. SB 1.3.9",
+      "divine": true,
+      "genAnchor": 2
+    },
+    {
+      "id": "Rishabha",
+      "firstName": "Rishabha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAvatarRishabha",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The eighth of the avatars: son of Nabhi and Merudevi, who showed the path of perfection and then wandered the earth as an avadhuta, naked and silent, letting himself be taken for a madman. His eldest son Bharata gave Bharatavarsha its name. Not Vrishabha, Kartavirya's son. SB 1.3.13, 5.3-6",
+      "divine": true,
+      "genAnchor": 3
+    },
+    {
+      "id": "Prithu",
+      "firstName": "Prithu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAvatarPrithu",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The ninth of the avatars: son of the wicked Vena, churned from his dead father's arm. When the earth withheld her yield he took up his bow against her, and she fled as a cow until she consented to be milked; he levelled her and taught her to be tilled, and she is Prithvi after him. Not Prithu of the solar line, nor Rucaka's son. SB 1.3.14, 4.15-23",
+      "divine": true,
+      "genAnchor": 4
+    },
+    {
+      "id": "Kurma",
+      "firstName": "Kurma",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAvatarKurma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The eleventh of the avatars: the tortoise whose shell held Mandara up as the devas and asuras churned the ocean with it. Everything that came out of that churning stands in this tree, Surabhi, Airavata, Varuni, and Dhanvantari with the pot of nectar. SB 1.3.16, 8.7",
+      "divine": true,
+      "genAnchor": 3
+    },
+    {
+      "id": "Mohini",
+      "firstName": "Mohini",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAvatarMohini",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The thirteenth of the avatars, and the only one in the form of a woman: she took the nectar from the asuras by charm alone and served it to the devas, which is the whole reason Rahu and Ketu, both here, are two halves of one severed body. SB 1.3.17, 8.8-9",
+      "divine": true,
+      "genAnchor": 3
+    },
+    {
+      "id": "Matsya",
+      "firstName": "Matsya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAvatarMatsya",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The tenth of the avatars: the fish that grew until no water could hold it, and at the deluge that ended the Chakshusha age drew Manu's boat by a rope of serpent through the flood. Every line in this tree runs down from the man in that boat. SB 1.3.15, 8.24",
+      "divine": true,
+      "genAnchor": 5
+    },
+    {
+      "id": "Varaha",
+      "firstName": "Varaha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAvatarVaraha",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The second of the avatars: the boar who lifted the earth out of the waters on his tusks and killed Hiranyaksha, who had rolled her down there. On the earth herself he fathered Naraka, who stands in this tree with Bhagadatta. SB 1.3.7, 3.13-19",
+      "divine": true,
+      "genAnchor": 3
+    },
+    {
+      "id": "Narasimha",
+      "firstName": "Narasimha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAvatarNarasimha",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The fourteenth of the avatars: neither man nor lion, at neither day nor night, on neither earth nor sky, killing Hiranyakashipu with no weapon on the threshold of his own hall, because the boon had covered everything else. He came for Prahlada, who is here as the demon's son. SB 1.3.18, 7.8",
+      "divine": true,
+      "genAnchor": 3
+    },
+    {
+      "id": "Kapila",
+      "firstName": "Kapila",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAvatarKapila",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The fifth of the avatars: son of Kardama and Devahuti, daughter of Svayambhuva Manu, and the founder of Sankhya. Sagara's sixty thousand sons dug the earth open looking for their horse, found it beside him at his meditation, took him for the thief, and were ash before they finished the thought. Amshuman came after them and learned that only the Ganga could redeem them, which is the errand Bhagiratha finally completed. SB 1.3.10, 9.8",
+      "divine": true,
+      "genAnchor": 41
+    },
+    {
+      "id": "Buddha",
+      "firstName": "Buddha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAvatarBuddha",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The twenty-first of the avatars: born, the Purana says, to Anjana at Gaya at the beginning of Kali, to draw away by gentleness those who would have used the sacrifice for cruelty. The Bhagavata's own Ikshvaku list places him among the kings still to come, after Shakya and Shuddhoda, so the solar line runs on into him; those future kings are deliberately not in this tree, so he floats here instead. Not Anjana the mother of Hanuman. SB 1.3.24, 9.12.10-16",
+      "divine": true,
+      "genAnchor": 97
+    },
+    {
+      "id": "Kalki",
+      "firstName": "Kalki",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAvatarKalki",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The twenty-second and last: to be born to Vishnu Yasha in the village of Shambhala at the joint of two ages, when the kings have all turned to plunder, and to ride out on a white horse with a sword like a comet. The only avatar in this tree who has not happened. SB 1.3.25, 12.2",
+      "divine": true,
+      "genAnchor": 99
+    },
+    {
+      "id": "NarayanaRishi",
+      "firstName": "Narayana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAvatarNaraNarayana",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The second of the twin sages, and the one Krishna is held to be returned as. SB 1.3.9",
+      "divine": true,
+      "genAnchor": 2
+    },
+    {
+      "id": "Narada",
+      "firstName": "Narada",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "The third of the avatars, SB 1.3.8. Mind-born son of Brahma, who walks through every age of this tree and sets half of it moving: he sends Kalayavana at Mathura, curses Kubera's sons into a pair of trees, teaches Dhruva and Prahlada, and gathers the parts of the Veda that are about devotion alone. SB 1.3.8",
+      "divine": true
+    },
+    {
+      "id": "Sanaka",
+      "firstName": "Sanaka",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Eldest of the four Kumaras, the first of the avatars: Brahma's mind-born sons, who refused to father anything and stayed four boys for ever, in a vow of celibacy older than the world. SB 1.3.6, 3.15",
+      "divine": true
+    },
+    {
+      "id": "Sananda",
+      "firstName": "Sananda",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "One of the four Kumaras, the first of the avatars. SB 1.3.6",
+      "divine": true
+    },
+    {
+      "id": "Sanatana",
+      "firstName": "Sanatana",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "One of the four Kumaras, the first of the avatars. SB 1.3.6",
+      "divine": true
+    },
+    {
+      "id": "Sanatkumara",
+      "firstName": "Sanatkumara",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "One of the four Kumaras, the first of the avatars. SB 1.3.6",
       "divine": true
     },
     {
@@ -13581,12 +13859,17 @@
         "Angiras",
         "Bhrigu",
         "Vasishtha",
-        "Kamadeva"
+        "Kamadeva",
+        "Narada",
+        "Sanaka",
+        "Sananda",
+        "Sanatana",
+        "Sanatkumara"
       ],
       "adoptedChildren": [],
       "familyId": "familyBrahma",
       "status": "married",
-      "updatedAt": "2026-07-22T00:00:00.000Z"
+      "updatedAt": "2026-07-27T00:00:00.000Z"
     },
     {
       "id": "u_marichi",

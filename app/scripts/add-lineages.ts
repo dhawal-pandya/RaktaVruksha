@@ -72,14 +72,13 @@ const person = (id: string, spec: PersonSpec = {}): string => {
   created.add(id);
   const p: PersonRecord = {
     id,
-    firstName: spec.name ?? id,
+    firstName: spec.alt ? `${spec.name ?? id} (${spec.alt})` : (spec.name ?? id),
     lastName: "",
     gender: spec.gender ?? "male",
     alive: true,
     birthFamilyId: spec.family === undefined ? null : spec.family,
     updatedAt: STAMP,
     ...(spec.note ? { notes: spec.note } : {}),
-    ...(spec.alt ? { altName: spec.alt, altGender: spec.gender ?? "male" } : {}),
     ...(typeof spec.anchor === "number" ? { genAnchor: spec.anchor } : {}),
   };
   data.people.push(p);
@@ -338,8 +337,7 @@ note("Dilipa",
   "Dilipa II, also Dirghabahu, son of Khatvanga. The ideal king of Kalidasa's Raghuvamsha, whose service of the divine cow Nandini won him his son Raghu. SB 9.10.1");
 const dilipa = peopleById.get("Dilipa");
 if (dilipa) {
-  dilipa.altName = "Dirghabahu";
-  dilipa.altGender = "male";
+  dilipa.firstName = "Dilipa (Dirghabahu)";
   dilipa.updatedAt = STAMP;
 }
 
@@ -1073,8 +1071,7 @@ for (const [id, name, n] of [
 const nalaP = peopleById.get("NalaNishadha");
 if (nalaP) {
   nalaP.birthFamilyId = NISHADHA;
-  nalaP.altName = "Bahuka";
-  nalaP.altGender = "male";
+  nalaP.firstName = "Nala (Bahuka)";
   nalaP.notes =
     "King of Nishadha, son of Virasena. Master of horses and of cookery, and beloved of Damayanti before either had seen the other. Possessed by Kali, he gambled his kingdom away to his brother Pushkara, abandoned Damayanti in the forest, and lived disfigured as Bahuka, charioteer and cook to Rituparna of Ayodhya, until the science of horses he traded for the science of dice gave him both back. MBh 3.50-78";
   nalaP.updatedAt = STAMP;
@@ -1087,8 +1084,7 @@ if (nalaU) {
 const nalayani = peopleById.get("Nalayani");
 if (nalayani) {
   nalayani.birthFamilyId = NISHADHA;
-  nalayani.altName = "Indrasena";
-  nalayani.altGender = "female";
+  nalayani.firstName = "Nalayani (Indrasena)";
   nalayani.updatedAt = STAMP;
 }
 
@@ -1173,8 +1169,7 @@ if (hanumanP) {
 
 const anjanaP = peopleById.get("Anjana");
 if (anjanaP) {
-  anjanaP.altName = "Punjikasthala";
-  anjanaP.altGender = "female";
+  anjanaP.firstName = "Anjana (Punjikasthala)";
   anjanaP.notes =
     "The apsara Punjikasthala, called Managarva in the Puranic account, cursed into the body of a vanara and born a princess of Kishkindha. She and Kesari propitiated Vayu for a son and got Hanuman. Rama 4.66; Puranic Encyclopaedia, Anjana";
   anjanaP.updatedAt = STAMP;
@@ -1231,6 +1226,134 @@ const nalaV = peopleById.get("Nala");
 if (nalaV) { nalaV.divineParents = ["Vishvakarma"]; nalaV.updatedAt = STAMP; }
 const nilaV = peopleById.get("Nila");
 if (nilaV) { nilaV.divineParents = ["Agni"]; nilaV.updatedAt = STAMP; }
+
+// ============================================================================
+// PART VIII — The avatars of Vishnu.  SB 1.3.6-25
+// ============================================================================
+//
+// Sukadeva counts twenty-two in order at SB 1.3.6-25; the familiar count of
+// twenty-four comes from the later enumerations that add Hamsa and Hayagriva,
+// and SB 1.3.26 says outright that they are innumerable, "like rivulets from an
+// inexhaustible source". Both are followed here.
+//
+// Eight of them were already in this tree with a genealogy of their own, and
+// five of those eight already carried `divine`. The rest fall into two kinds:
+//
+//   - Those born into a line the tree holds (Narada and the four Kumaras, mind-
+//     born of Brahma) are CONNECTED, and take their family's colour, because
+//     they do come from a genealogy.
+//   - Those with no ancestry to hang from at all (Matsya, Kurma, Varaha,
+//     Narasimha and the rest) are SUSPENDED: a genAnchor alone, floating at the
+//     row of the story they belong to, exactly as Raivata and Mucukunda are
+//     placed. Each gets a family of its own so that each carries a distinct
+//     colour, since none of them shares a genealogy with anything else here.
+
+/** An avatar already in the tree: flag it divine and say where it stands in the series. */
+const avatar = (id: string, place: string, note: string): void => {
+  const p = peopleById.get(id);
+  if (!p) throw new Error(`avatar: no person "${id}"`);
+  p.divine = true;
+  p.notes = `${note} ${place}`;
+  p.updatedAt = STAMP;
+};
+
+avatar("Dattatreya", "The sixth of the avatars, SB 1.3.11.",
+  "Son of Atri and Anasuya, born because she prayed for an incarnation. He gave the teaching of transcendence to Alarka, to Prahlada and to Kartavirya Arjuna, all three of whom stand in this tree, and the mystic perfections he gave Kartavirya are what made that king unkillable by anyone but Parashurama.");
+avatar("Dhanvantari", "The twelfth of the avatars, SB 1.3.17 and 9.17.4.",
+  "He rose from the churned ocean carrying the pot of nectar, and was born again in the Kashi line of Kshatravriddha to bring medicine into the world: the founder of Ayurveda. Merely remembering him, the Purana says, quiets disease.");
+avatar("Vamana", "The fifteenth of the avatars, SB 1.3.19.",
+  "The dwarf brahmin who came to Bali's sacrifice and asked for three steps of ground, then took the earth with one and the sky with the second, and set the third on Bali's own head. Son of Kashyapa and Aditi, and so a brother of Indra, whose lost heaven he was recovering.");
+avatar("Parashurama", "The sixteenth of the avatars, SB 1.3.20.",
+  "Rama of the axe, called Bhrigupati for his house. He killed Kartavirya Arjuna over the stolen cow and then cleared the earth of kshatriyas twenty-one times, and lived on to teach Bhishma, Drona and Karna, three ages of this tree apart.");
+avatar("Vyasa", "The seventeenth of the avatars, SB 1.3.21.",
+  "Born to Satyavati by Parashara on an island in the Yamuna, hence Krishna Dvaipayana. He divided the one Veda into four because the age had grown too dull to hold it whole, fathered Dhritarashtra, Pandu and Vidura by niyoga, and composed the epic his own descendants are the cast of.");
+avatar("Rama", "The eighteenth of the avatars, SB 1.3.22.",
+  "Eldest son of Dasharatha and Kausalya of the solar line. He bound the ocean and killed Ravana, and the Purana counts him the eighteenth descent.");
+avatar("Balarama", "The nineteenth of the avatars, SB 1.3.23.",
+  "Elder brother of Krishna, carried from Devaki's womb into Rohini's, and counted with him as the nineteenth and twentieth descents, born in the house of Vrishni to take the burden off the earth. He carried the plough and the pestle, taught both Duryodhana and Bhima the mace, and would take neither side in the war.");
+avatar("Krishna", "The twentieth of the avatars, SB 1.3.23 and 1.3.28.",
+  "Eighth son of Vasudeva and Devaki, carried across the Yamuna the night he was born and raised by Nanda and Yashoda in Gokula. Of the whole list the Bhagavata sets him apart: krsnas tu bhagavan svayam, the others are portions and portions of portions, and he is the source Himself.");
+
+// --- suspended: no ancestry to hang from, so an anchor and a colour of its own -
+
+interface Suspended {
+  id: string;
+  name?: string;
+  gender?: Gender;
+  colour: string;
+  /** Whose row it floats at, and why that is the right room. */
+  beside: string;
+  note: string;
+}
+
+const SUSPENDED: Suspended[] = [
+  { id: "Hamsa", colour: "#dfe3ea", beside: "Brahma's mind-born sons",
+    note: "The swan, who came to Brahma and the Kumaras when they asked what the highest good was, and answered them. One of the two the later enumerations add to reach twenty-four. SB 11.13" },
+  { id: "Hayagriva", colour: "#6fc7b8", beside: "Brahma's mind-born sons",
+    note: "The horse-headed one, who killed the demon Madhu and brought the Vedas back from the bottom of the sea when they were stolen at the dissolution. The second of the two that make the count twenty-four. SB 2.7.11" },
+  { id: "Yajna", colour: "#c7b04a", beside: "the Svayambhuva age",
+    note: "The seventh of the avatars: son of the Prajapati Ruchi and Akuti, daughter of Svayambhuva Manu. He was the Indra of that first manvantara, with his own sons the Yamas for demigods. SB 1.3.12" },
+  { id: "NaraNarayana", name: "Nara-Narayana", colour: "#7d9fd6", beside: "the Svayambhuva age",
+    note: "The fourth of the avatars, counted as one though they are two: the twin sons of Dharma by Murti, who went to Badarikashrama and took on austerities no one has matched. Arjuna and Krishna are held to be these two returned, which is why the Gita is spoken between them. SB 1.3.9" },
+  { id: "Rishabha", colour: "#a3c46a", beside: "the Svayambhuva age",
+    note: "The eighth of the avatars: son of Nabhi and Merudevi, who showed the path of perfection and then wandered the earth as an avadhuta, naked and silent, letting himself be taken for a madman. His eldest son Bharata gave Bharatavarsha its name. Not Vrishabha, Kartavirya's son. SB 1.3.13, 5.3-6" },
+  { id: "Prithu", colour: "#cf7a52", beside: "the Svayambhuva age",
+    note: "The ninth of the avatars: son of the wicked Vena, churned from his dead father's arm. When the earth withheld her yield he took up his bow against her, and she fled as a cow until she consented to be milked; he levelled her and taught her to be tilled, and she is Prithvi after him. Not Prithu of the solar line, nor Rucaka's son. SB 1.3.14, 4.15-23" },
+  { id: "Kurma", colour: "#6a8f7a", beside: "the churning of the ocean",
+    note: "The eleventh of the avatars: the tortoise whose shell held Mandara up as the devas and asuras churned the ocean with it. Everything that came out of that churning stands in this tree, Surabhi, Airavata, Varuni, and Dhanvantari with the pot of nectar. SB 1.3.16, 8.7" },
+  { id: "Mohini", gender: "female", colour: "#e07ab0", beside: "the churning of the ocean",
+    note: "The thirteenth of the avatars, and the only one in the form of a woman: she took the nectar from the asuras by charm alone and served it to the devas, which is the whole reason Rahu and Ketu, both here, are two halves of one severed body. SB 1.3.17, 8.8-9" },
+  { id: "Matsya", colour: "#4aa8d8", beside: "Vaivasvata Manu",
+    note: "The tenth of the avatars: the fish that grew until no water could hold it, and at the deluge that ended the Chakshusha age drew Manu's boat by a rope of serpent through the flood. Every line in this tree runs down from the man in that boat. SB 1.3.15, 8.24" },
+  { id: "Varaha", colour: "#8b5e3c", beside: "Hiranyaksha",
+    note: "The second of the avatars: the boar who lifted the earth out of the waters on his tusks and killed Hiranyaksha, who had rolled her down there. On the earth herself he fathered Naraka, who stands in this tree with Bhagadatta. SB 1.3.7, 3.13-19" },
+  { id: "Narasimha", colour: "#e0913a", beside: "Hiranyakashipu",
+    note: "The fourteenth of the avatars: neither man nor lion, at neither day nor night, on neither earth nor sky, killing Hiranyakashipu with no weapon on the threshold of his own hall, because the boon had covered everything else. He came for Prahlada, who is here as the demon's son. SB 1.3.18, 7.8" },
+  { id: "Kapila", colour: "#b8862b", beside: "Sagara",
+    note: "The fifth of the avatars: son of Kardama and Devahuti, daughter of Svayambhuva Manu, and the founder of Sankhya. Sagara's sixty thousand sons dug the earth open looking for their horse, found it beside him at his meditation, took him for the thief, and were ash before they finished the thought. Amshuman came after them and learned that only the Ganga could redeem them, which is the errand Bhagiratha finally completed. SB 1.3.10, 9.8" },
+  { id: "Buddha", colour: "#d9a441", beside: "the opening of the Kali age",
+    note: "The twenty-first of the avatars: born, the Purana says, to Anjana at Gaya at the beginning of Kali, to draw away by gentleness those who would have used the sacrifice for cruelty. The Bhagavata's own Ikshvaku list places him among the kings still to come, after Shakya and Shuddhoda, so the solar line runs on into him; those future kings are deliberately not in this tree, so he floats here instead. Not Anjana the mother of Hanuman. SB 1.3.24, 9.12.10-16" },
+  { id: "Kalki", colour: "#9fb8e0", beside: "the close of the Kali age",
+    note: "The twenty-second and last: to be born to Vishnu Yasha in the village of Shambhala at the joint of two ages, when the kings have all turned to plunder, and to ride out on a white horse with a sword like a comet. The only avatar in this tree who has not happened. SB 1.3.25, 12.2" },
+];
+
+for (const s of SUSPENDED) {
+  const fam = family(`familyAvatar${s.id}`, s.name ?? s.id, s.colour,
+    `Suspended: an avatar with no ancestry, floated beside ${s.beside}`);
+  person(s.id, { name: s.name, family: fam, gender: s.gender, note: s.note });
+  const p = peopleById.get(s.id)!;
+  p.divine = true;
+  p.updatedAt = STAMP;
+}
+// Nara and Narayana are one incarnation counted as two people.
+person("NarayanaRishi", { name: "Narayana", family: "familyAvatarNaraNarayana",
+  note: "The second of the twin sages, and the one Krishna is held to be returned as. SB 1.3.9" });
+const nnP = peopleById.get("NarayanaRishi");
+if (nnP) { nnP.divine = true; nnP.updatedAt = STAMP; }
+const nnMain = peopleById.get("NaraNarayana");
+if (nnMain) { nnMain.firstName = "Nara"; nnMain.updatedAt = STAMP; }
+
+// --- connected: these two do come from a genealogy the tree already holds -----
+
+person("Narada", { family: BRAHMA,
+  note: "The third of the avatars, SB 1.3.8. Mind-born son of Brahma, who walks through every age of this tree and sets half of it moving: he sends Kalayavana at Mathura, curses Kubera's sons into a pair of trees, teaches Dhruva and Prahlada, and gathers the parts of the Veda that are about devotion alone. SB 1.3.8" });
+for (const [id, n] of [
+  ["Sanaka", "Eldest of the four Kumaras, the first of the avatars: Brahma's mind-born sons, who refused to father anything and stayed four boys for ever, in a vow of celibacy older than the world. SB 1.3.6, 3.15"],
+  ["Sananda", "One of the four Kumaras, the first of the avatars. SB 1.3.6"],
+  ["Sanatana", "One of the four Kumaras, the first of the avatars. SB 1.3.6"],
+  ["Sanatkumara", "One of the four Kumaras, the first of the avatars. SB 1.3.6"],
+] as const) person(id, { family: BRAHMA, note: n });
+for (const id of ["Narada", "Sanaka", "Sananda", "Sanatana", "Sanatkumara"]) {
+  const p = peopleById.get(id);
+  if (p) { p.divine = true; p.updatedAt = STAMP; }
+}
+const brahmaU = unionsById.get("u_brahma_extra");
+if (brahmaU) {
+  for (const c of ["Narada", "Sanaka", "Sananda", "Sanatana", "Sanatkumara"]) {
+    if (!brahmaU.children.includes(c)) brahmaU.children.push(c);
+  }
+  brahmaU.updatedAt = STAMP;
+}
 
 // ============================================================================
 // Small fixes

@@ -25,6 +25,19 @@ Canto 9 of the Bhagavata is the spine of the whole compilation: it is the one te
 runs both dynasties end to end in a single voice. Where the Vishnu Purana disagrees, the
 disagreement is noted rather than silently resolved.
 
+## Confidence
+
+Not every claim here is worth the same. Part VII marks each one, and the same three grades
+apply throughout:
+
+| Grade | Means |
+|---|---|
+| **read** | The verse was fetched and read while writing this. Safe to build on. |
+| **cited** | A reference work gives chapter and verse and the tradition is standard, but the verse itself was not opened here. Verify before it enters the tree. |
+| **thin** | One late source, or a strand the main texts contradict. Recorded so nobody re-researches it, and **not** to be added without a decision. The Kesari-son-of-Brihaspati reading in III.6 is the model. |
+
+The rule the tree follows: a **thin** claim never becomes an edge. It stays prose.
+
 ## How the tree is built, and how to rebuild it
 
 Two scripts, run in this order, and the second must always follow the first:
@@ -394,7 +407,28 @@ After Siradhvaja: Dharmadhvaja → Kṛtadhvaja and Mitadhvaja → **Keśidhvaja
 **Khāṇḍikya**, then Bhānumān down through Kṛti and Mahāvaśī, "and this completes the list
 of the entire dynasty".
 
-## II.13 Small fixes
+## II.13 Dishta, and how Lanka hangs off Manu
+
+`SB 9.2.29-33`, read. Attaches at **Manu → Diṣṭa**, whose name the tree carries with no
+descendants at all. Twenty-two kings:
+
+Nābhāga → Bhalandana → Vatsaprīti → Prāṁśu → Pramati → Khanitra → Cākṣuṣa → Viviṁśati →
+Rambha → Khanīnetra → Karandhama → Avīkṣit → **Marutta** → Dama → Rājyavardhana → Sudhṛti →
+Nara → Kevala → Dhundhumān → Vegavān → Budha → **Tṛṇabindu**.
+
+Trinabindu is the point of it. His daughter **Ilavilā** bore **Kuvera** (`SB 9.2.32`), and
+Ilavida already sits in this tree as Vishrava's first wife with no parents of her own. One
+link, and the whole house of Lanka, Kubera and Ravana and Vibhishana and Kumbhakarna, hangs
+off Vaivasvata Manu by the same descent as the Ikshvakus.
+
+Trinabindu's three sons run on: **Viśāla** (who built Vaiśālī) → Hemacandra → Dhūmrākṣa →
+Saṁyama → Devaja and **Kṛśāśva** → Somadatta, who performed the ashvamedha; with
+Śūnyabandhu and Dhūmraketu beside Vishala.
+
+Note two namesakes born here: this **Marutta** is Avikshit's son, not Karandhama's son of
+the Turvasu line in II.5, and this **Kṛśāśva** is not the Ikshvaku king of I.1.
+
+## II.14 Small fixes
 
 - **Jayasena**, husband of Rājādhidevī and father of the Avanti brothers Vinda and
   Anuvinda, is missing from the tree. `SB 9.24.42`
@@ -679,28 +713,83 @@ Two collisions were already in the data and are fixed by this pass:
 | **Haryaśva** | Ikshvaku, twice (Dridhashva's son; Anaranya's son) · Ayodhya, Madhavi's first husband |
 | **Janamejaya** | Parikshit's son · Puru's son · Srinjaya's son in the Anu line |
 | **Prasenajit** | Ikshvaku, twice (before Yuvanashva II; before Takshaka) |
+| **Marutta** | Avikshit's son in the Dishta branch (`SB 9.2.30`) · Karandhama's son of the Turvasu line, who adopted Dushyanta (`SB 9.23.17`) |
+| **Kṛśāśva** | The Ikshvaku king before Senajit (`SB 9.6.24`) · Samyama's son in the Dishta branch (`SB 9.2.33`) · a husband of two of Daksha's daughters (`SB 6.6.2`) |
+| **Nābhāga** | Manu's son, Ambarisha's father (`SB 9.4`) · Dishta's son (`SB 9.2.29`) · Kusha's descendant in the Ikshvaku list (`SB 9.12.1`) |
+| **Dhruva** | Angada's son, here `DhruvaV` (`Brahmāṇḍa 3.7.220`) · Uttanapada's son, the pole star (`SB 4.8-12`) · one of the eight Vasus (`SB 6.6.10`) |
+| **Vasu** | Daksha's daughter, mother of the eight Vasus (`SB 6.6.4`) · Uparichara Vasu of Chedi (`SB 9.22.6`) · Kusha's son in the Kaushika line (`SB 9.15.4`) · a son of Jamadagni |
+| **Bhadrā** | Krishna's queen, Shrutakirti's daughter (`SB 10.58.56`) · two Yadava namesakes already in the tree |
+| **Lakṣmaṇā** | Krishna's queen, the Madra king's daughter (`SB 10.58.57`) · Duryodhana's daughter · Rama's brother, a different name entirely (Lakṣmaṇa) |
+| **Aṅga** | Dirghatamas's son, eponym of the Anga kingdom (`SB 9.23.5`) · Vena's father in the Svayambhuva line (`SB 4.13`) |
+| **Añjanā** | Hanuman's mother, the cursed apsara (`Rām 4.66`) · Buddha's mother at Gaya (`SB 1.3.24`) |
+| **Matsya** | The avatar, the fish (`SB 1.3.15`) · the fish-born son of Uparichara Vasu, here `MatsyaKing` (`MBh 1.57`) |
+| **Ṛṣabha / Vṛṣabha** | The eighth avatar, Nabhi's son (`SB 1.3.13`) · Vṛṣabha, a surviving son of Kartavirya Arjuna, here `Vrishabha` (`SB 9.23.27`) |
+| **Nara** | Of Nara-Nārāyaṇa, the fourth avatar (`SB 1.3.9`) · Manyu's son in the Paurava line, Rantideva's grandfather (`SB 9.21.19`) |
+| **Kapila** | The fifth avatar, Kardama's son (`SB 1.3.10`) · not to be confused with Kapilāśva, a survivor of Dhundhu's fire (`SB 9.6.23`) |
 | **Śāntā**, **Suratha**, **Bhīmaratha**, **Ugrasena**, **Śatānīka**, **Sumitra**, **Daśaratha**, **Ṛkṣa**, **Citraratha**, **Somaka**, **Sṛñjaya**, **Sañjaya**, **Sahadeva** | Multiple; disambiguated at the point of use |
 
 ---
 
 # Part VI. Catalogued but not added
 
-Fully referenced here so a later pass can pick them up without new research.
+Fully referenced here so a later pass can pick them up without new research. These are
+whole trees, not stray names: taken together they would roughly double the tree again, and
+two of them would give it a second root above the one it has.
 
-**The Svayambhuva pre-history** (`SB 3.12`, `SB 4.8-4.31`, `SB 5.1-5.15`). Svayambhuva
-Manu and Śatarūpā → Priyavrata and Uttānapāda; Uttanapada → **Dhruva** → Utkala and
-Vatsara → ... → **Aṅga** → **Vena** → **Pṛthu** and **Arci** → Vijitāśva/Antardhāna →
+**1. The Svayambhuva pre-history** (`SB 3.12`, `4.1`, `SB 4.8-4.31`, `SB 5.1-5.15`).
+Svayambhuva Manu and Śatarūpā → Priyavrata and Uttānapāda; Uttanapada → **Dhruva** → Utkala
+and Vatsara → ... → **Aṅga** → **Vena** → **Pṛthu** and **Arci** → Vijitāśva/Antardhāna →
 Havirdhāna → Prācīnabarhi → the ten **Pracetas** → **Dakṣa** reborn. Priyavrata's ten sons
-and daughter **Ūrjasvatī** (who married Shukracharya and bore Devayani, a link straight
-into Yayati's marriage) → **Āgnīdhra** → **Nābhi** and Merudevī → **Ṛṣabha** → **Bharata**
-of Bharatavarsha, the Jada Bharata of the deer.
+and daughter **Ūrjasvatī**, who married Shukracharya and bore Devayani, a link straight
+into Yayati's marriage → **Āgnīdhra** → **Nābhi** and Merudevī → **Ṛṣabha** → **Bharata**
+of Bharatavarsha, the Jada Bharata of the deer. `SB 4.1` adds Svayambhuva's three
+daughters: **Ākūti** (whose son by Ruchi was Yajña), **Devahūti** (whose son by Kardama was
+**Kapila**, the same Kapila who burned Sagara's sixty thousand), and **Prasūti**, who
+married Daksha. That last is the join: it would make Daksha, and so the entire deva world
+of Part I, a son-in-law of the first Manu.
 
-**The Kali-yuga king lists.** Ikshvaku after Brihadbala down to **Sumitra**
-(`SB 9.12.10-16`); the Kuru line after Janamejaya down to **Kṣemaka** (`SB 9.22.40-45`);
-the Magadha line after Jarasandha's son Sahadeva down to **Ripuñjaya** (`SB 9.22.46-49`);
-and the dynasties of `SB 12.1`: Barhadratha, Pradyota, Śiśunāga, **Nanda**, **Maurya**,
-Śuṅga, Kaṇva, Āndhra. These extend the tree far below Kurukshetra and would roughly double
-its height again.
+**2. Daksha's sixty daughters** (`SB 6.6.1-11`, read). The layer everything divine hangs
+from. Ten to **Dharma**: Bhānu, Lambā, Kakud, Yāmi, Viśvā, Sādhyā, Marutvatī, **Vasu**,
+Muhūrtā, Saṅkalpā. Seventeen to **Kaśyapa**, twenty-seven to **Candra** (the nakshatras,
+already here), and two each to **Aṅgiras**, **Kṛśāśva** and **Bhūta**. The prize is Vasu:
+her sons are the **eight Vasus**, Droṇa, Prāṇa, Dhruva, Arka, Agni, Doṣa, Vāstu and
+Vibhāvasu, which would give the eight Vasus already in this tree, born to Ganga and
+Shantanu at row 88, the divine origin they are a rebirth of.
+
+**3. The fourteen Manus: RULED OUT.** `SB 8.1`, `8.5` and `8.13` give all fourteen,
+Svāyambhuva through Indra-sāvarṇi, each with his sons, his Indra, his seven rishis and the
+avatar of his age. **This tree keeps Vaivasvata Manu alone, the one it has.** The other
+thirteen manvantaras are parallel worlds rather than ancestors, and hanging thirteen more
+root-clusters off Brahma would say something about this tree that is not true of it. Two
+details are worth keeping even so: `SB 8.13.1` gives Vaivasvata Manu **ten** sons where this
+tree carries eight, and `SB 8.13.11-12` makes **Bali** the Indra of the coming Savarni age
+and **Gālava** and **Paraśurāma** two of its seven rishis, all three of whom are already
+here.
+
+**4. Manu's other sons' lines** (`SB 9.2.16-28`). The tree holds Nṛga, Nariṣyanta, Diṣṭa
+and Pṛṣadhra as names with nothing under them. Nriga → Sumati, Bhūtajyoti, Vasu → Pratīka →
+Oghavān. Narishyanta → Citrasena, Ṛkṣa, Mīḍhvān, Pūrṇa, Indrasena, Vītihotra, Satyaśravā,
+Uruśravā, Devadatta, **Agniveśya**, from whom the Āgniveśyāyana brahmins. Prishadhra was
+cursed into a shudra's birth for killing a cow in the dark, mistaking it for a tiger.
+(The Dishta branch is no longer here: it has moved to II.13.)
+
+**5. The Angirasa house in full.** Aṅgiras → Bṛhaspati, **Utathya**, Saṁvarta;
+Utathya and **Mamatā** → **Dīrghatamas** → **Kakṣīvān**. The tree has Brihaspati and his
+sons; this is the branch that gives Dirghatamas his ancestry, and with it Karna's foster
+house (VII.2).
+
+**6. The Bhrigu house in full.** Bhṛgu → **Śukrācārya** (parentless in the tree today) and
+Cyavana; and the Markandeya line, Mṛkaṇḍu → **Mārkaṇḍeya**, who saw the deluge and the
+child on the banyan leaf.
+
+**7. The Kali-yuga king lists: RULED OUT.** The Ikshvaku line after Brihadbala down to
+**Sumitra** (`SB 9.12.10-16`), the Kuru line after Janamejaya down to **Kṣemaka**
+(`SB 9.22.40-45`), the Magadha line after Jarasandha's son Sahadeva down to **Ripuñjaya**
+(`SB 9.22.46-49`), and the dynasties of `SB 12.1`: Barhadratha, Pradyota, Śiśunāga,
+**Nanda**, **Maurya**, Śuṅga, Kaṇva, Āndhra. **The tree ends where the texts stop
+describing the past.** One consequence, recorded in VIII.2: Buddha is placed by
+`SB 9.12.10-16` after Śākya and Śuddhoda, and Kalki is given his father at `SB 12.2`, so
+with these lists out those two avatars can only float, which is what they do.
 
 **The Ajamidha side branches** (`SB 9.21.25-31`): Bṛhadiṣu → ... → Brahmadatta →
 Viṣvaksena → Udaksena → Bhallāṭa, and Dvimīḍha → Yavīnara → ... → Bahuratha.
@@ -710,10 +799,156 @@ Viṣvaksena → Udaksena → Bhallāṭa, and Dvimīḍha → Yavīnara → ...
 
 ---
 
+# Part VII. Connections found but not yet made
+
+A second pass, looking specifically for links rather than names. Nothing here is in the
+tree: this is the work order for when it goes in.
+
+The tree as it stands has **seven islands** and **eighty people with no parents at all**,
+sitting in the main constellation held only by a marriage or an era anchor. Each row below
+closes one of those gaps.
+
+## VII.1 The islands
+
+| Island | The link | Source | Grade |
+|---|---|---|---|
+| **Agastya + Lopamudrā** | Agastya was born of **Mitra and Varuṇa** by **Urvaśī**, seed caught in a pot, and so is the twin of **Vasiṣṭha**, whom the Bhagavata says was reborn the same way after Nimi's curse. Varuna, Urvashi and Vasishtha are all already here, so this closes the island against the Aditya line and makes the two great rival-sages of the solar story brothers. | `SB 9.13.5-6` read; `RV 7.33.10-13`; Matsya Purāṇa 61 | **read** |
+| **Lopamudrā** | Agastya made her limb by limb from the finest parts of every creature and had her born to the childless **king of Vidarbha**; she grew up a princess and went to him. Ties the island a second time, into the Vidarbha house of II.6. | `MBh 3.96-97` | cited |
+| **Sañjaya**, alone | Son of **Gāvalgaṇa**, hence Gāvalgaṇi: the suta who narrates the war to Dhritarashtra. One name closes a one-orb island. | `MBh 1.63`, `5.22` | cited |
+| **Nala + Viśvakarma** | Vishvakarma's own descent, son of the Vasu **Prabhāsa** by **Yogasiddhā**, Brihaspati's sister. Careful: this tree's eight Vasus are the *reborn* Vasus, Ganga's sons at row 88, so the link cannot be drawn to them. It would need the Vasus' divine origin from Part VI.5 first. | `MBh 1.66` | cited |
+| **Agni + Nīla** | Same shape of problem. Agni's parentage varies more than most: son of Brahma, or of Aṅgiras, or an Aditya. No reading is clean enough to draw. | — | thin |
+| **Ekalavya + Hiraṇyadhanus** | A strand makes Ekalavya a **Vṛṣṇi** child, son of Devaśravas, given away to the Nishada king, which would explain why Krishna knows him and why Drona fears him. It is not in the Mahabharata's own account, where he is simply a Nishada prince. | Harivaṃśa | thin |
+| **Hṛdika + Kṛtavarmā** | Hridika's seat in the Andhaka/Bhoja line. The Bhagavata's Yadava genealogy in `SB 9.24` does not place him, and the reference works disagree. | — | thin |
+| **Narakāsura + Bhagadatta** | Naraka is the son of **Bhūmi**, the Earth herself, by Varaha. That is a divine parentage, so it would join the island by a deva ray rather than a union, the way Nala and Nila now hang from Vishvakarma and Agni. | `SB 10.59` | cited |
+
+## VII.2 The parentless, in the main tree
+
+| Who | The link | Source | Grade |
+|---|---|---|---|
+| **Ilavidā** | Daughter of **Tṛṇabindu**, twenty-two kings down the Dishta branch. See II.13: this is the single highest-value link found in this pass. | `SB 9.2.29-33` | **read** |
+| **Dīrghatamas** | Son of **Utathya and Mamatā**, and so Aṅgiras's grandson and Brihaspati's nephew; born blind of Brihaspati's curse in the womb, hence the name. His son is the Rigvedic **Kakṣīvān**. He is already in the tree as the sage who fathered Anga on Bali's queen, with no ancestry, so this joins **Karna's whole foster house** to the Angirasa line. | `MBh 1.98` (Ādi Parva 104 in the vulgate); `RV 1.140-164` | **read** (via Puranic Encyclopaedia) |
+| **Kālindī** | Daughter of **Sūrya**, in her own words to Arjuna on the Yamuna bank. Surya is in the tree. | `SB 10.58.13-23` | **read** |
+| **Mitravindā** | Daughter of **Rājādhidevī** and sister of Vinda and Anuvinda, whom Krishna carried off before the rival kings. **Her parents' union already exists in the tree and she is simply not in it.** A one-line fix. | `SB 10.58.31` | **read** |
+| **Nāgnajitī** (Satyā) | Daughter of **Nagnajit, the pious king of Kośala**, won by subduing seven bulls. Puts one of Krishna's eight queens in the Ikshvaku orbit. | `SB 10.58.32-35` | **read** |
+| **Bhadrā** | Daughter of **Śrutakīrti**, Vasudeva's sister and already in the tree, by the **Kekaya** king; her brothers headed by Santardana gave her to Krishna. Ties a Krishna queen to both the Yadavas and the Kekaya house of II.3. | `SB 10.58.56` | **read** |
+| **Lakṣmaṇā** | Daughter of the **king of Madra**, taken from her svayamvara. Ties the last of the eight queens into II.3. | `SB 10.58.57` | **read** |
+| **Bindumatī** | Daughter of **Śaśabindu**. Both are already in the tree and her note already says so, **but the union between them was never created**. A bug from the previous pass, not a new finding. | `SB 9.6.38` | **read** |
+| **Ṛṣyaśṛṅga** | Son of **Vibhāṇḍaka**, son of **Kaśyapa**, raised in the forest having never seen a woman. Kashyapa is in the tree. | `Rām 1.9-10` | cited |
+| **Śacī** | Daughter of **Puloman** the danava, hence Paulomi. The tree holds a Puloma in the Brahma family; whether it is the same figure needs checking before anything is drawn. | — | cited |
+| **Jayadratha** of Sindhu | Son of **Vṛddhakṣatra**, who granted the boon that whoever felled his son's head to the ground would have his own head burst, which is why Arjuna had to shoot it into his father's lap. | `MBh 7` | cited |
+| **Sudeṣṇā**, Virata's queen | Of the **Kekaya** house, and sister of Kīcaka. Another thread into II.3. | `MBh 4.15` | cited |
+| **Rohiṇī** | Of the Vrishnis, daughter of Bāhlika. Reference works differ. | — | thin |
+| **Devikā, Bālandharā, Kareṇumatī, Vijayā** | The Pandavas' wives besides Draupadi and the famous ones: Yudhishthira's Devika, daughter of **Govāsana of the Śaibyas**; Bhima's Balandhara of **Kāśi**; Nakula's Karenumati of **Cedi**; Sahadeva's Vijaya of **Madra**. Four more threads, every one of them into a house this tree has already grafted. | `MBh 1.90`, `1.95` | cited |
+
+## VII.3 Two links that cross the whole tree
+
+- **Nalakūbara and Maṇigrīva**, sons of **Kubera**, cursed by Narada into a pair of arjuna
+  trees for their drunken pride and freed by the infant Krishna crawling between them with
+  a mortar tied to his waist (`SB 10.9-10`, cited). One union would run a line from the
+  Lanka of the Ramayana straight into Krishna's childhood, and Kubera is already here.
+- **Āstīka**, son of the sage **Jaratkāru** by **Jaratkāru**, Vāsuki's sister, who stopped
+  Janamejaya's snake sacrifice with the serpents already falling into the fire
+  (`MBh 1.13-53`, cited). Janamejaya, Vasuki and Takshaka are all in this tree and the
+  sacrifice is the frame the whole Mahabharata is told inside; this is the one edge that
+  would close it.
+
+---
+
+# Part VIII. The avatars of Vishnu
+
+`SB 1.3.6-25`, read. Sukadeva counts **twenty-two** there in order. The familiar count of
+**twenty-four** comes from the later enumerations, which add **Haṁsa** and **Hayagrīva**;
+`SB 1.3.26` then says outright that the incarnations are innumerable, "like rivulets
+flowing from inexhaustible sources of water". This tree carries all twenty-four, and says
+which list it is counting from rather than asserting a number.
+
+| # | Avatar | Verse | In the tree as |
+|---|---|---|---|
+| 1 | The four **Kumāras** | `1.3.6` | connected, Brahmā's mind-born sons |
+| 2 | **Varāha**, the boar | `1.3.7` | suspended, beside Hiraṇyākṣa |
+| 3 | **Nārada** | `1.3.8` | connected, Brahmā's mind-born son |
+| 4 | **Nara and Nārāyaṇa** | `1.3.9` | suspended, the Svayambhuva age |
+| 5 | **Kapila** | `1.3.10` | suspended, beside Sagara |
+| 6 | **Dattātreya** | `1.3.11` | connected, son of Atri and Anasūyā |
+| 7 | **Yajña** | `1.3.12` | suspended, the Svayambhuva age |
+| 8 | **Ṛṣabha** | `1.3.13` | suspended, the Svayambhuva age |
+| 9 | **Pṛthu** | `1.3.14` | suspended, the Svayambhuva age |
+| 10 | **Matsya**, the fish | `1.3.15` | suspended, beside Vaivasvata Manu |
+| 11 | **Kūrma**, the tortoise | `1.3.16` | suspended, the churning |
+| 12 | **Dhanvantari** | `1.3.17`, `9.17.4` | connected, the Kashi line |
+| 13 | **Mohinī** | `1.3.17` | suspended, the churning |
+| 14 | **Nṛsiṁha** | `1.3.18` | suspended, beside Hiraṇyakaśipu |
+| 15 | **Vāmana** | `1.3.19` | connected, son of Kaśyapa and Aditi |
+| 16 | **Paraśurāma** | `1.3.20` | connected, the Bhārgavas |
+| 17 | **Vyāsa** | `1.3.21` | connected, son of Satyavatī and Parāśara |
+| 18 | **Rāma** | `1.3.22` | connected, the Ikṣvākus |
+| 19 | **Balarāma** | `1.3.23` | connected, the Vṛṣṇis |
+| 20 | **Kṛṣṇa** | `1.3.23` | connected, the Vṛṣṇis |
+| 21 | **Buddha** | `1.3.24` | suspended, the opening of Kali |
+| 22 | **Kalki** | `1.3.25` | suspended, the close of Kali |
+| + | **Haṁsa** | `11.13` | suspended, the first kalpa |
+| + | **Hayagrīva** | `2.7.11` | suspended, the first kalpa |
+
+**All twenty-eight records are marked `divine`.** For the connected ones the flag changes
+only how they are drawn: every one is rooted in a real union, so, exactly as with Hanuman,
+their row never moves. Five of them (Rāma, Kṛṣṇa, Vāmana, Paraśurāma, Dattātreya) already
+carried the flag; **Balarāma, Dhanvantari and Vyāsa did not**, which was simply an
+inconsistency, since all three stand on the same list as the other five.
+
+## VIII.1 Suspended, and why
+
+An avatar with no ancestry has nothing to hold it anywhere. Rather than invent parents or
+leave it out, each is **floated on a `genAnchor` alone**, at the row of the story it belongs
+to, which is the same device that holds Raivata after his age in Brahma's hall and
+Mucukunda asleep through his. The anchor is measured off the person the avatar acts on, not
+picked:
+
+| Suspended at | Avatars |
+|---|---|
+| The first kalpa, level with Brahmā's mind-born sons | Haṁsa, Hayagrīva |
+| The Svāyambhuva age, which this tree does not carry | Yajña, Nara-Nārāyaṇa, Ṛṣabha, Pṛthu |
+| The churning of the ocean, Indra's generation | Kūrma, Mohinī |
+| Beside Vaivasvata Manu, whose boat he drew | Matsya |
+| Beside Hiraṇyākṣa, whom he killed | Varāha |
+| Beside Hiraṇyakaśipu, whom he killed | Nṛsiṁha |
+| Beside Sagara, whose sons he burned | Kapila |
+| Below the last of Janamejaya's line | Buddha |
+| Three rows below that, alone at the foot of the tree | Kalki |
+
+**Each suspended avatar has a family and a colour of its own**, because none of them shares
+a genealogy with anything else here; the connected ones keep their house's colour, since
+they do. Kalki is the only person in this tree who has not happened yet.
+
+## VIII.2 Where the Dashavatara touches the tree
+
+The ten of the popular reckoning are Matsya, Kūrma, Varāha, Narasiṁha, Vāmana, Paraśurāma,
+Rāma, Kṛṣṇa (Balarāma in the older lists), Buddha and Kalki. Only five have any genealogy
+at all, but **eight of the ten act on somebody already in this tree**, which is the more
+interesting fact:
+
+- **Matsya** drew the boat of **Vaivasvata Manu**. Every line here runs down from the man in
+  that boat.
+- **Kūrma** held Mandara for the churning, and everything that came out of it is here:
+  **Surabhi**, **Airāvata**, **Vāruṇī**, and **Dhanvantari** with the pot, himself the
+  twelfth avatar.
+- **Varāha** lifted the earth and killed **Hiraṇyākṣa**; on the earth he fathered
+  **Naraka**, who stands here with Bhagadatta (see VII.1).
+- **Nṛsiṁha** killed **Hiraṇyakaśipu** and came for **Prahlāda**, both in the Daitya house.
+- **Vāmana** took three steps from **Bali**, Prahlada's grandson.
+- **Paraśurāma** killed **Kārtavīrya Arjuna** (II.8) and outlived him by ages to teach
+  Bhīṣma, Droṇa and Karṇa.
+- **Rāma** killed **Rāvaṇa**.
+- **Kṛṣṇa** and **Balarāma** in the house of Vṛṣṇi.
+- **Buddha** and **Kalki** are the two that touch nothing: both are reachable only through
+  the Kali-yuga king-lists, which are deliberately not in this tree (Part VI). They float.
+
+---
+
 ## Sources used
 
-- Śrīmad-Bhāgavatam, cantos 4, 5, 6, 9, 10 and 12, Bhaktivedanta translation,
-  <https://vedabase.io/en/library/sb/9/>. Canto 9 chapter by chapter is the spine.
+- Śrīmad-Bhāgavatam, cantos 3, 4, 5, 6, 8, 9, 10 and 12, Bhaktivedanta translation,
+  <https://vedabase.io/en/library/sb/9/>. Canto 9 chapter by chapter is the spine;
+  `6.6`, `8.1`, `8.5`, `8.13`, `9.2` and `10.58` were read for Parts VI and VII.
 - Viṣṇu Purāṇa, H. H. Wilson translation, book IV, via
   <https://www.wisdomlib.org/hinduism/book/vishnu-purana-wilson>
 - Harivaṃśa, M. N. Dutt translation, ch. 58 (Kalayavana), via
@@ -721,4 +956,7 @@ Viṣvaksena → Udaksena → Bhallāṭa, and Dvimīḍha → Yavīnara → ...
 - Mahābhārata: Vana Parva 50-78 (Nalopākhyāna), Udyoga Parva 104-121 (Gālavacarita),
   Ādi Parva 57, 63 (Uparichara Vasu, Satyavati)
 - Aitareya Brāhmaṇa 7.13-18 (Śunaḥśepha)
+- Brahmāṇḍa Purāṇa 3.7.215-221 (the house of Kishkindha past the war)
+- Vettam Mani, *Purāṇic Encyclopaedia* (Motilal Banarsidass, 1975), used to check the
+  Mahabharata and Ramayana attributions in Part VII
 - Ṛgveda hymn references per Griffith's numbering

@@ -22,9 +22,16 @@ export interface PersonRecord {
    *  absolute generation (smaller/negative = higher/older, larger = lower/younger),
    *  overriding the auto bottom-align. Lets separate lineages share a time-plane. */
   genAnchor?: number;
-  /** A second name for a dual-life figure (e.g. Sudyumna for Ila), shown on the
-   *  opposite side of the orb, placed by `altGender` (defaults to the opposite of
-   *  `gender`). The person's own gender/leveling are unchanged. */
+  /** A second name for a figure who lived as both a man and a woman (Sudyumna
+   *  for Ila, Shikhandini for Shikhandi), shown on the opposite side of the orb,
+   *  placed by `altGender` (defaults to the opposite of `gender`). The person's
+   *  own gender/leveling are unchanged.
+   *
+   *  ONLY for a change of gender. The two labels are positioned by gender alone,
+   *  men's above the sphere and women's below, so an `altGender` equal to
+   *  `gender` puts both in the same spot and they print on top of each other.
+   *  A plain alias — Bahuka for Nala, Kalmashapada for Saudasa — belongs in
+   *  `firstName` in parentheses: "Nala (Bahuka)". */
   altName?: string;
   altGender?: Gender;
 }

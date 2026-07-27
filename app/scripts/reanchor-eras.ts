@@ -364,6 +364,41 @@ const measured = rows();
 setAnchor("Jamadagni", measured.get("KartaviryaArjuna")! - 1);
 
 // ---------------------------------------------------------------------------
+// The suspended avatars
+// ---------------------------------------------------------------------------
+//
+// An avatar with no ancestry has nothing to hold it anywhere, so each is floated
+// at the row of the story it belongs to, measured off the person it acts on
+// rather than picked. Their rows are the last thing computed because several of
+// them depend on lineages the pads above have just moved.
+
+const beside = rows();
+const at = (id: string, delta = 0): number => beside.get(id)! + delta;
+
+// Primordial: the first kalpa, level with Brahma's mind-born sons.
+setAnchor("Hamsa", at("Marichi"));
+setAnchor("Hayagriva", at("Marichi"));
+// The Svayambhuva age, which this tree does not carry: a row or two under Brahma.
+setAnchor("Yajna", at("Marichi", 1));
+setAnchor("NaraNarayana", at("Marichi", 1));
+setAnchor("NarayanaRishi", at("Marichi", 1));
+setAnchor("Rishabha", at("Marichi", 2));
+setAnchor("Prithu", at("Marichi", 3));
+// The churning of the ocean: Indra's generation, and everything it threw up.
+setAnchor("Kurma", at("Indra"));
+setAnchor("Mohini", at("Indra"));
+// Each of the three who came for one particular enemy stands level with him.
+setAnchor("Varaha", at("Hiranyaksha"));
+setAnchor("Narasimha", at("Hiranyakashipu"));
+setAnchor("Matsya", at("Manu"));
+setAnchor("Kapila", at("Sagara"));
+// Kali: Buddha at its opening, just under the last of Janamejaya's line, and
+// Kalki at its close, the only person in this tree who has not happened yet.
+const bottom = Math.max(...beside.values());
+setAnchor("Buddha", bottom + 1);
+setAnchor("Kalki", bottom + 3);
+
+// ---------------------------------------------------------------------------
 // Report, verify, write
 // ---------------------------------------------------------------------------
 
