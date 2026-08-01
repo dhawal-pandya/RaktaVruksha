@@ -61,7 +61,7 @@ Both live in `core/generations.ts` and carry the entire chronology:
   says "the texts name the father and the descendant, not the seven kings between them".
   Research either fills those in, so the gap collapses to 1 and named kings take the rows,
   or widens them, where one dynasty's list is shorter than another's over the same span.
-- **`genAnchor`** on a person: an absolute floor. For a clan whose ancestry the texts never
+- **`genAnchor`** on a person: a floor. For a clan whose ancestry the texts never
   give, or for a figure who slept through an age (Raivata, Mucukunda).
 
 Anchors are floors only, and the leveler pushes strictly downward, so a descendant's
@@ -75,6 +75,39 @@ missing generations between a named father and his named son. Where the trunk is
 continuous, the shortfall goes on the stretches where the Purana gives nothing but names
 in a row.
 
+#### Anchors say WHO, not WHICH ROW
+
+`genAnchor` takes two forms, and the difference is the difference between a number that
+rots and one that doesn't:
+
+```jsonc
+"genAnchor": 43                                        // absolute: a row someone measured once
+"genAnchor": { "relativeTo": "Sagara", "offset": 0 }   // relative: "beside Sagara", forever
+```
+
+**Always author the relative form.** An absolute anchor is a snapshot of where its target
+happened to sit on the day it was written; deepen anything above it — one more generation of
+kings, a first-generation sage suddenly given a father — and it silently keeps pointing at a
+row that no longer means what it meant. Every stale anchor then has to be found and rewritten
+by hand. A relative anchor stores no row at all: it is resolved against wherever its target
+actually landed, on every load, so the same stored value goes on meaning "beside Sagara" no
+matter what moves above either of them.
+
+This is not a style preference; it is the fix for the failure that recurred three times
+while this tree was being built. `scripts/add-more-lineages.ts` takes
+`anchor: { beside: "Janamejaya" }` (with an optional `offset`, negative for rows above), and
+`reanchor-eras.ts` writes the same form for every era it places, from its own `ANCHORS`
+table. The leveler treats a relative anchor as one more lower-bound edge in exactly the
+relaxation that `childGap` already feeds, so it also carries the anchored person's own
+descendants down with it. `validateData` rejects a target that doesn't exist, a
+self-reference, and any cycle.
+
+The old destructive habit is gone too: `reanchor-eras.ts` used to delete every anchor in the
+file and restore only the ones in its own hardcoded list, which meant anyone anchored
+*elsewhere* lost their placement the next time it ran. It now measures on a throwaway copy
+and never clears. **A person added with a relative anchor is placed once and stays placed,
+whether or not `reanchor-eras` is ever run again.**
+
 ### Where the eras landed
 
 Two facts in the texts fix everything else, and neither is chosen:
@@ -87,6 +120,10 @@ Two facts in the texts fix everything else, and neither is chosen:
 Measured: Brahma at row 0, Ikshvaku 6, Mandhata 24, Sagara 41, **Rama 64**, Nala of
 Nishadha 74, **Kurukshetra 92**, Janamejaya's line ending at 96. Ninety-seven rows,
 1,079 people, 553 unions, 47 families.
+
+*(These are the numbers as this first pass left them. Part X.1's Kardama graft later drops
+every row below Brahma's own sons by two — Rama 66, Kurukshetra 92→94 — so treat the figures
+in Parts I-IX as a historical snapshot, not the tree's current state.)*
 
 The Paurava and Yadava lists are some forty generations shorter than the Aikshvaka one over
 the same span, a shortfall old enough that Pargiter took the lunar list to be defective.
@@ -997,6 +1034,171 @@ twelve years (`MBh 3.55-56`). And at the far end, **Parikshit** caught him beati
 of Dharma and, when he begged for somewhere to live, allotted him gambling, drink,
 prostitution and slaughter, and then gold as well, *"because wherever there is gold there is
 also falsity, intoxication, lust, envy and enmity"* (`SB 1.17.38-39`).
+
+---
+
+# Part X. Second pass: fifteen more
+
+Found while researching what else the tree could carry, after the 1099-person pass above
+was already complete. Executable form: `scripts/add-more-lineages.ts`, run after
+`add-lineages.ts` and idempotent the same way. Twenty-one people, sixteen unions. Thirteen
+are Bhagavata; Suvarchala (X.4) is not, and says so on her own record; Savitri, Satyavan,
+Dyumatsena, Ashvapati of Madra (X.3b), Jaratkaru, Jaratkaru and Astika (X.5) are Mahabharata;
+Kardama's own parentage (below) is Vishnu Purana, not Bhagavata.
+
+## X.1 Kardama, Devahuti, and eight of the nine daughters
+
+`SB 3.24.13-32`, read. The single highest-value graft of this pass: Brahma has **Kardama**
+give his daughters to the nine sages, and two of those wives — **Anasuya** (Atri's wife) and
+**Arundhati** (Vasishtha's wife) — were already in the tree with no parents at all. This is
+the union that gives them one.
+
+| Daughter | Husband | Verse |
+|---|---|---|
+| **Kalā** | Marīci | `3.24.15` |
+| **Anasūyā** (in the tree) | Atri | `3.24.15` |
+| **Śraddhā**, here `ShraddhaAngirasa` | Aṅgirā | `3.24.16` |
+| **Havirbhū** | Pulastya | `3.24.17` |
+| ~~Gati~~ | ~~Pulaha~~ | `3.24.18` — **omitted**, see below |
+| **Kriyā** | Kratu, here `KratuRishi` | `3.24.19` |
+| **Khyāti** | Bhṛgu (second wife, beside Puloma) | `3.24.20` |
+| **Arundhatī** (in the tree) | Vasiṣṭha | `3.24.21` |
+| **Śānti**, here `ShantiAtharva` | Atharvā | `3.24.22` |
+
+Two namesake clashes, resolved the way the tree already resolves them (suffix by role):
+`Shraddha` was taken by Manu's wife (`SB 9.1`), and `Shanti` by a son of Krishna and Kalindi
+(`SB 10.61`). Both keep their plain name as `firstName`; only the id is disambiguated.
+
+**Kratu and two sages who didn't exist.** `Kratu` was also taken, by a son of Krishna and
+Jambavati, and the sage himself was not in the tree under any id — he was findable only as
+that Yadava namesake, sitting alone at row 92 with no parents, which is what first suggested
+this whole branch was worth pulling forward. **Pulaha** and **Atharva** did not exist at
+all. All three now join Marichi, Atri, Angiras, Bhrigu and Vasishtha as Brahma's sons in
+`u_brahma_extra`, completing the nine of `SB 3.24.13`.
+
+**Kapila, promoted.** Kardama and Devahuti's ninth child is **Kapila**, already in the tree
+as a suspended avatar (anchored beside Sagara) whose own notes already named his parents —
+the edge simply never existed. His anchor is relative (`at("Sagara")` in `reanchor-eras.ts`),
+so it now reads 43 rather than 41, following Sagara's own two-row drop below, but the effect
+is the same: he now has real parents feeding into Part VIII's "connected" column instead of
+"suspended."
+
+**Kardama's own parentage, and why it cost the tree two rows.** The Bhagavata's own account
+(`SB 3.12`) has Kardama arise directly from Brahma's shadow, a Prajapati of the first
+generation with no father to speak of. The Vishnu Purana gives a different, minor tradition
+instead (`VP 1.10`): Pulaha and his wife Kṣamā have three sons, Kardama, Urvarīyān and
+Sahiṣṇu — a bare name in a list, nothing more, and almost certainly a *different* Kardama
+from the one who marries Devahuti, going by how thin the Vishnu Purana's own mention is next
+to the Bhagavata's forty-verse story. The tree adopts it anyway, on request, over the
+Bhagavata's reading, and the reason is worth recording plainly: with Kardama one of Brahma's
+own, level with Brahma's other sons rather than below them, his marriage to daughters who
+wed those same sons had **no row left to occupy but Brahma and Saraswati's own** — a hard
+rule this tree holds without exception. Making him Pulaha's son instead gives him a real
+floor one row under his father, and that edge is what does the actual work: Kardama's
+daughters still marry Atri, Vasishtha, Marichi, Pulastya and the rest, so those sons of
+Brahma — and everyone under them, the whole solar line down to Rama, the whole rakshasa line
+down to Ravana — move two rows deeper to keep the marriages one row below their new
+father-in-law. `reanchor-eras.ts` needed no new code for this: Rama and Kurukshetra are
+measured fresh off the bare graph on every run rather than hardcoded, so the whole tree
+re-settles on its own. Before this graft: Rama at 64, Kurukshetra at 92. After: **Rama at
+66, Kurukshetra at 94** — the two calibration numbers cited everywhere else in this document
+before Part X are now two rows shallow; read them as historical, not current.
+
+**Gati, omitted.** `SB 3.24.18` marries her to Pulaha — the same Pulaha who is now Kardama's
+father in this tree. Keeping her would make Pulaha his own son's father-in-law, which is
+nowhere in either source; rather than silently resolve a contradiction the texts don't
+actually contain, she is left out. Kardama has eight wed daughters here, not nine.
+Devahuti's own father, Svayambhuva Manu, stays out of the tree exactly as Part VI.1 already
+recommends; this graft does not reopen that branch.
+
+## X.2 Rati's second marriage
+
+`SB 10.55`, read. Kāmadeva, burned by Rudra, is reborn as **Pradyumna** — both already in
+the tree, and so is his widow **Rati**, married to him with no children (`u_kama_rati`),
+waiting for his next body. The missing middle: the demon **Śambara** stole the ten-day-old
+Pradyumna and threw him in the sea; a fish swallowed him; the fish reached Śambara's own
+kitchen, where his cook **Māyāvatī** found the child inside it and raised him, not knowing
+that Māyāvatī was Rati herself, working under that name while she waited. When Pradyumna
+was grown, killed Śambara, and heard the truth from her, he married her — the same wife, the
+second time.
+
+The tree does not add a `Mayavati` person: Rati already exists, and Māyāvatī is her, so this
+is a second union between two people already there, not a new name (`u_pradyumna_rati`,
+alongside her existing marriage to Kamadeva).
+
+## X.3 Markandeya's vision
+
+`SB 12.8-10`, read for the vision; the descent from Bhrigu is cited (Vettam Mani, *Puranic
+Encyclopaedia*) rather than chapter-and-verse, since the Bhagavata itself doesn't state it.
+**Mrikandu**, a new son of Bhrigu alongside Shukracharya and Chyavana, fathers **Markandeya**,
+granted a life without end. In the waters of pralaya he sees an infant Nārāyaṇa asleep on a
+banyan leaf, is drawn in on the child's in-breath, sees the whole universe running its course
+again inside the infant's body, and is breathed back out into the flood — the one sage who
+remembers every dissolution, when even the gods forget the one before.
+
+## X.3b Savitri and Satyavan
+
+`MBh 3.277-283`, the Pativrata-mahatmya, told to Yudhishthira in the Vana Parva — the exact
+same frame and the same consolation role as the Nalopakhyana (III.1), and, like Nala, absent
+from the tree until now. **Ashvapati**, king of Madra, propitiates the goddess Savitri for a
+child after eighteen sonless years and names his daughter for her. **Savitri** chooses the
+exiled prince **Satyavan** for herself knowing from Narada that he has exactly a year to
+live, and marries him anyway; when **Yama** comes in person for his soul, she follows on
+foot, out-argues him on dharma until he grants her boons — sight and kingdom back for
+Satyavan's blind, deposed father **Dyumatsena**, a hundred sons of her own — and wins her
+husband back by asking, last, for children only he could give her.
+
+**Ashvapati of Madra is not chained to the tree's own Madra line** (Dyutimanta, father of
+Shalya and Madri, II.3): nothing in the source identifies the two kings, and forcing one
+would be inventing a link the text doesn't give, exactly the restraint the tree already
+applies to Rituparna and NalaNishadha. He is `AshvapatiMadra`, distinct from the
+already-present Ashvapati of Kekaya, Kaikeyi's father. The whole family — Ashvapati, Savitri,
+Satyavan, Dyumatsena — is anchored beside Nala and Damayanti in `reanchor-eras.ts`, the same
+slot, for the same reason: a consolation tale with no genealogical anchor of its own.
+
+## X.4 Suvarchala: found, and added anyway
+
+The story that prompted this pass — Hanuman married to **Suvarchalā**, Sūrya's daughter,
+given as *guru-dakṣiṇā* when Sūrya taught him the nine grammars — is not in the Bhagavatam.
+Its source is the **Parashara Samhita**, a text devoted to Hanuman, and it survives today
+mainly as a regional Telangana tradition (the Suvarchala Anjaneya Swamy temple). By the
+same reasoning as the Kesari-Brihaspati case in III.6 — one late text with a devotional
+afterlife, against no epic or Purana support — this would ordinarily stay **thin**: recorded
+in prose, not drawn as an edge, the way Hanuman's own entry still notes it is *not* the
+Bhagavata.
+
+It is added anyway, on request, because the tree is allowed to carry more than the
+Bhagavata alone once that's the explicit choice, so long as the sourcing stays honest on the
+record rather than silently upgraded to **read**. `Suvarchala` is Sūrya's daughter by a
+single-parent union (her mother is unnamed in the sources — the same convention the tree
+uses for Adrikā and Makardhwaja) and Hanuman's wife by a second. Surya himself frames the
+marriage, in his own words to Hanuman, as *brahmāṇḍa kalyāṇa* — for the world's good — and
+not a breach of the brahmacharya vow; the note on both her record and Hanuman's carries that
+framing rather than silently resolving the tension.
+
+## X.5 Astika, closing the frame
+
+`MBh 1.13-53`, cited, exactly the connection Part VII.3 flagged as ready and never made:
+Janamejaya, Vasuki and Takshaka were all three already in the tree, and this is the one edge
+that closes the loop the whole epic is narrated inside. The sage **Jaratkaru** refused to
+marry until his own ancestors, seen hanging over a pit by a fraying rope of grass, told him
+only a son could save them, and that the son must share his name; Vasuki gave him his sister
+— also, by the same prophecy, named **Jaratkaru** — and their son **Astika** grew up to
+interrupt Janamejaya's snake sacrifice with the nagas already falling into the fire, winning
+the boon that stopped it before the king understood what he was granting.
+
+Mother and father share one id-clash each with nothing (there is no other Jaratkaru in the
+tree) but need distinguishing from each other, so they are `JaratkaruSage` and
+`JaratkaruNagi`, the same suffix-by-role convention as `ShraddhaAngirasa` and `ShantiAtharva`
+in X.1. Jaratkaru-nagi is added as a daughter of Kashyap and Kadru, alongside Vasuki and the
+tree's other principal nagas, since she is Vasuki's sister and the text gives no other
+mother.
+
+**Astika's row is anchored to Janamejaya's, not to his parents'.** Left to his ancestry alone
+he would float three rows below Kashyap, ages before the king whose court is his entire
+story — the same shape of problem the tree already accepts for Surya fathering Karna an age
+after his own generation, and solves the same way, with a long ray rather than a forced
+chronology.
 
 ---
 

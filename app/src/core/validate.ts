@@ -1,4 +1,5 @@
-import type { FamilyDataV2, PersonRecord, UnionRecord } from './types';
+import type { FamilyDataV2, PersonRecord, RelativeAnchor, UnionRecord } from './types';
+import { isRelativeAnchor } from './types';
 
 export interface ValidationResult {
   errors: string[];
@@ -7,6 +8,20 @@ export interface ValidationResult {
 
 const isRecord = (v: unknown): v is Record<string, unknown> =>
   typeof v === 'object' && v !== null && !Array.isArray(v);
+
+/** Normalize either anchor form out of untrusted JSON; drop anything malformed. */
+const parseAnchor = (v: unknown): { genAnchor?: number | RelativeAnchor } => {
+  if (typeof v === 'number') return { genAnchor: v };
+  if (isRecord(v) && typeof v.relativeTo === 'string') {
+    return {
+      genAnchor: {
+        relativeTo: v.relativeTo,
+        offset: typeof v.offset === 'number' ? v.offset : 0,
+      },
+    };
+  }
+  return {};
+};
 
 /**
  * Structural + referential validation of a v2 file. Errors make the file unusable;
@@ -38,6 +53,45 @@ export const validateData = (raw: FamilyDataV2): ValidationResult => {
       if (!personIds.has(dp)) errors.push(`person "${p.id}": unknown divineParent "${dp}"`);
       else if (!divineById.get(dp)) warnings.push(`"${p.id}": divineParent "${dp}" is not marked divine`);
     }
+  }
+
+  // Relative anchors: the target must exist and must not be the person themselves,
+  // and the anchor graph must be acyclic. A cycle ("A sits beside B, B sits beside
+  // A") has no solution the leveler can settle on: each pass would push both a step
+  // further down until the Bellman-Ford bound stops it, silently, at a garbage row.
+  const relAnchorOf = new Map<string, string>();
+  for (const p of raw.people) {
+    const a = p.genAnchor;
+    if (!isRelativeAnchor(a)) continue;
+    if (!personIds.has(a.relativeTo)) {
+      errors.push(`person "${p.id}": genAnchor.relativeTo names no one ("${a.relativeTo}")`);
+      continue;
+    }
+    if (a.relativeTo === p.id) {
+      errors.push(`person "${p.id}": genAnchor.relativeTo points at itself`);
+      continue;
+    }
+    if (!Number.isFinite(a.offset)) {
+      errors.push(`person "${p.id}": genAnchor.offset must be a number`);
+      continue;
+    }
+    relAnchorOf.set(p.id, a.relativeTo);
+  }
+  const anchorState = new Map<string, 'walking' | 'done'>();
+  for (const start of relAnchorOf.keys()) {
+    if (anchorState.has(start)) continue;
+    const path: string[] = [];
+    let cur: string | undefined = start;
+    while (cur !== undefined && relAnchorOf.has(cur) && !anchorState.has(cur)) {
+      anchorState.set(cur, 'walking');
+      path.push(cur);
+      cur = relAnchorOf.get(cur);
+    }
+    if (cur !== undefined && anchorState.get(cur) === 'walking') {
+      const loop = path.slice(path.indexOf(cur)).concat(cur);
+      errors.push(`genAnchor.relativeTo cycle: ${loop.join(' -> ')}`);
+    }
+    for (const id of path) anchorState.set(id, 'done');
   }
 
   const unionIds = new Set<string>();
@@ -134,7 +188,7 @@ export const parseFamilyData = (
     ...(Array.isArray(p.divineParents) && p.divineParents.length
       ? { divineParents: p.divineParents.map(String) }
       : {}),
-    ...(typeof p.genAnchor === 'number' ? { genAnchor: p.genAnchor } : {}),
+    ...parseAnchor(p.genAnchor),
     ...(p.altName ? { altName: String(p.altName) } : {}),
     ...(p.altGender === 'female' || p.altGender === 'male' ? { altGender: p.altGender } : {}),
   }));

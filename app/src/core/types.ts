@@ -1,4 +1,16 @@
 export type Gender = "male" | "female";
+
+/** An era anchor expressed against another person rather than as a fixed row.
+ *  `offset` is signed: negative sits ABOVE the target, 0 shares its row. */
+export interface RelativeAnchor {
+  relativeTo: string;
+  offset: number;
+}
+
+/** True for the `{ relativeTo, offset }` form of `genAnchor`. */
+export const isRelativeAnchor = (
+  a: number | RelativeAnchor | undefined,
+): a is RelativeAnchor => typeof a === "object" && a !== null;
 export type UnionStatus = "married" | "divorced" | "partners" | "unknown";
 export type ParentTag = "biological" | "adoptive";
 
@@ -18,10 +30,22 @@ export interface PersonRecord {
   /** Divine parent(s): a free-agent parentage that adds a divine father/mother
    *  without disturbing the child's mortal (biological/adoptive) parentage. */
   divineParents?: string[];
-  /** Manual era anchor. Pins this person's whole disconnected tree to this
-   *  absolute generation (smaller/negative = higher/older, larger = lower/younger),
-   *  overriding the auto bottom-align. Lets separate lineages share a time-plane. */
-  genAnchor?: number;
+  /** Manual era anchor: a FLOOR on this person's generation, which the leveler
+   *  may push below but never above. Lets a lineage the texts give no ancestry
+   *  for sit level with its story-contemporaries instead of floating.
+   *
+   *  Two forms, same meaning:
+   *   - `number` — an absolute row. Simple, but a SNAPSHOT: it goes stale the
+   *     moment anything above it in the tree gets deeper, and every stale
+   *     anchor has to be recomputed by hand.
+   *   - `{ relativeTo, offset }` — "this many rows from that person", resolved
+   *     at load time. Self-healing: the target moves, this moves with it. New
+   *     figures should use this form; `relativeTo` is whoever they share a
+   *     scene with (Kapila beside Sagara, Astika beside Janamejaya), and
+   *     `offset` is negative for rows ABOVE the target.
+   *
+   *  Relative anchors must not form a cycle; validateData rejects that. */
+  genAnchor?: number | RelativeAnchor;
   /** A second name for a figure who lived as both a man and a woman (Sudyumna
    *  for Ila, Shikhandini for Shikhandi), shown on the opposite side of the orb,
    *  placed by `altGender` (defaults to the opposite of `gender`). The person's

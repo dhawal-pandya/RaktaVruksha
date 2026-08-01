@@ -264,8 +264,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySoma",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Budha and Ila; first emperor of the lunar line, famed for his love of the apsara Urvashi."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Son of Budha and Ila; first emperor of the lunar line, famed for his love of the apsara Urvashi. She agreed to live with him on three conditions — never to be seen naked by him, and her two pet rams never harmed — and the Gandharvas broke the compact for her by stealing the rams in the dark, so that he leapt up unclothed by lightning-flash to chase them off; she vanished at once, and he wandered mad with grief until the Gandharvas, moved by it, let them meet again, an evening at a time, and Ayus was born of those nights."
     },
     {
       "id": "Ayus",
@@ -284,8 +284,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySoma",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Ayus; so mighty he briefly took Indra's throne, then fell for his pride and became a serpent."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Son of Ayus; so mighty he briefly took Indra's throne, then fell for his pride and became a serpent. Made regent-Indra while the real Indra hid from the sin of killing the brahmin Vritra; grew so arrogant on the throne he had the seven sages carry his palanquin, and kicked the slow sage Agastya in his impatience, who cursed him to fall to earth as a python. Lived on as a giant serpent, caught and questioned Bhima in its coils during the exile, and was freed of the curse when Yudhishthira answered its riddles."
     },
     {
       "id": "Yayati",
@@ -294,8 +294,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySoma",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Nahusha; a great emperor cursed with old age, which his youngest son Puru bore for him. His five sons founded five peoples."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Nahusha; a great emperor cursed with old age, which his youngest son Puru bore for him. His five sons founded five peoples. Cursed by his father-in-law Shukracharya for taking a second wife, Sharmishtha, behind his first wife Devayani's back; exchanged the curse's old age for a thousand years of his son Puru's youth, exhausted every pleasure without satisfaction, and returned it, naming Puru his heir over his elder sons for the sacrifice. Fell from heaven later for pride, and was carried back up on the merit his grandsons through Madhavi gave him."
     },
     {
       "id": "Ila",
@@ -316,8 +316,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyApsara",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "The apsara beloved of Pururavas and mother of Ayus.",
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "The apsara beloved of Pururavas and mother of Ayus. Bound to him only by the condition that he never see her unclothed and her two pet rams go unharmed; lost him for it when the Gandharvas, to end their affair, stole the rams by night and he leapt up by lightning to save them, breaking the condition; relented afterward to grant him one night a year, which is where their sons were born. In an older frame she is also cursed to live a mortal's life on earth for a time, of which Pururavas is that sentence.",
       "divine": true
     },
     {
@@ -327,8 +327,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": null,
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "First wife of Yayati; daughter of Shukracharya, preceptor of the asuras. Mother of Yadu and Turvasu."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "First wife of Yayati; daughter of Shukracharya, preceptor of the asuras. Mother of Yadu and Turvasu. Loved Kacha, sent by the devas to learn Shukracharya's death-reviving mantra, and cursed his knowledge useless to him when he refused to marry a guru's daughter; pulled from a dry well by Yayati after Sharmishtha, her own attendant since a childhood quarrel, pushed her in; married Yayati on her father's insistence, on condition Sharmishtha never share his bed — a condition Yayati broke in secret, which is what drew Shukracharya's curse of old age down on him."
     },
     {
       "id": "Sharmishtha",
@@ -337,8 +337,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": null,
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Second wife of Yayati; daughter of the asura king Vrishaparva. Mother of Druhyu, Anu and Puru."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Second wife of Yayati; daughter of the asura king Vrishaparva. Mother of Druhyu, Anu and Puru. Made Devayani's handmaiden after pushing her into a well in a childhood quarrel over a garment; asked for Devayani as her own attendant instead as a face-saving condition of her father's surrender; secretly became Yayati's lover and bore him three sons under Devayani's own roof, discovery of which brought Shukracharya's curse down on the king."
     },
     {
       "id": "Yadu",
@@ -417,8 +417,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySoma",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "The great emperor son of Dushyanta and Shakuntala, after whom the land Bharatavarsha and the Bharata clan are named."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "The great emperor son of Dushyanta and Shakuntala, after whom the land Bharatavarsha and the Bharata clan are named. Tested as a boy at Kanva's ashram playing fearlessly with lion cubs, counting their teeth; recognised by Dushyanta only after the king's ring, lost and found in a fish, restored his memory of Shakuntala; passed over his own sons for the throne and adopted the sage Bharadvaja's son Vitatha instead, since none of his own were found worthy."
     },
     {
       "id": "Hastin",
@@ -437,8 +437,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySoma",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "King some generations after Hastin; eponymous ancestor of the Kurus and of the field of Kurukshetra."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "King some generations after Hastin; eponymous ancestor of the Kurus and of the field of Kurukshetra. Ploughed the field himself and sowed it with grains of penance rather than corn, at Indra's asking, to make it forever a ground where any who died fighting or in austerity there would reach heaven — the reason the war his own descendants fought is staged exactly there."
     },
     {
       "id": "Kroshtu",
@@ -527,8 +527,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Eldest son of Pratipa; a skin ailment led him to renounce the throne and take to the forest as an ascetic."
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Eldest son of Pratipa; a skin ailment led him to renounce the throne and take to the forest, which is why the throne passed to his younger brother Shantanu instead. Held by tradition to be alive still, a chiranjivi in the hidden village of Kalapa alongside the Ikshvaku king Maru, and expected to return and revive both the solar and lunar lines when the Kali age ends."
     },
     {
       "id": "Bahlika",
@@ -537,8 +537,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Pratipa; ruled the Bahlika kingdom. His descendants fought on the Kaurava side."
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Pratipa; ruled the Bahlika kingdom. His descendants fought on the Kaurava side; an elder at the Kuru court through the whole epic, present at the dice game and every council, too bound by kinship to Duryodhana to leave despite disapproving of the war, and killed at Kurukshetra by Bhima on the seventeenth day."
     },
     {
       "id": "Shantanu",
@@ -548,8 +548,11 @@
       "alive": true,
       "birthFamilyId": "familyKuru",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Youngest son of Pratipa; became king when Devapi renounced. Father of Bhishma.",
-      "genAnchor": 88
+      "notes": "Youngest son of Pratipa; became king when Devapi renounced. Father of Bhishma. Married Ganga on the condition he never question her, and lost her when he broke it over the drowning of their eighth son; years later fell for the fisherman's daughter Satyavati, whose father would only give her if her sons inherited the throne — the demand that made Bhishma take his vow of celibacy.",
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -4
+      }
     },
     {
       "id": "Somadatta",
@@ -578,8 +581,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": null,
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "The devi of the sacred river; Shantanu's first wife and mother of Bhishma, whom she bore as the last of the eight Vasus made mortal.",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "The devi of the sacred river; Shantanu's first wife and mother of Bhishma, whom she bore as the last of the eight Vasus made mortal. Drowned her first seven infant sons at birth to return the cursed Vasus to heaven at once, and left Shantanu, as she had warned she would, the moment he broke his vow of never questioning her and asked why she drowned the eighth — sparing Bhishma, and raising him herself before returning him to his father.",
       "divine": true
     },
     {
@@ -589,8 +592,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Born Devavrata; took a vow of lifelong celibacy so his father could marry Satyavati, hence 'Bhishma'. He was Prabhasa, the eighth and last of the eight Vasus, cursed to a long mortal life for stealing the sage Vasishtha's cow; his seven brother-Vasus, shown here as Ganga's other sons, she returned at once to heaven. Grandsire and regent of the Kurus; a chiranjivi who chose his own hour of death."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Born Devavrata; took a vow of lifelong celibacy so his father could marry Satyavati, hence 'Bhishma'. He was Prabhasa, the eighth and last of the eight Vasus, cursed to a long mortal life for stealing the sage Vasishtha's cow; his seven brother-Vasus, shown here as Ganga's other sons, she returned at once to heaven. Grandsire and regent of the Kurus; a chiranjivi who chose his own hour of death. By name — abducting Amba, Ambika and Ambalika at their swayamvara for Vichitravirya, releasing Amba when she loved another, her vow of revenge and rebirth as Shikhandi, ten days commanding the Kaurava host at Kurukshetra, falling pierced by Arjuna's arrows through Shikhandi shielding him, lying on that bed of arrows through the rest of the war, and teaching Yudhishthira statecraft from it before choosing to die at the sun's turn north (uttarayana)."
     },
     {
       "id": "VasuDhara",
@@ -676,8 +679,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyMatsya",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "A fisherman's daughter, raised by the ferryman Dasharaja; queen of Shantanu and matriarch of the later Kuru line."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "A fisherman's daughter, raised by the ferryman Dasharaja; queen of Shantanu and matriarch of the later Kuru line. Before her marriage bore Vyasa to the sage Parashara on an island in the Yamuna, her virginity restored by his boon; her father's condition that only her own sons inherit the throne is what drove Bhishma to his vow; after both her sons Chitrangada and Vichitravirya died without surviving the line properly, she called Vyasa back to father Dhritarashtra, Pandu and Vidura on their widows by niyoga."
     },
     {
       "id": "Parashara",
@@ -696,8 +699,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Born to Satyavati by Parashara on an island in the Yamuna, hence Krishna Dvaipayana. He divided the one Veda into four because the age had grown too dull to hold it whole, fathered Dhritarashtra, Pandu and Vidura by niyoga, and composed the epic his own descendants are the cast of. The seventeenth of the avatars, SB 1.3.21.",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Born to Satyavati by Parashara on an island in the Yamuna, hence Krishna Dvaipayana. He divided the one Veda into four because the age had grown too dull to hold it whole, fathered Dhritarashtra, Pandu and Vidura by niyoga, and composed the epic his own descendants are the cast of. The seventeenth of the avatars, SB 1.3.21. By name — compiling the eighteen Puranas and the Brahma Sutras, dictating the Mahabharata to Ganesha on condition the god never pause for an unintelligible verse, appearing at need throughout the epic to guide his line (granting Sanjaya far-sight to narrate the war, consoling Dhritarashtra, giving Gandhari the vision of her dead sons one last night), and, in the Bhagavata's own frame, the guru who taught it entire to his son Shukadeva.",
       "divine": true
     },
     {
@@ -707,8 +710,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Elder son of Shantanu and Satyavati; a proud king slain young by a gandharva, leaving no heir."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Elder son of Shantanu and Satyavati; a proud king slain young by a gandharva, leaving no heir. Killed in single combat by a gandharva of the very same name, who considered himself the only rightful bearer of it; his death, without a son, is what put Vichitravirya and then the niyoga line on the Kuru throne instead."
     },
     {
       "id": "Vichitravirya",
@@ -717,8 +720,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Younger son of Shantanu and Satyavati; wed Ambika and Ambalika but died childless, prompting the niyoga that continued the line."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Younger son of Shantanu and Satyavati; wed Ambika and Ambalika but died childless, prompting the niyoga that continued the line. Both wives were won for him by Bhishma at their own swayamvara, abducted from the assembled kings of Kashi; Vichitravirya himself took no part in winning them, and died of consumption within a few years of the marriage, worn out, without an heir."
     },
     {
       "id": "Kashiraja",
@@ -729,7 +732,10 @@
       "birthFamilyId": "familyKashi",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King of Kashi; his three daughters were carried off from their svayamvara by Bhishma as brides for Vichitravirya.",
-      "genAnchor": 88
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -4
+      }
     },
     {
       "id": "Amba",
@@ -738,8 +744,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyKashi",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Eldest Kashi princess; rejected because she loved another, she vowed vengeance on Bhishma and was reborn in Panchala as Shikhandi."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Eldest Kashi princess; rejected because she loved another, she vowed vengeance on Bhishma and was reborn in Panchala as Shikhandi. Abducted by Bhishma at her sisters' swayamvara for his half-brother Vichitravirya, then sent back on confessing she loved King Shalva; refused by Shalva in turn for having been 'won' by another man, she begged every warrior including Parashurama himself to kill Bhishma, and when none could, took her own life vowing to return as the instrument of his death."
     },
     {
       "id": "Ambika",
@@ -778,8 +784,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Born blind to Ambika through Vyasa's niyoga; the elder prince, kept from the throne by his blindness. Father of the Kauravas."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Born blind to Ambika through Vyasa's niyoga; the elder prince, kept from the throne by his blindness. Father of the Kauravas. By name — his blind favouritism toward Duryodhana through every wrong, from the lac-house to the dice game to the war itself; crushing an iron statue of Bhima to pieces after the war, meant for the real man, on Krishna's warning; and retiring to the forest with Gandhari and Kunti in his last years, dying with them in a forest fire."
     },
     {
       "id": "Pandu",
@@ -788,8 +794,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Born pale to Ambalika through Vyasa's niyoga; king of Hastinapura. A curse made his touch fatal to a wife, so his sons were god-begotten."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Born pale to Ambalika through Vyasa's niyoga; king of Hastinapura. Shot the sage Kindama and his wife while they were coupling in the form of deer, not knowing them for sages, and was cursed to die the instant he embraced a wife in desire — so his five sons were begotten on Kunti's and Madri's mantras by the devas instead. Died breaking that vow at last with Madri, who followed him onto the pyre."
     },
     {
       "id": "Vidura",
@@ -798,8 +804,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Born to the maid Parishrami through Vyasa's niyoga; an incarnation of Dharma, wisest counsellor of the Kurus, never king by birth of a servant."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Born to the maid Parishrami through Vyasa's niyoga; an incarnation of Dharma, wisest counsellor of the Kurus, never king by birth of a servant. By name — the Vidura-niti, his counsel to Dhritarashtra against the dice game and the war, ignored every time; warning Yudhishthira of the lac-house plot in riddles the Pandavas alone understood; and retiring at the very end to the forest, where he is said to have poured his own life into Yudhishthira at their last meeting before dying."
     },
     {
       "id": "Sulabha",
@@ -820,7 +826,10 @@
       "birthFamilyId": "familyGandhara",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King of Gandhara; father of Gandhari and Shakuni.",
-      "genAnchor": 89
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -3
+      }
     },
     {
       "id": "Gandhari",
@@ -829,8 +838,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyGandhara",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Princess of Gandhara; on marrying the blind Dhritarashtra she bound her own eyes for life. By a boon she bore a hundred sons and a daughter."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Princess of Gandhara; on marrying the blind Dhritarashtra she bound her own eyes for life. By a boon she bore a hundred sons and a daughter. Struck a single mass of flesh from a two-year pregnancy in her grief at Kunti bearing a son first, which Vyasa divided into a hundred and one jars to grow into Duryodhana and his brothers and one sister; cursed Krishna after the war, for letting it happen when he could have stopped it, that his own Yadava line would destroy itself the same way — the curse the Prabhasa killings fulfil."
     },
     {
       "id": "Shakuni",
@@ -839,8 +848,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyGandhara",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Prince of Gandhara, Gandhari's brother; master of the loaded dice, he engineered the Kauravas' schemes against the Pandavas."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Prince of Gandhara, Gandhari's brother; master of the loaded dice, he engineered the Kauravas' schemes against the Pandavas. In one telling, Bhishma imprisoned and starved King Subala's whole line for a slight, leaving only Shakuni alive on his dying father's order to avenge them all; the dice he played with at Hastinapura were said to be carved from his own father's bones and obeyed his will. Present at every plot against the Pandavas from the dice game onward; killed at Kurukshetra by Sahadeva."
     },
     {
       "id": "Uluka",
@@ -859,8 +868,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Eldest of the hundred Kauravas; the crown prince whose enmity for the Pandavas drove the war. At his birth jackals howled, an omen he should be cast out."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Eldest of the hundred Kauravas; the crown prince whose enmity for the Pandavas drove the war. At his birth jackals howled, an omen he should be cast out. By name — the lac-house at Varanavata built to burn the Pandavas alive, the rigged dice game that won Yudhishthira's kingdom and Draupadi, her disrobing in the Kuru hall that Krishna alone answered, refusing even five villages to avoid war, crowning Karna king of Anga against his own house's objections, eighteen days directing the Kaurava host after Bhishma, Drona and Karna each fell, and dying on the war's last day with his thigh broken by Bhima's mace, the blow Bhima had sworn at the dice game."
     },
     {
       "id": "Dushasana",
@@ -879,7 +888,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Jalasandha",
@@ -888,7 +898,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Sama",
@@ -897,7 +908,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Saha",
@@ -906,7 +918,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Vinda",
@@ -915,7 +928,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Anuvinda",
@@ -924,7 +938,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Durdharsha",
@@ -933,7 +948,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Subahu",
@@ -942,7 +958,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Dushpradharshana",
@@ -951,7 +968,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Durmarshana",
@@ -960,7 +978,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Durmukha",
@@ -969,7 +988,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Dushkarna",
@@ -978,7 +998,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Vivimshati",
@@ -987,7 +1008,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Vikarna",
@@ -1006,7 +1028,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Chitra",
@@ -1015,7 +1038,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Upachitra",
@@ -1024,7 +1048,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Chitraksha",
@@ -1033,7 +1058,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Charuchitra",
@@ -1042,7 +1068,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Sharasana",
@@ -1051,7 +1078,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Durmada",
@@ -1060,7 +1088,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Dushpragaha",
@@ -1069,7 +1098,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Vivitsu",
@@ -1078,7 +1108,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Vikata",
@@ -1087,7 +1118,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Urnanabha",
@@ -1096,7 +1128,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Sunabha",
@@ -1105,7 +1138,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Nanda",
@@ -1124,7 +1158,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Senapati",
@@ -1133,7 +1168,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Sushena",
@@ -1142,7 +1178,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Kundodara",
@@ -1151,7 +1188,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Mahodara",
@@ -1160,7 +1198,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Chitrabahu",
@@ -1169,7 +1208,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Chitravarma",
@@ -1178,7 +1218,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Suvarma",
@@ -1187,7 +1228,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Durvimochana",
@@ -1196,7 +1238,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Ayobahu",
@@ -1205,7 +1248,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Mahabahu",
@@ -1214,7 +1258,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Chitranga",
@@ -1223,7 +1268,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Chitrakundala",
@@ -1232,7 +1278,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Bhimavega",
@@ -1241,7 +1288,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Bhimabala",
@@ -1250,7 +1298,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Balaki",
@@ -1259,7 +1308,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Balavardhana",
@@ -1268,7 +1318,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Ugrayudha",
@@ -1277,7 +1328,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Bhimakarma",
@@ -1286,7 +1338,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Kanakayu",
@@ -1295,7 +1348,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Dridhayudha",
@@ -1304,7 +1358,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Dridhavarma",
@@ -1313,7 +1368,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Dridhakshatra",
@@ -1322,7 +1378,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Somakirti",
@@ -1331,7 +1388,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Anudara",
@@ -1340,7 +1398,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Dridhasandha",
@@ -1349,7 +1408,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Jarasandha",
@@ -1368,7 +1428,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Sadasuvak",
@@ -1377,7 +1438,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Ugrashrava",
@@ -1386,7 +1448,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Ashvasena",
@@ -1395,7 +1458,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Senani",
@@ -1404,7 +1468,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Dushparajaya",
@@ -1413,7 +1478,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Aparajita",
@@ -1422,7 +1488,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Panditaka",
@@ -1431,7 +1498,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Vishalaksha",
@@ -1440,7 +1508,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Duravara",
@@ -1449,7 +1518,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Dridhahasta",
@@ -1458,7 +1528,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Suhasta",
@@ -1467,7 +1538,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Vatavega",
@@ -1476,7 +1548,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Suvarcha",
@@ -1485,7 +1558,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Adityaketu",
@@ -1494,7 +1568,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Bahvashi",
@@ -1503,7 +1578,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Nagadanta",
@@ -1512,7 +1588,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Ugrayayi",
@@ -1521,7 +1598,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Kavachi",
@@ -1530,7 +1608,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Nishangi",
@@ -1539,7 +1618,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Pashi",
@@ -1548,7 +1628,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Dandadhara",
@@ -1557,7 +1638,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Dhanurgraha",
@@ -1566,7 +1648,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Ugra",
@@ -1575,7 +1658,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Bhimaratha",
@@ -1584,7 +1668,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Vira",
@@ -1593,7 +1678,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Virabahu",
@@ -1602,7 +1688,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Alolupa",
@@ -1611,7 +1698,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Abhaya",
@@ -1620,7 +1708,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Raudrakarma",
@@ -1629,7 +1718,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Dridharatha",
@@ -1638,7 +1728,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Anadhrishya",
@@ -1647,7 +1738,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Kundabhedi",
@@ -1656,7 +1748,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Viravi",
@@ -1665,7 +1758,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Chitrasena",
@@ -1684,7 +1778,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Dirghabahu",
@@ -1693,7 +1788,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Pramathi",
@@ -1702,7 +1798,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Vyudhoru",
@@ -1711,7 +1808,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Kanakadhvaja",
@@ -1720,7 +1818,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Kundadhara",
@@ -1729,7 +1828,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Kundashi",
@@ -1738,7 +1838,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Viraja",
@@ -1747,7 +1848,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Suvarchas",
@@ -1756,7 +1858,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the hundred sons of Dhritarashtra and Gandhari, the Kauravas; killed at Kurukshetra. MBh 1.108."
     },
     {
       "id": "Dushala",
@@ -1825,8 +1928,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySindhu",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "King of Sindhu, husband of Dushala; his blocking of the Pandavas at the pass sealed Abhimanyu's death, and Arjuna vowed and took his head the next day."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "King of Sindhu, husband of Dushala; his blocking of the Pandavas at the pass sealed Abhimanyu's death, and Arjuna vowed and took his head the next day. Years earlier had tried to abduct Draupadi from the Pandavas' forest hermitage and been captured and humiliated, not killed, by Bhima at Yudhishthira's word; on the thirteenth day of the war held the gate alone against every other Pandava while Abhimanyu broke in and died trapped inside; Arjuna's sunset vow to kill him or immolate himself was fulfilled by Krishna's trick of blotting out the sun so Jayadratha showed himself too soon."
     },
     {
       "id": "Suratha",
@@ -1845,8 +1948,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Eldest Pandava, begotten of Kunti by Dharma (Yama); the just king, never known to lie.",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Eldest Pandava, begotten of Kunti by Dharma (Yama); the just king, never known to lie. By name — winning Draupadi's hand for all five brothers by his mother's unwitting word, founding Indraprastha, the Rajasuya that provoked Duryodhana's envy, losing the kingdom, his brothers, Draupadi and himself at dice, thirteen years' exile including one incognito as Kanka in Virata's court, answering the Yaksha's riddles at the lake to revive his brothers, king again after the war, the Ashvamedha that followed, and at the very end walking to heaven with a dog who was Dharma himself, refusing to abandon it at the gate.",
       "divineParents": [
         "Yama"
       ]
@@ -1858,8 +1961,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Second Pandava, begotten of Kunti by Vayu; of superhuman strength, sworn to kill all hundred Kauravas.",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Second Pandava, begotten of Kunti by Vayu; of superhuman strength, sworn to kill all hundred Kauravas. By name — killing the rakshasa Bakasura to free a village, marrying the rakshasi Hidimba and fathering Ghatotkacha, surviving Duryodhana's poisoning and a river-drowning to gain a naga boon of tenfold strength, killing Kichaka in Virata's court for molesting Draupadi, drinking Dushasana's blood at Kurukshetra as sworn over Draupadi's disrobing, and ending the war breaking Duryodhana's thigh in their mace duel.",
       "divineParents": [
         "Vayu"
       ]
@@ -1871,8 +1974,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Third Pandava, begotten of Kunti by Indra; the supreme archer, friend of Krishna, hearer of the Bhagavad Gita.",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Third Pandava, begotten of Kunti by Indra; the supreme archer, friend of Krishna, hearer of the Bhagavad Gita. By name — winning Draupadi at her svayamvara by the fish-eye shot, the pilgrimage-exile and marriages to Chitrangada and Ulupi, burning Khandava forest beside Krishna and meeting Agni and Mayasura there, winning Subhadra, the year as Brihannala in Virata's court, penance on Himavat for the Pashupata from Shiva and weapons from the other lokapalas, charioteer scene and the Gita at Kurukshetra, killing Bhishma from behind Shikhandi, Jayadratha within a day as sworn, Karna at last, the post-war Ashvamedha campaign, and the Mahaprasthana into the Himalayas at the end with his brothers.",
       "divineParents": [
         "Indra"
       ]
@@ -1910,8 +2013,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": null,
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Kunti's firstborn, begotten by Surya the sun-god before her marriage; set adrift on the river and raised by the charioteer Adhiratha, so his birth lineage stayed unknown even to him. Half-brother of the Pandavas, he fought and died for Duryodhana, learning his kin too late.",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Kunti's firstborn, begotten by Surya the sun-god before her marriage; set adrift on the river and raised by the charioteer Adhiratha, so his birth lineage stayed unknown even to him. Half-brother of the Pandavas, he fought and died for Duryodhana, learning his kin too late. By name — humiliated at the tournament for his low birth until Duryodhana crowned him king of Anga on the spot, giving away his own protective earrings and armour to Indra in disguise rather than refuse a beggar, Parashurama's curse that his learning would fail him when he needed it most (for lying about his birth to get it), Kunti's night visit before the war asking him to spare his brothers, his promise to spare all but Arjuna, and his death to Arjuna's arrow while his chariot wheel was stuck in the mud and his weapons-knowledge had failed him exactly as cursed.",
       "divineParents": [
         "Surya"
       ]
@@ -1925,7 +2028,10 @@
       "birthFamilyId": "familySuta",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "Son of Satkarma, of the Anga line, and a suta by office. Playing on the bank of the Ganga he found a basket with a child in it, and having no son of his own he raised him: Karna. SB 9.23.12-13",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Radha",
@@ -2054,8 +2160,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Ghatotkacha; the archer of the three arrows who vowed to fight for whichever side was losing and so gave up his head to Krishna."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Son of Ghatotkacha; the archer of the three arrows who vowed to fight for whichever side was losing and so gave up his head to Krishna. Came to Kurukshetra with a bow that needed only three arrows to end any war — one to mark every target, one to mark himself, one to finish it; Krishna, seeing he would keep his vow to the losing side over and over and so make the war endless, begged his head as alms before the fighting began; set on a hill, the head watched the whole eighteen days and, asked afterward who really won, said only that it saw Krishna's chakra everywhere the fighting was."
     },
     {
       "id": "Abhimanyu",
@@ -2134,8 +2240,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Parikshit; the king at whose serpent sacrifice the Mahabharat was first recited by Vaishampayana."
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Parikshit; the king at whose serpent sacrifice the Mahabharata was first recited, by Vaishampayana, Vyasa's own disciple. Began the sacrifice to avenge his father's death by Takshaka's bite, and kept it burning until Astika, kin to both the sacrificer's court and the nagas being fed into the fire, won a boon before Janamejaya knew what he was granting and made him stop with Vasuki, Takshaka and the rest of the naga race still unburned."
     },
     {
       "id": "ShatanikaII",
@@ -2166,7 +2272,10 @@
       "birthFamilyId": "familyMadra",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King of Madra; father of Shalya and Madri.",
-      "genAnchor": 89
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -3
+      }
     },
     {
       "id": "Shalya",
@@ -2175,8 +2284,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyMadra",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "King of Madra, brother of Madri; a peerless charioteer tricked into fighting for Duryodhana, whom he served as Karna's charioteer."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "King of Madra, brother of Madri; a peerless charioteer tricked into fighting for Duryodhana, whom he served as Karna's charioteer. Marching to join the Pandavas, was waylaid with lavish hospitality by disguised Duryodhana's men and, bound by a promise of gratitude given before he knew who had given it, forced to fight for the Kauravas instead; drove Karna's chariot needling him with doubt through his last battle, then took command of the whole army after Karna fell and was killed by Yudhishthira himself, the one Kaurava commander the eldest Pandava faced in person."
     },
     {
       "id": "Madri",
@@ -2207,7 +2316,10 @@
       "birthFamilyId": "familyPanchala",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King of Panchala; humiliated by his old classmate Drona, he won from a sacrifice a son to slay Drona and a daughter to wed the Pandavas.",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Shikhandi",
@@ -2238,8 +2350,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Also Krishnaa and Yajnaseni; born of the sacrificial fire beside Dhrishtadyumna. Won by Arjuna, she became the shared wife of all five Pandavas and empress of Indraprastha."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Also Krishnaa and Yajnaseni; born of the sacrificial fire beside Dhrishtadyumna. Won by Arjuna, she became the shared wife of all five Pandavas and empress of Indraprastha. By name — humiliated and disrobed in the Kuru hall after the dice game, saved when Krishna made her sari endless; her vow not to bind her hair again till washed in Dushasana's blood; disguised as the maid Sairandhri in Virata's court, where she engineered Kichaka's death; and her sons by all five Pandavas (the Upapandavas), killed in their sleep by Ashvatthama after the war."
     },
     {
       "id": "Virata",
@@ -2249,8 +2361,11 @@
       "alive": true,
       "birthFamilyId": "familyMatsya",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "King of Matsya, in whose court the Pandavas passed their thirteenth year of exile in disguise.",
-      "genAnchor": 90
+      "notes": "King of Matsya, in whose court the Pandavas passed their thirteenth year of exile in disguise — Yudhishthira as the courtier Kanka, Bhima the cook Ballava, Arjuna the dance teacher Brihannala, Nakula and Sahadeva as grooms, Draupadi as the queen's maid Sairandhri. Sheltered them through the Kichaka affair and a Kaurava cattle-raid Arjuna alone repelled while still in disguise; gave his daughter Uttara to Abhimanyu once the Pandavas revealed themselves.",
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Sudeshna",
@@ -2259,8 +2374,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": null,
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Queen of Virata."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Queen of Virata. Took Draupadi, disguised as the maid Sairandhri, into her own service during the Pandavas' year incognito, and sent her to her brother Kichaka's house on an errand not knowing it would end in his death at Bhima's hands for molesting her."
     },
     {
       "id": "UttarKumara",
@@ -2291,7 +2406,10 @@
       "birthFamilyId": "familyYadava",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "A Yadava patriarch; father of Devaka and Ugrasena.",
-      "genAnchor": 87
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -5
+      }
     },
     {
       "id": "Devaka",
@@ -2310,8 +2428,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Yadava king of Mathura, son of Ahuka; deposed by his son Kamsa and restored by Krishna."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Yadava king of Mathura, son of Ahuka; deposed by his son Kamsa and restored by Krishna. Kept a virtual prisoner through Kamsa's whole reign of terror; on Kamsa's death Krishna put him back on the throne and himself accepted no kingdom in Mathura, the reason Yadava rule there sits with Ugrasena's house rather than Vasudeva's own."
     },
     {
       "id": "Kamsa",
@@ -2320,8 +2438,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Ugrasena; the tyrant of Mathura who jailed Devaki and Vasudeva and was slain by the young Krishna."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Son of Ugrasena; the tyrant of Mathura who jailed Devaki and Vasudeva and was slain by the young Krishna. A voice at Devaki's wedding warned that her eighth child would kill him; he killed her first six infants for it and would have killed the seventh (Balarama, moved to Rohini's womb) and eighth (Krishna, smuggled to Gokula) in turn. Sent Putana, Trinavarta, Vatsasura and a train of other demons to kill the boy at Gokula, all failed; finally summoned Krishna and Balarama to a wrestling exhibition at Mathura meaning to have them killed in the ring, and was pulled from his own throne and killed by Krishna before the assembly instead."
     },
     {
       "id": "Devaki",
@@ -2342,7 +2460,10 @@
       "birthFamilyId": "familyYadava",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "Shura, son of Vidhuratha of the Vrishni house; ten sons, of whom Vasudeva was the chief, and five daughters, one of them Pritha whom he gave to his friend Kunti. The Bhagavata runs his descent through Chitraratha and Vidhuratha, this tree through Vrishni, and both are recorded. SB 9.24.26-28",
-      "genAnchor": 89
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -3
+      }
     },
     {
       "id": "Vasudeva",
@@ -2361,8 +2482,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Born Pritha, daughter of Shurasena; given in adoption to the childless Kuntibhoja and renamed Kunti. By a sage's boon she could summon any god to father a child, hence Karna and the three eldest Pandavas."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Also Pritha, daughter of Shurasena, given in fosterage to Kuntibhoja. By name — a mantra from Durvasa that could call any deva to father a child, tested once in girlhood to bear and abandon Karna, then used three times as Pandu's wife to bear Yudhishthira, Bhima and Arjuna (and lent to Madri for Nakula and Sahadeva), Pandu's death beside Madri and her return to Hastinapura with the five boys, surviving Duryodhana's plots at their side, her secret night meeting with Karna before Kurukshetra, and her last years in the forest with Dhritarashtra and Gandhari, dying with them in the fire."
     },
     {
       "id": "Shrutashrava",
@@ -2383,7 +2504,10 @@
       "birthFamilyId": "familyYadava",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "A childless Bhoja king, cousin of Shurasena; he adopted Pritha, who took his name as Kunti.",
-      "genAnchor": 89
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -3
+      }
     },
     {
       "id": "Rohini",
@@ -2402,8 +2526,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Eighth son of Vasudeva and Devaki, carried across the Yamuna the night he was born and raised by Nanda and Yashoda in Gokula. Of the whole list the Bhagavata sets him apart: krsnas tu bhagavan svayam, the others are portions and portions of portions, and he is the source Himself. The twentieth of the avatars, SB 1.3.23 and 1.3.28.",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Eighth son of Vasudeva and Devaki, carried across the Yamuna the night he was born and raised by Nanda and Yashoda in Gokula. Of the whole list the Bhagavata sets him apart: krsnas tu bhagavan svayam, the others are portions and portions of portions, and he is the source Himself. The twentieth of the avatars, SB 1.3.23, 1.3.28. Too much story for one note; by name only — Putana, Trinavarta, Shakatasura, Yamalarjuna, Kaliya-damana, the Govardhana lift, the rasa-lila, Akrura's arrival, the Kamsa-vadha, the move to Dvaraka, Rukmini-harana, Jarasandha's seventeen sieges, the Syamantaka jewel, Narakasura-vadha and the sixteen thousand rescued, Shishupala-vadha at Yudhishthira's Rajasuya, Usha-Aniruddha and the war with Bana and Shiva, charioteer at Kurukshetra and speaker of the Bhagavad Gita, Sudama's visit, the Yadava civil war at Prabhasa, and his own end by the hunter Jara's arrow, mistaking his foot for a deer's eye.",
       "divine": true
     },
     {
@@ -2586,8 +2710,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyChedi",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "King of Chedi; husband of Shrutashrava and father of Shishupala."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "King of Chedi; husband of Shrutashrava and father of Shishupala. His son's death was foretold at birth — a third eye and four arms that would vanish, and his killer named, the moment the boy sat on a particular lap; Krishna's was the lap, and Shishupala's murder-death both took the extra limbs away and, a hundred insults later, ended him at Krishna's hand."
     },
     {
       "id": "Shishupala",
@@ -2616,8 +2740,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyAngirasa",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Preceptor in arms to both Kaurava and Pandava princes; brahmin by birth, warrior by trade, commander of the Kaurava host after Bhishma."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Preceptor in arms to both Kaurava and Pandava princes; brahmin by birth, warrior by trade, commander of the Kaurava host after Bhishma. By name — poverty driving him to Drupada, once his boyhood friend, for help, and Drupada's refusal that made them enemies; teaching the princes at Hastinapura and taking Ekalavya's thumb as fee to keep Arjuna unrivalled; capturing Drupada in return as a training exercise and being given half his kingdom, the seed of Drupada's revenge-son Dhrishtadyumna; eighteen days commanding the Kaurava army at Kurukshetra; and laying down his weapons in grief, believing the false news that his son Ashvatthama was dead, when Dhrishtadyumna beheaded him."
     },
     {
       "id": "Sharadvan",
@@ -2628,7 +2752,10 @@
       "birthFamilyId": "familyAngirasa",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "A sage of the Gautama line; father of the twins Kripa and Kripi, born in a clump of reeds and raised in the Kuru court.",
-      "genAnchor": 89
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -3
+      }
     },
     {
       "id": "Kripa",
@@ -2637,8 +2764,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyAngirasa",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Twin of Kripi; a chiranjivi and early teacher of the Kuru princes, he survived the war."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Twin of Kripi; a chiranjivi and early teacher of the Kuru princes, he survived the war. Found with his sister as infants in a clump of reeds, born of the sage Sharadvan's seed spilled at the sight of the apsara Janapadi, raised by King Shantanu; one of the four survivors on the Kaurava side after Kurukshetra, and later Parikshit's own teacher."
     },
     {
       "id": "Kripi",
@@ -2647,8 +2774,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyAngirasa",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Twin of Kripa; wife of Drona and mother of Ashwatthama."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Twin of Kripa; wife of Drona and mother of Ashwatthama. Found with her brother as infants in a clump of reeds (shara-stamba), born of the sage Sharadvan's seed spilled at the sight of the apsara Janapadi, and raised by King Shantanu."
     },
     {
       "id": "Ashwatthama",
@@ -2657,8 +2784,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyAngirasa",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Drona and Kripi, born with a gem in his brow; a chiranjivi cursed to wander after he slew the Pandava sons in their sleep."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Son of Drona and Kripi, born with a gem in his brow; a chiranjivi cursed to wander after he slew the Pandava sons in their sleep. Grew up in poverty despite his birth, once tricked as a boy into thinking water was milk; fought the whole war for the Kauravas out of loyalty to his father; on the last night, maddened by Drona's death and appointed commander, crept into the Pandava camp and killed Draupadi's five sons and Dhrishtadyumna in their sleep, mistaking them for the Pandavas themselves; cursed by Krishna, when caught, to wander the earth alone for three thousand years, diseased and friendless, the jewel torn from his forehead."
     },
     {
       "id": "Kauravya",
@@ -2669,7 +2796,10 @@
       "birthFamilyId": "familyNaga",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "A king of the Nagas (serpent race); father of Ulupi.",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Chitravahana",
@@ -2680,7 +2810,10 @@
       "birthFamilyId": "familyManipura",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King of Manipura; father of Chitrangada, he gave her to Arjuna on the pledge that their son would inherit his throne.",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Satyajit",
@@ -2861,7 +2994,10 @@
       "birthFamilyId": "familyMagadha",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "Founder-king of Magadha; father of Jarasandha.",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "JarasandhaMagadha",
@@ -2900,8 +3036,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": null,
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "The rishi Shukra, preceptor of the asuras and keeper of the reviving art; father of Devayani."
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Bhrigu; guru and reviver of the asuras, keeper of the sanjivani mantra that raises the dead, which Kacha won from him at his own daughter Devayani's insistence. Warned Bali not to grant Vamana's request and was ignored; cursed Devayani's husband Yayati with old age for breaking his word to her over Sharmishtha."
     },
     {
       "id": "Vrishaparva",
@@ -2920,8 +3056,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": null,
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "A king who won brahmarshi-hood by fierce penance; father of Shakuntala by the apsara Menaka."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "A king who won brahmarshi-hood by fierce penance; father of Shakuntala by the apsara Menaka. By name — born Kaushika, a kshatriya king who warred with Vasishtha over the wish-cow Nandini and lost, then renounced his throne for penance to become a brahmin's equal; sent Menaka to break that penance, and lost decades of it to her before renewing his resolve; created a rival heaven for Trishanku when the devas refused him; adopted Shunahshepha as Devarata over his own sons' protest; and served finally as Rama's own guru and escort to Mithila, generations after his quarrels with Vasishtha."
     },
     {
       "id": "Menaka",
@@ -2943,7 +3079,10 @@
       "birthFamilyId": "familyYadava",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "A Yadava noble, keeper of the Syamantaka gem; father of Satyabhama.",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Jambavan",
@@ -2954,7 +3093,10 @@
       "birthFamilyId": null,
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "The immortal bear-king of the Ramayan age; Krishna wrestled him for the Syamantaka gem and won his daughter Jambavati.",
-      "genAnchor": 63
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": -1
+      }
     },
     {
       "id": "Banasura",
@@ -2965,7 +3107,10 @@
       "birthFamilyId": "familyDaitya",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "A thousand-armed asura king and devotee of Shiva; father of Usha.",
-      "genAnchor": 92
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": 0
+      }
     },
     {
       "id": "Raivata",
@@ -2976,7 +3121,10 @@
       "birthFamilyId": null,
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King Raivata (Kakudmi), who took his daughter Revati to Brahma's realm and returned an age later to a world grown small.",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Surya",
@@ -3018,8 +3166,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyAditya",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "King of the devas, wielder of the thunderbolt; an Aditya, son of Aditi and Kashyap, and so a brother of Surya. Father of Arjuna, to whom he later gave celestial weapons.",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "King of the devas, wielder of the thunderbolt; an Aditya, son of Aditi and Kashyap, and so a brother of Surya. Father of Arjuna, to whom he later gave celestial weapons and a year's respite from Kurukshetra as Brihannala. By name — killing Vritra with the thunderbolt made from the sage Dadhichi's bones, the many curses on him for seducing Ahalya (a thousand marks that became a thousand eyes, in one telling), losing and regaining his throne across the Bali and Vamana story, and testing Karna by begging his armour and earrings away in disguise.",
       "divine": true
     },
     {
@@ -3173,7 +3321,10 @@
       "birthFamilyId": "familyVidarbha",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King of Vidarbha at Kundina; father of Rukmi and of Rukmini.",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Rukmi",
@@ -3194,7 +3345,10 @@
       "birthFamilyId": "familyYadava",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "A Vrishni chief; grandfather of the great warrior Satyaki.",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Satyaki",
@@ -3215,7 +3369,10 @@
       "birthFamilyId": "familyYadava",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "A Vrishni chief; father of Kritavarma.",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Kritavarma",
@@ -3234,8 +3391,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "A Yadava elder who bore Krishna and Balarama from Gokula to Mathura; keeper of the Syamantaka gem for a time."
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "A Yadava elder who bore Krishna and Balarama from Gokula to Mathura; keeper of the Syamantaka jewel for a time. Sent by Kamsa with false honour to fetch the boys to their deaths at the wrestling exhibition, though himself a lifelong devotee overjoyed at the chance to see Krishna, and granted a vision of Vishnu's own form reflected in the Yamuna while bathing on the way; later suspected of hiding the Syamantaka jewel after Prasena's death until its true history with Jambavan came out."
     },
     {
       "id": "Charudeshna",
@@ -3286,7 +3443,10 @@
       "birthFamilyId": "familyNishada",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King of the Nishadas; father of Ekalavya.",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Ekalavya",
@@ -3295,8 +3455,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyNishada",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Nishada prince who taught himself archery before a clay Drona; Drona claimed his right thumb as guru's fee so none would surpass Arjuna."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Nishada prince who taught himself archery before a clay Drona; Drona claimed his right thumb as guru's fee so none would surpass Arjuna. Practised before the image until he outshot every prince Drona had actually taught, and gave the thumb without a word of protest when asked, crippling his own gift rather than refuse a guru's due; killed years later by Krishna in the Mahabharata's telling, to clear his old debt to Jarasandha's allies before Kurukshetra."
     },
     {
       "id": "Narakasura",
@@ -3307,7 +3467,10 @@
       "birthFamilyId": "familyPragjyotisha",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "The asura king of Pragjyotisha, son of the earth; Krishna slew him and freed the sixteen thousand women he had imprisoned.",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Bhagadatta",
@@ -3338,7 +3501,10 @@
       "birthFamilyId": "familySuta",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "Charioteer and counsellor of Dhritarashtra, son of the suta Gavalgana; granted divine sight by Vyasa, he narrated the war to the blind king.",
-      "genAnchor": 91
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -1
+      }
     },
     {
       "id": "Shuka",
@@ -3390,8 +3556,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyAngirasa",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "Son of Brihaspati; he went to Shukracharya to learn the art of reviving the dead, and there Devayani loved him in vain."
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Brihaspati; sent by the devas to learn from Shukracharya, guru of the asuras, the sanjivani mantra that revives the dead. Killed twice by the asuras for it and twice revived by Shukracharya himself at his daughter Devayani's pleading, until they ground him to ash and mixed it in wine, so that reviving him meant teaching the mantra to what was inside Shukracharya's own body; refused Devayani's love afterward as a guru's son to his guru's daughter, and she cursed his knowledge to fail him — a curse that, since he already taught the devas everything, cost only himself."
     },
     {
       "id": "RohiniNakshatra",
@@ -3451,8 +3617,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Emperor whose sixty thousand sons were burnt to ash for disturbing the sage Kapila; generations after Harishchandra."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Born sa-gara, 'with poison', after his father's co-wife was fed poison while pregnant with him and he survived it. Reformed rather than killed the Yavanas, Shakas, Haihayas and Barbaras who opposed him. His sixty thousand sons by queen Sumati dug the ocean-trench searching for his stolen sacrificial horse, found it beside the meditating sage Kapila, and were burnt to ash in an instant for accusing him of the theft; only Amshuman, son of the other queen Keshini, survived to inherit and later win the horse back peaceably. SB 9.8.5-14"
     },
     {
       "id": "Asamanja",
@@ -3511,8 +3677,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Raghu; father of Dasharatha."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Son of Raghu; father of Dasharatha. Won Indumati, princess of Vidarbha, at her svayamvara over a hall of rival kings and devas; when a garland dropped by the passing sage Narada's quarrel killed her outright years later, his grief nearly killed him too, restrained only by the sage Vasishtha's counsel that a wise man's grief has a season and a season's end. Raghuvamsha 8."
     },
     {
       "id": "Dasharatha",
@@ -3581,8 +3747,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Eldest son of Dasharatha and Kausalya of the solar line. He bound the ocean and killed Ravana, and the Purana counts him the eighteenth descent. The eighteenth of the avatars, SB 1.3.22.",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Eldest son of Dasharatha and Kausalya of the solar line. The eighteenth of the avatars, SB 1.3.22. By name — Ahalya released from her curse, Vishvamitra's yajna and the killing of Tataka and Subahu, breaking Shiva's bow at Sita's svayamvara, facing down Parashurama on the road home, fourteen years' exile with Sita and Lakshmana, Viradha, Surpanakha turned away and mutilated, Khara and Dushana destroyed, the golden deer Maricha and Sita's abduction, Jatayu's death defending her, alliance with Sugriva and the killing of Vali, Hanuman's leap and the search for Sita, the burning of Lanka, Setubandha, the war and Ravana's death, Sita's agni-pariksha, the coronation at Ayodhya, her later exile on rumour, Lava and Kusha raised at Valmiki's ashram unknowing, Sita's return into the earth, and Rama's own end walking into the Sarayu.",
       "divine": true
     },
     {
@@ -3602,8 +3768,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Dasharatha by Sumitra; Rama's devoted brother who followed him into exile and warred at his side."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Dasharatha by Sumitra; Rama's devoted brother who followed him into exile and warred at his side. By name — fourteen years by Rama and Sita's side unasked, cutting off Surpanakha's nose and ears when she attacked Sita, drawing the Lakshmana-rekha Sita crossed to give alms to the disguised Ravana, wounded near-fatally by Indrajit's shakti weapon and revived by the Sanjeevani herb Hanuman carried whole, and killing Indrajit in the war's last stretch."
     },
     {
       "id": "Shatrughna",
@@ -3694,7 +3860,10 @@
       "birthFamilyId": "familyKekaya",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King of Kekaya; father of Kaikeyi and Yudhajit.",
-      "genAnchor": 62
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": -2
+      }
     },
     {
       "id": "Yudhajit",
@@ -3715,7 +3884,10 @@
       "birthFamilyId": "familyVideha",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King of Videha; father of Janaka and Kushadhvaja. The Janaka kings descend from Nimi, a son of Ikshvaku.",
-      "genAnchor": 62
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": -2
+      }
     },
     {
       "id": "Janaka",
@@ -3754,8 +3926,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": null,
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Found by Janaka in a furrow of the earth (Bhumija) and raised as his daughter; wife of Rama, carried off by Ravana, at last taken back into the earth. Her birth lineage is none but the Earth's.",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Found by Janaka in a furrow of the earth (Bhumija) and raised as his daughter; wife of Rama, carried off by Ravana, at last taken back into the earth. Her birth lineage is none but the Earth's. By name — won at her svayamvara when Rama alone bent and broke Shiva's bow, fourteen years' exile at her own insistence, drawn by the illusion of a golden deer and abducted by Ravana while Rama and Lakshmana were lured away, a year captive in Lanka's Ashoka grove refusing him, found by Hanuman, freed after the war and made to prove her purity by fire (agni-pariksha), exiled again in Ayodhya on a washerman's rumour while pregnant, raising Lava and Kusha alone at Valmiki's ashram, and at their reunion with Rama choosing to return into the earth that bore her rather than prove herself again.",
       "divine": true
     },
     {
@@ -3856,8 +4028,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyRakshasa",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "The ten-headed rakshasa king of Lanka; a mighty devotee of Shiva and master of the Vedas whose abduction of Sita brought his doom."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "The ten-headed rakshasa king of Lanka; a mighty devotee of Shiva and master of the Vedas whose abduction of Sita brought his doom. By name — penance for boons from Brahma (near-invincibility, but not against men or vanaras, which he thought beneath asking), seizing Lanka from his half-brother Kubera and the Pushpaka chariot with it, composing the Shiva Tandava Stotram after Shiva pinned him under Kailasa for trying to lift it, Surpanakha's mutilation drawing him to Panchavati, the golden-deer ruse and Sita's abduction, Jatayu's failed rescue, Vibhishana's defection when he refused to return her, the burning of Lanka by Hanuman, Kumbhakarna and Indrajit dying in the war before him, and his own death to Rama's Brahmastra."
     },
     {
       "id": "Kumbhakarna",
@@ -3978,7 +4150,10 @@
       "birthFamilyId": "familyVanara",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "The vanara king of Kishkindha; foster-father of Vali and Sugriva, who were begotten of the gods Indra and Surya.",
-      "genAnchor": 63
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": -1
+      }
     },
     {
       "id": "Vali",
@@ -4015,7 +4190,10 @@
       "birthFamilyId": "familyVanara",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "Vanara elder and physician; father of Tara.",
-      "genAnchor": 63
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": -1
+      }
     },
     {
       "id": "TaraR",
@@ -4034,8 +4212,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyVanara",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Wife of Sugriva."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Wife of Sugriva. Seized by Vali along with the kingdom when he exiled his brother on a misunderstanding; restored to Sugriva only after Rama killed Vali to keep his alliance's promise."
     },
     {
       "id": "Angada",
@@ -4044,8 +4222,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyVanara",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
-      "notes": "Son of Vali and Tara; the vanara prince who led Rama's embassy to Ravana."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Son of Vali and Tara; the vanara prince who led Rama's embassy to Ravana. Made yuvaraja by Sugriva out of guilt at having killed his father Vali; led the party that found Sita in Lanka after Hanuman's own search failed elsewhere; and went as Rama's envoy into Ravana's own court to demand Sita's return, planting his foot and daring any rakshasa to move it before the whole assembly, which none could."
     },
     {
       "id": "Kesari",
@@ -4056,7 +4234,10 @@
       "birthFamilyId": "familyVanara",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "A vanara chief; the earthly father of Hanuman.",
-      "genAnchor": 63
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": -1
+      }
     },
     {
       "id": "Anjana",
@@ -4075,8 +4256,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyVanara",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Son of Kesari and Anjana, begotten by Vayu the wind-god, and himself counted among the devas: a chiranjivi, one of the immortals who never dies, and in the Shaiva reading an avatar of Rudra. He leapt the ocean to Lanka and found Sita, carried the mountain of herbs whole because he could not tell which one healed, and burned the city with his own tail. Rama 1.17, 4.66, 5.1; Shiva Purana 3.20",
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Kesari + Anjana (apsara Punjikasthala, cursed); Vayu-begotten. Chiranjivi; Shaiva reading: Rudra-avatar. Leapt to Lanka; found Sita; burned the city with his own tail; carried the whole Sanjeevani mountain, not knowing which herb. Lifelong brahmachari; married Suvarchala, Surya's daughter, as guru-dakshina for the last of the nine grammars — a union Surya himself called for the world's good, not a breach of the vow (Parashara Samhita, not the Bhagavata; a Telangana temple tradition). Rama 1.17, 4.66, 5.1; Shiva Purana 3.20.",
       "divineParents": [
         "Vayu"
       ],
@@ -4161,7 +4342,10 @@
       "birthFamilyId": "familyAnga",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "Citraratha, called Romapada, king of Anga. Sonless, he was given his friend Dasharatha's daughter Shanta as his own, and married her to Rishyasringa; by the sage's grace he got a son at last. SB 9.23.7-10",
-      "genAnchor": 63
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": -1
+      }
     },
     {
       "id": "Rishyasringa",
@@ -4222,7 +4406,10 @@
       "birthFamilyId": "familyRakshasa",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "An elder rakshasa lord; father of Sumali and Malyavan.",
-      "genAnchor": 60
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": -4
+      }
     },
     {
       "id": "Malyavan",
@@ -4276,7 +4463,10 @@
       "divineParents": [
         "Vishvakarma"
       ],
-      "genAnchor": 64
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": 0
+      }
     },
     {
       "id": "Nila",
@@ -4290,7 +4480,10 @@
       "divineParents": [
         "Agni"
       ],
-      "genAnchor": 64
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": 0
+      }
     },
     {
       "id": "Aruna",
@@ -4440,8 +4633,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyDaitya",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "Daitya king, son of Kashyap and Diti; slain by Vishnu as Narasimha for tormenting his devotee son Prahlada."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Daitya king, son of Kashyap and Diti; slain by Vishnu as Narasimha for tormenting his devotee son Prahlada. Won from Brahma a boon against death by man or beast, by day or night, indoors or out, on earth or in the sky, by any weapon — and was torn apart on Narasimha's lap, at the threshold of a doorway, at twilight, by claws, on neither ground nor sky. Twin of Hiranyaksha, killed a generation earlier by Varaha."
     },
     {
       "id": "Hiranyaksha",
@@ -4450,8 +4643,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyDaitya",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "Daitya, son of Kashyap and Diti; slain by Vishnu as the boar Varaha."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Daitya, son of Kashyap and Diti; slain by Vishnu as the boar Varaha. Dragged the earth down into the cosmic waters, and was killed in the duel that followed when Varaha lifted her back out on his tusks. Twin of Hiranyakashipu, killed a generation later as Narasimha."
     },
     {
       "id": "Prahlada",
@@ -4460,8 +4653,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyDaitya",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "Son of Hiranyakashipu; a supreme devotee of Vishnu whom no torment could shake."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Hiranyakashipu; a supreme devotee of Vishnu whom no torment could shake. By name — surviving poison, elephants, fire, cliffs and serpents at his own father's order for refusing to renounce Vishnu, answering 'everywhere, even in this pillar' when asked where his god was, and Vishnu tearing out of that pillar as Narasimha to kill Hiranyakashipu across a threshold at twilight, neither in nor out, neither day nor night, neither man nor beast — every loophole in the asura's own boon closed at once."
     },
     {
       "id": "Virochana",
@@ -4480,8 +4673,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyDaitya",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "Mahabali, son of Virochana; the generous asura emperor whom Vishnu, as the dwarf Vamana, measured out of the three worlds. His line runs on to Banasura of the Mahabharat age (Usha's father)."
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Mahabali, son of Virochana; the generous asura emperor whom Vishnu, as the dwarf Vamana, measured out of the three worlds. His line runs on to Banasura of the Mahabharat age (Usha's father). Refused his guru Shukracharya's warning not to grant the dwarf's request; gave anyway when Vishnu's second step took heaven along with earth, and offered his own head for the third when there was nothing left to give, for which Vishnu let him keep Patala and promised him Indra's seat in a future age."
     },
     {
       "id": "Vasuki",
@@ -4501,8 +4694,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyNaga",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "A naga king, son of Kashyap and Kadru; his bite would one day slay Parikshit.",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "A naga king, son of Kashyap and Kadru; his bite would one day slay Parikshit. Killed the king in fulfilment of a rishi's curse after Parikshit, hunting, had insulted a silent sage by hanging a dead snake round his neck; hid afterward from Parikshit's son Janamejaya's snake-sacrifice inside Indra's own court, and was saved along with Vasuki and the rest of his kind when Astika stopped the sacrifice at the last moment.",
       "divine": true
     },
     {
@@ -4545,8 +4738,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "A mind-born son of Brahma, chief of the Saptarishi and family priest of the Ikshvaku kings; forefather of the line of Parashara and Vyasa.",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "A mind-born son of Brahma, chief of the Saptarishi and family priest of the Ikshvaku kings; forefather of the line of Parashara and Vyasa. By name — the long rivalry with Vishvamitra, sparked when Vishvamitra coveted his wish-fulfilling cow Nandini/Kamadhenu and was refused; all hundred of his sons killed by Vishvamitra's curse, after which he tried and failed to end his own life by fire, water and cliff, each element refusing to harm him; the Trishanku and Harishchandra quarrels that turned him and Vishvamitra into birds fighting for years; cursing King Saudasa into the rakshasa Kalmashapada, then fathering his heir on Kalmashapada's queen Madayanti by niyoga after the king's death; and a later son, Shakti, father of Parashara and so grandfather of Vyasa.",
       "divine": true
     },
     {
@@ -4577,8 +4770,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySoma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "King of Kanyakubja of the Kaushika (Amavasu) branch of the lunar line; father of the sage-king Vishvamitra."
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "King of the Kaushikas; father of Vishvamitra and of Satyavati, who married the sage Richika and bore Jamadagni. Vishvamitra's own royal birth, before his penance won him brahmin status, runs through Gadhi."
     },
     {
       "id": "Sandhya",
@@ -4960,8 +5153,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "Son of Manu; forebear of a solar branch."
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Son of Manu; forebear of a solar branch. In one telling, away at his father's sacrifice when his brothers divided the inheritance without him, he was directed by his father to claim what the priests kept as their fee instead; the Angirasa priests, testing his honesty, gave him everything when he refused to take even that without their leave."
     },
     {
       "id": "Nriga",
@@ -5273,8 +5466,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyDanava",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "Danava son of Danayus (or Tvashtar); the drought-serpent slain by Indra with the vajra."
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Asura who held back the world's waters; slain by Indra with the thunderbolt Vajra, made from the bones of the sage Dadhichi, who gave them freely for it. In the Bhagavata's own account he is also, at once, the self-realised king Chitraketu reborn under a curse of Parvati's, so that killing him cost Indra nothing spiritually — the being had no fear of death to begin with."
     },
     {
       "id": "Vikshara",
@@ -5474,8 +5667,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "Daughter of King Sharyati; devoted wife of the sage Chyavana."
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Daughter of King Sharyati; devoted wife of the sage Chyavana. Struck his eyes by accident as a girl, mistaking them for fireflies in an anthill where he had sat motionless through long penance, and married him at her father's order to atone; when the Ashvin twins offered to make him young and beautiful if she chose correctly between three identical men, she picked her own aged husband by his eyes alone and stayed loyal, and Chyavana in turn taught the Ashvins the Soma sacrifice's own share, over Indra's objection."
     },
     {
       "id": "Aurva",
@@ -5484,8 +5677,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyBhargava",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "Bhargava sage of the fire of wrath, born of the Bhrigu line through Chyavana."
+      "updatedAt": "2026-08-02T03:00:00.000Z",
+      "notes": "Bhargava sage of the fire of wrath, born of the Bhrigu line through Chyavana. His pregnant mother hid her unborn child in her thigh (uru, his name) when kshatriyas bent on wiping out the Bhrigus for their wealth attacked her; born already blazing, his fury at the slaughter of his kin threatened to burn up the three worlds until his ancestors begged him to spend it elsewhere, and he deposited it in the ocean instead, as the submarine fire (vadavagni) that will one day end the age. Gave that same fire-power to Sagara, his descendant, who used it to annihilate the Talajanghas — closing a loop the quarrel that spared the world opened."
     },
     {
       "id": "Richika",
@@ -5494,8 +5687,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyBhargava",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
-      "notes": "Bhargava sage; wed Satyavati of Gadhi's house, father of Jamadagni."
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "A Bhargava sage; husband of Satyavati, Gadhi's daughter, and father of Jamadagni. Prepared two portions of a magic rice-dish, one for his wife to bear a brahmin son and one for her mother to bear a warrior son; the two women swapped bowls, which is why Vishvamitra, Satyavati's own brother, was born a kshatriya who had to win brahminhood by penance, and why Jamadagni's son Parashurama carries kshatriya fire in a brahmin line."
     },
     {
       "id": "SatyavatiG",
@@ -5516,7 +5709,10 @@
       "birthFamilyId": "familyBhargava",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "Bhargava rishi, son of Richika; husband of Renuka, father of Parashurama.",
-      "genAnchor": 22
+      "genAnchor": {
+        "relativeTo": "KartaviryaArjuna",
+        "offset": -1
+      }
     },
     {
       "id": "Renuka",
@@ -5731,7 +5927,10 @@
         "Mitra",
         "Varuna"
       ],
-      "genAnchor": 63
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": -1
+      }
     },
     {
       "id": "Lopamudra",
@@ -5750,7 +5949,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySoma",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Hastin; founder of the Ajamidha branch of the Puru line, from whom Panchala and Kuru both descend. SB 9.21."
     },
     {
       "id": "Riksha",
@@ -5759,7 +5959,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySoma",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Ajamidha; ancestor of the Kuru line."
     },
     {
       "id": "Viduratha",
@@ -5768,7 +5969,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Kuru; carries the throne onward through Jahnu's branch."
     },
     {
       "id": "Anashwan",
@@ -5777,7 +5979,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Kuru-line king, descended from Viduratha."
     },
     {
       "id": "ParikshitI",
@@ -5786,7 +5989,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Kuru-line king; not the Parikshit of the Mahabharata's own generation, born generations earlier. Namesake, see PURANIC_LINEAGES.md Part V."
     },
     {
       "id": "Bhimasena",
@@ -5795,7 +5999,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Kuru-line king, father of Pratishravas. Not the Pandava Bhima."
     },
     {
       "id": "Pratishravas",
@@ -5804,7 +6009,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Kuru-line king, descended from Bhimasena."
     },
     {
       "id": "Arka",
@@ -5813,7 +6019,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Puruja, in the Ajamidha-to-Panchala chain. SB 9.21."
     },
     {
       "id": "Bharmyashva",
@@ -5822,7 +6029,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Arka; father of five sons who divided the Panchala realm between them — Mudgala, Yavinara, Brihadvishva, Kampilla and Sanjaya. SB 9.21."
     },
     {
       "id": "Mudgala",
@@ -5831,7 +6039,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Eldest of Bharmyashva's five sons, eponym of the Mudgala gotra; husband of Indrasena (Nalayani, Damayanti's niece — see the Nalopakhyana notes) after her hundred trials of him."
     },
     {
       "id": "Vadhryasva",
@@ -5840,7 +6049,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Mudgala; father of Divodasa of Panchala. RV 6.61. The tree keeps this reading against the Bhagavata's alternative, which has Mudgala father Divodasa directly."
     },
     {
       "id": "Divodasa",
@@ -5849,7 +6059,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "King of Panchala; patron of the Rigvedic sage Bharadvaja, father of Mitrayu. RV 1.130, 6.26. Not Divodasa of Kashi — see PURANIC_LINEAGES.md Part V."
     },
     {
       "id": "Mitrayu",
@@ -5858,7 +6069,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Divodasa of Panchala; father of Chyavana of Panchala."
     },
     {
       "id": "ChyavanaP",
@@ -5867,7 +6079,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Panchala king, son of Mitrayu. Not the sage Chyavana, Bhrigu's son and Sukanya's husband — see PURANIC_LINEAGES.md Part V."
     },
     {
       "id": "SudasaP",
@@ -5876,7 +6089,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "King of Panchala; the Rigvedic Sudas Paijavana of the Battle of the Ten Kings (dasarajna), with Vasishtha as his priest. RV 7.18, 7.33, 7.83. Not the Ikshvaku Sudasa — see Part V."
     },
     {
       "id": "SahadevaP",
@@ -5885,7 +6099,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Panchala king, son of Sudasa. Not the Pandava Sahadeva."
     },
     {
       "id": "Somaka",
@@ -5894,7 +6109,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Panchala king, son of Sahadeva; his line runs down toward Drupada."
     },
     {
       "id": "Yavinara",
@@ -5903,7 +6119,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of Bharmyashva's five sons among whom Panchala was divided."
     },
     {
       "id": "Brihadvishva",
@@ -5912,7 +6129,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of Bharmyashva's five sons among whom Panchala was divided."
     },
     {
       "id": "Kampilla",
@@ -5921,7 +6139,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of Bharmyashva's five sons among whom Panchala was divided; namesake of Kampilya, the Panchala capital."
     },
     {
       "id": "SanjayaP",
@@ -5930,7 +6149,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyPanchala",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of Bharmyashva's five sons among whom Panchala was divided. Not Sanjaya Gavalgani, Dhritarashtra's charioteer-narrator."
     },
     {
       "id": "Ahalya",
@@ -5984,7 +6204,10 @@
       "birthFamilyId": "familyNishadha",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King of Nishadha, son of Virasena. Master of horses and of cookery, and beloved of Damayanti before either had seen the other. Possessed by Kali, he gambled his kingdom away to his brother Pushkara, abandoned Damayanti in the forest, and lived disfigured as Bahuka, charioteer and cook to Rituparna of Ayodhya, until the science of horses he traded for the science of dice gave him both back. MBh 3.50-78",
-      "genAnchor": 74
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": 10
+      }
     },
     {
       "id": "Damayanti",
@@ -5995,7 +6218,10 @@
       "birthFamilyId": "familyVidarbha",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "Princess of Vidarbha, daughter of King Bhima, who loved Nala on report alone and knew him at her svayamvara among four devas wearing his face, because only his feet touched the ground. Abandoned in the forest, she made her way back by a brahmin's recognition and drew her husband out of hiding with a riddling verse. MBh 3.50-78",
-      "genAnchor": 74
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": 10
+      }
     },
     {
       "id": "Nalayani",
@@ -6064,7 +6290,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyAditya",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Indra and Shachi."
     },
     {
       "id": "Jayanti",
@@ -6103,7 +6330,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyBhargava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Chyavana and Sukanya."
     },
     {
       "id": "Dhumorna",
@@ -6121,7 +6349,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyAditya",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Goddess of wine (sura); rose from the churning of the ocean of milk and was claimed by the asuras. SB 8.8."
     },
     {
       "id": "Kirtiman",
@@ -6130,7 +6359,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the first six sons of Devaki and Vasudeva; killed at birth by Kamsa. In one reading, previously one of the six Maruts under a curse, restored to the heavens when Krishna and Balarama freed them from Kalanemi's world. SB 10.1, 10.85."
     },
     {
       "id": "Sushena_2",
@@ -6139,7 +6369,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the first six sons of Devaki and Vasudeva; killed at birth by Kamsa. SB 10.1, 10.85."
     },
     {
       "id": "Bhadrasena",
@@ -6148,7 +6379,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the first six sons of Devaki and Vasudeva; killed at birth by Kamsa. SB 10.1, 10.85."
     },
     {
       "id": "Riju",
@@ -6157,7 +6389,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the first six sons of Devaki and Vasudeva; killed at birth by Kamsa. SB 10.1, 10.85."
     },
     {
       "id": "Sammardana",
@@ -6166,7 +6399,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the first six sons of Devaki and Vasudeva; killed at birth by Kamsa. SB 10.1, 10.85."
     },
     {
       "id": "Bhadra_2",
@@ -6175,7 +6409,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the first six sons of Devaki and Vasudeva; killed at birth by Kamsa. SB 10.1, 10.85."
     },
     {
       "id": "Sarana",
@@ -6184,7 +6419,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Vasudeva and Rohini; brother of Balarama."
     },
     {
       "id": "Durmada_2",
@@ -6193,7 +6429,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Vasudeva and Rohini; brother of Balarama."
     },
     {
       "id": "Rumanvan",
@@ -6202,7 +6439,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyBhargava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Elder son of Jamadagni and Renuka; refused their father's order to behead Renuka for her lapse and was struck senseless for it, restored only when Parashurama — who alone obeyed — asked that boon instead of his own. SB 9.16."
     },
     {
       "id": "Sushena_3",
@@ -6211,7 +6449,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyBhargava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Elder son of Jamadagni and Renuka; refused their father's order to behead Renuka for her lapse and was struck senseless for it, restored only when Parashurama — who alone obeyed — asked that boon instead of his own. SB 9.16."
     },
     {
       "id": "Vasu",
@@ -6220,7 +6459,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyBhargava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Elder son of Jamadagni and Renuka; refused their father's order to behead Renuka for her lapse and was struck senseless for it, restored only when Parashurama — who alone obeyed — asked that boon instead of his own. SB 9.16."
     },
     {
       "id": "Vishvavasu",
@@ -6229,7 +6469,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyBhargava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Elder son of Jamadagni and Renuka; refused their father's order to behead Renuka for her lapse and was struck senseless for it, restored only when Parashurama — who alone obeyed — asked that boon instead of his own. SB 9.16."
     },
     {
       "id": "Chitrasena_2",
@@ -6238,7 +6479,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySuta",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Karna and Vrishali; killed at Kurukshetra."
     },
     {
       "id": "Satyasena",
@@ -6247,7 +6489,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySuta",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Karna and Vrishali; killed at Kurukshetra."
     },
     {
       "id": "Sushena_4",
@@ -6256,7 +6499,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySuta",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Karna and Vrishali; killed at Kurukshetra."
     },
     {
       "id": "Shatrunjaya",
@@ -6265,7 +6509,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySuta",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Karna and Vrishali; killed at Kurukshetra."
     },
     {
       "id": "Prasena",
@@ -6274,7 +6519,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySuta",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Karna and Vrishali; killed at Kurukshetra."
     },
     {
       "id": "Banasena",
@@ -6283,7 +6529,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySuta",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Karna and Vrishali; killed at Kurukshetra."
     },
     {
       "id": "Dvipata",
@@ -6292,7 +6539,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familySuta",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Karna and Vrishali; killed at Kurukshetra."
     },
     {
       "id": "Revanta",
@@ -6301,7 +6549,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyAditya",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Surya and Sandhya (Sanjna); a demigod horseman, leader of the Guhyakas, who wards off thieves and disease."
     },
     {
       "id": "Dhatri",
@@ -6310,7 +6559,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the twelve Adityas, sons of Kashyap and Aditi. SB 6.6."
     },
     {
       "id": "Amsha",
@@ -6319,7 +6569,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the twelve Adityas, sons of Kashyap and Aditi. SB 6.6."
     },
     {
       "id": "Anjanaparvan",
@@ -6328,7 +6579,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Ghatotkacha and Maurvi; a rakshasa prince of the Bhima line."
     },
     {
       "id": "Sudeshna_2",
@@ -6337,7 +6589,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Rukmini, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Charudeha",
@@ -6346,7 +6599,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Rukmini, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Sucharu",
@@ -6355,7 +6609,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Rukmini, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Charugupta",
@@ -6364,7 +6619,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Rukmini, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Bhadracharu",
@@ -6373,7 +6629,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Rukmini, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Charuchandra",
@@ -6382,7 +6639,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Rukmini, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Vicharu",
@@ -6391,7 +6649,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Rukmini, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Charu",
@@ -6400,7 +6659,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Rukmini, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Subhanu",
@@ -6409,7 +6669,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Satyabhama, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Svarbhanu",
@@ -6418,7 +6679,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Satyabhama, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Prabhanu",
@@ -6427,7 +6689,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Satyabhama, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Bhanuman",
@@ -6436,7 +6699,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Satyabhama, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Chandrabhanu",
@@ -6445,7 +6709,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Satyabhama, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Brihadbhanu",
@@ -6454,7 +6719,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Satyabhama, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Atibhanu",
@@ -6463,7 +6729,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Satyabhama, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Sribhanu",
@@ -6472,7 +6739,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Satyabhama, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Pratibhanu",
@@ -6481,7 +6749,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Satyabhama, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Sumitra_2",
@@ -6490,7 +6759,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Jambavati, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Purujit",
@@ -6499,7 +6769,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Jambavati, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Shatajit",
@@ -6508,7 +6779,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Jambavati, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Sahasrajit",
@@ -6517,7 +6789,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Jambavati, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Vijaya_2",
@@ -6526,7 +6799,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Jambavati, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Chitraketu",
@@ -6535,7 +6809,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "A Vidyadhara king cursed by Parvati, for laughing at Shiva being scolded by her, to be born an asura; became Vritra, whom Indra killed with the Vajra. Already liberated before the curse, by Sankarshana's own teaching, he bore it without complaint, since a self-realised soul has nothing left for death to take."
     },
     {
       "id": "Vasuman",
@@ -6544,7 +6819,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Jambavati, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Dravida",
@@ -6553,7 +6829,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Jambavati, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Kratu",
@@ -6562,7 +6839,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Jambavati, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Vira_2",
@@ -6571,7 +6849,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Nagnajiti, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Chandra_2",
@@ -6580,7 +6859,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Nagnajiti, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Ashvasena_2",
@@ -6589,7 +6869,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Nagnajiti, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Chitragu",
@@ -6598,7 +6879,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Nagnajiti, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Vegavan",
@@ -6607,7 +6889,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Nagnajiti, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Vrisha",
@@ -6616,7 +6899,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Nagnajiti, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Ama",
@@ -6625,7 +6909,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Nagnajiti, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Shanku",
@@ -6634,7 +6919,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Nagnajiti, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Vasu_2",
@@ -6643,7 +6929,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Nagnajiti, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Kunti_2",
@@ -6652,7 +6939,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Nagnajiti, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Shruta",
@@ -6661,7 +6949,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Kalindi, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Kavi",
@@ -6670,7 +6959,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Kalindi, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Vrisha_2",
@@ -6679,7 +6969,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Kalindi, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Vira_3",
@@ -6688,7 +6979,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Kalindi, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Subahu_2",
@@ -6697,7 +6989,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Kalindi, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Bhadra_3",
@@ -6706,7 +6999,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Kalindi, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Shanti",
@@ -6715,7 +7009,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Kalindi, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Darsha",
@@ -6724,7 +7019,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Kalindi, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Purnamasa",
@@ -6733,7 +7029,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Kalindi, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Somaka_2",
@@ -6742,7 +7039,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Kalindi, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Vrika",
@@ -6751,7 +7049,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Mitravinda, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Harsha",
@@ -6760,7 +7059,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Mitravinda, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Anila",
@@ -6769,7 +7069,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Mitravinda, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Gridhra",
@@ -6778,7 +7079,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Mitravinda, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Vardhana",
@@ -6787,7 +7089,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Mitravinda, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Unnada",
@@ -6796,7 +7099,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Mitravinda, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Mahamsa",
@@ -6805,7 +7109,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Mitravinda, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Pavana",
@@ -6814,7 +7119,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Mitravinda, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Vahni",
@@ -6823,7 +7129,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Mitravinda, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Kshudhi",
@@ -6832,7 +7139,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Mitravinda, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Sangramajit",
@@ -6841,7 +7149,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Bhadra, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Brihatsena",
@@ -6850,7 +7159,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Bhadra, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Sura",
@@ -6859,7 +7169,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Bhadra, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Praharana",
@@ -6868,7 +7179,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Bhadra, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Arijit",
@@ -6877,7 +7189,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Bhadra, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Jaya",
@@ -6886,7 +7199,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Bhadra, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Subhadra_2",
@@ -6895,7 +7209,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Bhadra, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Vama",
@@ -6904,7 +7219,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Bhadra, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Ayus_2",
@@ -6913,7 +7229,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Bhadra, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Satyaka",
@@ -6922,7 +7239,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Bhadra, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Praghosha",
@@ -6931,7 +7249,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Lakshmana, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Gatravan",
@@ -6940,7 +7259,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Lakshmana, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Simha",
@@ -6949,7 +7269,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Lakshmana, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Bala",
@@ -6958,7 +7279,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Lakshmana, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Prabala",
@@ -6967,7 +7289,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Lakshmana, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Urdhaga",
@@ -6976,7 +7299,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Lakshmana, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Mahashakti",
@@ -6985,7 +7309,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Lakshmana, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Saha_2",
@@ -6994,7 +7319,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Lakshmana, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Oja",
@@ -7003,7 +7329,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Lakshmana, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Aparajita_2",
@@ -7012,7 +7339,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Lakshmana, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Charumati",
@@ -7021,7 +7349,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyYadava",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Krishna and Rukmini, one of eight ranking queens at Dvaraka; the eldest of each ten is usually the one the texts follow further. SB 10.61."
     },
     {
       "id": "Padma",
@@ -7030,7 +7359,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyNaga",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the principal Naga-kings, son of Kashyap and Kadru. SB 6.6."
     },
     {
       "id": "Mahapadma",
@@ -7039,7 +7369,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyNaga",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the principal Naga-kings, son of Kashyap and Kadru. SB 6.6."
     },
     {
       "id": "Kambala",
@@ -7048,7 +7379,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyNaga",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the principal Naga-kings, son of Kashyap and Kadru. SB 6.6."
     },
     {
       "id": "Ashvatara",
@@ -7057,7 +7389,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyNaga",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the principal Naga-kings, son of Kashyap and Kadru. SB 6.6."
     },
     {
       "id": "Elapatra",
@@ -7066,7 +7399,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyNaga",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the principal Naga-kings, son of Kashyap and Kadru. SB 6.6."
     },
     {
       "id": "Shankhapala",
@@ -7075,7 +7409,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyNaga",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the principal Naga-kings, son of Kashyap and Kadru. SB 6.6."
     },
     {
       "id": "Dhananjaya",
@@ -7084,7 +7419,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyNaga",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "One of the principal Naga-kings, son of Kashyap and Kadru. SB 6.6."
     },
     {
       "id": "Aryaka",
@@ -7123,7 +7459,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Ila."
     },
     {
       "id": "Gaya",
@@ -7132,7 +7469,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Ila."
     },
     {
       "id": "Vinatashva",
@@ -7141,7 +7479,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyIkshvaku",
-      "updatedAt": "2026-07-25T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Ila."
     },
     {
       "id": "Vikukshi",
@@ -8182,7 +8521,10 @@
       "birthFamilyId": "familyBrahma",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "A brahmin of Garga's line, mocked as impotent by Syala in the Yadava assembly. He went to the western sea and lived twelve years on iron filings until Shiva granted him a son who would break the Yadavas. HV 58; VP 5.23",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Gopali",
@@ -8213,7 +8555,10 @@
       "birthFamilyId": "familyYavana",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "The childless king of the Yavanas, Gargya's friend, who raised Kalayavana as his own. VP 5.23",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Ajigarta",
@@ -8224,7 +8569,10 @@
       "birthFamilyId": "familyBrahma",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "A starving brahmin who sold his middle son to be Harishchandra's sacrifice, and took a further fee to hold the knife himself. SB 9.7.20; AB 7.13-16",
-      "genAnchor": 32
+      "genAnchor": {
+        "relativeTo": "Rohita",
+        "offset": -1
+      }
     },
     {
       "id": "Shunahshepha",
@@ -8235,7 +8583,10 @@
       "birthFamilyId": "familyBrahma",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "Bought by Rohita to die in his place, he praised the devas from the stake until his bonds fell away. Vishvamitra adopted him as Devarata, god-given, over the protests of his own sons. His brothers were Shunahpuccha and Shunolangula. SB 9.7.20-26; AB 7.13-18",
-      "genAnchor": 33
+      "genAnchor": {
+        "relativeTo": "Rohita",
+        "offset": 0
+      }
     },
     {
       "id": "Shunahpuccha",
@@ -8664,8 +9015,8 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyChedi",
-      "updatedAt": "2026-07-27T00:00:00.000Z",
-      "notes": "Son of Uparichara Vasu, and the king from whom the Chedis take their name. SB 9.22.6"
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Uparichara Vasu; a ruler of Chedi, from whom the later Chedi—Caidya kings descend, Shishupala's line among them."
     },
     {
       "id": "Adrika",
@@ -10707,7 +11058,10 @@
       "birthFamilyId": "familyNishadha",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King of Nishadha, father of Nala. MBh 3.50",
-      "genAnchor": 73
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": 9
+      }
     },
     {
       "id": "Pushkara",
@@ -10738,7 +11092,10 @@
       "birthFamilyId": "familyVidarbha",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King of Vidarbha, long childless, who got his four children by the grace of the sage Damana; father of Damayanti. Not Bhima the Pandava. MBh 3.50",
-      "genAnchor": 73
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": 9
+      }
     },
     {
       "id": "Dama",
@@ -10859,7 +11216,10 @@
       "birthFamilyId": "familyVanara",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "A vanara chief of Kishkindha, one of the captains Sugriva sent out to search for Sita, and the father of Ruma. Rama 4.39; Brahmanda Purana 3.7.221",
-      "genAnchor": 63
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": -1
+      }
     },
     {
       "id": "Vishvakarma",
@@ -10893,7 +11253,10 @@
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "The eleventh of the avatars: the tortoise whose shell held Mandara up as the devas and asuras churned the ocean with it. Everything that came out of that churning stands in this tree, Surabhi, Airavata, Varuni, and Dhanvantari with the pot of nectar. SB 1.3.16, 8.7",
       "divine": true,
-      "genAnchor": 3
+      "genAnchor": {
+        "relativeTo": "Indra",
+        "offset": 0
+      }
     },
     {
       "id": "Mohini",
@@ -10905,7 +11268,10 @@
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "The thirteenth of the avatars, and the only one in the form of a woman: she took the nectar from the asuras by charm alone and served it to the devas, which is the whole reason Rahu and Ketu, both here, are two halves of one severed body. SB 1.3.17, 8.8-9",
       "divine": true,
-      "genAnchor": 3
+      "genAnchor": {
+        "relativeTo": "Indra",
+        "offset": 0
+      }
     },
     {
       "id": "Matsya",
@@ -10917,7 +11283,10 @@
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "The tenth of the avatars: the fish that grew until no water could hold it, and at the deluge that ended the Chakshusha age drew Manu's boat by a rope of serpent through the flood. Every line in this tree runs down from the man in that boat. SB 1.3.15, 8.24",
       "divine": true,
-      "genAnchor": 5
+      "genAnchor": {
+        "relativeTo": "Manu",
+        "offset": 0
+      }
     },
     {
       "id": "Varaha",
@@ -10929,7 +11298,10 @@
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "The second of the avatars: the boar who lifted the earth out of the waters on his tusks and killed Hiranyaksha, who had rolled her down there. On the earth herself he fathered Naraka, who stands in this tree with Bhagadatta. SB 1.3.7, 3.13-19",
       "divine": true,
-      "genAnchor": 3
+      "genAnchor": {
+        "relativeTo": "Hiranyaksha",
+        "offset": 0
+      }
     },
     {
       "id": "Narasimha",
@@ -10941,7 +11313,10 @@
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "The fourteenth of the avatars: neither man nor lion, at neither day nor night, on neither earth nor sky, killing Hiranyakashipu with no weapon on the threshold of his own hall, because the boon had covered everything else. He came for Prahlada, who is here as the demon's son. SB 1.3.18, 7.8",
       "divine": true,
-      "genAnchor": 3
+      "genAnchor": {
+        "relativeTo": "Hiranyakashipu",
+        "offset": 0
+      }
     },
     {
       "id": "Kapila",
@@ -10953,7 +11328,10 @@
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "The fifth of the avatars: son of Kardama and Devahuti, daughter of Svayambhuva Manu, and the founder of Sankhya. Sagara's sixty thousand sons dug the earth open looking for their horse, found it beside him at his meditation, took him for the thief, and were ash before they finished the thought. Amshuman came after them and learned that only the Ganga could redeem them, which is the errand Bhagiratha finally completed. SB 1.3.10, 9.8",
       "divine": true,
-      "genAnchor": 41
+      "genAnchor": {
+        "relativeTo": "Sagara",
+        "offset": 0
+      }
     },
     {
       "id": "Kalki",
@@ -10965,7 +11343,10 @@
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "The twenty-second and last: to be born to Vishnu Yasha in the village of Shambhala at the joint of two ages, when the kings have all turned to plunder, and to ride out on a white horse with a sword like a comet. The only avatar in this tree who has not happened. SB 1.3.25, 12.2",
       "divine": true,
-      "genAnchor": 99
+      "genAnchor": {
+        "relativeTo": "Niraya",
+        "offset": 1
+      }
     },
     {
       "id": "Narada",
@@ -11071,7 +11452,10 @@
       "birthFamilyId": "familyAdharma",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "The childless demon of decay and the south-west quarter, who took in Bluffing and Cheating and brought them up. SB 4.8.2",
-      "genAnchor": 38
+      "genAnchor": {
+        "relativeTo": "Dambha",
+        "offset": -1
+      }
     },
     {
       "id": "Lobha",
@@ -11282,7 +11666,10 @@
       "birthFamilyId": "familyGokula",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "Chief of the cowherds of Gokula, husband of Yashoda, and Krishna's foster father. The child was carried across the Yamuna to him the night he was born, and his own newborn daughter carried back in exchange. Not Nanda the Kaurava, who shares the name. BhP 10.3-10.5",
-      "genAnchor": 90
+      "genAnchor": {
+        "relativeTo": "Brihadbala",
+        "offset": -2
+      }
     },
     {
       "id": "Vriddhasharma",
@@ -11293,6 +11680,236 @@
       "birthFamilyId": "familyChedi",
       "updatedAt": "2026-07-27T00:00:00.000Z",
       "notes": "King of Karusha, husband of Shrutadeva and father of Dantavakra. SB 9.24.37"
+    },
+    {
+      "id": "KratuRishi",
+      "firstName": "Kratu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Mind-born son of Brahma, one of the Saptarishi; married Kriya, daughter of Kardama and Devahuti. Not the Yadava Kratu, son of Krishna and Jambavati."
+    },
+    {
+      "id": "Pulaha",
+      "firstName": "Pulaha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-08-03T00:00:00.000Z",
+      "notes": "Mind-born son of Brahma, one of the Saptarishi; by his wife Kshama, father of Kardama (among others), and so grandfather of Kapila. Vishnu Purana 1.10."
+    },
+    {
+      "id": "Atharva",
+      "firstName": "Atharva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Mind-born son of Brahma, eponym of the Atharvaveda; married Shanti (here ShantiAtharva), daughter of Kardama and Devahuti."
+    },
+    {
+      "id": "Kardama",
+      "firstName": "Kardama",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-08-03T00:00:00.000Z",
+      "notes": "Son of Pulaha and Kshama, per Vishnu Purana 1.10; husband of Devahuti, father of Kapila and of eight daughters married to the other eight of the nine sages. Not Brahma's own son, and not on his row: the tree follows Pulaha's own generation for him, one below Brahma. SB 3.24 for Devahuti, Kapila and the daughters."
+    },
+    {
+      "id": "Devahuti",
+      "firstName": "Devahuti",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-08-03T00:00:00.000Z",
+      "notes": "Daughter of Svayambhuva Manu; wife of Kardama; mother of Kapila and of eight daughters married to eight of the nine sages. Taught Sankhya by her own son. SB 3.24-33."
+    },
+    {
+      "id": "Kala",
+      "firstName": "Kala",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Daughter of Kardama and Devahuti; wife of Marichi. SB 3.24.15."
+    },
+    {
+      "id": "ShraddhaAngirasa",
+      "firstName": "Shraddha",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Daughter of Kardama and Devahuti; wife of Angiras, so grandmother of Brihaspati. Not Shraddha, wife of Vaivasvata Manu. SB 3.24.16."
+    },
+    {
+      "id": "Havirbhu",
+      "firstName": "Havirbhu",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Daughter of Kardama and Devahuti; wife of Pulastya. SB 3.24.17."
+    },
+    {
+      "id": "Kriya",
+      "firstName": "Kriya",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Daughter of Kardama and Devahuti; wife of Kratu. SB 3.24.19."
+    },
+    {
+      "id": "Khyati",
+      "firstName": "Khyati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Daughter of Kardama and Devahuti; second wife of Bhrigu, alongside Puloma. SB 3.24.20."
+    },
+    {
+      "id": "ShantiAtharva",
+      "firstName": "Shanti",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyBrahma",
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Daughter of Kardama and Devahuti; wife of Atharva. Not Shanti, son of Krishna and Kalindi. SB 3.24.22."
+    },
+    {
+      "id": "Mrikandu",
+      "firstName": "Mrikandu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBhargava",
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Bhrigu; father of Markandeya."
+    },
+    {
+      "id": "Markandeya",
+      "firstName": "Markandeya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBhargava",
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Son of Mrikandu; boon of an unending life. In the waters of pralaya saw the infant Narayana on a banyan leaf, was drawn in on its breath, saw the whole universe inside the child's body, and was breathed out again — the one sage who remembers every dissolution. SB 12.8-10."
+    },
+    {
+      "id": "Suvarchala",
+      "firstName": "Suvarchala",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAditya",
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Daughter of Surya; wife of Hanuman. Parashara Samhita, not the Bhagavata; a Telangana temple tradition (Suvarchala Anjaneya Swamy)."
+    },
+    {
+      "id": "AshvapatiMadra",
+      "firstName": "Ashvapati",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyMadra",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "King of Madra; long sonless, he propitiated the goddess Savitri for eighteen years and was given a daughter, whom he named for her. Not Ashvapati of Kekaya, Kaikeyi's father. MBh 3.277.",
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": 9
+      }
+    },
+    {
+      "id": "Savitri",
+      "firstName": "Savitri",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyMadra",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Daughter of Ashvapati of Madra; chose the exiled prince Satyavan for herself knowing, from the sage Narada, that he had exactly one year to live, and married him anyway. When Yama himself came for Satyavan's soul, she followed him on foot into death, answered his questions on dharma so well he granted her boons — sight for Satyavan's blind father, his kingdom back, a hundred sons for herself — and, tricked at last into asking for Satyavan's own life among them, won her husband back by the letter of Yama's own word. MBh 3.277-283.",
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": 10
+      }
+    },
+    {
+      "id": "Satyavan",
+      "firstName": "Satyavan",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyMadra",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Son of the blind, exiled king Dyumatsena of Shalva; husband of Savitri, who married him knowing he was fated to die within the year. Died of a sudden pain in the head exactly on the day foretold, in the forest, his head in Savitri's lap; brought back when she out-argued Yama himself. MBh 3.277-283.",
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": 10
+      }
+    },
+    {
+      "id": "Dyumatsena",
+      "firstName": "Dyumatsena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Blind king of Shalva, deposed and exiled to the forest; father of Satyavan. Regained both his sight and his throne the moment his son was restored to life, on Yama's earlier boon to Savitri. MBh 3.277-283.",
+      "genAnchor": {
+        "relativeTo": "Rama",
+        "offset": 9
+      }
+    },
+    {
+      "id": "JaratkaruSage",
+      "firstName": "Jaratkaru",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Ascetic sage; refused to marry until his ancestors, seen hanging over a pit by a fraying rope of grass, told him only a son could save them, and that the son must share his own name. Vasuki gave him his sister, also named Jaratkaru, on that condition alone. Left her, as he had warned he would at the first word he took as disrespect, once Astika was conceived. MBh 1.13-16."
+    },
+    {
+      "id": "JaratkaruNagi",
+      "firstName": "Jaratkaru",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyNaga",
+      "updatedAt": "2026-08-01T00:00:00.000Z",
+      "notes": "Sister of Vasuki, king of the nagas; given to the sage Jaratkaru, who shared her name, as the wife the prophecy demanded, to save both her own ancestors and the whole naga race from Janamejaya's sacrifice through their son Astika. MBh 1.13-16."
+    },
+    {
+      "id": "Astika",
+      "firstName": "Astika",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyNaga",
+      "updatedAt": "2026-07-27T00:00:00.000Z",
+      "notes": "Son of the sage Jaratkaru and Vasuki's sister, also named Jaratkaru; interrupted Janamejaya's snake sacrifice with the nagas already falling into the fire, invoked as a boon before the king knew what he was granting, and stopped it with the serpents, Vasuki and Takshaka among them, saved mid-air. The frame the whole Mahabharata is recited inside. MBh 1.13-53.",
+      "genAnchor": {
+        "relativeTo": "Janamejaya",
+        "offset": 0
+      }
     }
   ],
   "unions": [
@@ -13889,12 +14506,15 @@
         "Sanaka",
         "Sananda",
         "Sanatana",
-        "Sanatkumara"
+        "Sanatkumara",
+        "KratuRishi",
+        "Pulaha",
+        "Atharva"
       ],
       "adoptedChildren": [],
       "familyId": "familyBrahma",
       "status": "married",
-      "updatedAt": "2026-07-27T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z"
     },
     {
       "id": "u_marichi",
@@ -14056,12 +14676,13 @@
         "Elapatra",
         "Shankhapala",
         "Dhananjaya",
-        "Aryaka"
+        "Aryaka",
+        "JaratkaruNagi"
       ],
       "adoptedChildren": [],
       "familyId": "familyBrahma",
       "status": "married",
-      "updatedAt": "2026-07-22T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z"
     },
     {
       "id": "u_hiranyakashipu",
@@ -14114,12 +14735,13 @@
       ],
       "children": [
         "Shukracharya",
-        "Chyavana"
+        "Chyavana",
+        "Mrikandu"
       ],
       "adoptedChildren": [],
       "familyId": "familyBrahma",
       "status": "married",
-      "updatedAt": "2026-07-22T00:00:00.000Z"
+      "updatedAt": "2026-08-01T00:00:00.000Z"
     },
     {
       "id": "u_vasishtha",
@@ -19119,7 +19741,7 @@
       "familyId": "familyAdharma",
       "status": "married",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "childGap": 19
+      "childGap": 20
     },
     {
       "id": "u_nirriti",
@@ -19150,7 +19772,7 @@
       "familyId": "familyAdharma",
       "status": "partners",
       "updatedAt": "2026-07-27T00:00:00.000Z",
-      "childGap": 19
+      "childGap": 20
     },
     {
       "id": "u_lobha_nikriti",
@@ -19292,6 +19914,229 @@
       "familyId": "familyIkshvaku",
       "status": "married",
       "updatedAt": "2026-07-27T00:00:00.000Z"
+    },
+    {
+      "id": "u_kardama_devahuti",
+      "partners": [
+        "Kardama",
+        "Devahuti"
+      ],
+      "children": [
+        "Kala",
+        "Anasuya",
+        "ShraddhaAngirasa",
+        "Havirbhu",
+        "Kriya",
+        "Khyati",
+        "Arundhati",
+        "ShantiAtharva",
+        "Kapila"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyBrahma",
+      "status": "married",
+      "notes": "Nine daughters given to the nine sages on Brahma's instruction, and Kapila, the ninth-avatar son. Anasuya (already wed to Atri) and Arundhati (already wed to Vasishtha) are the two of the nine already in the tree; this is the union that gives them a mother and father. SB 3.24.",
+      "updatedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "id": "u_marichi_kala",
+      "partners": [
+        "Marichi",
+        "Kala"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyBrahma",
+      "status": "married",
+      "notes": "SB 3.24.15.",
+      "updatedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "u_angiras_shraddha",
+      "partners": [
+        "Angiras",
+        "ShraddhaAngirasa"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyBrahma",
+      "status": "married",
+      "notes": "SB 3.24.16.",
+      "updatedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "u_pulastya_havirbhu",
+      "partners": [
+        "Pulastya",
+        "Havirbhu"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyBrahma",
+      "status": "married",
+      "notes": "SB 3.24.17.",
+      "updatedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "u_kratu_kriya",
+      "partners": [
+        "KratuRishi",
+        "Kriya"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyBrahma",
+      "status": "married",
+      "notes": "SB 3.24.19.",
+      "updatedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "u_bhrigu_khyati",
+      "partners": [
+        "Bhrigu",
+        "Khyati"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyBrahma",
+      "status": "married",
+      "notes": "SB 3.24.20. A second, earlier union alongside Bhrigu's marriage to Puloma.",
+      "updatedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "u_atharva_shanti",
+      "partners": [
+        "Atharva",
+        "ShantiAtharva"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyBrahma",
+      "status": "married",
+      "notes": "SB 3.24.22.",
+      "updatedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "u_pradyumna_rati",
+      "partners": [
+        "Pradyumna",
+        "Rati"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyYadava",
+      "status": "married",
+      "notes": "Rati, serving Shambara as his cook under the name Mayavati, raised the infant Pradyumna after a fish swallowed him; she recognised him as Kamadeva reborn, and married him once grown, after he killed Shambara. SB 10.55.",
+      "updatedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "u_mrikandu_markandeya",
+      "partners": [
+        "Mrikandu"
+      ],
+      "children": [
+        "Markandeya"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyBhargava",
+      "status": "married",
+      "updatedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "u_surya_suvarchala",
+      "partners": [
+        "Surya"
+      ],
+      "children": [
+        "Suvarchala"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAditya",
+      "status": "married",
+      "notes": "Mother unnamed in the sources. Parashara Samhita.",
+      "updatedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "u_hanuman_suvarchala",
+      "partners": [
+        "Hanuman",
+        "Suvarchala"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyVanara",
+      "status": "married",
+      "notes": "To finish teaching Hanuman the nine grammars, Surya told him the last lesson required a married man, and offered his own daughter Suvarchala as the guru-dakshina; Surya himself framed it as brahmanda-kalyana, for the world's good, and no part of Hanuman's brahmacharya vow. She lives from then in tapas, apart from him. Parashara Samhita; the marriage is kept alive today at the Suvarchala Anjaneya Swamy temple in Telangana.",
+      "updatedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "u_ashvapati_savitri",
+      "partners": [
+        "AshvapatiMadra"
+      ],
+      "children": [
+        "Savitri"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyMadra",
+      "status": "married",
+      "updatedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "u_dyumatsena",
+      "partners": [
+        "Dyumatsena"
+      ],
+      "children": [
+        "Satyavan"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyMadra",
+      "status": "married",
+      "notes": "Mother unnamed in the source.",
+      "updatedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "u_satyavan_savitri",
+      "partners": [
+        "Satyavan",
+        "Savitri"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyMadra",
+      "status": "married",
+      "notes": "Savitri chose him at her own svayamvara-equivalent, over her father's objection, knowing Narada's forecast of his death within the year. MBh 3.277-283.",
+      "updatedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "u_jaratkaru",
+      "partners": [
+        "JaratkaruSage",
+        "JaratkaruNagi"
+      ],
+      "children": [
+        "Astika"
+      ],
+      "adoptedChildren": [],
+      "familyId": null,
+      "status": "married",
+      "notes": "MBh 1.13-16.",
+      "updatedAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "u_pulaha_kardama",
+      "partners": [
+        "Pulaha"
+      ],
+      "children": [
+        "Kardama"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyBrahma",
+      "status": "married",
+      "notes": "Wikipedia's Pulaha article gives this (via Vishnu Purana 1.10, Pulaha and Kshama's sons Kardama, Urvarivat, Sahishnu); the tree adopts it on request. Distinct from the tradition that has Kardama arise directly from Brahma's own shadow (SB 3.12); the Bhagavata's own genealogy is not overridden, just not the one followed here.",
+      "updatedAt": "2026-08-03T00:00:00.000Z"
     }
   ]
 }

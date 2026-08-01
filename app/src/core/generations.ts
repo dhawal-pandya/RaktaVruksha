@@ -1,4 +1,5 @@
 import type { PersonRecord, UnionRecord } from './types';
+import { isRelativeAnchor } from './types';
 
 export interface GenerationResult {
   gen: Map<string, number>;
@@ -26,7 +27,7 @@ export const computeGenerations = (
   unions: UnionRecord[],
 ): GenerationResult => {
   const usesEraControls =
-    people.some(p => typeof p.genAnchor === 'number') ||
+    people.some(p => p.genAnchor !== undefined) ||
     unions.some(u => typeof u.childGap === 'number' && u.childGap > 1);
   return usesEraControls
     ? computeGenerationsLeveled(people, unions)
@@ -108,26 +109,50 @@ const computeGenerationsLeveled = (
     if (ra !== rb) cparent.set(ra, rb);
   }
 
-  // --- longest-path leveling with per-person floors. A person's `genAnchor` is an
-  //     absolute generation FLOOR: their group starts there instead of at 0. That is
-  //     how a parentless founder with no ancestry in the tree (a bride-giving king who
+  // --- longest-path leveling with per-person floors. A person's `genAnchor` is a
+  //     generation FLOOR: their group starts there instead of at 0. That is how a
+  //     parentless founder with no ancestry in the tree (a bride-giving king who
   //     only touches the tree through a daughter's marriage, an isolated clan) is set
   //     level with its story-contemporaries. Everyone else starts at 0 and is pushed
   //     below their parents. The graph is acyclic, so it settles fast and never inflates
   //     -- and Brahma, alone in having neither a parent nor an anchor, is the only node
   //     left at 0, with all lineages beneath him.
-  const anchorOf = new Map<string, number>(); // group -> highest anchor among its members
+  //
+  //     An anchor comes in two forms. An ABSOLUTE one (a plain number) is a fixed
+  //     starting row. A RELATIVE one, `{ relativeTo, offset }`, becomes one more
+  //     lower-bound edge in exactly the relaxation below -- `anchored >= target +
+  //     offset` -- so it is resolved against wherever the target actually landed
+  //     this run rather than against a row someone measured once and wrote down.
+  //     That is the whole point: a relative anchor cannot go stale when the tree
+  //     deepens above it, because there is no stored row to go stale.
+  const anchorOf = new Map<string, number>(); // group -> highest absolute anchor among its members
+  const anchorEdges: { a: string; b: string; d: number }[] = [];
+  /** Groups an anchor speaks about, either as subject or as target: never bottom-aligned. */
+  const anchorTouched = new Set<string>();
   for (const p of people) {
-    if (typeof p.genAnchor !== 'number') continue;
+    const a = p.genAnchor;
+    if (a === undefined) continue;
     const g = find(p.id);
-    anchorOf.set(g, Math.max(anchorOf.get(g) ?? -Infinity, p.genAnchor));
+    anchorTouched.add(g);
+    if (isRelativeAnchor(a)) {
+      if (!known.has(a.relativeTo)) continue; // validateData reports it; don't crash here
+      const target = find(a.relativeTo);
+      if (target === g) continue; // self-reference (or married to the target): no-op
+      anchorTouched.add(target);
+      anchorEdges.push({ a: target, b: g, d: a.offset });
+    } else {
+      anchorOf.set(g, Math.max(anchorOf.get(g) ?? -Infinity, a));
+    }
   }
   const genG = new Map<string, number>();
   for (const g of cparent.keys()) genG.set(g, anchorOf.get(g) ?? 0);
+  // Anchor edges relax alongside the genealogical ones, so a relative anchor both
+  // follows its target and carries the anchored person's own descendants down.
+  const relaxable = [...down, ...anchorEdges];
   const maxPass = genG.size + 1; // Bellman-Ford bound; an acyclic pass settles far sooner
   for (let pass = 0; pass < maxPass; pass++) {
     let changed = false;
-    for (const e of down) {
+    for (const e of relaxable) {
       const cand = genG.get(e.a)! + e.d;
       if (cand > genG.get(e.b)!) { genG.set(e.b, cand); changed = true; }
     }
@@ -151,9 +176,14 @@ const computeGenerationsLeveled = (
   // generation up with the deepest point in the data so contemporaries in unrelated
   // lineages share a level. Anchored components sit where their floors put them; a
   // component whose sources are all at 0 (e.g. a real family tree) is unaffected.
+  //
+  // A component is "anchored" if an anchor either LIVES in it or POINTS AT it. The
+  // second half matters: shifting a component that some relative anchor was resolved
+  // against would leave the anchored person hanging off a row its target no longer
+  // occupies, which is precisely the staleness relative anchors exist to prevent.
   const anchoredComp = new Set<number>();
   for (const p of people) {
-    if (typeof p.genAnchor === 'number') anchoredComp.add(componentOf.get(p.id)!);
+    if (anchorTouched.has(find(p.id))) anchoredComp.add(componentOf.get(p.id)!);
   }
   const compMax = new Map<number, number>();
   for (const [id, comp] of componentOf) {
@@ -172,6 +202,13 @@ const computeGenerationsLeveled = (
   // divine child, and fold it into that child's component so it isn't a stray
   // island. A deva with no divineParent role (e.g. an ancestor merely flagged
   // divine, like Chandra Deva) keeps its own leveled generation.
+  //
+  // "One level above" means a real, whole row — the same row an ordinary
+  // parent would occupy — not a half-step wedged between two rows. A deva
+  // reads as divine through its gold colour and glow (see graph.ts), never by
+  // sitting off the row grid; a fractional generation is indistinguishable
+  // from a rendering bug once it shows up as a stray orb floating between
+  // layers in the 3D view.
   const rooted = new Set<string>();
   for (const u of unions) {
     for (const p of u.partners) rooted.add(p);
@@ -186,10 +223,11 @@ const computeGenerationsLeveled = (
       else divineChildrenOf.set(dp, [p.id]);
     }
   }
-  // A deva belongs to NO generation. We display it half a level above its earliest
-  // divine child — floating *between* the child's generation and the parent
-  // generation — so it never sits on any mortal tier. Several passes so a deva
-  // whose child is itself a deva still settles regardless of iteration order.
+  // A deva belongs to NO generation of its own. We display it one whole row
+  // above its earliest divine child — the row an ordinary parent would sit
+  // on — so it lands on the generation grid like everyone else instead of
+  // floating between two rows. Several passes so a deva whose child is itself
+  // a deva still settles regardless of iteration order.
   for (let pass = 0; pass < 8; pass++) {
     let changed = false;
     for (const [deva, kids] of divineChildrenOf) {
@@ -201,7 +239,7 @@ const computeGenerationsLeveled = (
         .map(k => gen.get(k))
         .filter((g): g is number => g !== undefined);
       if (!childGens.length) continue;
-      const ng = Math.min(...childGens) - 0.5;
+      const ng = Math.min(...childGens) - 1;
       if (gen.get(deva) !== ng) {
         gen.set(deva, ng);
         changed = true;
@@ -278,7 +316,8 @@ const computeGenerationsBFS = (
     if (shift) gen.set(id, gen.get(id)! + shift);
   }
 
-  // Free-agent devas float half a level above their earliest divine child.
+  // Free-agent devas sit one whole row above their earliest divine child — a
+  // real generation, not a half-step wedged between two.
   const divineChildrenOf = new Map<string, string[]>();
   for (const p of people) for (const dp of p.divineParents ?? []) {
     if (!known.has(dp)) continue;
@@ -295,7 +334,7 @@ const computeGenerationsBFS = (
       if (rooted.has(deva)) continue;
       const cg = kids.map(k => gen.get(k)).filter((g): g is number => g !== undefined);
       if (!cg.length) continue;
-      const ng = Math.min(...cg) - 0.5;
+      const ng = Math.min(...cg) - 1;
       if (gen.get(deva) !== ng) { gen.set(deva, ng); changed = true; }
       const kidComp = componentOf.get(kids[0]);
       if (kidComp !== undefined) componentOf.set(deva, kidComp);

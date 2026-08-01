@@ -29,6 +29,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { FamilyDataV2, PersonRecord, UnionRecord } from "../src/core/types";
+import { isRelativeAnchor } from "../src/core/types";
 import { validateData } from "../src/core/validate";
 import { computeGenerations } from "../src/core/generations";
 
@@ -42,18 +43,31 @@ const byId = new Map(data.people.map((p) => [p.id, p]));
 const rows = (): Map<string, number> =>
   computeGenerations(data.people, data.unions).gen;
 
-const setAnchor = (id: string, row: number): void => {
+/**
+ * Rows with every anchor suppressed, WITHOUT touching the data.
+ *
+ * The calibration below has to read the trunks clean, since an anchor left over
+ * from a shallower tree would fight the measurement. This used to be done by
+ * deleting every anchor in the file first and restoring them afterwards from the
+ * table below -- which quietly meant that anyone anchored somewhere else, in
+ * add-more-lineages.ts say, lost their anchor and sank to the floor of the tree
+ * the next time this ran. Measuring on a throwaway copy instead leaves other
+ * people's anchors alone.
+ */
+const bareRows = (): Map<string, number> =>
+  computeGenerations(
+    data.people.map((p) => ({ ...p, genAnchor: undefined })),
+    data.unions,
+  ).gen;
+
+/** Anchor `id` a fixed number of rows from `to`, resolved at load time, not here. */
+const setRelAnchor = (id: string, to: string, offset: number): void => {
   const p = byId.get(id);
   if (!p) throw new Error(`reanchor: no person "${id}"`);
-  if (p.genAnchor === row) return;
-  p.genAnchor = row;
-  p.updatedAt = STAMP;
-};
-
-const clearAnchor = (id: string): void => {
-  const p = byId.get(id);
-  if (!p || p.genAnchor === undefined) return;
-  delete p.genAnchor;
+  if (!byId.has(to)) throw new Error(`reanchor: "${id}" anchored to missing "${to}"`);
+  const cur = p.genAnchor;
+  if (isRelativeAnchor(cur) && cur.relativeTo === to && cur.offset === offset) return;
+  p.genAnchor = { relativeTo: to, offset };
   p.updatedAt = STAMP;
 };
 
@@ -83,7 +97,7 @@ const setGap = (id: string, gap: number): void => {
  * stands one row above his son, as he should.
  */
 const padTo = (target: string, row: number, edges: string[], why: string): void => {
-  const deficit = row - rows().get(target)!;
+  const deficit = row - bareRows().get(target)!;
   if (deficit <= 0) return;
   const n = edges.length;
   edges.forEach((id, i) =>
@@ -96,24 +110,17 @@ const padTo = (target: string, row: number, edges: string[], why: string): void 
 // The two calibration rows, read off the tree rather than chosen.
 // ---------------------------------------------------------------------------
 
-// Anchors from the old, shallow tree would fight the measurement, so drop every
-// one of them first and read the trunks clean.
-const previouslyAnchored = data.people.filter((p) => p.genAnchor !== undefined).map((p) => p.id);
-for (const id of previouslyAnchored) clearAnchor(id);
-
-const bare = rows();
+const bare = bareRows();
 const RAMA = bare.get("Rama")!;
 const WAR = bare.get("Brihadbala")!; // the Kurukshetra generation
 console.log(`measured: Rama at ${RAMA}, Kurukshetra at ${WAR} (${WAR - RAMA} rows apart)`);
 
 // Two generations fought at Kurukshetra. Brihadbala fell to Abhimanyu, so WAR is
-// the younger of them; the men who led the war stand one row above.
-/** Arjuna, Krishna, Duryodhana, Karna, Bhima. */
-const FIGHTERS = WAR - 1;
-/** Their fathers: Pandu, Dhritarashtra, Vasudeva, Drupada, Subala, Virata. */
-const ELDERS = WAR - 2;
-/** Rama's parents: Dasharatha, Janaka, Kaikeyi's father, Romapada. */
-const RAMA_ELDERS = RAMA - 1;
+// the younger of them; the men who led the war stand one row above, and their
+// fathers -- Pandu, Dhritarashtra, Vasudeva, Drupada, Subala, Virata -- one above
+// that. Those offsets used to be constants here; they now live in the anchor
+// table below, written straight onto each person as `Brihadbala - 1` and
+// `Brihadbala - 2`, so nothing has to re-derive them.
 
 // ---------------------------------------------------------------------------
 // The trunks and branches, dropped to meet the solar one
@@ -259,123 +266,145 @@ for (const p of PADS) for (const e of p.edges) setGap(e, 1);
 for (const p of PADS) padTo(p.target, p.row(), p.edges, p.why);
 
 // ---------------------------------------------------------------------------
-// The Ramayana era
-// ---------------------------------------------------------------------------
-
-// Lanka: Sukesha is four rows above Ravana.
-setAnchor("Sukesha", RAMA - 4);
-// Kishkindha: the vanara sires are one row above their sons. Panasa, whose
-// daughter Ruma married Sugriva, has no ancestry of his own and would otherwise
-// sit at the root of the tree.
-for (const id of ["Riksharaja", "SushenaR", "Kesari", "Panasa"]) setAnchor(id, RAMA_ELDERS);
-// Nala who built the bridge and Nila who led the army have a deva for a father
-// and no vanara kin the texts record, so nothing but an anchor holds them in the
-// Ramayana at all. Drop it and they sink to the floor of the tree.
-for (const id of ["Nala", "Nila"]) setAnchor(id, RAMA);
-// Videha: Hrasvaroma fathers Siradhvaja Janaka, who gives Sita to Rama.
-setAnchor("Hrasvaroma", RAMA - 2);
-// Kekaya: Ashvapati fathers Kaikeyi, who marries Dasharatha.
-setAnchor("Ashvapati", RAMA - 2);
-// Anga: Romapada is Dasharatha's friend, and takes Shanta from him.
-setAnchor("Romapada", RAMA_ELDERS);
-// Agastya meets Rama in the Dandaka forest.
-setAnchor("Agastya", RAMA_ELDERS);
-// Jambavan saw Rama's age and wrestled Krishna in the next one. He is placed in
-// the Ramayana, and the long ray to his daughter Jambavati is the whole point.
-setAnchor("Jambavan", RAMA_ELDERS);
-
-// Vishvamitra is one of the sages who walk through every age: son of Gadhi high
-// in the Kaushika line, priest at Harishchandra's sacrifice thirteen rows below,
-// and Rama's escort thirty rows below that. He stays where his father puts him,
-// but the boy he saved and adopted belongs to the sacrifice, so Ajigarta's family
-// is anchored to Rohita, who bought him.
-const solar = rows();
-setAnchor("Ajigarta", solar.get("Rohita")! - 1);
-setAnchor("Shunahshepha", solar.get("Rohita")!);
-
-// ---------------------------------------------------------------------------
-// Between the epics
-// ---------------------------------------------------------------------------
-
-// Nala and Damayanti keep the slot they have always had in this tree, roughly a
-// third of the way from the Ramayana to the war. Rituparna, Nala's friend, sits
-// in the solar line where the Purana puts him, fourteen rows above Rama; the
-// contradiction is real, old, and recorded in docs/PURANIC_LINEAGES.md.
-const NALA = RAMA + Math.round((WAR - RAMA) * 0.35);
-setAnchor("NalaNishadha", NALA);
-setAnchor("Damayanti", NALA);
-setAnchor("BhimaVidarbha", NALA - 1);
-setAnchor("Virasena", NALA - 1); // Nala's father, with no ancestry of his own
-
-// ---------------------------------------------------------------------------
-// Kurukshetra
-// ---------------------------------------------------------------------------
-
-// The Kuru trunk. Shantanu four rows above Abhimanyu puts Bhishma and
-// Vichitravirya at WAR-3, Dhritarashtra and Pandu at ELDERS, their sons on the
-// FIGHTERS row, and Abhimanyu level with Brihadbala.
-setAnchor("Shantanu", WAR - 4);
-// Kashi: Ambika and Ambalika marry Vichitravirya, and Amba faces Bhishma.
-setAnchor("Kashiraja", WAR - 4);
-// Kripa and Kripi are of Bhishma's court; Ashwatthama fights beside Duryodhana.
-setAnchor("Sharadvan", ELDERS - 1);
-
-// The Yadavas. Shurasena fathers both Vasudeva and Kunti, so Krishna and the
-// Pandavas land on the same row.
-setAnchor("Shurasena", ELDERS - 1);
-setAnchor("Ahuka", ELDERS - 3); // Devaka and Ugrasena, then Devaki and Kamsa
-setAnchor("Kuntibhoja", ELDERS - 1); // raises Kunti
-setAnchor("Banasura", WAR); // Usha marries Aniruddha, Krishna's grandson
-
-// Houses that marry into the ELDERS generation stand a row higher again: Madri
-// weds Pandu and Gandhari weds Dhritarashtra, so Shalya and Shakuni are uncles
-// to the war, not fighters in it.
-setAnchor("Dyutimanta", ELDERS - 1);
-setAnchor("Subala", ELDERS - 1);
-
-// Every house that sends someone to the war, one row above the one it sends.
-for (const id of [
-  "Drupada", // Draupadi and Dhrishtadyumna
-  "Adhiratha", // raises Karna
-  "Virata", // Sweta, Sankha, and Uttara who marries Abhimanyu
-  "Sini", // Satyaki
-  "Hridika", // Kritavarma
-  "Satrajit", // Satyabhama marries Krishna
-  "Bhishmaka", // Rukmini marries Krishna
-  "Raivata", // Revati marries Balarama, an age after her own
-  "Hiranyadhanus", // Ekalavya
-  "Kauravya", // Ulupi
-  "Chitravahana", // Chitrangada of Manipura
-  "Narakasura", // Bhagadatta
-  "Brihadratha", // Jarasandha
-  "Gargya", // Kalayavana, whom Muchukunda burns
-  "YavanaRaja",
-] as const) setAnchor(id, ELDERS);
-
-setAnchor("Sanjaya", FIGHTERS); // the suta who narrates the war as it happens
-// Nanda of Gokula has no recorded ancestry, so without a floor he would sit at
-// the root of the whole tree with a ninety-row ray down to his foster son.
-setAnchor("NandaGokula", ELDERS);
-
-// Parashurama and Kartavirya Arjuna have to meet. The Haihaya king-list runs
-// deeper than the Bhargava one, so it is the sage who is anchored to the king,
-// not the other way round: a genAnchor is a floor and can only push down.
-const measured = rows();
-setAnchor("Jamadagni", measured.get("KartaviryaArjuna")! - 1);
-
-// ---------------------------------------------------------------------------
-// The suspended avatars
+// Who sits beside whom
 // ---------------------------------------------------------------------------
 //
-// An avatar with no ancestry has nothing to hold it anywhere, so each is floated
-// at the row of the story it belongs to, measured off the person it acts on
-// rather than picked. Their rows are the last thing computed because several of
-// them depend on lineages the pads above have just moved.
+// Every floating figure in the tree, written as "N rows from that person" rather
+// than as a row number. These are RELATIVE anchors: nothing here is a measurement,
+// so nothing here can go stale. Deepen the tree anywhere above any of these people
+// -- add a generation of kings, give a first-generation sage a father -- and each
+// one still means exactly what it says, without this script being re-run at all.
+//
+// Two names carry almost all of it, and neither is anchored itself: both take
+// their rows from their own ancestry, which is what makes them safe to hang the
+// eras on. `Rama` is the Ramayana; `Brihadbala`, who fell to Abhimanyu, is
+// Kurukshetra. Offsets are signed, and negative means ABOVE.
+const ANCHORS: { id: string; to: string; offset: number; why: string }[] = [
+  // --- The Ramayana era ---------------------------------------------------
+  { id: "Sukesha", to: "Rama", offset: -4, why: "Lanka: four rows above Ravana" },
+  // Kishkindha: the vanara sires stand one row above their sons. Panasa, whose
+  // daughter Ruma married Sugriva, has no ancestry of his own and would
+  // otherwise sit at the root of the tree.
+  { id: "Riksharaja", to: "Rama", offset: -1, why: "Kishkindha, a vanara sire" },
+  { id: "SushenaR", to: "Rama", offset: -1, why: "Kishkindha, a vanara sire" },
+  { id: "Kesari", to: "Rama", offset: -1, why: "Hanuman's father" },
+  { id: "Panasa", to: "Rama", offset: -1, why: "Ruma's father" },
+  // Nala who built the bridge and Nila who led the army have a deva for a
+  // father and no vanara kin any text records, so nothing but an anchor holds
+  // them in the Ramayana at all. Drop it and they sink to the floor.
+  { id: "Nala", to: "Rama", offset: 0, why: "built the bridge" },
+  { id: "Nila", to: "Rama", offset: 0, why: "led the army" },
+  { id: "Hrasvaroma", to: "Rama", offset: -2, why: "Videha: fathers Sita's father Janaka" },
+  { id: "Ashvapati", to: "Rama", offset: -2, why: "Kekaya: fathers Kaikeyi" },
+  { id: "Romapada", to: "Rama", offset: -1, why: "Anga: Dasharatha's friend, takes Shanta" },
+  { id: "Agastya", to: "Rama", offset: -1, why: "meets Rama in the Dandaka forest" },
+  // Jambavan saw Rama's age and wrestled Krishna in the next one. He is placed
+  // in the Ramayana, and the long ray to his daughter Jambavati is the point.
+  { id: "Jambavan", to: "Rama", offset: -1, why: "Kishkindha, and Jambavati's father an age later" },
+  // Vishvamitra is one of the sages who walk through every age, and stays where
+  // his father Gadhi puts him. But the boy he saved belongs to the sacrifice,
+  // so Ajigarta's family is anchored to Rohita, who bought him.
+  { id: "Ajigarta", to: "Rohita", offset: -1, why: "sold Shunahshepha to the sacrifice" },
+  { id: "Shunahshepha", to: "Rohita", offset: 0, why: "bought as the sacrifice in Rohita's place" },
 
-// Reset the descent of Adharma BEFORE measuring anything. Its links are widened
-// further down to carry it to the foot of the tree, and if last run's widening is
-// still in place when `bottom` is read, the line has already reached the bottom
-// and pushes it lower every time the script runs.
+  // --- Between the epics --------------------------------------------------
+  // Nala and Damayanti keep the slot they have always had in this tree, ten
+  // rows below Rama, roughly a third of the way to the war. Rituparna, Nala's
+  // friend, sits in the solar line where the Purana puts him, fourteen rows
+  // ABOVE Rama; that contradiction is real, old, and recorded in the doc.
+  { id: "NalaNishadha", to: "Rama", offset: 10, why: "the Nalopakhyana" },
+  { id: "Damayanti", to: "Rama", offset: 10, why: "the Nalopakhyana" },
+  { id: "BhimaVidarbha", to: "Rama", offset: 9, why: "Damayanti's father" },
+  { id: "Virasena", to: "Rama", offset: 9, why: "Nala's father, with no ancestry of his own" },
+  // Savitri and Satyavan (MBh 3.277-283), told to Yudhishthira in the same Vana
+  // Parva stretch and by the same device, so they keep Nala's slot rather than
+  // inventing one. Ashvapati of Madra is deliberately NOT chained to the tree's
+  // own Madra king-list: nothing in the text identifies the two kings.
+  { id: "AshvapatiMadra", to: "Rama", offset: 9, why: "Savitri's father" },
+  { id: "Savitri", to: "Rama", offset: 10, why: "the Pativrata-mahatmya" },
+  { id: "Satyavan", to: "Rama", offset: 10, why: "the Pativrata-mahatmya" },
+  { id: "Dyumatsena", to: "Rama", offset: 9, why: "Satyavan's blind father" },
+
+  // --- Kurukshetra --------------------------------------------------------
+  // Shantanu four rows above Abhimanyu puts Bhishma and Vichitravirya at -3,
+  // Dhritarashtra and Pandu at -2, their sons at -1, Abhimanyu level with
+  // Brihadbala himself.
+  { id: "Shantanu", to: "Brihadbala", offset: -4, why: "the Kuru trunk" },
+  { id: "Kashiraja", to: "Brihadbala", offset: -4, why: "Kashi: Amba, Ambika and Ambalika's father" },
+  { id: "Sharadvan", to: "Brihadbala", offset: -3, why: "Kripa and Kripi, of Bhishma's court" },
+  // Shurasena fathers both Vasudeva and Kunti, so Krishna and the Pandavas land
+  // on one row.
+  { id: "Shurasena", to: "Brihadbala", offset: -3, why: "fathers Vasudeva and Kunti" },
+  { id: "Ahuka", to: "Brihadbala", offset: -5, why: "Devaka and Ugrasena, then Devaki and Kamsa" },
+  { id: "Kuntibhoja", to: "Brihadbala", offset: -3, why: "raises Kunti" },
+  { id: "Banasura", to: "Brihadbala", offset: 0, why: "Usha marries Aniruddha, Krishna's grandson" },
+  // Houses that marry INTO the elders' generation stand a row higher again:
+  // Shalya and Shakuni are uncles to the war, not fighters in it.
+  { id: "Dyutimanta", to: "Brihadbala", offset: -3, why: "Madri and Shalya's father" },
+  { id: "Subala", to: "Brihadbala", offset: -3, why: "Gandhari and Shakuni's father" },
+  // Every house that sends someone to the war, one row above the one it sends.
+  { id: "Drupada", to: "Brihadbala", offset: -2, why: "Draupadi and Dhrishtadyumna" },
+  { id: "Adhiratha", to: "Brihadbala", offset: -2, why: "raises Karna" },
+  { id: "Virata", to: "Brihadbala", offset: -2, why: "Uttara, who marries Abhimanyu" },
+  { id: "Sini", to: "Brihadbala", offset: -2, why: "Satyaki" },
+  { id: "Hridika", to: "Brihadbala", offset: -2, why: "Kritavarma" },
+  { id: "Satrajit", to: "Brihadbala", offset: -2, why: "Satyabhama marries Krishna" },
+  { id: "Bhishmaka", to: "Brihadbala", offset: -2, why: "Rukmini marries Krishna" },
+  { id: "Raivata", to: "Brihadbala", offset: -2, why: "Revati marries Balarama, an age after her own" },
+  { id: "Hiranyadhanus", to: "Brihadbala", offset: -2, why: "Ekalavya" },
+  { id: "Kauravya", to: "Brihadbala", offset: -2, why: "Ulupi" },
+  { id: "Chitravahana", to: "Brihadbala", offset: -2, why: "Chitrangada of Manipura" },
+  { id: "Narakasura", to: "Brihadbala", offset: -2, why: "Bhagadatta" },
+  { id: "Brihadratha", to: "Brihadbala", offset: -2, why: "Jarasandha" },
+  { id: "Gargya", to: "Brihadbala", offset: -2, why: "Kalayavana, whom Muchukunda burns" },
+  { id: "YavanaRaja", to: "Brihadbala", offset: -2, why: "raises Kalayavana" },
+  // Nanda of Gokula has no recorded ancestry, so without a floor he would sit
+  // at the root of the whole tree with a ninety-row ray to his foster son.
+  { id: "NandaGokula", to: "Brihadbala", offset: -2, why: "Krishna's foster father" },
+  { id: "Sanjaya", to: "Brihadbala", offset: -1, why: "narrates the war as it happens" },
+  // Astika stops Janamejaya's snake sacrifice as a young man; his own ancestry
+  // (an ancient naga mother, a sage father) would otherwise leave him ages
+  // above the court that is his whole story.
+  { id: "Astika", to: "Janamejaya", offset: 0, why: "stops the snake sacrifice" },
+  // Parashurama and Kartavirya Arjuna have to meet. The Haihaya king-list runs
+  // deeper than the Bhargava one, so it is the sage anchored to the king and
+  // not the reverse: an anchor is a floor, and can only push down.
+  { id: "Jamadagni", to: "KartaviryaArjuna", offset: -1, why: "Parashurama's father" },
+
+  // --- The suspended avatars ----------------------------------------------
+  // An avatar with no ancestry has nothing to hold it anywhere, so each floats
+  // at the row of the story it belongs to, beside the person it acts on.
+  { id: "Kurma", to: "Indra", offset: 0, why: "the churning of the ocean" },
+  { id: "Mohini", to: "Indra", offset: 0, why: "the churning of the ocean" },
+  { id: "Varaha", to: "Hiranyaksha", offset: 0, why: "killed him" },
+  { id: "Narasimha", to: "Hiranyakashipu", offset: 0, why: "killed him" },
+  { id: "Matsya", to: "Manu", offset: 0, why: "drew his boat" },
+  { id: "Kapila", to: "Sagara", offset: 0, why: "burned his sixty thousand sons" },
+  // Nirriti fathered nobody and only took the two in; without a floor he sits
+  // at the root of the tree with a long line down to his adopted children.
+  { id: "Nirriti", to: "Dambha", offset: -1, why: "adoptive father of Dambha and Maya" },
+];
+
+// Written before the padding below is measured, because every one of them is
+// pure data: a relative anchor needs no row read off the tree to compute.
+for (const a of ANCHORS) setRelAnchor(a.id, a.to, a.offset);
+
+// ---------------------------------------------------------------------------
+// The foot of the tree: the age, and the one who ends it
+// ---------------------------------------------------------------------------
+//
+// The descent of Adharma hangs from Brahma at row 0, so left alone it sits in the
+// first four rows among the devas with one ninety-row leap down to Kali. Widening
+// every link of it instead lets the line fall the whole height of the tree as a
+// slow thread, Irreligion to Hell, which is the shape it actually means: it is
+// not a succession in time at all, it is a lineage of causes, and its whole point
+// is that it arrives at the end of the world.
+//
+// This one stays a MEASUREMENT rather than a relative anchor, because what it is
+// measured against is the deepest row in the whole tree, which is not a person.
+//
+// Reset the links BEFORE reading `bottom`: if last run's widening is still in
+// place, the line has already reached the bottom and pushes it lower every run.
 const ADHARMA_LINKS = [
   "u_brahma_adharma",
   "u_adharma_mrisha",
@@ -385,38 +414,21 @@ const ADHARMA_LINKS = [
 ];
 for (const e of ADHARMA_LINKS) setGap(e, 1);
 
-const beside = rows();
-const at = (id: string, delta = 0): number => beside.get(id)! + delta;
+// Kalki's own anchor is suppressed for this reading for the same reason: he is
+// placed BELOW the bottom, so counting him in the bottom would ratchet the whole
+// Adharma line one row deeper on every run.
+const kalkiAnchor = byId.get("Kalki")!.genAnchor;
+delete byId.get("Kalki")!.genAnchor;
+const bottom = Math.max(...rows().values());
+padTo("Kali", bottom, ADHARMA_LINKS, "the descent of Adharma");
+byId.get("Kalki")!.genAnchor = kalkiAnchor;
 
-// The churning of the ocean: Indra's generation, and everything it threw up.
-setAnchor("Kurma", at("Indra"));
-setAnchor("Mohini", at("Indra"));
-// Each of the three who came for one particular enemy stands level with him.
-setAnchor("Varaha", at("Hiranyaksha"));
-setAnchor("Narasimha", at("Hiranyakashipu"));
-setAnchor("Matsya", at("Manu"));
-setAnchor("Kapila", at("Sagara"));
-// The foot of the tree: the age, and the one who ends it.
-//
-// The descent of Adharma hangs from Brahma at row 0, so left alone it sits in the
-// first four rows among the devas with one ninety-row leap down to Kali. Widening
-// every link of it instead lets the line fall the whole height of the tree as a
-// slow thread, Irreligion to Hell, which is the shape it actually means: it is
-// not a succession in time at all, it is a lineage of causes, and its whole point
-// is that it arrives at the end of the world.
-//
 // It is placed so the line's LAST generation, Torment and Hell, lands one row
 // above Kalki, and Kalki keeps a row to himself below everything, alone. Kali
 // himself therefore stands three rows above Kalki rather than one; there is no
 // arrangement that puts him literally one row above without pushing his own
 // children, Death and Fear, past the end of the tree.
-const bottom = Math.max(...beside.values());
-padTo("Kali", bottom, ADHARMA_LINKS, "the descent of Adharma");
-// Nirriti fathered nobody and only took the two in; without a floor he sits at
-// the root of the tree with a long line down to his adopted children.
-setAnchor("Nirriti", rows().get("Dambha")! - 1);
-
-setAnchor("Kalki", bottom + 3);
+setRelAnchor("Kalki", "Niraya", 1);
 
 // ---------------------------------------------------------------------------
 // Report, verify, write
@@ -471,10 +483,14 @@ const CONTEMPORARIES: [string, string, string][] = [
   ["Balarama", "Revati", "marriage"],
   ["Parashurama", "KartaviryaArjuna", "the stolen cow"],
   ["NalaNishadha", "Damayanti", "marriage"],
+  ["Satyavan", "Savitri", "marriage"],
+  ["AshvapatiMadra", "Savitri", "father and daughter"],
+  ["Dyumatsena", "Satyavan", "father and son"],
   ["Mandhata", "Muchukunda", "father and son"],
   ["Rohita", "Shunahshepha", "bought as the sacrifice in his place"],
   ["Mandhata", "Bindumati", "marriage"],
   ["Mandhata", "Saubhari", "his fifty daughters"],
+  ["Astika", "Janamejaya", "stopped the snake sacrifice"],
 ];
 
 const final = rows();
