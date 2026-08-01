@@ -232,6 +232,18 @@
       "name": "Adharma",
       "color": "#5e4550",
       "note": "The descent of Irreligion, SB 4.8.2-4: not a dynasty but a genealogy of vices"
+    },
+    "familyBhumi": {
+      "name": "Bhumi",
+      "color": "#3fa34d"
+    },
+    "familySvayambhuva": {
+      "name": "Svayambhuva",
+      "color": "#a9c4e8"
+    },
+    "familyDakshakanya": {
+      "name": "Daksha's Daughters",
+      "color": "#d4915c"
     }
   },
   "people": [
@@ -592,8 +604,12 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-08-02T00:00:00.000Z",
-      "notes": "Born Devavrata; took a vow of lifelong celibacy so his father could marry Satyavati, hence 'Bhishma'. He was Prabhasa, the eighth and last of the eight Vasus, cursed to a long mortal life for stealing the sage Vasishtha's cow; his seven brother-Vasus, shown here as Ganga's other sons, she returned at once to heaven. Grandsire and regent of the Kurus; a chiranjivi who chose his own hour of death. By name — abducting Amba, Ambika and Ambalika at their swayamvara for Vichitravirya, releasing Amba when she loved another, her vow of revenge and rebirth as Shikhandi, ten days commanding the Kaurava host at Kurukshetra, falling pierced by Arjuna's arrows through Shikhandi shielding him, lying on that bed of arrows through the rest of the war, and teaching Yudhishthira statecraft from it before choosing to die at the sun's turn north (uttarayana)."
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Born Devavrata; took a vow of lifelong celibacy so his father could marry Satyavati, hence 'Bhishma'. He was Prabhasa, the eighth and last of the eight Vasus, cursed to a long mortal life for stealing the sage Vasishtha's cow; his seven brother-Vasus, shown here as Ganga's other sons, she returned at once to heaven. Grandsire and regent of the Kurus; a chiranjivi who chose his own hour of death. By name — abducting Amba, Ambika and Ambalika at their swayamvara for Vichitravirya, releasing Amba when she loved another, her vow of revenge and rebirth as Shikhandi, ten days commanding the Kaurava host at Kurukshetra, falling pierced by Arjuna's arrows through Shikhandi shielding him, lying on that bed of arrows through the rest of the war, and teaching Yudhishthira statecraft from it before choosing to die at the sun's turn north (uttarayana).",
+      "divineParents": [
+        "Yama",
+        "VasuDharma"
+      ]
     },
     {
       "id": "VasuDhara",
@@ -602,9 +618,13 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "A Vasu, deva of the earth; a brother-Vasu of Bhishma (Prabhasa), borne by Ganga and returned to heaven.",
-      "divine": true
+      "divine": true,
+      "divineParents": [
+        "Yama",
+        "VasuDharma"
+      ]
     },
     {
       "id": "VasuDhruva",
@@ -613,9 +633,13 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "A Vasu, deva of the pole star; borne by Ganga and returned to heaven.",
-      "divine": true
+      "divine": true,
+      "divineParents": [
+        "Yama",
+        "VasuDharma"
+      ]
     },
     {
       "id": "VasuSoma",
@@ -624,9 +648,13 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "A Vasu, deva of the moon; borne by Ganga and returned to heaven.",
-      "divine": true
+      "divine": true,
+      "divineParents": [
+        "Yama",
+        "VasuDharma"
+      ]
     },
     {
       "id": "VasuAha",
@@ -635,9 +663,13 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "A Vasu, deva of the day and the ethereal space; borne by Ganga and returned to heaven.",
-      "divine": true
+      "divine": true,
+      "divineParents": [
+        "Yama",
+        "VasuDharma"
+      ]
     },
     {
       "id": "VasuAnila",
@@ -646,9 +678,13 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "A Vasu, deva of the wind; borne by Ganga and returned to heaven.",
-      "divine": true
+      "divine": true,
+      "divineParents": [
+        "Yama",
+        "VasuDharma"
+      ]
     },
     {
       "id": "VasuAnala",
@@ -657,9 +693,13 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "A Vasu, deva of fire (Agni); borne by Ganga and returned to heaven.",
-      "divine": true
+      "divine": true,
+      "divineParents": [
+        "Yama",
+        "VasuDharma"
+      ]
     },
     {
       "id": "VasuPratyusha",
@@ -668,9 +708,13 @@
       "gender": "male",
       "alive": true,
       "birthFamilyId": "familyKuru",
-      "updatedAt": "2026-07-20T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "A Vasu, deva of the dawn; borne by Ganga and returned to heaven.",
-      "divine": true
+      "divine": true,
+      "divineParents": [
+        "Yama",
+        "VasuDharma"
+      ]
     },
     {
       "id": "Satyavati",
@@ -3566,7 +3610,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": null,
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "Favourite among Chandra's twenty-seven wives, the nakshatras, daughters of Daksha.",
       "divine": true
     },
@@ -4567,7 +4611,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyAditya",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "Daughter of Daksha, wife of Kashyap; mother of the Adityas, the devas.",
       "divine": true
     },
@@ -4578,7 +4622,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familySuparna",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "Daughter of Daksha, wife of Kashyap; mother of the sun's charioteer Aruna and of Garuda.",
       "divine": true
     },
@@ -4589,7 +4633,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyNaga",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "Daughter of Daksha, wife of Kashyap; mother of the nagas.",
       "divine": true
     },
@@ -4611,7 +4655,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyDaitya",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "Daughter of Daksha, wife of Kashyap; mother of the Daitya asuras.",
       "divine": true
     },
@@ -4622,7 +4666,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyDanava",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "Daughter of Daksha, wife of Kashyap; mother of the Danava asuras.",
       "divine": true
     },
@@ -4846,7 +4890,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -4857,7 +4901,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -4868,7 +4912,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -4879,7 +4923,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -4890,7 +4934,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -4901,7 +4945,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -4912,7 +4956,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -4923,7 +4967,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -4934,7 +4978,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -4945,7 +4989,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -4956,7 +5000,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -4967,7 +5011,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -4978,7 +5022,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -4989,7 +5033,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -5000,7 +5044,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -5011,7 +5055,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -5022,7 +5066,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -5033,7 +5077,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -5044,7 +5088,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -5055,7 +5099,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -5066,7 +5110,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -5077,7 +5121,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -5088,7 +5132,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -5099,7 +5143,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -5110,7 +5154,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -5121,7 +5165,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "divine": true,
       "notes": "One of the twenty-seven nakshatras, daughters of Daksha and wives of Chandra."
     },
@@ -5359,7 +5403,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familySurabhi",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "Daughter of Daksha, wife of Kashyap; mother of cattle, the wish-granting cows.",
       "divine": true
     },
@@ -5392,7 +5436,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyTamra",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "Daughter of Daksha, wife of Kashyap; mother of the birds of prey.",
       "divine": true
     },
@@ -5433,7 +5477,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyApsara",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "Daughter of Daksha, wife of Kashyap; mother of the apsaras.",
       "divine": true
     },
@@ -5528,7 +5572,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyGandharva",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "Daughter of Daksha, wife of Kashyap; mother of the Gandharvas.",
       "divine": true
     },
@@ -5561,7 +5605,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyNaga",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "Daughter of Daksha, wife of Kashyap; a mother of serpents, and the sea-nagi who tested Hanuman's wit on the leap to Lanka.",
       "divine": true
     },
@@ -5583,7 +5627,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyMriga",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "Daughter of Daksha, wife of Kashyap; mother of the beasts of the wild.",
       "divine": true
     },
@@ -5614,7 +5658,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyIra",
-      "updatedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
       "notes": "Daughter of Daksha, wife of Kashyap; mother of trees, creepers and grasses.",
       "divine": true
     },
@@ -6300,7 +6344,7 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyAditya",
-      "updatedAt": "2026-07-25T00:00:00.000Z",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
       "notes": "Daughter of Indra; wed to Shukracharya."
     },
     {
@@ -7449,8 +7493,8 @@
       "gender": "female",
       "alive": true,
       "birthFamilyId": "familyBrahma",
-      "updatedAt": "2026-07-25T00:00:00.000Z",
-      "notes": "Goddess of desire; daughter of Daksha, wife of Kamadeva."
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Goddess of desire; daughter of Daksha, wife of Kamadeva. Sources disagree on her mother: most simply call her Daksha's daughter, but one tradition holds she was born of Daksha's own perspiration, without a mother at all -- so, unlike her sisters, she is not attached to Prasuti here."
     },
     {
       "id": "Utkala",
@@ -11910,6 +11954,635 @@
         "relativeTo": "Janamejaya",
         "offset": 0
       }
+    },
+    {
+      "id": "Bhumi",
+      "firstName": "Bhumi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyBhumi",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "The Earth herself, and a devi in her own right. Hiranyaksha rolled her down into the cosmic waters and Varaha lifted her out on his tusks; by him she bore Narakasura, who ruled Pragjyotisha until Krishna killed him. Also called Bhu, Prithvi and Vasudha, and mother of Mangala the red planet, who is Bhauma, 'of the Earth', after her. Parentless by nature, as Varaha is. SB 3.13-19, 10.59",
+      "divine": true,
+      "genAnchor": {
+        "relativeTo": "Varaha",
+        "offset": 0
+      }
+    },
+    {
+      "id": "Mangala",
+      "firstName": "Mangala",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyBhumi",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Mangala, the red planet Mars, last of the nine grahas to enter this tree. Called Bhauma and Kuja, both meaning 'born of the Earth', and Angaraka, 'the burning coal'. The Shaiva account has him born of a drop of Shiva's sweat falling to the ground and raised by Bhumi; the tree carries only the mother, since Shiva is not in it. Lord of Tuesday, and of the fierce, martial temperament his colour names.",
+      "divine": true
+    },
+    {
+      "id": "ManuSvayambhuva",
+      "firstName": "Svayambhuva Manu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySvayambhuva",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "The first Manu, born of Brahma's own body with Shatarupa, and the first man to rule. Father, the Bhagavata says, of Priyavrata and Uttanapada as well -- not carried in this tree, their own descent judged not worth its cost to the tree's shape -- and of three daughters whose marriages seeded the rest: Akuti to Ruchi, Devahuti to Kardama, Prasuti to Daksha. Not Vaivasvata Manu, the seventh, who is this tree's own ancestor of the solar and lunar houses. SB 3.12.54, 4.1",
+      "divine": true
+    },
+    {
+      "id": "Shatarupa",
+      "firstName": "Shatarupa",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familySvayambhuva",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "The first woman, born of Brahma's body alongside Svayambhuva Manu, whom she married; mother of Akuti, Devahuti and Prasuti in this tree, and of Priyavrata and Uttanapada in the Bhagavata's own account, not carried here. Her name, 'she of a hundred forms', is the ground of every later account of Brahma's creation of a consort. SB 3.12.54",
+      "divine": true
+    },
+    {
+      "id": "Akuti",
+      "firstName": "Akuti",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familySvayambhuva",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Daughter of Svayambhuva Manu, given to the Prajapati Ruchi on the condition that her son be counted her father's; by him she bore the twins Yajna and Dakshina. SB 4.1.1-6"
+    },
+    {
+      "id": "Prasuti",
+      "firstName": "Prasuti",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familySvayambhuva",
+      "updatedAt": "2026-08-02T01:00:00.000Z",
+      "notes": "Youngest daughter of Svayambhuva Manu; wife of Daksha, and so the mother of the sixteen daughters through whom the whole deva world descends. Her marriage is the join between the first Manu's house and Brahma's own. SB 4.1.2, 4.1.64",
+      "divine": true
+    },
+    {
+      "id": "Ruchi",
+      "firstName": "Ruchi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySvayambhuva",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "A Prajapati; husband of Akuti, daughter of Svayambhuva Manu, and father by her of the twins Yajna and Dakshina. SB 4.1.1-6"
+    },
+    {
+      "id": "Yajna",
+      "firstName": "Yajna",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familySvayambhuva",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Ruchi and Akuti; the seventh of the avatars, sacrifice itself made a person. He became the Indra of the Svayambhuva age, with his own sons the devas of it. Counted at SB 1.3.12 and left out of this tree until his parents entered it. SB 4.1.7",
+      "divine": true
+    },
+    {
+      "id": "Dakshina",
+      "firstName": "Dakshina",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familySvayambhuva",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Twin sister of Yajna, born to Ruchi and Akuti, and afterwards his wife; the sacrificial fee personified, without which a sacrifice does not complete. SB 4.1.7"
+    },
+    {
+      "id": "Utathya",
+      "firstName": "Utathya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAngirasa",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Angiras and brother of Brihaspati; husband of Mamata and, by her, father of Dirghatamas. His own brother's quarrel with his wife in her pregnancy is what blinded that son in the womb. MBh 1.98"
+    },
+    {
+      "id": "Samvarta",
+      "firstName": "Samvarta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAngirasa",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Angiras and brother of Brihaspati; the naked, ash-smeared ascetic who acted as priest at Marutta's sacrifice when Brihaspati, serving Indra, refused it -- and made it so rich that Indra sent Agni to threaten him over it. MBh 14.4-10"
+    },
+    {
+      "id": "Mamata",
+      "firstName": "Mamata",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyAngirasa",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Wife of Utathya. Already carrying Dirghatamas when Brihaspati forced himself on her; the unborn child kicked the seed away, and Brihaspati cursed him to be born blind for it -- dirgha-tamas, 'long darkness'. MBh 1.98"
+    },
+    {
+      "id": "Kakshivan",
+      "firstName": "Kakshivan",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyAngirasa",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Dirghatamas by the maid Ushij, hence Auśija; a Rigvedic seer in his own right, with the hymns of RV 1.116-126 to his name, and remembered for winning a thousand cows and the king's daughters from Svanaya. RV 1.116-126, 1.18"
+    },
+    {
+      "id": "Mali",
+      "firstName": "Mali",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyRakshasa",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Third son of Sukesha, with Malyavan and Sumali; one of the three rakshasa brothers who held Lanka before Ravana. Killed by Vishnu in the war that drove his brothers south and left the city empty for Kubera. Ram 7.5-7.8",
+      "genAnchor": {
+        "relativeTo": "Sumali",
+        "offset": 0
+      }
+    },
+    {
+      "id": "Sumati",
+      "firstName": "Sumati",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Nriga, in the line of Manu's sons. SB 9.2.17"
+    },
+    {
+      "id": "Bhutajyoti",
+      "firstName": "Bhutajyoti",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Nriga. SB 9.2.17"
+    },
+    {
+      "id": "VasuN",
+      "firstName": "Vasu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Nriga; father of Pratika. Not Uparichara Vasu of Chedi, nor Vasu son of Jamadagni. SB 9.2.17"
+    },
+    {
+      "id": "Pratika",
+      "firstName": "Pratika",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Vasu in Nriga's line; father of Oghavan. SB 9.2.17"
+    },
+    {
+      "id": "Oghavan",
+      "firstName": "Oghavan",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Pratika, and the last of Nriga's line the Purana names. His daughter Oghavati married Sudarshana. SB 9.2.17-18"
+    },
+    {
+      "id": "Agnivesya",
+      "firstName": "Agnivesya",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Youngest son of Narishyanta, also called Kanina and Jatukarnya; the brahmin gotra of the Agnivesyayanas descends from him. SB 9.2.21-22"
+    },
+    {
+      "id": "Chitrasena_3",
+      "firstName": "Chitrasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Narishyanta. SB 9.2.20"
+    },
+    {
+      "id": "Midhvan",
+      "firstName": "Midhvan",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Narishyanta. SB 9.2.20"
+    },
+    {
+      "id": "Satyashrava",
+      "firstName": "Satyashrava",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Narishyanta. SB 9.2.21"
+    },
+    {
+      "id": "Urushrava",
+      "firstName": "Urushrava",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Narishyanta. SB 9.2.21"
+    },
+    {
+      "id": "Devadatta",
+      "firstName": "Devadatta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyIkshvaku",
+      "updatedAt": "2026-08-02T00:00:00.000Z",
+      "notes": "Son of Narishyanta, and father of Agnivesya. SB 9.2.21"
+    },
+    {
+      "id": "BhanuDharma",
+      "firstName": "Bhanu",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "One of ten daughters Daksha gave to Dharma (Yamaraja); her son Deva-rishabha fathered Indrasena. Not Bhanu, Krishna's son by Satyabhama. SB 6.6.2, 4-5"
+    },
+    {
+      "id": "Lamba",
+      "firstName": "Lamba",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Dharma; her son Vidyota generated every cloud in the sky. SB 6.6.4, 6"
+    },
+    {
+      "id": "Kakud",
+      "firstName": "Kakud",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Dharma; her son Sankata fathered Kikata. SB 6.6.4, 7"
+    },
+    {
+      "id": "YamiDharma",
+      "firstName": "Yami",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Dharma, one of Daksha's ten daughters given to him -- not Yami, Surya's own daughter and Yama's twin sister, the river Yamuna, already in this tree by a wholly different mother. Her son Svarga presides over the heaven that bears his name. SB 6.6.4, 7"
+    },
+    {
+      "id": "Vishva",
+      "firstName": "Vishva",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Dharma; mother of the Vishvadevas, the class of gods named for her. SB 6.6.4, 8"
+    },
+    {
+      "id": "Sadhya",
+      "firstName": "Sadhya",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Dharma; mother of the Sadhyas, the class of gods named for her, old enough that the Rigveda already speaks of them as the gods before the gods. SB 6.6.4, 8"
+    },
+    {
+      "id": "Marutvati",
+      "firstName": "Marutvati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Dharma; her sons Marutvan and Jayanta are named for the storm-gods and for victory. Not the Jayanta already in this tree as Indra's own son. SB 6.6.4, 9"
+    },
+    {
+      "id": "VasuDharma",
+      "firstName": "Vasu",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Dharma, and the most consequential of Daksha's sixty daughters: her eight sons are the Vasus -- Drona, Prana, Dhruva, Arka, Agni, Dosha, Vastu and Vibhavasu in the Bhagavata's own naming (SB 6.6.10-11). The Mahabharata gives the same eight gods a different name each when they are born a second time, cursed, as Ganga's sons -- Dhara, Dhruva, Soma, Aha, Anila, Anala, Pratyusha and Bhishma, already in this tree at Kurukshetra's era -- and only Dhruva's name survives both tellings. Not Vasu, Jamadagni's son. SB 6.6.4, 10-11",
+      "divine": true
+    },
+    {
+      "id": "Muhurta",
+      "firstName": "Muhurta",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Dharma; mother of the Mauhurtikas, the minor gods who preside over the day's auspicious moments. SB 6.6.4, 9"
+    },
+    {
+      "id": "Sankalpa",
+      "firstName": "Sankalpa",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Dharma; her son, also named Sankalpa, is will and intention itself made a person. SB 6.6.4, 9"
+    },
+    {
+      "id": "Patangi",
+      "firstName": "Patangi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "One of Kashyapa's seventeen wives, a daughter of Daksha; mother of every bird. SB 6.6.2, 21-22"
+    },
+    {
+      "id": "Yamini",
+      "firstName": "Yamini",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Kashyapa, a daughter of Daksha; mother of the locusts. SB 6.6.21-22"
+    },
+    {
+      "id": "Kashtha",
+      "firstName": "Kashtha",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Kashyapa, a daughter of Daksha; mother of every hoofed animal whose hoof does not split, the horse foremost among them. SB 6.6.29-31"
+    },
+    {
+      "id": "SaramaKashyap",
+      "firstName": "Sarama",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Kashyapa, a daughter of Daksha; mother of the tigers, lions and other predatory beasts. Not Sarama the rakshasi who comforted Sita in captivity, already in this tree as Vibhishana's wife. SB 6.6.24-26"
+    },
+    {
+      "id": "Timi",
+      "firstName": "Timi",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Kashyapa, a daughter of Daksha; mother of every creature that lives in water. SB 6.6.24-26"
+    },
+    {
+      "id": "Svadha",
+      "firstName": "Svadha",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Angiras, a daughter of Daksha; mother of the Pitrs, the ancestors to whom every shraddha offering is made. SB 6.6.2, 19"
+    },
+    {
+      "id": "SatiAngirasa",
+      "firstName": "Sati",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of Angiras, a daughter of Daksha, and mother by him of the Atharvangirasa -- the fourth Veda, in verse form. Not the Sati of the Shiva story, another daughter of Daksha who shares only the name: a different wife, a different husband, and not in this tree, by the same decision that leaves Shiva out of it. SB 6.6.2, 19"
+    },
+    {
+      "id": "KrishashvaRishi",
+      "firstName": "Krishashva",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": null,
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "A husband of two of Daksha's daughters, Archis and Dhishana, by whom he fathered the comet Dhumaketu and four more sons. Not Krishashva the Ikshvaku king who came before Senajit, already in this tree several eras later -- the archive's own namesake table already lists them as distinct men. SB 6.6.2, 20",
+      "genAnchor": {
+        "relativeTo": "Kashyap",
+        "offset": 0
+      }
+    },
+    {
+      "id": "ArcisKrishashva",
+      "firstName": "Archis",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of the sage Krishashva, a daughter of Daksha; mother of the comet Dhumaketu. Not Archi, wife of Prithu -- a different woman the same word, arci ('flame'), also names. SB 6.6.2, 20"
+    },
+    {
+      "id": "Dhishana",
+      "firstName": "Dhishana",
+      "lastName": "",
+      "gender": "female",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Wife of the sage Krishashva, a daughter of Daksha; mother of four sons -- Vedashira, Devala, Vayuna and Manu. Krishashva's first wife, Archis, mothered Dhumaketu alone; the text (SB 6.6.20) attributes each set of children to one wife, not both. SB 6.6.2, 20"
+    },
+    {
+      "id": "DevaRishabha",
+      "firstName": "Deva-rishabha",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Bhanu and Dharma; father of Indrasena. SB 6.6.5"
+    },
+    {
+      "id": "Vidyota",
+      "firstName": "Vidyota",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Lamba and Dharma; generated every cloud in the sky. SB 6.6.6"
+    },
+    {
+      "id": "Sankata",
+      "firstName": "Sankata",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Kakud and Dharma; father of Kikata. SB 6.6.6"
+    },
+    {
+      "id": "Svarga",
+      "firstName": "Svarga",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Yami and Dharma; presides over the heaven that bears his name. SB 6.6.6"
+    },
+    {
+      "id": "Arthasiddhi",
+      "firstName": "Arthasiddhi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Sadhya and Dharma, named among the Sadhyas; the rest of that class is left ungrouped, as Vishvadevas is for Vishva. SB 6.6.7"
+    },
+    {
+      "id": "Marutvan",
+      "firstName": "Marutvan",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Marutvati and Dharma, named for the storm-gods; the Bhagavata calls him and his brother Jayanta expansions of Vasudeva himself. SB 6.6.9"
+    },
+    {
+      "id": "JayantaMarutvati",
+      "firstName": "Jayanta",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Marutvati and Dharma, named for victory; the Bhagavata calls him and his brother Marutvan expansions of Vasudeva himself. Not the Jayanta already in this tree as Indra's own son. SB 6.6.9"
+    },
+    {
+      "id": "SankalpaS",
+      "firstName": "Sankalpa",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Sankalpa and Dharma, sharing his mother's name: will and intention itself made a person twice over. SB 6.6.9"
+    },
+    {
+      "id": "Indrasena",
+      "firstName": "Indrasena",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Deva-rishabha, in Bhanu's line from Dharma. SB 6.6.5"
+    },
+    {
+      "id": "Kikata",
+      "firstName": "Kikata",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Sankata, in Kakud's line from Dharma; his own descendants are called the Durgas, guardians of fortresses (durga is the word for fort) -- a class left ungrouped rather than named individually, and no relation to the goddess who shares the word. SB 6.6.6"
+    },
+    {
+      "id": "Nandi",
+      "firstName": "Nandi",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Svarga, in Yami's line from Dharma. Not Nandi, Shiva's bull and gatekeeper -- an unrelated figure sharing only the name. SB 6.6.6"
+    },
+    {
+      "id": "Dhumaketu",
+      "firstName": "Dhumaketu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Krishashva and Archis; the comet, an ill omen given a father and a name of his own. SB 6.6.20"
+    },
+    {
+      "id": "Vedashira",
+      "firstName": "Vedashira",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Krishashva and Dhishana. SB 6.6.20"
+    },
+    {
+      "id": "Devala",
+      "firstName": "Devala",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Krishashva and Dhishana. Not the sage Devala of the Mahabharata, a much later figure sharing only the name. SB 6.6.20"
+    },
+    {
+      "id": "Vayuna",
+      "firstName": "Vayuna",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Krishashva and Dhishana. SB 6.6.20"
+    },
+    {
+      "id": "ManuKrishashva",
+      "firstName": "Manu",
+      "lastName": "",
+      "gender": "male",
+      "alive": true,
+      "birthFamilyId": "familyDakshakanya",
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Son of Krishashva and Dhishana, sharing a common name ('the thinking one') rather than any connection to Svayambhuva or Vaivasvata Manu, both already in this tree. SB 6.6.20"
     }
   ],
   "unions": [
@@ -13513,7 +14186,7 @@
       "adoptedChildren": [],
       "familyId": null,
       "status": "married",
-      "updatedAt": "2026-07-20T00:00:00.000Z"
+      "updatedAt": "2026-08-02T00:00:00.000Z"
     },
     {
       "id": "u_vrishaparva",
@@ -13788,12 +14461,14 @@
         "Angiras"
       ],
       "children": [
-        "Brihaspati"
+        "Brihaspati",
+        "Utathya",
+        "Samvarta"
       ],
       "adoptedChildren": [],
       "familyId": "familyAngirasa",
       "status": "married",
-      "updatedAt": "2026-07-22T00:00:00.000Z"
+      "updatedAt": "2026-08-02T00:00:00.000Z"
     },
     {
       "id": "u_brihaspati",
@@ -14452,12 +15127,13 @@
       ],
       "children": [
         "Sumali",
-        "Malyavan"
+        "Malyavan",
+        "Mali"
       ],
       "adoptedChildren": [],
       "familyId": "familyRakshasa",
       "status": "married",
-      "updatedAt": "2026-07-22T00:00:00.000Z"
+      "updatedAt": "2026-08-02T00:00:00.000Z"
     },
     {
       "id": "r_u_vibhishana",
@@ -14509,12 +15185,14 @@
         "Sanatkumara",
         "KratuRishi",
         "Pulaha",
-        "Atharva"
+        "Atharva",
+        "ManuSvayambhuva",
+        "Shatarupa"
       ],
       "adoptedChildren": [],
       "familyId": "familyBrahma",
       "status": "married",
-      "updatedAt": "2026-08-01T00:00:00.000Z"
+      "updatedAt": "2026-08-02T00:00:00.000Z"
     },
     {
       "id": "u_marichi",
@@ -14532,7 +15210,8 @@
     {
       "id": "u_daksha",
       "partners": [
-        "Daksha"
+        "Daksha",
+        "Prasuti"
       ],
       "children": [
         "Aditi",
@@ -14576,12 +15255,31 @@
         "Krodhavasha",
         "Ira",
         "Khasa",
-        "Rati"
+        "BhanuDharma",
+        "Lamba",
+        "Kakud",
+        "YamiDharma",
+        "Vishva",
+        "Sadhya",
+        "Marutvati",
+        "VasuDharma",
+        "Muhurta",
+        "Sankalpa",
+        "Patangi",
+        "Yamini",
+        "Kashtha",
+        "SaramaKashyap",
+        "Timi",
+        "Svadha",
+        "SatiAngirasa",
+        "ArcisKrishashva",
+        "Dhishana"
       ],
       "adoptedChildren": [],
       "familyId": "familyBrahma",
       "status": "married",
-      "updatedAt": "2026-07-22T00:00:00.000Z"
+      "updatedAt": "2026-08-02T02:00:00.000Z",
+      "notes": "Prasuti confirmed as mother of 41 of these children (all but Rati, whose parentage stays unconfirmed -- see u_daksha_rati) via SB 6.6 (direct verse lookup) and, for Danayus and Khasa, the Vishnu Purana's naming of Panchajani -- the same figure this tree treats as Prasuti -- as their mother. Formerly split across this union (mother unconfirmed) and a separate childless u_daksha_prasuti; merged into one real union rather than left duplicated. SB 4.1.2's sixteen daughters by Prasuti and SB 6.6's sixty are, under this tree's single-Daksha reading, the same event told two ways, not two broods."
     },
     {
       "id": "u_kashyap_aditi",
@@ -20137,6 +20835,490 @@
       "status": "married",
       "notes": "Wikipedia's Pulaha article gives this (via Vishnu Purana 1.10, Pulaha and Kshama's sons Kardama, Urvarivat, Sahishnu); the tree adopts it on request. Distinct from the tradition that has Kardama arise directly from Brahma's own shadow (SB 3.12); the Bhagavata's own genealogy is not overridden, just not the one followed here.",
       "updatedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "id": "u_varaha_bhumi",
+      "partners": [
+        "Varaha",
+        "Bhumi"
+      ],
+      "children": [
+        "Narakasura"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyBhumi",
+      "status": "married",
+      "notes": "Varaha fathered Naraka on the Earth he had just rescued. SB 10.59.2-3; the link was catalogued in the old Part VII.1 and left undrawn until now.",
+      "updatedAt": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "id": "u_bhumi_mangala",
+      "partners": [
+        "Bhumi"
+      ],
+      "children": [
+        "Mangala"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyBhumi",
+      "status": "married",
+      "notes": "One partner only: the father the Shaiva sources name is Shiva, who is deliberately not in this tree.",
+      "updatedAt": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "id": "u_svayambhuva",
+      "partners": [
+        "ManuSvayambhuva",
+        "Shatarupa"
+      ],
+      "children": [
+        "Akuti",
+        "Prasuti",
+        "Devahuti"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySvayambhuva",
+      "status": "married",
+      "notes": "SB 3.12.56, 4.1. Devahuti was already in this tree as Kardama's wife with no parents at all; this is the union that gives her one.",
+      "updatedAt": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "id": "u_ruchi_akuti",
+      "partners": [
+        "Ruchi",
+        "Akuti"
+      ],
+      "children": [
+        "Yajna",
+        "Dakshina"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familySvayambhuva",
+      "status": "married",
+      "notes": "SB 4.1.1-7.",
+      "updatedAt": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "id": "u_yajna_dakshina",
+      "partners": [
+        "Yajna",
+        "Dakshina"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familySvayambhuva",
+      "status": "married",
+      "notes": "Twins, and afterwards husband and wife; their twelve sons were the Tushita devas of the Svayambhuva age. SB 4.1.7-8",
+      "updatedAt": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "id": "u_utathya_mamata",
+      "partners": [
+        "Utathya",
+        "Mamata"
+      ],
+      "children": [
+        "Dirghatamas"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAngirasa",
+      "status": "married",
+      "notes": "MBh 1.98. Dirghatamas stood in this tree with no ancestry at all until now; giving him one also gives Karna's whole foster house, through Anga, a line back to Angiras.",
+      "updatedAt": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "id": "u_dirghatamas_kakshivan",
+      "partners": [
+        "Dirghatamas"
+      ],
+      "children": [
+        "Kakshivan"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyAngirasa",
+      "status": "married",
+      "notes": "By the maid Ushij, who is not carried here as a person. RV 1.18.1",
+      "updatedAt": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "id": "u_nriga",
+      "partners": [
+        "Nriga"
+      ],
+      "children": [
+        "Sumati",
+        "Bhutajyoti",
+        "VasuN"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "notes": "SB 9.2.17.",
+      "updatedAt": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "id": "u_vasuN",
+      "partners": [
+        "VasuN"
+      ],
+      "children": [
+        "Pratika"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "notes": "SB 9.2.17.",
+      "updatedAt": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "id": "u_pratika",
+      "partners": [
+        "Pratika"
+      ],
+      "children": [
+        "Oghavan"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "notes": "SB 9.2.17.",
+      "updatedAt": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "id": "u_narishyanta",
+      "partners": [
+        "Narishyanta"
+      ],
+      "children": [
+        "Chitrasena_3",
+        "Midhvan",
+        "Satyashrava",
+        "Urushrava",
+        "Devadatta"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "notes": "Ten sons at SB 9.2.20-21; the five carried here are those the Purana follows any further.",
+      "updatedAt": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "id": "u_devadatta",
+      "partners": [
+        "Devadatta"
+      ],
+      "children": [
+        "Agnivesya"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyIkshvaku",
+      "status": "married",
+      "notes": "SB 9.2.21-22.",
+      "updatedAt": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "id": "u_yama_BhanuDharma",
+      "partners": [
+        "Yama",
+        "BhanuDharma"
+      ],
+      "children": [
+        "DevaRishabha"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T02:00:00.000Z"
+    },
+    {
+      "id": "u_yama_Lamba",
+      "partners": [
+        "Yama",
+        "Lamba"
+      ],
+      "children": [
+        "Vidyota"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T02:00:00.000Z"
+    },
+    {
+      "id": "u_yama_Kakud",
+      "partners": [
+        "Yama",
+        "Kakud"
+      ],
+      "children": [
+        "Sankata"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T02:00:00.000Z"
+    },
+    {
+      "id": "u_yama_YamiDharma",
+      "partners": [
+        "Yama",
+        "YamiDharma"
+      ],
+      "children": [
+        "Svarga"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T02:00:00.000Z"
+    },
+    {
+      "id": "u_yama_Vishva",
+      "partners": [
+        "Yama",
+        "Vishva"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T01:00:00.000Z"
+    },
+    {
+      "id": "u_yama_Sadhya",
+      "partners": [
+        "Yama",
+        "Sadhya"
+      ],
+      "children": [
+        "Arthasiddhi"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T02:00:00.000Z"
+    },
+    {
+      "id": "u_yama_Marutvati",
+      "partners": [
+        "Yama",
+        "Marutvati"
+      ],
+      "children": [
+        "Marutvan",
+        "JayantaMarutvati"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T02:00:00.000Z"
+    },
+    {
+      "id": "u_yama_VasuDharma",
+      "partners": [
+        "Yama",
+        "VasuDharma"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T01:00:00.000Z"
+    },
+    {
+      "id": "u_yama_Muhurta",
+      "partners": [
+        "Yama",
+        "Muhurta"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T01:00:00.000Z"
+    },
+    {
+      "id": "u_yama_Sankalpa",
+      "partners": [
+        "Yama",
+        "Sankalpa"
+      ],
+      "children": [
+        "SankalpaS"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T02:00:00.000Z"
+    },
+    {
+      "id": "u_kashyap_Patangi",
+      "partners": [
+        "Kashyap",
+        "Patangi"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T01:00:00.000Z"
+    },
+    {
+      "id": "u_kashyap_Yamini",
+      "partners": [
+        "Kashyap",
+        "Yamini"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T01:00:00.000Z"
+    },
+    {
+      "id": "u_kashyap_Kashtha",
+      "partners": [
+        "Kashyap",
+        "Kashtha"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T01:00:00.000Z"
+    },
+    {
+      "id": "u_kashyap_SaramaKashyap",
+      "partners": [
+        "Kashyap",
+        "SaramaKashyap"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T01:00:00.000Z"
+    },
+    {
+      "id": "u_kashyap_Timi",
+      "partners": [
+        "Kashyap",
+        "Timi"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T01:00:00.000Z"
+    },
+    {
+      "id": "u_angiras_svadha",
+      "partners": [
+        "Angiras",
+        "Svadha"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T01:00:00.000Z"
+    },
+    {
+      "id": "u_angiras_sati",
+      "partners": [
+        "Angiras",
+        "SatiAngirasa"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T01:00:00.000Z"
+    },
+    {
+      "id": "u_krishashvaR_arcis",
+      "partners": [
+        "KrishashvaRishi",
+        "ArcisKrishashva"
+      ],
+      "children": [
+        "Dhumaketu"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T01:00:00.000Z"
+    },
+    {
+      "id": "u_krishashvaR_dhishana",
+      "partners": [
+        "KrishashvaRishi",
+        "Dhishana"
+      ],
+      "children": [
+        "Vedashira",
+        "Devala",
+        "Vayuna",
+        "ManuKrishashva"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "updatedAt": "2026-08-02T01:00:00.000Z"
+    },
+    {
+      "id": "u_daksha_rati",
+      "partners": [
+        "Daksha"
+      ],
+      "children": [],
+      "adoptedChildren": [],
+      "familyId": "familyBrahma",
+      "status": "married",
+      "notes": "Rati stays on her own union, mother unconfirmed: most sources call her Daksha's daughter without naming which wife, and at least one tradition (see her own note) has her born of Daksha's own perspiration, no mother at all. Not merged into u_daksha with her sisters, whose mother is now confirmed as Prasuti.",
+      "updatedAt": "2026-08-02T02:00:00.000Z"
+    },
+    {
+      "id": "u_devarishabha",
+      "partners": [
+        "DevaRishabha"
+      ],
+      "children": [
+        "Indrasena"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "notes": "SB 6.6.5.",
+      "updatedAt": "2026-08-02T02:00:00.000Z"
+    },
+    {
+      "id": "u_sankata",
+      "partners": [
+        "Sankata"
+      ],
+      "children": [
+        "Kikata"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "notes": "SB 6.6.6.",
+      "updatedAt": "2026-08-02T02:00:00.000Z"
+    },
+    {
+      "id": "u_svarga",
+      "partners": [
+        "Svarga"
+      ],
+      "children": [
+        "Nandi"
+      ],
+      "adoptedChildren": [],
+      "familyId": "familyDakshakanya",
+      "status": "married",
+      "notes": "SB 6.6.6.",
+      "updatedAt": "2026-08-02T02:00:00.000Z"
     }
   ]
 }

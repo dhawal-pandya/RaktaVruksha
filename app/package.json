@@ -12,6 +12,8 @@
     "rename-ids": "tsx scripts/rename-ids.ts",
     "add-lineages": "tsx scripts/add-lineages.ts",
     "add-more-lineages": "tsx scripts/add-more-lineages.ts",
+    "add-primordial-lines": "tsx scripts/add-primordial-lines.ts",
+    "add-daksha-daughters": "tsx scripts/add-daksha-daughters.ts",
     "reanchor-eras": "tsx scripts/reanchor-eras.ts",
     "deploy": "bash ../scripts/deploy-gh-pages.sh"
   },
