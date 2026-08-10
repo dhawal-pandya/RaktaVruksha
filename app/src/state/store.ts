@@ -12,6 +12,12 @@ import { buildDataset } from "../core/dataset";
 import { largestFamily, primaryFamilyOf } from "../core/family2d";
 import { buildGraph } from "../core/graph";
 import { computeLayout } from "../core/layout";
+import {
+  LAYOUT_FILE,
+  LAYOUT_TUNING,
+  loadLayoutTuning,
+  serializeLayoutTuning,
+} from "../core/layoutTuning";
 import { parseFamilyData, validateData } from "../core/validate";
 import { mergeData } from "../core/merge";
 import { serialize } from "../core/exporter";
@@ -156,6 +162,8 @@ interface AppState {
   dataUpdatedAt: number | null;
   /** True when the hidden edit key has unlocked writing/import/export. */
   editUnlocked: boolean;
+  /** Write-through state for layout.json, shown in the Layout Lab's header. */
+  layoutSave: "idle" | "saving" | "failed";
 
   form: { mode: FormMode; anchorId: string | null } | null;
   formError: string | null;
@@ -175,9 +183,11 @@ interface AppState {
   focusPerson: (id: string) => void;
   showPersonIn3D: (id: string) => void;
   fitView: () => void;
-  /** Re-run the 3D layout against the current tuning, leaving the camera alone.
-   *  Dev only: the Layout Lab and layoutTuning.ts's hot-swap both land here. */
+  /** Re-run the 3D layout against the current tuning, leaving the camera alone. */
   relayout: () => void;
+  /** Re-run the layout AND write the dials back to layout.json. The Layout Lab's
+   *  only mutator; a no-op on anything but the local dev server. */
+  commitLayoutTuning: () => void;
   clearFocus: () => void;
   setLens: (familyId: string | null) => void;
   isolatePerson: (id: string) => void;
@@ -283,6 +293,20 @@ export const useStore = create<AppState>((set, get) => {
     if (get().editUnlocked) scheduleDevWrite(raw);
   };
 
+  // The same round trip for layout.json. Debounced harder than the dataset write:
+  // a slider drag emits a change per pixel, and each relayout is a full simulation.
+  let layoutWriteTimer: ReturnType<typeof setTimeout> | undefined;
+  const scheduleLayoutWrite = () => {
+    if (layoutWriteTimer) clearTimeout(layoutWriteTimer);
+    layoutWriteTimer = setTimeout(async () => {
+      const ok = await postDataFile(
+        serializeLayoutTuning(LAYOUT_TUNING),
+        LAYOUT_FILE,
+      );
+      set({ layoutSave: ok ? "idle" : "failed" });
+    }, 700);
+  };
+
   return {
     phase: "loading",
     loadError: null,
@@ -302,6 +326,7 @@ export const useStore = create<AppState>((set, get) => {
     dirty: false,
     dataUpdatedAt: null,
     editUnlocked: computeEditUnlocked(),
+    layoutSave: "idle",
     confirmDelete: null,
     mergeKeepId: null,
     familyEditorOpen: false,
@@ -351,6 +376,10 @@ export const useStore = create<AppState>((set, get) => {
         if (!parsed.raw)
           throw new Error(parsed.errors[0] ?? "invalid data file");
         const raw = parsed.raw;
+        // Before deriveAll, which runs the layout: the dials have to be in place
+        // by the time the first simulation ticks, or the tree settles once at the
+        // defaults and then visibly jumps when the real values land.
+        await loadLayoutTuning(base);
         const derived = deriveAll(raw);
         const requestedFamily = params.get(FAMILY_PARAM);
         const sharedFamily =
@@ -509,6 +538,14 @@ export const useStore = create<AppState>((set, get) => {
     relayout: () => {
       const graph = get().graph;
       if (graph) set({ layout: computeLayout(graph) });
+    },
+
+    commitLayoutTuning: () => {
+      get().relayout();
+      if (get().editUnlocked) {
+        set({ layoutSave: "saving" });
+        scheduleLayoutWrite();
+      }
     },
 
     setLens: (familyId) => {

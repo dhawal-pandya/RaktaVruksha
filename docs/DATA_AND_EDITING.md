@@ -119,6 +119,23 @@ Once unlocked, everything happens on the graph:
   known ids update only if newer, nothing is ever deleted, and a merge report
   shows exactly what changed.
 
+## Tuning the 3D layout
+
+`app/public/layout.json` holds every dial that shapes the 3D tree's spread —
+repulsion and how far up and down the generations it carries, how hard children
+are pulled under their own parents, family clustering, link lengths, collision
+radii, tick counts. It loads at boot exactly like a dataset, so the deployed site
+reads whatever that file says and **changing the layout needs no rebuild**.
+
+Locally with editing unlocked, a **⚙ Layout** button opens the Layout Lab: a
+slider per dial that re-runs the layout live under the camera where it stands and
+then writes `layout.json` back through the same dev-only endpoint the datasets
+use. Tune it, then commit the JSON.
+
+Only known keys holding finite numbers are read, so a hand-edited typo falls back
+to that one dial's default rather than feeding a NaN into the simulation. The
+defaults are mirrored in `app/src/core/layoutTuning.ts`; keep the two in step.
+
 ### Deploy (GitHub Pages)
 
 ```bash

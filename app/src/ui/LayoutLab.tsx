@@ -1,14 +1,20 @@
 import { useEffect, useRef, useState } from 'react';
-import { LAYOUT_TUNING, type LayoutTuning } from '../core/layoutTuning';
+import {
+  DEFAULT_LAYOUT_TUNING,
+  LAYOUT_TUNING,
+  type LayoutTuning,
+} from '../core/layoutTuning';
 import { useStore } from '../state/store';
 
 /**
- * Dev-only control surface for the 3D spread. Every slider writes straight into
- * LAYOUT_TUNING and re-runs the layout, so the tree re-seats under the camera
- * where it stands. "Copy" prints the current values as source to paste back into
- * layoutTuning.ts once a setting is worth keeping.
+ * Control surface for the 3D spread. Every slider writes straight into
+ * LAYOUT_TUNING, re-runs the layout so the tree re-seats under the camera where it
+ * stands, and — after a pause — writes public/layout.json back through the dev
+ * server, exactly as editing a person writes family-data.json. Tune it locally,
+ * commit the JSON, deploy: no rebuild, no code change.
  *
- * Rendered only under import.meta.env.DEV — it is absent from the deployed build.
+ * Gated on editUnlocked, which is itself DEV-only, so this is invisible without
+ * ?edit=<key> on a local server and absent from the deployed bundle entirely.
  */
 
 type Knob = { key: keyof LayoutTuning; label: string; min: number; max: number; step: number };
@@ -25,7 +31,7 @@ const GROUPS: { title: string; hint: string; knobs: Knob[] }[] = [
   },
   {
     title: 'Descent',
-    hint: 'Keeps children under their own parents, fanned out on a ring.',
+    hint: 'Keeps children under their own parents, fanned out on a disc among their siblings.',
     knobs: [
       { key: 'descentPull', label: 'pull', min: 0, max: 1, step: 0.01 },
       { key: 'siblingSpacing', label: 'sibling gap', min: 0, max: 200, step: 2 },
@@ -70,19 +76,13 @@ const GROUPS: { title: string; hint: string; knobs: Knob[] }[] = [
   },
 ];
 
-const DEFAULTS: LayoutTuning = { ...LAYOUT_TUNING };
-
-const asSource = (t: LayoutTuning): string =>
-  `export const LAYOUT_TUNING: LayoutTuning = {\n${(Object.keys(t) as (keyof LayoutTuning)[])
-    .map(k => `  ${k}: ${t[k]},`)
-    .join('\n')}\n};`;
-
 export default function LayoutLab() {
-  const relayout = useStore(s => s.relayout);
+  const commitLayoutTuning = useStore(s => s.commitLayoutTuning);
+  const editUnlocked = useStore(s => s.editUnlocked);
+  const layoutSave = useStore(s => s.layoutSave);
   const viewMode = useStore(s => s.viewMode);
   const [open, setOpen] = useState(false);
   const [, bump] = useState(0);
-  const [copied, setCopied] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   // A relayout on the deep lineages costs a couple of hundred milliseconds, which
@@ -90,25 +90,18 @@ export default function LayoutLab() {
   const schedule = () => {
     bump(v => v + 1);
     if (timerRef.current) clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(relayout, 90);
+    timerRef.current = setTimeout(commitLayoutTuning, 90);
   };
-
-  // Hot-swapping layoutTuning.ts changes the values underneath us; re-render so the
-  // sliders show what is actually in effect.
-  useEffect(() => {
-    const onRelayout = () => bump(v => v + 1);
-    window.addEventListener('raktavruksha:relayout', onRelayout);
-    return () => window.removeEventListener('raktavruksha:relayout', onRelayout);
-  }, []);
 
   useEffect(() => () => clearTimeout(timerRef.current), []);
 
-  // The dials only shape the 3D layout; the 2D view uses the tidy-tree packer.
-  if (viewMode !== '3d') return null;
+  // Editing the layout is a local, unlocked-only job, and the dials only shape the
+  // 3D view — 2D uses the tidy-tree packer, which has none of them.
+  if (!editUnlocked || viewMode !== '3d') return null;
 
   if (!open)
     return (
-      <button className="lab-toggle btn" onClick={() => setOpen(true)} title="3D layout controls (dev only)">
+      <button className="lab-toggle btn" onClick={() => setOpen(true)} title="3D layout dials — writes public/layout.json">
         ⚙ Layout
       </button>
     );
@@ -117,7 +110,9 @@ export default function LayoutLab() {
     <aside className="layout-lab panel">
       <header className="lab-head">
         <strong>Layout Lab</strong>
-        <span className="tag">dev only</span>
+        <span className={`tag ${layoutSave === 'failed' ? 'lab-failed' : ''}`}>
+          {layoutSave === 'saving' ? 'saving…' : layoutSave === 'failed' ? 'write failed' : 'layout.json'}
+        </span>
         <button className="btn btn-icon" onClick={() => setOpen(false)} aria-label="Close">
           ×
         </button>
@@ -149,24 +144,16 @@ export default function LayoutLab() {
       </div>
 
       <footer className="lab-actions">
+        <span className="lab-note">saves to public/layout.json</span>
         <button
           className="btn btn-subtle"
           onClick={() => {
-            Object.assign(LAYOUT_TUNING, DEFAULTS);
+            Object.assign(LAYOUT_TUNING, DEFAULT_LAYOUT_TUNING);
             schedule();
           }}
+          title="Back to the built-in defaults, and save those"
         >
           Reset
-        </button>
-        <button
-          className="btn btn-primary"
-          onClick={() => {
-            void navigator.clipboard.writeText(asSource(LAYOUT_TUNING));
-            setCopied(true);
-            setTimeout(() => setCopied(false), 1400);
-          }}
-        >
-          {copied ? 'Copied' : 'Copy source'}
         </button>
       </footer>
     </aside>

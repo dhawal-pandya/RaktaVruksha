@@ -11,6 +11,8 @@ const WRITABLE = new Set([
   "family-data.mahabharat.json",
   "family-data.ramayan.json",
   "family-data.hiranyagarbha.json",
+  // The 3D layout dials, driven from the Layout Lab.
+  "layout.json",
 ]);
 
 /**
@@ -62,9 +64,16 @@ export default defineConfig({
   base: "./",
   plugins: [react(), writeDataPlugin()],
   server: {
-    // Don't reload the page when the app writes the data file back to disk.
+    // Don't reload the page when the app writes a file back to disk. Without
+    // this, every debounced write from a slider drag would bounce the page
+    // mid-drag. Hand-editing either file still needs a manual refresh.
     watch: {
-      ignored: ["**/node_modules/**", "**/.git/**", "**/public/family-data*.json"],
+      ignored: [
+        "**/node_modules/**",
+        "**/.git/**",
+        "**/public/family-data*.json",
+        "**/public/layout.json",
+      ],
     },
   },
 });

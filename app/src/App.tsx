@@ -17,7 +17,6 @@ import {
 import Guide from './ui/Guide';
 import Yantra from './ui/Yantra';
 import LayoutLab from './ui/LayoutLab';
-import { RELAYOUT_EVENT } from './core/layoutTuning';
 import { useStore } from './state/store';
 
 const AUTHOR_ID = 'Dhawal';
@@ -94,15 +93,6 @@ export default function App() {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
-  // Editing a value in layoutTuning.ts hot-swaps it and fires this: re-run the
-  // layout so the tree re-seats in place, camera untouched. Dev only.
-  useEffect(() => {
-    if (!import.meta.env.DEV) return;
-    const onRelayout = () => useStore.getState().relayout();
-    window.addEventListener(RELAYOUT_EVENT, onRelayout);
-    return () => window.removeEventListener(RELAYOUT_EVENT, onRelayout);
-  }, []);
-
   if (phase === 'loading') {
     return (
       <div className="boot-screen">
@@ -140,6 +130,10 @@ export default function App() {
       <Guide />
       <UpdatedStamp />
       <Footer />
+      {/* Two gates on purpose. The component gates itself on editUnlocked, so it
+          stays hidden until ?edit=<key> unlocks it; this one is a build-time
+          constant, so the Lab is dropped from the deployed bundle rather than
+          merely never rendered there. */}
       {import.meta.env.DEV && <LayoutLab />}
     </>
   );

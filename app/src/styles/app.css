@@ -910,10 +910,18 @@ input[type='color'] {
 }
 .lab-actions {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
   gap: var(--sp-2);
   border-top: 1px solid var(--border);
   padding-top: var(--sp-2);
+}
+.lab-note {
+  font-size: 11px;
+  color: var(--text-faint);
+}
+.lab-failed {
+  color: var(--danger);
 }
 
 /* ---------- boot ---------- */

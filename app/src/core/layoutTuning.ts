@@ -1,10 +1,14 @@
 /**
  * Every dial that shapes the 3D tree's spread, in one place.
  *
- * `computeLayout` reads these at call time and the object is mutated in place by
- * the dev-only Layout Lab, so a change here — by editing this file (Vite hot-swaps
- * it and the tree re-seats without a reload, camera intact) or by dragging a
- * slider — takes effect on the next layout without a rebuild.
+ * The values live in public/layout.json, loaded at boot exactly the way the family
+ * datasets are, so tuning is data rather than code: the deployed site reads whatever
+ * that file says, and no rebuild is involved in changing it. Locally, with editing
+ * unlocked, the Layout Lab drags the dials and writes the file straight back — the
+ * same round trip family-data.json makes.
+ *
+ * `computeLayout` reads LAYOUT_TUNING at call time and the object is only ever
+ * mutated in place, which is what lets a slider take effect on the next layout.
  *
  * What is NOT here, because it is structural rather than a taste knob: Y is always
  * locked to generation, and a couple is always one rigid body. See layout.ts.
@@ -34,10 +38,11 @@ export interface LayoutTuning {
    */
   descentPull: number;
   /**
-   * Gap between adjacent siblings on the ring they fan out on beneath their parent.
-   * One child sits dead centre; N children spread on a ring sized so neighbours land
-   * this far apart. Collide still enforces its own minimum, so values below
-   * 2 × personCollide have no visible effect.
+   * Gap between neighbouring siblings on the disc they fan out over beneath their
+   * parent. An only child sits dead centre; N children pack a disc whose radius
+   * grows as √N, so a brood of a hundred spreads without being flung into orbit.
+   * Collide still enforces its own minimum, so values below 2 × personCollide have
+   * no visible effect.
    */
   siblingSpacing: number;
   /** Pull toward the family's own cluster centre. */
@@ -69,18 +74,26 @@ export interface LayoutTuning {
   largeGraphNodes: number;
 }
 
-export const LAYOUT_TUNING: LayoutTuning = {
+/** The file the tuning is read from and written back to, beside the datasets. */
+export const LAYOUT_FILE = "layout.json";
+
+/**
+ * Fallback values, used only when layout.json is missing or unreadable — the tree
+ * still draws rather than failing to boot. public/layout.json is the source of
+ * truth and should be kept in step with these.
+ */
+export const DEFAULT_LAYOUT_TUNING: LayoutTuning = {
   chargeStrength: -400,
-  chargeDistanceMax: 360,
-  chargeLayerBand: 0,
-  descentPull: 0.35,
+  chargeDistanceMax: 640,
+  chargeLayerBand: 2,
+  descentPull: 0.72,
   siblingSpacing: 42,
-  familyPull: 0.05,
+  familyPull: 0.025,
   familyRingScale: 26,
   familyRingBase: 60,
   partnerDistance: 20,
   partnerStrength: 1,
-  childDistance: 48,
+  childDistance: 26,
   childStrength: 0.25,
   personCollide: 16,
   unionCollide: 8,
@@ -91,21 +104,49 @@ export const LAYOUT_TUNING: LayoutTuning = {
   largeGraphNodes: 2500,
 };
 
-/** Event the store listens for to recompute the layout in place. Dev only. */
-export const RELAYOUT_EVENT = "raktavruksha:relayout";
+export const LAYOUT_TUNING_KEYS = Object.keys(
+  DEFAULT_LAYOUT_TUNING,
+) as (keyof LayoutTuning)[];
 
-export const requestRelayout = (): void => {
-  if (typeof window !== "undefined")
-    window.dispatchEvent(new CustomEvent(RELAYOUT_EVENT));
+/**
+ * The live tuning. Mutated in place — never reassigned — because layout.ts and the
+ * Layout Lab both hold this exact object, and reading it at call time is what lets
+ * a slider or a reloaded file take effect on the next layout.
+ */
+export const LAYOUT_TUNING: LayoutTuning = { ...DEFAULT_LAYOUT_TUNING };
+
+/** Exactly the shape written to layout.json: the known keys, in a stable order. */
+export const serializeLayoutTuning = (t: LayoutTuning): string =>
+  JSON.stringify(
+    Object.fromEntries(LAYOUT_TUNING_KEYS.map((k) => [k, t[k]])),
+    null,
+    2,
+  ) + "\n";
+
+/**
+ * Read layout.json into LAYOUT_TUNING. Only known keys holding finite numbers are
+ * taken, so a hand-edited file with a typo, a stray key or a string degrades to the
+ * default for that one dial instead of poisoning the simulation with NaN — a single
+ * NaN would propagate through the forces and scatter every node to nowhere.
+ *
+ * Never throws: a missing or broken file leaves the defaults in place.
+ */
+export const loadLayoutTuning = async (baseUrl = ""): Promise<void> => {
+  try {
+    // Same cache discipline as the datasets: the CDN must not be able to hand
+    // back a stale copy on a refresh.
+    const res = await fetch(`${baseUrl}${LAYOUT_FILE}?t=${Date.now()}`, {
+      cache: "no-store",
+    });
+    if (!res.ok) return;
+    const raw: unknown = await res.json();
+    if (!raw || typeof raw !== "object") return;
+    const incoming = raw as Record<string, unknown>;
+    for (const key of LAYOUT_TUNING_KEYS) {
+      const v = incoming[key];
+      if (typeof v === "number" && Number.isFinite(v)) LAYOUT_TUNING[key] = v;
+    }
+  } catch {
+    /* keep the defaults; the tree matters more than the tuning */
+  }
 };
-
-// Hot-swap: keep the object identity every importer already holds and copy the
-// edited values onto it, then ask the store to re-run the layout.
-if (import.meta.hot) {
-  import.meta.hot.accept((mod) => {
-    if (!mod) return;
-    const next = (mod as unknown as { LAYOUT_TUNING?: LayoutTuning }).LAYOUT_TUNING;
-    if (next) Object.assign(LAYOUT_TUNING, next);
-    requestRelayout();
-  });
-}
