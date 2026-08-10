@@ -2,3 +2,5 @@ node_modules
 node_modules
 .claude/
 PLAN-*.md
+
+.DS_store
