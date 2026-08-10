@@ -17,7 +17,15 @@ import { useStore } from '../state/store';
  * ?edit=<key> on a local server and absent from the deployed bundle entirely.
  */
 
-type Knob = { key: keyof LayoutTuning; label: string; min: number; max: number; step: number };
+type Knob = {
+  key: keyof LayoutTuning;
+  label: string;
+  min: number;
+  max: number;
+  step: number;
+  /** Changes the look only, so it skips the force re-run. */
+  visual?: boolean;
+};
 
 const GROUPS: { title: string; hint: string; knobs: Knob[] }[] = [
   {
@@ -67,6 +75,11 @@ const GROUPS: { title: string; hint: string; knobs: Knob[] }[] = [
     ],
   },
   {
+    title: 'Backdrop',
+    hint: 'The warm vignette behind the tree. 0 turns it off.',
+    knobs: [{ key: 'backdropOpacity', label: 'strength', min: 0, max: 1, step: 0.02, visual: true }],
+  },
+  {
     title: 'Simulation',
     hint: 'More ticks settle further, at the cost of a slower relayout.',
     knobs: [
@@ -87,10 +100,11 @@ export default function LayoutLab() {
 
   // A relayout on the deep lineages costs a couple of hundred milliseconds, which
   // is more than a slider drag emits, so coalesce the run to the end of the drag.
-  const schedule = () => {
+  // A visual-only dial skips the simulation entirely and lands immediately.
+  const schedule = (visual = false) => {
     bump(v => v + 1);
     if (timerRef.current) clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(commitLayoutTuning, 90);
+    timerRef.current = setTimeout(() => commitLayoutTuning(!visual), visual ? 0 : 90);
   };
 
   useEffect(() => () => clearTimeout(timerRef.current), []);
@@ -133,7 +147,7 @@ export default function LayoutLab() {
                   value={LAYOUT_TUNING[k.key]}
                   onChange={e => {
                     LAYOUT_TUNING[k.key] = Number(e.target.value);
-                    schedule();
+                    schedule(k.visual);
                   }}
                 />
                 <span className="lab-knob-value">{LAYOUT_TUNING[k.key]}</span>

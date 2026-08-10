@@ -17,5 +17,6 @@
   "coupleCollideFactor": 2,
   "ticks": 220,
   "ticksLarge": 130,
-  "largeGraphNodes": 2500
+  "largeGraphNodes": 2500,
+  "backdropOpacity": 0.4
 }

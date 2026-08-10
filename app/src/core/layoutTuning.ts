@@ -72,6 +72,14 @@ export interface LayoutTuning {
   ticks: number;
   ticksLarge: number;
   largeGraphNodes: number;
+  /**
+   * Strength of the warm vignette behind the tree. 0 turns it off entirely.
+   * The one dial here that shapes the look rather than the geometry — it lives in
+   * this file because it is the same edit-locally-and-commit round trip as the
+   * rest, and a second JSON file for a single number would cost more than it
+   * explains. Changing it must never re-run the simulation; see applyBackdrop.
+   */
+  backdropOpacity: number;
 }
 
 /** The file the tuning is read from and written back to, beside the datasets. */
@@ -102,6 +110,7 @@ export const DEFAULT_LAYOUT_TUNING: LayoutTuning = {
   ticks: 220,
   ticksLarge: 130,
   largeGraphNodes: 2500,
+  backdropOpacity: 0.4,
 };
 
 export const LAYOUT_TUNING_KEYS = Object.keys(
@@ -122,6 +131,21 @@ export const serializeLayoutTuning = (t: LayoutTuning): string =>
     null,
     2,
   ) + "\n";
+
+/**
+ * Push the backdrop strength out as a CSS custom property. Deliberately not React
+ * state: the vignette is one always-mounted element, so a variable on the root is
+ * both cheaper than a re-render and — more to the point — keeps a purely visual
+ * dial off the path that recomputes the layout, which on the deep lineages costs
+ * a couple of seconds of force simulation for no change to a single position.
+ */
+export const applyBackdrop = (): void => {
+  if (typeof document === "undefined") return;
+  document.documentElement.style.setProperty(
+    "--backdrop-opacity",
+    String(LAYOUT_TUNING.backdropOpacity),
+  );
+};
 
 /**
  * Read layout.json into LAYOUT_TUNING. Only known keys holding finite numbers are
@@ -148,5 +172,7 @@ export const loadLayoutTuning = async (baseUrl = ""): Promise<void> => {
     }
   } catch {
     /* keep the defaults; the tree matters more than the tuning */
+  } finally {
+    applyBackdrop();
   }
 };

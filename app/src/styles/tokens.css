@@ -23,7 +23,6 @@
   --accent: #c9a86a; /* marriage gold */
   --accent-text: #0a0e1a;
   --danger: #d06060;
-  --yantra: rgba(201, 168, 106, 0.42);
 
   /* Shape: chamfered, not rounded. --notch is the corner cut on a panel; the
      small radius on everything else keeps edges crisp without being knife-sharp. */

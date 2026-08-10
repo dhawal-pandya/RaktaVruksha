@@ -124,8 +124,10 @@ Once unlocked, everything happens on the graph:
 `app/public/layout.json` holds every dial that shapes the 3D tree's spread —
 repulsion and how far up and down the generations it carries, how hard children
 are pulled under their own parents, family clustering, link lengths, collision
-radii, tick counts. It loads at boot exactly like a dataset, so the deployed site
-reads whatever that file says and **changing the layout needs no rebuild**.
+radii, tick counts — plus `backdropOpacity`, the strength of the warm vignette
+behind the tree (`0` turns it off). It loads at boot exactly like a dataset, so
+the deployed site reads whatever that file says and **changing the layout needs
+no rebuild**.
 
 Locally with editing unlocked, a **⚙ Layout** button opens the Layout Lab: a
 slider per dial that re-runs the layout live under the camera where it stands and

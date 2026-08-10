@@ -15,6 +15,7 @@ import { computeLayout } from "../core/layout";
 import {
   LAYOUT_FILE,
   LAYOUT_TUNING,
+  applyBackdrop,
   loadLayoutTuning,
   serializeLayoutTuning,
 } from "../core/layoutTuning";
@@ -185,9 +186,11 @@ interface AppState {
   fitView: () => void;
   /** Re-run the 3D layout against the current tuning, leaving the camera alone. */
   relayout: () => void;
-  /** Re-run the layout AND write the dials back to layout.json. The Layout Lab's
-   *  only mutator; a no-op on anything but the local dev server. */
-  commitLayoutTuning: () => void;
+  /** Save the dials to layout.json and apply them. `resimulate` is false for dials
+   *  that only change the look, so dragging the backdrop slider doesn't pay for a
+   *  full force simulation. The Layout Lab's only mutator; the write half is a
+   *  no-op on anything but the local dev server. */
+  commitLayoutTuning: (resimulate?: boolean) => void;
   clearFocus: () => void;
   setLens: (familyId: string | null) => void;
   isolatePerson: (id: string) => void;
@@ -540,8 +543,9 @@ export const useStore = create<AppState>((set, get) => {
       if (graph) set({ layout: computeLayout(graph) });
     },
 
-    commitLayoutTuning: () => {
-      get().relayout();
+    commitLayoutTuning: (resimulate = true) => {
+      if (resimulate) get().relayout();
+      applyBackdrop();
       if (get().editUnlocked) {
         set({ layoutSave: "saving" });
         scheduleLayoutWrite();

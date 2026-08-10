@@ -15,7 +15,7 @@ import {
   Toast,
 } from './ui/Modals';
 import Guide from './ui/Guide';
-import Yantra from './ui/Yantra';
+import Backdrop from './ui/Backdrop';
 import LayoutLab from './ui/LayoutLab';
 import { useStore } from './state/store';
 
@@ -115,7 +115,7 @@ export default function App() {
   return (
     <>
       {viewMode === '3d' ? <Scene3D /> : <Scene2D />}
-      <Yantra />
+      <Backdrop />
       <TopBar />
       <DetailCard />
       <RelationPanel />
