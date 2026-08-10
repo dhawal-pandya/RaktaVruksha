@@ -43,8 +43,12 @@ export default function TopBar() {
   return (
     <header className="topbar">
       <div className="wordmark">
-        <div className="wordmark-latin">Raktavruksha</div>
-        <div className="wordmark-devanagari">रक्तवृक्ष</div>
+        {/* The Devanagari is the mark and the Latin is its transliteration, so it
+            is set as one: the name above, romanised underneath. */}
+        <div className="wordmark-names">
+          <div className="wordmark-devanagari">रक्तवृक्ष</div>
+          <div className="wordmark-latin">Raktavruksha</div>
+        </div>
         {showcase && (
           // A native <select> on purpose: it gets the platform's own picker, which
           // on a phone is a full-height wheel instead of a tiny custom menu.

@@ -15,6 +15,7 @@ import {
   Toast,
 } from './ui/Modals';
 import Guide from './ui/Guide';
+import Yantra from './ui/Yantra';
 import LayoutLab from './ui/LayoutLab';
 import { RELAYOUT_EVENT } from './core/layoutTuning';
 import { useStore } from './state/store';
@@ -106,7 +107,8 @@ export default function App() {
     return (
       <div className="boot-screen">
         <div className="boot-mark">रक्तवृक्ष</div>
-        <div className="boot-sub">growing the tree…</div>
+        <div className="boot-rule" />
+        <div className="boot-sub">growing the tree</div>
       </div>
     );
   }
@@ -123,6 +125,7 @@ export default function App() {
   return (
     <>
       {viewMode === '3d' ? <Scene3D /> : <Scene2D />}
+      <Yantra />
       <TopBar />
       <DetailCard />
       <RelationPanel />

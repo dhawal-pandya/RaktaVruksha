@@ -49,27 +49,58 @@ textarea:focus {
 .scene-root canvas {
   outline: none;
 }
+/* The yantra sits above the canvas — it has to, since the canvas clears opaque —
+   but it carries its own mask (see Yantra.tsx) that clears the middle, so the tree
+   floats inside a ring rather than behind a screen. Above the scene in z-order,
+   below every piece of HUD, and never a pointer target. */
+.yantra {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0.4;
+}
+/* A tall phone shows far more of the yantra's edge than a laptop does, so pull it
+   back further there rather than letting it read as a busy frame. */
+@media (max-width: 760px) {
+  .yantra {
+    opacity: 0.24;
+  }
+}
 .node-tooltip {
-  background: var(--bg-raised);
+  background: linear-gradient(160deg, var(--stone-lit), var(--stone));
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 6px 10px;
   color: var(--text);
   font-size: var(--fs-sm);
-  backdrop-filter: blur(var(--blur));
 }
 .node-tooltip span {
   color: var(--text-dim);
 }
 
 /* ---------- shared chrome ---------- */
+/* A panel is a stone tablet: opaque face lit from above, two corners chamfered
+   off, sitting proud of the canvas on its own shadow. No frosted blur — the
+   glass look is what made this read as any other dark dashboard, and an opaque
+   face is also what lets text stay legible over a moving constellation.
+   The shadow is a filter, not a box-shadow, because clip-path would crop it. */
 .panel {
-  background: var(--bg-raised);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+  /* a gilded rim along the lit edge, then the face itself */
+  background:
+    linear-gradient(180deg, rgba(198, 172, 116, 0.28) 0 1px, transparent 1px),
+    linear-gradient(160deg, var(--stone-lit) 0%, var(--stone) 62%);
+  clip-path: polygon(
+    var(--notch) 0,
+    100% 0,
+    100% calc(100% - var(--notch)),
+    calc(100% - var(--notch)) 100%,
+    0 100%,
+    0 var(--notch)
+  );
+  filter: drop-shadow(0 10px 26px rgba(0, 0, 0, 0.55));
 }
 .btn {
   display: inline-flex;
@@ -78,14 +109,14 @@ textarea:focus {
   padding: 8px 13px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
-  background: rgba(148, 163, 190, 0.06);
+  background: rgba(201, 168, 106, 0.05);
   color: var(--text);
   transition: background 140ms ease, border-color 140ms ease, transform 140ms ease;
   white-space: nowrap;
   min-height: 36px;
 }
 .btn:hover {
-  background: rgba(148, 163, 190, 0.14);
+  background: var(--bg-hover);
   border-color: var(--border-strong);
 }
 .btn:focus-visible {
@@ -163,23 +194,33 @@ textarea:focus {
 }
 .wordmark {
   display: flex;
-  align-items: baseline;
-  gap: var(--sp-2);
+  align-items: center;
+  gap: var(--sp-3);
   user-select: none;
 }
-.wordmark-latin {
-  font-size: var(--fs-xl);
-  font-weight: 700;
-  letter-spacing: 0.4px;
+.wordmark-names {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  line-height: 1;
 }
 .wordmark-devanagari {
+  font-family: var(--font-display);
+  font-size: 21px;
+  color: var(--accent);
+  line-height: 1;
+}
+.wordmark-latin {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
   color: var(--text-dim);
-  font-size: var(--fs-sm);
 }
 .badge {
   font-size: var(--fs-sm);
   padding: 1px 7px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   border: 1px solid var(--border-strong);
   color: var(--text-dim);
 }
@@ -200,7 +241,7 @@ textarea:focus {
   font: inherit;
   font-size: var(--fs-sm);
   padding: 3px 22px 3px 9px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   border: 1px solid rgba(255, 214, 138, 0.45);
   background: transparent;
   color: #ffd68a;
@@ -256,8 +297,7 @@ textarea:focus {
 }
 .search-input {
   width: 100%;
-  background: var(--bg-raised);
-  backdrop-filter: blur(var(--blur));
+  background: var(--bg-input);
 }
 .search-results {
   position: absolute;
@@ -280,7 +320,7 @@ textarea:focus {
   text-align: left;
 }
 .search-result:hover {
-  background: rgba(148, 163, 190, 0.1);
+  background: var(--bg-hover);
 }
 .search-label {
   font-weight: 500;
@@ -325,7 +365,7 @@ textarea:focus {
   text-align: left;
 }
 .legend-item:hover {
-  background: rgba(148, 163, 190, 0.1);
+  background: var(--bg-hover);
   color: var(--text);
 }
 .legend-active {
@@ -356,8 +396,7 @@ textarea:focus {
   z-index: 20;
   font-size: var(--fs-sm);
   padding: 5px 11px;
-  background: var(--bg-raised);
-  backdrop-filter: blur(var(--blur));
+  background: var(--stone);
 }
 
 /* ---------- detail card / relation panel ---------- */
@@ -381,8 +420,10 @@ textarea:focus {
   gap: var(--sp-2);
 }
 .detail-name {
-  font-size: var(--fs-lg);
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
 }
 .deceased {
   color: var(--text-dim);
@@ -399,12 +440,12 @@ textarea:focus {
   gap: 6px;
   font-size: var(--fs-sm);
   padding: 3px 9px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   border: 1px solid var(--border-strong);
   color: var(--text);
 }
 .chip:hover {
-  background: rgba(148, 163, 190, 0.12);
+  background: var(--bg-hover);
 }
 .chip-active {
   background: rgba(201, 168, 106, 0.16);
@@ -420,6 +461,7 @@ textarea:focus {
   min-height: 0;
 }
 .detail-section h3 {
+  font-family: var(--font-display);
   font-size: var(--fs-sm);
   text-transform: uppercase;
   letter-spacing: 0.7px;
@@ -432,7 +474,7 @@ textarea:focus {
   padding: 3px 8px;
   margin: 2px 2px 2px 0;
   border-radius: var(--radius-sm);
-  background: rgba(148, 163, 190, 0.08);
+  background: rgba(201, 168, 106, 0.07);
   color: var(--text);
 }
 .person-link:hover {
@@ -477,7 +519,7 @@ textarea:focus {
 }
 .reorder-btn:hover:not(:disabled) {
   color: var(--text);
-  background: rgba(148, 163, 190, 0.14);
+  background: rgba(201, 168, 106, 0.14);
 }
 .reorder-btn:disabled {
   opacity: 0.25;
@@ -575,12 +617,11 @@ textarea:focus {
   justify-content: center;
   font-size: var(--fs-lg);
   font-weight: 600;
-  background: var(--bg-raised);
-  backdrop-filter: blur(var(--blur));
+  background: var(--stone);
 }
-.guide {
+.modal.guide {
   width: min(560px, 100%);
-  max-height: min(760px, 90vh);
+  max-height: min(780px, 92vh);
 }
 .guide-head {
   display: flex;
@@ -589,15 +630,18 @@ textarea:focus {
   gap: var(--sp-2);
 }
 .guide-title {
-  font-size: 26px;
+  font-family: var(--font-display);
+  font-size: 28px;
   font-weight: 400;
   color: var(--accent);
   line-height: 1.2;
 }
 .guide-sub {
   color: var(--text-dim);
-  font-size: var(--fs-sm);
-  letter-spacing: 0.3px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 5px;
 }
 .guide-body {
   gap: var(--sp-4);
@@ -637,7 +681,7 @@ textarea:focus {
   font-size: 11px;
   font-family: inherit;
   padding: 2px 7px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   border: 1px solid var(--border-strong);
   color: var(--text-dim);
   white-space: nowrap;
@@ -804,8 +848,7 @@ input[type='color'] {
   z-index: 24;
   font-size: var(--fs-sm);
   padding: 5px 11px;
-  background: var(--bg-raised);
-  backdrop-filter: blur(var(--blur));
+  background: var(--stone);
 }
 .layout-lab {
   position: fixed;
@@ -881,14 +924,24 @@ input[type='color'] {
   align-items: center;
   justify-content: center;
   gap: var(--sp-3);
-  background: radial-gradient(ellipse at center, #101526 0%, var(--bg) 70%);
+  background: radial-gradient(ellipse at center, #14161f 0%, var(--bg) 72%);
 }
 .boot-mark {
-  font-size: 42px;
+  font-family: var(--font-display);
+  font-size: 46px;
   color: var(--accent);
+  line-height: 1.1;
+}
+.boot-rule {
+  width: 64px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
 }
 .boot-sub {
   color: var(--text-dim);
+  font-size: 11px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
   animation: pulse 1.6s ease-in-out infinite;
 }
 .boot-error {
@@ -909,7 +962,7 @@ input[type='color'] {
     gap: var(--sp-2);
     padding: var(--sp-2);
   }
-  .wordmark-devanagari {
+  .wordmark-latin {
     display: none;
   }
   .search {
@@ -966,8 +1019,7 @@ input[type='color'] {
   /* The nav no longer scrolls, so the legend stays in flow and drops its panel from
      wherever it lands: no fixed offset to drift out of sync with the bar's height. */
   .legend-toggle {
-    background: var(--bg-raised);
-    backdrop-filter: blur(var(--blur));
+    background: var(--stone);
   }
   .legend-open .legend-body {
     width: min(260px, calc(100vw - 2 * var(--sp-2)));

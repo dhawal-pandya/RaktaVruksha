@@ -106,11 +106,11 @@ export default function Guide() {
 
   return (
     <div className="modal-backdrop" onMouseDown={e => e.target === e.currentTarget && close()}>
-      <div className="modal guide" role="dialog" aria-label="Guide">
+      <div className="modal panel guide" role="dialog" aria-label="Guide">
         <header className="guide-head">
           <div>
             <h2 className="guide-title">रक्तवृक्ष</h2>
-            <p className="guide-sub">Raktavruksha — the tree of blood</p>
+            <p className="guide-sub">Raktavruksha · the tree of blood</p>
           </div>
           <button className="btn btn-icon" onClick={close} aria-label="Close">
             ×
