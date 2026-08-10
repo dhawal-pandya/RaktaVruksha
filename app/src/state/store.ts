@@ -166,7 +166,6 @@ interface AppState {
   /** Person kept when a "same person" merge dialog is open; the other is absorbed. */
   mergeKeepId: string | null;
   familyEditorOpen: boolean;
-  hintDismissed: boolean;
   toast: string | null;
 
   boot: () => Promise<void>;
@@ -211,7 +210,6 @@ interface AppState {
   requestReset: () => void;
   cancelReset: () => void;
   confirmResetNow: () => Promise<void>;
-  dismissHint: () => void;
   showToast: (msg: string) => void;
   clearToast: () => void;
 }
@@ -312,7 +310,6 @@ export const useStore = create<AppState>((set, get) => {
     mergeReport: null,
     importErrors: null,
     confirmReset: false,
-    hintDismissed: false,
     toast: null,
 
     boot: async () => {
@@ -804,7 +801,6 @@ export const useStore = create<AppState>((set, get) => {
       });
     },
 
-    dismissHint: () => set({ hintDismissed: true }),
     showToast: (msg) => set({ toast: msg }),
     clearToast: () => set({ toast: null }),
   };

@@ -1,7 +1,14 @@
 import { useCallback, useEffect, useMemo, useRef } from 'react';
 import ForceGraph2D, { type ForceGraphMethods } from 'react-force-graph-2d';
-import type { Gender, GraphLink, GraphNode } from '../core/types';
-import { BACKGROUND_COLOR, dimToward, mixHex } from '../core/colors';
+import type { GraphLink, GraphNode } from '../core/types';
+import {
+  BACKGROUND_COLOR,
+  GENDER_LINK,
+  LINK_COLORS,
+  UNION_COLOR,
+  dimToward,
+  mixHex,
+} from '../core/colors';
 import { computeLayout2d } from '../core/layout2d';
 import { familyView, largestFamily, subgraphForFamily } from '../core/family2d';
 import { useStore } from '../state/store';
@@ -18,12 +25,7 @@ const fitPadding = () => (window.innerWidth < 760 ? 24 : 80);
 
 const NODE_R = 6;
 const UNION_R = 2.8;
-const UNION_COLOR = '#4a5468';
 const PATH_COLOR = '#ffd27d';
-// The union→child line is colored by the child's gender: cool blue for a son,
-// rose for a daughter.
-const GENDER_LINK: Record<Gender, string> = { male: '#5b9bd5', female: '#d86fa4' };
-
 // Name sits above the node for men, below for women — matching the 3D view, so a
 // married pair side by side never prints its two names over each other.
 const labelTop = (node: FG2Node, fontSize: number, gender?: string): number => {
@@ -33,14 +35,6 @@ const labelTop = (node: FG2Node, fontSize: number, gender?: string): number => {
   return above ? yy - NODE_R - 2 - fontSize : yy + NODE_R + 2;
 };
 
-const LINK_COLORS: Record<string, string> = {
-  married: '#ffffff',
-  partners: '#b58fc4',
-  divorced: '#7a6a4d',
-  unknown: '#93855f',
-  biological: '#55617a',
-  adoptive: '#7f95b5',
-};
 const linkBaseColor = (l: FG2Link): string =>
   l.kind === 'partner' ? LINK_COLORS[l.status ?? 'married'] : LINK_COLORS[l.tag ?? 'biological'];
 const endpointId = (e: string | FG2Node): string => (typeof e === 'string' ? e : e.id);

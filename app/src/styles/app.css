@@ -348,10 +348,10 @@ textarea:focus {
   color: var(--text-dim);
   font-style: italic;
 }
-/* Small share button in the 2D view's corner. */
+/* Small share button in the 2D view's corner, just left of the guide's ?. */
 .share-btn {
   position: fixed;
-  right: var(--sp-4);
+  right: calc(var(--sp-4) + 40px);
   bottom: var(--sp-4);
   z-index: 20;
   font-size: var(--fs-sm);
@@ -561,20 +561,93 @@ textarea:focus {
   white-space: nowrap;
 }
 
-/* ---------- hint & toast ---------- */
-.hint {
+/* ---------- guide ---------- */
+/* Bottom-right corner, where the share button also lives; share shifts left to
+   sit beside it rather than under it. */
+.guide-btn {
   position: fixed;
-  left: var(--sp-4);
-  bottom: calc(var(--sp-4) + 14px);
+  right: var(--sp-4);
+  bottom: var(--sp-4);
+  z-index: 22;
+  width: 32px;
+  min-height: 32px;
+  padding: 0;
+  justify-content: center;
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  background: var(--bg-raised);
+  backdrop-filter: blur(var(--blur));
+}
+.guide {
+  width: min(560px, 100%);
+  max-height: min(760px, 90vh);
+}
+.guide-head {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: var(--sp-2);
-  padding: var(--sp-2) var(--sp-3);
+}
+.guide-title {
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--accent);
+  line-height: 1.2;
+}
+.guide-sub {
   color: var(--text-dim);
   font-size: var(--fs-sm);
-  z-index: 20;
-  max-width: min(430px, calc(100vw - 32px));
+  letter-spacing: 0.3px;
 }
+.guide-body {
+  gap: var(--sp-4);
+}
+.guide-lede {
+  line-height: 1.6;
+}
+.guide-body p {
+  line-height: 1.6;
+}
+.guide-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: var(--sp-2);
+}
+.guide-row {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  align-items: baseline;
+  gap: var(--sp-3);
+  line-height: 1.5;
+}
+.guide-swatch {
+  width: 34px;
+  height: 12px;
+  align-self: center;
+  overflow: visible;
+}
+.guide-keys .guide-row {
+  grid-template-columns: 92px 1fr;
+}
+.guide-key,
+.guide-body kbd {
+  display: inline-block;
+  font-size: 11px;
+  font-family: inherit;
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.guide-keys .guide-key {
+  width: 100%;
+  text-align: center;
+}
+
+/* ---------- toast ---------- */
 .toast {
   position: fixed;
   bottom: var(--sp-5);
@@ -903,9 +976,6 @@ input[type='color'] {
     min-height: 40px;
   }
 
-  .hint {
-    display: none;
-  }
   /* keep the stamp clear of the centered footer line */
   .data-stamp {
     left: var(--sp-2);

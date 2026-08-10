@@ -269,18 +269,3 @@ export function Toast() {
   if (!toast) return null;
   return <div className="toast panel">{toast}</div>;
 }
-
-export function Hint() {
-  const dismissed = useStore(s => s.hintDismissed);
-  const dismiss = useStore(s => s.dismissHint);
-  if (dismissed) return null;
-  return (
-    <div className="hint panel">
-      <span>
-        click a person to focus · double-click to isolate their web · scroll to zoom · esc to step
-        back
-      </span>
-      <button className="btn btn-icon" onClick={dismiss} aria-label="Dismiss hint">×</button>
-    </div>
-  );
-}

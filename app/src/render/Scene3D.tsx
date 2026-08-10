@@ -4,7 +4,13 @@ import * as THREE from 'three';
 import SpriteText from 'three-spritetext';
 import type { Gender, GraphLink, GraphNode, Vec3 } from '../core/types';
 import { personName } from '../core/types';
-import { BACKGROUND_COLOR, dimToward } from '../core/colors';
+import {
+  BACKGROUND_COLOR,
+  GENDER_LINK,
+  LINK_COLORS,
+  UNION_COLOR,
+  dimToward,
+} from '../core/colors';
 import { useStore } from '../state/store';
 import { computeVisuals, type VisualState } from './visuals';
 
@@ -32,7 +38,6 @@ const unionGeometry = new THREE.SphereGeometry(2.6, 12, 12);
 // wrapped in a soft glowing aura.
 const divineGeometry = new THREE.SphereGeometry(9, 24, 24);
 const divineAuraGeometry = new THREE.SphereGeometry(15, 18, 18);
-const UNION_COLOR = '#4a5468';
 
 // A link between two orbs on opposite sides of the graph (a divine ray reaching
 // a far devotee, an affinal tie between distant branches) draws as a stray line
@@ -114,19 +119,6 @@ const framedCameraPos = (cam: Vec3, target: Vec3, dist: number): Vec3 => {
 };
 
 const endpointId = (e: string | FGNode): string => (typeof e === 'string' ? e : e.id);
-
-const LINK_COLORS: Record<string, string> = {
-  married: '#ffffff',
-  partners: '#b58fc4',
-  divorced: '#7a6a4d',
-  unknown: '#93855f',
-  biological: '#55617a',
-  adoptive: '#7f95b5',
-};
-
-// The union→child line is colored by the child's gender: cool blue for a son,
-// rose for a daughter.
-const GENDER_LINK: Record<Gender, string> = { male: '#5b9bd5', female: '#d86fa4' };
 
 const linkBaseColor = (l: FGLink): string =>
   l.kind === 'partner'

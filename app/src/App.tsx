@@ -9,12 +9,12 @@ import FamilyEditor from './ui/FamilyEditor';
 import {
   ConfirmDeleteModal,
   ConfirmResetModal,
-  Hint,
   ImportErrorModal,
   MergePersonModal,
   MergeReportModal,
   Toast,
 } from './ui/Modals';
+import Guide from './ui/Guide';
 import LayoutLab from './ui/LayoutLab';
 import { RELAYOUT_EVENT } from './core/layoutTuning';
 import { useStore } from './state/store';
@@ -126,7 +126,6 @@ export default function App() {
       <TopBar />
       <DetailCard />
       <RelationPanel />
-      <Hint />
       <Toast />
       <PersonForm />
       <FamilyEditor />
@@ -135,6 +134,7 @@ export default function App() {
       <ImportErrorModal />
       <ConfirmResetModal />
       <ConfirmDeleteModal />
+      <Guide />
       <UpdatedStamp />
       <Footer />
       {import.meta.env.DEV && <LayoutLab />}

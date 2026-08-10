@@ -14,6 +14,33 @@ export const mixHex = (a: string, b: string, t: number): string => {
 export const UNKNOWN_FAMILY_COLOR = "#8a93a6";
 export const BACKGROUND_COLOR = "#0a0e1a";
 
+/** The little dot standing in for a marriage or partnership. */
+export const UNION_COLOR = "#4a5468";
+
+/**
+ * Tie colors, shared by both scenes and by the guide's legend, so what the guide
+ * claims a line means is the color that line is actually drawn in.
+ *
+ * Keyed by union status for a partner tie, and by tag for a parent-child one —
+ * though a child tie is normally overridden by GENDER_LINK below, since it reads
+ * more usefully as "who this child is" than as "how they were related".
+ */
+export const LINK_COLORS: Record<string, string> = {
+  married: "#ffffff",
+  partners: "#b58fc4",
+  divorced: "#7a6a4d",
+  unknown: "#93855f",
+  biological: "#55617a",
+  adoptive: "#7f95b5",
+};
+
+/** A union→child line is colored by the child: cool blue for a son, rose for a
+ *  daughter. */
+export const GENDER_LINK: Record<"male" | "female", string> = {
+  male: "#5b9bd5",
+  female: "#d86fa4",
+};
+
 /** Node tint for a person: family color, desaturated toward gray when deceased. */
 export const personColor = (
   familyColor: string | null,
