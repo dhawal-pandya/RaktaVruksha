@@ -176,6 +176,9 @@ interface AppState {
   focusPerson: (id: string) => void;
   showPersonIn3D: (id: string) => void;
   fitView: () => void;
+  /** Re-run the 3D layout against the current tuning, leaving the camera alone.
+   *  Dev only: the Layout Lab and layoutTuning.ts's hot-swap both land here. */
+  relayout: () => void;
   clearFocus: () => void;
   setLens: (familyId: string | null) => void;
   isolatePerson: (id: string) => void;
@@ -505,6 +508,11 @@ export const useStore = create<AppState>((set, get) => {
     },
 
     fitView: () => set({ cameraRequest: cam({ kind: "fit" }) }),
+
+    relayout: () => {
+      const graph = get().graph;
+      if (graph) set({ layout: computeLayout(graph) });
+    },
 
     setLens: (familyId) => {
       const s = get();

@@ -15,6 +15,8 @@ import {
   MergeReportModal,
   Toast,
 } from './ui/Modals';
+import LayoutLab from './ui/LayoutLab';
+import { RELAYOUT_EVENT } from './core/layoutTuning';
 import { useStore } from './state/store';
 
 const AUTHOR_ID = 'Dhawal';
@@ -91,6 +93,15 @@ export default function App() {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
+  // Editing a value in layoutTuning.ts hot-swaps it and fires this: re-run the
+  // layout so the tree re-seats in place, camera untouched. Dev only.
+  useEffect(() => {
+    if (!import.meta.env.DEV) return;
+    const onRelayout = () => useStore.getState().relayout();
+    window.addEventListener(RELAYOUT_EVENT, onRelayout);
+    return () => window.removeEventListener(RELAYOUT_EVENT, onRelayout);
+  }, []);
+
   if (phase === 'loading') {
     return (
       <div className="boot-screen">
@@ -126,6 +137,7 @@ export default function App() {
       <ConfirmDeleteModal />
       <UpdatedStamp />
       <Footer />
+      {import.meta.env.DEV && <LayoutLab />}
     </>
   );
 }

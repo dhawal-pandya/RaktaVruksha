@@ -7,6 +7,7 @@ import {
   forceZ,
 } from "d3-force-3d";
 import type { Graph, Vec3 } from "./types";
+import { LAYOUT_TUNING, type LayoutTuning } from "./layoutTuning";
 
 export const LAYER_GAP = 110;
 const UNION_Y_OFFSET_RATIO = -0.4;
@@ -30,39 +31,127 @@ export const layerGapFor = (rows: number): number =>
   rows <= COMFORTABLE_ROWS ? LAYER_GAP : (LAYER_GAP * COMFORTABLE_ROWS) / rows;
 
 // --- Force tuning (X/Z only; Y is always locked to generation) --------------
-// CHARGE is the "repulsion" dial: raise its magnitude for more space between orbs.
-// Couples are simulated as one rigid body (see below) whose collide radius covers
-// the whole pair, so no other orb can ever sit between partners or closer to a
-// person than their spouse; the body is pulled toward a single family center
-// (the union's family), so cross-family marriages no longer get torn between two
-// centers. FAMILY_PULL/FAMILY_RING stay at their original, well-behaved values;
-// charge is the knob to tune.
-const CHARGE_STRENGTH = -200; // repulsion between orbs
-const CHARGE_DISTANCE_MAX = 360; // how far that repulsion reaches
-const FAMILY_PULL = 0.05; // pull toward family center
-const FAMILY_RING = { scale: 26, base: 60 }; // spacing between family cluster centers
-const PARTNER_DISTANCE = 20; // an outside spouse (remarriage) sits close…
-const PARTNER_STRENGTH = 1; // …and is held firmly
-const CHILD_DISTANCE = 48;
-const CHILD_STRENGTH = 0.25;
-const PERSON_COLLIDE = 16; // hard minimum spacing so orbs never overlap
-const UNION_COLLIDE = 8;
-const COUPLE_OFFSET = 15; // each partner sits this far from the couple's center
-// Radius of a rigid couple body — two people wide. Must be ≥ 30 so that both a
-// stranger (kept at COUPLE_COLLIDE+PERSON_COLLIDE from the center, partner 15
-// out) and the facing partner of another couple (centers ≥ 2×COUPLE_COLLIDE
-// apart) always end farther from a person than their own spouse (30).
-const COUPLE_COLLIDE = PERSON_COLLIDE * 2;
+// Every dial lives in layoutTuning.ts, which is the file to edit (or drive from
+// the dev-only Layout Lab). Couples are simulated as one rigid body whose collide
+// radius covers the whole pair, so no other orb can ever sit between partners or
+// closer to a person than their spouse; the body is pulled toward a single family
+// center (the union's family), so cross-family marriages don't get torn between
+// two centers.
 
 interface SimNode {
   id: string;
   kind: "person" | "union" | "couple";
   familyKey: string;
+  gen: number;
   x: number;
   y: number;
   z: number;
   fy: number;
+  vx?: number;
+  vz?: number;
 }
+
+// A force in d3-force-3d is a callable with an `initialize(nodes, random, nDim)`
+// the simulation invokes once. Both custom forces below follow that shape.
+type SimForce = ((alpha: number) => void) & {
+  initialize?: (nodes: SimNode[], ...args: unknown[]) => void;
+};
+
+/**
+ * Repulsion confined to a band of generations around each orb.
+ *
+ * The stock many-body force measures distance in 3D, so with a reach several times
+ * the layer gap every orb elbows the rows above and below it — which is exactly how
+ * a parent pushed its own children sideways and let a stranger's brood settle in
+ * the gap. Here one many-body force is built per generation, over a window of
+ * `chargeLayerBand` rows either side, with the strength divided by the window
+ * count. Because the windows overlap, an orb's influence tapers off with
+ * generational distance rather than stopping dead at the band edge, and same-row
+ * repulsion still sums back to the full configured strength. Barnes–Hut is intact
+ * within each window, so this is no slower in practice.
+ *
+ * Band wide enough to span the whole tree ⇒ one plain global force, as before.
+ */
+const layeredCharge = (nodes: SimNode[], t: LayoutTuning): SimForce => {
+  const strengthOf = (d: SimNode) =>
+    d.kind === "couple" ? t.chargeStrength * 2 : t.chargeStrength;
+  const byGen = new Map<number, SimNode[]>();
+  for (const n of nodes) {
+    const g = byGen.get(n.gen);
+    if (g) g.push(n);
+    else byGen.set(n.gen, [n]);
+  }
+  const gens = [...byGen.keys()].sort((a, b) => a - b);
+  const band = Math.max(0, Math.round(t.chargeLayerBand));
+
+  const windows: { f: SimForce; members: SimNode[] }[] = [];
+  if (2 * band + 1 >= gens.length) {
+    windows.push({
+      f: forceManyBody().strength(strengthOf).distanceMax(t.chargeDistanceMax),
+      members: nodes,
+    });
+  } else {
+    const share = 2 * band + 1;
+    for (const g of gens) {
+      const members: SimNode[] = [];
+      for (let d = -band; d <= band; d++) {
+        const row = byGen.get(g + d);
+        if (row) members.push(...row);
+      }
+      if (members.length < 2) continue;
+      windows.push({
+        f: forceManyBody()
+          .strength((d: SimNode) => strengthOf(d) / share)
+          .distanceMax(t.chargeDistanceMax),
+        members,
+      });
+    }
+  }
+
+  const force = ((alpha: number) => {
+    for (const w of windows) w.f(alpha);
+  }) as SimForce;
+  // The simulation hands every force the full node list; each window ignores it and
+  // initializes over its own slice. `node.index` is already assigned by then, which
+  // is what the many-body force keys its strengths by.
+  force.initialize = (_all, ...args) => {
+    for (const w of windows) w.f.initialize?.(w.members, ...args);
+  };
+  return force;
+};
+
+interface DescentPair {
+  child: SimNode;
+  parent: SimNode;
+  ox: number;
+  oz: number;
+}
+
+/** Pulls each child toward its own parent's XZ (plus its seat on the sibling ring).
+ *  One-directional on purpose: children follow parents, never the reverse, so the
+ *  elder rows stay where the family forces put them. */
+const descentForce = (pairs: DescentPair[], strength: number): SimForce => {
+  const force = ((alpha: number) => {
+    const k = strength * alpha;
+    for (const p of pairs) {
+      p.child.vx = (p.child.vx ?? 0) + (p.parent.x + p.ox - p.child.x) * k;
+      p.child.vz = (p.child.vz ?? 0) + (p.parent.z + p.oz - p.child.z) * k;
+    }
+  }) as SimForce;
+  force.initialize = () => {};
+  return force;
+};
+
+// Deterministic per-union rotation for the sibling disc, so sibling pairs across
+// the tree don't all line up along the same axis.
+const ringPhase = (s: string): number => {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return ((h >>> 0) / 4294967296) * 2 * Math.PI;
+};
 
 // When someone has several unions, the one whose couple stays welded together:
 // the current marriage beats an old one.
@@ -81,11 +170,13 @@ const STATUS_RANK: Record<string, number> = {
  * single rigid "couple" body in the simulation, with a collide radius covering
  * both partners. That makes adjacency a geometric guarantee, not a force
  * outcome: nothing can drift between a couple, and no stranger ends up closer
- * to a person than their own partner. Partners are emitted ±COUPLE_OFFSET
+ * to a person than their own partner. Partners are emitted ±coupleOffset
  * around the body at the end; remaining unions (remarriages) keep the old
  * symmetric snap. Same graph in → same positions out.
  */
 export const computeLayout = (graph: Graph): Map<string, Vec3> => {
+  const t = LAYOUT_TUNING;
+  const coupleCollide = t.personCollide * t.coupleCollideFactor;
   const gens = graph.nodes.map((n) => n.gen);
   const layerGap = layerGapFor(
     gens.length ? Math.max(...gens) - Math.min(...gens) + 1 : 1,
@@ -95,7 +186,7 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
     new Set(graph.nodes.map((n) => n.familyId ?? "__none")),
   ).sort();
   const ringRadius =
-    FAMILY_RING.scale * Math.sqrt(graph.nodes.length) + FAMILY_RING.base;
+    t.familyRingScale * Math.sqrt(graph.nodes.length) + t.familyRingBase;
   const centers = new Map<string, { x: number; z: number }>();
   familyKeys.forEach((key, i) => {
     const angle = (2 * Math.PI * i) / familyKeys.length;
@@ -153,10 +244,48 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
       id: n.id,
       kind,
       familyKey,
+      gen: n.gen,
       x: c.x + r * Math.cos(theta),
       y,
       z: c.z + r * Math.sin(theta),
       fy: y,
+    });
+  }
+  const nodeById = new Map(nodes.map((n) => [n.id, n]));
+
+  // --- descent: seat each sibling set on a ring under its parent -------------
+  const childrenOfSource = new Map<string, string[]>();
+  for (const l of graph.links) {
+    if (l.kind !== "child") continue;
+    const kids = childrenOfSource.get(l.source);
+    if (kids) kids.push(l.target);
+    else childrenOfSource.set(l.source, [l.target]);
+  }
+  const descentPairs: DescentPair[] = [];
+  for (const [sourceId, kids] of childrenOfSource) {
+    const parent = nodeById.get(rep(sourceId));
+    if (!parent) continue;
+    const phase = ringPhase(sourceId);
+    const n = kids.length;
+    // Siblings fill a disc, not a ring: on a ring the radius needed to keep
+    // neighbours siblingSpacing apart grows with the count, which flung the
+    // hundred Kauravas six hundred units clear of Dhritarashtra and dragged half
+    // the epic out with them. Packed on a disc it grows as √n instead — the area
+    // a brood of that size genuinely needs. Sunflower spacing (golden angle, radius
+    // by √index) keeps neighbours evenly apart at any count; an only child sits
+    // dead centre, directly beneath its parent.
+    const outer = t.siblingSpacing * Math.sqrt(n / Math.PI);
+    kids.forEach((kid, i) => {
+      const child = nodeById.get(rep(kid));
+      if (!child || child === parent) return;
+      const radius = n <= 1 ? 0 : outer * Math.sqrt((i + 0.5) / n);
+      const angle = phase + i * 2.39996;
+      descentPairs.push({
+        child,
+        parent,
+        ox: radius * Math.cos(angle),
+        oz: radius * Math.sin(angle),
+      });
     });
   }
 
@@ -176,42 +305,36 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
       forceLink(links)
         .id((d: SimNode) => d.id)
         .distance((l: { kind: string }) =>
-          l.kind === "partner" ? PARTNER_DISTANCE : CHILD_DISTANCE,
+          l.kind === "partner" ? t.partnerDistance : t.childDistance,
         )
         .strength((l: { kind: string }) =>
-          l.kind === "partner" ? PARTNER_STRENGTH : CHILD_STRENGTH,
+          l.kind === "partner" ? t.partnerStrength : t.childStrength,
         ),
     )
-    .force(
-      "charge",
-      forceManyBody()
-        // A couple body stands in for two people.
-        .strength((d: SimNode) =>
-          d.kind === "couple" ? CHARGE_STRENGTH * 2 : CHARGE_STRENGTH,
-        )
-        .distanceMax(CHARGE_DISTANCE_MAX),
-    )
+    .force("charge", layeredCharge(nodes, t))
+    .force("descent", descentForce(descentPairs, t.descentPull))
     .force(
       "collide",
       forceCollide((d: SimNode) =>
         d.kind === "couple"
-          ? COUPLE_COLLIDE
+          ? coupleCollide
           : d.kind === "union"
-            ? UNION_COLLIDE
-            : PERSON_COLLIDE,
+            ? t.unionCollide
+            : t.personCollide,
       ).iterations(2),
     )
     .force(
       "famX",
-      forceX((d: SimNode) => centers.get(d.familyKey)!.x).strength(FAMILY_PULL),
+      forceX((d: SimNode) => centers.get(d.familyKey)!.x).strength(t.familyPull),
     )
     .force(
       "famZ",
-      forceZ((d: SimNode) => centers.get(d.familyKey)!.z).strength(FAMILY_PULL),
+      forceZ((d: SimNode) => centers.get(d.familyKey)!.z).strength(t.familyPull),
     )
     .stop();
 
-  const ticks = graph.nodes.length > 2500 ? 130 : 220;
+  const ticks =
+    graph.nodes.length > t.largeGraphNodes ? t.ticksLarge : t.ticks;
   for (let i = 0; i < ticks; i++) sim.tick();
 
   // --- emit: split couple bodies into their two orbs -------------------------
@@ -247,14 +370,14 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
       tz /= len;
     }
     out.set(a, {
-      x: n.x - tx * COUPLE_OFFSET,
+      x: n.x - tx * t.coupleOffset,
       y: layerY(personGen.get(a) ?? 0),
-      z: n.z - tz * COUPLE_OFFSET,
+      z: n.z - tz * t.coupleOffset,
     });
     out.set(b, {
-      x: n.x + tx * COUPLE_OFFSET,
+      x: n.x + tx * t.coupleOffset,
       y: layerY(personGen.get(b) ?? 0),
-      z: n.z + tz * COUPLE_OFFSET,
+      z: n.z + tz * t.coupleOffset,
     });
     out.set(n.id, {
       x: n.x,
@@ -317,8 +440,8 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
       const rot = total <= 2 ? k * step : (k - (total - 1) / 2) * step;
       const radius =
         total <= 2
-          ? COUPLE_OFFSET * 2
-          : Math.max(COUPLE_OFFSET * 2, (total * PERSON_COLLIDE * 2.3) / (2 * Math.PI));
+          ? t.coupleOffset * 2
+          : Math.max(t.coupleOffset * 2, (total * t.personCollide * 2.3) / (2 * Math.PI));
       const ux = dx * Math.cos(rot) - dz * Math.sin(rot);
       const uz = dx * Math.sin(rot) + dz * Math.cos(rot);
       f.x = w.x + ux * radius;
