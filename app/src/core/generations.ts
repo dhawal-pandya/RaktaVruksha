@@ -1,5 +1,24 @@
 import type { PersonRecord, UnionRecord } from './types';
-import { isRelativeAnchor } from './types';
+import { isLastAnchor, isRelativeAnchor } from './types';
+
+/**
+ * Drop everyone anchored `"last"` to a row below the whole finished tree.
+ *
+ * Runs after bottom-alignment and after the deva pass, because both of those
+ * can still move the floor out from under it — which is the entire failure this
+ * replaces. A person anchored this way is excluded from the max they are
+ * measured against, so several of them share the final row rather than racing
+ * each other one row further down on every pass.
+ */
+const settleLastAnchors = (people: PersonRecord[], gen: Map<string, number>): void => {
+  const last = people.filter(p => isLastAnchor(p.genAnchor));
+  if (last.length === 0) return;
+  const lastIds = new Set(last.map(p => p.id));
+  let deepest = -Infinity;
+  for (const [id, g] of gen) if (!lastIds.has(id) && g > deepest) deepest = g;
+  if (!Number.isFinite(deepest)) return; // a tree of nothing but "last" people
+  for (const p of last) gen.set(p.id, deepest + 1);
+};
 
 export interface GenerationResult {
   gen: Map<string, number>;
@@ -135,6 +154,9 @@ const computeGenerationsLeveled = (
   for (const p of people) {
     const a = p.genAnchor;
     if (a === undefined) continue;
+    // "last" is not a floor and says nothing about any other row, so it takes no
+    // part in the relaxation; settleLastAnchors places it once everything else has.
+    if (isLastAnchor(a)) continue;
     const g = find(p.id);
     anchorTouched.add(g);
     if (isRelativeAnchor(a)) {
@@ -253,6 +275,8 @@ const computeGenerationsLeveled = (
     if (!changed) break;
   }
 
+  settleLastAnchors(people, gen);
+
   return { gen, componentOf };
 };
 
@@ -345,6 +369,8 @@ const computeGenerationsBFS = (
     }
     if (!changed) break;
   }
+
+  settleLastAnchors(people, gen);
 
   return { gen, componentOf };
 };

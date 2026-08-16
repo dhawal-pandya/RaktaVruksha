@@ -151,7 +151,6 @@
     "VrishniIII": {"name":"Vrishni","u":"2026-07-27T00:00:00.000Z","note":"Son of Anamitra, and father of Shvaphalka and Chitraratha. SB 9.24.14"},
     "Prasena_2": {"name":"Prasena","u":"2026-07-27T00:00:00.000Z","note":"Son of Nighna, brother of Satrajit; he wore the Syamantaka jewel to the hunt and was killed by a lion. SB 9.24.13; 10.56"},
     "Shvaphalka": {"u":"2026-07-27T00:00:00.000Z","note":"Son of Vrishni; by his wife Gandini the father of Akrura and twelve more, and a daughter Suchara. SB 9.24.15-18"},
-    "Gandini": {"gender":"female","u":"2026-07-27T00:00:00.000Z","note":"Wife of Shvaphalka, mother of Akrura. SB 9.24.15"},
     "ChitrarathaV": {"name":"Chitraratha","u":"2026-07-27T00:00:00.000Z","note":"Son of Vrishni, brother of Shvaphalka; his son Viduratha fathered Shura. SB 9.24.15, 9.24.26"},
     "Suchara": {"gender":"female","u":"2026-07-27T00:00:00.000Z","note":"Sister of Akrura. SB 9.24.18"},
     "Devavan": {"u":"2026-07-27T00:00:00.000Z","note":"Son of Akrura. SB 9.24.18"},
@@ -228,6 +227,7 @@
     {"id":"u_Shvaphalka_Gandini","p":["Shvaphalka","Gandini"],"c":["Akrura","Suchara"],"u":"2026-07-27T00:00:00.000Z"},
     {"id":"u_Akrura","p":["Akrura"],"c":["Devavan","Upadeva"],"u":"2026-07-27T00:00:00.000Z"},
     {"id":"u_ChitrarathaV_Vidhuratha","p":["ChitrarathaV"],"c":["Vidhuratha"],"u":"2026-07-27T00:00:00.000Z"},
-    {"id":"u_pradyumna_rati","p":["Pradyumna","Rati"],"c":[],"note":"Rati, serving Shambara as his cook under the name Mayavati, raised the infant Pradyumna after a fish swallowed him; she recognised him as Kamadeva reborn, and married him once grown, after he killed Shambara. SB 10.55."}
+    {"id":"u_pradyumna_rati","p":["Pradyumna","Rati"],"c":[],"note":"Rati, serving Shambara as his cook under the name Mayavati, raised the infant Pradyumna after a fish swallowed him; she recognised him as Kamadeva reborn, and married him once grown, after he killed Shambara. SB 10.55."},
+    {"id":"u_Shashabindu_Bindumati","p":["Shashabindu"],"c":["Bindumati"],"note":"SB 9.6.38. Both were already here and her note already said whose daughter she was; the union between them had never been written. Her marriage to Mandhata is the cleanest join in the Puranas between the solar and the lunar houses.","u":"2026-08-16T00:00:00.000Z"}
   ]
 }

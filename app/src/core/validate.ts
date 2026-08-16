@@ -1,5 +1,5 @@
 import { isUnionStatus } from './status';
-import type { FamilyDataV2, PersonRecord, RelativeAnchor, UnionRecord } from './types';
+import type { FamilyDataV2, LastAnchor, PersonRecord, RelativeAnchor, UnionRecord } from './types';
 import { isRelativeAnchor } from './types';
 
 export interface ValidationResult {
@@ -11,8 +11,11 @@ const isRecord = (v: unknown): v is Record<string, unknown> =>
   typeof v === 'object' && v !== null && !Array.isArray(v);
 
 /** Normalize either anchor form out of untrusted JSON; drop anything malformed. */
-const parseAnchor = (v: unknown): { genAnchor?: number | RelativeAnchor } => {
+const parseAnchor = (
+  v: unknown,
+): { genAnchor?: number | RelativeAnchor | LastAnchor } => {
   if (typeof v === 'number') return { genAnchor: v };
+  if (v === 'last') return { genAnchor: 'last' };
   if (isRecord(v) && typeof v.relativeTo === 'string') {
     return {
       genAnchor: {

@@ -17,11 +17,12 @@
     "Ketu": {"divine":true,"note":"Severed body of the eclipse-asura, brother of Rahu; the descending shadow-node."},
     "Vatapi": "Asura son of Simhika who, with Ilvala, preyed on guests until the sage Agastya digested him.",
     "Ilvala": "Asura son of Simhika; brother of Vatapi.",
-    "Atapi": {"u":"2026-07-25T00:00:00.000Z","note":"Asura brother of Vatapi; the pair who preyed on guests until Agastya digested Vatapi."}
+    "Atapi": {"u":"2026-07-25T00:00:00.000Z","note":"Asura brother of Vatapi; the pair who preyed on guests until Agastya digested Vatapi."},
+    "Hema": {"gender":"female","u":"2026-08-16T00:00:00.000Z","note":"An apsara, wife of Mayasura; mother of Mandodari, Mayavi and Dundubhi. The cave under Kishkindha with the gardens and the gold in it was made for her, and it is the cave Hanuman's search party falls into. Rama 4.51"}
   },
   "unions": [
     {"id":"u_Vrishaparva_Sharmishtha","p":["Vrishaparva"],"c":["Sharmishtha"],"fam":null,"u":"2026-07-20T00:00:00.000Z"},
-    {"id":"u_Maya_Mandodari","p":["Maya"],"c":["Mandodari"],"fam":null,"status":"unknown","u":"2026-07-20T00:00:00.000Z"},
+    {"id":"u_Maya_Mandodari","p":["Maya","Hema"],"c":["Mandodari","Mayavi","DundubhiAsura"],"fam":null,"note":"Rama 4.9-11, 4.51. One house holds Ravana's queen and the two asuras whose deaths set Vali and Sugriva against each other.","u":"2026-08-16T00:00:00.000Z"},
     {"id":"u_kashyap_danayus","p":["Kashyap","Danayus"],"c":["Vritra","Vikshara"]},
     {"id":"u_viprachitti","p":["Viprachitti","Simhika"],"c":["Rahu","Ketu","Vatapi","Ilvala","Atapi"]}
   ]

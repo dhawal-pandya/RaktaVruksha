@@ -2,13 +2,24 @@
   "family": "familySurabhi",
   "name": "Surabhi",
   "color": "#b0895a",
-  "defaults": {"stamp":"2026-07-22T00:00:00.000Z","gender":"female","alive":true,"lastName":"","status":"married"},
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
   "people": {
-    "Surabhi": {"u":"2026-08-02T02:00:00.000Z","divine":true,"note":"Daughter of Daksha, wife of Kashyap; mother of cattle, the wish-granting cows."},
-    "Kamadhenu": {"divine":true,"note":"The wish-fulfilling cow, daughter of Surabhi."},
-    "Nandini": {"divine":true,"note":"Divine cow, daughter of Surabhi, kept by the sage Vasishtha."}
+    "Surabhi": {"gender":"female","u":"2026-08-02T02:00:00.000Z","divine":true,"note":"Daughter of Daksha, wife of Kashyap; mother of cattle, the wish-granting cows."},
+    "Kamadhenu": {"gender":"female","u":"2026-07-22T00:00:00.000Z","divine":true,"note":"The wish-fulfilling cow, daughter of Surabhi."},
+    "Nandini": {"gender":"female","u":"2026-07-22T00:00:00.000Z","divine":true,"note":"Divine cow, daughter of Surabhi, kept by the sage Vasishtha."},
+    "rudraRaivata": {"name":"Raivata","divine":true,"note":"One of the eleven Rudras, sons of Kashyap by Daksha's daughter Surabhi. The Rudras are counted by name and never told apart: they are a class before they are eleven people, and the lists differ between the Puranas. SB 6.6.17-18"},
+    "rudraAja": {"name":"Aja","divine":true,"note":"One of the eleven Rudras, sons of Kashyap by Daksha's daughter Surabhi — 'the unborn', or 'the goat'. The Rudras are counted by name and never told apart: they are a class before they are eleven people, and the lists differ between the Puranas. SB 6.6.17-18"},
+    "rudraBhava": {"name":"Bhava","divine":true,"note":"One of the eleven Rudras, sons of Kashyap by Daksha's daughter Surabhi — 'being', or 'becoming'. The Rudras are counted by name and never told apart: they are a class before they are eleven people, and the lists differ between the Puranas. SB 6.6.17-18"},
+    "rudraBhima": {"name":"Bhima","divine":true,"note":"One of the eleven Rudras, sons of Kashyap by Daksha's daughter Surabhi — 'the terrible'. The Rudras are counted by name and never told apart: they are a class before they are eleven people, and the lists differ between the Puranas. SB 6.6.17-18"},
+    "rudraVama": {"name":"Vama","divine":true,"note":"One of the eleven Rudras, sons of Kashyap by Daksha's daughter Surabhi — 'the beautiful', and 'the contrary'. The Rudras are counted by name and never told apart: they are a class before they are eleven people, and the lists differ between the Puranas. SB 6.6.17-18"},
+    "rudraUgra": {"name":"Ugra","divine":true,"note":"One of the eleven Rudras, sons of Kashyap by Daksha's daughter Surabhi — 'the fierce'. The Rudras are counted by name and never told apart: they are a class before they are eleven people, and the lists differ between the Puranas. SB 6.6.17-18"},
+    "rudraVrishakapi": {"name":"Vrishakapi","divine":true,"note":"One of the eleven Rudras, sons of Kashyap by Daksha's daughter Surabhi — the man-ape of RV 10.86, over whom Indra and Indrani quarrel. The Rudras are counted by name and never told apart: they are a class before they are eleven people, and the lists differ between the Puranas. SB 6.6.17-18"},
+    "rudraAjaikapat": {"name":"Ajaikapat","divine":true,"note":"One of the eleven Rudras, sons of Kashyap by Daksha's daughter Surabhi — 'the one-footed goat', a name the Rigveda keeps and does not explain. The Rudras are counted by name and never told apart: they are a class before they are eleven people, and the lists differ between the Puranas. SB 6.6.17-18"},
+    "rudraAhirbradhna": {"name":"Ahirbradhna","divine":true,"note":"One of the eleven Rudras, sons of Kashyap by Daksha's daughter Surabhi — 'the serpent of the deep'. The Rudras are counted by name and never told apart: they are a class before they are eleven people, and the lists differ between the Puranas. SB 6.6.17-18"},
+    "rudraBahurupa": {"name":"Bahurupa","divine":true,"note":"One of the eleven Rudras, sons of Kashyap by Daksha's daughter Surabhi — 'the many-formed'. The Rudras are counted by name and never told apart: they are a class before they are eleven people, and the lists differ between the Puranas. SB 6.6.17-18"},
+    "rudraMahan": {"name":"Mahan","divine":true,"note":"One of the eleven Rudras, sons of Kashyap by Daksha's daughter Surabhi — 'the great'. The Rudras are counted by name and never told apart: they are a class before they are eleven people, and the lists differ between the Puranas. SB 6.6.17-18"}
   },
   "unions": [
-    {"id":"u_kashyap_surabhi","p":["Kashyap","Surabhi"],"c":["Kamadhenu","Nandini"]}
+    {"id":"u_kashyap_surabhi","p":["Kashyap","Surabhi"],"c":["Kamadhenu","Nandini","rudraRaivata","rudraAja","rudraBhava","rudraBhima","rudraVama","rudraUgra","rudraVrishakapi","rudraAjaikapat","rudraAhirbradhna","rudraBahurupa","rudraMahan"],"note":"Surabhi bore the cattle and, in the same list, the eleven Rudras. SB 6.6.17-18. The Puranas do not agree on the eleven names; this is the Bhagavata's own set."}
   ]
 }

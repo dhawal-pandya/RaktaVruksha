@@ -17,13 +17,19 @@
     "Vasu": "Elder son of Jamadagni and Renuka; refused their father's order to behead Renuka for her lapse and was struck senseless for it, restored only when Parashurama — who alone obeyed — asked that boon instead of his own. SB 9.16.",
     "Vishvavasu": "Elder son of Jamadagni and Renuka; refused their father's order to behead Renuka for her lapse and was struck senseless for it, restored only when Parashurama — who alone obeyed — asked that boon instead of his own. SB 9.16.",
     "Mrikandu": "Son of Bhrigu; father of Markandeya.",
-    "Markandeya": "Son of Mrikandu; boon of an unending life. In the waters of pralaya saw the infant Narayana on a banyan leaf, was drawn in on its breath, saw the whole universe inside the child's body, and was breathed out again — the one sage who remembers every dissolution. SB 12.8-10."
+    "Markandeya": "Son of Mrikandu; boon of an unending life. In the waters of pralaya saw the infant Narayana on a banyan leaf, was drawn in on its breath, saw the whole universe inside the child's body, and was breathed out again — the one sage who remembers every dissolution. SB 12.8-10.",
+    "Ruru": {"u":"2026-08-16T00:00:00.000Z","note":"Son of Pramati, great-grandson of Bhrigu. He bought his wife back from death with half his own years, and then swore to kill every snake he ever came across, and did, for a long time — until an old dundubha lizard he had raised his stick over spoke, and turned out to be a rishi cursed into that shape for a joke he had once played with a rubber snake, and asked him what the snakes of the world had had to do with the one in the grass. MBh 1.8-12"},
+    "Shunaka": {"u":"2026-08-16T00:00:00.000Z","note":"Son of Ruru and Pramadvara; the Shaunaka gotra takes its name from his line. MBh 1.11"},
+    "Saunaka": {"u":"2026-08-16T00:00:00.000Z","note":"Son of Shunaka; the rishi holding the twelve-year sacrifice in the forest of Naimisharanya, where the sutas recite. Every 'Suta said' in the Bhagavata is an answer to a question this man asked, and the Mahabharata's own outermost frame is his sacrifice too — so the whole telling that this tree is built out of is addressed, in the end, to one name. MBh 1.1; SB 1.1"}
   },
   "unions": [
     {"id":"u_chyavana","p":["Chyavana","Sukanya"],"c":["Aurva","Pramati"],"u":"2026-07-22T00:00:00.000Z"},
     {"id":"u_Aurva_Richika","p":["Aurva"],"c":["Richika"],"u":"2026-07-22T00:00:00.000Z"},
     {"id":"u_richika","p":["Richika","SatyavatiG"],"c":["Jamadagni"],"u":"2026-07-22T00:00:00.000Z"},
     {"id":"u_jamadagni","p":["Jamadagni","Renuka"],"c":["Parashurama","Rumanvan","Sushena_3","Vasu","Vishvavasu"],"u":"2026-07-22T00:00:00.000Z"},
-    ["Mrikandu","Markandeya"]
+    ["Mrikandu","Markandeya"],
+    {"id":"u_pramati_ruru","p":["Pramati"],"c":["Ruru"],"note":"MBh 1.8.","u":"2026-08-16T00:00:00.000Z"},
+    {"id":"u_ruru_pramadvara","p":["Ruru","Pramadvara"],"c":["Shunaka"],"note":"MBh 1.9-11. Half of Ruru's own life bought this marriage.","u":"2026-08-16T00:00:00.000Z"},
+    {"id":"u_Shunaka_Saunaka","p":["Shunaka"],"c":["Saunaka"],"gap":79,"note":"MBh 1.11 for the descent, MBh 1.1 and SB 1.1 for the sacrifice. Saunaka is a patronymic — 'of Shunaka's line' — and the epic has Ruru's story told AT Saunaka's twelve-year session as its own host's ancient family history, so the two are not father and son and the gap stands for the kings of the line between them.","u":"2026-08-16T00:00:00.000Z"}
   ]
 }

@@ -2,13 +2,20 @@
   "family": "familyYaksha",
   "name": "Yaksha",
   "color": "#6b8fc0",
-  "defaults": {"stamp":"2026-07-22T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
   "people": {
-    "Khasa": {"gender":"female","divine":true,"note":"Daughter of Daksha, wife of Kashyap; mother of the Yakshas and Rakshasas."},
-    "Yaksha": {"divine":true,"note":"Progenitor of the yakshas, the guardian nature-spirits of wealth."},
-    "Rakshasa": "Progenitor of the rakshasas, the night-wandering kind."
+    "Khasa": {"gender":"female","u":"2026-07-22T00:00:00.000Z","divine":true,"note":"Daughter of Daksha, wife of Kashyap; mother of the Yakshas and Rakshasas."},
+    "Yaksha": {"u":"2026-07-22T00:00:00.000Z","divine":true,"note":"Progenitor of the yakshas, the guardian nature-spirits of wealth."},
+    "Rakshasa": {"u":"2026-07-22T00:00:00.000Z","note":"Progenitor of the rakshasas, the night-wandering kind."},
+    "SuketuYaksha": {"name":"Suketu","anchor":{"relativeTo":"Rama","offset":-2},"note":"A yaksha with no children, who did austerities for one. Brahma gave him a daughter rather than a son, and gave her the strength of a thousand elephants by way of compensation. Rama 1.24"},
+    "Tataka": {"gender":"female","note":"Daughter of the yaksha Suketu, born with the strength of a thousand elephants. When Agastya killed her husband Sunda she went at the sage with her sons and he cursed all three into rakshasas; she laid the country between Anga and Karusha waste and kept it waste for years. Vishvamitra took the boy Rama to the edge of it and made him shoot her, and the argument the boy has to be talked out of first — whether a woman may be killed — is the first lesson anybody in the Ramayan ever has to teach him. Rama 1.24-26"},
+    "Sunda": "Son of the yaksha Jharjha and husband of Tataka; killed by Agastya's curse for attacking him. Rama 1.25",
+    "Maricha": "Son of Tataka. Rama, still a boy, blew him out to sea with an arrow when he came with Subahu to foul Vishvamitra's sacrifice, and he spent the rest of his life afraid of him — which is precisely why Ravana had to hold a death sentence over him to make him do it again. He took the shape of the golden deer, drew Rama a long way from the hut, and died calling out in Rama's own voice for Lakshmana; that call is what emptied the hut. Rama 1.26-30, 3.35-44",
+    "SubahuT": {"name":"Subahu","note":"Son of Tataka, killed by Rama's fire-weapon over Vishvamitra's sacrifice in the same hour that his brother Maricha was thrown into the sea. Rama 1.30"}
   },
   "unions": [
-    {"id":"u_kashyap_khasa","p":["Kashyap","Khasa"],"c":["Yaksha","Rakshasa"]}
+    {"id":"u_kashyap_khasa","p":["Kashyap","Khasa"],"c":["Yaksha","Rakshasa"],"u":"2026-07-22T00:00:00.000Z"},
+    {"id":"u_SuketuYaksha_Tataka","p":["SuketuYaksha"],"c":["Tataka"],"note":"Rama 1.24."},
+    {"id":"u_sunda_tataka","p":["Sunda","Tataka"],"c":["Maricha","SubahuT"],"note":"Rama 1.24-25."}
   ]
 }

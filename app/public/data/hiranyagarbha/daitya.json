@@ -22,11 +22,19 @@
     "Hlada": "Brother of Prahlada, son of Hiranyakashipu.",
     "Samhlada": "Brother of Prahlada, son of Hiranyakashipu.",
     "Andhaka": "Daitya son of Hiranyaksha (or of Shiva's sweat), the blind asura slain by Shiva.",
-    "Vindhyavali": {"gender":"female","note":"Wife of Bali; queen of the generous asura emperor."}
+    "Vindhyavali": {"gender":"female","note":"Wife of Bali; queen of the generous asura emperor."},
+    "marutAvaha": {"name":"Avaha","u":"2026-08-16T00:00:00.000Z","divine":true,"note":"One of the Maruts, the storm-gods and the seven courses of the wind, born of Diti. SB 6.18; MBh 1.65"},
+    "marutPravaha": {"name":"Pravaha","u":"2026-08-16T00:00:00.000Z","divine":true,"note":"One of the Maruts, the storm-gods and the seven courses of the wind, born of Diti. SB 6.18; MBh 1.65"},
+    "marutVivaha": {"name":"Vivaha","u":"2026-08-16T00:00:00.000Z","divine":true,"note":"One of the Maruts, the storm-gods and the seven courses of the wind, born of Diti. SB 6.18; MBh 1.65"},
+    "marutParavaha": {"name":"Paravaha","u":"2026-08-16T00:00:00.000Z","divine":true,"note":"One of the Maruts, the storm-gods and the seven courses of the wind, born of Diti. SB 6.18; MBh 1.65"},
+    "marutUdvaha": {"name":"Udvaha","u":"2026-08-16T00:00:00.000Z","divine":true,"note":"One of the Maruts, the storm-gods and the seven courses of the wind, born of Diti. SB 6.18; MBh 1.65"},
+    "marutSamvaha": {"name":"Samvaha","u":"2026-08-16T00:00:00.000Z","divine":true,"note":"One of the Maruts, the storm-gods and the seven courses of the wind, born of Diti. SB 6.18; MBh 1.65"},
+    "marutParivaha": {"name":"Parivaha","u":"2026-08-16T00:00:00.000Z","divine":true,"note":"One of the Maruts, the storm-gods and the seven courses of the wind, born of Diti. SB 6.18; MBh 1.65"},
+    "Putana": {"gender":"female","u":"2026-08-16T00:00:00.000Z","anchor":{"relativeTo":"Krishna","offset":0},"note":"She came into Gokula in the shape of a beautiful woman with poison on her breast, and Kamsa had sent her, and Krishna took the milk and the life with it. Because she had come to him in a mother's form he gave her a mother's portion, and the body burned like sandalwood. The Bhagavata gives her no parents; the Harivamsa and the commentators make her Bali's daughter Ratnamala, who watched Vamana take the three steps, wished he had been her child, and was given the wish in the shape it deserved. SB 10.6; Harivamsa"}
   },
   "unions": [
     {"id":"u_Banasura_Usha","p":["Banasura"],"c":["Usha"],"fam":null,"u":"2026-07-20T00:00:00.000Z"},
     ["Hiranyaksha","Andhaka"],
-    {"id":"u_bali","p":["Bali","Vindhyavali"],"c":["Banasura"]}
+    {"id":"u_bali","p":["Bali","Vindhyavali"],"c":["Banasura","Putana"],"note":"SB 8.20-22 for Banasura. Putana is the Harivamsa's addition, not the Bhagavata's: it makes her Bali's daughter Ratnamala, and the wish she made watching Vamana is what she got in Gokula.","u":"2026-08-16T00:00:00.000Z"}
   ]
 }

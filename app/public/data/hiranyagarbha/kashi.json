@@ -4,6 +4,7 @@
   "color": "#d97fbf",
   "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
   "people": {
+    "Gandini": {"gender":"female","u":"2026-08-16T00:00:00.000Z","note":"Wife of Shvaphalka, mother of Akrura. SB 9.24.15"},
     "Kashiraja": {"anchor":{"relativeTo":"Brihadbala","offset":-4},"note":"King of Kashi; his three daughters were carried off from their svayamvara by Bhishma as brides for Vichitravirya."},
     "Amba": {"gender":"female","u":"2026-08-02T00:00:00.000Z","note":"Eldest Kashi princess; rejected because she loved another, she vowed vengeance on Bhishma and was reborn in Panchala as Shikhandi. Abducted by Bhishma at her sisters' swayamvara for his half-brother Vichitravirya, then sent back on confessing she loved King Shalva; refused by Shalva in turn for having been 'won' by another man, she begged every warrior including Parashurama himself to kill Bhishma, and when none could, took her own life vowing to return as the instrument of his death."},
     "Ambika": {"gender":"female","u":"2026-07-20T00:00:00.000Z","note":"Kashi princess wed to Vichitravirya; mother, through Vyasa's niyoga, of Dhritarashtra, she shut her eyes, so her son was born blind."},
@@ -26,6 +27,7 @@
     ["Kshatravriddha","SuhotraKashi","Kashya","Kashi","Rashtra","Dirghatama","Dhanvantari","Ketuman","BhimarathaKashi","DivodasaKashi"],
     {"id":"u_DivodasaKashi_Pratardana","p":["DivodasaKashi","Madhavi"],"c":["Pratardana"],"status":"partners","note":"The second of Madhavi's four. MBh 5.113"},
     ["Pratardana","Alarka"],
-    {"id":"u_Alarka_Kashiraja","p":["Alarka"],"c":["Kashiraja"],"gap":67,"note":"Alarka's line runs on through Santati, Sunitha, Niketana, Dharmaketu, Satyaketu, Dhrishtaketu, Sukumara, Vitihotra, Bharga and Bhargabhumi, all of Kashi. Kashiraja, father of Amba, Ambika and Ambalika, stands at its end. SB 9.17.8-9"}
+    {"id":"u_Alarka_Kashiraja","p":["Alarka"],"c":["Kashiraja"],"gap":67,"note":"Alarka's line runs on through Santati, Sunitha, Niketana, Dharmaketu, Satyaketu, Dhrishtaketu, Sukumara, Vitihotra, Bharga and Bhargabhumi, all of Kashi. Kashiraja, father of Amba, Ambika and Ambalika, stands at its end. SB 9.17.8-9"},
+    {"id":"u_Kashiraja_Gandini","p":["Kashiraja"],"c":["Gandini"],"note":"Vishnu Purana 4.13 makes Akrura's mother Gandini a daughter of the king of Kashi. She is said to have stayed in the womb twelve years and come out only when her father promised a cow a day to the brahmins — go-dina, the day's cow, which is what the name is read as.","u":"2026-08-16T00:00:00.000Z"}
   ]
 }
