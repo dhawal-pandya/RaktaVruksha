@@ -8,6 +8,7 @@ import {
 } from "d3-force-3d";
 import type { Graph, Vec3 } from "./types";
 import { LAYOUT_TUNING, type LayoutTuning } from "./layoutTuning";
+import { STATUS_KEYS, UNION_STATUS } from "./status";
 
 export const LAYER_GAP = 110;
 const UNION_Y_OFFSET_RATIO = -0.4;
@@ -155,12 +156,11 @@ const ringPhase = (s: string): number => {
 
 // When someone has several unions, the one whose couple stays welded together:
 // the current marriage beats an old one.
-const STATUS_RANK: Record<string, number> = {
-  married: 0,
-  partners: 1,
-  unknown: 2,
-  divorced: 3,
-};
+// Both read from core/status.ts, which is the one place a status is described.
+const STATUS_RANK: Record<string, number> = Object.fromEntries(
+  STATUS_KEYS.map((k) => [k, UNION_STATUS[k].rank]),
+);
+const WELDS = new Set(STATUS_KEYS.filter((k) => UNION_STATUS[k].welds));
 
 /**
  * Headless, deterministic 3D layout. Y is locked to generation (ancestors up);
@@ -198,6 +198,9 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
 
   // --- pick each person's primary union: those couples become rigid bodies --
   const partnersByUnion = new Map<string, string[]>();
+  const crossEraUnions = new Set(
+    graph.nodes.filter((n) => n.kind === "union" && n.crossEra).map((n) => n.id),
+  );
   for (const l of graph.links) {
     if (l.kind !== "partner") continue;
     if (!partnersByUnion.has(l.target)) partnersByUnion.set(l.target, []);
@@ -216,6 +219,11 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
   for (const un of unionNodes) {
     const ps = partnersByUnion.get(un.id);
     if (!ps || ps.length !== 2) continue;
+    // A cross-era bond joins two rows; welding it into one rigid body would drag
+    // one partner off their own generation, which is the whole thing it exists
+    // to avoid. It falls through to the loose-union path instead.
+    if (crossEraUnions.has(un.id)) continue;
+    if (!WELDS.has(un.status)) continue;
     if (repOf.has(ps[0]) || repOf.has(ps[1])) continue;
     rigidUnions.add(un.id);
     repOf.set(ps[0], un.id);
@@ -293,6 +301,13 @@ export const computeLayout = (graph: Graph): Map<string, Vec3> => {
   // to self-links and are dropped.
   const links: { source: string; target: string; kind: string }[] = [];
   for (const l of graph.links) {
+    // A cross-era bond is DRAWN but never SIMULATED. The link force wants
+    // partners twenty units apart; these span whole eras — Mars to Rhea Silvia
+    // is twenty-seven rows — and since Y is locked to generation, every bit of
+    // that pull turns into horizontal tension. Left in, forty of them crushed
+    // the tree into a flat smear. The renderer still draws the thread from the
+    // graph, which is what the bond is for.
+    if (l.kind === "partner" && crossEraUnions.has(l.target)) continue;
     const source = rep(l.source);
     const target = rep(l.target);
     if (source === target) continue;

@@ -1,0 +1,32 @@
+{
+  "family": "familyPontos",
+  "name": "Pontos",
+  "color": "#3d8f9c",
+  "note": "The old sea, before Poseidon: Nereus, Phorkys, Keto",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"female","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Nereus": {"gender":"male","divine":true,"note":"The Old Man of the Sea: truthful, gentle, and unable to lie -- Herakles had to wrestle him through every shape he took to get directions to the Hesperides. Theog. 233-236"},
+    "Thaumas": {"gender":"male","divine":true,"note":"Wonder; father of the rainbow and the storm-winds both. Gives thaumaturge, a wonder-worker. Theog. 237"},
+    "Phorkys": {"gender":"male","divine":true,"note":"The old sea's crooked strength, father of monsters. Theog. 237"},
+    "Keto": {"divine":true,"note":"The sea-monster herself, mother of the Gorgons and the Graiai. Her name gives cetacean, the order of whales, and every ketos in Greek is a sea beast. Theog. 238"},
+    "Eurybia": {"divine":true,"note":"With a heart of flint, mother of the Titans Astraios, Pallas and Perses. Theog. 239"},
+    "Iris": {"divine":true,"note":"The rainbow, and the gods' messenger before Hermes. Gives iris (the eye's coloured ring and the flower), iridescent, iridium -- named for the colours its salts show. Theog. 265-266"},
+    "Harpyiai": {"name":"Harpyiai (Harpyiae)","divine":true,"note":"The snatchers -- Aello and Okypete, storm-winds in bird form, who stole Phineus' food until the sons of Boreas drove them off. Gives harpy. Theog. 265-269"},
+    "Amphitrite": {"divine":true,"note":"Queen of the sea and wife of Poseidon, counted among the fifty Nereids. Theog. 243, 930-933"},
+    "Thetis": {"divine":true,"note":"Silver-footed, mother of Achilles. Zeus and Poseidon both wanted her until Themis warned that her son would surpass his father, so they married her to a mortal -- and Achilles is the prophecy kept. Theog. 244, Il. 18.35-147"},
+    "Galateia": {"divine":true,"note":"The Nereid Polyphemos the Kyklops loved, and who loved Akis. Theog. 250, Ov. Met. 13.738-897"},
+    "Psamathe": {"divine":true,"note":"Mother of Phokos by Aiakos, whose murder by his half-brothers drove Peleus and Telamon out of Aigina. Theog. 260, Apollod. 3.12.6"},
+    "Graiai": {"divine":true,"note":"The Grey Ones, grey-haired from birth, who shared one eye and one tooth between three. Perseus stole the eye to make them tell him the way to the Gorgons. Theog. 270-273"},
+    "Gorgones": {"divine":true,"note":"Stheno, Euryale and Medousa -- the last alone mortal, and the one Perseus killed. Gives gorgon, and gorgonzola is not related however good the story would be. Theog. 274-283"},
+    "Triton": {"gender":"male","divine":true,"divineParents":["Poseidon"],"note":"Fish-tailed son of Poseidon and Amphitrite, who calms the sea by blowing on a conch. Gives triton the newt, and Neptune's largest moon. Theog. 930-933"}
+  },
+  "unions": [
+    {"id":"u_gaia_pontos","p":["Pontos","Gaia"],"c":["Nereus","Thaumas","Phorkys","Keto","Eurybia"],"note":"Theog. 233-239"},
+    {"id":"u_thaumas_elektra","p":["Thaumas","Elektra"],"c":["Iris","Harpyiai"],"note":"Theog. 265-269"},
+    {"id":"u_nereus_doris","p":["Nereus","Doris"],"c":["Amphitrite","Thetis","Galateia","Psamathe"],"gap":12,"note":"The Nereids are sea goddesses with no generation of their own; they are dated by the mortals they marry -- Thetis by Peleus, Psamathe by Aiakos -- so the distance from the Old Man of the Sea to the heroic age is carried here. Hesiod names all fifty; the tree keeps four."},
+    {"id":"u_phorkys_keto","p":["Phorkys","Keto"],"c":["Graiai","Gorgones","Echidna","Ladon"],"note":"Theog. 270-336"},
+    {"id":"u_amphitrite","p":["Amphitrite"],"c":["Triton"],"status":"unknown","note":"Poseidon's bond to her is drawn across the eras: the Nereids sit twelve rows below their father and he does not. Theog. 930-933"},
+    {"id":"u_poseidon_amphitrite","p":["Poseidon","Amphitrite"],"c":[],"cross":true,"note":"Queen of the sea, whom he pursued to the ends of the water and won by a dolphin's argument. Theog. 930-933"},
+    {"id":"u_poseidon_gorgones","p":["Poseidon","Gorgones"],"c":[],"status":"abduction","cross":true,"note":"Poseidon took Medousa in Athena's own temple, and Athena punished HER for it -- the snakes and the stone-turning stare are the punishment. Hesiod tells it as a meeting in a spring meadow; Ovid tells it as rape in the temple, and it is Ovid the tradition kept. Pegasos and Chrysaor sprang from her neck when Perseus struck her head off. Theog. 278-283; Ov. Met. 4.794-803"}
+  ]
+}

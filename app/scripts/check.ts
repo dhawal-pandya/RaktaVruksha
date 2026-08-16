@@ -22,12 +22,12 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { MANIFEST, checkShards, expand } from "../src/core/shards";
 import { buildDataset } from "../src/core/dataset";
-import { validateData } from "../src/core/validate";
+import { parseFamilyData, validateData } from "../src/core/validate";
 import type { FamilyDataV2 } from "../src/core/types";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const DATA = resolve(here, "../public/data");
-const DATASETS = ["family", "ramayan", "mahabharat", "hiranyagarbha"];
+const DATASETS = ["family", "ramayan", "mahabharat", "hiranyagarbha", "chaos"];
 
 const readShards = (dir: string): Map<string, string> => {
   const files = new Map<string, string>();
@@ -96,6 +96,50 @@ const CONTEMPORARIES: [string, string, string][] = [
   ["Mandhata", "Bindumati", "marriage"],
   ["Mandhata", "Saubhari", "his fifty daughters"],
   ["Astika", "Janamejaya", "stopped the snake sacrifice"],
+
+  // NOT asserted here, and deliberately: Oidipous/Iokaste and Aineias/Lavinia are
+  // the two marriages this tree cannot draw (a wife shared by father and son, and
+  // a bride two generations below her husband), so their rows are expected to
+  // differ -- see the notes on those unions. Tlepolemos/Sarpedon is also absent:
+  // the Sarpedon in the tree is Europa's son, not his Lykian namesake at Troy.
+  //
+  // The Greek tree's Kurukshetra is Troy: the one event enough lines run through
+  // to fix the rest. Every pair below is people the texts put in the same scene.
+  ["Achilleus", "Hektor", "the duel"],
+  ["Achilleus", "Agamemnon", "the quarrel over Briseis"],
+  ["Achilleus", "Odysseus", "the embassy"],
+  ["Achilleus", "Aias", "the embassy"],
+  ["Agamemnon", "Menelaos", "brothers"],
+  ["Agamemnon", "Klytaimnestra", "marriage"],
+  ["Menelaos", "Helene", "marriage"],
+  ["Paris", "Helene", "the abduction"],
+  ["Hektor", "Andromache", "marriage"],
+  ["Hektor", "Paris", "brothers"],
+  ["Aineias", "Hektor", "cousins, both in the Iliad"],
+  ["Odysseus", "Penelope", "marriage"],
+  ["Nestor", "Antilochos", "father and son at Troy"],
+  ["Idomeneus", "Agamemnon", "the council of kings"],
+  ["Kastor", "Polydeukes", "the twins"],
+  ["Helene", "Klytaimnestra", "sisters"],
+  ["Theseus", "Ariadne", "the labyrinth"],
+  ["Iason", "Medeia", "the fleece"],
+  ["Peleus", "Thetis", "marriage"],
+  ["Eteokles", "Polyneikes", "the seven against Thebes"],
+  ["Antigone", "Ismene", "sisters"],
+  ["Perseus", "Andromeda", "the sea-monster"],
+  ["Herakles", "Deianeira", "marriage"],
+  ["Herakles", "Eurystheus", "the labours"],
+  ["Orestes", "ElektraM", "brother and sister"],
+  ["Orestes", "Hermione", "marriage"],
+  ["Neoptolemos", "Telemachos", "the sons of the war"],
+  ["Kadmos", "Harmonia", "the wedding all the gods attended"],
+  ["Minos", "Pasiphae", "marriage"],
+  ["Romulus", "Remus", "the twins"],
+  ["Numitor", "Amulius", "brothers"],
+  ["Zeus", "Hera", "marriage"],
+  ["Zeus", "Poseidon", "brothers"],
+  ["Kronos", "Rheia", "marriage"],
+  ["Ouranos", "Gaia", "the first marriage"],
 ];
 
 let failed = false;
@@ -115,7 +159,12 @@ for (const dir of DATASETS) {
 
   let raw: FamilyDataV2;
   try {
-    raw = expand(files);
+    // Through parseFamilyData, exactly as boot() does. Checking the expanded
+    // object directly would miss a field the parser silently drops -- which is
+    // how crossEra got as far as the browser before anyone noticed.
+    const parsed = parseFamilyData(JSON.stringify(expand(files)));
+    if (!parsed.raw) { fail(parsed.errors[0] ?? "unparseable"); continue; }
+    raw = parsed.raw;
   } catch (e) {
     fail(String(e));
     continue;

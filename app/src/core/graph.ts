@@ -69,6 +69,7 @@ export const buildGraph = (ds: Dataset): Graph => {
         status: u.status,
         familyId: u.familyId ?? displayFamilyOf(ds, partners[0]),
         order: u.order,
+        ...(u.crossEra ? { crossEra: true } : {}),
       });
       for (const pid of partners) {
         links.push({

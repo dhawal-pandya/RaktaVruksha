@@ -60,6 +60,9 @@ const computeGenerationsLeveled = (
     if (ra !== rb) parent.set(ra, rb);
   };
   for (const u of unions) {
+    // A cross-era bond joins two people who are not contemporaries, so merging
+    // their generations is the one thing it must not do. See UnionRecord.crossEra.
+    if (u.crossEra) continue;
     const ps = u.partners.filter(x => known.has(x));
     for (let i = 1; i < ps.length; i++) union(ps[0], ps[i]);
   }
@@ -275,7 +278,8 @@ const computeGenerationsBFS = (
     adj.get(b)!.push({ to: a, delta: -delta });
   };
   for (const u of unions) {
-    if (u.partners.length === 2) addEdge(u.partners[0], u.partners[1], 0);
+    // A cross-era bond carries no same-row edge here either, for the same reason.
+    if (u.partners.length === 2 && !u.crossEra) addEdge(u.partners[0], u.partners[1], 0);
     const kids = [...u.children, ...(u.adoptedChildren ?? [])];
     for (const p of u.partners) for (const k of kids) addEdge(p, k, 1);
   }

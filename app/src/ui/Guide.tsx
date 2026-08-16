@@ -5,6 +5,7 @@ import {
   UNION_COLOR,
   UNKNOWN_FAMILY_COLOR,
 } from '../core/colors';
+import { STATUS_KEYS, UNION_STATUS } from '../core/status';
 import { useStore } from '../state/store';
 
 /**
@@ -153,9 +154,24 @@ export default function Guide() {
           <div className="detail-section">
             <h3>The threads</h3>
             <ul className="guide-list">
-              <Row swatch={<Thread color={LINK_COLORS.married} />}>Married</Row>
-              <Row swatch={<Thread color={LINK_COLORS.partners} />}>Partners, unmarried</Row>
-              <Row swatch={<Thread color={LINK_COLORS.divorced} dash="4 3" />}>Divorced</Row>
+              {/* Straight from core/status.ts, so a status added there explains
+                  itself here without anyone having to remember this file. */}
+              {STATUS_KEYS.map(key => {
+                const s = UNION_STATUS[key];
+                return (
+                  <Row
+                    key={key}
+                    swatch={
+                      <Thread
+                        color={s.color}
+                        dash={s.dash ? s.dash.join(' ') : undefined}
+                      />
+                    }
+                  >
+                    {s.label} — {s.hint}
+                  </Row>
+                );
+              })}
               <Row swatch={<Thread color={GENDER_LINK.male} />}>A son of that union</Row>
               <Row swatch={<Thread color={GENDER_LINK.female} />}>A daughter of that union</Row>
               <Row swatch={<Thread color={LINK_COLORS.adoptive} dash="1.5 2.5" />}>

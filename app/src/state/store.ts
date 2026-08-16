@@ -107,7 +107,8 @@ export type DataSource =
   | "default"
   | "mahabharat"
   | "ramayan"
-  | "hiranyagarbha";
+  | "hiranyagarbha"
+  | "chaos";
 // Each dataset is a DIRECTORY of one small file per family, not a single
 // document: see core/shards.ts. The manifest names the shards; they are fetched
 // in parallel and expanded back into one FamilyDataV2, so everything downstream
@@ -117,6 +118,7 @@ const DATA_DIRS: Record<DataSource, string> = {
   mahabharat: "data/mahabharat",
   ramayan: "data/ramayan",
   hiranyagarbha: "data/hiranyagarbha",
+  chaos: "data/chaos",
 };
 
 // The app has two halves. The real family is a genealogy you
@@ -130,6 +132,7 @@ export const SHOWCASE_ORDER = [
   "ramayan",
   "mahabharat",
   "hiranyagarbha",
+  "chaos",
 ] as const;
 export type ShowcaseSource = (typeof SHOWCASE_ORDER)[number];
 export const isShowcase = (source: DataSource): source is ShowcaseSource =>
@@ -141,6 +144,7 @@ export const SHOWCASE_LABELS: Record<
   hiranyagarbha: { devanagari: "हिरण्यगर्भ", latin: "Hiranyagarbha" },
   ramayan: { devanagari: "रघुवंश", latin: "Raghuvansh" },
   mahabharat: { devanagari: "कुरुवंश", latin: "Kuruvansh" },
+  chaos: { devanagari: "Χάος", latin: "Chaos" },
 };
 
 interface AppState {

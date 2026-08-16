@@ -99,7 +99,7 @@
     "Madhavi": {"gender":"female","note":"Daughter of Yayati, given not in marriage but in loan: her blessing was that she recovered her maidenhood after each birth and that her sons would be kings. Galava lent her to three kings for two hundred white horses each and to Vishvamitra for the last two hundred, and she bore Vasumanas, Pratardana, Shibi and Ashtaka. Offered a svayamvara afterwards she chose the forest instead and lived as a deer lives. When Yayati fell out of heaven for pride, these four grandsons gave him the merit of their sacrifices and raised him back. MBh 5.113-121"}
   },
   "unions": [
-    {"id":"u_chandra","p":["Chandra","Tara"],"c":["Budha"],"u":"2026-07-20T00:00:00.000Z"},
+    {"id":"u_chandra","p":["Chandra","Tara"],"c":["Budha"],"status":"abduction","note":"Chandra carried off Tara, wife of Brihaspati, and would not give her back; the devas and asuras went to war over it -- the Tarakamaya -- and Brahma ended it. Budha was born of it, and she named the father only when pressed. VP 4.6","u":"2026-07-20T00:00:00.000Z"},
     {"id":"u_budha","p":["Budha","Ila"],"c":["Pururavas"],"u":"2026-07-20T00:00:00.000Z"},
     {"id":"u_pururavas","p":["Pururavas","Urvashi"],"c":["Ayus","Amavasu","Shrutayu","Satyayu","Raya","JayaP","VijayaP"],"u":"2026-07-20T00:00:00.000Z"},
     {"id":"u_ayus","p":["Ayus"],"c":["Nahusha","Kshatravriddha","Raji","Rabha","AnenaS"],"u":"2026-07-20T00:00:00.000Z"},

@@ -13,6 +13,8 @@ import { computeLayout2d } from '../core/layout2d';
 import { familyView, largestFamily, subgraphForFamily } from '../core/family2d';
 import { useStore } from '../state/store';
 import { computeVisuals, type VisualState } from './visuals';
+import { UNION_STATUS } from '../core/status';
+import type { UnionStatus } from '../core/types';
 
 type FG2Node = GraphNode & { x?: number; y?: number; fx?: number; fy?: number; short?: string; ext?: boolean };
 type FG2Link = Omit<GraphLink, 'source' | 'target'> & { source: string | FG2Node; target: string | FG2Node };
@@ -270,8 +272,8 @@ export default function Scene2D() {
     () => (l: FG2Link): number[] | null =>
       l.kind === 'divine'
         ? [2, 3]
-        : l.kind === 'partner' && l.status === 'divorced'
-          ? [3, 3]
+        : l.kind === 'partner'
+          ? (UNION_STATUS[(l.status ?? 'married') as UnionStatus]?.dash ?? null)
           : l.kind === 'child' && l.tag === 'adoptive'
             ? [1.5, 2]
             : null,

@@ -22,6 +22,7 @@
     ["Sushena","Tara"],
     {"id":"u_vali_tara","p":["Vali","Tara"],"c":["Angada"],"order":0},
     {"id":"u_sugriva_ruma","p":["Sugriva","Ruma"],"c":[]},
-    {"id":"u_kesari_anjana","p":["Kesari","Anjana"],"c":["Hanuman"]}
+    {"id":"u_kesari_anjana","p":["Kesari","Anjana"],"c":["Hanuman"]},
+    {"id":"u_vali_ruma","p":["Vali","Ruma"],"c":[],"status":"abduction","note":"Vali drove Sugriva out and took Ruma, his brother's wife; it is the wrong Rama names when Vali asks by what right he shot. Rām 4.17","u":"2026-08-16T00:00:00.000Z"}
   ]
 }

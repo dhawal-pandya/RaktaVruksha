@@ -1,0 +1,21 @@
+{
+  "family": "familyPylos",
+  "name": "Pylos",
+  "color": "#8aa06b",
+  "note": "Salmoneus to Nestor, who outlived three generations of men",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Salmoneus": "Son of Aiolos, who dragged bronze kettles behind his chariot and threw torches, claiming to be Zeus -- and was struck by the real thunderbolt for it. Apollod. 1.9.7",
+    "Tyro": {"gender":"female","note":"Daughter of Salmoneus, who loved the river Enipeus, and whom Poseidon took in the river's shape. Od. 11.235-259"},
+    "Pelias": {"divineParents":["Poseidon"],"note":"Took Iolkos from his half-brother and sent Iason after the fleece to be rid of him; his own daughters boiled him alive on Medeia's promise it would make him young. Apollod. 1.9.8-9, 1.9.27"},
+    "Neleus": {"divineParents":["Poseidon"],"note":"Twin of Pelias, founder of Pylos, killed with eleven of his twelve sons by Herakles. Apollod. 1.9.8-9, 2.7.3"},
+    "Nestor": {"anchor":{"relativeTo":"Tlepolemos","offset":0},"note":"The twelfth son, away when Herakles came, and so the only one left. He outlived three generations of men and is the old counsellor of the Iliad, whose advice is always long and usually about how much better things were when he was young. Il. 1.247-284, Od. 3"},
+    "Antilochos": {"anchor":{"relativeTo":"Tlepolemos","offset":0},"note":"Son of Nestor, who ran second in the funeral games and was killed at Troy defending his father -- the death Achilles took hardest after Patroklos. Od. 4.187-188"}
+  },
+  "unions": [
+    {"id":"u_salmoneus","p":["Salmoneus"],"c":["Tyro"]},
+    {"id":"u_tyro","p":["Tyro"],"c":["Pelias","Neleus"],"status":"unknown","note":"Od. 11.235-259"},
+    {"id":"u_neleus","p":["Neleus"],"c":["Nestor"]},
+    {"id":"u_nestor","p":["Nestor"],"c":["Antilochos"]}
+  ]
+}

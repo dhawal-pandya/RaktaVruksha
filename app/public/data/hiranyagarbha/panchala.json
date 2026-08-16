@@ -51,6 +51,7 @@
     {"id":"u_NilaP_ShantiP","p":["NilaP"],"c":["ShantiP"],"u":"2026-07-27T00:00:00.000Z"},
     {"id":"u_ShantiP_Sushanti","p":["ShantiP"],"c":["Sushanti"],"u":"2026-07-27T00:00:00.000Z"},
     {"id":"u_Sushanti_Puruja","p":["Sushanti"],"c":["Puruja"],"u":"2026-07-27T00:00:00.000Z"},
-    {"id":"u_Puruja_Arka","p":["Puruja"],"c":["Arka"],"u":"2026-07-27T00:00:00.000Z"}
+    {"id":"u_Puruja_Arka","p":["Puruja"],"c":["Arka"],"u":"2026-07-27T00:00:00.000Z"},
+    {"id":"u_indra_ahalya","p":["Indra","Ahalya"],"c":[],"status":"partners","cross":true,"note":"Indra came to her in Gautama's absence, and Valmiki is explicit that she knew him and was curious. Gautama cursed them both -- Indra to wear the marks of his own desire, Ahalya to lie invisible in ash until Rama's foot fell on the stone. Rām 1.48","u":"2026-08-16T00:00:00.000Z"}
   ]
 }

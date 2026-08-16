@@ -21,11 +21,11 @@ import { describe, expect, it } from "vitest";
 import { MANIFEST, checkShards, dense, expand, shardFileName } from "./shards";
 import { buildDataset } from "./dataset";
 import { buildGraph } from "./graph";
-import { validateData } from "./validate";
+import { parseFamilyData, validateData } from "./validate";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const DATA = resolve(here, "../../public/data");
-const DATASETS = ["family", "ramayan", "mahabharat", "hiranyagarbha"];
+const DATASETS = ["family", "ramayan", "mahabharat", "hiranyagarbha", "chaos"];
 
 const read = (dir: string): Map<string, string> => {
   const files = new Map<string, string>();
@@ -58,6 +58,21 @@ describe.each(DATASETS)("%s", (dir) => {
     expect(checkShards(files)).toEqual([]);
     expect(validateData(raw).errors).toEqual([]);
     expect(buildGraph(buildDataset(raw)).nodes.length).toBeGreaterThan(0);
+  });
+
+  // parseFamilyData rebuilds every record field by field, so a field it does not
+  // know about is dropped on the way into the app and nowhere else. crossEra was
+  // lost exactly this way: the files were right, every Node-side check passed,
+  // and the browser levelled forty cross-era bonds into a 4,000-row pancake.
+  it("survives the parser the app actually boots through", () => {
+    const direct = expand(files);
+    const parsed = parseFamilyData(JSON.stringify(direct));
+    expect(parsed.errors).toEqual([]);
+    expect(parsed.raw).not.toBeNull();
+    const byId = <T extends { id: string }>(xs: T[]) =>
+      Object.fromEntries(xs.map((x) => [x.id, x]));
+    expect(byId(parsed.raw!.unions)).toEqual(byId(direct.unions));
+    expect(byId(parsed.raw!.people)).toEqual(byId(direct.people));
   });
 
   it("files every record where it is drawn", () => {

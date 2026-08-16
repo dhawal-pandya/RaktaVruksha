@@ -13,6 +13,8 @@ import {
 } from '../core/colors';
 import { useStore } from '../state/store';
 import { computeVisuals, type VisualState } from './visuals';
+import { UNION_STATUS } from '../core/status';
+import type { UnionStatus } from '../core/types';
 
 type FGNode = GraphNode & {
   x?: number;
@@ -126,13 +128,14 @@ const linkBaseColor = (l: FGLink): string =>
     : LINK_COLORS[l.tag ?? 'biological'];
 
 // Supported by 3d-force-graph at runtime but absent from the react wrapper's prop
-// types: divorced marriages dash, adoptive child links dot.
+// types. A partner line's dash comes from core/status.ts, so a new status brings
+// its own; adoptive child links dot.
 const linkDashProp: Record<string, unknown> = {
   linkLineDash: (l: FGLink) =>
     l.kind === 'divine'
       ? [2, 3]
-      : l.kind === 'partner' && l.status === 'divorced'
-        ? [4, 3]
+      : l.kind === 'partner'
+        ? (UNION_STATUS[(l.status ?? 'married') as UnionStatus]?.dash ?? null)
         : l.kind === 'child' && l.tag === 'adoptive'
           ? [1.5, 2.5]
           : null,

@@ -1,0 +1,37 @@
+{
+  "family": "familyOkeanos",
+  "name": "Okeanids",
+  "color": "#4fa3c7",
+  "note": "Okeanos and Tethys: three thousand daughters and the rivers of the world",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"female","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Styx": {"divine":true,"note":"Eldest of the Okeanids and the river of the underworld, whose water is the oath no god dare break: one who swears falsely by her lies breathless a year and is cut off from the gods nine more. Gives Stygian. Theog. 361, 775-806"},
+    "Metis": {"divine":true,"note":"Counsel, wisest of gods and men, and Zeus' first wife. Warned she would bear a son greater than his father, he swallowed her -- and Athena was born from his head. Metis remains inside him, giving counsel. Theog. 358, 886-900"},
+    "Klymene": {"divine":true,"note":"Okeanid, wife of Iapetos and mother of Atlas and Prometheus. Theog. 351, 507"},
+    "Doris": {"divine":true,"note":"Wife of Nereus and mother of the fifty Nereids. Theog. 350"},
+    "Eurynome": {"divine":true,"note":"Third wife of Zeus and mother of the Graces; in the older Pelasgian story, a queen of Olympos before Kronos. Theog. 358, 907-909"},
+    "Elektra": {"divine":true,"note":"Wife of Thaumas, mother of Iris and the Harpies. Not Elektra of Mykenai, nor Elektra the Pleiad -- three of the name are in this tree. Theog. 349, 265-269"},
+    "Kallirhoe": {"divine":true,"note":"Fair-flowing, mother of Geryon by Chrysaor. Theog. 351, 979-983"},
+    "Perseis": {"divine":true,"note":"Wife of Helios and mother of Kirke and Aietes. Theog. 356, Od. 10.135-139"},
+    "Peitho": {"divine":true,"note":"Persuasion. Theog. 349"},
+    "Tyche": {"divine":true,"note":"Fortune, luck. Roman: Fortuna -- fortune, fortunate. Theog. 360"},
+    "Inachos": {"gender":"male","divine":true,"note":"River of Argos and its first king; through his daughter Io the deepest line in this tree begins. Theog. 337, Apollod. 2.1.1"},
+    "Asopos": {"gender":"male","divine":true,"note":"River of Boiotia, father of twenty daughters, of whom Zeus carried off Aigina. Apollod. 3.12.6"},
+    "Acheloos": {"gender":"male","divine":true,"note":"Greatest of rivers; he wrestled Herakles for Deianeira and lost a horn, which became the cornucopia. Gives the horn of plenty its story. Theog. 340, Ov. Met. 9.1-88"},
+    "Peneios": {"gender":"male","divine":true,"note":"River of Thessaly, father of Daphne, who became the laurel rather than be caught by Apollo. Theog. 343"},
+    "Skamandros": {"gender":"male","divine":true,"note":"River of Troy, who rose against Achilles when his water choked with the dead. Il. 21.211-382"},
+    "Alpheios": {"gender":"male","divine":true,"note":"River of Elis, who pursued the nymph Arethousa under the sea to Sicily. Theog. 338"},
+    "Nilos": {"gender":"male","divine":true,"note":"The Nile. Theog. 338"},
+    "Eridanos": {"gender":"male","divine":true,"note":"Theog. 338"},
+    "Kirke": {"name":"Kirke (Circe)","divine":true,"note":"The witch of Aiaia, who turned Odysseus' men into swine and then kept him a year. Roman: Circe. Gives circean. Daughter of Helios and the Okeanid Perseis. Od. 10.135-574"},
+    "Aietes": {"gender":"male","note":"King of Kolchis, keeper of the Golden Fleece, and father of Medeia. Theog. 956-962"},
+    "Medeia": {"name":"Medeia (Medea)","anchor":{"relativeTo":"Tlepolemos","offset":0},"note":"Granddaughter of Helios and priestess of Hekate; she gave Jason the fleece and her own brother's life, and when he left her for another she killed their children. Gives Medea complex. Apollod. 1.9.23-28, Euripides"},
+    "Phaethon": {"gender":"male","divineParents":["Helios"],"note":"Son of Helios and the Okeanid Klymene. Mocked for claiming the sun as his father, he made his father swear by Styx to grant him anything and then asked to drive the chariot; he scorched Africa into desert and Zeus shot him out of the sky. Ov. Met. 1.750-2.400"}
+  },
+  "unions": [
+    {"id":"u_okeanos_tethys","p":["Okeanos","Tethys"],"c":["Inachos","Asopos","Acheloos","Peneios","Skamandros","Alpheios","Nilos","Eridanos","Styx","Metis","Klymene","Doris","Eurynome","Elektra","Kallirhoe","Perseis","Peitho","Tyche"],"note":"Three thousand daughters and as many sons, Hesiod says, and it is not possible to tell all their names; these are the ones the rest of the tree needs. Theog. 337-370"},
+    {"id":"u_helios_perseis","p":["Helios","Perseis"],"c":["Kirke","Aietes","Pasiphae"],"gap":12,"note":"Helios is a Titan's son and his children belong to the heroic age: Pasiphae marries Minos, Aietes fathers Medeia, Kirke keeps Odysseus a year. The gap is what stands between a god with no generation and the mortals he is dated by."},
+    {"id":"u_aietes","p":["Aietes"],"c":["Medeia"]},
+    {"id":"u_helios_klymene","p":["Helios","Klymene"],"c":["Phaethon"],"status":"partners","note":"Ov. Met. 1.750-779"}
+  ]
+}

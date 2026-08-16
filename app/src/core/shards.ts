@@ -95,6 +95,8 @@ interface UnionEntry {
   status?: UnionStatus;
   order?: number;
   gap?: number;
+  /** A bond across generations: drawn, never levelled. See UnionRecord.crossEra. */
+  cross?: boolean;
   note?: string;
   u?: string;
 }
@@ -157,6 +159,7 @@ const isChainLink = (
   u.status === d.status &&
   u.order === undefined &&
   u.childGap === undefined &&
+  u.crossEra === undefined &&
   u.notes === undefined &&
   u.updatedAt === d.stamp &&
   u.id === chainId(u.partners[0], u.children[0]);
@@ -196,6 +199,7 @@ const encodeUnion = (
   if (u.status !== d.status) e.status = u.status;
   if (u.order !== undefined) e.order = u.order;
   if (u.childGap !== undefined) e.gap = u.childGap;
+  if (u.crossEra !== undefined) e.cross = u.crossEra;
   if (u.notes !== undefined) e.note = u.notes;
   if (u.updatedAt !== d.stamp) e.u = u.updatedAt;
   return e;
@@ -424,6 +428,7 @@ const decodeUnion = (
   };
   if (e.order !== undefined) u.order = e.order;
   if (e.gap !== undefined) u.childGap = e.gap;
+  if (e.cross !== undefined) u.crossEra = e.cross;
   if (e.note !== undefined) u.notes = e.note;
   return u;
 };

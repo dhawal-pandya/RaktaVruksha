@@ -62,6 +62,15 @@ The **union** (a partnership) is still the sole carrier of relationships; people
 have no parent/child/spouse arrays. `p` is partners, `c` children, `a` adopted,
 `gap` is `childGap`, `u` an `updatedAt` that differs from the header's `stamp`.
 
+**`"cross": true`** marks a bond between two people who are *not* contemporaries —
+Zeus and Ganymedes, Oidipous and his own mother, a god and a mortal. Every other
+union levels its partners onto one row, which is what makes a couple read as a
+pair; for these it would ask someone to sit a generation below themselves, so a
+cross-era union is drawn and then ignored by the leveller and its thread stretches
+down the tree. It carries no children — a child's generation must come from a
+parent the leveller can see — so where such a pairing has issue, the child hangs
+from the partner of its own era with a `divineParents` ray to the other.
+
 **A record lives in the file of the family it is drawn with**, which is not always
 the one it was born into: Karna's `birthFamilyId` is null, but he is rendered
 among the Sutas who raised him, so he is in `suta.json` — where someone looking at
@@ -91,7 +100,17 @@ The model distinguishes, without collapsing them into each other:
 
 | Case | Encoding |
 |---|---|
-| Born out of wedlock | 2-partner union, `status: "partners"` |
+| Married | `status: "married"` — **and only a marriage welds the two orbs into one body** |
+| Born out of wedlock | 2-partner union, `status: "partners"`; a thread, not a weld |
+| Taken by force | `status: "abduction"` — seizure or deception, drawn in red |
+
+**Adding a status** is one entry in `app/src/core/status.ts` plus its name in
+`UnionStatus`. That table declares the label, the one-line meaning, the colour,
+the dash, whether the pair welds, and which union wins the weld when someone has
+several — and the legend, both renderers, the parser and the layout all read from
+it. Before it existed a status was spread over seven files, and `crossEra` proved
+what that costs: miss the parser's whitelist and the field is silently dropped on
+the way into the browser, with every test still green.
 | Partner unknown | 1-partner union (a data gap, not a status) |
 | Adopted | child sits in `adoptedChildren` of the adoptive union; a biological union may coexist |
 | Divorce + remarriage | multiple unions per person, each with its own `familyId`, `status`, `order` |
