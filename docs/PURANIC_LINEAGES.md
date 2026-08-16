@@ -798,7 +798,10 @@ daughters: **Ākūti** (whose son by Ruchi was Yajña), **Devahūti** (whose son
 married Daksha. That last is the join: it would make Daksha, and so the entire deva world
 of Part I, a son-in-law of the first Manu.
 
-**2. Daksha's sixty daughters** (`SB 6.6.1-11`, read). The layer everything divine hangs
+**2. Daksha's sixty daughters** (`SB 6.6.1-11`, read) — **done**, in pass four for the
+daughters and pass six for the children still missing under them (the eleven Rudras, the ten
+Vishvadevas, and the two Vasus that were not already in the tree in a later birth; see XIII.1
+for why it is two and not eight). The layer everything divine hangs
 from. Ten to **Dharma**: Bhānu, Lambā, Kakud, Yāmi, Viśvā, Sādhyā, Marutvatī, **Vasu**,
 Muhūrtā, Saṅkalpā. Seventeen to **Kaśyapa**, twenty-seven to **Candra** (the nakshatras,
 already here), and two each to **Aṅgiras**, **Kṛśāśva** and **Bhūta**. The prize is Vasu:
@@ -853,6 +856,14 @@ Viṣvaksena → Udaksena → Bhallāṭa, and Dvimīḍha → Yavīnara → ...
 
 A second pass, looking specifically for links rather than names. Nothing here is in the
 tree: this is the work order for when it goes in.
+
+> **Mostly worked off.** Pass six (see `LINEAGES_CURRENT.md`, XIII.4) drew Agastya's island,
+> Sanjaya's, Nala's and Vishvakarma's, Ilavida under Trinabindu, Dirghatamas, Kalindi,
+> Mitravinda, Nagnajiti, Bhadra, Lakshmana, Bindumati, Rishyasringa under Vibhandaka,
+> Sudeshna's Kekaya house with Kichaka, Nalakubara and Manigriva under Kubera, and Astika.
+> Still open here: Hridika's seat, and Ekalavya's Vrishni strand — both graded thin, and both
+> still thin. Vishvakarma was closed by the Bhagavata's Vastu, not the Mahabharata's Prabhasa,
+> which is why VII.1 recorded it as blocked; see XIII.1 for why that route works.
 
 The tree as it stands has **seven islands** and **eighty people with no parents at all**,
 sitting in the main constellation held only by a marriage or an era anchor. Each row below

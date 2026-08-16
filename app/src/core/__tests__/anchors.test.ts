@@ -180,3 +180,71 @@ describe('relative anchor validation', () => {
     expect(gen.get('Second')).toBe(gen.get('Dad')! + 2);
   });
 });
+
+/**
+ * The `"last"` anchor: below everyone, resolved against the finished tree.
+ *
+ * This exists because the row-number version of it broke in exactly the way the
+ * file above warns about. Kalki was pinned one row below Niraya, the end of the
+ * descent of Irreligion, which was the deepest thing in the tree on the day it
+ * was written. An additions pass put three rows of Kuru kings underneath, and
+ * the last avatar — the one nothing is supposed to come after — was suddenly
+ * three rows off the bottom with a dynasty below him.
+ *
+ * A proxy for "the bottom" is not the bottom. So it is resolved every run.
+ */
+describe('the "last" anchor', () => {
+  it('sits one row below the deepest person in the tree', () => {
+    const gen = rowsOf(withAnchoredOutsider('last'));
+    const others = [...gen].filter(([id]) => id !== 'Outsider').map(([, g]) => g);
+    expect(gen.get('Outsider')).toBe(Math.max(...others) + 1);
+  });
+
+  it('stays at the bottom when the tree grows below where it was', () => {
+    const shallow = rowsOf(withAnchoredOutsider('last'));
+    const deep = rowsOf(
+      withAnchoredOutsider('last', [
+        {
+          id: 'LateBorn',
+          firstName: 'LateBorn',
+          lastName: 'X',
+          gender: 'male',
+          alive: true,
+          birthFamilyId: null,
+          updatedAt: T0,
+          genAnchor: { relativeTo: 'Dad', offset: 40 },
+        },
+      ]),
+    );
+    expect(deep.get('Outsider')).toBeGreaterThan(shallow.get('Outsider')!);
+    expect(deep.get('Outsider')).toBe(deep.get('LateBorn')! + 1);
+  });
+
+  it('shares the final row with another "last" rather than racing it downward', () => {
+    const gen = rowsOf(
+      withAnchoredOutsider('last', [
+        {
+          id: 'AlsoLast',
+          firstName: 'AlsoLast',
+          lastName: 'X',
+          gender: 'male',
+          alive: true,
+          birthFamilyId: null,
+          updatedAt: T0,
+          genAnchor: 'last',
+        },
+      ]),
+    );
+    expect(gen.get('AlsoLast')).toBe(gen.get('Outsider'));
+  });
+
+  it('survives the parser the app boots through', () => {
+    const data = withAnchoredOutsider('last');
+    const parsed = JSON.parse(JSON.stringify(data));
+    const { raw, errors } = (
+      await import('../validate')
+    ).parseFamilyData(JSON.stringify(parsed));
+    expect(errors).toEqual([]);
+    expect(raw!.people.find(p => p.id === 'Outsider')!.genAnchor).toBe('last');
+  });
+});

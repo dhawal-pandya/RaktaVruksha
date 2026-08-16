@@ -5,11 +5,13 @@ The live working document. `PURANIC_LINEAGES.md` beside it is the **archive**: t
 here. Read that one for how the tree works and where its first thousand people came from;
 read this one for what is being done to it now.
 
-**State:** 1,188 people, 612 unions, 58 families, rows 0..101.
-Rama at row 66, Kurukshetra at row 94. All anchors relative.
+**State:** 1,273 people, 643 unions, 59 families, rows 0..104.
+Rama at row 72, Kurukshetra at row 100. All anchors relative.
 
 > The row numbers quoted throughout the archive (Rama 64, Kurukshetra 92) are from before
-> the Kardama graft in pass two; they are two rows shallow. Trust the numbers here.
+> the Kardama graft in pass two; they are two rows shallow. The ones quoted in passes two
+> to five below (Rama 66) are from before the Bindumati link in pass six, which put six
+> more rows into the solar line. Trust the numbers at the top of this file.
 
 ## Editing
 
@@ -438,6 +440,111 @@ and added.
 Measured before writing: **not one existing person's row moved.** All sixteen hang off unions
 that already existed (the ten wives' own marriages to Dharma, or Krishashva's two), so they
 inherit their parents' row exactly as any other child would.
+
+---
+
+## Pass six — the lesser-known, from a survey of the shards (81 people)
+
+The first pass run by hand-editing rather than by a script, and the first that could be, since
+the shard split made the whole dataset scannable. It came out of three sweeps over the files:
+capitalised names appearing in notes with no person record behind them; unions carrying
+`"c": []`; and people with no parent link. Every candidate was listed for approval before any
+of it went in, and four items came back changed — the Vasus (below), Galava, Mandavya, Valmiki
+and Putana, which I had recommended leaving out and was overruled on, correctly.
+
+**81 people, 24 unions, one new family (`familyAruni`).**
+
+### XIII.1 The Vasus, and why there are two of them and not sixteen
+
+`SB 6.6.10` gives Dharma's wife Vasu eight sons, and the union for it was in the tree already
+with no children. Adding all eight would have **duplicated the eight the tree already has** at
+what is now row 94, the sons Ganga bore Shantanu — the same Vasus in a later birth, under the
+Mahabharata's names (Dhara, Dhruva, Soma, Aha, Anila, Anala, Pratyusha, Prabhasa) rather than
+the Bhagavata's (Drona, Prana, Dhruva, Arka, Agni, Dosha, Vastu, Vibhavasu). The two lists
+overlap on one name and cannot be mapped onto each other.
+
+So the union carries **two** children, and the reason is structural: they are the two people
+in the entire dataset who had **no link of any kind** — no parent, no partner, no child, no
+anchor. **Agni** is one of the eight; **Vastu** is the father of **Vishvakarma** (`SB 6.6.13`),
+by his wife **Angirasi**. VII.1 had recorded the Vishvakarma link as blocked, because `MBh 1.66`
+routes him through Prabhasa and Prabhasa in this tree is Bhishma; the Bhagavata's Vastu route
+has no such collision. Both now sit at rows 8-9 and their rays to Nila and Nala run the length
+of the tree, which is the shape `divineParents` exists for.
+
+The full list of eight is on the union's note, and the Ganga union's note now says what those
+eight are.
+
+### XIII.2 Filled unions
+
+- **Eleven Rudras** under `u_kashyap_surabhi` (`SB 6.6.17-18`), which held two cows.
+- **Ten Vishvadevas** under `u_yama_Vishva` (`SB 6.6.9` for the union, the Vayu and Matsya
+  lists for the names). Five of the ten are names this tree already uses for other people.
+- **Seven Maruts** under `u_kashyap_diti` (`SB 6.18.53-78`). The texts name the seven courses
+  of the wind and not the forty-nine, so seven records stand for all of them.
+- **Sanda and Marka**, Shukracharya's sons and Prahlada's schoolmasters (`SB 7.5`), under the
+  union that carried only Devayani.
+- **Dadhichi** under `u_atharva_shanti`, which was empty — the man whose bones are the vajra,
+  cited by name in Indra's own note since the first pass. With **Suvarcha** and **Pippalada**
+  of the Prashna Upanishad, both Skanda/Bhavishya rather than Bhagavata and marked so.
+
+### XIII.3 Houses
+
+**The Aruni house** (`familyAruni`, six people): Uddalaka Aruni, Shvetaketu, Sujata, Kahoda,
+Ashtavakra, Nachiketa. Anchored on Janaka, whose court Ashtavakra wins his drowned father back
+in. Shvetaketu is here for `MBh 1.113` as much as for the Chandogya: he is the man who made the
+rule of marital fidelity, which is the rule Kunti's boon and Draupadi's five husbands are both
+measured against.
+
+**Tataka's house** (`familyYaksha`, five): Suketu, Tataka, Sunda, Maricha, Subahu. The first
+life Rama takes, and the golden deer, neither of which had a record.
+
+**Maya's house**: Hema, Mayavi, Dundubhi joined to Mandodari's existing union. One house now
+holds Ravana's queen and the two asuras whose deaths set Vali and Sugriva against each other.
+
+**Shurpanakha's house** (eight): Vidyutjihva and Shambhukumara give her a reason to be at
+Panchavati; Raka, Khara, Dushana and Kumbhinasi give Janasthana a family; Madhu and Lavana
+carry it through to the one thing Shatrughna does alone, and to the founding of Mathura.
+
+**Janaka's court**: Yajnavalkya, Maitreyi, Katyayani, Gargi Vachaknavi, in `_floating`,
+anchored on Janaka.
+
+**The Ruru line**: Ruru, Pramadvara, Shunaka, Saunaka, and the gandharva Vishvavasu (a
+namesake of Jamadagni's eldest; both notes say so). Ruru hangs off Pramati, already in the
+Bhargava file, and Pramadvara off Menaka, already in the apsara file. Saunaka is reached by an
+era gap and not a birth: the name is a patronymic of the line, and the Mahabharata has Ruru's
+story told *at* Saunaka's session as that house's own ancient history. It closes the frame the
+whole telling sits in, the way Astika closed the sacrifice.
+
+### XIII.4 VII.1 and VII.2, worked off
+
+Links the archive found and never drew: **Gavalgana** (Sanjaya's father, and the last named
+human with no union at all), **Vibhandaka** (Rishyasringa's father), **Manigriva** — with
+**Nalakubara moved out of Vishrava's union and under Kubera**, where his own note had always
+said he belonged — **Gandini** under Kashiraja, **Bindumati** under Shashabindu,
+**Kichaka and the Upakichakas** with **Sudeshna** given her Kekaya house, and **Shalva of
+Saubha**, who is the "another" in Amba's note.
+
+**Trinabindu, Alambusha and Vishala** (`SB 9.2.29-33`) graft Ilavida, and through her the whole
+house of Lanka, onto the Dishta branch of Vaivasvata Manu — the link VII.2 called the highest
+value it had found. It is drawn as an era gap from Dishta, standing for the twenty-two kings
+the Bhagavata lists without stories.
+
+### XIII.5 What it cost: six rows
+
+**`u_Shashabindu_Bindumati` moved 585 people.** It is one union between two people already in
+the tree, and it welds the lunar trunk to the solar one at Mandhata — which means the longest
+path to the Ikshvaku kings now runs Yadu → Kroshtu → Shashabindu → Bindumati → Mandhata
+instead of through Videha, and that route is six rows longer. Everything anchored to
+Brihadbala went down with it. The tree is 105 rows instead of 99 and Rama moved from 66 to 72.
+
+All 55 contemporary pairs still land within a row, which is the acceptance test, and the move
+is the leveler doing exactly what longest-path is chosen for. But it is worth knowing that the
+cheapest-looking item on the list — a union the archive called a leftover bug — was the one
+that reshaped the tree.
+
+**A method note that cost a rerun:** era gaps were first measured against the rows as they
+stood *before* the additions, and the Bindumati link then moved those rows underneath them.
+Any gap has to be measured after everything else is in.
 
 ---
 

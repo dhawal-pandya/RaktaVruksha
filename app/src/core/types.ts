@@ -7,10 +7,31 @@ export interface RelativeAnchor {
   offset: number;
 }
 
+/**
+ * "Below everyone, whoever they turn out to be."
+ *
+ * The mirror of the rule that puts Brahma at row 0: he is there because he is
+ * the only person with no parent, so his place is a consequence of the data and
+ * cannot go stale. Kalki's place has no such consequence behind it — he is the
+ * avatar who has not happened yet, and the only thing true of his row is that
+ * nothing comes after it. Said as a row number, or as an offset from whoever
+ * happened to be deepest on the day, that goes wrong the moment the tree grows:
+ * Kalki was pinned one below Niraya, and the additions pass put three rows of
+ * Kuru kings underneath him.
+ *
+ * So it is resolved last, against the finished tree, every run.
+ */
+export type LastAnchor = "last";
+
 /** True for the `{ relativeTo, offset }` form of `genAnchor`. */
 export const isRelativeAnchor = (
-  a: number | RelativeAnchor | undefined,
+  a: number | RelativeAnchor | LastAnchor | undefined,
 ): a is RelativeAnchor => typeof a === "object" && a !== null;
+
+/** True for the "below everyone" form of `genAnchor`. */
+export const isLastAnchor = (
+  a: number | RelativeAnchor | LastAnchor | undefined,
+): a is LastAnchor => a === "last";
 /** How a pairing came about.
  *
  *  `abduction` is the one that needed adding for the Greek tree, and it covers a
@@ -58,8 +79,11 @@ export interface PersonRecord {
    *     scene with (Kapila beside Sagara, Astika beside Janamejaya), and
    *     `offset` is negative for rows ABOVE the target.
    *
+   *   - `"last"` — below everyone else in the tree, resolved against the
+   *     finished leveling. See LastAnchor.
+   *
    *  Relative anchors must not form a cycle; validateData rejects that. */
-  genAnchor?: number | RelativeAnchor;
+  genAnchor?: number | RelativeAnchor | LastAnchor;
   /** A second name for a figure who lived as both a man and a woman (Sudyumna
    *  for Ila, Shikhandini for Shikhandi), shown on the opposite side of the orb,
    *  placed by `altGender` (defaults to the opposite of `gender`). The person's

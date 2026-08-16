@@ -142,7 +142,11 @@
     "Midhvan": {"u":"2026-08-02T00:00:00.000Z","note":"Son of Narishyanta. SB 9.2.20"},
     "Satyashrava": {"u":"2026-08-02T00:00:00.000Z","note":"Son of Narishyanta. SB 9.2.21"},
     "Urushrava": {"u":"2026-08-02T00:00:00.000Z","note":"Son of Narishyanta. SB 9.2.21"},
-    "Devadatta": {"u":"2026-08-02T00:00:00.000Z","note":"Son of Narishyanta, and father of Agnivesya. SB 9.2.21"}
+    "Devadatta": {"u":"2026-08-02T00:00:00.000Z","note":"Son of Narishyanta, and father of Agnivesya. SB 9.2.21"},
+    "Trinabindu": {"u":"2026-08-16T00:00:00.000Z","note":"A king of the Dishta branch of Manu's house. The apsara Alambusha came to him and stayed, and bore him Ilavida and three sons. Ilavida married the sage Vishrava and their son was Kubera — so this one marriage is the whole join between the solar house and the house of Lanka, and the reason the rakshasas in this tree are not a separate creation. SB 9.2.29-33"},
+    "Alambusha": {"gender":"female","u":"2026-08-16T00:00:00.000Z","note":"An apsara who came to King Trinabindu and stayed as his queen; mother of Ilavida and of Vishala. SB 9.2.32"},
+    "Vishala": {"u":"2026-08-16T00:00:00.000Z","note":"Son of Trinabindu and Alambusha; he built the city of Vaishali, which keeps his name. SB 9.2.33"},
+    "Ilavida": {"gender":"female","u":"2026-08-16T00:00:00.000Z","note":"First wife of Vishrava; mother of Kubera."}
   },
   "unions": [
     {"id":"r_u_manu","p":["Manu","Shraddha"],"c":["Ikshvaku","Ila","Sharyati","Nabhaga","Nriga","Narishyanta","Dishta","Prishadhra"],"u":"2026-07-20T00:00:00.000Z"},
@@ -180,6 +184,8 @@
     {"id":"u_VasuN_Pratika","p":["VasuN"],"c":["Pratika"],"note":"SB 9.2.17.","u":"2026-08-02T00:00:00.000Z"},
     {"id":"u_Pratika_Oghavan","p":["Pratika"],"c":["Oghavan"],"note":"SB 9.2.17.","u":"2026-08-02T00:00:00.000Z"},
     {"id":"u_narishyanta","p":["Narishyanta"],"c":["Chitrasena_3","Midhvan","Satyashrava","Urushrava","Devadatta"],"note":"Ten sons at SB 9.2.20-21; the five carried here are those the Purana follows any further.","u":"2026-08-02T00:00:00.000Z"},
-    {"id":"u_Devadatta_Agnivesya","p":["Devadatta"],"c":["Agnivesya"],"note":"SB 9.2.21-22.","u":"2026-08-02T00:00:00.000Z"}
+    {"id":"u_Devadatta_Agnivesya","p":["Devadatta"],"c":["Agnivesya"],"note":"SB 9.2.21-22.","u":"2026-08-02T00:00:00.000Z"},
+    {"id":"u_Dishta_Trinabindu","p":["Dishta"],"c":["Trinabindu"],"gap":61,"note":"SB 9.2.29-33 names twenty-two kings between Dishta and Trinabindu, none of whom carries a story. The gap stands for them, and is set to the distance the eras actually need rather than to the count.","u":"2026-08-16T00:00:00.000Z"},
+    {"id":"u_trinabindu_alambusha","p":["Trinabindu","Alambusha"],"c":["Ilavida","Vishala"],"note":"SB 9.2.32-33.","u":"2026-08-16T00:00:00.000Z"}
   ]
 }

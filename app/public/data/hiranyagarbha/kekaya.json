@@ -2,15 +2,19 @@
   "family": "familyKekaya",
   "name": "Kekaya",
   "color": "#a78bea",
-  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
   "people": {
-    "Kaikeyi": {"gender":"female","note":"Second queen of Dasharatha, princess of Kekaya; her two boons won Bharata the throne and drove Rama to the forest."},
+    "Kaikeyi": {"gender":"female","u":"2026-07-20T00:00:00.000Z","note":"Second queen of Dasharatha, princess of Kekaya; her two boons won Bharata the throne and drove Rama to the forest."},
     "Ashvapati": {"u":"2026-07-27T00:00:00.000Z","anchor":{"relativeTo":"Rama","offset":-2},"note":"King of Kekaya; father of Kaikeyi and Yudhajit."},
-    "Yudhajit": "Prince of Kekaya, Kaikeyi's brother, whose invitation took Bharata away from Ayodhya at the hour of Dasharatha's death.",
-    "KekayaKing": {"name":"Kekaya","u":"2026-07-27T00:00:00.000Z","note":"Son of Shibi, called atma-tattva-vit, knower of the truth of the self; the Kekaya kingdom keeps his name. SB 9.23.3"}
+    "Yudhajit": {"u":"2026-07-20T00:00:00.000Z","note":"Prince of Kekaya, Kaikeyi's brother, whose invitation took Bharata away from Ayodhya at the hour of Dasharatha's death."},
+    "KekayaKing": {"name":"Kekaya","u":"2026-07-27T00:00:00.000Z","note":"Son of Shibi, called atma-tattva-vit, knower of the truth of the self; the Kekaya kingdom keeps his name. SB 9.23.3"},
+    "Sudeshna": {"gender":"female","note":"Queen of Virata, of the Kekaya house and sister of his commander Kichaka. She took Draupadi, disguised as the maid Sairandhri, into her own service for the Pandavas' thirteenth year, and sent her to her brother's house on an errand not knowing it would end in his death at Bhima's hands. MBh 4.8-22"},
+    "Kichaka": "Commander of Virata's army and brother of his queen Sudeshna, both of the Kekaya house. In the Pandavas' thirteenth year he wanted Draupadi, who was passing as the maid Sairandhri, and would not be told no; Sudeshna was made to send her to his rooms on an errand. She went to Bhima instead, who kept the assignation in her place in the dancing hall in the dark and beat him into a ball of meat with nothing standing out of it. MBh 4.15-22",
+    "Upakichaka": "The Upakichakas, Kichaka's hundred and five brothers, who took Draupadi to burn on his pyre with him and were killed by Bhima in the dark, all of them, on the road. One record for the hundred and five. It is that killing — impossible in a court with no Bhima in it — that tells Duryodhana's spies where to look. MBh 4.22-23"
   },
   "unions": [
-    {"id":"r_u_ashvapati","p":["Ashvapati"],"c":["Kaikeyi","Yudhajit"]},
-    {"id":"u_KekayaKing_Ashvapati","p":["KekayaKing"],"c":["Ashvapati"],"gap":41,"note":"Kekaya's line runs unnamed down to Ashvapati, father of Kaikeyi and Yudhajit. SB 9.23.3","u":"2026-07-27T00:00:00.000Z"}
+    {"id":"r_u_ashvapati","p":["Ashvapati"],"c":["Kaikeyi","Yudhajit"],"u":"2026-07-20T00:00:00.000Z"},
+    {"id":"u_KekayaKing_Ashvapati","p":["KekayaKing"],"c":["Ashvapati"],"gap":41,"note":"Kekaya's line runs unnamed down to Ashvapati, father of Kaikeyi and Yudhajit. SB 9.23.3","u":"2026-07-27T00:00:00.000Z"},
+    {"id":"u_Ashvapati_kekaya","p":["Ashvapati"],"c":["Sudeshna","Kichaka","Upakichaka"],"gap":28,"note":"MBh 4.15 makes Virata's queen a princess of Kekaya and Kichaka her brother, and names no father between them and the Kekaya house of the Ramayan. The gap says only that: they stand in that house, however many kings below Ashvapati the texts leave unlisted."}
   ]
 }

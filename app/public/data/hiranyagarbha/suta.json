@@ -16,10 +16,12 @@
     "Shatrunjaya": "Son of Karna and Vrishali; killed at Kurukshetra.",
     "Prasena": "Son of Karna and Vrishali; killed at Kurukshetra.",
     "Banasena": "Son of Karna and Vrishali; killed at Kurukshetra.",
-    "Dvipata": "Son of Karna and Vrishali; killed at Kurukshetra."
+    "Dvipata": "Son of Karna and Vrishali; killed at Kurukshetra.",
+    "Gavalgana": {"u":"2026-08-16T00:00:00.000Z","anchor":{"relativeTo":"Brihadbala","offset":-2},"note":"A suta of Dhritarashtra's court. His son took his patronymic, Gavalgani, and it is by that name the epic mostly names the man who narrated the war — so the whole of the Bhishma, Drona, Karna and Shalya parvas are told under this man's name. MBh 1.63, 5.22"}
   },
   "unions": [
     {"id":"u_adhiratha_radha","p":["Adhiratha","Radha"],"c":[],"a":["Karna"],"u":"2026-07-20T00:00:00.000Z"},
-    {"id":"u_karna","p":["Karna","Vrushali"],"c":["Vrishasena","Vrishaketu","Chitrasena_2","Satyasena","Sushena_4","Shatrunjaya","Prasena","Banasena","Dvipata"],"u":"2026-07-20T00:00:00.000Z"}
+    {"id":"u_karna","p":["Karna","Vrushali"],"c":["Vrishasena","Vrishaketu","Chitrasena_2","Satyasena","Sushena_4","Shatrunjaya","Prasena","Banasena","Dvipata"],"u":"2026-07-20T00:00:00.000Z"},
+    {"id":"u_Gavalgana_Sanjaya","p":["Gavalgana"],"c":["Sanjaya"],"note":"MBh 1.63.","u":"2026-08-16T00:00:00.000Z"}
   ]
 }
