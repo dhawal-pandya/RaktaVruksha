@@ -1,0 +1,22 @@
+{
+  "family": "familyChedi",
+  "name": "Chedi",
+  "color": "#8fa3b8",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Damaghosha": {"u":"2026-08-02T01:00:00.000Z","note":"King of Chedi; husband of Shrutashrava and father of Shishupala. His son's death was foretold at birth — a third eye and four arms that would vanish, and his killer named, the moment the boy sat on a particular lap; Krishna's was the lap, and Shishupala's murder-death both took the extra limbs away and, a hundred insults later, ended him at Krishna's hand."},
+    "Shishupala": "King of Chedi, cousin of Krishna; born three-eyed and four-armed under a doom that Krishna would kill him, which came to pass at Yudhishthira's rajasuya after his hundredth insult.",
+    "Karenumati": {"gender":"female","note":"A princess of Chedi; wife of Nakula."},
+    "Dhrishtaketu": "Son of Shishupala; king of Chedi after his father and an ally of the Pandavas in the war.",
+    "Kushamba": {"u":"2026-07-27T00:00:00.000Z","note":"Son of Uparichara Vasu, a king of Chedi. SB 9.22.6"},
+    "Pratyagra": {"u":"2026-07-27T00:00:00.000Z","note":"Son of Uparichara Vasu, a king of Chedi. SB 9.22.6"},
+    "Cedipa": {"u":"2026-08-02T02:00:00.000Z","note":"Son of Uparichara Vasu; a ruler of Chedi, from whom the later Chedi—Caidya kings descend, Shishupala's line among them."},
+    "Vriddhasharma": {"u":"2026-07-27T00:00:00.000Z","note":"King of Karusha, husband of Shrutadeva and father of Dantavakra. SB 9.24.37"}
+  },
+  "unions": [
+    {"id":"u_damaghosha","p":["Damaghosha","Shrutashrava"],"c":["Shishupala"]},
+    ["Shishupala","Dhrishtaketu"],
+    {"id":"u_uparichara_girika","p":["UparicharaVasu","Girika"],"c":["Kushamba","Pratyagra","Cedipa","Brihadratha"],"u":"2026-07-27T00:00:00.000Z"},
+    {"id":"u_Cedipa_Damaghosha","p":["Cedipa"],"c":["Damaghosha"],"note":"Cedipa's line runs down to Damaghosha of Chedi, father of Shishupala. SB 9.22.6","u":"2026-07-27T00:00:00.000Z"}
+  ]
+}

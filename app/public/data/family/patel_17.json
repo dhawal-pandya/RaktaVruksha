@@ -1,0 +1,10 @@
+{
+  "family": "familyPatel_17",
+  "name": "Patel",
+  "color": "#d8af5a",
+  "defaults": {"stamp":"2026-07-19T08:42:16.648Z","gender":"male","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Pragnesh_1": {"name":"Pragnesh"}
+  },
+  "unions": []
+}

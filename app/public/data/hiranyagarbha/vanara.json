@@ -1,0 +1,37 @@
+{
+  "family": "familyVanara",
+  "name": "Vanara",
+  "color": "#b07a44",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Riksharaja": {"anchor":{"relativeTo":"Rama","offset":-1},"note":"The vanara king of Kishkindha; foster-father of Vali and Sugriva, who were begotten of the gods Indra and Surya."},
+    "Vali": {"divineParents":["Indra"],"note":"Elder vanara prince, son of Indra; king of Kishkindha of peerless strength, slain by Rama's arrow to restore Sugriva."},
+    "Sugriva": {"u":"2026-07-20T00:00:00.000Z","divineParents":["Surya"],"note":"Younger vanara prince, son of Surya; exiled by Vali and restored by Rama, whose army of vanaras he then led to Lanka."},
+    "SushenaR": {"name":"Sushena","anchor":{"relativeTo":"Rama","offset":-1},"note":"Vanara elder and physician; father of Tara."},
+    "TaraR": {"name":"Tara","gender":"female","u":"2026-07-20T00:00:00.000Z","note":"Daughter of Sushena; the wise queen of Vali, and after him of Sugriva. Mother of Angada."},
+    "Ruma": {"gender":"female","u":"2026-08-02T01:00:00.000Z","note":"Wife of Sugriva. Seized by Vali along with the kingdom when he exiled his brother on a misunderstanding; restored to Sugriva only after Rama killed Vali to keep his alliance's promise."},
+    "Angada": {"u":"2026-08-02T01:00:00.000Z","note":"Son of Vali and Tara; the vanara prince who led Rama's embassy to Ravana. Made yuvaraja by Sugriva out of guilt at having killed his father Vali; led the party that found Sita in Lanka after Hanuman's own search failed elsewhere; and went as Rama's envoy into Ravana's own court to demand Sita's return, planting his foot and daring any rakshasa to move it before the whole assembly, which none could."},
+    "Kesari": {"anchor":{"relativeTo":"Rama","offset":-1},"note":"A vanara chief; the earthly father of Hanuman."},
+    "Anjana": {"name":"Anjana (Punjikasthala)","gender":"female","note":"The apsara Punjikasthala, called Managarva in the Puranic account, cursed into the body of a vanara and born a princess of Kishkindha. She and Kesari propitiated Vayu for a son and got Hanuman. Rama 4.66; Puranic Encyclopaedia, Anjana"},
+    "Hanuman": {"u":"2026-08-01T00:00:00.000Z","divine":true,"divineParents":["Vayu"],"note":"Kesari + Anjana (apsara Punjikasthala, cursed); Vayu-begotten. Chiranjivi; Shaiva reading: Rudra-avatar. Leapt to Lanka; found Sita; burned the city with his own tail; carried the whole Sanjeevani mountain, not knowing which herb. Lifelong brahmachari; married Suvarchala, Surya's daughter, as guru-dakshina for the last of the nine grammars — a union Surya himself called for the world's good, not a breach of the vow (Parashara Samhita, not the Bhagavata; a Telangana temple tradition). Rama 1.17, 4.66, 5.1; Shiva Purana 3.20."},
+    "Nala": {"divineParents":["Vishvakarma"],"anchor":{"relativeTo":"Rama","offset":0},"note":"Vanara son of Vishwakarma; the architect who built Rama's bridge across the sea to Lanka."},
+    "Nila": {"divineParents":["Agni"],"anchor":{"relativeTo":"Rama","offset":0},"note":"Vanara chief, son of Agni; a commander of Rama's army."},
+    "Makardhwaja": "Son of Hanuman, born without a mother's womb. Cooling himself in the sea after burning Lanka, Hanuman shed a drop of sweat; a makara swallowed it and conceived, and when the fish was cut open the child inside was part vanara and part reptile. Ahiravana's people raised him and set him to guard the gates of Patala, where his own father, come to rescue Rama and Lakshmana, had to fight him without knowing him. Hanuman, who had been a brahmachari since birth, saw the truth in dhyana, and afterwards gave him Patala to rule. Krittivasi and Ananda Ramayanas; Ramakien, where he is Macchanu",
+    "DhruvaV": {"name":"Dhruva","note":"Son of Angada, and so Vali's grandson: the Brahmanda Purana carries the house of Kishkindha one generation past the war, where Valmiki leaves it. Not Dhruva the son of Uttanapada, who became the pole star. Brahmanda Purana 3.7.220"},
+    "Panasa": {"anchor":{"relativeTo":"Rama","offset":-1},"note":"A vanara chief of Kishkindha, one of the captains Sugriva sent out to search for Sita, and the father of Ruma. Rama 4.39; Brahmanda Purana 3.7.221"},
+    "Vishvakarma": {"fam":null,"divine":true,"note":"The architect of the devas, who built Lanka for Kubera and the chariots and weapons of heaven. His son Nala inherited the craft, which is how a bridge of floating stone reached across the sea. Rama 6.22"},
+    "Agni": {"fam":null,"divine":true,"note":"The deva of fire, who carries the offering. Father of the vanara Nila, whose effulgence the epic says was his father's. Rama 1.17"}
+  },
+  "unions": [
+    {"id":"r_u_riksharaja","p":["Riksharaja"],"c":["Vali","Sugriva"],"u":"2026-07-20T00:00:00.000Z"},
+    {"id":"u_SushenaR_TaraR","p":["SushenaR"],"c":["TaraR"],"u":"2026-07-20T00:00:00.000Z"},
+    {"id":"r_u_vali_tara","p":["Vali","TaraR"],"c":["Angada"],"order":0,"u":"2026-07-20T00:00:00.000Z"},
+    {"id":"r_u_sugriva_ruma","p":["Sugriva","Ruma"],"c":[],"note":"The Brahmanda Purana says Ruma, daughter of Panasa, bore Sugriva three sons, and does not name them. Brahmanda Purana 3.7.221"},
+    {"id":"r_u_kesari_anjana","p":["Kesari","Anjana"],"c":["Hanuman"],"u":"2026-07-20T00:00:00.000Z"},
+    {"id":"u_HariBeast_Riksharaja","p":["HariBeast"],"c":["Riksharaja"],"u":"2026-07-22T00:00:00.000Z"},
+    {"id":"u_hanuman","p":["Hanuman","Makari"],"c":["Makardhwaja"],"status":"partners","note":"Not a marriage: a drop of sweat in the sea, swallowed. Krittivasi Ramayana"},
+    ["Angada","DhruvaV"],
+    ["Panasa","Ruma"],
+    {"id":"u_hanuman_suvarchala","p":["Hanuman","Suvarchala"],"c":[],"note":"To finish teaching Hanuman the nine grammars, Surya told him the last lesson required a married man, and offered his own daughter Suvarchala as the guru-dakshina; Surya himself framed it as brahmanda-kalyana, for the world's good, and no part of Hanuman's brahmacharya vow. She lives from then in tapas, apart from him. Parashara Samhita; the marriage is kept alive today at the Suvarchala Anjaneya Swamy temple in Telangana.","u":"2026-08-01T00:00:00.000Z"}
+  ]
+}

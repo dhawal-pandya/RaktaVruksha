@@ -1,0 +1,12 @@
+{
+  "family": "familyPandya_8",
+  "name": "Pandya",
+  "color": "#d8c65a",
+  "defaults": {"stamp":"2026-07-12T19:56:31.160Z","gender":"male","alive":true,"lastName":"Pandya","status":"married"},
+  "people": {
+    "Harshad": {}
+  },
+  "unions": [
+    {"id":"u_arunaben1_harshad","p":["Arunaben_1","Harshad"],"c":[],"order":1}
+  ]
+}

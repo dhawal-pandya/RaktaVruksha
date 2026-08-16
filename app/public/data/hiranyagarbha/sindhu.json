@@ -1,0 +1,13 @@
+{
+  "family": "familySindhu",
+  "name": "Sindhu",
+  "color": "#7ec8a0",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Jayadratha": {"u":"2026-08-02T01:00:00.000Z","note":"King of Sindhu, husband of Dushala; his blocking of the Pandavas at the pass sealed Abhimanyu's death, and Arjuna vowed and took his head the next day. Years earlier had tried to abduct Draupadi from the Pandavas' forest hermitage and been captured and humiliated, not killed, by Bhima at Yudhishthira's word; on the thirteenth day of the war held the gate alone against every other Pandava while Abhimanyu broke in and died trapped inside; Arjuna's sunset vow to kill him or immolate himself was fulfilled by Krishna's trick of blotting out the sun so Jayadratha showed himself too soon."},
+    "Suratha": "Son of Jayadratha and Dushala."
+  },
+  "unions": [
+    {"id":"u_jayadratha","p":["Jayadratha","Dushala"],"c":["Suratha"]}
+  ]
+}

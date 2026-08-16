@@ -11,28 +11,28 @@ Rama at row 66, Kurukshetra at row 94. All anchors relative.
 > The row numbers quoted throughout the archive (Rama 64, Kurukshetra 92) are from before
 > the Kardama graft in pass two; they are two rows shallow. Trust the numbers here.
 
-## Rebuilding
+## Editing
+
+The tree lives in `app/public/data/hiranyagarbha/`, one file per family, and is edited by
+opening the file and typing. See "The data files" in
+[DATA_AND_EDITING.md](DATA_AND_EDITING.md) for the format.
 
 ```bash
 cd app
-npm run add-lineages          # pass one   (archive, Parts I-IX)
-npm run add-more-lineages     # pass two   (below)
-npm run add-primordial-lines  # pass three (below; trimmed after this pass, see Pass three note)
-npm run add-daksha-daughters  # pass four  (below)
-npm run reanchor-eras         # era placement; idempotent
+npm run check
 npm test && npx tsc --noEmit && npm run build
 ```
 
-All the add-scripts are idempotent and refuse to write on an id collision or a
-`validateData` error. `reanchor-eras` prints a contemporaries checklist and a stranded-person
-check; both must come back clean.
+There is no build pipeline and no rebuild order any more. The four passes below were run by
+`add-lineages.ts`, `add-more-lineages.ts`, `add-primordial-lines.ts` and
+`add-daksha-daughters.ts`, plus `reanchor-eras.ts` for era placement — a stack of
+splice-and-graft scripts that existed only because a 21,000-line JSON document could not be
+hand-edited. The shard format removed that reason and the scripts are gone; their output is
+the files themselves, and their passes are recorded below as history.
 
-One footgun in the idempotency, worth knowing rather than being surprised by: pass four
-(`add-daksha-daughters.ts`) flags `Prasuti` divine, which bumps her `updatedAt` stamp past
-pass three's. Re-running `add-primordial-lines` *after* pass four has already run will then
-false-flag her as a collision and refuse to write — she isn't one, the script is just
-conservative about a timestamp it doesn't recognize. Not a problem for the documented
-sequence above, only for re-running a pass out of order.
+What survived is the checking half, in `npm run check`: structural integrity, `validateData`,
+the namesake list, and the contemporaries checklist `reanchor-eras` used to print. All must
+come back clean.
 
 ---
 
@@ -531,7 +531,7 @@ Everything below the line can be given to another AI working in this repository.
 ---
 
 You are continuing long-running work on **RaktaVruksha**, a 3D/2D kinship-graph app. Your
-dataset is `app/public/family-data.hiranyagarbha.json` — a Puranic family tree of 1,188
+dataset is `app/public/data/hiranyagarbha/` — a Puranic family tree of 1,188
 people across 102 generation rows, compiled from primary sources.
 
 **Read first, in this order:**
@@ -540,9 +540,9 @@ people across 102 generation rows, compiled from primary sources.
 2. `docs/PURANIC_LINEAGES.md` — the archive: the original 1,099-person compilation (Parts
    I-IX) and the build mechanics that still govern everything. Its row numbers are two rows
    shallow; its Part VIII is stale on Yajna (though not Rishabha and Prithu — see XI.2, trimmed).
-3. `app/scripts/add-daksha-daughters.ts` — the most recent pass, and the pattern to copy.
-   `app/scripts/add-primordial-lines.ts` is worth reading too, including its own note on why
-   part of it was removed after being added.
+3. `app/public/data/hiranyagarbha/ikshvaku.json` — the shape everything is written in, and
+   the file to copy from. "The data files" in `docs/DATA_AND_EDITING.md` explains the format;
+   `app/src/core/shards.ts` is the codec if you need the exact rules.
 
 **Your mission, both parts ongoing:**
 
@@ -562,7 +562,7 @@ thin notes.
   exactly this. Expect the tree below to shift; that is correct and the pipeline absorbs it.
 - **Shiva and Vishnu are decided against**, with reasons recorded. Do not add them, or their
   consorts and children, without explicit instruction.
-- **Anchors say WHO, not which row.** Always `anchor: { beside: "Sagara" }` in the scripts,
+- **Anchors say WHO, not which row.** Always `"anchor": { "relativeTo": "Sagara", "offset": 0 }`,
   never a bare number. Relative anchors resolve at load time and never go stale.
 - **An anchor is for a lineage that floats; a `childGap` is for one that is attached.**
 - **Keep row = generation.** It is the tree's most valuable property.
@@ -572,8 +572,9 @@ thin notes.
 - **A person is a child of at most one union.** If someone already hangs off a 1-partner
   union, add the second parent to *that* union; never create a second.
 - **Ids are unique, names are not.** Suffix by realm or role on collision and keep the plain
-  name in `firstName`. Let the scripts' collision guard run — it has caught real conflations
-  (the sage Kratu vs Krishna's son; two Ulmukas; two Jayantis).
+  name in `name`. Check the namesake list from `npm run check` before adding — collisions
+  here have caught real conflations (the sage Kratu vs Krishna's son; two Ulmukas; two
+  Jayantis).
 - **`divineParents` never binds generations.** It is the right tool whenever a parentage would
   otherwise drag someone into the wrong era.
 
@@ -584,8 +585,8 @@ would have shifted the whole tree; each was caught by measuring first.
 **Workflow:**
 ```bash
 cd app
-npm run add-primordial-lines   # or a new sibling script for a new branch
-npm run reanchor-eras
+# edit the family's file under public/data/hiranyagarbha/
+npm run check
 npm test && npx tsc --noEmit && npm run build
 ```
 

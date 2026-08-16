@@ -1,0 +1,34 @@
+{
+  "family": "familyAdharma",
+  "name": "Adharma",
+  "color": "#5e4550",
+  "note": "The descent of Irreligion, SB 4.8.2-4: not a dynasty but a genealogy of vices",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"partners"},
+  "people": {
+    "Adharma": "Irreligion, a son of Brahma, and the head of the only line in this tree that is not a dynasty. SB 4.8.2",
+    "Mrisha": {"gender":"female","note":"Falsity, wife of Irreligion. SB 4.8.2"},
+    "Dambha": "Bluffing. He and his sister Maya were taken and raised by the demon Nirriti, who had no children of his own. SB 4.8.2",
+    "MayaA": {"name":"Maya","gender":"female","note":"Cheating, sister of Bluffing, and with him the second generation of the descent. Not Maya the danava architect, Mandodari's father. SB 4.8.2"},
+    "Nirriti": {"anchor":{"relativeTo":"Dambha","offset":-1},"note":"The childless demon of decay and the south-west quarter, who took in Bluffing and Cheating and brought them up. SB 4.8.2"},
+    "Lobha": "Greed. SB 4.8.3",
+    "Nikriti": {"gender":"female","note":"Cunning, sister of Greed. SB 4.8.3"},
+    "Krodha": "Anger. Not Krodhavasha, Daksha's daughter and mother of the beasts. SB 4.8.3",
+    "Himsa": {"gender":"female","note":"Violence, sister of Anger. SB 4.8.3"},
+    "Kali": "The spirit of the age that bears his name, born of Anger and Violence. He entered Nala at the one moment his purity lapsed and cost him his kingdom, his wife and twelve years, and Parikshit caught him at the far end of this tree beating the bull of Dharma and, when he begged, allotted him gambling, drink, prostitution and slaughter, and then gold as well, because wherever there is gold there is also falsity, intoxication, lust, envy and enmity. SB 4.8.3, 1.17.38-39; MBh 3.55-56",
+    "Durukti": {"gender":"female","note":"Harsh Speech, sister of Kali and mother of Death by him. SB 4.8.3"},
+    "Mrityu": "Death, son of Kali and Harsh Speech. SB 4.8.4",
+    "Bhiti": {"gender":"female","note":"Fear, sister of Death. SB 4.8.4"},
+    "Yatana": {"gender":"female","note":"Torment, daughter of Death and Fear. SB 4.8.4"},
+    "Niraya": "Hell, the last of the descent, seven generations below Brahma and one row above the horseman who ends the age. SB 4.8.4"
+  },
+  "unions": [
+    {"id":"u_Brahma_Adharma","p":["Brahma"],"c":["Adharma"],"status":"married","gap":20,"note":"SB 4.8.2. Named in the verse right after Brahma's celibate sons, as the opposite of them."},
+    {"id":"u_adharma_mrisha","p":["Adharma","Mrisha"],"c":["Dambha","MayaA"],"status":"married","gap":20},
+    {"id":"u_nirriti","p":["Nirriti"],"c":[],"a":["Dambha","MayaA"],"status":"married","note":"Nirriti was childless and took them both. SB 4.8.2"},
+    {"id":"u_dambha_maya","p":["Dambha","MayaA"],"c":["Lobha","Nikriti"],"gap":20},
+    {"id":"u_lobha_nikriti","p":["Lobha","Nikriti"],"c":["Krodha","Himsa"],"gap":19},
+    {"id":"u_krodha_himsa","p":["Krodha","Himsa"],"c":["Kali","Durukti"],"gap":19},
+    {"id":"u_kali_durukti","p":["Kali","Durukti"],"c":["Mrityu","Bhiti"]},
+    {"id":"u_mrityu_bhiti","p":["Mrityu","Bhiti"],"c":["Yatana","Niraya"]}
+  ]
+}

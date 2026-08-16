@@ -1,0 +1,15 @@
+{
+  "family": "familyPatel_12",
+  "name": "Patel",
+  "color": "#d8885a",
+  "defaults": {"stamp":"2026-07-19T08:35:10.608Z","gender":"male","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Kantilal_2": {"name":"Kantilal","u":"2026-07-19T08:34:46.189Z"},
+    "Vishal": {"u":"2026-07-19T08:35:01.774Z"},
+    "Jagruti_1": {"name":"Jagruti","gender":"female"}
+  },
+  "unions": [
+    {"id":"u_sarojben2_kantilal2","p":["Sarojben_2","Kantilal_2"],"c":["Vishal","Jagruti_1"],"order":1},
+    {"id":"u_vishal_charu","p":["Vishal","Charu"],"c":[],"order":1,"u":"2026-07-19T08:35:34.327Z"}
+  ]
+}

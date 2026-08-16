@@ -1,0 +1,14 @@
+{
+  "family": "familyBhumi",
+  "name": "Bhumi",
+  "color": "#3fa34d",
+  "defaults": {"stamp":"2026-08-02T00:00:00.000Z","gender":"female","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Bhumi": {"divine":true,"anchor":{"relativeTo":"Varaha","offset":0},"note":"The Earth herself, and a devi in her own right. Hiranyaksha rolled her down into the cosmic waters and Varaha lifted her out on his tusks; by him she bore Narakasura, who ruled Pragjyotisha until Krishna killed him. Also called Bhu, Prithvi and Vasudha, and mother of Mangala the red planet, who is Bhauma, 'of the Earth', after her. Parentless by nature, as Varaha is. SB 3.13-19, 10.59"},
+    "Mangala": {"gender":"male","divine":true,"note":"Mangala, the red planet Mars, last of the nine grahas to enter this tree. Called Bhauma and Kuja, both meaning 'born of the Earth', and Angaraka, 'the burning coal'. The Shaiva account has him born of a drop of Shiva's sweat falling to the ground and raised by Bhumi; the tree carries only the mother, since Shiva is not in it. Lord of Tuesday, and of the fierce, martial temperament his colour names."}
+  },
+  "unions": [
+    {"id":"u_varaha_bhumi","p":["Varaha","Bhumi"],"c":["Narakasura"],"note":"Varaha fathered Naraka on the Earth he had just rescued. SB 10.59.2-3; the link was catalogued in the old Part VII.1 and left undrawn until now."},
+    {"id":"u_Bhumi_Mangala","p":["Bhumi"],"c":["Mangala"],"note":"One partner only: the father the Shaiva sources name is Shiva, who is deliberately not in this tree."}
+  ]
+}

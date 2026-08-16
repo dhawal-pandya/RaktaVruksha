@@ -1,0 +1,17 @@
+{
+  "family": "familyDixit_1",
+  "name": "Dixit",
+  "color": "#302c68",
+  "defaults": {"stamp":"2026-07-12T08:14:29.280Z","gender":"male","alive":true,"lastName":"Dixit","status":"married"},
+  "people": {
+    "Ashwinkumar": {"alive":false,"u":"2026-07-12T08:08:42.154Z"},
+    "Binaben": {"u":"2026-07-12T08:09:01.486Z"},
+    "Dipikaben": {"gender":"female","u":"2026-07-12T08:09:15.470Z"},
+    "Sachin": {"u":"2026-07-12T08:09:40.202Z"},
+    "Ishaan": {}
+  },
+  "unions": [
+    {"id":"u_arunaben_ashwinkumar","p":["Arunaben","Ashwinkumar"],"c":["Binaben","Dipikaben","Sachin"],"order":1,"u":"2026-07-12T08:14:42.046Z"},
+    {"id":"u_sachin_gayatri","p":["Sachin","Gayatri"],"c":["Ishaan"],"order":1}
+  ]
+}

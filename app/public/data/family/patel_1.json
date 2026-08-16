@@ -1,0 +1,14 @@
+{
+  "family": "familyPatel_1",
+  "name": "Patel",
+  "color": "#5ad864",
+  "defaults": {"stamp":"2026-07-13T13:04:44.503Z","gender":"male","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Nikhilkumar": {"u":"2026-07-13T13:04:23.662Z"},
+    "Tanisha": {"gender":"female","u":"2026-07-13T13:04:37.000Z"},
+    "Hetansh": {}
+  },
+  "unions": [
+    {"id":"u_nirali_nikhilkumar","p":["Nirali","Nikhilkumar"],"c":["Tanisha","Hetansh"],"order":1}
+  ]
+}

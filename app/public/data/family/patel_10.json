@@ -1,0 +1,15 @@
+{
+  "family": "familyPatel_10",
+  "name": "Patel",
+  "color": "#d89e5a",
+  "defaults": {"stamp":"2026-07-19T08:32:40.088Z","gender":"male","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Anilbhai": {"u":"2026-07-19T08:31:56.621Z"},
+    "Tina": {"gender":"female","u":"2026-07-19T08:32:11.188Z"},
+    "Hitesh": {}
+  },
+  "unions": [
+    {"id":"u_maltiben_anilbhai","p":["Maltiben","Anilbhai"],"c":["Tina","Hitesh"],"order":1},
+    {"id":"u_hitesh_pratiksha","p":["Hitesh","Pratiksha"],"c":[],"order":1,"u":"2026-07-19T08:33:27.055Z"}
+  ]
+}

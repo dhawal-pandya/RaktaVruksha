@@ -22,6 +22,7 @@ import {
 import { parseFamilyData, validateData } from "../core/validate";
 import { mergeData } from "../core/merge";
 import { serialize } from "../core/exporter";
+import { MANIFEST, dense, expand } from "../core/shards";
 import { nameRelation, shortestKinPath } from "../core/kinship";
 import {
   addFamily,
@@ -107,11 +108,15 @@ export type DataSource =
   | "mahabharat"
   | "ramayan"
   | "hiranyagarbha";
-const DATA_FILES: Record<DataSource, string> = {
-  default: "family-data.json",
-  mahabharat: "family-data.mahabharat.json",
-  ramayan: "family-data.ramayan.json",
-  hiranyagarbha: "family-data.hiranyagarbha.json",
+// Each dataset is a DIRECTORY of one small file per family, not a single
+// document: see core/shards.ts. The manifest names the shards; they are fetched
+// in parallel and expanded back into one FamilyDataV2, so everything downstream
+// of boot() is unchanged.
+const DATA_DIRS: Record<DataSource, string> = {
+  default: "data/family",
+  mahabharat: "data/mahabharat",
+  ramayan: "data/ramayan",
+  hiranyagarbha: "data/hiranyagarbha",
 };
 
 // The app has two halves. The real family is a genealogy you
@@ -274,16 +279,36 @@ const postDataFile = async (text: string, file: string): Promise<boolean> => {
   }
 };
 
+/**
+ * Write a dataset back to its shard directory, touching only the files whose
+ * text actually changed — normally one, because an edit lands in one family.
+ * The last text written per path is remembered so an edit never rewrites (and
+ * so never reformats) a file the user has been organising by hand.
+ */
+const lastWritten = new Map<string, string>();
+const postDataset = async (
+  raw: FamilyDataV2,
+  dir: string,
+): Promise<boolean> => {
+  const files = dense(raw);
+  const writes: Promise<boolean>[] = [];
+  for (const [name, text] of files) {
+    const path = `${dir}/${name}`;
+    if (lastWritten.get(path) === text) continue;
+    lastWritten.set(path, text);
+    writes.push(postDataFile(text, path));
+  }
+  const results = await Promise.all(writes);
+  return results.every(Boolean);
+};
+
 export const useStore = create<AppState>((set, get) => {
   // Debounced write-through to family-data.json on the dev server (local editing).
   let devWriteTimer: ReturnType<typeof setTimeout> | undefined;
   const scheduleDevWrite = (raw: FamilyDataV2) => {
     if (devWriteTimer) clearTimeout(devWriteTimer);
     devWriteTimer = setTimeout(async () => {
-      const ok = await postDataFile(
-        serialize(raw),
-        DATA_FILES[get().dataSource],
-      );
+      const ok = await postDataset(raw, DATA_DIRS[get().dataSource]);
       if (ok) set({ dirty: false });
     }, 700);
   };
@@ -347,7 +372,7 @@ export const useStore = create<AppState>((set, get) => {
       // prototype member through and send the fetch at a garbage path.
       const requested = params.get("data");
       const dataSource: DataSource =
-        requested && Object.hasOwn(DATA_FILES, requested)
+        requested && Object.hasOwn(DATA_DIRS, requested)
           ? (requested as DataSource)
           : "default";
       // The showcase lineages are 3D-only (see SHOWCASE_ORDER); the real family
@@ -369,13 +394,33 @@ export const useStore = create<AppState>((set, get) => {
         // its own copy, so a refresh — local or deployed — always shows the
         // current JSON. Relative to BASE_URL so it resolves under a Pages subpath.
         const base = import.meta.env.BASE_URL;
-        const file = base + DATA_FILES[dataSource];
-        const res = await fetch(`${file}?t=${Date.now()}`, {
-          cache: "no-store",
-        });
-        if (!res.ok) throw new Error(`could not load ${file} (${res.status})`);
-        const lastModified = Date.parse(res.headers.get("last-modified") ?? "");
-        const parsed = parseFamilyData(await res.text());
+        const dir = `${base}${DATA_DIRS[dataSource]}/`;
+        const stamp = Date.now();
+        const grab = async (name: string) => {
+          const res = await fetch(`${dir}${name}?t=${stamp}`, {
+            cache: "no-store",
+          });
+          if (!res.ok)
+            throw new Error(`could not load ${dir}${name} (${res.status})`);
+          return res;
+        };
+        const manifestRes = await grab(MANIFEST);
+        const lastModified = Date.parse(
+          manifestRes.headers.get("last-modified") ?? "",
+        );
+        const manifestText = await manifestRes.text();
+        const { shards } = JSON.parse(manifestText) as { shards: string[] };
+        // Shards are independent files; fetch them at once rather than in
+        // sequence, so a fifty-nine-file lineage still costs one round trip.
+        const files = new Map<string, string>([[MANIFEST, manifestText]]);
+        await Promise.all(
+          shards.map(async (name) => {
+            files.set(name, await (await grab(name)).text());
+          }),
+        );
+        // Back to a single document here: everything downstream — validation,
+        // indexing, the graph, the layout — is unchanged by the split.
+        const parsed = parseFamilyData(JSON.stringify(expand(files)));
         if (!parsed.raw)
           throw new Error(parsed.errors[0] ?? "invalid data file");
         const raw = parsed.raw;
@@ -404,7 +449,7 @@ export const useStore = create<AppState>((set, get) => {
               : cam({ kind: "fit" }),
           toast:
             DEV && get().editUnlocked
-              ? "Local edit mode: changes autosave to family-data.json"
+              ? `Local edit mode: changes autosave to public/${DATA_DIRS[dataSource]}/`
               : null,
         });
       } catch (e) {
@@ -753,12 +798,12 @@ export const useStore = create<AppState>((set, get) => {
       const s = get();
       if (!s.raw) return;
       if (devWriteTimer) clearTimeout(devWriteTimer);
-      const file = DATA_FILES[s.dataSource];
-      const ok = await postDataFile(serialize(s.raw), file);
+      const dir = DATA_DIRS[s.dataSource];
+      const ok = await postDataset(s.raw, dir);
       set({
         dirty: false,
         toast: ok
-          ? `Saved to public/${file}`
+          ? `Saved to public/${dir}/`
           : "Could not reach the dev server to save",
       });
     },

@@ -1,0 +1,18 @@
+{
+  "family": "familyBhatt",
+  "name": "Bhatt",
+  "color": "#9b59b6",
+  "defaults": {"stamp":"2026-07-11T10:02:09.122Z","gender":"male","alive":true,"lastName":"Bhatt","status":"married"},
+  "people": {
+    "Dilip": {},
+    "Snehal": {"last":"Trivedi","gender":"female"},
+    "Hetal": {"last":"Nayak","gender":"female"},
+    "Bhavin": {},
+    "Mahek": {"gender":"female"},
+    "Dhruv": {}
+  },
+  "unions": [
+    {"id":"u_bhavin_riddhi","p":["Bhavin","Riddhi"],"c":["Mahek","Dhruv"]},
+    {"id":"u_dilip_smita","p":["Dilip","Smita"],"c":["Snehal","Hetal","Bhavin"],"u":"2026-07-11T21:20:31.266Z"}
+  ]
+}

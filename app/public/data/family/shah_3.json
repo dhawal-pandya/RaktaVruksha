@@ -1,0 +1,13 @@
+{
+  "family": "familyShah_3",
+  "name": "Shah",
+  "color": "#5ad899",
+  "defaults": {"stamp":"2026-07-14T08:16:22.449Z","gender":"male","alive":true,"lastName":"Shah","status":"married"},
+  "people": {
+    "Gaurang": {"u":"2026-07-14T08:16:10.116Z"},
+    "Abhishek": {}
+  },
+  "unions": [
+    {"id":"u_ila_gaurang","p":["Ila","Gaurang"],"c":["Abhishek"],"order":1}
+  ]
+}

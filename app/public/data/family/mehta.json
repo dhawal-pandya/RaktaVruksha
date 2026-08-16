@@ -1,0 +1,10 @@
+{
+  "family": "familyMehta",
+  "name": "Mehta",
+  "color": "#5fd85a",
+  "defaults": {"stamp":"2026-07-12T13:46:02.409Z","gender":"female","alive":true,"lastName":"Trivedi","status":"married"},
+  "people": {
+    "Nidhi": {}
+  },
+  "unions": []
+}

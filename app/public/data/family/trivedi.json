@@ -1,0 +1,12 @@
+{
+  "family": "familyTrivedi",
+  "name": "Trivedi",
+  "color": "#3f51b5",
+  "defaults": {"stamp":"2026-07-11T10:02:09.122Z","gender":"female","alive":false,"lastName":"Trivedi","status":"unknown"},
+  "people": {
+    "Vipra": {}
+  },
+  "unions": [
+    ["Snehal","Vipra"]
+  ]
+}

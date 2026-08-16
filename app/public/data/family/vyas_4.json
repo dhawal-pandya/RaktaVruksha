@@ -1,0 +1,13 @@
+{
+  "family": "familyVyas_4",
+  "name": "Vyas",
+  "color": "#5a78d8",
+  "defaults": {"stamp":"2026-07-13T13:06:11.259Z","gender":"male","alive":true,"lastName":"Vyas","status":"married"},
+  "people": {
+    "Ashokkumar": {"u":"2026-07-13T13:05:59.578Z"},
+    "Venu": {"gender":"female"}
+  },
+  "unions": [
+    {"id":"u_aurupa_ashokkumar","p":["Aurupa","Ashokkumar"],"c":["Venu"],"order":1}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "family": "familyHaihaya",
+  "name": "Haihaya",
+  "color": "#c25b4e",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "ShatajitH": {"name":"Shatajit","note":"Three sons: Mahahaya, Renuhaya and Haihaya. SB 9.23.21"},
+    "Haihaya": "The king from whom the Haihayas take their name. SB 9.23.21",
+    "DharmaH": {"name":"Dharma","note":"SB 9.23.22"},
+    "Netra": "SB 9.23.22",
+    "KuntiH": {"name":"Kunti","note":"Son of Netra, a Haihaya king. Not Pritha, the Pandavas' mother. SB 9.23.22"},
+    "Sohanji": "SB 9.23.22",
+    "Mahishman": "Whose city Mahishmati stood on the Narmada. SB 9.23.22",
+    "Bhadrasenaka": "Two sons: Durmada and Dhanaka. SB 9.23.22-23",
+    "Dhanaka": "Four sons: Kritavirya, Kritagni, Kritavarma and Kritauja. SB 9.23.23",
+    "Kritavirya": "SB 9.23.23-24",
+    "KartaviryaArjuna": {"name":"Kartavirya Arjuna","note":"Emperor of all seven islands, who received the eight mystic perfections from Dattatreya and ruled eighty-five thousand years with his strength and memory unbroken. He took Jamadagni's cow, and Parashurama killed him for it, and then killed the kshatriyas twenty-one times over. Of his thousand sons five survived. SB 9.23.24-27"},
+    "Jayadhvaja": "One of the five sons of Kartavirya Arjuna who survived Parashurama. SB 9.23.27",
+    "ShurasenaH": {"name":"Shurasena","note":"A surviving son of Kartavirya Arjuna. Not Shurasena the Yadava, Vasudeva's father. SB 9.23.27"},
+    "Vrishabha": "A surviving son of Kartavirya Arjuna. SB 9.23.27",
+    "MadhuH": {"name":"Madhu","note":"A surviving son of Kartavirya Arjuna. SB 9.23.27"},
+    "Urjita": "A surviving son of Kartavirya Arjuna. SB 9.23.27",
+    "Talajangha": "A hundred sons, the Talajanghas, and every kshatriya of that house was destroyed by Sagara with the power Aurva Rishi had given him. SB 9.23.28",
+    "Vitihotra": "Eldest of Talajangha's hundred. SB 9.23.29"
+  },
+  "unions": [
+    ["SahasrajitY","ShatajitH","Haihaya","DharmaH","Netra","KuntiH","Sohanji","Mahishman","Bhadrasenaka","Dhanaka","Kritavirya","KartaviryaArjuna"],
+    {"id":"u_Kartavirya","p":["KartaviryaArjuna"],"c":["Jayadhvaja","ShurasenaH","Vrishabha","MadhuH","Urjita"]},
+    ["Jayadhvaja","Talajangha","Vitihotra"]
+  ]
+}

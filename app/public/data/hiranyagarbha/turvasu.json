@@ -1,0 +1,23 @@
+{
+  "family": "familyTurvasu",
+  "name": "Turvasu",
+  "color": "#6fae7d",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "VahniT": {"name":"Vahni","note":"Son of Turvasu. SB 9.23.16"},
+    "Bharga": "SB 9.23.16",
+    "BhanumanT": {"name":"Bhanuman","note":"SB 9.23.16"},
+    "Tribhanu": "SB 9.23.17",
+    "Karandhama": "SB 9.23.17",
+    "Marutta": "Sonless, he adopted Dushyanta out of the Puru line; Dushyanta later went home to claim his own throne, which is why the Puru succession reads unbroken. SB 9.23.17-18"
+  },
+  "unions": [
+    {"id":"u_Turvasu_VahniT","p":["Turvasu"],"c":["VahniT"],"gap":18},
+    ["VahniT","Bharga"],
+    {"id":"u_Bharga_BhanumanT","p":["Bharga"],"c":["BhanumanT"],"gap":18},
+    ["BhanumanT","Tribhanu"],
+    {"id":"u_Tribhanu_Karandhama","p":["Tribhanu"],"c":["Karandhama"],"gap":17},
+    ["Karandhama","Marutta"],
+    {"id":"u_Marutta_Dushyanta","p":["Marutta"],"c":[],"a":["Dushyanta"],"note":"SB 9.23.17-18"}
+  ]
+}

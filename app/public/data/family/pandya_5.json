@@ -1,0 +1,14 @@
+{
+  "family": "familyPandya_5",
+  "name": "Pandya",
+  "color": "#d85a69",
+  "defaults": {"stamp":"2026-07-12T13:50:09.580Z","gender":"male","alive":true,"lastName":"Pandya","status":"married"},
+  "people": {
+    "Himanshu": {"u":"2026-07-12T13:49:52.448Z"},
+    "Jeet": {"u":"2026-07-12T13:50:01.113Z"},
+    "Siddhi": {"gender":"female"}
+  },
+  "unions": [
+    {"id":"u_amita_himanshu","p":["Amita","Himanshu"],"c":["Jeet","Siddhi"],"order":1}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "family": "familyPatel_16",
+  "name": "Patel",
+  "color": "#d8be5a",
+  "defaults": {"stamp":"2026-07-19T08:41:11.397Z","gender":"male","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Babubhai": {"u":"2026-07-19T08:39:52.947Z"},
+    "Jignasha": {"gender":"female","u":"2026-07-19T08:40:25.647Z"},
+    "Sheetal": {"gender":"female","u":"2026-07-19T08:41:04.681Z"},
+    "Suraj": {}
+  },
+  "unions": [
+    {"id":"u_hemaben_babubhai","p":["Hemaben","Babubhai"],"c":["Jignasha","Sheetal","Suraj"],"order":1}
+  ]
+}

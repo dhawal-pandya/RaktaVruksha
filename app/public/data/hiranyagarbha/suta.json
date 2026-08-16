@@ -1,0 +1,25 @@
+{
+  "family": "familySuta",
+  "name": "Suta",
+  "color": "#b5763a",
+  "defaults": {"stamp":"2026-08-01T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Karna": {"fam":null,"u":"2026-08-02T00:00:00.000Z","divineParents":["Surya"],"note":"Kunti's firstborn, begotten by Surya the sun-god before her marriage; set adrift on the river and raised by the charioteer Adhiratha, so his birth lineage stayed unknown even to him. Half-brother of the Pandavas, he fought and died for Duryodhana, learning his kin too late. By name — humiliated at the tournament for his low birth until Duryodhana crowned him king of Anga on the spot, giving away his own protective earrings and armour to Indra in disguise rather than refuse a beggar, Parashurama's curse that his learning would fail him when he needed it most (for lying about his birth to get it), Kunti's night visit before the war asking him to spare his brothers, his promise to spare all but Arjuna, and his death to Arjuna's arrow while his chariot wheel was stuck in the mud and his weapons-knowledge had failed him exactly as cursed."},
+    "Adhiratha": {"u":"2026-07-27T00:00:00.000Z","anchor":{"relativeTo":"Brihadbala","offset":-2},"note":"Son of Satkarma, of the Anga line, and a suta by office. Playing on the bank of the Ganga he found a basket with a child in it, and having no son of his own he raised him: Karna. SB 9.23.12-13"},
+    "Radha": {"gender":"female","u":"2026-07-20T00:00:00.000Z","note":"Wife of Adhiratha; foster-mother of Karna, whence his name Radheya."},
+    "Vrishasena": {"u":"2026-07-20T00:00:00.000Z","note":"Son of Karna; a warrior slain by Arjuna at Kurukshetra."},
+    "Vrishaketu": {"u":"2026-07-20T00:00:00.000Z","note":"Youngest son of Karna and the only one to outlive the war; taken in and cherished by the Pandavas once his parentage was known."},
+    "Sanjaya": {"u":"2026-07-27T00:00:00.000Z","anchor":{"relativeTo":"Brihadbala","offset":-1},"note":"Charioteer and counsellor of Dhritarashtra, son of the suta Gavalgana; granted divine sight by Vyasa, he narrated the war to the blind king."},
+    "Chitrasena_2": {"name":"Chitrasena","note":"Son of Karna and Vrishali; killed at Kurukshetra."},
+    "Satyasena": "Son of Karna and Vrishali; killed at Kurukshetra.",
+    "Sushena_4": {"name":"Sushena","note":"Son of Karna and Vrishali; killed at Kurukshetra."},
+    "Shatrunjaya": "Son of Karna and Vrishali; killed at Kurukshetra.",
+    "Prasena": "Son of Karna and Vrishali; killed at Kurukshetra.",
+    "Banasena": "Son of Karna and Vrishali; killed at Kurukshetra.",
+    "Dvipata": "Son of Karna and Vrishali; killed at Kurukshetra."
+  },
+  "unions": [
+    {"id":"u_adhiratha_radha","p":["Adhiratha","Radha"],"c":[],"a":["Karna"],"u":"2026-07-20T00:00:00.000Z"},
+    {"id":"u_karna","p":["Karna","Vrushali"],"c":["Vrishasena","Vrishaketu","Chitrasena_2","Satyasena","Sushena_4","Shatrunjaya","Prasena","Banasena","Dvipata"],"u":"2026-07-20T00:00:00.000Z"}
+  ]
+}

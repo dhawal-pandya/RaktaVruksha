@@ -1,0 +1,31 @@
+{
+  "family": "familyRakshasa",
+  "name": "Rakshasa",
+  "color": "#e05a68",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Brahma": {"name":"Brahma Dev","divine":true,"anchor":10,"note":"The creator, first of the devas. Ravana's line springs almost directly from him, Brahma, his mind-born son Pulastya, then Vishrava, then Ravana, a short descent, unlike the long solar line of Rama."},
+    "Pulastya": "A mind-born son of Brahma (a Prajapati); grandfather of Ravana through his son Vishrava.",
+    "Vishrava": "Sage son of Pulastya; father of Kubera by Ilavida and of Ravana and his siblings by the rakshasi Kaikasi.",
+    "Kaikasi": {"gender":"female","note":"Rakshasi wife of Vishrava, daughter of the demon Sumali; mother of Ravana, Kumbhakarna, Shurpanakha and Vibhishana."},
+    "Kubera": "Son of Vishrava and Ilavida; the yaksha lord of wealth who first ruled Lanka, until his half-brother Ravana drove him out.",
+    "Ravana": "The ten-headed rakshasa king of Lanka; a mighty devotee of Shiva and master of the Vedas whose abduction of Sita brought his doom.",
+    "Kumbhakarna": "Giant brother of Ravana, cursed to sleep six months at a time; woken for the war, he was slain by Rama.",
+    "Shurpanakha": {"gender":"female","note":"Sister of Ravana whose courting of Rama and Lakshmana, and the loss of her nose, set the war in motion."},
+    "Vibhishana": "Youngest brother of Ravana; righteous, he deserted to Rama and was crowned king of Lanka after the war.",
+    "Indrajit": "Meghanada, son of Ravana and Mandodari; he once defeated Indra himself, hence his name, and was slain by Lakshmana.",
+    "Atikaya": "Son of Ravana and Mandodari; a colossal warrior slain by Lakshmana.",
+    "Akshayakumara": "Young son of Ravana, slain by Hanuman in the burning of Lanka.",
+    "Kumbha": "Son of Kumbhakarna, killed in the war.",
+    "Nikumbha": "Son of Kumbhakarna, killed in the war.",
+    "Sumali": {"anchor":11,"note":"A rakshasa lord of the elder line of Lanka; father of Kaikasi, whom he gave to the sage Vishrava to sire sons who might rival the devas."}
+  },
+  "unions": [
+    ["Brahma","Pulastya","Vishrava"],
+    {"id":"u_vishrava_ilavida","p":["Vishrava","Ilavida"],"c":["Kubera"],"order":0},
+    {"id":"u_vishrava_kaikasi","p":["Vishrava","Kaikasi"],"c":["Ravana","Kumbhakarna","Shurpanakha","Vibhishana"],"order":1},
+    {"id":"u_ravana","p":["Ravana","Mandodari"],"c":["Indrajit","Atikaya","Akshayakumara"]},
+    {"id":"u_kumbhakarna","p":["Kumbhakarna","Vajrajwala"],"c":["Kumbha","Nikumbha"]},
+    ["Sumali","Kaikasi"]
+  ]
+}

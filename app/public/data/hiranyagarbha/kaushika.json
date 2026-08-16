@@ -1,0 +1,27 @@
+{
+  "family": "familyKaushika",
+  "name": "Kaushika",
+  "color": "#c9a23f",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "BhimaK": {"name":"Bhima","note":"Of the Amavasu branch of the lunar line. Not Bhima the Pandava, nor Bhima of Vidarbha. VP 4.7; SB 9.15.2"},
+    "Kanchana": "SB 9.15.2",
+    "Hotraka": "SB 9.15.2",
+    "Jahnu": "Who drank the whole of the Ganga in one sip when her waters flooded his sacrifice, and released her again from his ear: hence she is Jahnavi, daughter of Jahnu. SB 9.15.3",
+    "PuruK": {"name":"Puru","note":"Son of Jahnu. Not Puru the son of Yayati. SB 9.15.3"},
+    "Balaka": "SB 9.15.3",
+    "Ajaka": "SB 9.15.3",
+    "KushaK": {"name":"Kusha","note":"Four sons: Kushambu, Tanaya, Vasu and Kushanabha. SB 9.15.3-4"},
+    "Kushambu": "Son of Kusha, and the father of Gadhi. SB 9.15.4",
+    "Tanaya": "Son of Kusha. SB 9.15.4",
+    "VasuK": {"name":"Vasu","note":"Son of Kusha. SB 9.15.4"},
+    "Kushanabha": "Son of Kusha. SB 9.15.4",
+    "Ashtaka": "Son of Vishvamitra by Madhavi, renowned for his sacrifices; one of the four grandsons who lifted Yayati back to heaven. MBh 5.115, 5.118"
+  },
+  "unions": [
+    {"id":"u_vishvamitra_devarata","p":["Vishvamitra"],"c":[],"a":["Shunahshepha"]},
+    ["BhimaK","Kanchana","Hotraka","Jahnu","PuruK","Balaka","Ajaka","KushaK","Kushambu","Gadhi"],
+    {"id":"u_KushaK_more","p":["KushaK"],"c":["Tanaya","VasuK","Kushanabha"]},
+    {"id":"u_vishvamitra_madhavi","p":["Vishvamitra","Madhavi"],"c":["Ashtaka"],"status":"partners"}
+  ]
+}

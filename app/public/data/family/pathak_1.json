@@ -1,0 +1,13 @@
+{
+  "family": "familyPathak_1",
+  "name": "Pathak",
+  "color": "#d85a78",
+  "defaults": {"stamp":"2026-07-13T13:10:08.995Z","gender":"male","alive":true,"lastName":"Pathak","status":"married"},
+  "people": {
+    "Yogesh_2": {"name":"Yogesh","u":"2026-07-13T13:09:53.429Z"},
+    "Viram": {}
+  },
+  "unions": [
+    {"id":"u_nitaben_yogesh2","p":["Nitaben","Yogesh_2"],"c":["Viram"],"order":1}
+  ]
+}

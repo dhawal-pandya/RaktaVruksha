@@ -1,0 +1,15 @@
+{
+  "family": "familyPragjyotisha",
+  "name": "Pragjyotisha",
+  "color": "#c78a44",
+  "defaults": {"stamp":"2026-07-22T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"unknown"},
+  "people": {
+    "Narakasura": {"u":"2026-07-27T00:00:00.000Z","anchor":{"relativeTo":"Brihadbala","offset":-2},"note":"The asura king of Pragjyotisha, son of the earth; Krishna slew him and freed the sixteen thousand women he had imprisoned."},
+    "Bhagadatta": "King of Pragjyotisha, son of Narakasura; a Kaurava ally who fought from the great elephant Supratika, slain by Arjuna.",
+    "Vajradatta": "Son of Bhagadatta; king of Pragjyotisha after him."
+  },
+  "unions": [
+    ["Narakasura","Bhagadatta"],
+    {"id":"u_Bhagadatta_Vajradatta","p":["Bhagadatta"],"c":["Vajradatta"],"status":"married"}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "family": "familyVyas_3",
+  "name": "Vyas",
+  "color": "#4baad2",
+  "defaults": {"stamp":"2026-07-12T20:00:53.909Z","gender":"male","alive":true,"lastName":"Vyas","status":"married"},
+  "people": {
+    "Amrishbhai": {"u":"2026-07-12T20:00:39.159Z"},
+    "Harsh": {}
+  },
+  "unions": [
+    {"id":"u_manishaben_amrishbhai","p":["Manishaben","Amrishbhai"],"c":["Harsh"],"order":1}
+  ]
+}

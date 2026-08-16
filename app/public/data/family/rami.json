@@ -1,0 +1,13 @@
+{
+  "family": "familyRami",
+  "name": "Rami",
+  "color": "#c25ad8",
+  "defaults": {"stamp":"2026-07-12T20:22:04.989Z","gender":"male","alive":true,"lastName":"Rami","status":"married"},
+  "people": {
+    "Bharatkumar": {"u":"2026-07-12T20:21:49.371Z"},
+    "Maitri": {"gender":"female"}
+  },
+  "unions": [
+    {"id":"u_boski_bharatkumar","p":["Boski","Bharatkumar"],"c":["Maitri"],"order":1}
+  ]
+}

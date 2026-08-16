@@ -1,0 +1,13 @@
+{
+  "family": "familyNayak",
+  "name": "Nayak",
+  "color": "#e91e63",
+  "defaults": {"stamp":"2026-07-11T10:02:09.122Z","gender":"male","alive":true,"lastName":"Nayak","status":"married"},
+  "people": {
+    "Neev": {},
+    "Ravi": {}
+  },
+  "unions": [
+    {"id":"u_hetal_ravi","p":["Hetal","Ravi"],"c":["Neev"]}
+  ]
+}

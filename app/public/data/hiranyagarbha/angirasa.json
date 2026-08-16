@@ -1,0 +1,36 @@
+{
+  "family": "familyAngirasa",
+  "name": "Angirasa",
+  "color": "#b8c24e",
+  "defaults": {"stamp":"2026-08-02T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Bharadwaja": {"u":"2026-07-20T00:00:00.000Z","note":"A great sage; Drona was born of his seed kept in a vessel (drona)."},
+    "Drona": "Preceptor in arms to both Kaurava and Pandava princes; brahmin by birth, warrior by trade, commander of the Kaurava host after Bhishma. By name — poverty driving him to Drupada, once his boyhood friend, for help, and Drupada's refusal that made them enemies; teaching the princes at Hastinapura and taking Ekalavya's thumb as fee to keep Arjuna unrivalled; capturing Drupada in return as a training exercise and being given half his kingdom, the seed of Drupada's revenge-son Dhrishtadyumna; eighteen days commanding the Kaurava army at Kurukshetra; and laying down his weapons in grief, believing the false news that his son Ashvatthama was dead, when Dhrishtadyumna beheaded him.",
+    "Sharadvan": {"u":"2026-07-27T00:00:00.000Z","anchor":{"relativeTo":"Brihadbala","offset":-3},"note":"A sage of the Gautama line; father of the twins Kripa and Kripi, born in a clump of reeds and raised in the Kuru court."},
+    "Kripa": {"u":"2026-08-02T01:00:00.000Z","note":"Twin of Kripi; a chiranjivi and early teacher of the Kuru princes, he survived the war. Found with his sister as infants in a clump of reeds, born of the sage Sharadvan's seed spilled at the sight of the apsara Janapadi, raised by King Shantanu; one of the four survivors on the Kaurava side after Kurukshetra, and later Parikshit's own teacher."},
+    "Kripi": {"gender":"female","u":"2026-08-02T01:00:00.000Z","note":"Twin of Kripa; wife of Drona and mother of Ashwatthama. Found with her brother as infants in a clump of reeds (shara-stamba), born of the sage Sharadvan's seed spilled at the sight of the apsara Janapadi, and raised by King Shantanu."},
+    "Ashwatthama": {"u":"2026-08-02T01:00:00.000Z","note":"Son of Drona and Kripi, born with a gem in his brow; a chiranjivi cursed to wander after he slew the Pandava sons in their sleep. Grew up in poverty despite his birth, once tricked as a boy into thinking water was milk; fought the whole war for the Kauravas out of loyalty to his father; on the last night, maddened by Drona's death and appointed commander, crept into the Pandava camp and killed Draupadi's five sons and Dhrishtadyumna in their sleep, mistaking them for the Pandavas themselves; cursed by Krishna, when caught, to wander the earth alone for three thousand years, diseased and friendless, the jewel torn from his forehead."},
+    "Brihaspati": {"u":"2026-07-22T00:00:00.000Z","divine":true,"note":"Guru of the devas (the planet Jupiter), son of the rishi Angiras; husband of Tara."},
+    "Angiras": {"u":"2026-07-22T00:00:00.000Z","divine":true,"note":"A mind-born son of Brahma, one of the Saptarishi and eponym of the Angirasa line; father of Brihaspati."},
+    "Kacha": {"u":"2026-08-02T02:00:00.000Z","note":"Son of Brihaspati; sent by the devas to learn from Shukracharya, guru of the asuras, the sanjivani mantra that revives the dead. Killed twice by the asuras for it and twice revived by Shukracharya himself at his daughter Devayani's pleading, until they ground him to ash and mixed it in wine, so that reviving him meant teaching the mantra to what was inside Shukracharya's own body; refused Devayani's love afterward as a guru's son to his guru's daughter, and she cursed his knowledge to fail him — a curse that, since he already taught the devas everything, cost only himself."},
+    "Gautama": {"u":"2026-07-25T00:00:00.000Z","note":"Gautama Maharishi, of the Angirasa gotra (descended from Utathya, son of Angiras). Husband of Ahalya."},
+    "Shatananda": {"u":"2026-07-25T00:00:00.000Z","note":"Son of Gautama and Ahalya; purohita of King Janaka of Videha."},
+    "Chirakari": {"u":"2026-07-25T00:00:00.000Z","note":"Son of Gautama and Ahalya; the son who deliberated so long he spared a rash act (Mahabharata)."},
+    "Utathya": "Son of Angiras and brother of Brihaspati; husband of Mamata and, by her, father of Dirghatamas. His own brother's quarrel with his wife in her pregnancy is what blinded that son in the womb. MBh 1.98",
+    "Samvarta": "Son of Angiras and brother of Brihaspati; the naked, ash-smeared ascetic who acted as priest at Marutta's sacrifice when Brihaspati, serving Indra, refused it -- and made it so rich that Indra sent Agni to threaten him over it. MBh 14.4-10",
+    "Mamata": {"gender":"female","note":"Wife of Utathya. Already carrying Dirghatamas when Brihaspati forced himself on her; the unborn child kicked the seed away, and Brihaspati cursed him to be born blind for it -- dirgha-tamas, 'long darkness'. MBh 1.98"},
+    "Kakshivan": "Son of Dirghatamas by the maid Ushij, hence Auśija; a Rigvedic seer in his own right, with the hymns of RV 1.116-126 to his name, and remembered for winning a thousand cows and the king's daughters from Svanaya. RV 1.116-126, 1.18"
+  },
+  "unions": [
+    {"id":"u_Bharadwaja_Drona","p":["Bharadwaja"],"c":["Drona"],"u":"2026-07-20T00:00:00.000Z"},
+    {"id":"u_sharadvan","p":["Sharadvan"],"c":["Kripa","Kripi"],"u":"2026-07-20T00:00:00.000Z"},
+    {"id":"u_drona","p":["Drona","Kripi"],"c":["Ashwatthama"],"u":"2026-07-20T00:00:00.000Z"},
+    {"id":"u_brihaspati_tara","p":["Brihaspati","Tara"],"c":[],"u":"2026-07-22T00:00:00.000Z"},
+    {"id":"u_angiras","p":["Angiras"],"c":["Brihaspati","Utathya","Samvarta"]},
+    {"id":"u_brihaspati","p":["Brihaspati"],"c":["Kacha","Bharadwaja"],"u":"2026-07-22T00:00:00.000Z"},
+    {"id":"u_gautama_ahalya","p":["Gautama","Ahalya"],"c":["Shatananda","Chirakari"],"u":"2026-07-25T00:00:00.000Z"},
+    {"id":"u_Shatananda_Sharadvan","p":["Shatananda"],"c":["Sharadvan"],"gap":2,"u":"2026-07-25T00:00:00.000Z"},
+    {"id":"u_utathya_mamata","p":["Utathya","Mamata"],"c":["Dirghatamas"],"note":"MBh 1.98. Dirghatamas stood in this tree with no ancestry at all until now; giving him one also gives Karna's whole foster house, through Anga, a line back to Angiras."},
+    {"id":"u_Dirghatamas_Kakshivan","p":["Dirghatamas"],"c":["Kakshivan"],"note":"By the maid Ushij, who is not carried here as a person. RV 1.18.1"}
+  ]
+}

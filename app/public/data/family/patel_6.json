@@ -1,0 +1,14 @@
+{
+  "family": "familyPatel_6",
+  "name": "Patel",
+  "color": "#5ad8af",
+  "defaults": {"stamp":"2026-07-19T08:17:08.158Z","gender":"male","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Praveen": {"alive":false,"u":"2026-07-19T08:16:44.408Z"},
+    "Purvi_1": {"name":"Purvi","gender":"female","u":"2026-07-19T08:17:01.108Z"},
+    "Mehul": {}
+  },
+  "unions": [
+    {"id":"u_vaishali_praveen","p":["Vaishali","Praveen"],"c":["Purvi_1","Mehul"],"order":1}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "family": "familyTrivedi_2",
+  "name": "Trivedi",
+  "color": "#5a8bd8",
+  "defaults": {"stamp":"2026-07-12T14:09:26.753Z","gender":"male","alive":true,"lastName":"Trivedi","status":"married"},
+  "people": {
+    "Jayantilal_1": {"name":"Jayantilal","alive":false,"u":"2026-07-12T14:08:56.839Z"},
+    "Suhasbhai": {"u":"2026-07-12T14:09:19.370Z"},
+    "Rajeshbhai": {},
+    "Dipesh": {"u":"2026-07-12T14:12:20.090Z"}
+  },
+  "unions": [
+    {"id":"u_manguba_jayantilal1","p":["Manguba","Jayantilal_1"],"c":["Suhasbhai","Rajeshbhai"],"order":1},
+    {"id":"u_rajeshbhai_shilpa","p":["Rajeshbhai","Shilpa"],"c":[],"order":1,"u":"2026-07-12T14:09:48.873Z"},
+    {"id":"u_Suhasbhai_Dipesh","p":["Suhasbhai"],"c":["Dipesh"],"status":"unknown","order":1,"u":"2026-07-12T14:12:20.090Z"}
+  ]
+}

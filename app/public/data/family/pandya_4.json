@@ -1,0 +1,10 @@
+{
+  "family": "familyPandya_4",
+  "name": "Pandya",
+  "color": "#302c68",
+  "defaults": {"stamp":"2026-07-12T08:21:51.068Z","gender":"female","alive":true,"lastName":"Pandya","status":"married"},
+  "people": {
+    "Veenaben": {}
+  },
+  "unions": []
+}

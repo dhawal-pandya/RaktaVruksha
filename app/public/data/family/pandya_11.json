@@ -1,0 +1,12 @@
+{
+  "family": "familyPandya_11",
+  "name": "Pandya",
+  "color": "#5a98d8",
+  "defaults": {"stamp":"2026-07-13T13:05:31.860Z","gender":"male","alive":true,"lastName":"Pandya","status":"married"},
+  "people": {
+    "Ashwinkumar_1": {"name":"Ashwinkumar"}
+  },
+  "unions": [
+    {"id":"u_suvarna_ashwinkumar1","p":["Suvarna","Ashwinkumar_1"],"c":[],"order":1}
+  ]
+}

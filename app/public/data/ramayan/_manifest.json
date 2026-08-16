@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "schemaVersion": 2,
+    "exportedAt": "2026-07-20T00:00:00.000Z"
+  },
+  "shards": [
+    "ikshvaku.json",
+    "videha.json",
+    "kekaya.json",
+    "rakshasa.json",
+    "vanara.json",
+    "_floating.json"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "family": "familyPandya_6",
+  "name": "Pandya",
+  "color": "#164d5a",
+  "defaults": {"stamp":"2026-07-12T20:20:51.722Z","gender":"male","alive":true,"lastName":"Pandya","status":"married"},
+  "people": {
+    "Shivshankar": {"last":"","alive":false,"u":"2026-07-12T19:31:36.013Z"},
+    "Thakorlal_2": {"name":"Thakorlal","alive":false,"u":"2026-07-12T19:32:31.695Z"},
+    "Kamalaben": {"alive":false,"u":"2026-07-12T19:33:19.155Z"},
+    "Rajendrakumar": {"u":"2026-07-12T19:34:39.008Z"},
+    "Nehaben": {"gender":"female","u":"2026-07-12T20:20:27.640Z"},
+    "Avniben": {"gender":"female","u":"2026-07-12T20:20:42.389Z"},
+    "Boski": {"gender":"female"}
+  },
+  "unions": [
+    {"id":"u_thakorlal2_lalitaben","p":["Thakorlal_2","Lalitaben"],"c":["Rajendrakumar"],"order":1,"u":"2026-07-12T19:34:28.776Z"},
+    {"id":"u_kamalaben_bhanushankar","p":["Kamalaben","Bhanushankar"],"c":["Mandaben"],"order":1,"u":"2026-07-12T19:35:58.308Z"},
+    {"id":"u_geetaben1_rajendrakumar","p":["Geetaben_1","Rajendrakumar"],"c":["Nehaben","Avniben","Boski"],"order":1}
+  ]
+}

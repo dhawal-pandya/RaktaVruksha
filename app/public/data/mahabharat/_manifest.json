@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "schemaVersion": 2,
+    "exportedAt": "2026-07-20T00:00:00.000Z"
+  },
+  "shards": [
+    "kuru.json",
+    "yadava.json",
+    "panchala.json",
+    "gandhara.json",
+    "madra.json",
+    "matsya.json",
+    "kashi.json",
+    "chedi.json",
+    "angirasa.json",
+    "naga.json",
+    "manipura.json",
+    "suta.json",
+    "sindhu.json",
+    "soma.json",
+    "magadha.json",
+    "_floating.json"
+  ]
+}

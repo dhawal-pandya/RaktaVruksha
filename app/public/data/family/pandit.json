@@ -1,0 +1,29 @@
+{
+  "family": "familyPandit",
+  "name": "Pandit",
+  "color": "#d85a93",
+  "defaults": {"stamp":"2026-07-13T12:58:13.591Z","gender":"male","alive":true,"lastName":"Pandit","status":"married"},
+  "people": {
+    "Savitaben": {"last":"Vyas","gender":"female","alive":false,"u":"2026-07-13T12:28:24.621Z"},
+    "Raginiben": {"last":"Pandya","gender":"female","u":"2026-07-13T13:08:58.343Z"},
+    "Maneklal_1": {"name":"Maneklal","alive":false,"u":"2026-07-13T12:56:22.175Z"},
+    "Jayantilal_2": {"name":"Jayantilal","alive":false,"u":"2026-07-13T12:57:18.757Z"},
+    "Rasiklal_1": {"name":"Rasiklal","alive":false,"u":"2026-07-13T12:57:27.824Z"},
+    "Jayprakash": {"u":"2026-07-13T12:57:50.042Z"},
+    "Vijay_1": {"name":"Vijay","u":"2026-07-13T12:57:57.974Z"},
+    "Ajay": {"u":"2026-07-13T12:58:04.624Z"},
+    "Chaya_1": {"name":"Chaya","gender":"female"},
+    "Sushilaben": {"gender":"female","alive":false,"u":"2026-07-13T13:00:10.941Z"},
+    "Anil": {"u":"2026-07-13T13:06:40.227Z"},
+    "Jaymin": {"u":"2026-07-13T13:07:22.944Z"},
+    "Nitaben": {"last":"Pathak","gender":"female","u":"2026-07-13T13:07:40.644Z"},
+    "Ajay_1": {"name":"Ajay","alive":false,"u":"2026-07-13T13:09:32.109Z"}
+  },
+  "unions": [
+    {"id":"u_maneklal1","p":["Maneklal_1","Lalitaben_1"],"c":["Savitaben","Sushilaben","Jayantilal_2","Rasiklal_1"],"order":1,"u":"2026-07-13T13:00:19.590Z"},
+    {"id":"u_jayantilal2","p":["Jayantilal_2"],"c":["Jayprakash","Vijay_1","Ajay","Chaya_1"],"status":"unknown","order":1},
+    {"id":"u_rasiklal1","p":["Rasiklal_1","Hasumati_1"],"c":["Anil","Jaymin","Nitaben","Raginiben"],"order":1,"u":"2026-07-13T13:07:52.760Z"},
+    {"id":"u_anil_rekha","p":["Anil","Rekha"],"c":["Ajay_1"],"order":1,"u":"2026-07-13T13:09:26.545Z"},
+    {"id":"u_jaymin_meena1","p":["Jaymin","Meena_1"],"c":[],"order":1,"u":"2026-07-13T13:09:40.396Z"}
+  ]
+}

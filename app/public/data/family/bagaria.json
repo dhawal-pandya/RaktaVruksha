@@ -1,0 +1,10 @@
+{
+  "family": "familyBagaria",
+  "name": "Bagaria",
+  "color": "#78d85a",
+  "defaults": {"stamp":"2026-07-12T13:47:46.547Z","gender":"female","alive":true,"lastName":"Bagaria","status":"married"},
+  "people": {
+    "Anurag": {}
+  },
+  "unions": []
+}

@@ -1,0 +1,19 @@
+{
+  "family": "familyAngirasa",
+  "name": "Angirasa",
+  "color": "#b8c24e",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Bharadwaja": {"anchor":12,"note":"A great sage; Drona was born of his seed kept in a vessel (drona)."},
+    "Drona": "Preceptor in arms to both Kaurava and Pandava princes; brahmin by birth, warrior by trade, commander of the Kaurava host after Bhishma.",
+    "Sharadvan": {"anchor":12,"note":"A sage of the Gautama line; father of the twins Kripa and Kripi, born in a clump of reeds and raised in the Kuru court."},
+    "Kripa": "Twin of Kripi; a chiranjivi and early teacher of the Kuru princes, he survived the war.",
+    "Kripi": {"gender":"female","note":"Twin of Kripa; wife of Drona and mother of Ashwatthama."},
+    "Ashwatthama": "Son of Drona and Kripi, born with a gem in his brow; a chiranjivi cursed to wander after he slew the Pandava sons in their sleep."
+  },
+  "unions": [
+    ["Bharadwaja","Drona"],
+    {"id":"u_sharadvan","p":["Sharadvan"],"c":["Kripa","Kripi"]},
+    {"id":"u_drona","p":["Drona","Kripi"],"c":["Ashwatthama"]}
+  ]
+}

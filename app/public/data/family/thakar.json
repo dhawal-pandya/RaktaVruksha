@@ -1,0 +1,42 @@
+{
+  "family": "familyThakar",
+  "name": "Thakar",
+  "color": "#3498db",
+  "defaults": {"stamp":"2026-07-11T10:02:09.122Z","gender":"male","alive":true,"lastName":"Thakar","status":"married"},
+  "people": {
+    "Harsha": {"last":"Pandya","gender":"female"},
+    "Premshankar": {"alive":false},
+    "Jayshree": {"last":"Trivedi","gender":"female","u":"2026-07-12T13:44:34.846Z"},
+    "Nainesh": {"u":"2026-07-12T13:46:53.794Z"},
+    "Swetal": {"last":"Bagaria","u":"2026-07-12T13:47:31.944Z"},
+    "Bhavin_1": {"name":"Bhavin","u":"2026-07-12T13:47:55.360Z"},
+    "Daksha": {"last":"Seth","gender":"female","u":"2026-07-12T13:48:10.211Z"},
+    "Amita": {"last":"Pandya","gender":"female","u":"2026-07-12T13:49:31.980Z"},
+    "DarshanaTina": {"name":"Darshana (Tina)","last":"Vasu","gender":"female","u":"2026-07-12T13:50:27.480Z"},
+    "Hargovindas": {"alive":false,"u":"2026-07-12T13:52:11.366Z"},
+    "Narnarayan": {"alive":false,"u":"2026-07-12T13:55:53.801Z"},
+    "Bharati": {"gender":"female","alive":false,"u":"2026-07-12T13:57:16.268Z"},
+    "Urmila": {"gender":"female","u":"2026-07-12T13:57:41.119Z"},
+    "Manoj": {"u":"2026-07-12T13:57:58.387Z"},
+    "Het": {"u":"2026-07-12T13:58:56.755Z"},
+    "Savita": {"last":"Pandya","gender":"female","alive":false,"u":"2026-07-12T14:00:08.705Z"},
+    "Saraswati": {"last":"Joshi","gender":"female","alive":false,"u":"2026-07-12T14:01:48.828Z"},
+    "Gunvantrai": {"alive":false,"u":"2026-07-12T14:02:40.933Z"},
+    "Rajubhai": {"alive":false,"u":"2026-07-12T14:03:45.316Z"},
+    "Payal": {"gender":"female","u":"2026-07-12T14:03:24.815Z"},
+    "Bhanubhai_1": {"name":"Bhanubhai","alive":false,"u":"2026-07-12T14:05:08.067Z"},
+    "Paresh": {"u":"2026-07-12T14:05:29.867Z"},
+    "Hansa": {"gender":"female","u":"2026-07-12T14:05:50.401Z"},
+    "Lalit": {"u":"2026-07-12T14:06:09.267Z"}
+  },
+  "unions": [
+    {"id":"u_jyotsna_premshankar","p":["Jyotsna","Premshankar"],"c":["Jayshree","Harsha","Nainesh","Daksha","Amita","DarshanaTina"],"u":"2026-07-12T13:50:27.480Z"},
+    {"id":"u_nainesh_varsha","p":["Nainesh","Varsha"],"c":["Swetal","Bhavin_1"],"order":1,"u":"2026-07-12T13:47:55.360Z"},
+    {"id":"u_swetal_anurag","p":["Swetal","Anurag"],"c":[],"order":1,"u":"2026-07-12T13:47:46.548Z"},
+    {"id":"u_hargovindas","p":["Hargovindas","Monghiba"],"c":["Narnarayan","Savita","Saraswati","Premshankar","Gunvantrai","Bhanubhai_1"],"order":1,"u":"2026-07-12T14:05:08.067Z"},
+    {"id":"u_narnarayan_jayaba","p":["Narnarayan","Jayaba"],"c":["Bharati","Urmila","Manoj"],"order":1,"u":"2026-07-12T13:57:58.387Z"},
+    {"id":"u_manoj_darshana","p":["Manoj","Darshana"],"c":["Het"],"order":1,"u":"2026-07-12T13:58:56.755Z"},
+    {"id":"u_gunvantrai_hansaben1","p":["Gunvantrai","Hansaben_1"],"c":["Rajubhai","Payal"],"order":1,"u":"2026-07-12T14:03:24.815Z"},
+    {"id":"u_bhanubhai1_hasumati","p":["Bhanubhai_1","Hasumati"],"c":["Paresh","Hansa","Lalit"],"order":1,"u":"2026-07-12T14:06:09.267Z"}
+  ]
+}

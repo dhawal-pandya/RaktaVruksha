@@ -8,7 +8,7 @@ For the data format, editing workflow, and deployment, see
 The app is frontend-only: React 19 + TypeScript + Vite, rendered with
 `react-force-graph-3d`/`-2d` (three.js under the hood), state in zustand, tests in
 vitest. There is no backend — the entire family lives in
-`app/public/family-data.json` and everything is computed in the browser.
+`app/public/data/<dataset>/` — one file per family — and everything is computed in the browser.
 
 Before anything else, internalize the one architectural rule:
 
@@ -190,5 +190,6 @@ Conventions worth keeping:
   server, screenshot, and actually look at the PNGs. Search inputs are most
   reliably driven by filling `.search-input` and pressing Enter.
 - Ids stay human-readable: people are `Firstname` (then `Firstname_1`), unions
-  `u_<partners>`, families `family<Name>`. `npm run rename-ids` rewrites any
+  `u_<partners>`, families `family<Name>`. A father-son link must be exactly
+  `u_<parent>_<child>` so a chain array can regenerate it. `npm run check` rewrites any
   stray generated ids.

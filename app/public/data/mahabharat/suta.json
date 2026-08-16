@@ -1,0 +1,18 @@
+{
+  "family": "familySuta",
+  "name": "Suta",
+  "color": "#b5763a",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Karna": {"fam":null,"divineParents":["Surya"],"note":"Kunti's firstborn, begotten by Surya the sun-god before her marriage; set adrift on the river and raised by the charioteer Adhiratha, so his birth lineage stayed unknown even to him. Half-brother of the Pandavas, he fought and died for Duryodhana, learning his kin too late."},
+    "Adhiratha": {"anchor":14,"note":"A charioteer (suta) of Hastinapura who drew the infant Karna from the river and raised him as his own."},
+    "Radha": {"gender":"female","anchor":14,"note":"Wife of Adhiratha; foster-mother of Karna, whence his name Radheya."},
+    "Vrishasena": "Son of Karna; a warrior slain by Arjuna at Kurukshetra.",
+    "Vrishaketu": "Youngest son of Karna and the only one to outlive the war; taken in and cherished by the Pandavas once his parentage was known.",
+    "Surya": {"name":"Surya Deva","fam":null,"divine":true,"note":"The deva of the sun; an Aditya, son of the devi Aditi and the rishi Kashyap. Father of Karna, whom Kunti bore before her marriage by invoking Surya with a boon she wished to test."}
+  },
+  "unions": [
+    {"id":"u_adhiratha_radha","p":["Adhiratha","Radha"],"c":[],"a":["Karna"]},
+    {"id":"u_karna","p":["Karna","Vrushali"],"c":["Vrishasena","Vrishaketu"]}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "family": "familyKashi",
+  "name": "Kashi",
+  "color": "#d97fbf",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Kashiraja": {"anchor":{"relativeTo":"Brihadbala","offset":-4},"note":"King of Kashi; his three daughters were carried off from their svayamvara by Bhishma as brides for Vichitravirya."},
+    "Amba": {"gender":"female","u":"2026-08-02T00:00:00.000Z","note":"Eldest Kashi princess; rejected because she loved another, she vowed vengeance on Bhishma and was reborn in Panchala as Shikhandi. Abducted by Bhishma at her sisters' swayamvara for his half-brother Vichitravirya, then sent back on confessing she loved King Shalva; refused by Shalva in turn for having been 'won' by another man, she begged every warrior including Parashurama himself to kill Bhishma, and when none could, took her own life vowing to return as the instrument of his death."},
+    "Ambika": {"gender":"female","u":"2026-07-20T00:00:00.000Z","note":"Kashi princess wed to Vichitravirya; mother, through Vyasa's niyoga, of Dhritarashtra, she shut her eyes, so her son was born blind."},
+    "Ambalika": {"gender":"female","u":"2026-07-20T00:00:00.000Z","note":"Kashi princess wed to Vichitravirya; mother, through Vyasa's niyoga, of Pandu, she paled at the sight of Vyasa, so her son was born pale."},
+    "Balandhara": {"gender":"female","u":"2026-07-20T00:00:00.000Z","note":"A princess of Kashi; wife of Bhima."},
+    "SuhotraKashi": {"name":"Suhotra","note":"Three sons: Kashya, Kusha and Gritsamada. SB 9.17.2"},
+    "Kashya": "SB 9.17.2-3",
+    "Kashi": "The king from whom Kashi takes its name. SB 9.17.4",
+    "Rashtra": "SB 9.17.4",
+    "Dirghatama": "SB 9.17.4",
+    "Dhanvantari": {"divine":true,"note":"He rose from the churned ocean carrying the pot of nectar, and was born again in the Kashi line of Kshatravriddha to bring medicine into the world: the founder of Ayurveda. Merely remembering him, the Purana says, quiets disease. The twelfth of the avatars, SB 1.3.17 and 9.17.4."},
+    "Ketuman": "SB 9.17.5",
+    "BhimarathaKashi": {"name":"Bhimaratha","note":"SB 9.17.5"},
+    "DivodasaKashi": {"name":"Divodasa","note":"King of Kashi. One of the four to whom Yayati's daughter Madhavi was lent, and by her the father of Pratardana. Not Divodasa of Panchala. SB 9.17.5; MBh 5.113"},
+    "Pratardana": {"name":"Pratardana (Dyuman)","note":"Son of Divodasa of Kashi by Madhavi; called also Shatrujit, Vatsa, Ritadhvaja and Kuvalayashva. SB 9.17.5-6; MBh 5.113"},
+    "Alarka": "Reigned, the Purana says, sixty-six thousand years, and no other king enjoyed the earth so long in the vigour of youth. SB 9.17.6-7"
+  },
+  "unions": [
+    {"id":"u_kashiraja","p":["Kashiraja"],"c":["Amba","Ambika","Ambalika"],"u":"2026-07-20T00:00:00.000Z"},
+    ["Kshatravriddha","SuhotraKashi","Kashya","Kashi","Rashtra","Dirghatama","Dhanvantari","Ketuman","BhimarathaKashi","DivodasaKashi"],
+    {"id":"u_DivodasaKashi_Pratardana","p":["DivodasaKashi","Madhavi"],"c":["Pratardana"],"status":"partners","note":"The second of Madhavi's four. MBh 5.113"},
+    ["Pratardana","Alarka"],
+    {"id":"u_Alarka_Kashiraja","p":["Alarka"],"c":["Kashiraja"],"gap":67,"note":"Alarka's line runs on through Santati, Sunitha, Niketana, Dharmaketu, Satyaketu, Dhrishtaketu, Sukumara, Vitihotra, Bharga and Bhargabhumi, all of Kashi. Kashiraja, father of Amba, Ambika and Ambalika, stands at its end. SB 9.17.8-9"}
+  ]
+}

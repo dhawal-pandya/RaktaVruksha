@@ -1,0 +1,17 @@
+{
+  "family": "familyTrivedi_1",
+  "name": "Trivedi",
+  "color": "#d4d85a",
+  "defaults": {"stamp":"2026-07-12T13:45:23.580Z","gender":"male","alive":true,"lastName":"Trivedi","status":"married"},
+  "people": {
+    "ChitranjanRaju": {"name":"Chitranjan (Raju)","alive":false,"u":"2026-07-12T13:45:04.596Z"},
+    "Raunak": {"u":"2026-07-12T13:45:16.013Z"},
+    "Dewang": {},
+    "Saanvi": {"u":"2026-07-12T13:46:10.943Z"}
+  },
+  "unions": [
+    {"id":"u_jayshree_chitranjanraju","p":["Jayshree","ChitranjanRaju"],"c":["Raunak","Dewang"],"order":1},
+    {"id":"u_raunak_nidhi","p":["Raunak","Nidhi"],"c":["Saanvi"],"order":1,"u":"2026-07-12T13:46:10.943Z"},
+    {"id":"u_dewang_pooja","p":["Dewang","Pooja"],"c":[],"order":1,"u":"2026-07-12T13:46:38.278Z"}
+  ]
+}

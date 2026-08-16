@@ -1,0 +1,10 @@
+{
+  "family": "familyRawal",
+  "name": "Rawal",
+  "color": "#d85aa1",
+  "defaults": {"stamp":"2026-07-12T13:47:13.379Z","gender":"female","alive":true,"lastName":"Thakar","status":"married"},
+  "people": {
+    "Varsha": {}
+  },
+  "unions": []
+}

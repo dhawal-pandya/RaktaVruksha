@@ -1,0 +1,27 @@
+{
+  "family": "familyVanara",
+  "name": "Vanara",
+  "color": "#b07a44",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Riksharaja": "The vanara king of Kishkindha; foster-father of Vali and Sugriva, who were begotten of the gods Indra and Surya.",
+    "Vali": {"divineParents":["Indra"],"note":"Elder vanara prince, son of Indra; king of Kishkindha of peerless strength, slain by Rama's arrow to restore Sugriva."},
+    "Sugriva": "Younger vanara prince, son of Surya; exiled by Vali and restored by Rama, whose army of vanaras he then led to Lanka.",
+    "Sushena": "Vanara elder and physician; father of Tara.",
+    "Tara": {"gender":"female","note":"Daughter of Sushena; the wise queen of Vali, and after him of Sugriva. Mother of Angada."},
+    "Ruma": {"gender":"female","note":"Wife of Sugriva."},
+    "Angada": "Son of Vali and Tara; the vanara prince who led Rama's embassy to Ravana.",
+    "Kesari": "A vanara chief; the earthly father of Hanuman.",
+    "Anjana": {"gender":"female","note":"An apsara born as a vanara; mother of Hanuman."},
+    "Hanuman": {"divineParents":["Vayu"],"note":"Son of Kesari and Anjana, begotten by Vayu the wind-god; the immortal devotee of Rama who leapt to Lanka and found Sita."},
+    "Vayu": {"name":"Vayu Deva","fam":null,"divine":true,"note":"The deva of the wind; father of Hanuman, whose boundless strength and flight are his gift."},
+    "Indra": {"name":"Indra Deva","fam":null,"divine":true,"note":"King of the devas; the divine father of the vanara king Vali."}
+  },
+  "unions": [
+    {"id":"u_riksharaja","p":["Riksharaja"],"c":["Vali","Sugriva"]},
+    ["Sushena","Tara"],
+    {"id":"u_vali_tara","p":["Vali","Tara"],"c":["Angada"],"order":0},
+    {"id":"u_sugriva_ruma","p":["Sugriva","Ruma"],"c":[]},
+    {"id":"u_kesari_anjana","p":["Kesari","Anjana"],"c":["Hanuman"]}
+  ]
+}
