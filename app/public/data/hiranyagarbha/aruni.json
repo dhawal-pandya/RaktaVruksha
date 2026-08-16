@@ -1,0 +1,18 @@
+{
+  "family": "familyAruni",
+  "name": "Aruni",
+  "color": "#8fb8a8",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Uddalaka": {"name":"Uddalaka Aruni","anchor":{"relativeTo":"Janaka","offset":-1},"note":"Of the Gautama line; the teacher of the sixth chapter of the Chandogya, where he sends Shvetaketu for a fruit of the banyan, has him split it and split the seed and find nothing inside, and tells him that the nothing at the centre of it is what the whole tree stands out of, and what he himself is — tat tvam asi. He gave his daughter Sujata to his own pupil Kahoda. Chandogya 6; MBh 3.132"},
+    "Shvetaketu": "Son of Uddalaka, sent away to study at twelve and back at twenty-four full of learning and conceited with it, and taught by his father with a fig, a lump of salt in water and a banyan seed. He is also the man who made the rule of marital fidelity: he saw a brahmin take his mother by the hand and lead her away while his father sat still, and would not have it, and fixed the law that a wife is bound to one husband — before him, the Mahabharata says plainly, women were not. That rule is the one Kunti's boon and Draupadi's five husbands are both measured against. Chandogya 6; MBh 1.113",
+    "Sujata": {"gender":"female","note":"Daughter of Uddalaka Aruni, given to her father's pupil Kahoda. She was carrying Ashtavakra when her husband was drowned, and went back to her father's house to bear him and to keep from the boy, until he was twelve, whose son he was. MBh 3.132"},
+    "Kahoda": "Pupil and son-in-law of Uddalaka. His unborn son heard him recite badly night after night and corrected him from the womb in front of his students; Kahoda cursed the child crooked in eight places for the humiliation. He then went to Janaka's sacrifice, lost the debate to Bandi, and was drowned in the sea as the forfeit. MBh 3.132-133",
+    "Ashtavakra": "Bent in eight places by a curse his father laid on him before he was born. At twelve he walked into Janaka's court to get that father back and out-argued Bandi — who was Varuna's son, and had been drowning the losers to staff his father's twelve-year sacrifice at the bottom of the sea. Going in, the hall laughed at his walk, and he told them that a room full of hides is not an assembly and that they had mistaken skin for a man. The drowned came back up, his father with them. MBh 3.132-134",
+    "Nachiketa": "A boy who watched his father give away worn-out cows at a sacrifice and asked, three times, whom he would be giving his son to; his father said in temper, to Death — and he went. He waited three nights unfed at Yama's door and was given a boon for each: his father's peace, the fire that leads to heaven, and then what becomes of a man when he dies. Yama offered him sons, herds, land, music and long life to take a different third question, and he refused all of it and was answered. The Katha calls his father both Vajashravasa and Auddalaki Aruni. Katha Upanishad 1"
+  },
+  "unions": [
+    {"id":"u_uddalaka","p":["Uddalaka"],"c":["Shvetaketu","Sujata","Nachiketa"],"note":"Chandogya 6.1 for Shvetaketu, MBh 3.132 for Sujata. Nachiketa sits here on the Katha's own second name for his father, Auddalaki Aruni; the same verse also calls him Vajashravasa, and the two readings have never been settled."},
+    {"id":"u_kahoda_sujata","p":["Kahoda","Sujata"],"c":["Ashtavakra"],"note":"MBh 3.132."}
+  ]
+}
