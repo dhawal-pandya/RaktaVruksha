@@ -1,0 +1,12 @@
+{
+  "family": "familySaubhari",
+  "name": "Saubhari",
+  "color": "#bfae7a",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Saubhari": "Deep in the Yamuna at his austerity he watched a pair of fish mate, and desire took him. He asked Mandhata for a daughter; the king, seeing grey hair and a trembling head, said only that his daughters chose for themselves. So Saubhari made himself young, and all fifty chose him. By his mantras he built each of them a palace, and in his own words: I became the husband of fifty wives, and in each of them I begot one hundred sons, and thus my family increased to five thousand. Then he saw what the fish had cost him, took vanaprastha, and his wives followed him. SB 9.6.39-55"
+  },
+  "unions": [
+    {"id":"u_saubhari","p":["Saubhari","MandhatriKanya"],"c":[],"note":"One marriage standing for fifty. Their five thousand sons are named nowhere. SB 9.6.52"}
+  ]
+}

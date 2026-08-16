@@ -1,0 +1,14 @@
+{
+  "family": "familyPatel_14",
+  "name": "Patel",
+  "color": "#d8d45a",
+  "defaults": {"stamp":"2026-07-19T08:38:01.595Z","gender":"male","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Pratapbhai": {"u":"2026-07-19T08:37:02.778Z"},
+    "Bijal": {"gender":"female","u":"2026-07-19T08:37:20.428Z"},
+    "Hiren_1": {"name":"Hiren"}
+  },
+  "unions": [
+    {"id":"u_bhavna1_pratapbhai","p":["Bhavna_1","Pratapbhai"],"c":["Bijal","Hiren_1"],"order":1}
+  ]
+}

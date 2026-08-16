@@ -1,0 +1,18 @@
+{
+  "family": null,
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"female","alive":true,"lastName":"","status":"unknown"},
+  "people": {
+    "Sudakshina": "Queen of Dilipa, princess of the Magadha line; mother of Raghu.",
+    "Indumati": "Princess who chose Aja at her svayamvara; queen of Aja and mother of Dasharatha.",
+    "Kausalya": "Chief queen of Dasharatha and mother of Rama; a princess of Dakshina Kosala.",
+    "Sumitra": "Third queen of Dasharatha; mother of the twins Lakshmana and Shatrughna.",
+    "Sunayana": "Queen of Janaka; foster-mother of Sita and mother of Urmila.",
+    "Ilavida": "First wife of Vishrava; mother of Kubera.",
+    "Maya": {"gender":"male","anchor":12,"note":"Mayasura, the great asura architect; father of Mandodari."},
+    "Mandodari": "Daughter of Mayasura; the wise and virtuous chief queen of Ravana and mother of Indrajit.",
+    "Vajrajwala": "Wife of Kumbhakarna; a granddaughter of the demon Virochana."
+  },
+  "unions": [
+    ["Maya","Mandodari"]
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "family": "familyYaksha",
+  "name": "Yaksha",
+  "color": "#6b8fc0",
+  "defaults": {"stamp":"2026-07-22T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Khasa": {"gender":"female","divine":true,"note":"Daughter of Daksha, wife of Kashyap; mother of the Yakshas and Rakshasas."},
+    "Yaksha": {"divine":true,"note":"Progenitor of the yakshas, the guardian nature-spirits of wealth."},
+    "Rakshasa": "Progenitor of the rakshasas, the night-wandering kind."
+  },
+  "unions": [
+    {"id":"u_kashyap_khasa","p":["Kashyap","Khasa"],"c":["Yaksha","Rakshasa"]}
+  ]
+}

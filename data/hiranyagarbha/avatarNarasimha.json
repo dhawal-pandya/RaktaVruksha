@@ -1,0 +1,11 @@
+{
+  "family": "familyAvatarNarasimha",
+  "name": "Narasimha",
+  "color": "#e0913a",
+  "note": "Suspended: an avatar with no ancestry, floated beside Hiranyakashipu",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Narasimha": {"divine":true,"anchor":{"relativeTo":"Hiranyakashipu","offset":0},"note":"The fourteenth of the avatars: neither man nor lion, at neither day nor night, on neither earth nor sky, killing Hiranyakashipu with no weapon on the threshold of his own hall, because the boon had covered everything else. He came for Prahlada, who is here as the demon's son. SB 1.3.18, 7.8"}
+  },
+  "unions": []
+}

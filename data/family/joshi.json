@@ -1,0 +1,10 @@
+{
+  "family": "familyJoshi",
+  "name": "Joshi",
+  "color": "#673ab7",
+  "defaults": {"stamp":"2026-07-11T10:02:09.122Z","gender":"female","alive":true,"lastName":"Pandya","status":"married"},
+  "people": {
+    "Meena": {}
+  },
+  "unions": []
+}

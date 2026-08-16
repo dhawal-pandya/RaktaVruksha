@@ -1,0 +1,11 @@
+{
+  "family": "familyPatel_5",
+  "name": "Patel",
+  "color": "#d86e5a",
+  "defaults": {"stamp":"2026-07-19T08:15:10.407Z","gender":"male","alive":false,"lastName":"Patel","status":"married"},
+  "people": {
+    "Ratilal_1": {"name":"Deepak"},
+    "Jash": {"alive":true,"u":"2026-07-19T08:15:30.907Z"}
+  },
+  "unions": []
+}

@@ -1,0 +1,13 @@
+{
+  "family": "familyPatel_15",
+  "name": "Patel",
+  "color": "#a65ad8",
+  "defaults": {"stamp":"2026-07-19T08:38:36.629Z","gender":"male","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Viren_1": {"name":"Viren","u":"2026-07-19T08:38:22.312Z"},
+    "Aryan_1": {"name":"Aryan"}
+  },
+  "unions": [
+    {"id":"u_bijal_viren1","p":["Bijal","Viren_1"],"c":["Aryan_1"],"order":1}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "family": "familyRawal_1",
+  "name": "Rawal",
+  "color": "#5ad872",
+  "defaults": {"stamp":"2026-07-12T13:49:13.447Z","gender":"female","alive":true,"lastName":"Rawal","status":"married"},
+  "people": {
+    "Vidhi_1": {"name":"Vidhi"}
+  },
+  "unions": []
+}

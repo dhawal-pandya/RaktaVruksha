@@ -1,0 +1,11 @@
+{
+  "family": "familyAvatarKalki",
+  "name": "Kalki",
+  "color": "#9fb8e0",
+  "note": "Suspended: an avatar with no ancestry, floated beside the close of the Kali age",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Kalki": {"divine":true,"anchor":{"relativeTo":"Niraya","offset":1},"note":"The twenty-second and last: to be born to Vishnu Yasha in the village of Shambhala at the joint of two ages, when the kings have all turned to plunder, and to ride out on a white horse with a sword like a comet. The only avatar in this tree who has not happened. SB 1.3.25, 12.2"}
+  },
+  "unions": []
+}

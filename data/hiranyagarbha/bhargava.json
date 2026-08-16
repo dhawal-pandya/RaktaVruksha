@@ -1,0 +1,29 @@
+{
+  "family": "familyBhargava",
+  "name": "Bhargava",
+  "color": "#d98a3d",
+  "defaults": {"stamp":"2026-08-01T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Chyavana": {"u":"2026-07-22T00:00:00.000Z","divine":true,"note":"Son of Bhrigu; the aged sage restored to youth by the Ashvins, husband of Sukanya. The rejuvenating tonic Chyavanprash, which the Ashvins first prepared for him, is named after him."},
+    "Aurva": {"u":"2026-08-02T03:00:00.000Z","note":"Bhargava sage of the fire of wrath, born of the Bhrigu line through Chyavana. His pregnant mother hid her unborn child in her thigh (uru, his name) when kshatriyas bent on wiping out the Bhrigus for their wealth attacked her; born already blazing, his fury at the slaughter of his kin threatened to burn up the three worlds until his ancestors begged him to spend it elsewhere, and he deposited it in the ocean instead, as the submarine fire (vadavagni) that will one day end the age. Gave that same fire-power to Sagara, his descendant, who used it to annihilate the Talajanghas — closing a loop the quarrel that spared the world opened."},
+    "Richika": {"u":"2026-08-02T02:00:00.000Z","note":"A Bhargava sage; husband of Satyavati, Gadhi's daughter, and father of Jamadagni. Prepared two portions of a magic rice-dish, one for his wife to bear a brahmin son and one for her mother to bear a warrior son; the two women swapped bowls, which is why Vishvamitra, Satyavati's own brother, was born a kshatriya who had to win brahminhood by penance, and why Jamadagni's son Parashurama carries kshatriya fire in a brahmin line."},
+    "SatyavatiG": {"name":"Satyavati","gender":"female","u":"2026-07-22T00:00:00.000Z","note":"Daughter of King Gadhi and sister of Vishvamitra; wife of Richika."},
+    "Jamadagni": {"u":"2026-07-27T00:00:00.000Z","anchor":{"relativeTo":"KartaviryaArjuna","offset":-1},"note":"Bhargava rishi, son of Richika; husband of Renuka, father of Parashurama."},
+    "Renuka": {"gender":"female","u":"2026-07-22T00:00:00.000Z","note":"Wife of Jamadagni, mother of Parashurama; a devoted and much-tried queen."},
+    "Parashurama": {"u":"2026-07-27T00:00:00.000Z","divine":true,"note":"Rama of the axe, called Bhrigupati for his house. He killed Kartavirya Arjuna over the stolen cow and then cleared the earth of kshatriyas twenty-one times, and lived on to teach Bhishma, Drona and Karna, three ages of this tree apart. The sixteenth of the avatars, SB 1.3.20."},
+    "Pramati": "Son of Chyavana and Sukanya.",
+    "Rumanvan": "Elder son of Jamadagni and Renuka; refused their father's order to behead Renuka for her lapse and was struck senseless for it, restored only when Parashurama — who alone obeyed — asked that boon instead of his own. SB 9.16.",
+    "Sushena_3": {"name":"Sushena","note":"Elder son of Jamadagni and Renuka; refused their father's order to behead Renuka for her lapse and was struck senseless for it, restored only when Parashurama — who alone obeyed — asked that boon instead of his own. SB 9.16."},
+    "Vasu": "Elder son of Jamadagni and Renuka; refused their father's order to behead Renuka for her lapse and was struck senseless for it, restored only when Parashurama — who alone obeyed — asked that boon instead of his own. SB 9.16.",
+    "Vishvavasu": "Elder son of Jamadagni and Renuka; refused their father's order to behead Renuka for her lapse and was struck senseless for it, restored only when Parashurama — who alone obeyed — asked that boon instead of his own. SB 9.16.",
+    "Mrikandu": "Son of Bhrigu; father of Markandeya.",
+    "Markandeya": "Son of Mrikandu; boon of an unending life. In the waters of pralaya saw the infant Narayana on a banyan leaf, was drawn in on its breath, saw the whole universe inside the child's body, and was breathed out again — the one sage who remembers every dissolution. SB 12.8-10."
+  },
+  "unions": [
+    {"id":"u_chyavana","p":["Chyavana","Sukanya"],"c":["Aurva","Pramati"],"u":"2026-07-22T00:00:00.000Z"},
+    {"id":"u_Aurva_Richika","p":["Aurva"],"c":["Richika"],"u":"2026-07-22T00:00:00.000Z"},
+    {"id":"u_richika","p":["Richika","SatyavatiG"],"c":["Jamadagni"],"u":"2026-07-22T00:00:00.000Z"},
+    {"id":"u_jamadagni","p":["Jamadagni","Renuka"],"c":["Parashurama","Rumanvan","Sushena_3","Vasu","Vishvavasu"],"u":"2026-07-22T00:00:00.000Z"},
+    ["Mrikandu","Markandeya"]
+  ]
+}

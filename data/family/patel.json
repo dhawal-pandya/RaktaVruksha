@@ -1,0 +1,41 @@
+{
+  "family": "familyPatel",
+  "name": "Patel",
+  "color": "#f39c12",
+  "defaults": {"stamp":"2026-07-11T10:02:09.122Z","gender":"female","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Jitesh": {"gender":"male"},
+    "Reyanshi": {},
+    "Aditi": {},
+    "Harendrabhai": {"gender":"male"},
+    "Dayabhai": {"gender":"male","alive":false,"u":"2026-07-19T08:05:25.820Z"},
+    "Koyabhai": {"gender":"male","alive":false,"u":"2026-07-19T08:05:59.702Z"},
+    "Parvatiben": {"alive":false,"u":"2026-07-19T08:06:48.953Z"},
+    "Bachubhai": {"gender":"male","u":"2026-07-19T08:07:30.903Z"},
+    "Niranjan_2": {"name":"Niranjan","gender":"male","alive":false,"u":"2026-07-19T08:08:03.470Z"},
+    "Nayanaben": {"u":"2026-07-19T08:08:36.071Z"},
+    "Jagruti": {"u":"2026-07-19T08:10:12.521Z"},
+    "Vaishali": {"u":"2026-07-19T08:16:22.575Z"},
+    "Akliben": {"alive":false,"u":"2026-07-19T08:17:48.758Z"},
+    "Ambelal": {"gender":"male","u":"2026-07-19T08:18:31.342Z"},
+    "Mitesh": {"gender":"male","u":"2026-07-19T08:19:06.027Z"},
+    "Piyush": {"gender":"male","u":"2026-07-19T08:19:22.746Z"},
+    "Simran_1": {"name":"Simran","u":"2026-07-19T08:19:47.197Z"},
+    "Aryan": {"gender":"male","u":"2026-07-19T08:19:55.147Z"},
+    "Naisha": {"u":"2026-07-19T08:20:23.514Z"},
+    "Tiana": {"u":"2026-07-19T08:20:38.897Z"},
+    "Likiben": {"u":"2026-07-19T08:21:03.681Z"},
+    "Jasuben_1": {"name":"Jasuben","u":"2026-07-19T08:22:13.082Z"}
+  },
+  "unions": [
+    {"id":"u_harendrabhai_nayana","p":["Harendrabhai","Nayana"],"c":["Jitesh"],"u":"2026-07-19T08:26:18.134Z"},
+    {"id":"u_jitesh_manali","p":["Jitesh","Manali"],"c":["Reyanshi","Aditi"]},
+    {"id":"u_dayabhai","p":["Dayabhai","Jivi"],"c":["Parvatiben","Bachubhai","Akliben","Ambelal","Likiben","Harendrabhai","Jasuben_1"],"order":1,"u":"2026-07-19T08:22:13.082Z"},
+    {"id":"u_Koyabhai_Dayabhai","p":["Koyabhai"],"c":["Dayabhai"],"status":"unknown","order":1,"u":"2026-07-19T08:05:59.702Z"},
+    {"id":"u_bachubhai_narmadaben","p":["Bachubhai","Narmadaben"],"c":["Niranjan_2","Nayanaben","Jagruti","Vaishali"],"order":1,"u":"2026-07-19T08:16:22.575Z"},
+    {"id":"u_jagruti_ratilal1","p":["Jagruti","Ratilal_1"],"c":["Jash"],"order":1,"u":"2026-07-19T08:15:10.407Z"},
+    {"id":"u_ambelal_manjulaben","p":["Ambelal","Manjulaben"],"c":["Mitesh","Piyush"],"order":1,"u":"2026-07-19T08:19:22.746Z"},
+    {"id":"u_mitesh_kavita","p":["Mitesh","Kavita"],"c":["Simran_1","Aryan"],"order":1,"u":"2026-07-19T08:19:55.147Z"},
+    {"id":"u_piyush_deepika","p":["Piyush","Deepika"],"c":["Naisha","Tiana"],"order":1,"u":"2026-07-19T08:20:38.897Z"}
+  ]
+}

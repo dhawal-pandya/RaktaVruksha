@@ -1,0 +1,35 @@
+{
+  "family": "familyJani",
+  "name": "Jani",
+  "color": "#8bc34a",
+  "defaults": {"stamp":"2026-07-12T14:25:37.200Z","gender":"female","alive":false,"lastName":"Jani","status":"married"},
+  "people": {
+    "Jyotsna": {"last":"Thakar","u":"2026-07-11T10:02:09.122Z"},
+    "Damodardas": {"gender":"male","u":"2026-07-12T14:07:57.903Z"},
+    "Manguba": {"last":"Trivedi","u":"2026-07-12T14:08:35.320Z"},
+    "Manjuba": {"last":"Trivedi","u":"2026-07-12T14:13:42.791Z"},
+    "Sudhaben_1": {"name":"Sudhaben","last":"Trivedi","u":"2026-07-12T14:14:45.440Z"},
+    "Bharat": {"last":"Trivedi","gender":"male","alive":true,"u":"2026-07-12T14:14:37.992Z"},
+    "Durgeshbhai": {"last":"Trivedi","gender":"male","alive":true,"u":"2026-07-12T14:14:55.676Z"},
+    "Jayshreeben": {"last":"Trivedi","alive":true,"u":"2026-07-12T14:15:09.625Z"},
+    "Harshaben_1": {"name":"Harshaben","last":"Trivedi","u":"2026-07-12T14:16:19.877Z"},
+    "Kapilaba": {"u":"2026-07-12T14:17:21.461Z"},
+    "KrishnakantKisan": {"name":"Krishnakant (Kisan)","gender":"male","u":"2026-07-12T14:24:36.116Z"},
+    "Bhavna": {"alive":true,"u":"2026-07-12T14:25:09.064Z"},
+    "Shilpa_1": {"name":"Shilpa","alive":true,"u":"2026-07-12T14:25:17.883Z"},
+    "Sejal_2": {"name":"Sejal","alive":true,"u":"2026-07-12T14:25:27.598Z"},
+    "Kiran": {"alive":true},
+    "Pravin": {"gender":"male","u":"2026-07-12T14:27:32.602Z"},
+    "Deepak_1": {"name":"Deepak","gender":"male","alive":true,"u":"2026-07-12T14:27:58.668Z"},
+    "Mihir_1": {"name":"Mihir","gender":"male","alive":true,"u":"2026-07-12T14:28:08.284Z"}
+  },
+  "unions": [
+    {"id":"u_damodardas","p":["Damodardas","Shrikanta"],"c":["Manguba","Manjuba","Kapilaba","Jyotsna","KrishnakantKisan","Pravin"],"order":1,"u":"2026-07-12T14:27:32.602Z"},
+    {"id":"u_manjuba","p":["Manjuba"],"c":["Sudhaben_1","Bharat","Harshaben_1","Durgeshbhai","Jayshreeben"],"status":"unknown","order":1,"u":"2026-07-12T14:16:34.008Z"},
+    {"id":"u_bharat_mandakini","p":["Bharat","Mandakini"],"c":[],"order":1,"u":"2026-07-12T14:15:24.927Z"},
+    {"id":"u_kapilaba_kantilal1","p":["Kapilaba","Kantilal_1"],"c":["Bharatiben","Dipti","Chaya","Mianesh","Rakesh"],"fam":null,"order":1,"u":"2026-07-12T14:22:49.331Z"},
+    {"id":"u_krishnakantkisan_jyotika","p":["KrishnakantKisan","Jyotika"],"c":["Bhavna","Shilpa_1","Sejal_2","Kiran"],"order":1},
+    {"id":"u_pravin_chandrika","p":["Pravin","Chandrika"],"c":["Deepak_1","Mihir_1"],"order":1,"u":"2026-07-12T14:28:08.284Z"},
+    {"id":"u_mihir1_pinki","p":["Mihir_1","Pinki"],"c":[],"order":1,"u":"2026-07-12T14:28:26.270Z"}
+  ]
+}

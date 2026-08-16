@@ -1,0 +1,16 @@
+{
+  "family": "familyMagadha",
+  "name": "Magadha",
+  "color": "#5aa0a8",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Brihadratha": {"anchor":12,"note":"Founder-king of Magadha; father of Jarasandha."},
+    "JarasandhaMagadha": {"name":"Jarasandha","note":"The mighty emperor of Magadha, born in two halves joined by the demoness Jara. Rival of Krishna, he was at last torn apart by Bhima. (A namesake also appears among the hundred Kauravas.)"},
+    "Asti": {"gender":"female","note":"Daughter of Jarasandha; a queen of Kamsa."},
+    "Prapti": {"gender":"female","note":"Daughter of Jarasandha; a queen of Kamsa. Kamsa's death at Krishna's hands turned their father into Mathura's implacable enemy."}
+  },
+  "unions": [
+    ["Brihadratha","JarasandhaMagadha"],
+    {"id":"u_jarasandha","p":["JarasandhaMagadha"],"c":["Asti","Prapti"]}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "family": "familyDesai",
+  "name": "Desai",
+  "color": "#d15ad8",
+  "defaults": {"stamp":"2026-07-12T13:54:36.467Z","gender":"female","alive":true,"lastName":"Shah","status":"married"},
+  "people": {
+    "Purvi": {}
+  },
+  "unions": []
+}

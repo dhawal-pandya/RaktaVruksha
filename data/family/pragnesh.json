@@ -1,0 +1,10 @@
+{
+  "family": "familyPragnesh",
+  "name": "Pragnesh",
+  "color": "#5ad85d",
+  "defaults": {"stamp":"2026-07-19T08:42:16.648Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {},
+  "unions": [
+    {"id":"u_sheetal_pragnesh1","p":["Sheetal","Pragnesh_1"],"c":[],"order":1}
+  ]
+}

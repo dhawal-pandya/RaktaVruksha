@@ -1,0 +1,15 @@
+{
+  "family": "familyPatel_9",
+  "name": "Patel",
+  "color": "#d8cd5a",
+  "defaults": {"stamp":"2026-07-19T08:30:48.587Z","gender":"male","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Vasant": {"u":"2026-07-19T08:30:21.853Z"},
+    "Jayesh": {"u":"2026-07-19T08:30:32.370Z"},
+    "Devesh": {"u":"2026-07-19T08:30:41.971Z"},
+    "Nilesh": {}
+  },
+  "unions": [
+    {"id":"u_vasuben_vasant","p":["Vasuben","Vasant"],"c":["Jayesh","Devesh","Nilesh"],"order":1}
+  ]
+}

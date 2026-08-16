@@ -1,0 +1,22 @@
+{
+  "chargeStrength": -400,
+  "chargeDistanceMax": 640,
+  "chargeLayerBand": 2,
+  "descentPull": 0.72,
+  "siblingSpacing": 42,
+  "familyPull": 0.025,
+  "familyRingScale": 26,
+  "familyRingBase": 60,
+  "partnerDistance": 20,
+  "partnerStrength": 1,
+  "childDistance": 26,
+  "childStrength": 0.25,
+  "personCollide": 16,
+  "unionCollide": 8,
+  "coupleOffset": 15,
+  "coupleCollideFactor": 2,
+  "ticks": 220,
+  "ticksLarge": 130,
+  "largeGraphNodes": 2500,
+  "backdropOpacity": 0.4
+}

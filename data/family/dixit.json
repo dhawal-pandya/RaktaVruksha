@@ -1,0 +1,25 @@
+{
+  "family": "familyDixit",
+  "name": "Dixit",
+  "color": "#aa421d",
+  "defaults": {"stamp":"2026-07-11T19:27:58.057Z","gender":"male","alive":true,"lastName":"Dixit","status":"married"},
+  "people": {
+    "Harishkumar": {"alive":false,"u":"2026-07-11T19:23:02.287Z"},
+    "Nalin_1": {"name":"Nalin","u":"2026-07-11T19:24:23.305Z"},
+    "Krishnaben": {"gender":"female","u":"2026-07-11T19:24:32.155Z"},
+    "Sanat": {"alive":false,"u":"2026-07-11T19:26:05.255Z"},
+    "Bhavnaben": {"gender":"female","u":"2026-07-11T19:25:56.523Z"},
+    "Anup": {"u":"2026-07-11T19:26:54.607Z"},
+    "Viren": {"u":"2026-07-11T19:27:06.356Z"},
+    "Uday": {"u":"2026-07-11T19:27:24.441Z"},
+    "Vidhi": {"gender":"female"},
+    "Reva": {"gender":"female","u":"2026-07-11T19:28:26.674Z"}
+  },
+  "unions": [
+    {"id":"u_surulata_harishkumar","p":["Surulata","Harishkumar"],"c":["Nalin_1","Krishnaben","Sanat","Bhavnaben"],"order":1,"u":"2026-07-12T10:40:10.930Z"},
+    {"id":"u_nalin_1_vilas_1","p":["Nalin_1","Vilas_1"],"c":["Anup","Viren","Uday"],"order":1,"u":"2026-07-12T08:07:33.137Z"},
+    {"id":"u_anup_falguni","p":["Anup","Falguni"],"c":["Vidhi"],"order":1},
+    {"id":"u_uday_sejal_1","p":["Uday","Sejal_1"],"c":["Reva"],"order":1,"u":"2026-07-11T19:28:26.674Z"},
+    {"id":"u_viren_toral","p":["Viren","Toral"],"c":[],"order":1,"u":"2026-07-11T19:28:43.992Z"}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "family": "familyPandya_2",
+  "name": "Pandya",
+  "color": "#e07b56",
+  "defaults": {"stamp":"2026-07-12T07:59:24.664Z","gender":"female","alive":true,"lastName":"Pandya","status":"married"},
+  "people": {
+    "Nalin": {"gender":"male"},
+    "Aabha": {"u":"2026-07-12T08:01:05.050Z"},
+    "Chaula": {"u":"2026-07-12T08:01:47.180Z"},
+    "Bela": {"u":"2026-07-12T09:41:00.823Z"}
+  },
+  "unions": [
+    {"id":"u_sudhaben_nalin","p":["Sudhaben","Nalin"],"c":["Aabha","Bela","Chaula"],"order":1,"u":"2026-07-12T09:41:08.357Z"}
+  ]
+}

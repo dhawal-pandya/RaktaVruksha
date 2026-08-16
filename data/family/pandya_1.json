@@ -1,0 +1,31 @@
+{
+  "family": "familyPandya_1",
+  "name": "Pandya",
+  "color": "#5caa1d",
+  "defaults": {"stamp":"2026-07-12T19:48:33.883Z","gender":"male","alive":true,"lastName":"Pandya","status":"married"},
+  "people": {
+    "Jayantilal": {"u":"2026-07-11T19:40:59.347Z"},
+    "Bhanubhai": {"alive":false,"u":"2026-07-11T19:39:36.379Z"},
+    "Niranjan": {"alive":false,"u":"2026-07-11T19:40:16.313Z"},
+    "Sarmistha": {"gender":"female","u":"2026-07-11T19:40:47.913Z"},
+    "Navinbhai": {"alive":false,"u":"2026-07-11T19:41:47.564Z"},
+    "Devila": {"gender":"female","u":"2026-07-11T19:42:15.281Z"},
+    "Harishbhai": {"alive":false,"u":"2026-07-12T19:48:23.303Z"},
+    "Vasudev": {},
+    "Parimal": {"u":"2026-07-12T19:49:09.376Z"},
+    "Sameer_1": {"name":"Sameer","alive":false,"u":"2026-07-12T19:49:34.021Z"},
+    "Nimisha": {"gender":"female","u":"2026-07-12T19:49:45.855Z"},
+    "Kuntal": {"gender":"female","u":"2026-07-12T19:51:21.873Z"},
+    "Parth_1": {"name":"Parth","u":"2026-07-13T12:13:16.920Z"},
+    "Param": {"u":"2026-07-13T12:13:26.036Z"}
+  },
+  "unions": [
+    {"id":"u_jasuben_jayantilal","p":["Jasuben","Jayantilal"],"c":["Bhanubhai","Navinbhai","Niranjan","Sarmistha","Devila","Harishbhai","Vasudev"],"order":1},
+    {"id":"u_bhanubhai_sulochana","p":["Bhanubhai","Sulochana"],"c":["Parimal"],"order":1,"u":"2026-07-13T12:12:58.604Z"},
+    {"id":"u_niranjan_niranjana","p":["Niranjan","Niranjana"],"c":["Sameer_1","Nimisha"],"order":1,"u":"2026-07-12T19:49:45.855Z"},
+    {"id":"u_sarmistha_yogesh","p":["Sarmistha","Yogesh"],"c":[],"fam":null,"order":1,"u":"2026-07-12T19:51:01.489Z"},
+    {"id":"u_Vasudev_Kuntal","p":["Vasudev"],"c":["Kuntal"],"status":"unknown","order":1,"u":"2026-07-12T19:51:21.874Z"},
+    {"id":"u_parimal_kiran2","p":["Parimal","Kiran_2"],"c":["Parth_1","Param"],"order":1,"u":"2026-07-13T12:13:26.036Z"},
+    {"id":"u_parth1_dolly","p":["Parth_1","Dolly"],"c":[],"order":1,"u":"2026-07-13T12:13:41.570Z"}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "family": "familyPatel_4",
+  "name": "Patel",
+  "color": "#6cd85a",
+  "defaults": {"stamp":"2026-07-19T08:13:44.456Z","gender":"male","alive":false,"lastName":"Patel","status":"married"},
+  "people": {
+    "Ratilal": {"name":"Chandrakant"}
+  },
+  "unions": []
+}

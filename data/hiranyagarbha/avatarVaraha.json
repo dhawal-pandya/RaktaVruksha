@@ -1,0 +1,11 @@
+{
+  "family": "familyAvatarVaraha",
+  "name": "Varaha",
+  "color": "#8b5e3c",
+  "note": "Suspended: an avatar with no ancestry, floated beside Hiranyaksha",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Varaha": {"divine":true,"anchor":{"relativeTo":"Hiranyaksha","offset":0},"note":"The second of the avatars: the boar who lifted the earth out of the waters on his tusks and killed Hiranyaksha, who had rolled her down there. On the earth herself he fathered Naraka, who stands in this tree with Bhagadatta. SB 1.3.7, 3.13-19"}
+  },
+  "unions": []
+}

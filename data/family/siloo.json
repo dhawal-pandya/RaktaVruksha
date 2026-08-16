@@ -1,0 +1,10 @@
+{
+  "family": "familySiloo",
+  "name": "Siloo",
+  "color": "#5a5cd8",
+  "defaults": {"stamp":"2026-07-13T12:13:41.570Z","gender":"female","alive":true,"lastName":"Pandya","status":"married"},
+  "people": {
+    "Dolly": {}
+  },
+  "unions": []
+}

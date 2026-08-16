@@ -1,0 +1,12 @@
+{
+  "family": "familyPandya_10",
+  "name": "Pandya",
+  "color": "#d8b65a",
+  "defaults": {"stamp":"2026-07-12T20:21:18.253Z","gender":"male","alive":true,"lastName":"Pandya","status":"married"},
+  "people": {
+    "Hiteshkumar": {}
+  },
+  "unions": [
+    {"id":"u_nehaben_hiteshkumar","p":["Nehaben","Hiteshkumar"],"c":[],"order":1}
+  ]
+}

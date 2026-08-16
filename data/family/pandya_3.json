@@ -1,0 +1,15 @@
+{
+  "family": "familyPandya_3",
+  "name": "Pandya",
+  "color": "#302c68",
+  "defaults": {"stamp":"2026-07-12T08:12:17.596Z","gender":"male","alive":true,"lastName":"Pandya","status":"married"},
+  "people": {
+    "Deepak": {"u":"2026-07-12T08:11:46.249Z"},
+    "Vedant": {"u":"2026-07-12T08:12:02.897Z"},
+    "Mahima": {"gender":"female"}
+  },
+  "unions": [
+    {"id":"u_dipikaben_deepak","p":["Dipikaben","Deepak"],"c":["Vedant","Mahima"],"order":1},
+    {"id":"u_vedant_krupa","p":["Vedant","Krupa"],"c":[],"order":1,"u":"2026-07-12T08:12:37.446Z"}
+  ]
+}

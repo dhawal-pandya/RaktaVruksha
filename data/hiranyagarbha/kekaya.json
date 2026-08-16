@@ -1,0 +1,16 @@
+{
+  "family": "familyKekaya",
+  "name": "Kekaya",
+  "color": "#a78bea",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Kaikeyi": {"gender":"female","note":"Second queen of Dasharatha, princess of Kekaya; her two boons won Bharata the throne and drove Rama to the forest."},
+    "Ashvapati": {"u":"2026-07-27T00:00:00.000Z","anchor":{"relativeTo":"Rama","offset":-2},"note":"King of Kekaya; father of Kaikeyi and Yudhajit."},
+    "Yudhajit": "Prince of Kekaya, Kaikeyi's brother, whose invitation took Bharata away from Ayodhya at the hour of Dasharatha's death.",
+    "KekayaKing": {"name":"Kekaya","u":"2026-07-27T00:00:00.000Z","note":"Son of Shibi, called atma-tattva-vit, knower of the truth of the self; the Kekaya kingdom keeps his name. SB 9.23.3"}
+  },
+  "unions": [
+    {"id":"r_u_ashvapati","p":["Ashvapati"],"c":["Kaikeyi","Yudhajit"]},
+    {"id":"u_KekayaKing_Ashvapati","p":["KekayaKing"],"c":["Ashvapati"],"gap":41,"note":"Kekaya's line runs unnamed down to Ashvapati, father of Kaikeyi and Yudhajit. SB 9.23.3","u":"2026-07-27T00:00:00.000Z"}
+  ]
+}

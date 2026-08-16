@@ -1,0 +1,20 @@
+{
+  "family": "familyVyas",
+  "name": "Vyas",
+  "color": "#2ecc71",
+  "defaults": {"stamp":"2026-07-11T10:02:09.122Z","gender":"male","alive":false,"lastName":"Vyas","status":"married"},
+  "people": {
+    "Hansaben": {"last":"Pandya","gender":"female"},
+    "Natwarlal": {},
+    "Laljibhai_1": {"name":"Laljibhai","u":"2026-07-12T20:18:25.742Z"},
+    "Sumanlal": {"u":"2026-07-12T20:18:52.756Z"},
+    "Geetaben_1": {"name":"Geetaben","last":"Pandya","gender":"female","alive":true,"u":"2026-07-12T20:19:23.473Z"},
+    "Kalpanaben": {"gender":"female","alive":true,"u":"2026-07-12T20:19:55.139Z"},
+    "Gopal": {"u":"2026-07-12T20:26:54.222Z"}
+  },
+  "unions": [
+    {"id":"u_natwarlal_savitaben","p":["Natwarlal","Savitaben"],"c":["Sumanlal","Hansaben","Gopal"],"u":"2026-07-13T13:10:43.478Z"},
+    {"id":"u_Laljibhai_1_Natwarlal","p":["Laljibhai_1"],"c":["Natwarlal"],"status":"unknown","order":1,"u":"2026-07-12T20:18:25.743Z"},
+    {"id":"u_sumanlal_indiraben","p":["Sumanlal","Indiraben"],"c":["Geetaben_1","Kalpanaben"],"order":1,"u":"2026-07-12T20:19:55.139Z"}
+  ]
+}

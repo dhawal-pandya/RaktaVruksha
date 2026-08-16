@@ -1,0 +1,32 @@
+{
+  "family": "familyVidarbha",
+  "name": "Vidarbha",
+  "color": "#c98fb0",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Rukmini": {"gender":"female","u":"2026-07-20T00:00:00.000Z","divine":true,"note":"Princess of Vidarbha, sister of Rukmi; chief queen (patrani) of Krishna, held to be an incarnation of Lakshmi."},
+    "Rukmavati": {"gender":"female","u":"2026-07-20T00:00:00.000Z","note":"Daughter of Rukmi; wife of Pradyumna."},
+    "Bhishmaka": {"anchor":{"relativeTo":"Brihadbala","offset":-2},"note":"King of Vidarbha at Kundina; father of Rukmi and of Rukmini."},
+    "Rukmi": {"u":"2026-07-22T00:00:00.000Z","note":"Prince of Vidarbha, proud brother of Rukmini who opposed her marriage to Krishna; father of Rukmavati."},
+    "Damayanti": {"gender":"female","anchor":{"relativeTo":"Rama","offset":10},"note":"Princess of Vidarbha, daughter of King Bhima, who loved Nala on report alone and knew him at her svayamvara among four devas wearing his face, because only his feet touched the ground. Abandoned in the forest, she made her way back by a brahmin's recognition and drew her husband out of hiding with a riddling verse. MBh 3.50-78"},
+    "KushaV": {"name":"Kusha","note":"Son of Vidarbha. SB 9.24.1"},
+    "RomapadaV": {"name":"Romapada","note":"Son of Vidarbha and the favourite of that house. Not Romapada of Anga. SB 9.24.1"},
+    "BabhruV": {"name":"Babhru","note":"SB 9.24.2"},
+    "KritiV": {"name":"Kriti","note":"SB 9.24.2"},
+    "Ushika": "SB 9.24.2",
+    "Cedi": "From him the Caidyas. A second derivation of Chedi beside Cedipa of the Uparichara Vasu line; the Bhagavata gives both. SB 9.24.2",
+    "BhimaVidarbha": {"name":"Bhima","anchor":{"relativeTo":"Rama","offset":9},"note":"King of Vidarbha, long childless, who got his four children by the grace of the sage Damana; father of Damayanti. Not Bhima the Pandava. MBh 3.50"},
+    "Dama": "Son of Bhima of Vidarbha, brother of Damayanti. MBh 3.50",
+    "Danta": "Son of Bhima of Vidarbha, brother of Damayanti. MBh 3.50",
+    "DamanaS": {"name":"Damana","note":"Son of Bhima of Vidarbha, brother of Damayanti, named for the sage whose boon gave them all. MBh 3.50"}
+  },
+  "unions": [
+    {"id":"u_bhishmaka","p":["Bhishmaka"],"c":["Rukmi","Rukmini"],"u":"2026-07-22T00:00:00.000Z"},
+    {"id":"u_Rukmi_Rukmavati","p":["Rukmi"],"c":["Rukmavati"],"u":"2026-07-22T00:00:00.000Z"},
+    {"id":"u_Vidarbha_more","p":["Vidarbha"],"c":["KushaV","RomapadaV"]},
+    ["RomapadaV","BabhruV","KritiV","Ushika","Cedi"],
+    {"id":"u_Vidarbha_Bhishmaka","p":["Vidarbha"],"c":["Bhishmaka"],"gap":50,"note":"Between Vidarbha and Bhishmaka of Kundina, father of Rukmi and Rukmini, the texts name no one. SB 9.24.1"},
+    {"id":"u_bhima_vidarbha","p":["BhimaVidarbha"],"c":["Damayanti","Dama","Danta","DamanaS"]},
+    {"id":"u_Vidarbha_BhimaVidarbha","p":["Vidarbha"],"c":["BhimaVidarbha"],"gap":33,"note":"Bhima of Vidarbha, Damayanti's father, stands in Vidarbha's line at an unrecorded remove. MBh 3.50"}
+  ]
+}

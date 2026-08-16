@@ -1,0 +1,16 @@
+{
+  "family": "familyPandya_9",
+  "name": "Pandya",
+  "color": "#7a5ad8",
+  "defaults": {"stamp":"2026-07-12T19:57:31.043Z","gender":"male","alive":true,"lastName":"Pandya","status":"married"},
+  "people": {
+    "Devendrakumar": {},
+    "Darshan": {"u":"2026-07-12T19:57:43.374Z"},
+    "Trupti_1": {"name":"Trupti","gender":"female","u":"2026-07-12T19:58:09.058Z"},
+    "Kiran_1": {"name":"Kiran","gender":"female","u":"2026-07-12T19:58:27.008Z"}
+  },
+  "unions": [
+    {"id":"u_pratimaben_devendrakumar","p":["Pratimaben","Devendrakumar"],"c":["Darshan","Trupti_1","Kiran_1"],"order":1,"u":"2026-07-12T19:58:21.658Z"},
+    {"id":"u_darshan_rupal1","p":["Darshan","Rupal_1"],"c":[],"order":1,"u":"2026-07-12T19:57:53.878Z"}
+  ]
+}

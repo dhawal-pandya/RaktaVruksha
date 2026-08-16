@@ -1,0 +1,17 @@
+{
+  "family": "familyGandhara",
+  "name": "Gandhara",
+  "color": "#a78bea",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Subala": {"u":"2026-07-27T00:00:00.000Z","anchor":{"relativeTo":"Brihadbala","offset":-3},"note":"King of Gandhara; father of Gandhari and Shakuni."},
+    "Gandhari": {"gender":"female","u":"2026-08-02T00:00:00.000Z","note":"Princess of Gandhara; on marrying the blind Dhritarashtra she bound her own eyes for life. By a boon she bore a hundred sons and a daughter. Struck a single mass of flesh from a two-year pregnancy in her grief at Kunti bearing a son first, which Vyasa divided into a hundred and one jars to grow into Duryodhana and his brothers and one sister; cursed Krishna after the war, for letting it happen when he could have stopped it, that his own Yadava line would destroy itself the same way — the curse the Prabhasa killings fulfil."},
+    "Shakuni": {"u":"2026-08-02T01:00:00.000Z","note":"Prince of Gandhara, Gandhari's brother; master of the loaded dice, he engineered the Kauravas' schemes against the Pandavas. In one telling, Bhishma imprisoned and starved King Subala's whole line for a slight, leaving only Shakuni alive on his dying father's order to avenge them all; the dice he played with at Hastinapura were said to be carved from his own father's bones and obeyed his will. Present at every plot against the Pandavas from the dice game onward; killed at Kurukshetra by Sahadeva."},
+    "Uluka": "Son of Shakuni; the Kauravas' envoy to the Pandava camp."
+  },
+  "unions": [
+    {"id":"u_subala","p":["Subala"],"c":["Gandhari","Shakuni"]},
+    ["Shakuni","Uluka"],
+    {"id":"u_Gandhara_Subala","p":["Gandhara"],"c":["Subala"],"gap":74,"note":"The texts fall silent between Gandhara and Subala, father of Gandhari and Shakuni. SB 9.23.15","u":"2026-07-27T00:00:00.000Z"}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "family": "familyPatel_7",
+  "name": "Patel",
+  "color": "#afd85a",
+  "defaults": {"stamp":"2026-07-19T08:22:37.149Z","gender":"male","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Dheeraj": {"alive":false},
+    "JIgnesh": {"u":"2026-07-19T08:22:50.416Z"},
+    "Deepika_2": {"name":"Deepika","last":"Patil","gender":"female","u":"2026-07-19T08:23:51.399Z"},
+    "Vansh": {"u":"2026-07-19T08:24:19.649Z"}
+  },
+  "unions": [
+    {"id":"u_jasuben1_dheeraj","p":["Jasuben_1","Dheeraj"],"c":["JIgnesh","Deepika_2"],"order":1,"u":"2026-07-19T08:23:36.549Z"},
+    {"id":"u_jignesh_deepika1","p":["JIgnesh","Deepika_1"],"c":["Vansh"],"order":1,"u":"2026-07-19T08:24:19.650Z"}
+  ]
+}

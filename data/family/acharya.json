@@ -1,0 +1,20 @@
+{
+  "family": "familyAcharya",
+  "name": "Acharya",
+  "color": "#d8615a",
+  "defaults": {"stamp":"2026-07-12T14:24:10.481Z","gender":"female","alive":true,"lastName":"Acharya","status":"married"},
+  "people": {
+    "Kantilal_1": {"name":"Kantilal","gender":"male","alive":false,"u":"2026-07-12T14:21:22.796Z"},
+    "Bharatiben": {"u":"2026-07-12T14:19:22.745Z"},
+    "Dipti": {"u":"2026-07-12T14:21:15.463Z"},
+    "Chaya": {"u":"2026-07-12T14:21:55.679Z"},
+    "Mianesh": {"gender":"male","u":"2026-07-12T14:22:38.180Z"},
+    "Rakesh": {"gender":"male","u":"2026-07-12T14:22:54.364Z"},
+    "Dhara": {"u":"2026-07-12T14:23:53.582Z"},
+    "Nitya": {}
+  },
+  "unions": [
+    {"id":"u_mianesh_varsha1","p":["Mianesh","Varsha_1"],"c":[],"order":1,"u":"2026-07-12T14:23:10.048Z"},
+    {"id":"u_rakesh_vishakha","p":["Rakesh","Vishakha"],"c":["Dhara","Nitya"],"order":1}
+  ]
+}

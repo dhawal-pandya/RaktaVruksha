@@ -1,0 +1,20 @@
+{
+  "family": "familyMatsya",
+  "name": "Matsya",
+  "color": "#ef8f3c",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Satyavati": {"gender":"female","u":"2026-08-02T00:00:00.000Z","note":"A fisherman's daughter, raised by the ferryman Dasharaja; queen of Shantanu and matriarch of the later Kuru line. Before her marriage bore Vyasa to the sage Parashara on an island in the Yamuna, her virginity restored by his boon; her father's condition that only her own sons inherit the throne is what drove Bhishma to his vow; after both her sons Chitrangada and Vichitravirya died without surviving the line properly, she called Vyasa back to father Dhritarashtra, Pandu and Vidura on their widows by niyoga."},
+    "Virata": {"u":"2026-07-27T00:00:00.000Z","anchor":{"relativeTo":"Brihadbala","offset":-2},"note":"King of Matsya, in whose court the Pandavas passed their thirteenth year of exile in disguise — Yudhishthira as the courtier Kanka, Bhima the cook Ballava, Arjuna the dance teacher Brihannala, Nakula and Sahadeva as grooms, Draupadi as the queen's maid Sairandhri. Sheltered them through the Kichaka affair and a Kaurava cattle-raid Arjuna alone repelled while still in disguise; gave his daughter Uttara to Abhimanyu once the Pandavas revealed themselves."},
+    "UttarKumara": {"name":"Uttara","note":"Prince of Matsya (Uttara-kumara / Bhuminjaya); he rode out with the disguised Arjuna against the Kuru cattle-raid."},
+    "Uttara": {"gender":"female","note":"Princess of Matsya; wed to Abhimanyu and, widowed in the war, mother of Parikshit who carried on the Kuru line."},
+    "Sweta": "Elder son of Virata; among the first great warriors to fall at Kurukshetra.",
+    "Sankha": "Son of Virata, slain early in the war.",
+    "MatsyaKing": {"name":"Matsya","u":"2026-07-27T00:00:00.000Z","note":"Born of the fish with his sister Satyavati; the Matsya kingdom keeps his name. Also counted among Uparichara Vasu's sons at SB 9.22.6. MBh 1.57"}
+  },
+  "unions": [
+    {"id":"u_virata","p":["Virata","Sudeshna"],"c":["Sweta","Sankha","UttarKumara","Uttara"]},
+    {"id":"u_uparichara_adrika","p":["UparicharaVasu","Adrika"],"c":["MatsyaKing","Satyavati"],"status":"partners","note":"The fish-born twins. MBh 1.57","u":"2026-07-27T00:00:00.000Z"},
+    {"id":"u_MatsyaKing_Virata","p":["MatsyaKing"],"c":["Virata"],"gap":7,"note":"Between Matsya, the fish-born son of Uparichara Vasu, and Virata of the Matsya kingdom the texts name no one. MBh 1.57; SB 9.22.6","u":"2026-07-27T00:00:00.000Z"}
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "family": "familyPanchala",
+  "name": "Panchala",
+  "color": "#ef6f9a",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Prishata": {"anchor":13,"note":"King of Panchala; father of Drupada."},
+    "Drupada": "King of Panchala; humiliated by his old classmate Drona, he won from a sacrifice a son to slay Drona and a daughter to wed the Pandavas.",
+    "Shikhandi": "Child of Drupada, the reincarnation of Amba; born a girl and later made a man, whose presence let Bhishma be brought down, for Bhishma would not fight one born a woman.",
+    "Dhrishtadyumna": "Son of Drupada, born from the sacrificial fire; commander of the Pandava army, fated to and did slay Drona.",
+    "Draupadi": {"gender":"female","note":"Also Krishnaa and Yajnaseni; born of the sacrificial fire beside Dhrishtadyumna. Won by Arjuna, she became the shared wife of all five Pandavas and empress of Indraprastha."},
+    "Satyajit": "Son of Drupada; a Panchala warrior who died shielding Yudhishthira in the war.",
+    "Kshatradharma": "Son of Dhrishtadyumna, of the Panchala line."
+  },
+  "unions": [
+    ["Prishata","Drupada"],
+    {"id":"u_drupada","p":["Drupada"],"c":["Shikhandi","Dhrishtadyumna","Draupadi","Satyajit"]},
+    ["Dhrishtadyumna","Kshatradharma"]
+  ]
+}

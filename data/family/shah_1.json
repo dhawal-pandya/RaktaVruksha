@@ -1,0 +1,10 @@
+{
+  "family": "familyShah_1",
+  "name": "Shah",
+  "color": "#d85acd",
+  "defaults": {"stamp":"2026-07-12T13:46:38.278Z","gender":"female","alive":true,"lastName":"Trivedi","status":"married"},
+  "people": {
+    "Pooja": {}
+  },
+  "unions": []
+}

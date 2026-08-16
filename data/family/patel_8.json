@@ -1,0 +1,20 @@
+{
+  "family": "familyPatel_8",
+  "name": "Patel",
+  "color": "#5ad8d4",
+  "defaults": {"stamp":"2026-07-19T08:27:11.885Z","gender":"female","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Nayana": {"u":"2026-07-19T08:26:18.134Z"},
+    "Jagubhai": {"gender":"male","alive":false,"u":"2026-07-19T08:26:04.451Z"},
+    "Ravjibhai": {"gender":"male","alive":false},
+    "Maltiben": {"alive":false,"u":"2026-07-19T08:27:43.502Z"},
+    "Sarojben_2": {"name":"Sarojben","u":"2026-07-19T08:28:12.185Z"},
+    "Vasuben": {"name":"Vasantiben (Vasu)","u":"2026-07-19T08:28:59.002Z"},
+    "Bhavna_1": {"name":"Bhavna","u":"2026-07-19T08:29:34.970Z"},
+    "Hemaben": {"u":"2026-07-19T08:29:47.219Z"}
+  },
+  "unions": [
+    {"id":"u_jagubhai","p":["Jagubhai","Lakshmiben"],"c":["Vasuben","Maltiben","Sarojben_2","Nayana","Bhavna_1","Hemaben"],"order":1,"u":"2026-07-19T08:29:47.219Z"},
+    {"id":"u_Ravjibhai_Jagubhai","p":["Ravjibhai"],"c":["Jagubhai"],"status":"unknown","order":1}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "family": "familyNaga",
+  "name": "Naga",
+  "color": "#5c8def",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Ulupi": {"gender":"female","note":"A Naga princess who wed Arjuna during his wanderings; mother of Iravan and, later, protector of the reborn Arjuna."},
+    "Iravan": "Son of Arjuna and Ulupi; raised among the Nagas, he offered himself in sacrifice for the Pandava victory.",
+    "Kauravya": {"anchor":14,"note":"A king of the Nagas (serpent race); father of Ulupi."}
+  },
+  "unions": [
+    {"id":"u_arjuna_ulupi","p":["Arjuna","Ulupi"],"c":["Iravan"],"order":2},
+    ["Kauravya","Ulupi"]
+  ]
+}
