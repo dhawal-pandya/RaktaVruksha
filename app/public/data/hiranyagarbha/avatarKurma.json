@@ -1,0 +1,11 @@
+{
+  "family": "familyAvatarKurma",
+  "name": "Kurma",
+  "color": "#6a8f7a",
+  "note": "Suspended: an avatar with no ancestry, floated beside the churning of the ocean",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Kurma": {"divine":true,"anchor":{"relativeTo":"Indra","offset":0},"note":"The eleventh of the avatars: the tortoise whose shell held Mandara up as the devas and asuras churned the ocean with it. Everything that came out of that churning stands in this tree, Surabhi, Airavata, Varuni, and Dhanvantari with the pot of nectar. SB 1.3.16, 8.7"}
+  },
+  "unions": []
+}

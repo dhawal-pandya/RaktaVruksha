@@ -1,0 +1,20 @@
+{
+  "family": "familyVideha",
+  "name": "Videha",
+  "color": "#5cc97f",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"female","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Hrasvaroma": {"gender":"male","anchor":11,"note":"King of Videha; father of Janaka and Kushadhvaja. The Janaka kings descend from Nimi, a son of Ikshvaku."},
+    "Janaka": {"gender":"male","note":"Seeradhvaja Janaka, the philosopher-king of Mithila; he found the infant Sita in a furrow and gave her to whoever could string Shiva's bow."},
+    "Kushadhvaja": {"gender":"male","note":"Younger brother of Janaka, king of Sankashya."},
+    "Sita": {"fam":null,"note":"Found by Janaka in a furrow of the earth (Bhumija) and raised as his daughter; wife of Rama, carried off by Ravana, at last taken back into the earth. Her birth lineage is none but the Earth's."},
+    "Urmila": "Daughter of Janaka and Sunayana; wife of Lakshmana, who slept fourteen years in her stead so he could guard Rama night and day.",
+    "Mandavi": "Daughter of Kushadhvaja; wife of Bharata.",
+    "Shrutakirti": "Daughter of Kushadhvaja; wife of Shatrughna."
+  },
+  "unions": [
+    {"id":"u_hrasvaroma","p":["Hrasvaroma"],"c":["Janaka","Kushadhvaja"]},
+    {"id":"u_janaka","p":["Janaka","Sunayana"],"c":["Urmila"],"a":["Sita"]},
+    {"id":"u_kushadhvaja","p":["Kushadhvaja"],"c":["Mandavi","Shrutakirti"]}
+  ]
+}

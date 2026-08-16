@@ -1,0 +1,19 @@
+{
+  "family": "familyDruhyu",
+  "name": "Druhyu",
+  "color": "#9d8ac4",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "BabhruD": {"name":"Babhru","note":"Son of Druhyu. SB 9.23.14"},
+    "Setu": "SB 9.23.15",
+    "Arabdha": "SB 9.23.15",
+    "Gandhara": "The king from whom Gandhara takes its name. SB 9.23.15",
+    "DharmaD": {"name":"Dharma","note":"SB 9.23.15"},
+    "Dhrita": "SB 9.23.15",
+    "DurmadaD": {"name":"Durmada","note":"SB 9.23.15"},
+    "Praceta": "A hundred sons, who took the north of India and ruled there. SB 9.23.15-16"
+  },
+  "unions": [
+    ["Druhyu","BabhruD","Setu","Arabdha","Gandhara","DharmaD","Dhrita","DurmadaD","Praceta"]
+  ]
+}

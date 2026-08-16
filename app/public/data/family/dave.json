@@ -1,0 +1,14 @@
+{
+  "family": "familyDave",
+  "name": "Dave",
+  "color": "#302c68",
+  "defaults": {"stamp":"2026-07-12T19:52:34.606Z","gender":"male","alive":true,"lastName":"Dave","status":"married"},
+  "people": {
+    "Jyotindra": {"alive":false,"u":"2026-07-12T08:10:27.371Z"},
+    "Mihir": {"u":"2026-07-12T08:10:41.004Z"},
+    "Karishma": {"gender":"female"}
+  },
+  "unions": [
+    {"id":"u_binaben_jyotindra","p":["Binaben","Jyotindra"],"c":["Mihir","Karishma"],"order":1}
+  ]
+}

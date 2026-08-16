@@ -1,0 +1,14 @@
+{
+  "family": "familyAvanti",
+  "name": "Avanti",
+  "color": "#8f7cc4",
+  "defaults": {"stamp":"2026-07-22T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"unknown"},
+  "people": {
+    "VindaAvanti": {"name":"Vinda","note":"King of Avanti, son of Rajadhidevi; with his brother Anuvinda he fought for the Kauravas (a namesake of one of the hundred Kauravas)."},
+    "AnuvindaAvanti": {"name":"Anuvinda","note":"King of Avanti, son of Rajadhidevi and brother of Vinda; a Kaurava ally."},
+    "Jayasena_2": {"name":"Jayasena","u":"2026-07-27T00:00:00.000Z","note":"King of Avanti, husband of Rajadhidevi and father of Vinda and Anuvinda. SB 9.24.42"}
+  },
+  "unions": [
+    {"id":"u_rajadhidevi","p":["Rajadhidevi","Jayasena_2"],"c":["VindaAvanti","AnuvindaAvanti"]}
+  ]
+}

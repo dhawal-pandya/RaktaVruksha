@@ -1,0 +1,14 @@
+{
+  "family": "familySeth",
+  "name": "Seth",
+  "color": "#067d84",
+  "defaults": {"stamp":"2026-07-12T13:48:34.777Z","gender":"male","alive":true,"lastName":"Seth","status":"married"},
+  "people": {
+    "Alpesh": {"u":"2026-07-12T13:48:26.628Z"},
+    "Harshil": {}
+  },
+  "unions": [
+    {"id":"u_daksha_alpesh","p":["Daksha","Alpesh"],"c":["Harshil"],"order":1},
+    {"id":"u_harshil_vidhi1","p":["Harshil","Vidhi_1"],"c":[],"order":1,"u":"2026-07-12T13:49:13.447Z"}
+  ]
+}

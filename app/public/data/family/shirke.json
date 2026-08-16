@@ -1,0 +1,14 @@
+{
+  "family": "familyShirke",
+  "name": "Shirke",
+  "color": "#6e5ad8",
+  "defaults": {"stamp":"2026-07-14T08:13:58.846Z","gender":"male","alive":true,"lastName":"Shirke","status":"married"},
+  "people": {
+    "Nishant": {"u":"2026-07-14T08:13:23.979Z"},
+    "Sarth": {"u":"2026-07-14T08:13:50.930Z"},
+    "Anvit": {}
+  },
+  "unions": [
+    {"id":"u_sonal_nishant","p":["Sonal","Nishant"],"c":["Sarth","Anvit"],"order":1}
+  ]
+}

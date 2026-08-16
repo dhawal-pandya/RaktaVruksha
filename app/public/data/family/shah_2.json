@@ -1,0 +1,18 @@
+{
+  "family": "familyShah_2",
+  "name": "Shah",
+  "color": "#1d776e",
+  "defaults": {"stamp":"2026-07-14T08:37:20.729Z","gender":"male","alive":true,"lastName":"Shah","status":"married"},
+  "people": {
+    "Ashok": {"u":"2026-07-14T08:12:00.445Z"},
+    "Tejal": {"gender":"female","u":"2026-07-14T08:31:21.324Z"},
+    "Nilam": {"gender":"female","u":"2026-07-14T08:33:16.993Z"},
+    "Vimal": {"u":"2026-07-14T08:35:18.327Z"},
+    "Veer": {"u":"2026-07-14T08:37:07.063Z"},
+    "Anushree": {"gender":"female"}
+  },
+  "unions": [
+    {"id":"u_jyotsna1_ashok","p":["Jyotsna_1","Ashok"],"c":["Nilam","Vimal","Tejal"],"order":1,"u":"2026-07-14T08:35:23.594Z"},
+    {"id":"u_vimal_kajal","p":["Vimal","Kajal"],"c":["Veer","Anushree"],"order":1}
+  ]
+}

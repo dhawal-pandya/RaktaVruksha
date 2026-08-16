@@ -1,0 +1,16 @@
+{
+  "family": "familyMatsya",
+  "name": "Matsya",
+  "color": "#ef8f3c",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Virata": {"anchor":15,"note":"King of Matsya, in whose court the Pandavas passed their thirteenth year of exile in disguise."},
+    "UttarKumara": {"name":"Uttara","note":"Prince of Matsya (Uttara-kumara / Bhuminjaya); he rode out with the disguised Arjuna against the Kuru cattle-raid."},
+    "Uttara": {"gender":"female","note":"Princess of Matsya; wed to Abhimanyu and, widowed in the war, mother of Parikshit who carried on the Kuru line."},
+    "Sweta": "Elder son of Virata; among the first great warriors to fall at Kurukshetra.",
+    "Sankha": "Son of Virata, slain early in the war."
+  },
+  "unions": [
+    {"id":"u_virata","p":["Virata","Sudeshna"],"c":["Sweta","Sankha","UttarKumara","Uttara"]}
+  ]
+}

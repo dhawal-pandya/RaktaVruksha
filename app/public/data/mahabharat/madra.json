@@ -1,0 +1,18 @@
+{
+  "family": "familyMadra",
+  "name": "Madra",
+  "color": "#5cc97f",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Madravati": {"gender":"female","note":"A princess of Madra; wife of Parikshit and mother of Janamejaya."},
+    "Dyutimanta": {"anchor":13,"note":"King of Madra; father of Shalya and Madri."},
+    "Shalya": "King of Madra, brother of Madri; a peerless charioteer tricked into fighting for Duryodhana, whom he served as Karna's charioteer.",
+    "Madri": {"gender":"female","note":"Princess of Madra; second wife of Pandu and mother, by the Ashvins, of the twins Nakula and Sahadeva. She followed Pandu onto his pyre."},
+    "Rukmangada": "Son of Shalya of Madra, slain in the war.",
+    "Rukmaratha": "Son of Shalya of Madra, slain in the war."
+  },
+  "unions": [
+    {"id":"u_dyutimanta","p":["Dyutimanta"],"c":["Shalya","Madri"]},
+    {"id":"u_shalya","p":["Shalya"],"c":["Rukmangada","Rukmaratha"]}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "family": "familyGokula",
+  "name": "Gokula",
+  "color": "#6cbf8e",
+  "defaults": {"stamp":"2026-07-22T00:00:00.000Z","gender":"female","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Yashoda": "Wife of Nanda; the foster-mother who raised Krishna as her own.",
+    "Yogamaya": "Daughter of Nanda and Yashoda (Ekanamsha); exchanged for the infant Krishna the night he was born.",
+    "NandaGokula": {"name":"Nanda","gender":"male","u":"2026-07-27T00:00:00.000Z","anchor":{"relativeTo":"Brihadbala","offset":-2},"note":"Chief of the cowherds of Gokula, husband of Yashoda, and Krishna's foster father. The child was carried across the Yamuna to him the night he was born, and his own newborn daughter carried back in exchange. Not Nanda the Kaurava, who shares the name. BhP 10.3-10.5"}
+  },
+  "unions": [
+    {"id":"u_nanda","p":["NandaGokula","Yashoda"],"c":["Yogamaya"],"a":["Krishna","Balarama"],"u":"2026-07-27T00:00:00.000Z"}
+  ]
+}

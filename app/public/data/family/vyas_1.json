@@ -1,0 +1,14 @@
+{
+  "family": "familyVyas_1",
+  "name": "Vyas",
+  "color": "#682208",
+  "defaults": {"stamp":"2026-07-12T10:34:39.203Z","gender":"male","alive":true,"lastName":"Vyas","status":"married"},
+  "people": {
+    "Deven": {"u":"2026-07-12T10:34:16.521Z"},
+    "Keval": {"u":"2026-07-12T10:34:27.553Z"},
+    "Tirth": {}
+  },
+  "unions": [
+    {"id":"u_avani_deven","p":["Avani","Deven"],"c":["Keval","Tirth"],"order":1}
+  ]
+}

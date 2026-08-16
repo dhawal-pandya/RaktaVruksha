@@ -1,0 +1,15 @@
+{
+  "family": "familyManipura",
+  "name": "Manipura",
+  "color": "#e8695b",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Chitrangada_M": {"name":"Chitrangada","gender":"female","note":"Princess of Manipura who wed Arjuna on the condition that their son remain to rule her land; mother of Babhruvahana."},
+    "Babhruvahana": "Son of Arjuna and Chitrangada; king of Manipura. Not knowing his father, he met and slew Arjuna in battle during the horse sacrifice; Ulupi's gem restored him to life.",
+    "Chitravahana": {"u":"2026-07-27T00:00:00.000Z","anchor":{"relativeTo":"Brihadbala","offset":-2},"note":"King of Manipura; father of Chitrangada, he gave her to Arjuna on the pledge that their son would inherit his throne."}
+  },
+  "unions": [
+    {"id":"u_arjuna_chitrangada","p":["Arjuna","Chitrangada_M"],"c":["Babhruvahana"],"order":3},
+    ["Chitravahana","Chitrangada_M"]
+  ]
+}

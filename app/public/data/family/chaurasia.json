@@ -1,0 +1,14 @@
+{
+  "family": "familyChaurasia",
+  "name": "Chaurasia",
+  "color": "#5ad8a5",
+  "defaults": {"stamp":"2026-07-12T14:26:34.917Z","gender":"female","alive":true,"lastName":"Chaurasia","status":"married"},
+  "people": {
+    "Rajesh": {"gender":"male","u":"2026-07-12T14:26:15.033Z"},
+    "Dhwani": {"u":"2026-07-12T14:26:26.484Z"},
+    "Simran": {}
+  },
+  "unions": [
+    {"id":"u_shilpa1_rajesh","p":["Shilpa_1","Rajesh"],"c":["Dhwani","Simran"],"order":1}
+  ]
+}

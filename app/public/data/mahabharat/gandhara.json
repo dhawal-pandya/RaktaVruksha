@@ -1,0 +1,16 @@
+{
+  "family": "familyGandhara",
+  "name": "Gandhara",
+  "color": "#a78bea",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Subala": {"anchor":13,"note":"King of Gandhara; father of Gandhari and Shakuni."},
+    "Gandhari": {"gender":"female","note":"Princess of Gandhara; on marrying the blind Dhritarashtra she bound her own eyes for life. By a boon she bore a hundred sons and a daughter."},
+    "Shakuni": "Prince of Gandhara, Gandhari's brother; master of the loaded dice, he engineered the Kauravas' schemes against the Pandavas.",
+    "Uluka": "Son of Shakuni; the Kauravas' envoy to the Pandava camp."
+  },
+  "unions": [
+    {"id":"u_subala","p":["Subala"],"c":["Gandhari","Shakuni"]},
+    ["Shakuni","Uluka"]
+  ]
+}

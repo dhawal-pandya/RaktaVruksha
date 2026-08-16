@@ -1,0 +1,13 @@
+{
+  "family": "familyPatil",
+  "name": "Patil",
+  "color": "#a6d85a",
+  "defaults": {"stamp":"2026-07-19T08:24:45.517Z","gender":"male","alive":true,"lastName":"Patil","status":"married"},
+  "people": {
+    "Ravi_1": {"name":"Ravi","u":"2026-07-19T08:24:06.766Z"},
+    "Maira": {"gender":"female"}
+  },
+  "unions": [
+    {"id":"u_deepika2_ravi1","p":["Deepika_2","Ravi_1"],"c":["Maira"],"order":1}
+  ]
+}

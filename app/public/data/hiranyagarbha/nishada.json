@@ -1,0 +1,13 @@
+{
+  "family": "familyNishada",
+  "name": "Nishada",
+  "color": "#7f9457",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Hiranyadhanus": {"anchor":{"relativeTo":"Brihadbala","offset":-2},"note":"King of the Nishadas; father of Ekalavya."},
+    "Ekalavya": {"u":"2026-08-02T01:00:00.000Z","note":"Nishada prince who taught himself archery before a clay Drona; Drona claimed his right thumb as guru's fee so none would surpass Arjuna. Practised before the image until he outshot every prince Drona had actually taught, and gave the thumb without a word of protest when asked, crippling his own gift rather than refuse a guru's due; killed years later by Krishna in the Mahabharata's telling, to clear his old debt to Jarasandha's allies before Kurukshetra."}
+  },
+  "unions": [
+    {"id":"u_Hiranyadhanus_Ekalavya","p":["Hiranyadhanus"],"c":["Ekalavya"],"u":"2026-07-22T00:00:00.000Z"}
+  ]
+}

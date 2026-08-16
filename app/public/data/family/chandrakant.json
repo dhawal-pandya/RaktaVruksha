@@ -1,0 +1,8 @@
+{
+  "family": "familyChandrakant",
+  "name": "Chandrakant",
+  "color": "#5a81d8",
+  "defaults": {"stamp":"","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {},
+  "unions": []
+}

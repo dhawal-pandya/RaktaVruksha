@@ -1,0 +1,12 @@
+{
+  "family": "familyPatel_11",
+  "name": "Patel",
+  "color": "#5a64d8",
+  "defaults": {"stamp":"2026-07-19T08:33:03.672Z","gender":"male","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Pragnesh": {}
+  },
+  "unions": [
+    {"id":"u_tina_pragnesh","p":["Tina","Pragnesh"],"c":[],"order":1}
+  ]
+}

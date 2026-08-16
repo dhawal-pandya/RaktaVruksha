@@ -1,12 +1,14 @@
 # Puranic lineages: the research archive
 
-Every king, sage and side-story figure of the **original 1,099-person compilation** in
-`app/public/family-data.hiranyagarbha.json`, with the text each one comes from. This file
+Every king, sage and side-story figure of the **original 1,099-person compilation**, now in
+`app/public/data/hiranyagarbha/`, with the text each one comes from. This file
 exists so that work never has to be redone: when you want to add someone, look here first
 for where they attach and which Purana says so.
 
-The companion to this is `app/scripts/add-lineages.ts`, which holds the same chains in
-executable form. **Doc and script must be edited together.**
+This was once paired with `app/scripts/add-lineages.ts`, which held the same chains in
+executable form and had to be edited in lockstep. That script is gone: the tree is now
+hand-edited, one file per family, so this document is only ever prose. See "The data files"
+in [DATA_AND_EDITING.md](DATA_AND_EDITING.md).
 
 > **This is the archive. For current work, read [`LINEAGES_CURRENT.md`](LINEAGES_CURRENT.md)**
 > — the later passes, the standing directives, and the decisions already taken. Two things
@@ -34,6 +36,7 @@ executable form. **Doc and script must be edited together.**
 | `RV 7.18` | Ṛgveda, maṇḍala.hymn |
 | `ŚB 13.5.4` | Śatapatha Brāhmaṇa, kāṇḍa.adhyāya.brāhmaṇa |
 | `AB 7.13` | Aitareya Brāhmaṇa, pañcikā.khaṇḍa |
+| `GP 2.5` | Garuḍa Purāṇa, khaṇḍa.chapter |
 
 Canto 9 of the Bhagavata is the spine of the whole compilation: it is the one text that
 runs both dynasties end to end in a single voice. Where the Vishnu Purana disagrees, the
@@ -54,18 +57,16 @@ The rule the tree follows: a **thin** claim never becomes an edge. It stays pros
 
 ## How the tree is built, and how to rebuild it
 
-Two scripts, run in this order, and the second must always follow the first:
+The tree is edited directly, one file per family under `app/public/data/hiranyagarbha/`,
+and then checked:
 
 ```bash
-cd app
-npm run add-lineages    # splices the king-lists in
-npm run reanchor-eras   # puts every era back on its own level
+cd app && npm run check
 ```
 
-Both are idempotent. `add-lineages.ts` refuses to write if it would collide with an id
-already in the tree, or if the result fails `validateData`; `reanchor-eras.ts` prints a
-checklist of fifty-one pairs the texts put in the same room and reports any that did not
-land within a row of each other.
+`check` reports every structural fault and `validateData` error, and runs the checklist of
+pairs the texts put in the same room, reporting any that did not land within a row of each
+other. It writes nothing.
 
 ### The two levers
 
@@ -108,19 +109,18 @@ actually landed, on every load, so the same stored value goes on meaning "beside
 matter what moves above either of them.
 
 This is not a style preference; it is the fix for the failure that recurred three times
-while this tree was being built. `scripts/add-more-lineages.ts` takes
-`anchor: { beside: "Janamejaya" }` (with an optional `offset`, negative for rows above), and
-`reanchor-eras.ts` writes the same form for every era it places, from its own `ANCHORS`
-table. The leveler treats a relative anchor as one more lower-bound edge in exactly the
+while this tree was being built. In a shard file it is written
+`"anchor": { "relativeTo": "Janamejaya", "offset": 0 }`, the offset negative for rows above.
+The leveler treats a relative anchor as one more lower-bound edge in exactly the
 relaxation that `childGap` already feeds, so it also carries the anchored person's own
 descendants down with it. `validateData` rejects a target that doesn't exist, a
 self-reference, and any cycle.
 
 The old destructive habit is gone too: `reanchor-eras.ts` used to delete every anchor in the
 file and restore only the ones in its own hardcoded list, which meant anyone anchored
-*elsewhere* lost their placement the next time it ran. It now measures on a throwaway copy
-and never clears. **A person added with a relative anchor is placed once and stays placed,
-whether or not `reanchor-eras` is ever run again.**
+*elsewhere* lost their placement the next time it ran. That script no longer exists, and
+nothing rewrites anchors any more. **An anchor written into a shard file is placed once and
+stays placed.**
 
 ### Where the eras landed
 

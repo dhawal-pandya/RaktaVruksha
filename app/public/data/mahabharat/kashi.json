@@ -1,0 +1,16 @@
+{
+  "family": "familyKashi",
+  "name": "Kashi",
+  "color": "#d97fbf",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"female","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Kashiraja": {"gender":"male","anchor":12,"note":"King of Kashi; his three daughters were carried off from their svayamvara by Bhishma as brides for Vichitravirya."},
+    "Amba": "Eldest Kashi princess; rejected because she loved another, she vowed vengeance on Bhishma and was reborn in Panchala as Shikhandi.",
+    "Ambika": "Kashi princess wed to Vichitravirya; mother, through Vyasa's niyoga, of Dhritarashtra, she shut her eyes, so her son was born blind.",
+    "Ambalika": "Kashi princess wed to Vichitravirya; mother, through Vyasa's niyoga, of Pandu, she paled at the sight of Vyasa, so her son was born pale.",
+    "Balandhara": "A princess of Kashi; wife of Bhima."
+  },
+  "unions": [
+    {"id":"u_kashiraja","p":["Kashiraja"],"c":["Amba","Ambika","Ambalika"]}
+  ]
+}

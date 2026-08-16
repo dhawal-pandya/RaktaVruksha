@@ -1,0 +1,14 @@
+{
+  "family": "familyPatel_2",
+  "name": "Patel",
+  "color": "#d85aad",
+  "defaults": {"stamp":"2026-07-19T08:09:19.287Z","gender":"female","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Rutika": {},
+    "Bhumika": {"u":"2026-07-19T08:09:32.037Z"},
+    "Kashish": {"u":"2026-07-19T08:09:41.971Z"}
+  },
+  "unions": [
+    {"id":"u_nayanaben_ratilal","p":["Nayanaben","Ratilal"],"c":["Rutika","Bhumika","Kashish"],"order":1,"u":"2026-07-19T08:13:44.456Z"}
+  ]
+}

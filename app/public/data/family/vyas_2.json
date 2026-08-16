@@ -1,0 +1,12 @@
+{
+  "family": "familyVyas_2",
+  "name": "Vyas",
+  "color": "#d8915a",
+  "defaults": {"stamp":"2026-07-12T19:53:01.371Z","gender":"male","alive":true,"lastName":"Vyas","status":"married"},
+  "people": {
+    "Kandarp": {}
+  },
+  "unions": [
+    {"id":"u_karishma_kandarp","p":["Karishma","Kandarp"],"c":[],"order":1}
+  ]
+}

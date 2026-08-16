@@ -1,0 +1,15 @@
+{
+  "family": "familyJoshi_1",
+  "name": "Joshi",
+  "color": "#9e5ad8",
+  "defaults": {"stamp":"2026-07-12T18:43:18.235Z","gender":"male","alive":false,"lastName":"Joshi","status":"married"},
+  "people": {
+    "Narayan": {"u":"2026-07-12T18:42:42.036Z"},
+    "Niranjan_1": {"name":"Niranjan"},
+    "Pradeep": {"u":"2026-07-12T18:43:42.469Z"}
+  },
+  "unions": [
+    {"id":"u_savitaben1_narayan","p":["Savitaben_1","Narayan"],"c":["Niranjan_1"],"order":1},
+    {"id":"u_niranjan1_kumudben","p":["Niranjan_1","Kumudben"],"c":["Pradeep"],"order":1,"u":"2026-07-12T18:43:42.469Z"}
+  ]
+}

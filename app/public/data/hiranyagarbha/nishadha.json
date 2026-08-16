@@ -1,0 +1,18 @@
+{
+  "family": "familyNishadha",
+  "name": "Nishadha",
+  "color": "#8c7fbf",
+  "note": "Nala's janapada, distinct from the Nishada forest tribe of Ekalavya",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "NalaNishadha": {"name":"Nala (Bahuka)","anchor":{"relativeTo":"Rama","offset":10},"note":"King of Nishadha, son of Virasena. Master of horses and of cookery, and beloved of Damayanti before either had seen the other. Possessed by Kali, he gambled his kingdom away to his brother Pushkara, abandoned Damayanti in the forest, and lived disfigured as Bahuka, charioteer and cook to Rituparna of Ayodhya, until the science of horses he traded for the science of dice gave him both back. MBh 3.50-78"},
+    "Nalayani": {"name":"Nalayani (Indrasena)","gender":"female","note":"Also called Indrasena; daughter of Nala and Damayanti, wife of Mudgala."},
+    "Virasena": {"anchor":{"relativeTo":"Rama","offset":9},"note":"King of Nishadha, father of Nala. MBh 3.50"},
+    "Pushkara": "Brother of Nala, who won the kingdom from him at dice with Dvapara riding the throw, and lost it back on a single cast when Nala returned. MBh 3.56, 3.78",
+    "IndrasenaN": {"name":"Indrasena","note":"Son of Nala and Damayanti; with his sister he was sent to Vidarbha by the charioteer Varshneya when their parents' fortune turned. MBh 3.59"}
+  },
+  "unions": [
+    {"id":"u_nala_damayanti","p":["NalaNishadha","Damayanti"],"c":["Nalayani","IndrasenaN"]},
+    {"id":"u_virasena","p":["Virasena"],"c":["NalaNishadha","Pushkara"]}
+  ]
+}

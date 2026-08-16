@@ -1,0 +1,13 @@
+{
+  "family": "familyPatel_13",
+  "name": "Patel",
+  "color": "#d85a5f",
+  "defaults": {"stamp":"2026-07-19T08:36:13.260Z","gender":"male","alive":true,"lastName":"Patel","status":"married"},
+  "people": {
+    "Bhavesh": {"u":"2026-07-19T08:35:52.944Z"},
+    "Redant": {}
+  },
+  "unions": [
+    {"id":"u_jagruti1_bhavesh","p":["Jagruti_1","Bhavesh"],"c":["Redant"],"order":1}
+  ]
+}

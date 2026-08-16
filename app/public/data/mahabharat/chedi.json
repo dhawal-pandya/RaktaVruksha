@@ -1,0 +1,16 @@
+{
+  "family": "familyChedi",
+  "name": "Chedi",
+  "color": "#8fa3b8",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Damaghosha": "King of Chedi; husband of Shrutashrava and father of Shishupala.",
+    "Shishupala": "King of Chedi, cousin of Krishna; born three-eyed and four-armed under a doom that Krishna would kill him, which came to pass at Yudhishthira's rajasuya after his hundredth insult.",
+    "Karenumati": {"gender":"female","note":"A princess of Chedi; wife of Nakula."},
+    "Dhrishtaketu": "Son of Shishupala; king of Chedi after his father and an ally of the Pandavas in the war."
+  },
+  "unions": [
+    {"id":"u_damaghosha","p":["Damaghosha","Shrutashrava"],"c":["Shishupala"]},
+    ["Shishupala","Dhrishtaketu"]
+  ]
+}

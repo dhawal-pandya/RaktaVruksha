@@ -1,0 +1,29 @@
+{
+  "family": "familyUshinara",
+  "name": "Ushinara",
+  "color": "#d4a05a",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Sabhanara": "Eldest of Anu's three sons, with Chakshu and Pareshnu. SB 9.23.1",
+    "Kalanara": "SB 9.23.1",
+    "SrinjayaA": {"name":"Srinjaya","note":"SB 9.23.1"},
+    "JanamejayaA": {"name":"Janamejaya","note":"Son of Srinjaya of the Anu line. SB 9.23.2"},
+    "Mahashala": "SB 9.23.2",
+    "Mahamana": "Two sons, Ushinara and Titikshu, and from them the two great Anu branches: Madra and Kekaya on one side, Anga and Karna's throne on the other. SB 9.23.2",
+    "Ushinara": "King of the Bhojas. One of the four to whom Yayati's daughter Madhavi was lent, and by her the father of Shibi. SB 9.23.2-3; MBh 5.114",
+    "Titikshu": "Brother of Ushinara; the Anga line descends from him. SB 9.23.2-4",
+    "Shibi": "Son of Ushinara by Madhavi. A hawk claimed a dove that had taken refuge with him, and rather than give up the one who trusted him he cut flesh from his own body to pay the weight. Four sons: Vrishadarbha, Sudhira, Madra and Kekaya. SB 9.23.3; MBh 3.131, 5.114",
+    "Vara": "Son of Ushinara. SB 9.23.3",
+    "Krimi": "Son of Ushinara. SB 9.23.3",
+    "DakshaU": {"name":"Daksha","note":"Son of Ushinara. Not Daksha the Prajapati. SB 9.23.3"},
+    "Vrishadarbha": "Son of Shibi. SB 9.23.3",
+    "Sudhira": "Son of Shibi. SB 9.23.3"
+  },
+  "unions": [
+    ["Anu","Sabhanara","Kalanara","SrinjayaA","JanamejayaA","Mahashala","Mahamana"],
+    {"id":"u_Mahamana","p":["Mahamana"],"c":["Ushinara","Titikshu"]},
+    {"id":"u_Ushinara","p":["Ushinara"],"c":["Vara","Krimi","DakshaU"]},
+    {"id":"u_Shibi","p":["Shibi"],"c":["Vrishadarbha","Sudhira","MadraKing","KekayaKing"]},
+    {"id":"u_ushinara_madhavi","p":["Ushinara","Madhavi"],"c":["Shibi"],"status":"partners","note":"The third of Madhavi's four. MBh 5.114"}
+  ]
+}

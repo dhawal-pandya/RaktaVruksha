@@ -1,0 +1,13 @@
+{
+  "family": "familySindhu",
+  "name": "Sindhu",
+  "color": "#7ec8a0",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Jayadratha": "King of Sindhu, husband of Dushala; his blocking of the Pandavas at the pass sealed Abhimanyu's death, and Arjuna vowed and took his head the next day.",
+    "Suratha": "Son of Jayadratha and Dushala."
+  },
+  "unions": [
+    {"id":"u_jayadratha","p":["Jayadratha","Dushala"],"c":["Suratha"]}
+  ]
+}

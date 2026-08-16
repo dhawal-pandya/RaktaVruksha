@@ -1,0 +1,10 @@
+{
+  "family": "familyRajgor",
+  "name": "Rajgor",
+  "color": "#302c68",
+  "defaults": {"stamp":"2026-07-12T08:07:33.137Z","gender":"female","alive":true,"lastName":"Dixit","status":"married"},
+  "people": {
+    "Vilas_1": {"name":"Vilas"}
+  },
+  "unions": []
+}

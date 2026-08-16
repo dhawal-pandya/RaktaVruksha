@@ -1,0 +1,16 @@
+{
+  "family": "familyShah_4",
+  "name": "Shah",
+  "color": "#935ad8",
+  "defaults": {"stamp":"2026-07-14T08:34:55.161Z","gender":"male","alive":true,"lastName":"Shah","status":"married"},
+  "people": {
+    "Ketan": {"u":"2026-07-14T08:34:09.044Z"},
+    "Nirav": {"last":"Sorathiya"},
+    "Kajal": {"gender":"female","u":"2026-07-14T08:36:01.129Z"},
+    "Harsh_1": {"name":"Harsh","u":"2026-07-14T08:36:51.879Z"}
+  },
+  "unions": [
+    {"id":"u_nilam_ketan","p":["Nilam","Ketan"],"c":["Harsh_1"],"order":1,"u":"2026-07-14T08:36:51.879Z"},
+    {"id":"u_tejal_nirav","p":["Tejal","Nirav"],"c":[],"order":1}
+  ]
+}

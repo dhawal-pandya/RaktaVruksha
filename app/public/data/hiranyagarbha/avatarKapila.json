@@ -1,0 +1,11 @@
+{
+  "family": "familyAvatarKapila",
+  "name": "Kapila",
+  "color": "#b8862b",
+  "note": "Suspended: an avatar with no ancestry, floated beside Sagara",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Kapila": {"divine":true,"anchor":{"relativeTo":"Sagara","offset":0},"note":"The fifth of the avatars: son of Kardama and Devahuti, daughter of Svayambhuva Manu, and the founder of Sankhya. Sagara's sixty thousand sons dug the earth open looking for their horse, found it beside him at his meditation, took him for the thief, and were ash before they finished the thought. Amshuman came after them and learned that only the Ganga could redeem them, which is the errand Bhagiratha finally completed. SB 1.3.10, 9.8"}
+  },
+  "unions": []
+}

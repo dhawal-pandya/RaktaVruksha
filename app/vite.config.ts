@@ -4,16 +4,22 @@ import { writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 
 const PUBLIC_DIR = fileURLToPath(new URL("./public/", import.meta.url));
-// Only these files may be written back, so a stray request can never touch
-// anything else on disk. Editing works on every dataset, each to its own file.
-const WRITABLE = new Set([
-  "family-data.json",
-  "family-data.mahabharat.json",
-  "family-data.ramayan.json",
-  "family-data.hiranyagarbha.json",
-  // The 3D layout dials, driven from the Layout Lab.
-  "layout.json",
-]);
+// The 3D layout dials, driven from the Layout Lab.
+const WRITABLE_FILES = new Set(["layout.json"]);
+// Datasets are directories of per-family shards (see src/core/shards.ts), so the
+// writable set is a shape rather than a list: exactly one directory level under
+// data/, and a plain .json leaf. Still a whitelist — a name with a path
+// separator, a dot segment, or an unknown directory is refused, so a stray
+// request can never touch anything else on disk.
+const DATA_DIRS = new Set(["family", "ramayan", "mahabharat", "hiranyagarbha"]);
+const isWritable = (file: string): boolean => {
+  if (WRITABLE_FILES.has(file)) return true;
+  const parts = file.split("/");
+  if (parts.length !== 3 || parts[0] !== "data") return false;
+  const [, dir, leaf] = parts;
+  if (!DATA_DIRS.has(dir)) return false;
+  return /^[A-Za-z0-9_-]+\.json$/.test(leaf);
+};
 
 /**
  * Dev-only endpoint that lets the running app write edits straight back to the
@@ -35,7 +41,7 @@ function writeDataPlugin(): Plugin {
         const file =
           new URL(req.url ?? "", "http://localhost").searchParams.get("file") ??
           "family-data.json";
-        if (!WRITABLE.has(file)) {
+        if (!isWritable(file)) {
           res.statusCode = 403;
           res.end("file not allowed");
           return;
@@ -71,7 +77,7 @@ export default defineConfig({
       ignored: [
         "**/node_modules/**",
         "**/.git/**",
-        "**/public/family-data*.json",
+        "**/public/data/**",
         "**/public/layout.json",
       ],
     },

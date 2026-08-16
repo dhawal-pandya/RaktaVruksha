@@ -1,0 +1,20 @@
+{
+  "family": "familySvayambhuva",
+  "name": "Svayambhuva",
+  "color": "#a9c4e8",
+  "defaults": {"stamp":"2026-08-02T00:00:00.000Z","gender":"female","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "ManuSvayambhuva": {"name":"Svayambhuva Manu","gender":"male","divine":true,"note":"The first Manu, born of Brahma's own body with Shatarupa, and the first man to rule. Father, the Bhagavata says, of Priyavrata and Uttanapada as well -- not carried in this tree, their own descent judged not worth its cost to the tree's shape -- and of three daughters whose marriages seeded the rest: Akuti to Ruchi, Devahuti to Kardama, Prasuti to Daksha. Not Vaivasvata Manu, the seventh, who is this tree's own ancestor of the solar and lunar houses. SB 3.12.54, 4.1"},
+    "Shatarupa": {"divine":true,"note":"The first woman, born of Brahma's body alongside Svayambhuva Manu, whom she married; mother of Akuti, Devahuti and Prasuti in this tree, and of Priyavrata and Uttanapada in the Bhagavata's own account, not carried here. Her name, 'she of a hundred forms', is the ground of every later account of Brahma's creation of a consort. SB 3.12.54"},
+    "Akuti": "Daughter of Svayambhuva Manu, given to the Prajapati Ruchi on the condition that her son be counted her father's; by him she bore the twins Yajna and Dakshina. SB 4.1.1-6",
+    "Prasuti": {"u":"2026-08-02T01:00:00.000Z","divine":true,"note":"Youngest daughter of Svayambhuva Manu; wife of Daksha, and so the mother of the sixteen daughters through whom the whole deva world descends. Her marriage is the join between the first Manu's house and Brahma's own. SB 4.1.2, 4.1.64"},
+    "Ruchi": {"gender":"male","note":"A Prajapati; husband of Akuti, daughter of Svayambhuva Manu, and father by her of the twins Yajna and Dakshina. SB 4.1.1-6"},
+    "Yajna": {"gender":"male","divine":true,"note":"Son of Ruchi and Akuti; the seventh of the avatars, sacrifice itself made a person. He became the Indra of the Svayambhuva age, with his own sons the devas of it. Counted at SB 1.3.12 and left out of this tree until his parents entered it. SB 4.1.7"},
+    "Dakshina": "Twin sister of Yajna, born to Ruchi and Akuti, and afterwards his wife; the sacrificial fee personified, without which a sacrifice does not complete. SB 4.1.7"
+  },
+  "unions": [
+    {"id":"u_svayambhuva","p":["ManuSvayambhuva","Shatarupa"],"c":["Akuti","Prasuti","Devahuti"],"note":"SB 3.12.56, 4.1. Devahuti was already in this tree as Kardama's wife with no parents at all; this is the union that gives her one."},
+    {"id":"u_ruchi_akuti","p":["Ruchi","Akuti"],"c":["Yajna","Dakshina"],"note":"SB 4.1.1-7."},
+    {"id":"u_yajna_dakshina","p":["Yajna","Dakshina"],"c":[],"note":"Twins, and afterwards husband and wife; their twelve sons were the Tushita devas of the Svayambhuva age. SB 4.1.7-8"}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "family": "familyDsouza",
+  "name": "D'souza",
+  "color": "#81d85a",
+  "defaults": {"stamp":"2026-07-14T08:43:29.415Z","gender":"female","alive":true,"lastName":"D'souza","status":"married"},
+  "people": {
+    "Geetaben": {"name":"Geetaben (Gladys)","last":"Shah","u":"2026-07-14T08:42:13.635Z"},
+    "Brazil": {"gender":"male","alive":false,"u":"2026-07-14T08:39:12.967Z"},
+    "Leena": {"u":"2026-07-14T08:40:01.566Z"},
+    "Agnus": {"last":"D'sa","u":"2026-07-14T08:40:47.402Z"},
+    "JohnJohnny": {"name":"John (Johnny)","gender":"male","u":"2026-07-14T08:41:53.335Z"},
+    "Thomas": {"gender":"male","alive":false}
+  },
+  "unions": [
+    {"id":"u_brazil","p":["Brazil","Benita"],"c":["Leena","Agnus","JohnJohnny","Geetaben","Thomas"],"order":1}
+  ]
+}

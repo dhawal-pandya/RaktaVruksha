@@ -1,0 +1,29 @@
+{
+  "family": "familyJoshi_2",
+  "name": "Joshi",
+  "color": "#c4d85a",
+  "defaults": {"stamp":"2026-07-13T13:02:11.277Z","gender":"male","alive":true,"lastName":"Joshi","status":"married"},
+  "people": {
+    "Krushnaprasad": {"alive":false,"u":"2026-07-13T13:00:53.110Z"},
+    "Ashwin": {"u":"2026-07-13T13:01:06.509Z"},
+    "Sanjay": {"u":"2026-07-13T13:01:14.842Z"},
+    "Suvarna": {"gender":"female","u":"2026-07-13T13:01:24.392Z"},
+    "Aurupa": {"name":"Anurupa","gender":"female","u":"2026-07-13T13:05:40.158Z"},
+    "Priteshkumar": {"u":"2026-07-13T13:02:00.841Z"},
+    "Hiteshkumar_1": {"name":"Hiteshkumar"},
+    "Umang": {"u":"2026-07-13T13:02:34.377Z"},
+    "Hiten": {"u":"2026-07-13T13:02:45.543Z"},
+    "Prapti": {"gender":"female","u":"2026-07-13T13:03:21.894Z"},
+    "Ritu": {"gender":"female","u":"2026-07-13T13:03:30.344Z"},
+    "Nirali": {"gender":"female","u":"2026-07-13T13:03:52.361Z"},
+    "Vivek": {"u":"2026-07-13T13:04:02.560Z"}
+  },
+  "unions": [
+    {"id":"u_sushilaben_krushnaprasad","p":["Sushilaben","Krushnaprasad"],"c":["Ashwin","Sanjay","Suvarna","Aurupa"],"order":1,"u":"2026-07-13T13:01:38.243Z"},
+    {"id":"u_ashwin_meenakshi","p":["Ashwin","Meenakshi"],"c":["Priteshkumar","Hiteshkumar_1"],"order":1},
+    {"id":"u_priteshkumar_rupal2","p":["Priteshkumar","Rupal_2"],"c":["Umang","Hiten"],"order":1,"u":"2026-07-13T13:03:12.460Z"},
+    {"id":"u_hiteshkumar1_aabhaben","p":["Hiteshkumar_1","Aabhaben"],"c":["Prapti","Ritu"],"order":1,"u":"2026-07-13T13:03:30.344Z"},
+    {"id":"u_sanjay_anita","p":["Sanjay","Anita"],"c":["Nirali","Vivek"],"order":1,"u":"2026-07-13T13:04:02.560Z"},
+    {"id":"u_vivek_arpita","p":["Vivek","Arpita"],"c":[],"order":1,"u":"2026-07-13T13:04:59.857Z"}
+  ]
+}

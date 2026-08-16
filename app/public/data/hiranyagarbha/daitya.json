@@ -1,0 +1,32 @@
+{
+  "family": "familyDaitya",
+  "name": "Daitya",
+  "color": "#c0504d",
+  "defaults": {"stamp":"2026-07-22T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Banasura": {"u":"2026-07-27T00:00:00.000Z","anchor":{"relativeTo":"Brihadbala","offset":0},"note":"A thousand-armed asura king and devotee of Shiva; father of Usha."},
+    "Diti": {"gender":"female","u":"2026-08-02T02:00:00.000Z","divine":true,"note":"Daughter of Daksha, wife of Kashyap; mother of the Daitya asuras."},
+    "Hiranyakashipu": {"u":"2026-08-02T00:00:00.000Z","note":"Daitya king, son of Kashyap and Diti; slain by Vishnu as Narasimha for tormenting his devotee son Prahlada. Won from Brahma a boon against death by man or beast, by day or night, indoors or out, on earth or in the sky, by any weapon — and was torn apart on Narasimha's lap, at the threshold of a doorway, at twilight, by claws, on neither ground nor sky. Twin of Hiranyaksha, killed a generation earlier by Varaha."},
+    "Hiranyaksha": {"u":"2026-08-02T00:00:00.000Z","note":"Daitya, son of Kashyap and Diti; slain by Vishnu as the boar Varaha. Dragged the earth down into the cosmic waters, and was killed in the duel that followed when Varaha lifted her back out on his tusks. Twin of Hiranyakashipu, killed a generation later as Narasimha."},
+    "Prahlada": {"u":"2026-08-02T00:00:00.000Z","note":"Son of Hiranyakashipu; a supreme devotee of Vishnu whom no torment could shake. By name — surviving poison, elephants, fire, cliffs and serpents at his own father's order for refusing to renounce Vishnu, answering 'everywhere, even in this pillar' when asked where his god was, and Vishnu tearing out of that pillar as Narasimha to kill Hiranyakashipu across a threshold at twilight, neither in nor out, neither day nor night, neither man nor beast — every loophole in the asura's own boon closed at once."},
+    "Virochana": "Son of Prahlada; a Daitya king, father of Bali.",
+    "Bali": {"u":"2026-08-02T00:00:00.000Z","note":"Mahabali, son of Virochana; the generous asura emperor whom Vishnu, as the dwarf Vamana, measured out of the three worlds. His line runs on to Banasura of the Mahabharat age (Usha's father). Refused his guru Shukracharya's warning not to grant the dwarf's request; gave anyway when Vishnu's second step took heaven along with earth, and offered his own head for the third when there was nothing left to give, for which Vishnu let him keep Patala and promised him Indra's seat in a future age."},
+    "Vajranga": "A mighty son of Kashyap and Diti, of adamantine body; father, by Varangi, of Tarakasura.",
+    "Tarakasura": "Asura son of Vajranga and Varangi, boon-armoured against all but a son of Shiva; slain at last by Kartikeya. Father of the three lords of Tripura.",
+    "Tarakaksha": "Son of Tarakasura; a lord of the flying triple-city Tripura.",
+    "Vidyunmali": "Son of Tarakasura; a lord of Tripura.",
+    "Kamalaksha": "Son of Tarakasura; a lord of Tripura, the three cities burnt by Shiva.",
+    "Simhika": {"gender":"female","note":"Daughter of Diti (sister of Hiranyakashipu); wife of Viprachitti, mother of Rahu."},
+    "Kayadhu": {"gender":"female","note":"Wife of Hiranyakashipu, mother of Prahlada; kept safe by Narada while her lord warred with heaven."},
+    "Anuhlada": "Brother of Prahlada, son of Hiranyakashipu.",
+    "Hlada": "Brother of Prahlada, son of Hiranyakashipu.",
+    "Samhlada": "Brother of Prahlada, son of Hiranyakashipu.",
+    "Andhaka": "Daitya son of Hiranyaksha (or of Shiva's sweat), the blind asura slain by Shiva.",
+    "Vindhyavali": {"gender":"female","note":"Wife of Bali; queen of the generous asura emperor."}
+  },
+  "unions": [
+    {"id":"u_Banasura_Usha","p":["Banasura"],"c":["Usha"],"fam":null,"u":"2026-07-20T00:00:00.000Z"},
+    ["Hiranyaksha","Andhaka"],
+    {"id":"u_bali","p":["Bali","Vindhyavali"],"c":["Banasura"]}
+  ]
+}

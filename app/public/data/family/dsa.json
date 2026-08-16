@@ -1,0 +1,13 @@
+{
+  "family": "familyDsa",
+  "name": "D'sa",
+  "color": "#5ad881",
+  "defaults": {"stamp":"2026-07-14T08:41:30.434Z","gender":"male","alive":true,"lastName":"D'sa","status":"married"},
+  "people": {
+    "Norbert": {"u":"2026-07-14T08:41:15.501Z"},
+    "Stalin": {}
+  },
+  "unions": [
+    {"id":"u_agnus_norbert","p":["Agnus","Norbert"],"c":["Stalin"],"order":1}
+  ]
+}

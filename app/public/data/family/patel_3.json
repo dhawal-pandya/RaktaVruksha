@@ -1,0 +1,8 @@
+{
+  "family": "familyPatel_3",
+  "name": "Patel",
+  "color": "#d85ac1",
+  "defaults": {"stamp":"","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {},
+  "unions": []
+}

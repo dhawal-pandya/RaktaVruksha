@@ -1,0 +1,14 @@
+{
+  "family": "familyYavana",
+  "name": "Yavana",
+  "color": "#7a8fa3",
+  "defaults": {"stamp":"2026-07-27T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"partners"},
+  "people": {
+    "Kalayavana": "Born of Gargya and the apsara Gopali, and raised by the childless king of the Yavanas. Narada pointed him at Mathura and he came with thirty million soldiers. Krishna, carrying no weapon, ran from him into a mountain cave, where Kalayavana kicked a sleeping man he took for Krishna, and Muchukunda's first waking glance burned him to ash. SB 10.50-51",
+    "YavanaRaja": {"name":"Yavanaraja","anchor":{"relativeTo":"Brihadbala","offset":-2},"note":"The childless king of the Yavanas, Gargya's friend, who raised Kalayavana as his own. VP 5.23"}
+  },
+  "unions": [
+    {"id":"u_gargya_gopali","p":["Gargya","Gopali"],"c":["Kalayavana"]},
+    {"id":"u_yavanaraja","p":["YavanaRaja"],"c":[],"a":["Kalayavana"],"status":"married"}
+  ]
+}

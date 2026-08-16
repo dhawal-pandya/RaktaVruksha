@@ -1,0 +1,41 @@
+{
+  "family": "familySoma",
+  "name": "Chandravamsha",
+  "color": "#cfd6e2",
+  "defaults": {"stamp":"2026-07-20T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Chandra": {"name":"Chandra Deva","divine":true,"note":"Chandra Deva (also Soma), the radiant deva of the moon and of the soma nectar; progenitor and eponym of the Chandravamsha, the lunar dynasty from which both the Kurus and the Yadavas descend."},
+    "Budha": {"name":"Budha Deva","divine":true,"note":"Budha Deva, the deva of the planet Mercury and son of Chandra; husband of Ila."},
+    "Pururavas": "Son of Budha and Ila; first emperor of the lunar line, famed for his love of the apsara Urvashi.",
+    "Ayus": "Son of Pururavas and Urvashi.",
+    "Nahusha": "Son of Ayus; so mighty he briefly took Indra's throne, then fell for his pride and became a serpent.",
+    "Yayati": "Son of Nahusha; a great emperor cursed with old age, which his youngest son Puru bore for him. His five sons founded five peoples.",
+    "Yadu": "Eldest son of Yayati and Devayani; progenitor of the Yadavas (the Yadu line), into which Krishna is born.",
+    "Turvasu": "Son of Yayati and Devayani; ancestor of the Yavana peoples.",
+    "Druhyu": "Son of Yayati and Sharmishtha; ancestor of the Bhoja peoples.",
+    "Anu": "Son of Yayati and Sharmishtha; ancestor of the Mleccha peoples.",
+    "Puru": "Youngest son of Yayati and Sharmishtha; he gave his own youth to his aged father and so inherited the throne, founding the Paurava (Kuru) line.",
+    "Dushyanta": "A Paurava emperor descended from Puru through several generations; husband of Shakuntala and father of Bharata.",
+    "Bharata": "The great emperor son of Dushyanta and Shakuntala, after whom the land Bharatavarsha and the Bharata clan are named.",
+    "Hastin": "A Bharata king, some generations after Bharata; founder of Hastinapura, the Kuru capital.",
+    "Kuru": "King some generations after Hastin; eponymous ancestor of the Kurus and of the field of Kurukshetra.",
+    "Kroshtu": "Son of Yadu; the Yadava kings descend from him.",
+    "Vrijinivat": "A Yadava king, son of Kroshtu.",
+    "Swahi": "A Yadava king of the early Yadu line.",
+    "Rushadru": "A Yadava king of the early Yadu line.",
+    "Madhu": "A Yadava king; progenitor of the Madhava branch, whence Krishna's epithet Madhava. Several generations separate him from Vrishni.",
+    "Vrishni": "A Yadava king; eponym of the Vrishni clan of Krishna and Vasudeva."
+  },
+  "unions": [
+    ["Chandra","Budha"],
+    {"id":"u_budha","p":["Budha","Ila"],"c":["Pururavas"]},
+    {"id":"u_pururavas","p":["Pururavas","Urvashi"],"c":["Ayus"]},
+    ["Ayus","Nahusha","Yayati"],
+    {"id":"u_yayati_devayani","p":["Yayati","Devayani"],"c":["Yadu","Turvasu"],"order":0},
+    {"id":"u_yayati_sharmishtha","p":["Yayati","Sharmishtha"],"c":["Druhyu","Anu","Puru"],"order":1},
+    ["Puru","Dushyanta"],
+    {"id":"u_dushyanta","p":["Dushyanta","Shakuntala"],"c":["Bharata"]},
+    ["Bharata","Hastin","Kuru"],
+    ["Yadu","Kroshtu","Vrijinivat","Swahi","Rushadru","Madhu","Vrishni"]
+  ]
+}
