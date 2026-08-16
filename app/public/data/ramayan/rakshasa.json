@@ -18,14 +18,22 @@
     "Akshayakumara": "Young son of Ravana, slain by Hanuman in the burning of Lanka.",
     "Kumbha": "Son of Kumbhakarna, killed in the war.",
     "Nikumbha": "Son of Kumbhakarna, killed in the war.",
-    "Sumali": {"anchor":11,"note":"A rakshasa lord of the elder line of Lanka; father of Kaikasi, whom he gave to the sage Vishrava to sire sons who might rival the devas."}
+    "Sumali": {"anchor":11,"note":"A rakshasa lord of the elder line of Lanka; father of Kaikasi, whom he gave to the sage Vishrava to sire sons who might rival the devas."},
+    "Nalakubara": {"u":"2026-08-16T00:00:00.000Z","note":"Son of Kubera and husband of Rambha. When Ravana forced her he cursed him: another woman taken against her will and his head would burst into seven pieces -- which is why Ravana held Sita a year and never touched her. Rām 7.26"},
+    "Rambha": {"gender":"female","u":"2026-08-16T00:00:00.000Z","note":"An apsara, wife of Nalakubara, taken by Ravana on her way to her husband. The curse it earned him is the reason Sita came out of Lanka. Rām 7.26"},
+    "Vedavati": {"gender":"female","u":"2026-08-16T00:00:00.000Z","note":"A woman doing penance to win Vishnu as husband. Ravana laid hands on her hair; she cut it off, walked into her own fire, and swore to come back as the cause of his death -- and came back as Sita. Rām 7.17"},
+    "Punjikasthala": {"gender":"female","u":"2026-08-16T00:00:00.000Z","note":"An apsara Ravana forced in Brahma's hall, which drew the same warning Nalakubara later gave him. Rām 7.26"}
   },
   "unions": [
     ["Brahma","Pulastya","Vishrava"],
-    {"id":"u_vishrava_ilavida","p":["Vishrava","Ilavida"],"c":["Kubera"],"order":0},
+    {"id":"u_vishrava_ilavida","p":["Vishrava","Ilavida"],"c":["Kubera","Nalakubara"],"order":0},
     {"id":"u_vishrava_kaikasi","p":["Vishrava","Kaikasi"],"c":["Ravana","Kumbhakarna","Shurpanakha","Vibhishana"],"order":1},
     {"id":"u_ravana","p":["Ravana","Mandodari"],"c":["Indrajit","Atikaya","Akshayakumara"]},
     {"id":"u_kumbhakarna","p":["Kumbhakarna","Vajrajwala"],"c":["Kumbha","Nikumbha"]},
-    ["Sumali","Kaikasi"]
+    ["Sumali","Kaikasi"],
+    {"id":"u_nalakubara_rambha","p":["Nalakubara","Rambha"],"c":[],"note":"Rām 7.26","u":"2026-08-16T00:00:00.000Z"},
+    {"id":"u_ravana_rambha","p":["Ravana","Rambha"],"c":[],"status":"abduction","note":"Nalakubara's curse for it is what saved Sita. Rām 7.26","u":"2026-08-16T00:00:00.000Z"},
+    {"id":"u_ravana_vedavati","p":["Ravana","Vedavati"],"c":[],"status":"abduction","note":"She burned rather than live having been touched by him. Rām 7.17","u":"2026-08-16T00:00:00.000Z"},
+    {"id":"u_ravana_punjikasthala","p":["Ravana","Punjikasthala"],"c":[],"status":"abduction","note":"Rām 7.26","u":"2026-08-16T00:00:00.000Z"}
   ]
 }

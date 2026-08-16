@@ -26,12 +26,13 @@
     "Prahasta": {"u":"2026-07-22T00:00:00.000Z","note":"Son of Sumali and maternal uncle of Ravana; chief commander of Lanka's army, slain by the vanara Nila."},
     "Trijata": {"gender":"female","u":"2026-07-22T00:00:00.000Z","note":"Daughter of Vibhishana and Sarama; the kind rakshasi who watched over Sita and foretold Rama's victory."},
     "Ahiravana": {"u":"2026-07-27T00:00:00.000Z","note":"Rakshasa king of Patala, a sorcerer who carried Rama and Lakshmana off in their sleep to sacrifice them to his goddess. He raised the fish-born Makardhwaja and made him his gatekeeper, and Hanuman killed him. The retellings differ over whether he is Ravana's son or his brother, and often pair him with Mahiravana. Krittivasi Ramayana; Ananda Ramayana"},
-    "Mali": {"u":"2026-08-02T00:00:00.000Z","anchor":{"relativeTo":"Sumali","offset":0},"note":"Third son of Sukesha, with Malyavan and Sumali; one of the three rakshasa brothers who held Lanka before Ravana. Killed by Vishnu in the war that drove his brothers south and left the city empty for Kubera. Ram 7.5-7.8"}
+    "Mali": {"u":"2026-08-02T00:00:00.000Z","anchor":{"relativeTo":"Sumali","offset":0},"note":"Third son of Sukesha, with Malyavan and Sumali; one of the three rakshasa brothers who held Lanka before Ravana. Killed by Vishnu in the war that drove his brothers south and left the city empty for Kubera. Ram 7.5-7.8"},
+    "Nalakubara": {"u":"2026-08-16T00:00:00.000Z","note":"Son of Kubera and husband of Rambha. When Ravana forced her he cursed him: if he ever took another woman against her will his head would burst into seven pieces -- which is precisely why Ravana could hold Sita a year in the ashoka grove and never touch her. Rām 7.26"}
   },
   "unions": [
     {"id":"r_u_brahma","p":["Brahma","Saraswati"],"c":["Pulastya"]},
     {"id":"u_Pulastya_Vishrava","p":["Pulastya"],"c":["Vishrava"],"gap":14},
-    {"id":"r_u_vishrava_ilavida","p":["Vishrava","Ilavida"],"c":["Kubera"],"order":0},
+    {"id":"r_u_vishrava_ilavida","p":["Vishrava","Ilavida"],"c":["Kubera","Nalakubara"],"order":0},
     {"id":"r_u_vishrava_kaikasi","p":["Vishrava","Kaikasi"],"c":["Ravana","Kumbhakarna","Shurpanakha","Vibhishana"],"order":1},
     {"id":"r_u_ravana","p":["Ravana","Mandodari"],"c":["Indrajit","Atikaya","Akshayakumara","Narantaka","Devantaka","Trishira","Ahiravana"]},
     {"id":"r_u_kumbhakarna","p":["Kumbhakarna","Vajrajwala"],"c":["Kumbha","Nikumbha"]},
@@ -39,6 +40,8 @@
     {"id":"r_u_indrajit","p":["Indrajit","SulochanaR"],"c":[],"u":"2026-07-22T00:00:00.000Z"},
     {"id":"r_u_sukesha","p":["Sukesha"],"c":["Sumali","Malyavan","Mali"],"u":"2026-08-02T00:00:00.000Z"},
     {"id":"r_u_vibhishana","p":["Vibhishana","Sarama"],"c":["Trijata"],"u":"2026-07-22T00:00:00.000Z"},
-    {"id":"u_ahiravana","p":["Ahiravana"],"c":[],"a":["Makardhwaja"],"note":"Ahiravana's people found the child in the fish and brought him up. Krittivasi Ramayana","u":"2026-07-27T00:00:00.000Z"}
+    {"id":"u_ahiravana","p":["Ahiravana"],"c":[],"a":["Makardhwaja"],"note":"Ahiravana's people found the child in the fish and brought him up. Krittivasi Ramayana","u":"2026-07-27T00:00:00.000Z"},
+    {"id":"u_nalakubara_rambha","p":["Nalakubara","Rambha"],"c":[],"cross":true,"note":"Rām 7.26","u":"2026-08-16T00:00:00.000Z"},
+    {"id":"u_ravana_rambha","p":["Ravana","Rambha"],"c":[],"status":"abduction","cross":true,"note":"He took her on her way to her husband, and Nalakubara's curse for it is what saved Sita. Rām 7.26","u":"2026-08-16T00:00:00.000Z"}
   ]
 }

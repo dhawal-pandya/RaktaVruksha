@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "schemaVersion": 2,
+    "exportedAt": "2026-08-16T00:00:00.000Z"
+  },
+  "shards": [
+    "chaos.json",
+    "nyx.json",
+    "titan.json",
+    "olympian.json",
+    "okeanos.json",
+    "pontos.json",
+    "monster.json",
+    "mousai.json",
+    "argos.json",
+    "thebes.json",
+    "atreus.json",
+    "hellen.json",
+    "aiakos.json",
+    "ithaka.json",
+    "troy.json",
+    "alba.json",
+    "athens.json",
+    "crete.json",
+    "sparta.json",
+    "pylos.json",
+    "asklepios.json",
+    "_floating.json"
+  ]
+}

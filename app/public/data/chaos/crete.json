@@ -1,0 +1,28 @@
+{
+  "family": "familyCrete",
+  "name": "Crete",
+  "color": "#bf9b6a",
+  "note": "Europa to Minos, and the house of the labyrinth",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Pasiphae": {"gender":"female","note":"Daughter of Helios, wife of Minos, and mother of the Minotaur by the white bull -- Poseidon's punishment on her husband, worked out on her. Apollod. 3.1.2-4"},
+    "Europa": {"gender":"female","note":"Carried off from the Phoenician shore by Zeus in the shape of a white bull, and set down in Crete. A continent is named for her, and nobody is sure why -- the name may be Semitic, ereb, the west, the same root that stands behind Erebos. Apollod. 3.1.1"},
+    "Minos": {"divineParents":["Zeus"],"anchor":{"relativeTo":"Tlepolemos","offset":-2},"note":"King of Knossos and the first sea-power; he demanded seven youths and seven maidens from Athens every ninth year for the labyrinth. A judge of the dead afterwards. Arthur Evans named the whole MINOAN civilisation after him in 1900. Apollod. 3.1.1-4"},
+    "Rhadamanthys": {"divineParents":["Zeus"],"note":"Brother of Minos, so just a lawgiver that he became the second judge of the dead beside him and Aiakos. Apollod. 3.1.2"},
+    "Sarpedon": {"divineParents":["Zeus"],"note":"Brother of Minos; the name passes to his descendant, the Lykian king Zeus watches die at Troy and cannot save, because not even Zeus overturns what is fated. Il. 16.419-505"},
+    "Minotauros": {"name":"Minotauros (Minotaur)","note":"Asterios, the bull of Minos: born to Pasiphae by the white bull Poseidon sent when Minos would not sacrifice it, and shut in the labyrinth Daidalos built. Apollod. 3.1.4"},
+    "Ariadne": {"gender":"female","note":"Gave Theseus the ball of thread that got him out, sailed with him, and was left asleep on Naxos -- where Dionysos found her and married her, and her crown is a constellation. Apollod. Epit. 1.8-9"},
+    "Phaidra": {"name":"Phaidra (Phaedra)","gender":"female","note":"Her sister, married to Theseus, who fell in love with her stepson and hanged herself leaving a letter accusing him. Euripides Hippolytus"},
+    "Androgeos": "Son of Minos, killed at Athens, and the reason for the tribute of youths. Apollod. 3.15.7",
+    "Deukalion2": {"name":"Deukalion","note":"Son of Minos, and father of Idomeneus. Not Deukalion of the flood. Apollod. 3.3.1"},
+    "Idomeneus": {"anchor":{"relativeTo":"Tlepolemos","offset":0},"note":"King of Crete at Troy, who led eighty ships and vowed to sacrifice the first thing he met at home. Il. 2.645-652"}
+  },
+  "unions": [
+    {"id":"u_europa","p":["Europa"],"c":["Minos","Rhadamanthys","Sarpedon"],"status":"unknown","note":"By Zeus in Crete after the bull set her down. Apollod. 3.1.1"},
+    {"id":"u_minos_pasiphae","p":["Minos","Pasiphae"],"c":["Ariadne","Phaidra","Androgeos","Deukalion2"]},
+    {"id":"u_pasiphae_bull","p":["Pasiphae"],"c":["Minotauros"],"status":"unknown","note":"By the bull. A one-parent union, because the other parent is not a person. Apollod. 3.1.4"},
+    {"id":"u_deukalion2","p":["Deukalion2"],"c":["Idomeneus"]},
+    {"id":"u_dionysos_ariadne","p":["Dionysos","Ariadne"],"c":[],"note":"Apollod. Epit. 1.9"},
+    {"id":"u_zeus_europa","p":["Zeus","Europa"],"c":[],"status":"abduction","cross":true,"note":"Carried off from the Phoenician shore on the back of a white bull and set down in Crete. Apollod. 3.1.1"}
+  ]
+}

@@ -1,3 +1,4 @@
+import { isUnionStatus } from './status';
 import type { FamilyDataV2, PersonRecord, RelativeAnchor, UnionRecord } from './types';
 import { isRelativeAnchor } from './types';
 
@@ -123,6 +124,14 @@ export const validateData = (raw: FamilyDataV2): ValidationResult => {
     }
 
     const adopted = u.adoptedChildren ?? [];
+    if (u.crossEra) {
+      if (u.partners.length !== 2)
+        errors.push(`union "${u.id}": crossEra needs two partners`);
+      if (u.children.length || (u.adoptedChildren ?? []).length)
+        errors.push(
+          `union "${u.id}": a crossEra bond carries no children — hang them from the partner of their own era and give a divineParents ray to the other`,
+        );
+    }
     for (const cid of u.children) {
       if (!personIds.has(cid)) errors.push(`union "${u.id}": unknown child "${cid}"`);
       if (u.partners.includes(cid)) errors.push(`union "${u.id}": "${cid}" is both partner and child`);
@@ -143,6 +152,14 @@ export const validateData = (raw: FamilyDataV2): ValidationResult => {
   // Data-quality warnings: biological children whose birth family disagrees with their union's family
   const peopleById = new Map(raw.people.map(p => [p.id, p]));
   for (const u of raw.unions) {
+    if (u.crossEra) {
+      if (u.partners.length !== 2)
+        errors.push(`union "${u.id}": crossEra needs two partners`);
+      if (u.children.length || (u.adoptedChildren ?? []).length)
+        errors.push(
+          `union "${u.id}": a crossEra bond carries no children — hang them from the partner of their own era and give a divineParents ray to the other`,
+        );
+    }
     for (const cid of u.children) {
       const child = peopleById.get(cid);
       if (child && child.birthFamilyId !== u.familyId) {
@@ -199,12 +216,10 @@ export const parseFamilyData = (
     children: Array.isArray(u.children) ? u.children.map(String) : [],
     adoptedChildren: Array.isArray(u.adoptedChildren) ? u.adoptedChildren.map(String) : [],
     familyId: u.familyId == null ? null : String(u.familyId),
-    status:
-      u.status === 'divorced' || u.status === 'partners' || u.status === 'unknown'
-        ? u.status
-        : 'married',
+    status: isUnionStatus(u.status) ? u.status : 'married',
     ...(typeof u.order === 'number' ? { order: u.order } : {}),
     ...(typeof u.childGap === 'number' && u.childGap >= 1 ? { childGap: u.childGap } : {}),
+    ...(u.crossEra === true ? { crossEra: true } : {}),
     ...(u.notes ? { notes: String(u.notes) } : {}),
     updatedAt: String(u.updatedAt ?? new Date(0).toISOString()),
   }));

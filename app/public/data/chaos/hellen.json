@@ -1,0 +1,43 @@
+{
+  "family": "familyHellen",
+  "name": "Deukalion",
+  "color": "#9d8ac4",
+  "note": "The flood survivors, and the peoples of Greece named from their sons",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Pandora": {"gender":"female","note":"All-gifted, or all-giving: the first woman, made by Hephaistos on Zeus' order as the price of stolen fire, and given to Epimetheus. She lifted the lid of the great jar -- pithos, a storage jar, not a box; the box is Erasmus mistranslating in the 1500s -- and let out every sickness and sorrow, and shut it again on Hope alone. WD 60-105"},
+    "Deukalion": "Prometheus' son, warned of the flood, who built a chest and floated nine days with his wife until it grounded on Parnassos. Told to throw their mother's bones behind them, they understood the stones of the earth, and the stones became people. The Greek Noah, and the parallel was noticed early. Apollod. 1.7.2, Ov. Met. 1.253-415",
+    "Pyrrha": {"gender":"female","note":"Daughter of Epimetheus and Pandora, wife of Deukalion, and the other survivor. Apollod. 1.7.2"},
+    "Hellen": "Son of Deukalion, and the man every Greek is named after: HELLENES, Hellenic, Hellenistic, and modern Greece is still the Hellenic Republic. 'Greek' is what the Romans called them, from one small tribe, the Graeci. Apollod. 1.7.3",
+    "Aiolos": "Son of Hellen; the Aiolians take their name from him. Not Aiolos the keeper of the winds, who gave Odysseus the bag. Apollod. 1.7.3",
+    "Doros": "Son of Hellen, and the eponym of the Dorians, who came south with the Herakleidai. Apollod. 1.7.3",
+    "Xouthos": "Son of Hellen, and father of the other two Greek peoples. Apollod. 1.7.3",
+    "Ion": "Son of Xouthos -- or of Apollo, which is the version Euripides dramatises -- and the eponym of the IONIANS, whose name travelled east and is still how Hebrew (Yavan), Sanskrit (Yavana) and Arabic name the Greeks. The Yavanas of the Hiranyagarbha tree are these same Ionians. Apollod. 1.7.3, Euripides Ion",
+    "Achaios": "Son of Xouthos, eponym of the Achaians -- Homer's usual word for the Greeks at Troy. Apollod. 1.7.3",
+    "Sisyphos": "Son of Aiolos, founder of Corinth, and the cleverest man alive: he chained Thanatos so that nobody could die, and talked his way out of the underworld twice. For it he rolls the stone up the hill for ever. Gives SISYPHEAN, and Camus made him the emblem of the absurd. Od. 11.593-600, Apollod. 1.9.3",
+    "Athamas": "Son of Aiolos, husband of Ino, and the king whose children fled on the golden ram. Apollod. 1.9.1-2",
+    "Kretheus": "Son of Aiolos, founder of Iolkos. Apollod. 1.9.11",
+    "Phrixos": "Carried to Kolchis on the golden ram, which he sacrificed there; its fleece is what the Argo went for. Apollod. 1.9.1",
+    "Helle": {"gender":"female","note":"His sister, who fell off the ram halfway and drowned in the strait that is still the HELLESPONT -- Helle's sea, the Dardanelles. Apollod. 1.9.1"},
+    "Glaukos": "Son of Sisyphos, who fed his mares on human flesh and was eaten by them. Apollod. 1.9.3, 2.3.1",
+    "Bellerophontes": {"name":"Bellerophontes (Bellerophon)","note":"Tamed Pegasos with Athena's bridle and killed the Chimaira from the air. Sent to Lykia with a sealed letter asking the king to kill him -- the original 'Bellerophontic letter'. He tried at last to ride to heaven, and Zeus sent a gadfly. Il. 6.152-205, Apollod. 2.3.1-2"},
+    "Aison": "Son of Kretheus and rightful king of Iolkos, deposed by his half-brother Pelias. Apollod. 1.9.11, 1.9.16",
+    "Iason": {"name":"Iason (Jason)","anchor":{"relativeTo":"Tlepolemos","offset":0},"note":"Sent for the Golden Fleece by the uncle who had taken his throne, on the first long voyage: fifty heroes in the Argo. He got it by Medeia's help and abandoned her for a princess, and died old and friendless under the rotting prow of his own ship. Apollod. 1.9.16-28"},
+    "Deion": "Son of Aiolos, king of Phokis, and father of Kephalos. Apollod. 1.9.4"
+  },
+  "unions": [
+    {"id":"u_epimetheus_pandora","p":["Epimetheus","Pandora"],"c":["Pyrrha"],"gap":8,"note":"The first woman to the flood: no source counts the generations between, and Pyrrha is dated only by her husband Deukalion."},
+    {"id":"u_prometheus","p":["Prometheus"],"c":["Deukalion"],"status":"unknown","gap":9,"note":"The flood is undated and Deukalion is the first man after it, so the distance from a Titan to the founder of the Greek peoples is carried on this one edge."},
+    {"id":"u_deukalion_pyrrha","p":["Deukalion","Pyrrha"],"c":["Hellen"],"note":"Apollod. 1.7.2"},
+    {"id":"u_hellen","p":["Hellen"],"c":["Aiolos","Doros","Xouthos"],"note":"Three sons and four peoples: the whole ethnography of Greece written as a family. Apollod. 1.7.3"},
+    {"id":"u_xouthos","p":["Xouthos"],"c":["Ion","Achaios"]},
+    {"id":"u_aiolos","p":["Aiolos"],"c":["Sisyphos","Athamas","Kretheus","Salmoneus"]},
+    {"id":"u_athamas","p":["Athamas"],"c":["Phrixos","Helle"],"status":"unknown"},
+    {"id":"u_sisyphos","p":["Sisyphos"],"c":["Glaukos"]},
+    {"id":"u_glaukos","p":["Glaukos"],"c":["Bellerophontes"]},
+    {"id":"u_kretheus","p":["Kretheus"],"c":["Aison"]},
+    {"id":"u_aison","p":["Aison"],"c":["Iason"]},
+    {"id":"u_iason_medeia","p":["Iason","Medeia"],"c":[],"note":"Two children, killed by their mother when he left her. Euripides Medea; Apollod. 1.9.28"},
+    {"id":"u_aiolos_deion","p":["Aiolos"],"c":["Deion"],"status":"unknown"}
+  ]
+}

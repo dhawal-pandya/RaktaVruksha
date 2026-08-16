@@ -1,0 +1,32 @@
+{
+  "family": "familyAthens",
+  "name": "Athens",
+  "color": "#7fa9ae",
+  "note": "Kekrops to Theseus, the earth-born kings",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Kekrops": {"anchor":{"relativeTo":"Tlepolemos","offset":-7},"note":"First king of Athens, born from the earth and snake-tailed below the waist; he judged the contest between Athena and Poseidon for the city, and her olive beat his salt spring. Apollod. 3.14.1"},
+    "Erichthonios2": {"name":"Erichthonios","note":"Born of the earth when Hephaistos' seed fell on it as he pursued Athena; she raised him in a box and told the daughters of Kekrops not to look. They looked. Apollod. 3.14.6"},
+    "Pandion": "Apollod. 3.14.7-8",
+    "Erechtheus": "King who sacrificed his own daughter on an oracle to save the city from Eleusis, and was swallowed by the earth at Poseidon's word. Apollod. 3.15.1-5",
+    "Pandion2": {"name":"Pandion","note":"Apollod. 3.15.5"},
+    "Aigeus": "King of Athens, who told his son to hoist a white sail if he lived. Apollod. 3.15.6-7",
+    "Theseus": {"divineParents":["Poseidon"],"note":"Went into the labyrinth with Ariadne's thread and killed the Minotaur, then left her on Naxos and forgot the white sail, so his father threw himself into the sea that now bears his name -- the AEGEAN. He united Attica into one state, which Athenians counted as the beginning of their democracy. Apollod. 3.16.1, Epit. 1.7-24"},
+    "Hippolytos": {"anchor":{"relativeTo":"Tlepolemos","offset":0},"note":"Son of Theseus by the Amazon, devoted to Artemis and contemptuous of love, until Aphrodite made his stepmother Phaidra want him and her false accusation killed him. Euripides Hippolytus"},
+    "Demophon": {"anchor":{"relativeTo":"Tlepolemos","offset":0},"note":"Son of Theseus and Phaidra, who fought at Troy and brought the Palladion home. Apollod. Epit. 1.18, 5.22"},
+    "Akamas": {"anchor":{"relativeTo":"Tlepolemos","offset":0},"note":"His brother, one of the men in the wooden horse. Apollod. Epit. 5.22"},
+    "Kephalos": "Carried off by Eos, and afterwards killed his own wife Prokris by accident with the spear that never missed -- which she had given him. Apollod. 3.15.1, Ov. Met. 7.672-865",
+    "Aithra": {"gender":"female","note":"Mother of Theseus, who lay with Aigeus and then waded to Poseidon's island the same night -- so her son has a mortal father and a god's. She ended as Helen's servant in Troy and was brought home by her own grandsons. Apollod. 3.15.7, Epit. 5.22"}
+  },
+  "unions": [
+    {"id":"u_kekrops","p":["Kekrops"],"c":["Erichthonios2"],"status":"unknown","note":"Earth-born; the succession is by adoption as much as descent. Apollod. 3.14.6"},
+    ["Erichthonios2","Pandion","Erechtheus","Pandion2","Aigeus"],
+    {"id":"u_aigeus_aithra","p":["Aigeus","Aithra"],"c":["Theseus"],"status":"unknown","note":"Two fathers in one night again, as with Herakles: Aithra lay with Aigeus and then waded to Poseidon's island. Apollod. 3.15.7"},
+    {"id":"u_theseus_antiope","p":["Theseus"],"c":["Hippolytos"],"status":"unknown","note":"By Antiope or Hippolyte, the Amazon. Apollod. Epit. 1.16-17"},
+    {"id":"u_theseus_hippolyte","p":["Theseus","Hippolyte"],"c":[],"status":"abduction","order":0,"note":"Taken in the campaign against the Amazons; her people came after her as far as Athens. Apollod. Epit. 1.16-17"},
+    {"id":"u_theseus_phaidra","p":["Theseus","Phaidra"],"c":["Demophon","Akamas"],"order":2,"note":"Apollod. Epit. 1.18"},
+    {"id":"u_deion","p":["Deion"],"c":["Kephalos"],"status":"unknown","note":"Apollod. 1.9.4"},
+    {"id":"u_poseidon_aithra","p":["Poseidon","Aithra"],"c":[],"status":"abduction","cross":true,"note":"She waded to his island on her wedding night at Athena's prompting in a dream, which is how Theseus comes to have two fathers. Apollod. 3.15.7"},
+    {"id":"u_eos_kephalos","p":["Eos","Kephalos"],"c":[],"status":"abduction","cross":true,"note":"Dawn carried him off from his wife. Apollod. 3.15.1"}
+  ]
+}

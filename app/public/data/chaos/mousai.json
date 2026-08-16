@@ -1,0 +1,16 @@
+{
+  "family": "familyMousai",
+  "name": "Mousai",
+  "color": "#c9a9d4",
+  "note": "The nine, and the singers descended from them",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Orpheus": {"anchor":{"relativeTo":"Tlepolemos","offset":-1},"note":"Son of a Muse, whose playing stopped rivers. He went down for Eurydike and won her back on the one condition, and looked round. Afterwards, Ovid says, he was the first among the Thracians to give his love to boys instead -- and the women of Thrace tore him apart for it; his head floated on singing. ORPHIC, and the Orphic mysteries. Ov. Met. 10.1-11.66, Apollod. 1.3.2"},
+    "Linos": {"anchor":{"relativeTo":"Tlepolemos","offset":-1},"note":"Orpheus' brother, who taught Herakles music and was killed by him with the lyre for correcting him. Apollod. 2.4.9"}
+  },
+  "unions": [
+    {"id":"u_zeus_mnemosyne","p":["Zeus","Mnemosyne"],"c":["Mousai"],"note":"Nine nights Zeus lay with Memory, and a year later she bore nine daughters of one mind, whose whole business is that nothing worth keeping is forgotten. Theog. 53-62, 915-917"},
+    {"id":"u_mousai","p":["Mousai"],"c":["Orpheus","Linos"],"status":"unknown","gap":9,"note":"By Kalliope, eldest of the nine -- who stands here inside the single Mousai record, as her sisters do. Apollod. 1.3.2 The gap is the distance between one of the nine, who has no generation, and the heroic age her sons belong to -- Orpheus sails with the Argo and Linos teaches Herakles."},
+    {"id":"u_orpheus_eurydike","p":["Orpheus","Eurydike"],"c":[]}
+  ]
+}

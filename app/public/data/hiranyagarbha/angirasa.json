@@ -27,10 +27,11 @@
     {"id":"u_drona","p":["Drona","Kripi"],"c":["Ashwatthama"],"u":"2026-07-20T00:00:00.000Z"},
     {"id":"u_brihaspati_tara","p":["Brihaspati","Tara"],"c":[],"u":"2026-07-22T00:00:00.000Z"},
     {"id":"u_angiras","p":["Angiras"],"c":["Brihaspati","Utathya","Samvarta"]},
-    {"id":"u_brihaspati","p":["Brihaspati"],"c":["Kacha","Bharadwaja"],"u":"2026-07-22T00:00:00.000Z"},
+    {"id":"u_brihaspati","p":["Brihaspati"],"c":["Kacha"],"u":"2026-07-22T00:00:00.000Z"},
     {"id":"u_gautama_ahalya","p":["Gautama","Ahalya"],"c":["Shatananda","Chirakari"],"u":"2026-07-25T00:00:00.000Z"},
     {"id":"u_Shatananda_Sharadvan","p":["Shatananda"],"c":["Sharadvan"],"gap":2,"u":"2026-07-25T00:00:00.000Z"},
     {"id":"u_utathya_mamata","p":["Utathya","Mamata"],"c":["Dirghatamas"],"note":"MBh 1.98. Dirghatamas stood in this tree with no ancestry at all until now; giving him one also gives Karna's whole foster house, through Anga, a line back to Angiras."},
-    {"id":"u_Dirghatamas_Kakshivan","p":["Dirghatamas"],"c":["Kakshivan"],"note":"By the maid Ushij, who is not carried here as a person. RV 1.18.1"}
+    {"id":"u_Dirghatamas_Kakshivan","p":["Dirghatamas"],"c":["Kakshivan"],"note":"By the maid Ushij, who is not carried here as a person. RV 1.18.1"},
+    {"id":"u_brihaspati_mamata","p":["Brihaspati","Mamata"],"c":["Bharadwaja"],"status":"abduction","note":"Brihaspati forced himself on Mamata, his brother Utathya's wife, while she was carrying Utathya's child; the unborn Dirghatamas kicked him away, and Brihaspati cursed him blind for it. Bharadwaja was born of this and neither man would keep him -- bhara dvajam, bear this burden -- which is how he came to be given to Bharata and called Vitatha, the one who was otherwise. MBh 1.98","u":"2026-08-16T00:00:00.000Z"}
   ]
 }

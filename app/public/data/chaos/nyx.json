@@ -1,0 +1,38 @@
+{
+  "family": "familyNyx",
+  "name": "Nyx",
+  "color": "#6b6f8c",
+  "note": "The children of Night, who have a mother and no father",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Moros": {"name":"Moros (Fatum)","divine":true,"note":"Doom -- not death but the appointed end a man walks toward. Roman: Fatum, whence fate, fatal. Theog. 211"},
+    "Thanatos": {"name":"Thanatos (Mors)","divine":true,"note":"Death himself, with a heart of iron and no pity; the only god who takes no gifts. Roman: Mors. Gives euthanasia, thanatology, and Freud's thanatos. Theog. 212, 763-766"},
+    "Hypnos": {"name":"Hypnos (Somnus)","divine":true,"note":"Sleep, twin of Death and gentler; he lives with him but walks the earth kindly. Roman: Somnus, whence somnolent, insomnia. From the Greek: hypnosis, hypnotic. Theog. 212, 758-762"},
+    "Nemesis": {"name":"Nemesis (Invidia)","gender":"female","divine":true,"note":"Retribution -- the pang that visits a man who has too much and forgets it. Roman: Invidia. The English word is unchanged and needs no translation, which is rare. Theog. 223"},
+    "Eris": {"name":"Eris (Discordia)","gender":"female","divine":true,"note":"Strife, who threw the golden apple among the goddesses and started the Trojan War with it. Roman: Discordia, whence discord. Gives eristic, the art of wrangling. Theog. 225"},
+    "Geras": {"name":"Geras (Senectus)","divine":true,"note":"Old age, counted among the evils. Roman: Senectus. Gives geriatric, gerontology. Theog. 225"},
+    "Oizys": {"name":"Oizys (Miseria)","gender":"female","divine":true,"note":"Misery, distress. Roman: Miseria. Theog. 214"},
+    "Momos": {"name":"Momos (Querella)","divine":true,"note":"Blame, mockery, the fault-finder; thrown out of heaven for criticising the gods' work. Gives momus, a carping critic. Theog. 214"},
+    "Apate": {"name":"Apate (Fraus)","gender":"female","divine":true,"note":"Deceit. Roman: Fraus, whence fraud. Theog. 224"},
+    "Philotes": {"name":"Philotes (Amicitia)","gender":"female","divine":true,"note":"Affection, and the act of love. Roman: Amicitia. The root phil- is everywhere in English: philosophy, philanthropy, bibliophile. Theog. 224"},
+    "Ker": {"name":"Ker (Letum)","gender":"female","divine":true,"note":"Violent death, as against Thanatos' quiet one -- the fate that catches a man on the battlefield. Theog. 211"},
+    "Moirai": {"name":"Moirai (Parcae)","gender":"female","divine":true,"note":"The three Fates counted as one record because they act as one: Klotho spins the thread, Lachesis measures it, Atropos -- the unturnable -- cuts it. Roman: Parcae (Nona, Decuma, Morta). Hesiod gives them twice, once to Nyx alone and once to Zeus and Themis; both readings are old and the tree draws the first. Gives atropine, from Atropos, because the deadly nightshade kills. Theog. 217-222, 904-906"},
+    "Hesperides": {"gender":"female","divine":true,"note":"The daughters of Evening, who keep the golden apples at the western edge of the world -- Herakles' eleventh labour. Hesperus, the evening star, is the same word; Hesperia was a Roman name for Italy, the land toward sunset. Theog. 215-216"},
+    "Oneiroi": {"divine":true,"note":"The tribe of Dreams. Ovid names three of them, of whom Morpheus -- the shaper, who takes human form in a sleeper's dream -- gives English morphine, named in 1805 for the sleep it brings. Theog. 212; Ov. Met. 11.633-643"},
+    "Ponos": {"divine":true,"note":"Toil. Theog. 226"},
+    "Lethe": {"gender":"female","divine":true,"note":"Forgetfulness, and the river of it in the underworld, from which the dead drink. Gives lethal, lethargy, and 'alethia', the Greek for truth, which is literally un-forgetting. Theog. 227"},
+    "Limos": {"divine":true,"note":"Famine. Theog. 227"},
+    "Algea": {"gender":"female","divine":true,"note":"Pains. Gives analgesic, neuralgia, nostalgia -- the ache for return. Theog. 227"},
+    "Dysnomia": {"gender":"female","divine":true,"note":"Lawlessness. The moon of the dwarf planet Eris is named for her. Theog. 230"},
+    "Ate": {"gender":"female","divine":true,"note":"Ruin: the blindness sent on a man before his fall, the delusion that makes him do the thing that destroys him. Theog. 230"},
+    "Horkos": {"divine":true,"note":"Oath, the most dangerous of them, who punishes any man who swears falsely. Theog. 231-232"},
+    "Pseudea": {"divine":true,"note":"Lies. Gives pseudo-, pseudonym. Theog. 229"},
+    "Makhai": {"divine":true,"note":"Battles. Gives -machy: logomachy, a war of words. Theog. 228"},
+    "Phonoi": {"divine":true,"note":"Murders. Theog. 228"},
+    "Neikea": {"divine":true,"note":"Quarrels. Theog. 229"}
+  },
+  "unions": [
+    {"id":"u_nyx_alone","p":["Nyx"],"c":["Moros","Ker","Thanatos","Hypnos","Oneiroi","Momos","Oizys","Hesperides","Moirai","Nemesis","Apate","Philotes","Geras","Eris"],"note":"Night bore all of these lying with none: a virgin birth of fourteen, and the tree's only union of that size. Theog. 211-225"},
+    {"id":"u_eris","p":["Eris"],"c":["Ponos","Lethe","Limos","Algea","Dysnomia","Ate","Horkos","Pseudea","Makhai","Phonoi","Neikea"],"note":"Hateful Strife bore them all alone. Theog. 226-232"}
+  ]
+}

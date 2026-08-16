@@ -1,0 +1,33 @@
+{
+  "family": "familyAtreus",
+  "name": "Atreus",
+  "color": "#b5651d",
+  "note": "Tantalos to Orestes, cursed at every generation",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Tantalos": {"divineParents":["Zeus"],"anchor":{"relativeTo":"Tlepolemos","offset":-3},"note":"Son of Zeus, admitted to the gods' table, who stole the nectar or told their secrets or -- the version that stuck -- cut up his own son Pelops and served him to them to test whether they would know. He stands in water that drains when he stoops and under fruit that lifts when he reaches. Gives TANTALIZE, directly, and tantalum, element 73, named in 1802 because it sits in acid and will not absorb any of it. Od. 11.582-592, Apollod. Epit. 2.1"},
+    "Pelops": "Served to the gods and put back together, all but the shoulder Demeter ate absently, which was replaced with ivory. He won Hippodameia by bribing her father's charioteer to pull the linchpins, and then threw the charioteer into the sea, who cursed his house as he fell. The PELOPONNESE is his island. Apollod. Epit. 2.3-9",
+    "Niobe": {"gender":"female","note":"Boasted of her fourteen children against Leto's two, and Apollo and Artemis shot all fourteen. She wept until she turned to stone, and the stone still weeps. Il. 24.602-617"},
+    "Hippodameia": {"gender":"female","note":"Won by the rigged chariot race that cost thirteen suitors their heads before Pelops. Apollod. Epit. 2.4-9"},
+    "Atreus": "King of Mykenai. He served his brother Thyestes the flesh of Thyestes' own children at a reconciliation feast, and showed him the hands afterwards -- and the sun turned back in its course rather than watch. Apollod. Epit. 2.10-13",
+    "Thyestes": "Brother of Atreus, who seduced his wife and ate his own sons, and fathered Aigisthos on his own daughter to get his revenge. Apollod. Epit. 2.10-14",
+    "Aigisthos": "Son of Thyestes by his own daughter, born to avenge the feast. He took Klytaimnestra while Agamemnon was at Troy and helped kill him at the door. Apollod. Epit. 2.14, 6.23",
+    "Agamemnon": "King of Mykenai and commander of the whole Greek expedition -- and the man who sacrificed his own daughter for a wind, took Achilles' prize and nearly lost the war over it, and came home to an axe in his bath. Il. 1.1-305, Aeschylus Ag.",
+    "Menelaos": "King of Sparta, husband of Helen, and the reason for the war -- the one Greek leader who gets his wife back and goes home to a quiet old age. Il. 3.1-120, Od. 4",
+    "Iphigeneia": {"gender":"female","anchor":{"relativeTo":"Tlepolemos","offset":1},"note":"Sacrificed at Aulis so the fleet could sail -- or snatched away by Artemis at the last second and made her priestess among the Taurians, which is the version Euripides prefers and the one this record keeps open. Apollod. Epit. 3.21-22"},
+    "Orestes": {"anchor":{"relativeTo":"Tlepolemos","offset":1},"note":"Killed his mother to avenge his father, was hunted mad by the Erinyes for it, and was tried at Athens and acquitted by Athena's casting vote -- the moment Greek myth replaces blood vengeance with a court. Aeschylus Eumenides"},
+    "ElektraM": {"name":"Elektra (Electra)","gender":"female","anchor":{"relativeTo":"Tlepolemos","offset":1},"note":"Daughter of Agamemnon, who kept her father's memory alive in the house of his murderers until her brother came back. Jung named a complex for her in 1913 as the mirror of Freud's Oedipus. Sophocles Elektra"},
+    "Chrysothemis": {"gender":"female","anchor":{"relativeTo":"Tlepolemos","offset":1},"note":"Her sister, who bore it quietly and is the argument the Elektra is written against. Sophocles Elektra"},
+    "Tisamenos": "Son of Orestes, last of the line to hold Mykenai and Sparta, and the king the returning Herakleidai overthrew -- which is where heroic genealogy hands over to history. Apollod. 2.8.2-3, Paus. 2.18.6",
+    "Chrysippos": "Pelops' beautiful son, carried off by Laios of Thebes -- the act the tradition names as the first pederasty, and the reason Pelops cursed the house of Laios: it is where Oidipous' whole story begins. Apollod. 3.5.5, Hyg. Fab. 85"
+  },
+  "unions": [
+    {"id":"u_tantalos","p":["Tantalos"],"c":["Pelops","Niobe"],"status":"unknown","note":"Apollod. Epit. 2.1-3"},
+    {"id":"u_pelops_hippodameia","p":["Pelops","Hippodameia"],"c":["Atreus","Thyestes","Chrysippos"]},
+    {"id":"u_thyestes","p":["Thyestes"],"c":["Aigisthos"],"status":"unknown","note":"Apollod. Epit. 2.14"},
+    {"id":"u_atreus","p":["Atreus"],"c":["Agamemnon","Menelaos"]},
+    {"id":"u_agamemnon_klytaimnestra","p":["Agamemnon","Klytaimnestra"],"c":["Iphigeneia","ElektraM","Orestes","Chrysothemis"]},
+    {"id":"u_orestes_hermione","p":["Orestes","Hermione"],"c":["Tisamenos"]},
+    {"id":"u_poseidon_pelops","p":["Poseidon","Pelops"],"c":[],"status":"partners","cross":true,"note":"He loved him and gave him the winged chariot that won Hippodameia -- the race the whole house of Atreus starts from. Pind. Ol. 1.65-88"}
+  ]
+}

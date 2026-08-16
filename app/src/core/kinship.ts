@@ -1,11 +1,11 @@
-import type { Dataset, KinStep } from './types';
+import type { UnionStatus, Dataset, KinStep } from './types';
 import { personName } from './types';
 
 interface Neighbor {
   to: string;
   dir: 'up' | 'down' | 'side';
   tag?: 'biological' | 'adoptive';
-  status?: 'married' | 'divorced' | 'partners' | 'unknown';
+  status?: UnionStatus;
 }
 
 const neighborsOf = (ds: Dataset, id: string): Neighbor[] => {

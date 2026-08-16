@@ -11,7 +11,21 @@ export interface RelativeAnchor {
 export const isRelativeAnchor = (
   a: number | RelativeAnchor | undefined,
 ): a is RelativeAnchor => typeof a === "object" && a !== null;
-export type UnionStatus = "married" | "divorced" | "partners" | "unknown";
+/** How a pairing came about.
+ *
+ *  `abduction` is the one that needed adding for the Greek tree, and it covers a
+ *  great deal of it: Europa carried off on the bull, Ganymedes taken by the
+ *  eagle, Persephone pulled down through the field, Alkmene deceived by a god
+ *  wearing her husband's face. The sources are explicit about these and calling
+ *  them all `partners` flattened something the myths themselves insist on. It
+ *  covers seizure and deception alike -- what unites them is that consent is
+ *  absent, not the method. */
+export type UnionStatus =
+  | "married"
+  | "divorced"
+  | "partners"
+  | "abduction"
+  | "unknown";
 export type ParentTag = "biological" | "adoptive";
 
 export interface PersonRecord {
@@ -76,6 +90,22 @@ export interface UnionRecord {
    *  Use >1 when a child was born to already-old parents, to keep same-era people
    *  on the same level across the tree. */
   childGap?: number;
+  /** A bond between two people who do NOT belong to the same generation: Zeus and
+   *  Ganymedes, Apollo and a Spartan prince born ten rows below him, Laios and
+   *  Chrysippos.
+   *
+   *  Every other union LEVELS its partners onto one row -- that is what makes a
+   *  couple read as a pair -- and for these it is exactly wrong: it would ask the
+   *  sky-father to sit below himself, or drag the Moon nine rows from her own
+   *  brother. So a cross-era union is drawn like any other bond and then ignored
+   *  by the leveller, which lets the thread stretch down the tree and show the
+   *  reach for what it is.
+   *
+   *  Carries no children, by the same logic: a child's generation must come from
+   *  a parent the leveller can see. Where a cross-era pairing has issue, the
+   *  child hangs from the partner of its own era and takes a `divineParents` ray
+   *  to the other -- Perseus from Danae, with Zeus' ray across. */
+  crossEra?: boolean;
   /** Free text about the partnership itself: what a `childGap` stands in for,
    *  which text a descent comes from, why a niyoga birth is counted where it is. */
   notes?: string;
@@ -169,6 +199,8 @@ export interface UnionNode {
   familyId: string | null;
   /** Authoring order among a person's unions; drives spouse placement in 2D. */
   order?: number;
+  /** True when the two partners are not contemporaries: never welded as a couple. */
+  crossEra?: boolean;
 }
 
 export type GraphNode = PersonNode | UnionNode;

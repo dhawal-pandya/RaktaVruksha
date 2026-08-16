@@ -1,0 +1,27 @@
+{
+  "family": "familyIthaka",
+  "name": "Ithaka",
+  "color": "#5b8fb9",
+  "note": "Arkeisios to Odysseus to Telemachos, and out to Latium",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"unknown"},
+  "people": {
+    "Arkeisios": {"divineParents":["Zeus"],"anchor":{"relativeTo":"Tlepolemos","offset":-2},"note":"Grandfather of Odysseus; the line is short and the Odyssey says so -- Zeus gave Arkeisios one son, and he one son, and he one son. Od. 16.117-120"},
+    "Laertes": "Father of Odysseus, who gave up the throne and went to work his own orchard in old clothes, and was still there when his son came home. Od. 24.205-360",
+    "Odysseus": {"name":"Odysseus (Ulysses)","note":"Of many turns: the man who thought of the horse, and then took ten years to sail home from a war that took ten years. Roman: ULYSSES, through Etruscan Uluxe, which is why the Latin is so unlike the Greek -- and it is the Latin form that gives Joyce his title. Gives odyssey, for any long wandering. Od. passim"},
+    "Penelope": {"gender":"female","note":"Who unwove at night what she wove by day for three years to put off a hundred suitors, and then set them the bow-test knowing only one man could string it. Gives penelopean, of work deliberately never finished. Od. 2.93-110, 19.136-156"},
+    "Telemachos": {"name":"Telemachos (Telemachus)","anchor":{"relativeTo":"Tlepolemos","offset":1},"note":"A baby when his father left and a grown man before he came back; the first four books of the Odyssey are him going to look for news, which is the oldest coming-of-age story in Europe. Od. 1-4, 22"},
+    "Telegonos": {"anchor":{"relativeTo":"Tlepolemos","offset":1},"note":"Son of Odysseus by Kirke, who came looking for his father and killed him without knowing him, with a spear tipped in a stingray's spine -- the death 'from the sea' the prophecy meant. Hyg. Fab. 127; Telegony"},
+    "Italos": "Son of Telegonos and Penelope, who married after both their men were dead; ITALY is named from him. A tidy piece of Greek bookkeeping that hands the whole peninsula to Odysseus' descendants. Hyg. Fab. 127",
+    "Antikleia": {"gender":"female","note":"Daughter of Autolykos and mother of Odysseus, who died of grief waiting for him; her shade is the first he meets in the underworld, and she tells him nothing has changed at home except everything. Od. 11.152-224"}
+  },
+  "unions": [
+    {"id":"u_arkeisios","p":["Arkeisios"],"c":["Laertes"],"status":"married"},
+    {"id":"u_laertes_antikleia","p":["Laertes","Antikleia"],"c":["Odysseus"],"note":"Od. 16.117-120"},
+    {"id":"u_odysseus_penelope","p":["Odysseus","Penelope"],"c":["Telemachos"],"status":"married","order":0},
+    {"id":"u_odysseus_kirke","p":["Odysseus","Kirke"],"c":["Telegonos","Latinos"],"status":"partners","order":1,"note":"Hesiod gives Kirke two sons by Odysseus, Agrios and Latinos, and the Telegony adds Telegonos. Hyginus instead marries her to Telemachos, which is drawn beside this as a cross-era bond. Theog. 1011-1016; Od. 10.487-495"},
+    {"id":"u_telegonos","p":["Telegonos"],"c":["Italos"],"note":"By Penelope, his father's widow, whom he married after killing Odysseus without knowing him; that marriage is drawn beside this. Hyg. Fab. 127"},
+    {"id":"u_autolykos","p":["Autolykos"],"c":["Antikleia"]},
+    {"id":"u_telemachos_kirke","p":["Telemachos","Kirke"],"c":[],"status":"partners","cross":true,"note":"Hyginus marries the son to his father's witch. The tree draws Hesiod's descent for Latinos and this bond beside it. Hyg. Fab. 127"},
+    {"id":"u_telegonos_penelope","p":["Telegonos","Penelope"],"c":[],"status":"partners","cross":true,"note":"His father's widow, married after he had killed Odysseus without knowing him. Hyg. Fab. 127"}
+  ]
+}

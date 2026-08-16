@@ -1,0 +1,33 @@
+{
+  "family": "familyAiakos",
+  "name": "Aiakos",
+  "color": "#6fae7d",
+  "note": "Aigina to Achilles to Neoptolemos",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Aigina": {"gender":"female","note":"Daughter of the river Asopos, carried off by Zeus to the island that now bears her name; her father followed and was driven back to his bed by a thunderbolt, and his water has run with coal ever since. Apollod. 3.12.6"},
+    "Aiakos": {"divineParents":["Zeus"],"note":"King of Aigina, the most pious of men: when plague emptied his island Zeus turned its ants into people for him, the Myrmidons -- from myrmex, ant -- who followed his grandson to Troy. He is one of the three judges of the dead. Apollod. 3.12.6, Ov. Met. 7.517-660"},
+    "Peleus": "Exiled for helping kill his half-brother Phokos, and the only mortal ever given a goddess: he had to hold Thetis through every shape she took -- fire, water, lion, serpent -- until she yielded. Every god came to the wedding except Eris. Apollod. 3.12.6-3.13.5",
+    "Telamon": "Brother of Peleus, who sailed with Herakles against Troy the first time and took Hesione as his prize. Apollod. 3.12.7",
+    "Phokos": "Their half-brother by the Nereid Psamathe, killed by them with a discus 'in practice'. Apollod. 3.12.6",
+    "Achilleus": {"name":"Achilleus (Achilles)","anchor":{"relativeTo":"Tlepolemos","offset":0},"note":"Dipped in the Styx by his mother and held by the heel -- the one late detail everybody remembers, and it is not in Homer, who has him simply the best of the Achaians and mortal all through. Given the choice of a long obscure life or a short glorious one, he chose, and the Iliad is what his anger cost. Gives ACHILLES TENDON, named by Verheyen in 1693, and Achilles heel. Il. passim"},
+    "Aias": {"name":"Aias (Ajax)","anchor":{"relativeTo":"Tlepolemos","offset":0},"note":"Telamonian Aias, the great shield, second only to Achilles and the only Greek Homer never shows a god helping. When Achilles' armour was voted to Odysseus instead of him he went mad, slaughtered the army's cattle thinking them men, and fell on his own sword. Apollod. Epit. 5.6-7, Sophocles Ajax"},
+    "Teukros": {"anchor":{"relativeTo":"Tlepolemos","offset":0},"note":"Half-brother of Aias by Hesione of Troy, the best archer in the Greek army, and exiled by his father for coming home without his brother. Il. 8.266-334"},
+    "Neoptolemos": {"anchor":{"relativeTo":"Tlepolemos","offset":1},"note":"Achilles' son, fetched from Skyros because Troy could not fall without him; he came out of the horse and killed Priam at the altar. Also called Pyrrhos, the red. Apollod. Epit. 5.10-21"},
+    "Patroklos": "Achilles' companion from childhood and the person he loved most. Homer never names it; Aeschylus and Plato's Symposium argue only about which of them was the elder. He put on Achilles' armour to save the ships and Hektor killed him in it, and the whole second half of the Iliad is what Achilles does about that. Il. 16-18",
+    "MenoitiosP": {"name":"Menoitios","anchor":{"relativeTo":"Tlepolemos","offset":-1},"note":"Father of Patroklos, who gave the boy to Peleus to raise after a killing at home. Not Menoitios the Titan. Il. 11.765-790"}
+  },
+  "unions": [
+    {"id":"u_asopos","p":["Asopos"],"c":["Aigina"],"gap":11,"note":"A river's daughter has no generation of her own, so the whole shortfall of the Aiakid line -- which reaches Troy in eight steps where the Argive line takes seventeen -- is carried here rather than stretching Peleus away from Achilles."},
+    {"id":"u_aigina","p":["Aigina"],"c":["Aiakos"],"status":"unknown"},
+    {"id":"u_aiakos","p":["Aiakos"],"c":["Peleus","Telamon"]},
+    {"id":"u_aiakos_psamathe","p":["Aiakos","Psamathe"],"c":["Phokos"],"status":"partners","note":"Apollod. 3.12.6"},
+    {"id":"u_peleus_thetis","p":["Peleus","Thetis"],"c":["Achilleus"],"note":"The wedding where Eris threw the apple 'to the fairest' -- so the Trojan War begins at Achilles' parents' wedding. Apollod. 3.13.5, Epit. 3.2"},
+    {"id":"u_telamon","p":["Telamon"],"c":["Aias","Teukros"]},
+    {"id":"u_achilleus_deidameia","p":["Achilleus","Deidameia"],"c":["Neoptolemos"],"status":"unknown","note":"Born on Skyros, where Thetis had hidden Achilles among the king's daughters to keep him from the war. Apollod. 3.13.8"},
+    {"id":"u_MenoitiosP","p":["MenoitiosP"],"c":["Patroklos"],"status":"unknown"},
+    {"id":"u_achilleus_patroklos","p":["Achilleus","Patroklos"],"c":[],"status":"partners","order":0,"note":"Drawn as a union because they are contemporaries and the tree can hold it -- one of the few in this pass that can be. Their ashes were mixed in one urn at Achilles' own instruction. Il. 23.83-92, Od. 24.76-79"},
+    {"id":"u_achilleus_briseis","p":["Achilleus","Briseis"],"c":[],"status":"partners","order":1},
+    {"id":"u_zeus_aigina","p":["Zeus","Aigina"],"c":[],"status":"abduction","cross":true,"note":"Carried off to the island that now bears her name; her father the river followed and was driven home by a thunderbolt. Apollod. 3.12.6"}
+  ]
+}

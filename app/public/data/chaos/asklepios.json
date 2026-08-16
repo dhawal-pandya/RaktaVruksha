@@ -1,0 +1,19 @@
+{
+  "family": "familyAsklepios",
+  "name": "Asklepiadai",
+  "color": "#7fbfa8",
+  "note": "The physicians: Asklepios and the line that carried medicine to Troy",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"unknown"},
+  "people": {
+    "Asklepios": {"divine":true,"divineParents":["Apollon"],"note":"Cut from his dead mother's body and taught medicine by the centaur Cheiron. He grew so good at it that he raised the dead, and Zeus killed him with a thunderbolt for it. Roman: AESCULAPIUS. The rod with the single snake is still the emblem of medicine everywhere -- and is not the caduceus, which is Hermes' and has two. Apollod. 3.10.3-4"},
+    "Hygieia": {"gender":"female","divine":true,"note":"Daughter of Asklepios: health itself, and the word HYGIENE. Paus. 1.23.4"},
+    "Panakeia": {"gender":"female","divine":true,"note":"Her sister: the all-healing, and the word PANACEA. Aristophanes Plutus 701"},
+    "Machaon": {"anchor":{"relativeTo":"Tlepolemos","offset":0},"note":"Son of Asklepios and the army's surgeon at Troy, who cut the arrow out of Menelaos. Il. 4.192-219"},
+    "Podaleirios": {"anchor":{"relativeTo":"Tlepolemos","offset":0},"note":"His brother, the other physician of the Greek camp. Il. 2.729-733"}
+  },
+  "unions": [
+    {"id":"u_koronis","p":["Koronis"],"c":["Asklepios"],"note":"Apollod. 3.10.3"},
+    {"id":"u_asklepios","p":["Asklepios"],"c":["Hygieia","Panakeia","Machaon","Podaleirios"],"gap":5,"note":"Asklepios is a god and his sons are men in the Greek camp at Troy: the gap is the distance between a healing cult and the war it is dated by."},
+    {"id":"u_apollon_koronis","p":["Apollon","Koronis"],"c":[],"status":"partners","cross":true,"note":"Unfaithful while carrying his child; the white crow that told him was scorched black for it, and is black still. Apollod. 3.10.3"}
+  ]
+}

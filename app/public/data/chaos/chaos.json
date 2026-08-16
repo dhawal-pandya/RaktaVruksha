@@ -1,0 +1,25 @@
+{
+  "family": "familyChaos",
+  "name": "Protogenoi",
+  "color": "#c9b8e8",
+  "note": "The first-born: Chaos and what came out of the gap",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Chaos": {"gender":"female","divine":true,"note":"The first thing that was. Not disorder -- khaos is the GAP, the yawning chasm, from a root meaning to gape (the same root gives 'chasm' and 'yawn'); the modern sense of muddle comes later, through Ovid's unformed mass. English 'gas' was coined from it by van Helmont around 1650, who said he made the word from chaos in the Dutch manner. Roman: Chaos. Theog. 116"},
+    "Gaia": {"name":"Gaia (Terra)","gender":"female","divine":true,"note":"Broad-breasted Earth, the ever-sure foundation, second into being and mother of nearly everything after. Roman: Terra, or Tellus. Gives geography, geology, geometry, geode -- every geo- word in English is her name. Theog. 117"},
+    "Tartaros": {"divine":true,"note":"The pit below the world, as far beneath Hades as earth is beneath heaven: an anvil would fall nine days to reach it. Both a place and a person -- by Gaia he fathers Typhon. Roman: Tartarus. Theog. 119, 720-725"},
+    "Eros": {"name":"Eros (Cupid)","divine":true,"note":"Desire, fairest among the deathless gods, who loosens the limbs and overcomes the mind. The primordial Eros of Hesiod is a cosmic force, not the boy with the bow -- that later Eros is Aphrodite's son, and both are in this tree. Roman: Cupid, or Amor. Gives erotic, erogenous. Theog. 120-122"},
+    "Erebos": {"divine":true,"note":"The darkness under the earth, the first dark; the shade a soul passes through before Hades proper. Roman: Erebus, sometimes Scotus. From a root for darkness that also stands behind the Hebrew erev, evening. Theog. 123"},
+    "Nyx": {"name":"Nyx (Nox)","gender":"female","divine":true,"note":"Night, born of Chaos, and the only deity Zeus himself feared to cross. Roman: Nox -- literally Night. The word is one of the oldest in the language and survives everywhere in English through Latin nox, noct-: nocturnal, nocturne, equinox, noctambulist. Theog. 123, Il. 14.259-261"},
+    "Aither": {"divine":true,"note":"The bright upper air the gods breathe, as distinct from aer, the murky air below that men breathe. Son of Erebos and Nyx: brightness born of two darknesses. Gives ether, ethereal, and the luminiferous aether physics spent the 19th century looking for. Theog. 124-125"},
+    "Hemera": {"name":"Hemera (Dies)","gender":"female","divine":true,"note":"Day, daughter of Night, whom she passes at the threshold as one goes out and the other comes in -- the house never holds them both. Roman: Dies. Through Latin dies: diurnal, diary, journal, sojourn, quotidian, and every day-name ending in -di in French. Theog. 124-125, 748-757"},
+    "Ouranos": {"name":"Ouranos (Caelus)","divine":true,"note":"Sky. Gaia bore him from herself, equal to herself, to cover her all about. He hated his children and pressed them back into her body until Kronos cut him with the sickle. Roman: Caelus. The planet was named for him in 1781, and uranium for the planet in 1789 -- the only element named after a Greek primordial. Theog. 126-138"},
+    "Pontos": {"divine":true,"note":"The barren deep, born of Gaia without love or father. The older sea: Poseidon is a latecomer to water, and Pontos' children are its real inhabitants. Theog. 131-132"},
+    "Ourea": {"divine":true,"note":"The mountains, born of Gaia alone -- a plural counted as one. The oreads, mountain nymphs, take their name from the same word. Theog. 129-130"}
+  },
+  "unions": [
+    {"id":"u_chaos","p":["Chaos"],"c":["Gaia","Tartaros","Eros","Erebos","Nyx"],"note":"Hesiod's opening is careful and this union is a simplification of it: Chaos came first, then Gaia, Tartaros and Eros 'came into being' -- he does not quite say they were born FROM Chaos, only after it. Erebos and Nyx are unambiguously Chaos' children. Recorded as one union because the tree needs a root, and noted here because the text does not. Theog. 116-125"},
+    {"id":"u_erebos_nyx","p":["Erebos","Nyx"],"c":["Aither","Hemera"],"note":"Theog. 124-125"},
+    {"id":"u_gaia_alone","p":["Gaia"],"c":["Ourea"],"note":"Born without any sweet act of love. Hesiod has Gaia bear Ouranos and Pontos this same way and then take Ouranos as consort -- so the sky and the sea are her sons AND her husbands. The marriage is drawn and the birth is not: a cross-era bond can refuse to level two people, but it cannot make a man his own father, and every Titan descends from that marriage. Theog. 126-132"}
+  ]
+}

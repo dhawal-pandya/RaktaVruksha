@@ -83,6 +83,17 @@ describe('layout', () => {
     }
   });
 
+  it('leaves an unmarried pair unwelded', () => {
+    const pos = computeLayout(graph);
+    const d = (a: string, b: string) => {
+      const pa = pos.get(a)!, pb = pos.get(b)!;
+      return Math.hypot(pa.x - pb.x, pa.y - pb.y, pa.z - pb.z);
+    };
+    // Son and Girlfriend are `partners`, not married: they keep a thread and
+    // lose the weld, so they are not pinned at the couple offset.
+    expect(d('Son', 'Girlfriend')).not.toBeCloseTo(30, 5);
+  });
+
   it('keeps couples adjacent: no stranger closer to a person than their spouse', () => {
     const pos = computeLayout(graph);
     const dist = (a: string, b: string) => {
@@ -90,12 +101,15 @@ describe('layout', () => {
       const pb = pos.get(b)!;
       return Math.hypot(pa.x - pb.x, pa.y - pb.y, pa.z - pb.z);
     };
-    // Each person's primary couple is welded exactly 2×offset apart.
+    // Each MARRIED couple is welded exactly 2×offset apart. Son and Girlfriend
+    // are not on this list any more: only a marriage snaps two orbs into one
+    // rigid body. A love affair, an abduction or a divorce is a thread between
+    // two people who are not a pair, and welding them would say the opposite —
+    // shoulder to shoulder for good, with nothing able to come between.
     const primaryCouples = [
       ['GpaA', 'GmaA'],
       ['GpaB', 'GmaB'],
       ['Dad', 'Mom'],
-      ['Son', 'Girlfriend'],
     ];
     const coSpouses = new Map<string, Set<string>>();
     for (const u of fixture().unions) {

@@ -1,3 +1,4 @@
+import { STATUS_KEYS, UNION_STATUS } from "./status";
 /** Blend two hex colors; t=0 → a, t=1 → b. */
 export const mixHex = (a: string, b: string, t: number): string => {
   const pa = parseInt(a.slice(1), 16);
@@ -26,10 +27,11 @@ export const UNION_COLOR = "#4a5468";
  * more usefully as "who this child is" than as "how they were related".
  */
 export const LINK_COLORS: Record<string, string> = {
-  married: "#ffffff",
-  partners: "#b58fc4",
-  divorced: "#7a6a4d",
-  unknown: "#93855f",
+  // Partner-line colours are declared once in core/status.ts, so a new status
+  // gets its colour, its dash, its legend row and its welding rule together.
+  ...Object.fromEntries(
+    STATUS_KEYS.map((k) => [k, UNION_STATUS[k].color]),
+  ),
   biological: "#55617a",
   adoptive: "#7f95b5",
 };

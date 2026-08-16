@@ -12,6 +12,34 @@
  *
  * What is NOT here, because it is structural rather than a taste knob: Y is always
  * locked to generation, and a couple is always one rigid body. See layout.ts.
+ *
+ * TRIED AND REJECTED — a birth-order stagger (`siblingStagger`)
+ *
+ * Siblings dropped slightly by birth order, eldest highest, so that the order the
+ * ↑↓ buttons curate could actually be read: in 3D it is otherwise drawn only as
+ * rotation around the parent, at the golden angle, which nobody can see. It was
+ * built, measured and looked at, and **rejected on how it looked** — the tree
+ * reads better with each brood level. Do not re-add it without asking.
+ *
+ * The mechanics all worked, if it ever comes back up: the offset went on after
+ * the simulation so the spread and clustering were untouched; the band was fixed
+ * per sibling set rather than per child, so two children split it and
+ * Dhritarashtra's hundred packed into it; and it was capped at a quarter of the
+ * layer gap, which measured zero parent/child inversions on all four datasets.
+ *
+ * The related question — letting that offset ACCUMULATE down the generations, to
+ * show that a fifth brother's line runs later than a first brother's — is a
+ * firmer no, and for a reason that has nothing to do with taste. A genealogy is a
+ * DAG, not a tree: every marriage merges two accumulation histories with no
+ * principled way to combine them. Measured, 86% of the Hiranyagarbha tree and 47%
+ * of the family tree land somewhere different depending on whether you take the
+ * average or the deeper parent. The magnitude is fine (drift stays under 1.3
+ * rows); the meaning is not. It would also blur row 93 — Kurukshetra — which is
+ * the row the whole chronology is calibrated against and which `npm run check`
+ * exists to police.
+ *
+ * If age is wanted on screen one day, the answer is a chronology VIEW MODE with a
+ * real date field, not an axis that means two things at once.
  */
 export interface LayoutTuning {
   /** Repulsion between orbs. More negative = more space. The primary spread dial. */

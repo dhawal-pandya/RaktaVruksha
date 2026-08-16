@@ -1,0 +1,34 @@
+{
+  "family": "familySparta",
+  "name": "Sparta",
+  "color": "#c47f9e",
+  "note": "Tyndareos and Leda: the egg, the twins, and Helen",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"unknown"},
+  "people": {
+    "Klytaimnestra": {"name":"Klytaimnestra (Clytemnestra)","gender":"female","note":"Sister of Helen, wife of Agamemnon, and the only person in the story who is given a reason: he killed their daughter at Aulis to buy a wind. She waited ten years and then killed him. Aeschylus Ag."},
+    "Hermione": {"gender":"female","anchor":{"relativeTo":"Tlepolemos","offset":1},"note":"Only child of Helen and Menelaos, promised to two men at once, and married in the end to her cousin Orestes after Neoptolemos was killed at Delphi. Od. 4.1-14, Apollod. Epit. 6.14"},
+    "Tyndareos": "King of Sparta, who made every suitor of Helen swear to defend whichever of them won her -- the oath that obliged all Greece to sail when she was taken. Apollod. 3.10.8-9",
+    "Leda": {"gender":"female","note":"Visited by Zeus as a swan on the same night she lay with her husband, and delivered of two eggs: the immortal children in one, the mortal in the other. Apollod. 3.10.7"},
+    "Helene": {"name":"Helene (Helen)","gender":"female","divineParents":["Zeus"],"note":"The face that launched a thousand ships, which is Marlowe's line and not Homer's -- Homer never describes her, and shows only the old men on the wall agreeing she is worth the war. Apollod. 3.10.7, Il. 3.121-244"},
+    "Polydeukes": {"name":"Polydeukes (Pollux)","divineParents":["Zeus"],"note":"The immortal twin, a boxer. Roman: Pollux. When Kastor was killed he asked to share his own immortality, so the two spend alternate days above and below -- and are the constellation GEMINI, and the St Elmo's fire that saves ships. Apollod. 3.11.2"},
+    "Kastor": {"name":"Kastor (Castor)","note":"The mortal twin, a horseman. Together the DIOSKOUROI, the boys of Zeus. Apollod. 3.11.2"},
+    "Hyakinthos": "A Spartan prince loved by Apollo and by Zephyros the west wind, who blew the discus off course out of jealousy and killed him. From his blood Apollo made the HYACINTH, and the Hyakinthia was Sparta's greatest festival. Apollod. 1.3.3, Ov. Met. 10.162-219",
+    "Lakedaimon": {"divineParents":["Zeus"],"anchor":{"relativeTo":"Tlepolemos","offset":-5},"note":"Son of Zeus and Taygete, and the man Lakedaimon -- Sparta -- is named after. Apollod. 3.10.3"},
+    "Amyklas": "Son of Lakedaimon and founder of Amyklai, the old Spartan capital, whose sanctuary held Hyakinthos' tomb. Apollod. 3.10.3",
+    "Kynortes": "Son of Amyklas, and the line that runs on to Tyndareos. Apollod. 3.10.4",
+    "Oibalos": "Son of Kynortes and father of Tyndareos. Apollod. 3.10.4"
+  },
+  "unions": [
+    {"id":"u_tyndareos_leda","p":["Tyndareos","Leda"],"c":["Kastor","Klytaimnestra","Helene","Polydeukes"],"status":"married","note":"One night, two fathers, four children -- and which egg held which is disputed in every source. Apollod. 3.10.7"},
+    {"id":"u_menelaos_helene","p":["Menelaos","Helene"],"c":["Hermione"],"status":"married","note":"Od. 4.12-14"},
+    {"id":"u_taygete","p":["Taygete"],"c":["Lakedaimon"]},
+    {"id":"u_lakedaimon","p":["Lakedaimon"],"c":["Amyklas"]},
+    {"id":"u_amyklas","p":["Amyklas"],"c":["Kynortes","Hyakinthos"],"note":"Hyakinthos is Amyklas' son, so the boy Apollo loved and the kings of Sparta are one house. Apollod. 3.10.3"},
+    {"id":"u_kynortes","p":["Kynortes"],"c":["Oibalos"]},
+    {"id":"u_oibalos","p":["Oibalos"],"c":["Tyndareos"]},
+    {"id":"u_zeus_leda","p":["Zeus","Leda"],"c":[],"status":"abduction","cross":true,"note":"He came to her as a swan. Apollod. 3.10.7"},
+    {"id":"u_zeus_taygete","p":["Zeus","Taygete"],"c":[],"status":"abduction","cross":true,"note":"Pursued, and hidden by Artemis for as long as that lasted. Apollod. 3.10.1"},
+    {"id":"u_apollon_hyakinthos","p":["Apollon","Hyakinthos"],"c":[],"status":"partners","cross":true,"note":"Zephyros the west wind loved him too, and blew the discus off its line. From his blood, the hyacinth. Apollod. 1.3.3, Ov. Met. 10.162-219"},
+    {"id":"u_zephyros_hyakinthos","p":["Zephyros","Hyakinthos"],"c":[],"status":"partners","cross":true,"note":"The jealousy that turned the discus. Ov. Met. 10.162-219"}
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "family": "familyMonster",
+  "name": "Typhon",
+  "color": "#8c4a52",
+  "note": "Typhon and Echidna, and the brood the heroes were sent against",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Echidna": {"gender":"female","note":"Half fair-cheeked woman, half monstrous serpent, who lives in a hollow rock and dies neither of age nor sickness. Mother of nearly every monster the heroes fight. Gives echidna, the spiny anteater, which is part mammal and part reptile-seeming. Theog. 295-305"},
+    "Ladon": "The hundred-headed serpent coiled round the golden apples of the Hesperides. Theog. 333-335",
+    "Typhon": "Gaia's last child, by Tartaros, born to avenge the Titans: a hundred serpent heads, and voices of every kind -- bulls, lions, hissing, speech. Zeus burned him down with the thunderbolt and pinned him under Aitna, and the mountain still smokes. Gives typhoon, though only partly: the English word is a collision of Greek typhon with Arabic tufan and Chinese tai fung. Theog. 820-868",
+    "Kerberos": "The fifty-headed hound of Hades, bronze-voiced, who fawns on those who enter and eats those who try to leave. Herakles' twelfth labour. Roman: Cerberus. Gives cerberus, a savage doorkeeper. Theog. 310-312",
+    "Orthros": "The two-headed hound of Geryon, killed by Herakles on the way to the cattle. Theog. 293, 309",
+    "Hydra": "The Lernaian water-snake, which grew two heads for each one cut; Herakles' second labour, won only by burning the stumps. Gives hydra, and the freshwater animal named for its regrowth. Theog. 313-318",
+    "Chimaira": "Lion in front, goat in the middle, serpent behind, breathing fire; killed by Bellerophon from the air on Pegasos. Gives chimera, chimerical, and in genetics an organism of two cell lines. Theog. 319-325",
+    "Sphinx": "The strangler -- from sphingein, to squeeze, which also gives sphincter. She set the riddle at Thebes and threw herself from the rock when Oidipous answered it. Theog. 326-329",
+    "NemeanLion": {"name":"Nemean Lion","note":"The lion of Nemea, whose hide no weapon could pierce; Herakles throttled it and wore the skin thereafter. Theog. 327-329"},
+    "Pegasos": "The winged horse, sprung from Medousa's neck when Perseus cut off her head. He carried Bellerophon against the Chimaira and threw him when he tried to ride to heaven; Zeus keeps him now and he carries the thunderbolt. Gives pegasus, and the constellation. Theog. 280-286",
+    "Chrysaor": "Of the golden sword, born with Pegasos from Medousa's neck. Theog. 280-283",
+    "Geryon": "Three-bodied king of Erytheia, whose red cattle were Herakles' tenth labour. Theog. 287-294"
+  },
+  "unions": [
+    {"id":"u_gaia_tartaros","p":["Tartaros","Gaia"],"c":["Typhon"],"note":"Theog. 821-822"},
+    {"id":"u_typhon_echidna","p":["Typhon","Echidna"],"c":["Kerberos","Orthros","Hydra","Chimaira","Sphinx","NemeanLion"],"note":"Theog. 306-332"},
+    {"id":"u_medousa","p":["Gorgones"],"c":["Pegasos","Chrysaor"],"note":"Poseidon lay with Medousa in a soft meadow among spring flowers; when Perseus struck her head off, the two children leapt out. Recorded on the Gorgon record, which stands for all three sisters. Theog. 278-283"},
+    {"id":"u_chrysaor_kallirhoe","p":["Chrysaor","Kallirhoe"],"c":["Geryon"],"note":"Theog. 979-983"}
+  ]
+}

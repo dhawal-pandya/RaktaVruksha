@@ -2,14 +2,18 @@
   "family": "familyApsara",
   "name": "Apsara",
   "color": "#d98cae",
-  "defaults": {"stamp":"2026-07-22T00:00:00.000Z","gender":"female","alive":true,"lastName":"","status":"married"},
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"female","alive":true,"lastName":"","status":"abduction"},
   "people": {
     "Urvashi": {"u":"2026-08-02T01:00:00.000Z","divine":true,"note":"The apsara beloved of Pururavas and mother of Ayus. Bound to him only by the condition that he never see her unclothed and her two pet rams go unharmed; lost him for it when the Gandharvas, to end their affair, stole the rams by night and he leapt up by lightning to save them, breaking the condition; relented afterward to grant him one night a year, which is where their sons were born. In an older frame she is also cursed to live a mortal's life on earth for a time, of which Pururavas is that sentence."},
     "Menaka": {"u":"2026-07-20T00:00:00.000Z","divine":true,"note":"An apsara sent to break Vishvamitra's penance; mother of Shakuntala, who was then raised by the sage Kanva."},
     "Muni": {"u":"2026-08-02T02:00:00.000Z","divine":true,"note":"Daughter of Daksha, wife of Kashyap; mother of the apsaras."},
-    "Rambha": {"divine":true,"note":"Foremost of the apsaras, daughter of Muni."}
+    "Rambha": {"u":"2026-07-22T00:00:00.000Z","divine":true,"note":"Foremost of the apsaras, daughter of Muni."},
+    "Vedavati": {"anchor":{"relativeTo":"Ravana","offset":0},"note":"A woman doing penance to win Vishnu himself as husband. Ravana found her in the forest and laid hands on her hair; she cut it off, walked into the fire she had made, and swore to come back as the cause of his death. She came back as Sita. Rām 7.17"},
+    "Punjikasthala": {"anchor":{"relativeTo":"Ravana","offset":0},"note":"An apsara Ravana forced in Brahma's own hall; Brahma warned him then that if he did it again his head would split -- the same warning Nalakubara gave him, from the other side. Rām 7.26"}
   },
   "unions": [
-    {"id":"u_kashyap_muni","p":["Kashyap","Muni"],"c":["Menaka","Rambha","Urvashi"]}
+    {"id":"u_kashyap_muni","p":["Kashyap","Muni"],"c":["Menaka","Rambha","Urvashi"],"status":"married","u":"2026-07-22T00:00:00.000Z"},
+    {"id":"u_ravana_vedavati","p":["Ravana","Vedavati"],"c":[],"note":"She burned rather than live having been touched by him, and promised to return as his ruin. Rām 7.17"},
+    {"id":"u_ravana_punjikasthala","p":["Ravana","Punjikasthala"],"c":[],"note":"Rām 7.26"}
   ]
 }

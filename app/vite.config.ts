@@ -11,7 +11,7 @@ const WRITABLE_FILES = new Set(["layout.json"]);
 // data/, and a plain .json leaf. Still a whitelist — a name with a path
 // separator, a dot segment, or an unknown directory is refused, so a stray
 // request can never touch anything else on disk.
-const DATA_DIRS = new Set(["family", "ramayan", "mahabharat", "hiranyagarbha"]);
+const DATA_DIRS = new Set(["family", "ramayan", "mahabharat", "hiranyagarbha", "chaos"]);
 const isWritable = (file: string): boolean => {
   if (WRITABLE_FILES.has(file)) return true;
   const parts = file.split("/");

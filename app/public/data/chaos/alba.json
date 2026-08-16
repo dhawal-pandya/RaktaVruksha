@@ -1,0 +1,43 @@
+{
+  "family": "familyAlba",
+  "name": "Alba Longa",
+  "color": "#a8524a",
+  "note": "Aeneas to Romulus: the Latin kings",
+  "defaults": {"stamp":"2026-08-16T00:00:00.000Z","gender":"male","alive":true,"lastName":"","status":"married"},
+  "people": {
+    "Latinos": {"name":"Latinos (Latinus)","note":"King of the Latins, who gave Aeneas his daughter and his kingdom. His parentage is where the Greek and Roman stories collide, three ways: Hesiod makes him Odysseus' son by Kirke, Hyginus makes him Telemachos' son by Kirke, and Virgil -- writing for Rome, and wanting no Greek in the ancestry at all -- makes him son of Faunus. This tree draws Hesiod, which is both the oldest and the only one a generational tree can hold. LATIN, Latium, and the language are his name. Theog. 1011-1016; Hyg. Fab. 127; Aen. 7.45-49"},
+    "Aineias": {"name":"Aineias (Aeneas)","divineParents":["Aphrodite"],"anchor":{"relativeTo":"Tlepolemos","offset":0},"note":"Son of a goddess and cousin to Hektor; in the Iliad Poseidon saves him from Achilles specifically because he and his children must survive to rule the Trojans. Virgil takes that one line and builds Rome out of it: Aeneas carries his father out of the fire, loses his wife, leaves Dido, and lands in Latium. He is the hinge on which Greek myth becomes Roman history. Il. 20.300-308; Aen. 1-12"},
+    "Lavinia": {"gender":"female","note":"Daughter of Latinus, promised to Turnus and given to Aeneas -- the war of the Aeneid's second half is fought over her, and she never speaks. Lavinium, the town Aeneas founded, is her name. Aen. 7.52-106"},
+    "Askanios": {"name":"Askanios (Ascanius, Iulus)","anchor":{"relativeTo":"Tlepolemos","offset":1},"note":"Aeneas' son, brought out of Troy holding his hand, who founded Alba Longa. His other name IULUS is the whole political point of the Aeneid: the Julian family claimed descent from him, which made Julius Caesar and Augustus descendants of Venus. Aen. 1.267-288, Livy 1.3"},
+    "Silvius": "Born in the woods -- silva -- after Aeneas' death, and every Alban king after him carries Silvius as a second name. Livy 1.3",
+    "AeneasSilvius": {"name":"Aeneas Silvius","note":"Livy 1.3"},
+    "LatinusSilvius": {"name":"Latinus Silvius","note":"Livy 1.3"},
+    "Alba": "Livy 1.3",
+    "Atys": "Livy 1.3",
+    "Capys": "Not Kapys of Troy, four generations above him. Livy 1.3",
+    "Capetus": "Livy 1.3",
+    "Tiberinus": "Drowned in the river Albula crossing it, and gave it his name: the TIBER. Livy 1.3",
+    "Agrippa": "Livy 1.3",
+    "Romulus Silvius": "Struck by lightning for contempt of the gods. Livy 1.3",
+    "Aventinus": "Buried on the hill that keeps his name, one of Rome's seven. Livy 1.3",
+    "Procas": "Father of the quarrel that produces Rome. Livy 1.3",
+    "Numitor": "Elder son of Procas and rightful king, deposed by his brother and restored by his grandsons. Livy 1.3-6",
+    "Amulius": "Younger son, who took the throne, killed his brother's sons, and made his niece a Vestal so she could have no children -- which is exactly how the story of every prophecy goes. Livy 1.3-6",
+    "ReaSilvia": {"name":"Rea Silvia","gender":"female","note":"Made a Vestal Virgin by her uncle so the line would die with her, and got with child by Mars in the grove. Thrown in prison; her twins were put in a basket in the flooding Tiber. Livy 1.4"},
+    "Romulus": {"divineParents":["Ares"],"note":"Suckled with his brother by the she-wolf where the basket grounded, raised by the herdsman Faustulus, and founder of ROME on 21 April 753 BC by the traditional reckoning. He killed Remus over the height of a wall, took the Sabine women to populate the city, and was carried off in a storm to become the god Quirinus. The tree ends here: from the gap that was before anything, to a man drawing a furrow round a hill. Livy 1.4-1.16"},
+    "Remus": {"divineParents":["Ares"],"note":"The other twin, who jumped his brother's new wall to show it was nothing, and was killed for it -- so the first blood spilled in Rome was a brother's, which Roman writers never stopped noticing. Livy 1.6-7"},
+    "Dido": {"name":"Dido (Elissa)","gender":"female","note":"Queen and founder of Carthage, who took Aeneas in and killed herself on his sword when he sailed; her curse on his descendants is Virgil's explanation of the Punic Wars. Aen. 1.335-4.705"}
+  },
+  "unions": [
+    {"id":"u_latinos","p":["Latinos"],"c":["Lavinia"]},
+    {"id":"u_aineias_kreousa","p":["Aineias","Kreousa"],"c":["Askanios"],"status":"unknown","note":"By Kreousa, daughter of Priam, lost in the burning of Troy. Aen. 2.735-794"},
+    {"id":"u_lavinia","p":["Lavinia"],"c":["Silvius"],"status":"unknown","note":"The father is Aeneas, and the marriage is drawn beside this as a cross-era bond: he fought at Troy and she is the daughter of Odysseus' son, two generations apart in the sources and one in the story. Livy 1.1-3"},
+    ["Silvius","AeneasSilvius","LatinusSilvius","Alba","Atys","Capys","Capetus","Tiberinus","Agrippa","Romulus Silvius","Aventinus","Procas"],
+    {"id":"u_procas","p":["Procas"],"c":["Numitor","Amulius"]},
+    {"id":"u_numitor","p":["Numitor"],"c":["ReaSilvia"]},
+    {"id":"u_reasilvia","p":["ReaSilvia"],"c":["Romulus","Remus"],"status":"unknown","note":"The father is Mars -- not Ares: the god the Romans made their own, and the point where a Greek genealogy becomes a Roman one. Livy 1.4"},
+    {"id":"u_aineias_dido","p":["Aineias","Dido"],"c":[],"status":"partners","order":0,"note":"Aen. 4"},
+    {"id":"u_ares_reasilvia","p":["Ares","ReaSilvia"],"c":[],"status":"abduction","cross":true,"note":"Mars in the grove, on a Vestal who had been made a Vestal precisely so that she could have no children. Livy 1.4"},
+    {"id":"u_aineias_lavinia","p":["Aineias","Lavinia"],"c":[],"cross":true,"note":"He fought at Troy and she is the daughter of Odysseus' son, so they are two generations apart in the sources and one in the story. Their son Silvius hangs from her. Livy 1.1-3"}
+  ]
+}
